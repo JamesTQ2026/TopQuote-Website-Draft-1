@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;800&amp;family=Playfair+Display:wght@500;600;700;800;900&amp;display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Mulish',sans-serif;}
+  .arva-h{font-family:'Playfair Display','Georgia',serif;}
+  .qz-opt{cursor:pointer;background:#fff;border:2px solid #D5DAE6;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:26px 18px;min-width:150px;min-height:150px;transition:border-color .18s,background .18s,box-shadow .18s;text-align:center;}
+  .qz-opt:hover{border-color:#1EBABB;}
+  .qz-opt.sel{border-color:#1EBABB;background:rgba(30,186,187,.08);box-shadow:0 8px 22px rgba(30,186,187,.18);}
+  .qz-opt .qz-icon{color:#0C1F19;}
+  .qz-opt.sel .qz-icon{color:#159a9b;}
+  .qz-opt .qz-lab{font-weight:700;font-size:16px;color:#173B33;}
+  .qz-select{width:100%;max-width:340px;font-family:'Mulish',sans-serif;font-size:17px;color:#173B33;background:#fff;border:2px solid #1EBABB;border-radius:10px;padding:14px 16px;cursor:pointer;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23173B33' stroke-width='2.5'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;}
+  .qz-input{width:100%;font-family:'Mulish',sans-serif;font-size:17px;color:#173B33;background:#fff;border:2px solid #1EBABB;border-radius:10px;padding:14px 16px;}
+  .qz-input::placeholder{color:#9aa2ad;}
+  .qz-input:focus,.qz-select:focus{outline:none;box-shadow:0 0 0 3px rgba(30,186,187,.2);}
+  .qz-continue{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#1EBABB;color:#fff;border:0;border-radius:999px;font-family:'Mulish',sans-serif;font-size:19px;font-weight:700;padding:18px 60px;cursor:pointer;transition:background .18s,transform .05s;box-shadow:0 10px 26px -8px rgba(30,186,187,.6);}
+  .qz-continue:hover{background:#159a9b;}
+  .qz-continue:active{transform:translateY(1px);}
+  .qz-back{display:inline-flex;align-items:center;gap:6px;background:#EAEDF1;color:#5B6B78;border:0;border-radius:999px;font-family:'Mulish',sans-serif;font-size:15px;font-weight:700;padding:12px 22px;cursor:pointer;transition:background .18s;}
+  .qz-back:hover{background:#dde1ea;}
+  .qz-err{color:#d64545;font-size:14px;font-weight:600;margin-top:14px;display:none;}
+  .pv-logo{background:#fff;border:1px solid #E7EAF2;border-radius:12px;height:90px;display:flex;align-items:center;justify-content:center;padding:16px;box-shadow:0 6px 18px rgba(20,40,35,.05);}
+  .pv-logo img{max-width:100%;max-height:100%;object-fit:contain;}
+  .pv-card{background:#fff;border-radius:12px;padding:28px 18px 22px;display:flex;flex-direction:column;align-items:center;gap:20px;box-shadow:0 12px 30px rgba(20,40,35,.06);min-height:220px;justify-content:space-between;}
+  .pv-logobox{flex:1;display:flex;align-items:center;justify-content:center;width:100%;padding:6px;}
+  .pv-logobox img{max-width:100%;max-height:90px;object-fit:contain;}
+  .pv-card span{color:#173B33;font-size:15px;font-weight:600;}
+  i[data-lucide]{display:inline-flex;}
+  @media (max-width:640px){
+    .qz-opt{min-width:120px;min-height:120px;padding:20px 12px;}
+    .qz-continue{padding:16px 40px;font-size:17px;width:100%;}
+    .pv-row{grid-template-columns:repeat(3,1fr) !important;}
+  }
+  .nav-dd{position:relative;display:inline-block;}
+  .nav-dd-menu{position:absolute;top:100%;left:0;min-width:180px;background:#0C1F19;border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:8px;display:none;flex-direction:column;gap:2px;z-index:50;box-shadow:0 16px 40px rgba(0,0,0,.4);}
+  .nav-dd:hover .nav-dd-menu{display:flex;}
+  .nav-dd-menu a{color:#fff;text-decoration:none;padding:10px 14px;border-radius:8px;font-size:15px;font-weight:600;white-space:nowrap;}
+  .nav-dd-menu a:hover{background:rgba(30,186,187,.16);color:#1EBABB;}
+</style>
+</helmet>
+
+<div style="width:100%;min-height:100vh;overflow-x:clip;background:#fff;color:#1B3A33;display:flex;flex-direction:column;">
+
+  <!-- ============ NAV ============ -->
+  <header style="background:#0C1F19;padding:24px clamp(24px,5vw,84px);display:flex;align-items:center;justify-content:space-between;gap:40px;">
+    <a href="Home Page.dc.html" style="display:flex;align-items:center;"><img src="assets/topquote-logo.png" alt="TopQuote" style="height:36px;width:auto;display:block;"></a>
+    <nav style="display:flex;align-items:center;gap:20px;font-size:16px;font-weight:600;">
+        <div class="nav-dd"><a href="Life Insurance.dc.html" style="background:#1EBABB;color:#fff;padding:9px 18px;border-radius:24px;text-decoration:none;display:inline-flex;align-items:center;gap:5px;">Services <span style="font-size:10px;">&#9662;</span></a><div class="nav-dd-menu"><a href="Life Insurance.dc.html">Life Insurance</a><a href="Critical Illness.dc.html">Critical Illness</a><a href="Income Protection.dc.html">Income Protection</a></div></div>
+        <div class="nav-dd"><a href="About Us.dc.html" class="nav-link" style="color:#fff;padding:9px 14px;text-decoration:none;display:inline-flex;align-items:center;gap:5px;">About <span style="font-size:10px;">&#9662;</span></a><div class="nav-dd-menu"><a href="About Us.dc.html">About Us</a><a href="Consumer Duty.dc.html">Consumer Duty</a></div></div>
+        <a href="Reconnect.dc.html" class="nav-link" style="color:#fff;padding:9px 14px;text-decoration:none;">Reconnect</a>
+        <a href="Blog.dc.html" class="nav-link" style="color:#fff;padding:9px 14px;text-decoration:none;">Blog</a>
+        <a href="Contact.dc.html" class="nav-link" style="color:#fff;padding:9px 14px;text-decoration:none;">Contact</a>
+        <a href="Careers.dc.html" class="nav-link" style="color:#fff;padding:9px 14px;text-decoration:none;">Careers</a>
+        <a href="Find Us.dc.html" class="nav-link" style="color:#fff;padding:9px 14px;text-decoration:none;">Find Us</a>
+      </nav>
+    <a href="Get a Quote.dc.html" class="abtn" style="color:#1EBABB;padding:9px 14px;text-decoration:none;font-weight:700;font-size:15px;">Get a quote</a>
+  </header>
+
+  <!-- ============ TOP BANNER ============ -->
+  <div style="background:#0C1F19;color:#fff;text-align:center;padding:14px 24px 30px;">
+    <h1 class="arva-h" style="font-size:clamp(28px,4vw,44px);font-weight:700;line-height:1.1;">Compare <span style="color:#3fd3d4;">Life Insurance</span> Quotes</h1>
+    <p style="margin-top:8px;font-size:clamp(15px,2vw,19px);color:rgba(255,255,255,.85);">Get your FREE no-obligation quote now</p>
+  </div>
+
+  <!-- ============ ANIMATED QUOTE EXPERIENCE ============ -->
+  <div id="qzExpWrap" style="background:#0C1F19;">
+    <iframe src="Quote Experience.html" title="Quote experience" loading="lazy" style="display:block;width:100%;height:115vh;border:0;"></iframe>
+  </div>
+
+  <!-- ============ THANK YOU (revealed on completion) ============ -->
+  <div id="qzThankPage" style="display:none;">
+
+    <!-- hero -->
+    <section style="position:relative;background:#0C1F19;color:#fff;overflow:hidden;text-align:center;padding:96px clamp(24px,5vw,40px) 104px;">
+      <div style="position:absolute;inset:0;background:radial-gradient(circle at 50% 12%,rgba(30,186,187,.24),transparent 60%);"></div>
+      <div style="position:relative;z-index:2;max-width:760px;margin:0 auto;display:flex;flex-direction:column;align-items:center;">
+        <div style="width:78px;height:78px;border-radius:50%;background:#1EBABB;display:flex;align-items:center;justify-content:center;box-shadow:0 16px 40px rgba(30,186,187,.4);margin-bottom:28px;">
+          <i data-lucide="check" style="width:40px;height:40px;color:#fff;stroke-width:3;"></i>
+        </div>
+        <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:18px;">
+          <span style="width:8px;height:8px;border-radius:50%;background:#3fd3d4;"></span>
+          <span style="color:#3fd3d4;font-weight:700;font-size:15px;letter-spacing:.04em;">Quote request received</span>
+        </div>
+        <h1 class="arva-h" style="font-size:clamp(38px,5vw,68px);line-height:1.05;font-weight:600;letter-spacing:.3px;">Thank you<span id="qzThankName"></span>,<br>your quotes are on the way</h1>
+        <p style="margin-top:22px;font-size:18px;line-height:1.65;color:rgba(255,255,255,.85);max-width:560px;">One of our UK-based protection advisers will be in touch shortly to walk you through your options, no obligation, no pressure, no jargon.</p>
+        <div id="qzThankSummaryWrap" style="display:none;margin-top:26px;align-items:center;gap:10px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:12px 22px;">
+          <i data-lucide="shield-check" style="width:18px;height:18px;color:#3fd3d4;"></i>
+          <span id="qzThankSummary" style="font-size:15px;font-weight:600;color:#fff;"></span>
+        </div>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:36px;">
+          <a href="Home Page.dc.html" class="abtn" style="display:inline-flex;align-items:center;gap:9px;background:#1EBABB;color:#fff;padding:15px 30px;border-radius:8px;text-decoration:none;font-weight:700;font-size:15px;">Back to home <i data-lucide="arrow-right" style="width:17px;height:17px;"></i></a>
+          <a href="Blog.dc.html" class="abtn" style="display:inline-flex;align-items:center;gap:9px;background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.35);padding:15px 30px;border-radius:8px;text-decoration:none;font-weight:700;font-size:15px;">Read our guides</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- what happens next -->
+    <section style="background:#fff;padding:88px clamp(24px,5vw,40px);">
+      <div style="max-width:1120px;margin:0 auto;">
+        <div style="text-align:center;margin-bottom:52px;">
+          <h2 class="arva-h" style="font-size:clamp(28px,3.4vw,44px);font-weight:600;color:#173B33;">What happens next</h2>
+          <p style="margin-top:14px;font-size:17px;color:#6B7280;">Three simple steps, we do the heavy lifting.</p>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:26px;">
+          <div style="background:#F6F7FB;border-radius:16px;padding:34px 30px;">
+            <div style="width:52px;height:52px;border-radius:12px;background:#1EBABB;display:flex;align-items:center;justify-content:center;margin-bottom:20px;"><i data-lucide="phone-call" style="width:24px;height:24px;color:#fff;"></i></div>
+            <div class="arva-h" style="font-size:22px;font-weight:600;color:#173B33;margin-bottom:10px;">01 &nbsp;We call you</div>
+            <p style="color:#6B7280;font-size:15px;line-height:1.7;">A qualified adviser reviews your details and calls at a time that suits you to understand what matters most.</p>
+          </div>
+          <div style="background:#F6F7FB;border-radius:16px;padding:34px 30px;">
+            <div style="width:52px;height:52px;border-radius:12px;background:#1EBABB;display:flex;align-items:center;justify-content:center;margin-bottom:20px;"><i data-lucide="search" style="width:24px;height:24px;color:#fff;"></i></div>
+            <div class="arva-h" style="font-size:22px;font-weight:600;color:#173B33;margin-bottom:10px;">02 &nbsp;We compare</div>
+            <p style="color:#6B7280;font-size:15px;line-height:1.7;">We search the whole of market across leading UK insurers to find the right cover at the right price.</p>
+          </div>
+          <div style="background:#F6F7FB;border-radius:16px;padding:34px 30px;">
+            <div style="width:52px;height:52px;border-radius:12px;background:#1EBABB;display:flex;align-items:center;justify-content:center;margin-bottom:20px;"><i data-lucide="file-check" style="width:24px;height:24px;color:#fff;"></i></div>
+            <div class="arva-h" style="font-size:22px;font-weight:600;color:#173B33;margin-bottom:10px;">03 &nbsp;You decide</div>
+            <p style="color:#6B7280;font-size:15px;line-height:1.7;">We present clear recommendations. No pressure. You choose if and when to put your cover in place.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- providers -->
+    <section style="background:#ECEDF1;padding:64px 40px 74px;">
+      <div style="max-width:1280px;margin:0 auto;width:100%;">
+        <h2 class="arva-h" style="text-align:center;font-size:clamp(28px,3.4vw,40px);line-height:1.1;font-weight:600;color:#173B33;margin-bottom:48px;">We work with some of the UK's leading insurers</h2>
+        <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:18px;align-items:start;">
+          <div style="background:#fff;border-radius:8px;padding:34px 20px 26px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:26px;min-height:250px;box-shadow:0 16px 36px rgba(20,40,35,.08);">
+            <div style="width:100%;flex:1;display:flex;align-items:center;justify-content:center;padding:8px;"><img src="assets/logo-lg.png" alt="Legal &amp; General" style="max-width:100%;max-height:100%;object-fit:contain;"></div>
+            <div style="font-size:15px;color:#173B33;font-weight:600;">Legal &amp; General</div>
+          </div>
+          <div style="background:#fff;border-radius:8px;padding:34px 20px 26px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:26px;min-height:250px;box-shadow:0 16px 36px rgba(20,40,35,.08);">
+            <div style="width:100%;flex:1;display:flex;align-items:center;justify-content:center;padding:8px;"><img src="assets/logo-royal-london.png" alt="Royal London" style="max-width:100%;max-height:100%;object-fit:contain;"></div>
+            <div style="font-size:15px;color:#173B33;font-weight:600;">Royal London</div>
+          </div>
+          <div style="background:#fff;border-radius:8px;padding:34px 20px 26px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:26px;min-height:250px;box-shadow:0 16px 36px rgba(20,40,35,.08);">
+            <div style="width:100%;flex:1;display:flex;align-items:center;justify-content:center;padding:8px;"><img src="assets/logo-aviva.png" alt="Aviva" style="max-width:100%;max-height:100%;object-fit:contain;"></div>
+            <div style="font-size:15px;color:#173B33;font-weight:600;">Aviva</div>
+          </div>
+          <div style="background:#fff;border-radius:8px;padding:34px 20px 26px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:26px;min-height:250px;box-shadow:0 16px 36px rgba(20,40,35,.08);">
+            <div style="width:100%;flex:1;display:flex;align-items:center;justify-content:center;padding:8px;"><img src="assets/logo-vitality.png" alt="Vitality" style="max-width:100%;max-height:100%;object-fit:contain;"></div>
+            <div style="font-size:15px;color:#173B33;font-weight:600;">Vitality</div>
+          </div>
+          <div style="background:#fff;border-radius:8px;padding:34px 20px 26px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:26px;min-height:250px;box-shadow:0 16px 36px rgba(20,40,35,.08);">
+            <div style="width:100%;flex:1;display:flex;align-items:center;justify-content:center;padding:8px;"><img src="assets/logo-lv.png" alt="LV" style="max-width:100%;max-height:100%;object-fit:contain;"></div>
+            <div style="font-size:15px;color:#173B33;font-weight:600;">LV</div>
+          </div>
+          <div style="background:#fff;border-radius:8px;padding:34px 20px 26px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:26px;min-height:250px;box-shadow:0 16px 36px rgba(20,40,35,.08);">
+            <div style="width:100%;flex:1;display:flex;align-items:center;justify-content:center;padding:8px;"><img src="assets/logo-guardian.png" alt="Guardian" style="max-width:100%;max-height:100%;object-fit:contain;"></div>
+            <div style="font-size:15px;color:#173B33;font-weight:600;">Guardian</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- types of cover (homepage services panel) -->
+    <section style="background:#F6F7FB;padding:88px clamp(24px,5vw,40px);">
+      <div style="max-width:1200px;margin:0 auto;">
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;margin-bottom:44px;">
+          <div>
+            <div style="display:flex;align-items:center;gap:9px;margin-bottom:16px;">
+              <img src="assets/topquote-mark-teal.png" alt="TopQuote" style="width:22px;height:22px;object-fit:contain;flex:none;">
+              <span style="color:#1EBABB;font-weight:700;font-size:15px;">Our Services</span>
+            </div>
+            <h2 class="arva-h" style="font-size:clamp(30px,3.6vw,43px);line-height:1.12;font-weight:600;color:#173B33;">Insurance Solutions<br>Tailored To You</h2>
+          </div>
+          <a href="Life Insurance.dc.html" style="background:#1EBABB;color:#fff;padding:14px 26px;border-radius:8px;text-decoration:none;font-weight:700;font-size:15px;white-space:nowrap;">Views All Service</a>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:26px;align-items:stretch;">
+          <a href="Life Insurance.dc.html" class="abtn" style="text-decoration:none;background:#EAEDFB;border-radius:14px;padding:38px;display:flex;flex-direction:column;min-height:440px;">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:24px;"><span style="width:50px;height:50px;border-radius:12px;background:#1EBABB;display:flex;align-items:center;justify-content:center;"><i data-lucide="heart-pulse" style="width:24px;height:24px;color:#fff;"></i></span><span class="arva-h" style="font-size:30px;color:#C4C9DE;font-weight:600;">01</span></div>
+            <h3 class="arva-h" style="font-size:23px;font-weight:600;color:#173B33;margin-bottom:12px;">Life Insurance</h3>
+            <p style="color:#6B7280;font-size:14.5px;line-height:1.7;margin-bottom:20px;">Ensure the people who depend on you are financially secure if the worst happens. We'll help you find the right level and type of cover for your circumstances.</p>
+            <span style="color:#173B33;font-weight:700;font-size:14.5px;display:inline-flex;align-items:center;gap:6px;">Learn More <i data-lucide="arrow-up-right" style="width:16px;height:16px;"></i></span>
+          </a>
+          <a href="Critical Illness.dc.html" class="abtn" style="text-decoration:none;background:#1EBABB;border-radius:14px;padding:38px;display:flex;flex-direction:column;min-height:440px;color:#fff;">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:24px;"><span style="width:50px;height:50px;border-radius:12px;background:#fff;display:flex;align-items:center;justify-content:center;"><i data-lucide="cross" style="width:24px;height:24px;color:#1EBABB;"></i></span><span class="arva-h" style="font-size:30px;color:rgba(255,255,255,.5);font-weight:600;">02</span></div>
+            <h3 class="arva-h" style="font-size:23px;font-weight:600;margin-bottom:12px;">Critical Illness Cover</h3>
+            <p style="color:rgba(255,255,255,.9);font-size:14.5px;line-height:1.7;margin-bottom:20px;">A tax-free lump sum paid on diagnosis of a serious illness, at the point when financial pressure can hit hardest. Available standalone or combined with life insurance.</p>
+            <span style="color:#fff;font-weight:700;font-size:14.5px;display:inline-flex;align-items:center;gap:6px;">Learn More <i data-lucide="arrow-up-right" style="width:16px;height:16px;"></i></span>
+          </a>
+          <a href="Income Protection.dc.html" class="abtn" style="text-decoration:none;background:#EAEDFB;border-radius:14px;padding:38px;display:flex;flex-direction:column;min-height:440px;">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:24px;"><span style="width:50px;height:50px;border-radius:12px;background:#1EBABB;display:flex;align-items:center;justify-content:center;"><i data-lucide="file-check-2" style="width:24px;height:24px;color:#fff;"></i></span><span class="arva-h" style="font-size:30px;color:#C4C9DE;font-weight:600;">03</span></div>
+            <h3 class="arva-h" style="font-size:23px;font-weight:600;color:#173B33;margin-bottom:12px;">Income Protection</h3>
+            <p style="color:#6B7280;font-size:14.5px;line-height:1.7;margin-bottom:20px;">A monthly benefit if illness or injury stops you working. One of the most comprehensive safety nets available, because your income is everything.</p>
+            <span style="color:#173B33;font-weight:700;font-size:14.5px;display:inline-flex;align-items:center;gap:6px;">Learn More <i data-lucide="arrow-up-right" style="width:16px;height:16px;"></i></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- reviews -->
+    <section style="background:#1EBABB;padding:84px clamp(24px,5vw,40px);color:#fff;">
+      <div style="max-width:1000px;margin:0 auto;text-align:center;">
+        <div style="display:flex;gap:3px;justify-content:center;margin-bottom:20px;">
+          <i data-lucide="star" style="width:26px;height:26px;fill:#fff;color:#fff;"></i>
+          <i data-lucide="star" style="width:26px;height:26px;fill:#fff;color:#fff;"></i>
+          <i data-lucide="star" style="width:26px;height:26px;fill:#fff;color:#fff;"></i>
+          <i data-lucide="star" style="width:26px;height:26px;fill:#fff;color:#fff;"></i>
+          <i data-lucide="star" style="width:26px;height:26px;fill:#fff;color:#fff;"></i>
+        </div>
+        <p class="arva-h" style="font-size:clamp(24px,3vw,36px);font-weight:600;line-height:1.35;max-width:820px;margin:0 auto;">&ldquo;From the first phone call they made everything simple. I had cover in place within days and felt looked after the whole way.&rdquo;</p>
+        <div style="margin-top:26px;font-size:16px;font-weight:700;">Rated Excellent on Trustpilot &amp; Feefo</div>
+        <div style="margin-top:6px;font-size:14px;color:rgba(255,255,255,.85);">Based on thousands of verified UK reviews</div>
+      </div>
+    </section>
+
+  </div>
+
+
+  <!-- ============ FOOTER ============ -->
+  <footer style="background:#EAEDFB;padding:64px clamp(24px,5vw,40px) 30px;">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div style="display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:40px;">
+        <div>
+          <div style="display:flex;align-items:center;margin-bottom:18px;"><img src="assets/topquote-logo-dark.png" alt="TopQuote" style="height:38px;width:auto;display:block;"></div>
+          <p style="color:#6B7280;font-size:13.5px;line-height:1.7;max-width:320px;">Top Quote Limited is an appointed representative of The Openwork Partnership, a trading style of Openwork Limited, which is authorised and regulated by the Financial Conduct Authority. Approved by The Openwork Partnership on the 20th January 2025.</p>
+        </div>
+        <div>
+          <h4 class="arva-h" style="font-size:20px;font-weight:600;color:#173B33;margin-bottom:20px;">Pages</h4>
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            <a href="Home Page.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">Home</a>
+            <a href="About Us.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">About</a>
+            <a href="Blog.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">News</a>
+            <a href="Contact.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">Contact</a>
+            <a href="Reconnect.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">Reconnect</a>
+            <a href="#" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">Privacy Notice</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="arva-h" style="font-size:20px;font-weight:600;color:#173B33;margin-bottom:20px;">Services</h4>
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            <a href="Home Page.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">Life Insurance</a>
+            <a href="Home Page.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">Critical Illness</a>
+            <a href="Home Page.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">Income Protection</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="arva-h" style="font-size:20px;font-weight:600;color:#173B33;margin-bottom:20px;">Need Help?</h4>
+          <div style="display:flex;flex-direction:column;gap:16px;">
+            <span style="display:flex;align-items:flex-start;gap:10px;color:#6B7280;font-size:15px;line-height:1.55;"><i data-lucide="map-pin" style="width:17px;height:17px;color:#1EBABB;margin-top:2px;flex:none;"></i> <span>Alderley Park, Suite 3,<br>GLASSHOUSE, Congleton Road,<br>Macclesfield, SK10 4TG</span></span>
+            <span style="display:flex;align-items:center;gap:10px;color:#6B7280;font-size:15px;"><i data-lucide="phone" style="width:17px;height:17px;color:#1EBABB;flex:none;"></i> Customer support: 0161 974 3710</span>
+            <span style="display:flex;align-items:center;gap:10px;color:#6B7280;font-size:15px;"><i data-lucide="clock" style="width:17px;height:17px;color:#1EBABB;flex:none;"></i> Working time: Mon &ndash; Fri: 8:30 &ndash; 18:00</span>
+            <span style="display:flex;align-items:center;gap:10px;color:#6B7280;font-size:15px;"><i data-lucide="mail" style="width:17px;height:17px;color:#1EBABB;flex:none;"></i> hello@topquote.uk.com</span>
+          </div>
+        </div>
+      </div>
+      <div style="height:1px;background:#D2D6E8;margin:40px 0 22px;"></div>
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;">
+        <span style="color:#6B7280;font-size:14px;">&copy; 2025 TopQuote. All Rights Reserved.</span>
+        <div style="display:flex;gap:18px;align-items:center;">
+          <a href="https://www.theopenworkpartnership.com/privacy-notice/" target="_blank" rel="noopener" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:14px;">Privacy Policy</a>
+          <span style="color:#C4C9DE;">|</span>
+          <a href="#" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:14px;">Cookie Policy</a>
+        </div>
+      </div>
+      <div style="text-align:left;color:#6B7280;font-size:13.5px;line-height:1.75;max-width:940px;margin:34px 0 0;">
+        <p>&copy;2026 TopQuote Ltd., Registered in England Number: 04648763, Alderley Park, Suite 3, GLASSHOUSE, Macclesfield, SK10 4TG.</p>
+        <p style="margin-top:14px;">The information on this website is for use of residents of the United Kingdom only. No representations are made as to whether the information is applicable or available in any other country which may have access to it.</p>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  initScrollTop(){
+    if (document.getElementById('scrollTopBtn')) return;
+    var b = document.createElement('button');
+    b.id = 'scrollTopBtn'; b.setAttribute('aria-label','Back to top'); b.textContent = '\u2191';
+    b.style.cssText = 'position:fixed;right:26px;bottom:26px;z-index:9999;width:52px;height:52px;border-radius:50%;border:0;background:#1EBABB;color:#fff;font-size:22px;font-weight:700;cursor:pointer;box-shadow:0 10px 26px rgba(20,40,35,.28);opacity:0;visibility:hidden;transition:opacity .3s ease,visibility .3s ease,transform .2s ease;';
+    b.onmouseenter = function(){ b.style.transform = 'translateY(-3px)'; };
+    b.onmouseleave = function(){ b.style.transform = 'none'; };
+    b.onclick = function(){ window.scrollTo({ top:0, behavior:'smooth' }); };
+    document.body.appendChild(b);
+    var onScroll = function(){ var y = window.scrollY || document.documentElement.scrollTop; if (y > 500){ b.style.opacity='1'; b.style.visibility='visible'; } else { b.style.opacity='0'; b.style.visibility='hidden'; } };
+    window.addEventListener('scroll', onScroll, { passive:true }); onScroll();
+  }
+  componentDidMount(){ this.initScrollTop(); this.renderIcons(); this.initWizard(); this.initQuoteHandoff(); this.initQuoteComplete(); }
+  initQuoteComplete(){
+    if (window.__qzComplete) return; window.__qzComplete = true;
+    window.addEventListener('message', (e) => {
+      const d = e && e.data; if (!d || d.type !== 'quoteComplete') return;
+      const wrap = document.getElementById('qzExpWrap');
+      const page = document.getElementById('qzThankPage');
+      if (wrap) wrap.style.display = 'none';
+      if (page) page.style.display = 'block';
+      try {
+        const info = d.data || {};
+        const nameEl = document.getElementById('qzThankName');
+        if (nameEl && info.first) nameEl.textContent = ' ' + info.first;
+        const sumWrap = document.getElementById('qzThankSummaryWrap');
+        const sum = document.getElementById('qzThankSummary');
+        const bits = [info.amount, info.term].filter(Boolean).join(' \u00B7 ');
+        if (sum && sumWrap && bits) { sum.textContent = bits + ' cover'; sumWrap.style.display = 'inline-flex'; }
+      } catch(err){}
+      window.scrollTo({ top: 0, behavior: 'auto' });
+      this.renderIcons();
+    });
+  }
+  initQuoteHandoff(){
+    if (window.__qzHandoff) return; window.__qzHandoff = true;
+    window.addEventListener('message', (e) => {
+      const d = e && e.data; if (!d || d.type !== 'quoteStart') return;
+      const val = d.quoteFor === 'couple' ? 'Me and my partner' : 'Just me';
+      const opt = document.querySelector('.qz-step[data-step="0"] .qz-opt[data-val="' + val + '"]');
+      const cont = document.getElementById('qzContinue');
+      const shell = document.getElementById('qzShell');
+      if (opt) opt.click();
+      setTimeout(() => { if (cont) cont.click(); }, 120);
+      setTimeout(() => { if (shell) { const y = shell.getBoundingClientRect().top + window.pageYOffset - 24; window.scrollTo({ top: y, behavior: 'smooth' }); } }, 660);
+    });
+  }
+  componentDidUpdate(){ this.renderIcons(); }
+  renderIcons(){ const go=()=>{ try{ if(window.lucide) window.lucide.createIcons(); }catch(e){} }; go(); setTimeout(go,300); setTimeout(go,900); }
+
+  initWizard(){
+    const root = document.getElementById('qzSteps');
+    if (!root || root.__wired) return;
+    root.__wired = true;
+    const steps = Array.from(root.querySelectorAll('.qz-step'));
+    const total = steps.length;
+    const fill = document.getElementById('qzProgFill');
+    const ptext = document.getElementById('qzProgText');
+    const cont = document.getElementById('qzContinue');
+    const back = document.getElementById('qzBack');
+    const err = document.getElementById('qzErr');
+    const data = {};
+    let idx = 0;
+
+    // populate selects
+    const amt = document.getElementById('qzCoverAmt');
+    ['£50,000','£100,000','£150,000','£200,000','£250,000','£300,000','£400,000','£500,000','£750,000','£1,000,000'].forEach(v=>{const o=document.createElement('option');o.textContent=v;amt.appendChild(o);});
+    amt.value = '£150,000';
+    const term = document.getElementById('qzCoverTerm');
+    ['5 years','10 years','15 years','20 years','25 years','30 years'].forEach(v=>{const o=document.createElement('option');o.textContent=v;term.appendChild(o);});
+    term.value = '20 years';
+    const dD = document.getElementById('qzDobD'), dM = document.getElementById('qzDobM'), dY = document.getElementById('qzDobY');
+    dD.innerHTML='<option value="">Day</option>'; for(let i=1;i<=31;i++){const o=document.createElement('option');o.textContent=i;dD.appendChild(o);}
+    const months=['January','February','March','April','May','June','July','August','September','October','November','December'];
+    dM.innerHTML='<option value="">Month</option>'; months.forEach(m=>{const o=document.createElement('option');o.textContent=m;dM.appendChild(o);});
+    dY.innerHTML='<option value="">Year</option>'; const now=new Date().getFullYear(); for(let y=now-18;y>=now-80;y--){const o=document.createElement('option');o.textContent=y;dY.appendChild(o);}
+
+    // option-tile selection
+    root.querySelectorAll('.qz-opt').forEach(opt => {
+      opt.addEventListener('click', () => {
+        const key = opt.getAttribute('data-key');
+        opt.parentElement.querySelectorAll('.qz-opt').forEach(o => o.classList.remove('sel'));
+        opt.classList.add('sel');
+        data[key] = opt.getAttribute('data-val');
+        err.style.display = 'none';
+      });
+    });
+
+    const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+    const validPhone = (v) => { const d=v.replace(/[\s().-]/g,'').replace(/^\+44/,'0'); return /^0\d{9,10}$/.test(d); };
+
+    const showErr = (m) => { err.textContent = m; err.style.display = 'block'; };
+
+    const validate = () => {
+      err.style.display = 'none';
+      if (idx===0) return data.quotesFor || (showErr('Please choose an option to continue.'),false);
+      if (idx===1) return data.cover || (showErr('Please choose an option to continue.'),false);
+      if (idx===2) return data.nicotine || (showErr('Please choose an option to continue.'),false);
+      if (idx===3) return data.heart || (showErr('Please choose an option to continue.'),false);
+      if (idx===4){ data.coverAmount=amt.value; data.coverTerm=term.value; return true; }
+      if (idx===5){ if(!dD.value||!dM.value||!dY.value) return showErr('Please select your full date of birth.'),false; data.dob=dD.value+' '+dM.value+' '+dY.value; return true; }
+      if (idx===6){ const t=document.getElementById('qzTitle').value,f=document.getElementById('qzFirst').value.trim(),l=document.getElementById('qzLast').value.trim(); if(!t||!f||!l) return showErr('Please enter your title and name.'),false; data.title=t;data.first=f;data.last=l; return true; }
+      if (idx===7){ const h=document.getElementById('qzHouse').value.trim(),tn=document.getElementById('qzTown').value.trim(),pc=document.getElementById('qzPostcode').value.trim(); if(!h||!tn||!pc) return showErr('Please complete your address.'),false; data.house=h;data.town=tn;data.postcode=pc; return true; }
+      if (idx===8){ const e=document.getElementById('qzEmail').value.trim(),p=document.getElementById('qzPhone').value.trim(); if(!emailRe.test(e)) return showErr('Please enter a valid email address.'),false; if(!validPhone(p)) return showErr('Please enter a valid UK phone number.'),false; data.email=e;data.phone=p; return true; }
+      return true;
+    };
+
+    const render = () => {
+      steps.forEach(s => s.style.display = (Number(s.getAttribute('data-step'))===idx) ? 'block' : 'none');
+      const pct = Math.round((idx/total)*100);
+      fill.style.width = pct + '%';
+      ptext.textContent = 'Progress ' + pct + '%';
+      cont.innerHTML = (idx===total-1) ? 'Get Your Quotes Now' : 'Continue &raquo;';
+      back.style.visibility = (idx===0) ? 'hidden' : 'visible';
+      this.renderIcons();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    cont.addEventListener('click', () => {
+      if (!validate()) return;
+      if (idx < total-1){ idx++; render(); }
+      else {
+        // final submit -> thank you (DEMO: wire to backend)
+        document.getElementById('qzShell').style.display = 'none';
+        document.getElementById('qzThanks').style.display = 'block';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        try { console.log('TopQuote quote lead:', data); } catch(e){}
+      }
+    });
+    back.addEventListener('click', () => { if (idx>0){ idx--; render(); } });
+
+    render();
+  }
+}
+</script>
+</body>
+</html>

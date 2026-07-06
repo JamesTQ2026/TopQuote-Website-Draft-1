@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;800&amp;family=Playfair+Display:wght@500;600;700;800;900&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Mulish',sans-serif;}
+  .arva-h{font-family:'Playfair Display','Georgia',serif;}
+  .nav-link{white-space:nowrap;}
+  .nav-link:hover{color:#1EBABB !important;}
+  .nav-dd{position:relative;}
+  .nav-dd-menu{position:absolute;top:calc(100% + 6px);left:0;background:#0C1F19;border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:8px;min-width:190px;opacity:0;visibility:hidden;transform:translateY(6px);transition:opacity .2s ease,transform .2s ease;box-shadow:0 20px 40px rgba(0,0,0,.35);z-index:60;}
+  .nav-dd:hover .nav-dd-menu{opacity:1;visibility:visible;transform:translateY(0);}
+  .nav-dd-menu a{display:block;padding:10px 14px;color:#fff !important;text-decoration:none;font-size:15px;border-radius:8px;white-space:nowrap;}
+  .nav-dd-menu a:hover{background:rgba(255,255,255,.08);color:#1EBABB !important;}
+  i[data-lucide]{display:inline-flex;}
+  .reveal{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.22,1,.36,1),transform .8s cubic-bezier(.22,1,.36,1);}
+  .reveal.in{opacity:1;transform:none;}
+  .rv-card{transition:transform .25s ease,box-shadow .25s ease;opacity:0;transform:translateY(26px);}
+  .rv-grid.in .rv-card{opacity:1;transform:none;transition:opacity .6s cubic-bezier(.22,1,.36,1),transform .6s cubic-bezier(.22,1,.36,1),box-shadow .25s ease;}
+  .rv-card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(20,40,35,.10);}
+  .rv-grid.in .rv-card:nth-child(1){transition-delay:0ms;}.rv-grid.in .rv-card:nth-child(2){transition-delay:80ms;}.rv-grid.in .rv-card:nth-child(3){transition-delay:160ms;}.rv-grid.in .rv-card:nth-child(4){transition-delay:240ms;}.rv-grid.in .rv-card:nth-child(5){transition-delay:320ms;}
+  .step-col{opacity:0;transform:translateY(24px);background:#fff;border-radius:16px;padding:30px 28px;box-shadow:0 8px 24px rgba(20,40,35,.05);}
+  .steps-row.in .step-col{opacity:1;transform:none;transition:opacity .6s ease,transform .6s ease;}
+  .steps-row.in .step-col:nth-child(1){transition-delay:0ms;}.steps-row.in .step-col:nth-child(2){transition-delay:110ms;}.steps-row.in .step-col:nth-child(3){transition-delay:220ms;}.steps-row.in .step-col:nth-child(4){transition-delay:330ms;}.steps-row.in .step-col:nth-child(5){transition-delay:440ms;}
+  .faq-q{cursor:pointer;transition:background .25s ease;}
+  .faq-item.open .faq-a{max-height:360px;opacity:1;}
+  .faq-item.open .faq-plus{transform:rotate(45deg);}
+  .abtn{transition:transform .3s cubic-bezier(.34,1.56,.44,1),filter .3s ease,background .25s ease;}
+  .abtn:hover{transform:translateY(-3px) scale(1.03);}
+  @keyframes lgLetter{0%,100%{transform:rotate(-4deg);}50%{transform:rotate(-1.5deg);}}
+  .lg-letter{animation:lgLetter 6s ease-in-out infinite;}
+  @keyframes lgFloat{0%,100%{transform:translateY(0);}50%{transform:translateY(-7px);}}
+  @keyframes lgUmb{0%,100%{transform:rotate(-7deg);}50%{transform:rotate(7deg);}}
+  .lg-umb{transform-origin:50% 82%;animation:lgUmb 3.6s ease-in-out infinite;}
+  @media (prefers-reduced-motion:reduce){.lg-umb{animation:none !important;}}
+  @media (prefers-reduced-motion:reduce){.lg-letter{animation:none !important;transform:translate(-50%,-24%) !important;}}
+  @media (prefers-reduced-motion:reduce){.reveal,.rv-card,.step-col{opacity:1 !important;transform:none !important;}}
+  @media (max-width:980px){
+    header nav{display:none !important;}
+    .split{grid-template-columns:1fr !important;}
+    .hero-grid{grid-template-columns:1fr !important;}
+    .steps-row{grid-template-columns:1fr !important;}
+    .story-stats{grid-template-columns:1fr !important;}
+  }
+  @media (max-width:768px){.cta-fixed{background-attachment:scroll !important;}}
+</style>
+</helmet>
+
+<div style="width:100%;overflow-x:clip;background:#F6F7FB;color:#1B3A33;">
+
+  <!-- ============ HERO ============ -->
+  <section style="position:relative;height:100vh;min-height:640px;background:#000;color:#fff;overflow:hidden;display:flex;flex-direction:column;">
+    <video src="assets/reconnect-hero.mp4" autoplay="" muted="" loop="" playsinline="" preload="auto" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;z-index:0;"></video>
+    <div style="position:absolute;inset:0;background:linear-gradient(112deg,rgba(9,34,25,.92) 0%,rgba(11,42,31,.7) 42%,rgba(24,140,140,.44) 78%,rgba(30,186,187,.32) 100%);z-index:1;"></div>
+
+    <header style="position:relative;z-index:5;padding:30px clamp(24px,5vw,84px);display:flex;align-items:center;justify-content:space-between;gap:40px;">
+      <a href="Home Page.dc.html" style="display:flex;align-items:center;"><img src="assets/topquote-logo.png" alt="TopQuote" style="height:38px;width:auto;display:block;"></a>
+      <nav style="display:flex;align-items:center;gap:20px;font-size:16px;font-weight:600;">
+        <div class="nav-dd"><a href="Life Insurance.dc.html" style="background:#1EBABB;color:#fff;padding:9px 18px;border-radius:24px;text-decoration:none;display:inline-flex;align-items:center;gap:5px;">Services <span style="font-size:10px;">&#9662;</span></a><div class="nav-dd-menu"><a href="Life Insurance.dc.html">Life Insurance</a><a href="Critical Illness.dc.html">Critical Illness</a><a href="Income Protection.dc.html">Income Protection</a></div></div>
+        <div class="nav-dd"><a href="About Us.dc.html" class="nav-link" style="color:#fff;padding:9px 14px;text-decoration:none;display:inline-flex;align-items:center;gap:5px;">About <span style="font-size:10px;">&#9662;</span></a><div class="nav-dd-menu"><a href="About Us.dc.html">About Us</a><a href="Consumer Duty.dc.html">Consumer Duty</a></div></div>
+        <a href="Reconnect.dc.html" class="nav-link" style="color:#fff;padding:9px 14px;text-decoration:none;">Reconnect</a>
+        <a href="Blog.dc.html" class="nav-link" style="color:#fff;padding:9px 14px;text-decoration:none;">Blog</a>
+        <a href="Contact.dc.html" class="nav-link" style="color:#fff;padding:9px 14px;text-decoration:none;">Contact</a>
+        <a href="Careers.dc.html" class="nav-link" style="color:#fff;padding:9px 14px;text-decoration:none;">Careers</a>
+        <a href="Find Us.dc.html" class="nav-link" style="color:#fff;padding:9px 14px;text-decoration:none;">Find Us</a>
+      </nav>
+      <a href="Get a Quote.dc.html" class="abtn" style="background:#1EBABB;color:#fff;padding:14px 26px;border-radius:8px;text-decoration:none;font-weight:700;font-size:15px;white-space:nowrap;">Get a quote</a>
+    </header>
+
+    <div style="position:relative;z-index:4;flex:1;min-height:0;">
+      <div style="position:relative;height:100%;">
+        <!-- title top-left -->
+        <div style="position:absolute;top:8%;left:clamp(24px,5vw,84px);right:clamp(24px,5vw,84px);">
+          <h1 class="arva-h" style="font-size:clamp(48px,6.2vw,104px);line-height:0.98;font-weight:600;letter-spacing:.5px;text-transform:uppercase;max-width:900px;text-shadow:0 2px 30px rgba(0,0,0,.3);">Your Legal &amp; General<br>Life Insurance Policy</h1>
+          <p style="margin-top:26px;font-size:20px;color:#3fd3d4;font-weight:600;">TopQuote is here to help.</p>
+          <a href="#update" class="abtn" style="display:inline-flex;align-items:center;gap:10px;margin-top:26px;background:#1EBABB;color:#fff;padding:16px 32px;border-radius:10px;text-decoration:none;font-weight:700;font-size:16px;">Update My Details <i data-lucide="arrow-right" style="width:18px;height:18px;"></i></a>
+        </div>
+
+        <!-- supporting text, bottom-right, no box -->
+        <div style="position:absolute;right:clamp(24px,5vw,84px);bottom:14%;max-width:400px;display:flex;gap:14px;align-items:flex-start;">
+          <img class="lg-umb" src="assets/lg-umbrella.png" alt="Legal & General" style="width:36px;height:36px;object-fit:contain;flex:none;margin-top:2px;">
+          <div style="font-size:20px;line-height:1.65;color:rgba(255,255,255,.94);">Your <strong style="color:#fff;">Legal &amp; General</strong> life insurance or critical illness cover <strong style="color:#fff;">remains in force</strong>. We've been appointed to ensure you receive the ongoing support and reviews your policy deserves.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHAT COULD BE MORE IMPORTANT ============ -->
+  <section style="background:#F6F7FB;padding:100px clamp(24px,5vw,40px);">
+    <div class="split" style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:480px 1fr;gap:70px;align-items:center;">
+      <div class="reveal" style="height:560px;border-radius:16px;overflow:hidden;background:#000;">
+        <video src="assets/reconnect-people.mp4" autoplay="" muted="" loop="" playsinline="" preload="auto" style="width:100%;height:100%;object-fit:cover;display:block;"></video>
+      </div>
+      <div>
+        <div class="reveal" style="display:flex;align-items:center;gap:9px;margin-bottom:18px;">
+          <img class="lg-umb" src="assets/lg-umbrella.png" alt="Legal & General" style="width:22px;height:22px;object-fit:contain;">
+          <span style="color:#1EBABB;font-weight:700;font-size:15px;">Reconnect</span>
+        </div>
+        <h2 class="reveal arva-h" style="font-size:43px;line-height:1.12;font-weight:600;color:#173B33;">What could be more important than the people you love?</h2>
+        <div class="reveal" style="display:flex;flex-direction:column;gap:18px;color:#6B7280;font-size:16px;line-height:1.75;margin-top:22px;max-width:560px;">
+          <p>If your original broker or adviser is no longer looking after your policy, you're not alone, and you're not stuck. Reconnect is our way of picking up where they left off, making sure the cover you took out to protect your family is still doing its job.</p>
+          <p>We'll review what you have, check it still fits your circumstances, and keep your details up to date, so that when the moment comes, your protection is exactly where it needs to be.</p>
+        </div>
+
+        <div class="reveal" style="display:flex;align-items:center;gap:28px;margin-top:38px;flex-wrap:wrap;">
+          <img src="assets/badge-trustpilot.png" alt="Trustpilot TrustScore 4.3, 517 reviews" style="height:104px;width:auto;object-fit:contain;">
+          <img src="assets/badge-feefo.png" alt="Feefo Service Rating, 743 reviews" style="height:88px;width:auto;object-fit:contain;">
+          <img src="assets/badge-bqa.png" alt="Business Quality Awards" style="height:120px;width:auto;object-fit:contain;">
+        </div>
+
+        <a href="Home Page.dc.html#contactSection" class="abtn reveal" style="display:inline-block;margin-top:38px;background:#1EBABB;color:#fff;padding:15px 30px;border-radius:8px;text-decoration:none;font-weight:700;font-size:15px;">Speak To An Adviser</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WELCOME ============ -->
+  <section style="background:#F6F7FB;padding:100px clamp(24px,5vw,40px);">
+    <div style="max-width:1040px;margin:0 auto;text-align:center;">
+      <div class="reveal" style="display:inline-flex;align-items:center;gap:9px;margin-bottom:16px;">
+        <img class="lg-umb" src="assets/lg-umbrella.png" alt="Legal & General" style="width:22px;height:22px;object-fit:contain;">
+        <span style="color:#1EBABB;font-weight:700;font-size:15px;">Welcome</span>
+      </div>
+      <h2 class="reveal arva-h" style="font-size:clamp(32px,4.2vw,52px);line-height:1.1;font-weight:600;color:#173B33;margin-bottom:28px;">A quick update on your<br>Legal &amp; General policy</h2>
+      <div class="reveal" style="display:flex;flex-direction:column;gap:20px;color:#5B6B66;font-size:16.5px;line-height:1.8;max-width:820px;margin:0 auto;">
+        <p>If you hold a Legal &amp; General life insurance or critical illness policy, your servicing has recently been transferred to TopQuote, a team of qualified advisers who specialise in Legal &amp; General protection products.</p>
+        <p>Your cover is unchanged. Your premiums, benefits and policy terms all stay exactly as they are. We've put this page together to explain who we are, why you're hearing from us, and the small things worth checking now you have a dedicated review partner.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ NOW LOOKING AFTER ============ -->
+  <section style="background:#ECEDF1;padding:90px clamp(24px,5vw,40px);">
+    <div class="split" style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;">
+      <div class="reveal">
+        <h2 class="arva-h" style="font-size:clamp(30px,3.4vw,44px);line-height:1.12;font-weight:700;color:#1EBABB;margin-bottom:26px;">We're now looking after<br>your Legal &amp; General policy</h2>
+        <div style="display:flex;flex-direction:column;gap:16px;color:#5B6B66;font-size:15.5px;line-height:1.75;">
+          <p>Your Legal &amp; General life or critical illness cover is <strong style="color:#173B33;">unchanged</strong>, your premiums, benefits and policy terms all stay exactly as they are. The only thing that's different is who you'll hear from when it's time for a review or an update. That's now us.</p>
+          <div>
+            <h3 style="font-size:17px;font-weight:700;color:#173B33;margin-bottom:8px;">Why the change?</h3>
+            <p>Your previous broker no longer works with Legal &amp; General, so Legal &amp; General have appointed TopQuote to take over the servicing of policies like yours.</p>
+          </div>
+          <div>
+            <h3 style="font-size:17px;font-weight:700;color:#173B33;margin-bottom:8px;">What we'll do for you</h3>
+            <p>Keep your contact details current, make sure you're aware of every benefit you're entitled to, check nothing's been missed when it comes to claims, and review your cover whenever your circumstances change.</p>
+          </div>
+          <p>You don't need to do anything right now. If you have questions about your policy, speak to your TopQuote adviser.</p>
+        </div>
+        <a href="Home Page.dc.html#contactSection" class="abtn" style="display:inline-block;margin-top:30px;background:#1EBABB;color:#fff;padding:15px 32px;border-radius:9px;text-decoration:none;font-weight:700;font-size:15px;">Speak To An Adviser</a>
+      </div>
+      <div class="reveal" style="position:relative;min-height:600px;display:flex;align-items:center;justify-content:center;">
+
+        <!-- envelope + letter scene -->
+        <div style="position:relative;width:440px;height:600px;animation:lgFloat 6s ease-in-out infinite;">
+
+          <!-- LETTER (fully out) -->
+          <div style="position:absolute;left:50%;top:6px;transform:translateX(-50%) rotate(-1.6deg);width:384px;height:508px;background:#fff;border-radius:5px;box-shadow:0 18px 34px rgba(30,40,36,.14),0 3px 8px rgba(30,40,36,.08);padding:34px 38px;z-index:3;">
+            <!-- letterhead -->
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+              <img src="assets/lg-logo.png" alt="Legal &amp; General" style="width:96px;height:auto;object-fit:contain;">
+              <div style="text-align:right;font-size:8px;line-height:1.55;color:#6B7280;">
+                Legal &amp; General Assurance Society<br>One Coleman Street<br>London EC2R 5AA<br>legalandgeneral.com
+              </div>
+            </div>
+            <div style="width:100%;height:1.5px;background:#111;margin:16px 0 18px;"></div>
+
+            <!-- recipient + date -->
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+              <div style="font-size:9.5px;line-height:1.65;color:#1f2937;">
+                Mr A. Policyholder<br>14 Meadow Lane<br>Didsbury<br>Manchester, M20 6RJ
+              </div>
+              <div style="font-size:9px;color:#6B7280;">6 April 2026</div>
+            </div>
+
+            <div style="font-size:9.5px;color:#1f2937;margin-top:20px;">Dear Mr Policyholder,</div>
+            <div style="font-size:10px;font-weight:700;color:#111;margin-top:12px;line-height:1.4;">Your Legal &amp; General life insurance policy<br>a change to who looks after it</div>
+
+            <div style="display:flex;flex-direction:column;gap:9px;margin-top:12px;font-size:9.3px;line-height:1.62;color:#374151;">
+              <p style="margin:0;">We're writing to let you know that the servicing of your Legal &amp; General life insurance policy has been transferred to <strong>TopQuote</strong>, a firm of qualified protection advisers appointed to look after policies like yours.</p>
+              <p style="margin:0;">Your cover, your premiums and your policy terms all remain exactly the same. There is nothing you need to do, and you remain fully protected.</p>
+              <p style="margin:0;">TopQuote will now be your point of contact for policy reviews and any questions about your cover.</p>
+            </div>
+
+            <div style="font-size:9.5px;color:#1f2937;margin-top:16px;">Yours sincerely,</div>
+            <div style="font-family:'Playfair Display',serif;font-style:italic;font-size:24px;color:#0c2f5a;margin-top:4px;transform:rotate(-3deg);transform-origin:left;">Legal &amp; General</div>
+            <div style="font-size:8.5px;color:#6B7280;margin-top:6px;">Customer Servicing Team</div>
+          </div>
+
+          <!-- envelope back -->
+          <div style="position:absolute;left:50%;transform:translateX(-50%);bottom:0;width:420px;height:250px;background:linear-gradient(#2AC3C4,#1EBABB);border-radius:12px;box-shadow:0 34px 60px rgba(30,40,36,.26);z-index:2;"></div>
+          <!-- envelope front pocket -->
+          <div style="position:absolute;left:50%;transform:translateX(-50%);bottom:0;width:420px;height:250px;background:linear-gradient(#1EBABB,#159a9b);clip-path:polygon(0 100%,0 8%,50% 52%,100% 8%,100% 100%);border-radius:12px;z-index:4;box-shadow:inset 0 2px 6px rgba(255,255,255,.25);"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHY TOPQUOTE ============ -->
+  <section style="background:#fff;padding:90px clamp(24px,5vw,40px);">
+    <div class="split" style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;">
+      <div class="reveal">
+        <div style="display:flex;align-items:center;gap:9px;margin-bottom:14px;">
+          <img class="lg-umb" src="assets/lg-umbrella.png" alt="Legal & General" style="width:22px;height:22px;object-fit:contain;">
+          <span style="color:#1EBABB;font-weight:700;font-size:15px;">Why TopQuote?</span>
+        </div>
+        <h2 class="arva-h" style="font-size:clamp(28px,3.2vw,42px);line-height:1.14;font-weight:600;color:#173B33;margin-bottom:18px;">Specialists who know<br>your policy inside out.</h2>
+        <p style="color:#5B6B66;font-size:15.5px;line-height:1.75;margin-bottom:28px;max-width:520px;">As qualified financial advisers with deep expertise in Legal &amp; General protection products, we're uniquely placed to review your cover and make sure it still fits your life.</p>
+        <div style="display:flex;flex-direction:column;gap:20px;">
+          <sc-for list="{{ reasons }}" as="r" hint-placeholder-count="4">
+            <div style="display:flex;gap:16px;align-items:flex-start;">
+              <span style="width:34px;height:34px;border-radius:50%;background:#1EBABB;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;flex:none;font-family:'Playfair Display',Georgia,serif;">{{ r.num }}</span>
+              <p style="color:#5B6B66;font-size:15px;line-height:1.65;"><strong style="color:#173B33;">{{ r.title }}</strong>, {{ r.desc }}</p>
+            </div>
+          </sc-for>
+        </div>
+        <a href="Home Page.dc.html#contactSection" class="abtn" style="display:inline-block;margin-top:32px;background:#1EBABB;color:#fff;padding:15px 32px;border-radius:9px;text-decoration:none;font-weight:700;font-size:15px;">Book your policy review</a>
+      </div>
+      <div class="reveal" style="height:min(64vh,540px);border-radius:20px;overflow:hidden;background:#000;">
+        <img src="assets/why-topquote-couple.jpg" alt="TopQuote adviser reviewing a policy with a couple" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ UPDATE DETAILS ============ -->
+  <section id="update" style="background:#ECEDF1;padding:90px clamp(24px,5vw,40px);">
+    <div class="split" style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;">
+      <div class="reveal" style="height:min(66vh,560px);border-radius:20px;overflow:hidden;background:#000;">
+        <img src="assets/reconnect-family-walk.jpg" alt="Family walking together in a park" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="reveal">
+        <div style="display:flex;align-items:center;gap:9px;margin-bottom:14px;">
+          <img class="lg-umb" src="assets/lg-umbrella.png" alt="Legal & General" style="width:22px;height:22px;object-fit:contain;">
+          <span style="color:#1EBABB;font-weight:700;font-size:15px;">Keep your cover valid</span>
+        </div>
+        <h2 class="arva-h" style="font-size:clamp(28px,3.2vw,42px);line-height:1.14;font-weight:600;color:#173B33;margin-bottom:18px;">Do your details still<br>reflect your life?</h2>
+        <p style="color:#5B6B66;font-size:15.5px;line-height:1.75;margin-bottom:14px;max-width:520px;">Moved house? New phone number? Different beneficiary in mind? Letting us know takes a minute, and makes sure your cover does what it's supposed to when it matters.</p>
+        <p style="color:#8A94A6;font-size:14px;font-style:italic;margin-bottom:26px;">Updating your details won't change your premiums, benefits or policy terms.</p>
+        <h3 style="color:#1EBABB;font-weight:700;font-size:17px;margin-bottom:16px;">Tell us what's changed</h3>
+        <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:30px;">
+          <span style="display:flex;align-items:center;gap:12px;color:#173B33;font-size:15.5px;font-weight:600;"><i data-lucide="user" style="width:20px;height:20px;color:#1EBABB;"></i> Name</span>
+          <span style="display:flex;align-items:center;gap:12px;color:#173B33;font-size:15.5px;font-weight:600;"><i data-lucide="home" style="width:20px;height:20px;color:#1EBABB;"></i> Address</span>
+          <span style="display:flex;align-items:center;gap:12px;color:#173B33;font-size:15.5px;font-weight:600;"><i data-lucide="smartphone" style="width:20px;height:20px;color:#1EBABB;"></i> Mobile number</span>
+          <span style="display:flex;align-items:center;gap:12px;color:#173B33;font-size:15.5px;font-weight:600;"><i data-lucide="mail" style="width:20px;height:20px;color:#1EBABB;"></i> Email address</span>
+          <span style="display:flex;align-items:center;gap:12px;color:#173B33;font-size:15.5px;font-weight:600;"><i data-lucide="edit-3" style="width:20px;height:20px;color:#1EBABB;"></i> Beneficiary details</span>
+        </div>
+        <a href="Home Page.dc.html#contactSection" class="abtn" style="display:inline-block;background:#1EBABB;color:#fff;padding:15px 32px;border-radius:9px;text-decoration:none;font-weight:700;font-size:15px;">Update My Details</a>
+        <p style="color:#5B6B66;font-size:14.5px;margin-top:20px;">Prefer to talk? Call us on <a href="tel:01619743710" style="color:#1EBABB;font-weight:700;text-decoration:none;">0161 974 3710</a>, Mon&ndash;Fri 8:30&ndash;18:00.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REVIEW MY COVER ============ -->
+  <section style="background:#F6F7FB;padding:100px clamp(24px,5vw,40px);">
+    <div style="max-width:1000px;margin:0 auto 50px;">
+      <h2 class="reveal arva-h" style="font-size:clamp(30px,3.6vw,46px);font-weight:600;color:#173B33;margin-bottom:14px;">Do I need to review my cover?</h2>
+      <p class="reveal" style="color:#5B6B66;font-size:16.5px;">You may need to review your cover if you have:</p>
+    </div>
+    <div class="rv-grid" style="max-width:1040px;margin:0 auto;display:flex;flex-direction:column;gap:18px;">
+      <sc-for list="{{ triggers }}" as="t" hint-placeholder-count="5">
+        <div class="rv-card" style="background:#fff;border-radius:16px;padding:30px 34px;display:flex;gap:24px;align-items:flex-start;box-shadow:0 8px 24px rgba(20,40,35,.05);">
+          <span style="width:60px;height:60px;border-radius:14px;background:#1EBABB;display:flex;align-items:center;justify-content:center;flex:none;"><i data-lucide="{{ t.icon }}" style="width:28px;height:28px;color:#fff;"></i></span>
+          <div>
+            <h3 class="arva-h" style="font-size:20px;font-weight:700;color:#173B33;margin-bottom:8px;">{{ t.title }}</h3>
+            <p style="color:#7A867F;font-size:14.5px;line-height:1.7;">{{ t.desc }}</p>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="text-align:center;margin-top:44px;">
+      <a href="Home Page.dc.html#contactSection" class="abtn reveal" style="display:inline-block;background:#1EBABB;color:#fff;padding:15px 34px;border-radius:9px;text-decoration:none;font-weight:700;font-size:15px;">Update My Details</a>
+    </div>
+  </section>
+
+  <!-- ============ FIRST TIME HEARING ============ -->
+  <section style="background:#fff;padding:90px clamp(24px,5vw,40px);">
+    <div class="split" style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr 1.1fr;gap:60px;align-items:center;">
+      <div class="reveal">
+        <h2 class="arva-h" style="font-size:clamp(30px,3.4vw,44px);line-height:1.12;font-weight:700;color:#1EBABB;margin-bottom:24px;">Hearing from us for<br>the first time?</h2>
+        <div style="display:flex;flex-direction:column;gap:16px;color:#5B6B66;font-size:15.5px;line-height:1.75;">
+          <p>Probably, yes, and your cover is completely unchanged. Same provider, same premiums, same policy terms.</p>
+          <p>Legal &amp; General appointed TopQuote to take over the servicing of policies previously held by your original broker, who's no longer working with them. We're now your point of contact for reviews, updates, and any questions about your cover.</p>
+          <p><strong style="color:#173B33;">Want to verify this directly with Legal &amp; General?</strong> You absolutely can, their customer line is on any of your policy documents, or call <strong style="color:#173B33;white-space:nowrap;">0370&nbsp;010&nbsp;4080</strong>.</p>
+        </div>
+        <a href="Home Page.dc.html#contactSection" class="abtn" style="display:inline-block;margin-top:30px;background:#1EBABB;color:#fff;padding:15px 32px;border-radius:9px;text-decoration:none;font-weight:700;font-size:15px;">Update My Details</a>
+      </div>
+      <div class="reveal" style="height:min(58vh,460px);border-radius:20px;overflow:hidden;background:#000;">
+        <img src="assets/reconnect-family-advisor.jpg" alt="Family meeting with a TopQuote adviser" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ NEXT STEPS ============ -->
+  <section style="background:#F6F7FB;padding:100px clamp(24px,5vw,40px);">
+    <div style="max-width:900px;margin:0 auto 56px;text-align:center;">
+      <h2 class="reveal arva-h" style="font-size:clamp(30px,3.6vw,46px);font-weight:600;color:#173B33;margin-bottom:16px;">What are the typical next steps?</h2>
+      <p class="reveal" style="color:#5B6B66;font-size:16px;">If you're considering a review of your cover, the process typically involves:</p>
+    </div>
+    <div class="steps-row" style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(5,1fr);gap:26px;">
+      <sc-for list="{{ steps }}" as="s" hint-placeholder-count="5">
+        <div class="step-col">
+          <div style="display:flex;align-items:center;margin-bottom:20px;">
+            <span style="width:46px;height:46px;border-radius:50%;background:#1EBABB;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:20px;flex:none;font-family:'Playfair Display',Georgia,serif;">{{ s.num }}</span>
+          </div>
+          <h3 class="arva-h" style="font-size:18px;font-weight:700;color:#173B33;margin-bottom:10px;">{{ s.title }}</h3>
+          <p style="color:#7A867F;font-size:13.5px;line-height:1.65;">{{ s.desc }}</p>
+          <sc-if value="{{ s.cta }}" hint-placeholder-val="{{ false }}">
+            <a href="Contact.dc.html" class="abtn" style="display:inline-block;margin-top:18px;background:#1EBABB;color:#fff;padding:11px 22px;border-radius:8px;text-decoration:none;font-weight:700;font-size:13.5px;">{{ s.cta }}</a>
+          </sc-if>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- ============ SPEAK TO EXPERT (fixed CTA) ============ -->
+  <section class="cta-fixed" style="position:relative;background:#04130d url('assets/partner-2.png') center/cover fixed;color:#fff;padding:110px clamp(24px,5vw,40px);text-align:center;overflow:hidden;">
+    <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(9,34,25,.82),rgba(15,140,141,.6));"></div>
+    <div style="position:relative;z-index:1;max-width:720px;margin:0 auto;">
+      <h2 class="arva-h" style="font-size:clamp(32px,4vw,50px);font-weight:600;margin-bottom:18px;">Speak to an expert</h2>
+      <p style="font-size:17px;line-height:1.7;color:rgba(255,255,255,.92);margin-bottom:32px;">Speak with our friendly, award-winning team to find the right solution for you and your family.</p>
+      <a href="Home Page.dc.html#contactSection" class="abtn" style="display:inline-block;background:#1EBABB;color:#fff;padding:16px 36px;border-radius:10px;text-decoration:none;font-weight:700;font-size:16px;">Get a Quote</a>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section style="background:#fff;padding:90px clamp(24px,5vw,40px) 100px;">
+    <h2 class="reveal arva-h" style="text-align:center;font-size:clamp(30px,3.6vw,46px);font-weight:600;color:#173B33;margin-bottom:44px;">Common questions about your policy</h2>
+    <div id="faqList" style="max-width:1000px;margin:0 auto;display:flex;flex-direction:column;gap:14px;">
+      <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="5">
+        <div class="faq-item" style="border-radius:12px;overflow:hidden;box-shadow:0 6px 18px rgba(20,40,35,.06);">
+          <div class="faq-q" style="background:#1EBABB;color:#fff;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-weight:700;font-size:15.5px;">
+            <span>{{ f.q }}</span>
+            <span class="faq-plus" style="font-size:22px;line-height:1;transition:transform .3s ease;flex:none;">+</span>
+          </div>
+          <div class="faq-a" style="max-height:0;opacity:0;overflow:hidden;transition:max-height .4s ease,opacity .4s ease;background:#fff;">
+            <p style="padding:22px 26px;color:#5B6B66;font-size:15px;line-height:1.75;">{{ f.a }}</p>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer style="background:#EAEDFB;padding:64px clamp(24px,5vw,40px) 30px;">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div class="split" style="display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:40px;">
+        <div>
+          <div style="display:flex;align-items:center;margin-bottom:18px;"><img src="assets/topquote-logo-dark.png" alt="TopQuote" style="height:38px;width:auto;display:block;"></div>
+          <p style="color:#6B7280;font-size:13.5px;line-height:1.7;max-width:320px;margin-bottom:22px;">Top Quote Limited is an appointed representative of The Openwork Partnership, a trading style of Openwork Limited, which is authorised and regulated by the Financial Conduct Authority. Approved by The Openwork Partnership on the 20th January 2025.</p>
+          <div style="display:flex;gap:12px;">
+            <span style="width:42px;height:42px;border-radius:50%;background:#1EBABB;display:flex;align-items:center;justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"></path></svg></span>
+            <span style="width:42px;height:42px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="#173B33"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg></span>
+            <span style="width:42px;height:42px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="#173B33"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"></path></svg></span>
+          </div>
+        </div>
+        <div>
+          <h4 class="arva-h" style="font-size:20px;font-weight:600;color:#173B33;margin-bottom:20px;">Pages</h4>
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            <a href="Home Page.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">Home</a>
+            <a href="About Us.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">About</a>
+            <a href="Blog.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">News</a>
+            <a href="Home Page.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">Contact</a>
+            <a href="Reconnect.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">Reconnect</a>
+            <a href="Home Page.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">Privacy Notice</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="arva-h" style="font-size:20px;font-weight:600;color:#173B33;margin-bottom:20px;">Services</h4>
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            <a href="Home Page.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">Life Insurance</a>
+            <a href="Home Page.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">Critical Illness</a>
+            <a href="Home Page.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">Income Protection</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="arva-h" style="font-size:20px;font-weight:600;color:#173B33;margin-bottom:20px;">Need Help?</h4>
+          <div style="display:flex;flex-direction:column;gap:16px;">
+            <span style="display:flex;align-items:flex-start;gap:10px;color:#6B7280;font-size:15px;line-height:1.55;"><i data-lucide="map-pin" style="width:17px;height:17px;color:#1EBABB;margin-top:2px;flex:none;"></i> <span>Alderley Park, Suite 3,<br>GLASSHOUSE, Congleton Road,<br>Macclesfield, SK10 4TG</span></span>
+            <span style="display:flex;align-items:center;gap:10px;color:#6B7280;font-size:15px;"><i data-lucide="phone" style="width:17px;height:17px;color:#1EBABB;flex:none;"></i> Customer support: 0161 974 3710</span>
+            <span style="display:flex;align-items:center;gap:10px;color:#6B7280;font-size:15px;"><i data-lucide="clock" style="width:17px;height:17px;color:#1EBABB;flex:none;"></i> Working time: Mon &ndash; Fri: 8:30 &ndash; 18:00</span>
+            <span style="display:flex;align-items:center;gap:10px;color:#6B7280;font-size:15px;"><i data-lucide="mail" style="width:17px;height:17px;color:#1EBABB;flex:none;"></i> hello@topquote.uk.com</span>
+          </div>
+        </div>
+      </div>
+      <div style="height:1px;background:#D2D6E8;margin:40px 0 22px;"></div>
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;">
+        <span style="color:#6B7280;font-size:14px;">© 2025 TopQuote. All Rights Reserved.</span>
+        <div style="display:flex;gap:18px;align-items:center;">
+          <a href="https://www.theopenworkpartnership.com/privacy-notice/" target="_blank" rel="noopener" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:14px;">Privacy Policy</a>
+          <span style="color:#C4C9DE;">|</span>
+          <a href="#" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:14px;">Cookie Policy</a>
+        </div>
+      </div>
+      <div style="text-align:left;color:#6B7280;font-size:13.5px;line-height:1.75;max-width:940px;margin:34px 0 0;">
+        <p>&copy;2026 TopQuote Ltd., Registered in England Number: 04648763, Alderley Park, Suite 3, GLASSHOUSE, Macclesfield, SK10 4TG.</p>
+        <p style="margin-top:18px;">Registered in England Number: 04648763</p>
+        <p style="margin-top:14px;">The information on this website is for use of residents of the United Kingdom only. No representations are made as to whether the information is applicable or available in any other country which may have access to it.</p>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  initScrollTop(){
+    if (document.getElementById('scrollTopBtn')) return;
+    var b = document.createElement('button');
+    b.id = 'scrollTopBtn'; b.setAttribute('aria-label','Back to top'); b.textContent = '\u2191';
+    b.style.cssText = 'position:fixed;right:26px;bottom:26px;z-index:9999;width:52px;height:52px;border-radius:50%;border:0;background:#1EBABB;color:#fff;font-size:22px;font-weight:700;cursor:pointer;box-shadow:0 10px 26px rgba(20,40,35,.28);opacity:0;visibility:hidden;transition:opacity .3s ease,visibility .3s ease,transform .2s ease;';
+    b.onmouseenter = function(){ b.style.transform = 'translateY(-3px)'; };
+    b.onmouseleave = function(){ b.style.transform = 'none'; };
+    b.onclick = function(){ window.scrollTo({ top:0, behavior:'smooth' }); };
+    document.body.appendChild(b);
+    var onScroll = function(){ var y = window.scrollY || document.documentElement.scrollTop; if (y > 500){ b.style.opacity='1'; b.style.visibility='visible'; } else { b.style.opacity='0'; b.style.visibility='hidden'; } };
+    window.addEventListener('scroll', onScroll, { passive:true }); onScroll();
+  }
+  componentDidMount(){ this.initScrollTop(); try{ const mute=()=>document.querySelectorAll('video').forEach(v=>{v.muted=true;v.volume=0;v.setAttribute('muted','');}); mute(); document.addEventListener('play',function(e){var v=e.target; if(v&&v.tagName==='VIDEO'){v.muted=true;v.volume=0;}},true); document.addEventListener('loadeddata',function(e){var v=e.target; if(v&&v.tagName==='VIDEO'){v.muted=true;v.volume=0;}},true); setInterval(mute,250); }catch(e){}
+    this.renderIcons();
+    this.initReveals();
+    this.initFaq();
+  }
+  componentDidUpdate(){ this.renderIcons(); }
+
+  renderIcons(){
+    const go = () => { try { if (window.lucide) window.lucide.createIcons(); } catch(e){} };
+    go(); setTimeout(go, 300); setTimeout(go, 900);
+  }
+
+  initReveals(){
+    const io = new IntersectionObserver((es) => {
+      es.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+    }, { threshold: 0.12 });
+    setTimeout(() => {
+      document.querySelectorAll('.reveal, .rv-grid, .steps-row').forEach(el => io.observe(el));
+    }, 60);
+  }
+
+  initFaq(){
+    const bind = () => {
+      const list = document.getElementById('faqList');
+      if (!list || list.__wired) return;
+      list.__wired = true;
+      const items = list.querySelectorAll('.faq-item');
+      items.forEach((it, i) => {
+        if (i === 0) it.classList.add('open');
+        const q = it.querySelector('.faq-q');
+        q.addEventListener('click', () => {
+          const open = it.classList.contains('open');
+          items.forEach(o => o.classList.remove('open'));
+          if (!open) it.classList.add('open');
+        });
+      });
+    };
+    bind(); setTimeout(bind, 400); setTimeout(bind, 1000);
+  }
+
+  renderVals(){
+    return {
+      reasons: [
+        { num:'1', title:'You might be entitled to more than you think', desc:'Some policyholders are paying for cover they no longer need, or have grounds to claim and don\'t realise. We check.' },
+        { num:'2', title:'The market has moved on', desc:'Underwriting has loosened on certain risks since many policies were written. Better terms or wider cover may now be available, but only if you ask.' },
+        { num:'3', title:'Your life has changed', desc:'New job, new home, new family. Cover that fit ten years ago might not fit now. A review tells you whether it still does.' },
+        { num:'4', title:'Your records stay accurate', desc:'Out-of-date contact details can delay claims at the worst possible moment. We keep yours current.' }
+      ],
+      triggers: [
+        { icon:'home', title:'Moved House', desc:'A move usually means a new mortgage, perhaps a bigger one, perhaps over a longer term. Your existing cover may no longer match what your family would actually need to clear if the worst happened. It\'s also worth making sure your address is up to date, so we can always reach you.' },
+        { icon:'percent', title:'Re-Mortgaged', desc:'Remortgaging changes the size of your loan and how long you\'ll be paying it. Your cover might now be too high (if your balance has dropped) or too low (if you\'ve borrowed more, or extended the term). A short review keeps the two in step.' },
+        { icon:'baby', title:'Had A Child Or Grandchild', desc:'A new child or grandchild often changes who you\'d want to provide for, and for how long. Many parents extend their cover to support their children all the way to financial independence. Grandparents sometimes use the moment to put a small legacy in place, too.' },
+        { icon:'heart', title:'Got Married Or Divorced', desc:'Marriage, divorce, or losing a partner can all change who depends on you financially, and who you\'d want to benefit from your policy. A quick review makes sure your cover amount and your nominated beneficiary still reflect the people closest to you.' },
+        { icon:'briefcase', title:'Changed Jobs', desc:'A new role often comes with different benefits. Your employer may now provide some life cover automatically, or the cover you used to have may have disappeared (especially if you\'ve gone self-employed). Either way, the amount of personal cover you actually need has probably shifted.' }
+      ],
+      steps: [
+        { num:'1', title:'You get in touch', cta:'Contact us', desc:'Use the form on this page or give us a call. It takes a minute, and there\'s no commitment. You\'re just letting us know you\'d like to talk.' },
+        { num:'2', title:'A call at a time that suits you', desc:'Your adviser arranges a convenient time to speak. The call itself usually takes 15 to 20 minutes, and there\'s no charge.' },
+        { num:'3', title:'A clear walk-through of your cover', desc:'We explain what your policy actually does, what it doesn\'t, and what benefits you may not realise you have, in plain English, not jargon.' },
+        { num:'4', title:'Honest recommendations, only if needed', desc:'If your cover still fits your life, we\'ll say so. If something genuinely needs adjusting, we\'ll explain why and walk you through the options. No pressure either way.' },
+        { num:'5', title:'We stay in touch', desc:'We check in periodically, and any time you tell us something has changed: a move, a marriage, a new child. Your cover should keep up with your life.' }
+      ],
+      faqs: [
+        { q:'Why am I being contacted about my Legal & General policy?', a:'Legal & General appointed TopQuote to take over the servicing of policies that were previously looked after by your original broker, who is no longer working with them. Your policy hasn\'t moved or changed, only the team responsible for reviewing and updating it on a day-to-day basis has changed.' },
+        { q:'Has my Legal & General policy changed?', a:'No. Your cover, premiums, benefits and policy terms all remain exactly as they were. The only difference is that TopQuote is now your point of contact for reviews, updates and questions.' },
+        { q:'How can I verify TopQuote has been appointed by Legal & General?', a:'You can verify this directly with Legal & General using the customer line printed on any of your policy documents, or by calling 0370 010 4080. You can also confirm our FCA authorisation on the FCA Register at register.fca.org.uk.' },
+        { q:'What happens to life insurance after separation or divorce?', a:'Your policy stays in force, but separation or divorce can change who depends on you financially and who you\'d want to benefit from it. It\'s worth reviewing both your cover amount and your nominated beneficiary so they still reflect your wishes. We can talk you through the options.' },
+        { q:'Is there a cost for the policy review?', a:'No. There is no fee for reviewing your existing Legal & General cover or for keeping your details up to date. If you decide to arrange new or additional cover, we\'ll always be upfront about how we\'re paid before you commit to anything.' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

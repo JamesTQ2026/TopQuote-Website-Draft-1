@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;800&amp;family=Playfair+Display:wght@500;600;700;800;900&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Mulish',sans-serif;}
+  .arva-h{font-family:'Playfair Display','Georgia',serif;}
+  .nav-link{white-space:nowrap;}
+  .nav-link:hover{color:#1EBABB !important;}
+  #rvSwiper .swiper{padding:20px 0 40px !important;overflow:visible !important;}
+  #rvSwiper .swiper-slide{width:380px;max-width:86%;height:auto;opacity:.4;transition:opacity .45s ease;}
+  #rvSwiper .swiper-slide-active{opacity:1;}
+  #rvSwiper .swiper-slide-prev,#rvSwiper .swiper-slide-next{opacity:.62;}
+  .sf-film{position:fixed;top:0;left:0;width:1px;height:1px;z-index:45;overflow:hidden;background:#000;opacity:0;pointer-events:none;will-change:top,left,width,height,border-radius,opacity;box-shadow:0 30px 80px rgba(0,0,0,.35);}
+  .sf-film video{display:block;width:100%;height:100%;object-fit:cover;}
+  .sf-film__overlay{position:absolute;inset:0;background:#000;opacity:0;pointer-events:none;}
+  .sf-stage{position:relative;z-index:50;height:520vh;}
+  .sf-sticky{position:sticky;top:0;height:100vh;}
+  .sf-ui{position:absolute;inset:0;display:grid;grid-template-columns:1fr auto;align-items:end;padding:clamp(32px,4vw,72px) clamp(32px,4.5vw,80px);pointer-events:none;opacity:0;will-change:opacity;}
+  .sf-panels{position:relative;min-height:clamp(200px,30vh,360px);max-width:640px;}
+  .sf-panel{position:absolute;bottom:0;left:0;right:0;opacity:0;transform:translateY(16px);transition:opacity .46s cubic-bezier(.4,0,.2,1),transform .46s cubic-bezier(.4,0,.2,1);}
+  .sf-panel.is-active{opacity:1;transform:none;}
+  .sf-panel__num{display:block;margin:0 0 16px;color:rgba(255,255,255,.5);font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;}
+  .sf-panel__title{margin:0 0 18px;color:#fff;font-size:clamp(34px,4.4vw,72px);font-weight:600;line-height:1.07;letter-spacing:-.02em;font-family:'Playfair Display',Georgia,serif;}
+  .sf-panel__desc{max-width:490px;margin:0;color:rgba(255,255,255,.72);font-size:clamp(14px,1.05vw,18px);line-height:1.6;}
+  .sf-tabs{display:flex;flex-direction:column;align-items:flex-end;gap:14px;padding-left:clamp(36px,5vw,120px);}
+  .sf-tab{display:flex;align-items:center;gap:12px;color:rgba(255,255,255,.32);font-size:14px;font-weight:600;white-space:nowrap;transition:color .32s ease;}
+  .sf-tab.is-active{color:#fff;}
+  .sf-tab__bar{width:1px;height:14px;background:currentColor;opacity:0;transition:opacity .32s ease;}
+  .sf-tab.is-active .sf-tab__bar{opacity:1;}
+  @media (max-width:860px){.sf-ui{grid-template-columns:1fr;}.sf-tabs{display:none;}}
+  @keyframes heroFloatA{0%,100%{transform:translateY(0);}50%{transform:translateY(-11px);}}
+  @keyframes heroFloatB{0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);}}
+  #heroHeading{}
+  #tpCard{}
+  #heroPara{}
+  @media (prefers-reduced-motion:reduce){#heroHeading,#tpCard,#heroPara{animation:none !important;}}
+  .nav-dd{position:relative;}
+  .nav-dd-menu{position:absolute;top:calc(100% + 6px);left:0;background:#0C1F19;border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:8px;min-width:190px;opacity:0;visibility:hidden;transform:translateY(6px);transition:opacity .2s ease,transform .2s ease;box-shadow:0 20px 40px rgba(0,0,0,.35);z-index:60;}
+  .nav-dd:hover .nav-dd-menu{opacity:1;visibility:visible;transform:translateY(0);}
+  .nav-dd-menu a{display:block;padding:10px 14px;color:#fff !important;text-decoration:none;font-size:15px;border-radius:8px;white-space:nowrap;}
+  .nav-dd-menu a:hover{background:rgba(255,255,255,.08);color:#1EBABB !important;}
+  i[data-lucide]{display:inline-flex;}
+  .reveal{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.22,1,.36,1),transform .8s cubic-bezier(.22,1,.36,1);}
+  .reveal.in{opacity:1;transform:none;}
+  .ch-card{transition:transform .25s ease,box-shadow .25s ease;opacity:0;transform:translateY(28px);}
+  .ch-grid.in .ch-card{opacity:1;transform:none;transition:opacity .6s cubic-bezier(.22,1,.36,1),transform .6s cubic-bezier(.22,1,.36,1),box-shadow .25s ease;}
+  .ch-card:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(20,40,35,.10);}
+  .ch-grid.in .ch-card:nth-child(1){transition-delay:0ms;}.ch-grid.in .ch-card:nth-child(2){transition-delay:60ms;}.ch-grid.in .ch-card:nth-child(3){transition-delay:120ms;}.ch-grid.in .ch-card:nth-child(4){transition-delay:180ms;}.ch-grid.in .ch-card:nth-child(5){transition-delay:240ms;}.ch-grid.in .ch-card:nth-child(6){transition-delay:300ms;}.ch-grid.in .ch-card:nth-child(7){transition-delay:360ms;}.ch-grid.in .ch-card:nth-child(8){transition-delay:420ms;}.ch-grid.in .ch-card:nth-child(9){transition-delay:480ms;}.ch-grid.in .ch-card:nth-child(10){transition-delay:540ms;}
+  .pv-card{transition:transform .25s ease,box-shadow .25s ease;}
+  .pv-card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(20,40,35,.13);}
+  .faq-q{cursor:pointer;transition:background .25s ease;}
+  .faq-item.open .faq-a{max-height:600px !important;opacity:1 !important;}
+  .faq-item.open .faq-plus{transform:rotate(45deg);}
+  .abtn{transition:transform .3s cubic-bezier(.34,1.56,.44,1),filter .3s ease,background .25s ease;}
+  .abtn:hover{transform:translateY(-3px) scale(1.03);}
+  @media (prefers-reduced-motion:reduce){.reveal,.ch-card{opacity:1 !important;transform:none !important;}}
+  @media (max-width:900px){
+    header nav{display:none !important;}
+    #aboutHero{min-height:auto !important;padding-bottom:70px !important;}
+    #aboutHero > div:last-child{position:static !important;display:flex;flex-direction:column;align-items:center;text-align:center;padding:20px clamp(20px,5vw,40px) 40px;}
+    #aboutHero > div:last-child > *{position:static !important;transform:none !important;text-align:center !important;left:auto !important;right:auto !important;top:auto !important;bottom:auto !important;margin:10px auto 0 !important;}
+    #aboutHero img[alt="Happy family"]{height:auto !important;max-width:80% !important;order:5;}
+    .ch-grid{grid-template-columns:repeat(2,1fr) !important;}
+    .split{grid-template-columns:1fr !important;}
+    .story-stats{grid-template-columns:1fr 1fr !important;}
+  }
+  @media (max-width:768px){.cta-fixed{background-attachment:scroll !important;}}
+</style>
+</helmet>
+
+<div style="width:100%;overflow-x:clip;background:#F6F7FB;color:#1B3A33;">
+
+  <!-- ============ HERO + HEADER ============ -->
+  <section id="heroPanel" data-screen-label="Hero" style="position:relative;height:100vh;min-height:640px;background:#000;color:#fff;overflow:hidden;display:flex;flex-direction:column;will-change:transform;transform-origin:center top;">
+    <video id="heroVideo" src="assets/about-hero-bg.mp4" autoplay="" muted="" loop="" playsinline="" preload="auto" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;z-index:0;"></video>
+    <div style="position:absolute;inset:0;background:linear-gradient(118deg,rgba(11,42,31,.9) 0%,rgba(12,45,33,.6) 38%,rgba(24,140,140,.4) 72%,rgba(30,186,187,.28) 100%);"></div>
+    <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,28,20,.55) 0%,rgba(7,28,20,0) 32%,rgba(7,28,20,.5) 100%);"></div>
+    <!-- vertical grid lines (removed for now, restore to bring back): <div style="position:absolute;inset:0;pointer-events:none;background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.05) 0 1px,transparent 1px 240px);"></div> -->
+    <div id="heroDarken" style="position:absolute;inset:0;background:#04130d;opacity:0;pointer-events:none;"></div>
+
+    <!-- Header -->
+    <header style="position:relative;z-index:5;max-width:none;margin:0;padding:30px clamp(24px,5vw,84px);display:flex;align-items:center;justify-content:space-between;gap:40px;">
+      <a href="Home Page.dc.html" style="display:flex;align-items:center;">
+        <img src="assets/topquote-logo.png" alt="TopQuote" style="height:38px;width:auto;display:block;">
+      </a>
+
+      <nav style="display:flex;align-items:center;gap:20px;font-size:16px;font-weight:600;">
+        <div class="nav-dd"><a href="Life Insurance.dc.html" style="background:#1EBABB;color:#fff;padding:9px 18px;border-radius:24px;text-decoration:none;display:inline-flex;align-items:center;gap:5px;">Services <span style="font-size:10px;">&#9662;</span></a><div class="nav-dd-menu"><a href="Life Insurance.dc.html">Life Insurance</a><a href="Critical Illness.dc.html">Critical Illness</a><a href="Income Protection.dc.html">Income Protection</a></div></div>
+        <div class="nav-dd"><a href="About Us.dc.html" class="nav-link" style="color:#fff;padding:9px 14px;text-decoration:none;display:inline-flex;align-items:center;gap:5px;">About <span style="font-size:10px;">&#9662;</span></a><div class="nav-dd-menu"><a href="About Us.dc.html">About Us</a><a href="Consumer Duty.dc.html">Consumer Duty</a></div></div>
+        <a href="Reconnect.dc.html" class="nav-link" style="color:#fff;padding:9px 14px;text-decoration:none;">Reconnect</a>
+        <a href="Blog.dc.html" class="nav-link" style="color:#fff;padding:9px 14px;text-decoration:none;">Blog</a>
+        <a href="Contact.dc.html" class="nav-link" style="color:#fff;padding:9px 14px;text-decoration:none;">Contact</a>
+        <a href="Careers.dc.html" class="nav-link" style="color:#fff;padding:9px 14px;text-decoration:none;">Careers</a>
+        <a href="Find Us.dc.html" class="nav-link" style="color:#fff;padding:9px 14px;text-decoration:none;">Find Us</a>
+      </nav>
+
+      <div style="display:flex;align-items:center;gap:24px;">
+        <a href="Get a Quote.dc.html" style="background:#1EBABB;color:#fff;padding:14px 26px;border-radius:8px;text-decoration:none;font-weight:700;font-size:15px;white-space:nowrap;">Get a quote</a>
+      </div>
+    </header>
+
+    <!-- Hero content -->
+    <div style="position:relative;z-index:4;flex:1;min-height:0;">
+      <div id="heroBand" style="position:relative;height:100%;padding:0 clamp(24px,5vw,84px);">
+        <!-- title + body, stacked, vertically centered -->
+        <div id="heroTitleWrap" style="position:absolute;top:50%;transform:translateY(calc(-50% - 40px));left:clamp(24px,5vw,84px);right:clamp(24px,5vw,84px);">
+          <h1 id="heroHeading" class="arva-h" style="font-size:clamp(48px,6.2vw,104px);line-height:0.98;font-weight:600;letter-spacing:.5px;text-transform:uppercase;max-width:none;white-space:nowrap;text-shadow:0 2px 30px rgba(0,0,0,.28);">We Put People<br>Before Policies</h1>
+          <div id="heroPara" style="position:relative;max-width:540px;margin-top:34px;">
+            <div style="display:flex;align-items:center;gap:9px;margin-bottom:14px;">
+              <img src="assets/topquote-mark-teal.png" alt="TopQuote" style="width:22px;height:22px;object-fit:contain;">
+              <span style="color:#3fd3d4;font-weight:700;font-size:14px;letter-spacing:.02em;">About Us</span>
+            </div>
+            <p style="font-size:15px;line-height:1.7;color:rgba(255,255,255,.9);">Our duty of care doesn't end when your policy starts. As a specialist broker with over 20 years of experience, we manage tens of thousands of policies across the UK, checking in, reviewing cover, and making sure that when the moment comes, your protection is exactly where it needs to be.</p>
+            <a href="Get a Quote.dc.html" style="display:inline-flex;align-items:center;gap:9px;margin-top:20px;background:#1EBABB;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px;">Get a quote <i data-lucide="arrow-right" style="width:17px;height:17px;"></i></a>
+          </div>
+        </div>
+
+        <!-- Get Started octagon -->
+        <!-- Trustpilot rating card -->
+        <div id="heroOcta" style="position:absolute;right:clamp(48px,8vw,140px);top:50%;transform:translateY(calc(-50% - 48px));z-index:4;">
+          <div id="tpCard" style="background:#fff;border:1px solid #e6e8ec;border-radius:16px;padding:34px 46px;text-align:center;box-shadow:0 26px 60px rgba(6,34,22,.4);min-width:300px;">
+            <div style="display:flex;align-items:center;justify-content:center;gap:9px;margin-bottom:20px;color:#191919;font-weight:600;font-size:23px;"><span style="color:#00b67a;font-size:26px;line-height:1;">&#9733;</span> Trustpilot</div>
+            <div style="display:flex;gap:4px;justify-content:center;margin-bottom:22px;">
+              <span style="width:40px;height:40px;background:#00b67a;display:flex;align-items:center;justify-content:center;color:#fff;font-size:24px;line-height:1;">&#9733;</span>
+              <span style="width:40px;height:40px;background:#00b67a;display:flex;align-items:center;justify-content:center;color:#fff;font-size:24px;line-height:1;">&#9733;</span>
+              <span style="width:40px;height:40px;background:#00b67a;display:flex;align-items:center;justify-content:center;color:#fff;font-size:24px;line-height:1;">&#9733;</span>
+              <span style="width:40px;height:40px;background:#00b67a;display:flex;align-items:center;justify-content:center;color:#fff;font-size:24px;line-height:1;">&#9733;</span>
+              <span style="width:40px;height:40px;background:linear-gradient(90deg,#00b67a 58%,#dcdce6 58%);display:flex;align-items:center;justify-content:center;color:#fff;font-size:24px;line-height:1;">&#9733;</span>
+            </div>
+            <div style="font-weight:700;font-size:25px;color:#191919;margin-bottom:13px;">'Excellent'</div>
+            <div style="color:#4b4b4b;font-size:16px;line-height:1.55;">Rated <strong style="color:#191919;">4.3</strong> out of 5<br>based on <strong style="color:#191919;">517 reviews</strong></div>
+          </div>
+        </div>
+
+        <!-- supporting paragraph moved into heroTitleWrap above -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OUR STORY ============ -->
+  <section style="background:#F6F7FB;padding:100px clamp(24px,5vw,40px);">
+    <div style="max-width:1000px;margin:0 auto;text-align:center;">
+      <div class="reveal" style="display:inline-flex;align-items:center;gap:9px;margin-bottom:16px;">
+        <img src="assets/topquote-mark-teal.png" alt="TopQuote" style="width:22px;height:22px;object-fit:contain;">
+        <span style="color:#1EBABB;font-weight:700;font-size:15px;">Our story</span>
+      </div>
+      <h2 class="reveal arva-h" style="font-size:clamp(34px,4.4vw,56px);line-height:1.1;font-weight:600;color:#173B33;margin-bottom:34px;">Two decades of putting<br>our customers first</h2>
+      <div class="reveal" style="display:flex;flex-direction:column;gap:22px;color:#5B6B66;font-size:16.5px;line-height:1.8;max-width:900px;margin:0 auto;">
+        <div><div>TopQuote is a UK life insurance and protection broker, based in Cheshire and serving customers across the country. We've spent over twenty years arranging life insurance, critical illness cover and income protection for families and individuals, working with leading providers like <a href="Reconnect.dc.html" style="color:#1EBABB;font-weight:600;text-decoration:none;">Legal &amp; General</a>. We're FCA-authorised through The Openwork Partnership.</div></div>
+        <p>We were founded on a simple belief: people deserve more than a policy number. They deserve an adviser who listens, understands their circumstances, and stays in touch as life changes, not just when there's something to sell. Whether that means moving house, having a child, or starting a new job, your protection should keep up.</p>
+        <p>Every customer has a dedicated TopQuote adviser. That means you'll always speak to someone who knows your situation, not just your policy number, and the same person, every call.</p>
+      </div>
+    </div>
+
+    <div class="reveal" style="max-width:1120px;margin:56px auto 0;display:none;"></div>
+  </section>
+
+  <!-- ============ PROVIDERS WE WORK WITH ============ -->
+  <section style="background:#F6F7FB;padding:90px clamp(24px,5vw,40px);">
+    <h2 class="reveal arva-h" style="text-align:center;font-size:clamp(30px,3.6vw,44px);font-weight:600;color:#173B33;margin-bottom:48px;">We work with some of the UK's leading insurers</h2>
+    <div id="pvGrid" class="reveal" style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(6,1fr);gap:22px;">
+      <sc-for list="{{ providers }}" as="p" hint-placeholder-count="6">
+        <div class="pv-card" style="background:#fff;border-radius:8px;padding:34px 20px 26px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:24px;min-height:230px;box-shadow:0 12px 30px rgba(20,40,35,.06);">
+          <div style="flex:1;display:flex;align-items:center;justify-content:center;padding:6px;width:100%;"><img data-logo="{{ p.logo }}" alt="{{ p.name }}" style="max-width:100%;max-height:100%;object-fit:contain;"></div>
+          <span style="color:#173B33;font-size:15px;font-weight:600;">{{ p.name }}</span>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- ============ GALLERY (parallax) ============ -->
+  <section id="galSection" style="position:relative;min-height:460vh;background:#F6F7FB;">
+    <div id="galPin" style="position:sticky;top:0;height:100vh;overflow:hidden;">
+    <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 24px;z-index:10;pointer-events:none;">
+      <div style="display:flex;align-items:center;justify-content:center;gap:9px;margin-bottom:20px;">
+        <img src="assets/topquote-mark-teal.png" alt="TopQuote" style="width:22px;height:22px;object-fit:contain;">
+        <span style="color:#1EBABB;font-weight:700;font-size:15px;">Our Promise To You</span>
+      </div>
+      <h2 class="arva-h" style="font-size:clamp(44px,7vw,100px);line-height:1;font-weight:600;color:#111;margin-bottom:20px;">Customer <span style="color:#1EBABB;">Charter</span></h2>
+      <p style="font-size:16px;color:#5B6B66;max-width:520px;margin-bottom:30px;">We put these commitments in writing because we mean them. Every customer who works with TopQuote can expect the same standard of service, from the first conversation to long after we're introduced.</p>
+      <a href="Home Page.dc.html#contactSection" class="abtn" style="pointer-events:auto;display:inline-flex;align-items:center;gap:9px;background:#1EBABB;color:#fff;padding:14px 30px;border-radius:30px;text-decoration:none;font-weight:700;font-size:15px;">Get a quote <i data-lucide="arrow-up-right" style="width:17px;height:17px;"></i></a>
+    </div>
+
+    <div style="position:absolute;inset:0;z-index:20;pointer-events:none;overflow:hidden;">
+      <div style="width:100%;max-width:1400px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1fr 1fr;gap:clamp(60px,22vw,520px);">
+        <div id="galColA" style="display:flex;flex-direction:column;gap:clamp(180px,40vh,460px);will-change:transform;">
+          <div style="pointer-events:auto;transform:rotate(-4deg);width:100%;max-width:360px;margin-left:auto;background:#fff;border-radius:20px;padding:28px 26px;box-shadow:0 30px 60px rgba(0,0,0,.4);position:relative;">
+            <span style="position:absolute;top:22px;right:24px;font-family:'Space Mono',monospace;font-size:12px;color:#1EBABB;font-weight:700;">01</span>
+            <span style="width:52px;height:52px;border-radius:13px;background:#1EBABB;display:inline-flex;align-items:center;justify-content:center;margin-bottom:22px;"><i data-lucide="heart" style="width:24px;height:24px;color:#fff;"></i></span>
+            <h3 style="font-size:17px;font-weight:700;color:#173B33;margin-bottom:9px;">You Come First</h3>
+            <p style="color:#7A867F;font-size:13.5px;line-height:1.6;">We put your needs before our own, always.</p>
+          </div>
+          <div style="pointer-events:auto;transform:rotate(-2deg);width:100%;max-width:360px;margin-left:auto;background:#fff;border-radius:20px;padding:28px 26px;box-shadow:0 30px 60px rgba(0,0,0,.4);position:relative;">
+            <span style="position:absolute;top:22px;right:24px;font-family:'Space Mono',monospace;font-size:12px;color:#1EBABB;font-weight:700;">03</span>
+            <span style="width:52px;height:52px;border-radius:13px;background:#1EBABB;display:inline-flex;align-items:center;justify-content:center;margin-bottom:22px;"><i data-lucide="layers" style="width:24px;height:24px;color:#fff;"></i></span>
+            <h3 style="font-size:17px;font-weight:700;color:#173B33;margin-bottom:9px;">Products That Fit</h3>
+            <p style="color:#7A867F;font-size:13.5px;line-height:1.6;">We match products and services to your identified needs.</p>
+          </div>
+          <div style="pointer-events:auto;transform:rotate(-3deg);width:100%;max-width:360px;margin-left:auto;background:#fff;border-radius:20px;padding:28px 26px;box-shadow:0 30px 60px rgba(0,0,0,.4);position:relative;">
+            <span style="position:absolute;top:22px;right:24px;font-family:'Space Mono',monospace;font-size:12px;color:#1EBABB;font-weight:700;">05</span>
+            <span style="width:52px;height:52px;border-radius:13px;background:#1EBABB;display:inline-flex;align-items:center;justify-content:center;margin-bottom:22px;"><i data-lucide="share-2" style="width:24px;height:24px;color:#fff;"></i></span>
+            <h3 style="font-size:17px;font-weight:700;color:#173B33;margin-bottom:9px;">Partner Network</h3>
+            <p style="color:#7A867F;font-size:13.5px;line-height:1.6;">If we can't help directly, we'll connect you with the right provider.</p>
+          </div>
+          <div style="pointer-events:auto;transform:rotate(-5deg);width:100%;max-width:360px;margin-left:auto;background:#fff;border-radius:20px;padding:28px 26px;box-shadow:0 30px 60px rgba(0,0,0,.4);position:relative;">
+            <span style="position:absolute;top:22px;right:24px;font-family:'Space Mono',monospace;font-size:12px;color:#1EBABB;font-weight:700;">07</span>
+            <span style="width:52px;height:52px;border-radius:13px;background:#1EBABB;display:inline-flex;align-items:center;justify-content:center;margin-bottom:22px;"><i data-lucide="check-circle" style="width:24px;height:24px;color:#fff;"></i></span>
+            <h3 style="font-size:17px;font-weight:700;color:#173B33;margin-bottom:9px;">We Follow Through</h3>
+            <p style="color:#7A867F;font-size:13.5px;line-height:1.6;">When we say we'll do something, we do it. No exceptions.</p>
+          </div>
+          <div style="pointer-events:auto;transform:rotate(-2deg);width:100%;max-width:360px;margin-left:auto;background:#fff;border-radius:20px;padding:28px 26px;box-shadow:0 30px 60px rgba(0,0,0,.4);position:relative;">
+            <span style="position:absolute;top:22px;right:24px;font-family:'Space Mono',monospace;font-size:12px;color:#1EBABB;font-weight:700;">09</span>
+            <span style="width:52px;height:52px;border-radius:13px;background:#1EBABB;display:inline-flex;align-items:center;justify-content:center;margin-bottom:22px;"><i data-lucide="clock" style="width:24px;height:24px;color:#fff;"></i></span>
+            <h3 style="font-size:17px;font-weight:700;color:#173B33;margin-bottom:9px;">Here When You Need Us</h3>
+            <p style="color:#7A867F;font-size:13.5px;line-height:1.6;">We make ourselves available at the earliest opportunity.</p>
+          </div>
+        </div>
+        <div id="galColB" style="display:flex;flex-direction:column;gap:clamp(180px,40vh,460px);will-change:transform;">
+          <div style="pointer-events:auto;transform:rotate(3deg);width:100%;max-width:360px;margin-right:auto;background:#fff;border-radius:20px;padding:28px 26px;box-shadow:0 30px 60px rgba(0,0,0,.4);position:relative;">
+            <span style="position:absolute;top:22px;right:24px;font-family:'Space Mono',monospace;font-size:12px;color:#1EBABB;font-weight:700;">02</span>
+            <span style="width:52px;height:52px;border-radius:13px;background:#1EBABB;display:inline-flex;align-items:center;justify-content:center;margin-bottom:22px;"><i data-lucide="shield" style="width:24px;height:24px;color:#fff;"></i></span>
+            <h3 style="font-size:17px;font-weight:700;color:#173B33;margin-bottom:9px;">Accurate Information</h3>
+            <p style="color:#7A867F;font-size:13.5px;line-height:1.6;">We ensure everything we provide is correct and up-to-date.</p>
+          </div>
+          <div style="pointer-events:auto;transform:rotate(5deg);width:100%;max-width:360px;margin-right:auto;background:#fff;border-radius:20px;padding:28px 26px;box-shadow:0 30px 60px rgba(0,0,0,.4);position:relative;">
+            <span style="position:absolute;top:22px;right:24px;font-family:'Space Mono',monospace;font-size:12px;color:#1EBABB;font-weight:700;">04</span>
+            <span style="width:52px;height:52px;border-radius:13px;background:#1EBABB;display:inline-flex;align-items:center;justify-content:center;margin-bottom:22px;"><i data-lucide="phone" style="width:24px;height:24px;color:#fff;"></i></span>
+            <h3 style="font-size:17px;font-weight:700;color:#173B33;margin-bottom:9px;">Always in Touch</h3>
+            <p style="color:#7A867F;font-size:13.5px;line-height:1.6;">We stay with you throughout, from enquiry to beyond the sale.</p>
+          </div>
+          <div style="pointer-events:auto;transform:rotate(2deg);width:100%;max-width:360px;margin-right:auto;background:#fff;border-radius:20px;padding:28px 26px;box-shadow:0 30px 60px rgba(0,0,0,.4);position:relative;">
+            <span style="position:absolute;top:22px;right:24px;font-family:'Space Mono',monospace;font-size:12px;color:#1EBABB;font-weight:700;">06</span>
+            <span style="width:52px;height:52px;border-radius:13px;background:#1EBABB;display:inline-flex;align-items:center;justify-content:center;margin-bottom:22px;"><i data-lucide="bell" style="width:24px;height:24px;color:#fff;"></i></span>
+            <h3 style="font-size:17px;font-weight:700;color:#173B33;margin-bottom:9px;">Keep You Updated</h3>
+            <p style="color:#7A867F;font-size:13.5px;line-height:1.6;">We inform you of any changes that impact your policy or situation.</p>
+          </div>
+          <div style="pointer-events:auto;transform:rotate(4deg);width:100%;max-width:360px;margin-right:auto;background:#fff;border-radius:20px;padding:28px 26px;box-shadow:0 30px 60px rgba(0,0,0,.4);position:relative;">
+            <span style="position:absolute;top:22px;right:24px;font-family:'Space Mono',monospace;font-size:12px;color:#1EBABB;font-weight:700;">08</span>
+            <span style="width:52px;height:52px;border-radius:13px;background:#1EBABB;display:inline-flex;align-items:center;justify-content:center;margin-bottom:22px;"><i data-lucide="refresh-cw" style="width:24px;height:24px;color:#fff;"></i></span>
+            <h3 style="font-size:17px;font-weight:700;color:#173B33;margin-bottom:9px;">We Make It Right</h3>
+            <p style="color:#7A867F;font-size:13.5px;line-height:1.6;">If we make a mistake, we do our utmost to put it right quickly.</p>
+          </div>
+          <div style="pointer-events:auto;transform:rotate(-3deg);width:100%;max-width:360px;margin-right:auto;background:#fff;border-radius:20px;padding:28px 26px;box-shadow:0 30px 60px rgba(0,0,0,.4);position:relative;">
+            <span style="position:absolute;top:22px;right:24px;font-family:'Space Mono',monospace;font-size:12px;color:#1EBABB;font-weight:700;">10</span>
+            <span style="width:52px;height:52px;border-radius:13px;background:#1EBABB;display:inline-flex;align-items:center;justify-content:center;margin-bottom:22px;"><i data-lucide="gift" style="width:24px;height:24px;color:#fff;"></i></span>
+            <h3 style="font-size:17px;font-weight:700;color:#173B33;margin-bottom:9px;">Giving Back</h3>
+            <p style="color:#7A867F;font-size:13.5px;line-height:1.6;">We support poorly children by donating company funds to charity.</p>
+          </div>
+        </div>
+    </div>
+    </div>
+
+    <div id="galLightbox" style="display:none;position:fixed;inset:0;z-index:999;align-items:center;justify-content:center;background:rgba(0,0,0,.85);backdrop-filter:blur(4px);padding:24px;cursor:zoom-out;">
+      <img id="galLightboxImg" alt="Enlarged" style="max-width:100%;max-height:85vh;border-radius:20px;border:1px solid rgba(255,255,255,.1);object-fit:contain;">
+      <button id="galLightboxClose" style="position:absolute;top:24px;right:24px;width:44px;height:44px;border-radius:50%;background:#141414;border:1px solid rgba(255,255,255,.14);color:#fff;font-size:18px;cursor:pointer;">✕</button>
+    </div>
+  </div></section>
+
+  <!-- ============ EXPERT ADVISER SUPPORT ============ -->
+  <section style="background:#F6F7FB;padding:100px clamp(24px,5vw,40px);">
+    <h2 class="reveal arva-h" style="text-align:center;font-size:clamp(30px,3.6vw,44px);font-weight:600;color:#173B33;margin-bottom:48px;">Expert Adviser Support</h2>
+    <div class="split reveal" style="max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:30px;">
+      <div style="background:#fff;border-radius:18px;padding:44px 40px;box-shadow:0 14px 40px rgba(20,40,35,.07);">
+        <span style="width:56px;height:56px;border-radius:13px;background:#1EBABB;display:inline-flex;align-items:center;justify-content:center;margin-bottom:26px;"><i data-lucide="shield" style="width:28px;height:28px;color:#fff;"></i></span>
+        <h3 class="arva-h" style="font-size:23px;font-weight:700;color:#173B33;margin-bottom:16px;">Advised service</h3>
+        <p style="color:#5B6B66;font-size:15px;line-height:1.75;">We can help connect you with FCA-authorised advisers who can discuss life insurance options based on your individual circumstances. They can explain suitable products and answer any questions, helping you make an informed decision.</p>
+      </div>
+      <div style="background:#fff;border-radius:18px;padding:44px 40px;box-shadow:0 14px 40px rgba(20,40,35,.07);">
+        <span style="width:56px;height:56px;border-radius:13px;background:#1EBABB;display:inline-flex;align-items:center;justify-content:center;margin-bottom:26px;"><i data-lucide="user-check" style="width:28px;height:28px;color:#fff;"></i></span>
+        <h3 class="arva-h" style="font-size:23px;font-weight:700;color:#173B33;margin-bottom:16px;">FCA regulated broker</h3>
+        <p style="color:#5B6B66;font-size:15px;line-height:1.75;">TopQuote is an appointed representative of The Openwork Partnership, a trading style of Openwork Limited, authorised and regulated by the <a href="#" style="color:#1EBABB;font-weight:600;text-decoration:none;">Financial Conduct Authority (FCA)</a>. We believe in treating our customers fairly and always provide the highest standard of service.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES (static) ============ -->
+  <section style="background:#F6F7FB;padding:100px clamp(24px,5vw,40px);">
+    <div style="max-width:1240px;margin:0 auto;">
+      <div class="reveal" style="display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;margin-bottom:56px;">
+        <div>
+          <div style="display:flex;align-items:center;gap:9px;margin-bottom:16px;">
+            <img src="assets/topquote-mark-teal.png" alt="TopQuote" style="width:22px;height:22px;object-fit:contain;">
+            <span style="color:#1EBABB;font-weight:700;font-size:15px;">Our Services</span>
+          </div>
+          <h2 class="arva-h" style="font-size:clamp(32px,4vw,50px);line-height:1.08;font-weight:600;color:#173B33;">Insurance Solutions<br>Tailored To You</h2>
+        </div>
+        <a href="Home Page.dc.html" class="abtn" style="background:#1EBABB;color:#fff;padding:14px 26px;border-radius:8px;text-decoration:none;font-weight:700;font-size:15px;white-space:nowrap;">Views All Service</a>
+      </div>
+      <div class="ch-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:26px;">
+        <div class="ch-card" style="background:#EAEDFB;border-radius:14px;padding:38px;position:relative;overflow:hidden;">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:24px;">
+            <span style="width:50px;height:50px;border-radius:13px;background:#1EBABB;display:flex;align-items:center;justify-content:center;"><i data-lucide="heart-pulse" style="width:24px;height:24px;color:#fff;"></i></span>
+            <span class="arva-h" style="font-size:30px;color:#C4C9DE;font-weight:600;">01</span>
+          </div>
+          <h3 class="arva-h" style="font-size:23px;font-weight:600;color:#173B33;margin-bottom:12px;">Life Insurance</h3>
+          <p style="color:#6B7280;font-size:14.5px;line-height:1.7;margin-bottom:22px;">Ensure the people who depend on you are financially secure if the worst happens. We'll help you find the right level and type of cover for your circumstances.</p>
+          <span style="color:#173B33;font-weight:700;font-size:14.5px;display:inline-flex;align-items:center;gap:6px;">Learn More <i data-lucide="arrow-up-right" style="width:16px;height:16px;"></i></span>
+        </div>
+        <div class="ch-card" style="background:#1EBABB;border-radius:14px;padding:38px;color:#fff;position:relative;overflow:hidden;">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:24px;">
+            <span style="width:50px;height:50px;border-radius:13px;background:#fff;display:flex;align-items:center;justify-content:center;"><i data-lucide="cross" style="width:24px;height:24px;color:#1EBABB;"></i></span>
+            <span class="arva-h" style="font-size:30px;color:rgba(255,255,255,.5);font-weight:600;">02</span>
+          </div>
+          <h3 class="arva-h" style="font-size:23px;font-weight:600;margin-bottom:12px;">Critical Illness Cover</h3>
+          <p style="color:rgba(255,255,255,.9);font-size:14.5px;line-height:1.7;margin-bottom:22px;">A tax-free lump sum paid on diagnosis of a serious illness, at the point when financial pressure can hit hardest. Available standalone or combined with life insurance.</p>
+          <span style="color:#fff;font-weight:700;font-size:14.5px;display:inline-flex;align-items:center;gap:6px;">Learn More <i data-lucide="arrow-up-right" style="width:16px;height:16px;"></i></span>
+        </div>
+        <div class="ch-card" style="background:#EAEDFB;border-radius:14px;padding:38px;position:relative;overflow:hidden;">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:24px;">
+            <span style="width:50px;height:50px;border-radius:13px;background:#1EBABB;display:flex;align-items:center;justify-content:center;"><i data-lucide="file-check-2" style="width:24px;height:24px;color:#fff;"></i></span>
+            <span class="arva-h" style="font-size:30px;color:#C4C9DE;font-weight:600;">03</span>
+          </div>
+          <h3 class="arva-h" style="font-size:23px;font-weight:600;color:#173B33;margin-bottom:12px;">Income Protection</h3>
+          <p style="color:#6B7280;font-size:14.5px;line-height:1.7;margin-bottom:22px;">A monthly benefit if illness or injury stops you working. One of the most comprehensive safety nets available, because your income is everything.</p>
+          <span style="color:#173B33;font-weight:700;font-size:14.5px;display:inline-flex;align-items:center;gap:6px;">Learn More <i data-lucide="arrow-up-right" style="width:16px;height:16px;"></i></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section style="background:#F6F7FB;padding:90px clamp(24px,5vw,40px) 100px;">
+    <h2 class="reveal arva-h" style="text-align:center;font-size:clamp(30px,3.6vw,46px);font-weight:600;color:#173B33;margin-bottom:44px;">Common questions about TopQuote</h2>
+    <div id="faqList" style="max-width:1000px;margin:0 auto;display:flex;flex-direction:column;gap:14px;">
+      <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="6">
+        <div class="faq-item" style="border-radius:12px;overflow:hidden;box-shadow:0 6px 18px rgba(20,40,35,.06);">
+          <div class="faq-q" style="background:#1EBABB;color:#fff;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-weight:700;font-size:15.5px;">
+            <span>{{ f.q }}</span>
+            <span class="faq-plus" style="font-size:22px;line-height:1;transition:transform .3s ease;flex:none;">+</span>
+          </div>
+          <div class="faq-a" style="max-height:0;opacity:0;overflow:hidden;transition:max-height .4s ease,opacity .4s ease;background:#fff;">
+            <p style="padding:22px 26px;color:#5B6B66;font-size:15px;line-height:1.75;">{{ f.a }}</p>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- ============ SPEAK TO AN EXPERT (fixed bg CTA) ============ -->
+  <section class="cta-fixed" style="position:relative;background:#04130d url('assets/speak-expert.jpg') center/cover fixed;color:#fff;padding:110px clamp(24px,5vw,40px);text-align:center;overflow:hidden;">
+    <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(9,34,25,.82),rgba(15,140,141,.6));"></div>
+    <div style="position:relative;z-index:1;max-width:720px;margin:0 auto;">
+      <h2 class="arva-h" style="font-size:clamp(32px,4vw,50px);font-weight:600;margin-bottom:18px;">Speak to an expert</h2>
+      <p style="font-size:17px;line-height:1.7;color:rgba(255,255,255,.92);margin-bottom:32px;">Speak with our friendly, award-winning team to find the right solution for you and your family.</p>
+      <a href="Get a Quote.dc.html" class="abtn" style="display:inline-block;background:#1EBABB;color:#fff;padding:16px 36px;border-radius:10px;text-decoration:none;font-weight:700;font-size:16px;">Get a Quote</a>
+    </div>
+  </section>
+
+  <!-- ============ THE CHRISTIE SUPPORTER WALL ============ -->
+  <section style="background:#fff;padding:90px clamp(24px,5vw,40px);">
+    <div class="split" style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;">
+      <div class="reveal">
+        <h2 class="arva-h" style="font-size:clamp(30px,3.4vw,44px);line-height:1.12;font-weight:700;color:#1EBABB;margin-bottom:26px;">Recognised on The<br>Christie's Supporter Wall</h2>
+        <div style="display:flex;flex-direction:column;gap:18px;color:#5B6B66;font-size:15.5px;line-height:1.75;">
+          <p>We're proud to share that TopQuote has been recognised on The Christie Charity's new Recognition Wall, marking our continued support for the charity since 2021.</p>
+          <p>The Christie, based in Manchester, is one of Europe's leading cancer centres and a vital lifeline for patients across the Northwest. The Recognition Wall celebrates the supporters whose contributions help make the charity's life-saving work possible.</p>
+          <p>We were honoured to receive a beautiful recognition medallion this week, a replica of the one originally presented when TopQuote first contributed in 2021. It now sits proudly in our Cheshire office as a reminder of why supporting causes like this matters.</p>
+          <p>Charitable giving has always been part of how we work at TopQuote. We're grateful to be a small part of The Christie's story.</p>
+        </div>
+        <a href="#" class="abtn" style="display:inline-block;margin-top:32px;background:#1EBABB;color:#fff;padding:15px 32px;border-radius:9px;text-decoration:none;font-weight:700;font-size:15px;">Find Out More</a>
+      </div>
+      <div class="reveal" style="height:min(70vh,540px);border-radius:20px;overflow:hidden;background:#000;">
+        <img src="assets/christie-award.jpg" alt="The Christie recognition medallion" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+    </div>
+  </section>
+
+  <!-- (Watch Ian's Story section removed) -->
+
+  <!-- ============ REVIEWS ============ -->
+  <section style="background:#ECEDF1;padding:90px clamp(24px,5vw,40px);">
+    <div style="max-width:900px;margin:0 auto 50px;text-align:center;">
+      <h2 class="reveal arva-h" style="font-size:clamp(30px,3.6vw,46px);font-weight:600;color:#173B33;margin-bottom:18px;">Don't take our word for it.</h2>
+      <p class="reveal" style="color:#5B6B66;font-size:16px;line-height:1.7;">Every review below belongs to a real person who trusted us with something important. We don't take that lightly.</p>
+    </div>
+    <div id="rvSwiper" class="reveal" style="max-width:1180px;margin:0 auto;">
+      <div class="swiper" id="rvSwiperEl">
+        <div class="swiper-wrapper">
+          <sc-for list="{{ reviews }}" as="r" hint-placeholder-count="6">
+            <div class="swiper-slide">
+              <div style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 12px 30px rgba(20,40,35,.06);min-height:290px;">
+                <div style="font-family:Georgia,serif;font-size:64px;line-height:.6;color:#1EBABB;height:34px;">“</div>
+                <div style="margin-top:20px;color:#7A867F;font-size:14px;font-weight:600;">{{ r.name }}</div>
+                <div style="color:#F5A623;font-size:16px;letter-spacing:2px;margin:8px 0 16px;">{{ r.stars }}</div>
+                <p style="color:#5B6B66;font-size:14.5px;line-height:1.7;">{{ r.quote }}</p>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer style="background:#EAEDFB;padding:64px clamp(24px,5vw,40px) 30px;">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div class="split" style="display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:40px;">
+        <div>
+          <div style="display:flex;align-items:center;margin-bottom:18px;"><img src="assets/topquote-logo-dark.png" alt="TopQuote" style="height:38px;width:auto;display:block;"></div>
+          <p style="color:#6B7280;font-size:13.5px;line-height:1.7;max-width:360px;margin-bottom:22px;">Top Quote Limited is an appointed representative of The Openwork Partnership, a trading style of Openwork Limited, which is authorised and regulated by the Financial Conduct Authority. Approved by The Openwork Partnership on the 20th January 2025.</p>
+          <div style="display:flex;gap:12px;">
+            <span style="width:42px;height:42px;border-radius:50%;background:#1EBABB;display:flex;align-items:center;justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"></path></svg></span>
+            <span style="width:42px;height:42px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="#173B33"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg></span>
+            <span style="width:42px;height:42px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="#173B33"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"></path></svg></span>
+          </div>
+        </div>
+        <div>
+          <h4 class="arva-h" style="font-size:20px;font-weight:600;color:#173B33;margin-bottom:20px;">Pages</h4>
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            <a href="Home Page.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">Home</a>
+            <a href="About Us.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">About</a>
+            <a href="Home Page.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">News</a>
+            <a href="Home Page.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">Contact</a>
+            <a href="Home Page.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">Reconnect</a>
+            <a href="Home Page.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">Privacy Notice</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="arva-h" style="font-size:20px;font-weight:600;color:#173B33;margin-bottom:20px;">Services</h4>
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            <a href="Home Page.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">Life Insurance</a>
+            <a href="Home Page.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">Critical Illness</a>
+            <a href="Home Page.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">Income Protection</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="arva-h" style="font-size:20px;font-weight:600;color:#173B33;margin-bottom:20px;">Need Help?</h4>
+          <div style="display:flex;flex-direction:column;gap:16px;">
+            <span style="display:flex;align-items:flex-start;gap:10px;color:#6B7280;font-size:15px;line-height:1.55;"><i data-lucide="map-pin" style="width:17px;height:17px;color:#1EBABB;margin-top:2px;flex:none;"></i> <span>Alderley Park, Suite 3,<br>GLASSHOUSE, Congleton Road,<br>Macclesfield, SK10 4TG</span></span>
+            <span style="display:flex;align-items:center;gap:10px;color:#6B7280;font-size:15px;"><i data-lucide="phone" style="width:17px;height:17px;color:#1EBABB;flex:none;"></i> Customer support: 0161 974 3710</span>
+            <span style="display:flex;align-items:center;gap:10px;color:#6B7280;font-size:15px;"><i data-lucide="clock" style="width:17px;height:17px;color:#1EBABB;flex:none;"></i> Working time: Mon, Fri: 8:30, 18:00</span>
+            <span style="display:flex;align-items:center;gap:10px;color:#6B7280;font-size:15px;"><i data-lucide="mail" style="width:17px;height:17px;color:#1EBABB;flex:none;"></i> hello@topquote.uk.com</span>
+          </div>
+        </div>
+      </div>
+      <div style="height:1px;background:#D2D6E8;margin:40px 0 22px;"></div>
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;">
+        <span style="color:#6B7280;font-size:14px;">© 2025 TopQuote. All Rights Reserved.</span>
+        <div style="display:flex;gap:18px;align-items:center;">
+          <a href="https://www.theopenworkpartnership.com/privacy-notice/" target="_blank" rel="noopener" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:14px;">Privacy Policy</a>
+          <span style="color:#C4C9DE;">|</span>
+          <a href="#" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:14px;">Cookie Policy</a>
+        </div>
+      </div>
+      <div style="text-align:left;color:#6B7280;font-size:13.5px;line-height:1.75;max-width:940px;margin:34px 0 0;">
+        <p>©2026 TopQuote Ltd., Registered in England Number: 04648763, Alderley Park, Suite 3, GLASSHOUSE, Macclesfield, SK10 4TG.</p>
+        <p style="margin-top:18px;">Registered in England Number: 04648763</p>
+        <p style="margin-top:14px;">The information on this website is for use of residents of the United Kingdom only. No representations are made as to whether the information is applicable or available in any other country which may have access to it.</p>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  initScrollTop(){
+    if (document.getElementById('scrollTopBtn')) return;
+    var b = document.createElement('button');
+    b.id = 'scrollTopBtn'; b.setAttribute('aria-label','Back to top'); b.textContent = '\u2191';
+    b.style.cssText = 'position:fixed;right:26px;bottom:26px;z-index:9999;width:52px;height:52px;border-radius:50%;border:0;background:#1EBABB;color:#fff;font-size:22px;font-weight:700;cursor:pointer;box-shadow:0 10px 26px rgba(20,40,35,.28);opacity:0;visibility:hidden;transition:opacity .3s ease,visibility .3s ease,transform .2s ease;';
+    b.onmouseenter = function(){ b.style.transform = 'translateY(-3px)'; };
+    b.onmouseleave = function(){ b.style.transform = 'none'; };
+    b.onclick = function(){ window.scrollTo({ top:0, behavior:'smooth' }); };
+    document.body.appendChild(b);
+    var onScroll = function(){ var y = window.scrollY || document.documentElement.scrollTop; if (y > 500){ b.style.opacity='1'; b.style.visibility='visible'; } else { b.style.opacity='0'; b.style.visibility='hidden'; } };
+    window.addEventListener('scroll', onScroll, { passive:true }); onScroll();
+  }
+  componentDidMount(){ this.initScrollTop(); try{ const mute=()=>document.querySelectorAll('video:not([data-allow-audio])').forEach(v=>{v.muted=true;v.volume=0;v.setAttribute('muted','');v.removeAttribute('controls');}); mute(); document.addEventListener('play',function(e){var v=e.target; if(v&&v.tagName==='VIDEO'&&!v.hasAttribute('data-allow-audio')){v.muted=true;v.volume=0;}},true); document.addEventListener('loadeddata',function(e){var v=e.target; if(v&&v.tagName==='VIDEO'&&!v.hasAttribute('data-allow-audio')){v.muted=true;v.volume=0;}},true); setInterval(mute,250); }catch(e){}
+    this.renderIcons();
+    this.initReveals();
+    this.initFaq();
+    this.initDavid();
+    this.setLogoSrcs();
+    this.initGallery();
+    this.initReviewsCarousel();
+    this.initShowcaseFilm();
+  }
+
+  initShowcaseFilm(){
+    const bind = () => {
+      const stage = document.querySelector('[data-film-stage]');
+      const thumb = document.querySelector('[data-film-thumb]');
+      if (!stage || stage.__wired) return;
+      stage.__wired = true;
+      const VIDEO_SRC = 'assets/ian-story.mp4';
+      const PANELS = [
+        { num:'01', label:'People first', title:'People, not products', desc:'We put you first. Once we have your details, a real person takes the time to understand what you actually need.' },
+        { num:'02', label:'Your adviser', title:'A dedicated adviser', desc:'Our client account manager service means we get to know your individual circumstances, not just a policy number.' },
+        { num:'03', label:'The right fit', title:'Cover that fits', desc:'Whatever your circumstances, we help find the right solution for both you and your family.' },
+        { num:'04', label:'Always here', title:'Support that stays', desc:'We stay in touch and review your cover as life changes, long after your policy starts.' }
+      ];
+      const lerp=(a,b,t)=>a+(b-a)*t, clamp=(v,lo,hi)=>Math.min(Math.max(v,lo),hi), easeOut=t=>1-Math.pow(1-t,3), easeIO=t=>t<0.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2;
+      const film=document.createElement('div'); film.className='sf-film';
+      film.innerHTML='<video autoplay muted loop playsinline><source src="'+VIDEO_SRC+'" type="video/mp4"></video><div class="sf-film__overlay"></div>';
+      document.body.appendChild(film);
+      const fv = film.querySelector('video'); if (fv){ fv.muted = true; fv.volume = 0; fv.setAttribute('muted',''); }
+      const overlay=film.querySelector('.sf-film__overlay');
+      const ui=stage.querySelector('[data-film-ui]');
+      const panelsHost=stage.querySelector('[data-film-panels]');
+      const tabsHost=stage.querySelector('[data-film-tabs]');
+      panelsHost.innerHTML=PANELS.map((p,i)=>'<div class="sf-panel'+(i===0?' is-active':'')+'"><span class="sf-panel__num">'+p.num+'</span><h2 class="sf-panel__title">'+p.title+'</h2><p class="sf-panel__desc">'+p.desc+'</p></div>').join('');
+      tabsHost.innerHTML=PANELS.map((p,i)=>'<div class="sf-tab'+(i===0?' is-active':'')+'"><span class="sf-tab__bar"></span><span>'+p.label+'</span></div>').join('');
+      const panels=panelsHost.querySelectorAll('.sf-panel');
+      const tabs=tabsHost.querySelectorAll('.sf-tab');
+      let isStartLocked=false, expandStartScrollY=0, startRect=null;
+      const rectFrom=r=>({top:r.top,left:r.left,width:r.width,height:r.height,radius:18});
+      const applyRect=r=>{film.style.top=r.top.toFixed(2)+'px';film.style.left=r.left.toFixed(2)+'px';film.style.width=r.width.toFixed(2)+'px';film.style.height=r.height.toFixed(2)+'px';film.style.borderRadius=r.radius.toFixed(2)+'px';};
+      const loop=()=>{
+        const vh=window.innerHeight;
+        const rect=stage.getBoundingClientRect();
+        const scrolled=-rect.top;
+        const totalScroll=Math.max(stage.offsetHeight-vh,1);
+        if(rect.bottom<=0){ film.style.opacity='0';overlay.style.opacity='0';ui.style.opacity='0';requestAnimationFrame(loop);return; }
+        if(thumb){
+          const mr=thumb.getBoundingClientRect();
+          const visible=mr.width>0&&mr.bottom>0&&mr.top<vh;
+          const pending=mr.width>0&&mr.top>=vh;
+          if(visible&&scrolled<=0){
+            const cy=mr.top+mr.height/2;
+            if(cy>vh/2){isStartLocked=false;expandStartScrollY=0;}
+            if(cy<=vh/2||isStartLocked){ if(!isStartLocked)expandStartScrollY=window.scrollY; isStartLocked=true; }
+            startRect=rectFrom(mr);
+          } else if(pending&&!isStartLocked){ startRect=null; expandStartScrollY=0; }
+        }
+        if(!isStartLocked){
+          if(startRect)applyRect(startRect);
+          film.style.opacity=startRect?'1':'0'; overlay.style.opacity='0'; ui.style.opacity='0';
+          requestAnimationFrame(loop);return;
+        }
+        const expandP=clamp((window.scrollY-expandStartScrollY)/vh,0,1);
+        const eased=easeOut(expandP);
+        film.style.opacity='1';
+        const sr=startRect||{top:vh*0.2,left:window.innerWidth*0.4,width:window.innerWidth*0.55,height:vh*0.55,radius:18};
+        applyRect({top:lerp(sr.top,0,eased),left:lerp(sr.left,0,eased),width:lerp(sr.width,window.innerWidth,eased),height:lerp(sr.height,vh,eased),radius:lerp(sr.radius,0,eased)});
+        overlay.style.opacity=(eased*0.22).toFixed(3);
+        if(expandP<1){ ui.style.opacity='0'; requestAnimationFrame(loop); return; }
+        const progress=clamp(scrolled/totalScroll,0,1);
+        ui.style.opacity=easeIO(clamp(progress/0.08,0,1)).toFixed(3);
+        const TAB_START=0.08;
+        const tabP=clamp((progress-TAB_START)/(1-TAB_START),0,1);
+        const active=clamp(Math.floor(tabP*PANELS.length),0,PANELS.length-1);
+        panels.forEach((p,i)=>p.classList.toggle('is-active',i===active));
+        tabs.forEach((t,i)=>t.classList.toggle('is-active',i===active));
+        requestAnimationFrame(loop);
+      };
+      loop();
+    };
+    bind(); setTimeout(bind, 500); setTimeout(bind, 1200);
+  }
+
+  initReviewsCarousel(){
+    const mount = () => {
+      const el = document.getElementById('rvSwiperEl');
+      if (!el || el.__sw || typeof Swiper === 'undefined') return false;
+      el.__sw = new Swiper(el, {
+        effect: 'coverflow', grabCursor: true, slidesPerView: 'auto',
+        centeredSlides: true, loop: true, spaceBetween: 28,
+        coverflowEffect: { rotate: 28, stretch: 0, depth: 110, modifier: 1, slideShadows: false },
+        observer: true, observeParents: true, updateOnWindowResize: true
+      });
+      const recenter = () => { try { el.__sw.update(); el.__sw.slideToLoop(0, 0, false); } catch(e){} };
+      requestAnimationFrame(() => requestAnimationFrame(recenter));
+      if (document.fonts && document.fonts.ready) document.fonts.ready.then(recenter);
+      [150,400,900,1500].forEach(ms => setTimeout(recenter, ms));
+      if (window.ResizeObserver){ let lw=0; new ResizeObserver(()=>{const w=el.clientWidth; if(w&&w!==lw){lw=w;recenter();}}).observe(el); }
+      return true;
+    };
+    if (!mount()){ let n=0; const t=setInterval(()=>{ if(mount()||++n>40) clearInterval(t); },150); }
+  }
+
+  initGallery(){
+    const bind = () => {
+      const sec = document.getElementById('galSection');
+      const colA = document.getElementById('galColA');
+      const colB = document.getElementById('galColB');
+      if (!sec || !colA || !colB || sec.__wired) return;
+      sec.__wired = true;
+
+      let targetA = 0, targetB = 0, curA = 0, curB = 0;
+      const compute = () => {
+        const r = sec.getBoundingClientRect();
+        const vh = window.innerHeight || 1;
+        // scroll progress through the pinned section (0 = just pinned, 1 = about to release)
+        const scrollable = r.height - vh;
+        const p = Math.max(0, Math.min(1, -r.top / (scrollable || 1)));
+        const hA = colA.scrollHeight, hB = colB.scrollHeight;
+        // columns start just below the viewport and fly up until fully past the top
+        targetA = vh * 0.9 - p * (vh * 0.9 + hA);
+        targetB = vh * 1.25 - p * (vh * 1.25 + hB);
+      };
+      const loop = () => {
+        curA += (targetA - curA) * 0.1;
+        curB += (targetB - curB) * 0.1;
+        colA.style.transform = 'translateY(' + curA.toFixed(2) + 'px)';
+        colB.style.transform = 'translateY(' + curB.toFixed(2) + 'px)';
+        requestAnimationFrame(loop);
+      };
+      window.addEventListener('scroll', compute, { passive: true });
+      window.addEventListener('resize', compute);
+      compute(); curA = targetA; curB = targetB; loop();
+
+      // lightbox
+      const lb = document.getElementById('galLightbox');
+      const lbImg = document.getElementById('galLightboxImg');
+      const close = () => { if (lb) lb.style.display = 'none'; };
+      document.querySelectorAll('.gal-img').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const src = btn.getAttribute('data-src');
+          if (lbImg && src) lbImg.setAttribute('src', src);
+          if (lb) lb.style.display = 'flex';
+        });
+      });
+      if (lb) lb.addEventListener('click', (e) => { if (e.target === lb || e.target.id === 'galLightboxClose') close(); });
+      window.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+    };
+    bind(); setTimeout(bind, 400); setTimeout(bind, 1000);
+  }
+  componentDidUpdate(){ this.renderIcons(); this.setLogoSrcs(); }
+
+  setLogoSrcs(){
+    document.querySelectorAll('#pvGrid img[data-logo]').forEach(img => {
+      const src = img.getAttribute('data-logo');
+      if (src && img.getAttribute('src') !== src) img.setAttribute('src', src);
+    });
+  }
+
+  renderIcons(){
+    const go = () => { try { if (window.lucide) window.lucide.createIcons(); } catch(e){} };
+    go(); setTimeout(go, 300); setTimeout(go, 900);
+  }
+
+  initReveals(){
+    const io = new IntersectionObserver((es) => {
+      es.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+    }, { threshold: 0.12 });
+    setTimeout(() => {
+      document.querySelectorAll('.reveal, .ch-grid').forEach(el => io.observe(el));
+    }, 60);
+  }
+
+  initFaq(){
+    const bind = () => {
+      const list = document.getElementById('faqList');
+      if (!list || list.__wired) return;
+      list.__wired = true;
+      const items = list.querySelectorAll('.faq-item');
+      items.forEach((it, i) => {
+        if (i === 0) it.classList.add('open');
+        const q = it.querySelector('.faq-q');
+        q.addEventListener('click', () => {
+          const open = it.classList.contains('open');
+          items.forEach(o => o.classList.remove('open'));
+          if (!open) it.classList.add('open');
+        });
+      });
+      const reserve = () => {
+        const openItem = list.querySelector('.faq-item.open');
+        items.forEach(o => o.classList.remove('open'));
+        const closedH = list.offsetHeight;
+        let maxA = 0;
+        items.forEach(it => { const p = it.querySelector('.faq-a > *') || it.querySelector('.faq-a'); if (p) maxA = Math.max(maxA, p.scrollHeight); });
+        if (openItem) openItem.classList.add('open');
+        list.style.minHeight = (closedH + maxA + 10) + 'px';
+      };
+      reserve();
+      setTimeout(reserve, 500);
+      if (document.fonts && document.fonts.ready) document.fonts.ready.then(reserve);
+      window.addEventListener('resize', reserve, { passive: true });
+    };
+    bind(); setTimeout(bind, 400); setTimeout(bind, 1000);
+  }
+
+  initDavid(){
+    const bind = () => {
+      const wrap = document.getElementById('davidVid');
+      const vid = document.getElementById('davidVideo');
+      const overlay = document.getElementById('davidPlay');
+      if (!wrap || !vid || wrap.__wired) return;
+      wrap.__wired = true;
+      wrap.addEventListener('click', () => {
+        if (vid.paused) { vid.play(); if (overlay) overlay.style.opacity = '0'; }
+        else { vid.pause(); if (overlay) overlay.style.opacity = '1'; }
+      });
+    };
+    bind(); setTimeout(bind, 500);
+  }
+
+  renderVals(){
+    return {
+      charter: [
+        { num:'01', icon:'heart', title:'You Come First', desc:'We put your needs before our own, always.' },
+        { num:'02', icon:'shield', title:'Accurate Information', desc:'We ensure everything we provide is correct and up-to-date.' },
+        { num:'03', icon:'layers', title:'Products That Fit', desc:'We match products and services to your identified needs.' },
+        { num:'04', icon:'phone', title:'Always in Touch', desc:'We stay with you throughout, from enquiry to beyond the sale.' },
+        { num:'05', icon:'share-2', title:'Partner Network', desc:"If we can't help directly, we'll connect you with the right provider." },
+        { num:'06', icon:'bell', title:'Keep You Updated', desc:'We inform you of any changes that impact your policy or situation.' },
+        { num:'07', icon:'check-circle', title:'We Follow Through', desc:"When we say we'll do something, we do it. No exceptions." },
+        { num:'08', icon:'refresh-cw', title:'We Make It Right', desc:'If we make a mistake, we do our utmost to put it right quickly.' },
+        { num:'09', icon:'clock', title:'Here When You Need Us', desc:'We make ourselves available at the earliest opportunity.' },
+        { num:'10', icon:'gift', title:'Giving Back', desc:'We continue to support poorly children by donating company funds to charity.' }
+      ],
+      providers: [
+        { name:'Legal & General', logo:'assets/logo-lg.png' },
+        { name:'Royal London', logo:'assets/logo-royal-london.png' },
+        { name:'Aviva', logo:'assets/logo-aviva.png' },
+        { name:'Vitality', logo:'assets/logo-vitality.png' },
+        { name:'LV', logo:'assets/logo-lv.png' },
+        { name:'Guardian', logo:'assets/logo-guardian.png' }
+      ],
+      reviews: (function(){ var b=[
+        { name:'Feefo', stars:'★★★★★', quote:'"Clear, thorough, courteous, three words that capture my experience. A trustworthy brokerage service, I felt in control."' },
+        { name:'Feefo', stars:'★★★★★', quote:'"Great to deal with, fully explained my options and never once put any pressure on me to purchase anything. Have made several follow-up calls to make sure everything was in place."' },
+        { name:'Feefo', stars:'★★★★☆', quote:'"Easy, helpful and polite. The service from top quote was excellent from start to finish. Everyone I spoke to was helpful and knowledgeable."' },
+        { name:'Feefo', stars:'★★★★★', quote:'"Everything made very clear and the online documentation was easy to do. Excellent and very easy and clear from start to finish."' },
+        { name:'Feefo', stars:'★★★★★', quote:'"From the first call to the final policy, everything was straightforward and stress-free. I always knew exactly where I stood."' },
+        { name:'Feefo', stars:'★★★★★', quote:'"Genuinely helpful advice with no jargon and no pressure. I would happily recommend them to friends and family."' }
+      ]; return b.concat(b,b); })(),
+      faqs: [
+        { q:'Is TopQuote a legitimate UK life insurance broker?', a:'Yes. TopQuote (Top Quote Limited) is a UK life insurance and protection broker, registered in England (company number 04648763) and based at Alderley Park in Cheshire. We\'re an Appointed Representative of The Openwork Partnership, which is authorised and regulated by the Financial Conduct Authority. You can verify our authorisation independently at any time by searching for us on the FCA Register at register.fca.org.uk.' },
+        { q:'Who regulates TopQuote?', a:'We operate as an Appointed Representative of The Openwork Partnership, a trading style of Openwork Limited, which is authorised and regulated by the Financial Conduct Authority (FCA). This means our advice and conduct are overseen under FCA rules.' },
+        { q:'Where is TopQuote based?', a:'Our office is at Alderley Park, Suite 3, GLASSHOUSE, Congleton Road, Macclesfield, SK10 4TG. We serve customers right across the United Kingdom, by phone and online.' },
+        { q:'What does "Appointed Representative" mean?', a:'An Appointed Representative operates under the authorisation of a directly-regulated principal firm, in our case, The Openwork Partnership. The principal takes responsibility for ensuring we meet FCA standards, giving you the same protections you\'d expect from any regulated adviser.' },
+        { q:'How does TopQuote get paid?', a:'For most protection policies we arrange, we\'re paid a commission by the insurer when your policy starts. This does not increase the premium you pay, the cost is the same whether you come through us or go direct.' },
+        { q:'Is there a charge for advice?', a:'No. There is no fee for the advice and support we provide when arranging your life insurance, critical illness or income protection cover. We\'ll always be clear and upfront about how we\'re remunerated before you commit to anything.' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,1295 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;800&amp;family=Playfair+Display:wght@500;600;700;800;900&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Mulish',sans-serif;}
+  .arva-h{font-family:'Playfair Display','Georgia',serif;}
+  .nav-link{white-space:nowrap;}
+  .nav-link:hover{color:#1EBABB !important;}
+  .nav-dd{position:relative;}
+  .nav-dd-menu{position:absolute;top:calc(100% + 6px);left:0;background:#0C1F19;border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:8px;min-width:190px;opacity:0;visibility:hidden;transform:translateY(6px);transition:opacity .2s ease,transform .2s ease;box-shadow:0 20px 40px rgba(0,0,0,.35);z-index:60;}
+  .nav-dd:hover .nav-dd-menu{opacity:1;visibility:visible;transform:translateY(0);}
+  .nav-dd-menu a{display:block;padding:10px 14px;color:#fff !important;text-decoration:none;font-size:15px;border-radius:8px;white-space:nowrap;}
+  .nav-dd-menu a:hover{background:rgba(255,255,255,.08);color:#1EBABB !important;}
+  .lm:hover{color:#1EBABB !important;}
+  .svc-card{transition:transform .25s ease, box-shadow .25s ease;display:flex;flex-direction:column;}
+  #svcMenu{opacity:0;visibility:hidden;transition:opacity .45s ease,visibility .45s ease;}
+  html.svcmenu-open #svcMenu{opacity:1;visibility:visible;}
+  #svcMenu .svc-pane{transform:translateX(140px);opacity:0;}
+  #svcMenu .svc-pane:nth-child(1){transition:transform .95s cubic-bezier(.16,1,.3,1) .08s,opacity .8s ease .08s;}
+  #svcMenu .svc-pane:nth-child(2){transition:transform .95s cubic-bezier(.16,1,.3,1) .22s,opacity .8s ease .22s;}
+  #svcMenu .svc-pane:nth-child(3){transition:transform .95s cubic-bezier(.16,1,.3,1) .36s,opacity .8s ease .36s;}
+  html.svcmenu-open #svcMenu .svc-pane{transform:translateX(0);opacity:1;}
+  .svc-pane:hover .svc-pane-img{transform:scale(1.06);}
+  .svc-pane:hover .svc-pane-vid{transform:scale(1.06);}
+  .svc-pane:hover h3{color:#5fe0e0;}
+  .svc-card > a{margin-top:auto;}
+  #stepsRow > div{opacity:0;transform:translateY(34px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1);}
+  #stepsRow.revealed > div{opacity:1;transform:none;}
+  #stepsRow > div:nth-child(1){transition-delay:0s;}
+  #stepsRow > div:nth-child(2){transition-delay:.09s;}
+  #stepsRow > div:nth-child(3){transition-delay:.18s;}
+  #stepsRow > div:nth-child(4){transition-delay:.27s;}
+  #stepsRow > div:nth-child(5){transition-delay:.36s;}
+  @media (prefers-reduced-motion:reduce){#stepsRow > div{opacity:1 !important;transform:none !important;}}
+  @keyframes octaFloat{0%,100%{transform:translateY(0);}50%{transform:translateY(-9px);}}
+  #heroOctaInner{animation:octaFloat 4.8s ease-in-out infinite;}
+  #heroOctaInner > div{transition:transform .45s cubic-bezier(.34,1.56,.44,1);transform-origin:center;}
+  #heroOcta{transition:filter .4s ease;}
+  #heroOcta:hover #heroOctaInner > div:first-child{transform:scale(1.09);}
+  #heroOcta:hover #heroOctaInner > div:last-child{transform:scale(1.22) translate(3px,3px);}
+  #heroOcta:hover{filter:drop-shadow(0 32px 42px rgba(6,34,22,.62)) !important;}
+  #heroOcta:active #heroOctaInner > div:first-child{transform:scale(1.04);}
+  @keyframes heroFloatA{0%,100%{transform:translateY(0);}50%{transform:translateY(-11px);}}
+  @keyframes heroFloatB{0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);}}
+  #heroHeading{animation:heroFloatA 5.6s ease-in-out infinite;}
+  #heroParaFloat{animation:heroFloatB 6.4s ease-in-out infinite;}
+  @media (prefers-reduced-motion:reduce){#heroHeading,#heroParaFloat,#heroOctaInner{animation:none !important;}}
+  @keyframes aboutFloat{0%,100%{transform:translateY(0) rotate(0deg);}50%{transform:translateY(-12px) rotate(-.4deg);}}
+  @keyframes aboutFloat{0%,100%{transform:translateY(0) rotate(0deg);}50%{transform:translateY(-12px) rotate(-.4deg);}}
+  #aboutImg1{animation:aboutFloat 7s ease-in-out infinite;}
+  #aboutImg1 .about-vid{animation:aboutVidFix 7s ease-in-out infinite;}
+  @keyframes aboutVidFix{0%,100%{transform:translateY(0) rotate(0deg);}50%{transform:translateY(12px) rotate(.4deg);}}
+  @media (prefers-reduced-motion:reduce){#aboutImg1,#aboutImg1 .about-vid{animation:none !important;}}
+  @keyframes heroCircleFloat{0%,100%{transform:translateY(0);}50%{transform:translateY(15px);}}
+  #heroCircle{animation:heroCircleFloat 4.4s ease-in-out infinite;}
+  @media (prefers-reduced-motion:reduce){#heroCircle{animation:none !important;}}
+  @keyframes partnerFadeUp{0%{opacity:0;transform:translateY(30px);}100%{opacity:1;transform:translateY(0);}}
+  #partnerHeading,#partnerBtn{opacity:0;}
+  #partnerCard.pv-in #partnerHeading{animation:partnerFadeUp .8s ease-out .1s forwards;}
+  #partnerCard.pv-in #partnerBtn{animation:partnerFadeUp .8s ease-out .25s forwards;}
+  #partnerBtn:hover{background:#159a9b !important;}
+  .partner-trail{position:absolute;width:150px;aspect-ratio:16/10;object-fit:cover;pointer-events:none;border-radius:12px;box-shadow:0 10px 24px rgba(0,0,0,.18);z-index:5;will-change:transform,opacity;transition:opacity 1s linear,transform 1s linear;}
+  @media (prefers-reduced-motion:reduce){#partnerHeading,#partnerBtn{opacity:1 !important;animation:none !important;}}
+  .svc-card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(20,40,35,.10);}
+  .team-card{transition:transform .25s ease, box-shadow .25s ease;}
+  .team-card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(20,40,35,.10);}
+  .blog-card{transition:transform .25s ease;}
+  .blog-card:hover{transform:translateY(-4px);}
+  i[data-lucide]{display:inline-flex;}
+  /* ── Stats coverflow carousel ── */
+  #sx-stats{opacity:0;transform:translateY(40px) scale(.98);transition:opacity .7s ease-out, transform .7s ease-out;perspective:1200px;}
+  #sx-stats.revealed{opacity:1;transform:translateY(0) scale(1);}
+  #sx-stats .sx-glow{position:absolute;left:50%;top:56%;width:min(1000px,90%);height:620px;transform:translate(-50%,-50%);background:radial-gradient(ellipse at center,rgba(30,186,187,.16) 0%,rgba(30,186,187,.07) 35%,transparent 70%);filter:blur(50px);pointer-events:none;z-index:0;animation:sxGlowPulse 9s ease-in-out infinite;}
+  @keyframes sxGlowPulse{0%,100%{opacity:.6;}50%{opacity:1;}}
+  #sx-stats .swiper{position:relative;z-index:1;width:100%;height:520px;padding-bottom:20px !important;overflow:visible !important;transform-style:preserve-3d;will-change:transform,opacity;}
+  #sx-stats .swiper-slide{width:380px;max-width:85%;height:480px;opacity:.42;transition:opacity .45s ease;}
+  #sx-stats .swiper-slide-active{opacity:1;}
+  #sx-stats .swiper-slide-prev,#sx-stats .swiper-slide-next{opacity:.62;}
+  #sx-stats .sx-shadow{transition:box-shadow .4s ease, transform .4s ease;}
+  #sx-stats .swiper-slide-active .sx-shadow{box-shadow:0 40px 90px rgba(8,30,22,.5);}
+  @media (prefers-reduced-motion:reduce){
+    #sx-stats{opacity:1 !important;transform:none !important;}
+    #sx-stats .sx-glow{animation:none !important;}
+  }
+  .pv-card{transition:transform .25s ease, box-shadow .25s ease;}
+  .pv-card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(20,40,35,.13);}
+  .pv-reveal .pv-card{opacity:0;transform:translateY(28px);transition:opacity .6s cubic-bezier(.22,.61,.36,1), box-shadow .25s ease, transform .6s cubic-bezier(.22,.61,.36,1);}
+  .pv-reveal.pv-in .pv-card{opacity:1;transform:translateY(0);}
+  .pv-reveal.pv-in .pv-card:nth-child(1){transition-delay:0ms;}
+  .pv-reveal.pv-in .pv-card:nth-child(2){transition-delay:80ms;}
+  .pv-reveal.pv-in .pv-card:nth-child(3){transition-delay:160ms;}
+  .pv-reveal.pv-in .pv-card:nth-child(4){transition-delay:240ms;}
+  .pv-reveal.pv-in .pv-card:nth-child(5){transition-delay:320ms;}
+  .pv-reveal.pv-in .pv-card:nth-child(6){transition-delay:400ms;}
+  @media (prefers-reduced-motion:reduce){
+    .pv-reveal .pv-card{opacity:1 !important;transform:none !important;transition:box-shadow .25s ease !important;}
+  }
+  @media (max-width:768px){
+    .cta-fixed{background-attachment:scroll !important;}
+  }
+  @media (max-width:1100px){
+    #heroHeading{font-size:60px !important;}
+    #heroOcta{top:66% !important;left:41% !important;}
+  }
+  @media (max-width:720px){
+    #heroPanel{height:auto !important;}
+    #heroBand{position:static !important;height:auto !important;display:flex !important;flex-direction:column !important;align-items:flex-start !important;gap:30px !important;padding:104px clamp(20px,8vw,40px) 60px !important;}
+    #heroTitleWrap,#heroOcta,#heroPara{position:static !important;left:auto !important;right:auto !important;top:auto !important;bottom:auto !important;transform:none !important;max-width:none !important;}
+    #heroHeading{font-size:clamp(40px,11vw,58px) !important;}
+    #heroPara{max-width:420px !important;}
+  }
+</style>
+</helmet>
+
+<div style="width:100%;overflow-x:clip;background:#F6F7FB;color:#1B3A33;">
+
+  <!-- ===== CINEMATIC STACK (Hero + About) ===== -->
+  <div id="arvaStack" style="position:relative;z-index:0;background:#04130d;">
+
+  <!-- ============ HERO + HEADER ============ -->
+  <section id="heroPanel" data-screen-label="Hero" style="position:sticky;top:0;z-index:1;height:100vh;min-height:640px;background:#000;color:#fff;overflow:hidden;display:flex;flex-direction:column;will-change:transform;transform-origin:center top;">
+    <video id="heroVideo" src="assets/hero-video.mp4" autoplay="" muted="" loop="" playsinline="" preload="auto" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;z-index:0;"></video>
+    <div style="position:absolute;inset:0;background:linear-gradient(118deg,rgba(11,42,31,.9) 0%,rgba(12,45,33,.6) 38%,rgba(24,140,140,.4) 72%,rgba(30,186,187,.28) 100%);"></div>
+    <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,28,20,.55) 0%,rgba(7,28,20,0) 32%,rgba(7,28,20,.5) 100%);"></div>
+    <!-- vertical grid lines (removed for now, restore to bring back): <div style="position:absolute;inset:0;pointer-events:none;background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.05) 0 1px,transparent 1px 240px);"></div> -->
+    <div id="heroDarken" style="position:absolute;inset:0;background:#04130d;opacity:0;pointer-events:none;"></div>
+
+    <!-- Header -->
+    <header style="position:relative;z-index:5;max-width:none;margin:0;padding:30px clamp(24px,5vw,84px);display:flex;align-items:center;justify-content:space-between;gap:40px;">
+      <a href="Home Page.dc.html" style="display:flex;align-items:center;">
+        <img src="assets/topquote-logo.png" alt="TopQuote" style="height:38px;width:auto;display:block;">
+      </a>
+
+      <nav style="display:flex;align-items:center;gap:20px;font-size:16px;font-weight:600;">
+        <a href="#" id="svcBtn" style="background:#1EBABB;color:#fff;padding:9px 18px;border-radius:24px;text-decoration:none;display:inline-flex;align-items:center;gap:5px;cursor:pointer;">Services <span style="font-size:10px;">▾</span></a>
+        <div class="nav-dd"><a href="About Us.dc.html" class="nav-link" style="color:#fff;padding:9px 14px;text-decoration:none;display:inline-flex;align-items:center;gap:5px;">About <span style="font-size:10px;">▾</span></a><div class="nav-dd-menu"><a href="About Us.dc.html">About Us</a><a href="Consumer Duty.dc.html">Consumer Duty</a></div></div>
+        <a href="Reconnect.dc.html" class="nav-link" style="color:#fff;padding:9px 14px;text-decoration:none;">Reconnect</a>
+        <a href="Blog.dc.html" class="nav-link" style="color:#fff;padding:9px 14px;text-decoration:none;">Blog</a>
+        <a href="Contact.dc.html" class="nav-link" style="color:#fff;padding:9px 14px;text-decoration:none;">Contact</a>
+        <a href="Careers.dc.html" class="nav-link" style="color:#fff;padding:9px 14px;text-decoration:none;">Careers</a>
+        <a href="Find Us.dc.html" class="nav-link" style="color:#fff;padding:9px 14px;text-decoration:none;">Find Us</a>
+      </nav>
+
+      <div style="display:flex;align-items:center;gap:24px;">
+        <a href="Get a Quote.dc.html" style="background:#1EBABB;color:#fff;padding:14px 26px;border-radius:8px;text-decoration:none;font-weight:700;font-size:15px;white-space:nowrap;">Get a quote</a>
+      </div>
+    </header>
+
+    <!-- Hero content -->
+    <div style="position:relative;z-index:4;flex:1;min-height:0;">
+      <div id="heroBand" style="position:relative;height:100%;padding:0 clamp(24px,5vw,84px);">
+        <!-- title + slider -->
+        <div id="heroTitleWrap" style="position:absolute;top:8%;left:clamp(24px,5vw,84px);right:clamp(24px,5vw,84px);">
+          <h1 id="heroHeading" class="arva-h" style="font-size:clamp(56px,7vw,118px);line-height:1.0;font-weight:600;letter-spacing:.5px;text-transform:uppercase;max-width:760px;will-change:transform;text-shadow:0 2px 30px rgba(0,0,0,.28);">EXPERT INSURANCE GUIDANCE</h1>
+        </div>
+
+        <!-- Get Started octagon -->
+        <a id="heroOcta" href="Contact.dc.html" style="position:absolute;left:44%;top:60%;transform:translateY(-50%);filter:drop-shadow(0 24px 30px rgba(6,34,22,.55));cursor:pointer;text-decoration:none;">
+          <div id="heroOctaInner" style="position:relative;width:170px;height:170px;">
+            <div style="width:146px;height:146px;border-radius:50%;background:linear-gradient(180deg,#3fd3d4 0%,#1ebabb 52%,#159a9b 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;">
+              <span style="width:42px;height:42px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;"><i data-lucide="arrow-up-right" style="width:20px;height:20px;color:#1EBABB;"></i></span>
+              <span style="font-weight:700;font-size:13px;color:#fff;white-space:nowrap;">Talk to an advisor</span>
+            </div>
+            <div style="position:absolute;right:0;bottom:0;width:38px;height:38px;border-radius:50%;background:linear-gradient(180deg,#3fd3d4 0%,#1ebabb 60%,#159a9b 100%);"></div>
+          </div>
+        </a>
+
+        <!-- supporting paragraph -->
+        <div id="heroPara" style="position:absolute;right:clamp(24px,5vw,84px);bottom:9%;max-width:380px;">
+          <!-- TEMP HIDDEN — hero floating badges (feefo + TrustScore); restore on request
+          <div style="display:flex;gap:12px;margin-bottom:18px;flex-wrap:wrap;">
+            <div style="width:190px;height:58px;background:#fff;border-radius:10px;padding:8px 14px;display:flex;align-items:center;justify-content:center;gap:9px;box-shadow:0 10px 30px rgba(0,0,0,.22);">
+              <div style="line-height:1.1;text-align:center;"><span style="font-weight:800;font-size:15px;color:#191919;letter-spacing:-.02em;">feefo</span><div style="font-size:9px;font-weight:700;color:#191919;">Service Rating</div></div>
+              <span style="color:#F5C518;font-size:12px;letter-spacing:1px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              <span style="font-size:10px;color:#6b7280;">743</span>
+            </div>
+            <div style="width:190px;height:58px;background:#fff;border-radius:10px;padding:6px 14px;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(0,0,0,.22);">
+              <div style="font-size:8.5px;color:#6b7280;margin-bottom:2px;">Current TrustScore</div>
+              <div style="display:flex;align-items:center;gap:6px;justify-content:center;">
+                <span style="font-weight:800;font-size:14px;color:#191919;">4.3</span>
+                <span style="display:flex;gap:2px;">
+                  <span style="width:15px;height:15px;background:#00b67a;display:flex;align-items:center;justify-content:center;color:#fff;font-size:9px;">&#9733;</span>
+                  <span style="width:15px;height:15px;background:#00b67a;display:flex;align-items:center;justify-content:center;color:#fff;font-size:9px;">&#9733;</span>
+                  <span style="width:15px;height:15px;background:#00b67a;display:flex;align-items:center;justify-content:center;color:#fff;font-size:9px;">&#9733;</span>
+                  <span style="width:15px;height:15px;background:#00b67a;display:flex;align-items:center;justify-content:center;color:#fff;font-size:9px;">&#9733;</span>
+                  <span style="width:15px;height:15px;background:linear-gradient(90deg,#00b67a 58%,#dcdce6 58%);display:flex;align-items:center;justify-content:center;color:#fff;font-size:9px;">&#9733;</span>
+                </span>
+              </div>
+              <div style="font-size:9px;font-weight:700;color:#191919;margin-top:2px;">517 reviews</div>
+            </div>
+          </div>
+          -->
+          <div id="heroParaFloat" style="display:flex;gap:14px;align-items:flex-start;">
+          <span id="heroCircle" style="width:26px;height:26px;border:5px solid #fff;border-radius:50%;flex:none;margin-top:2px;"></span>
+          <div style="font-size:15px;line-height:1.65;color:rgba(255,255,255,.92);"><div>We’re FCA-regulated financial advisers with over 20 years of experience in life insurance and protection. We take the time to understand your circumstances and find cover that genuinely works for you and the people who depend on you.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="aboutPanel" data-screen-label="About" style="position:sticky;top:0;z-index:2;min-height:100vh;background:#F6F7FB;padding:90px 40px;display:flex;align-items:center;perspective:1400px;box-shadow:0 -34px 70px rgba(8,30,22,.16);">
+    <div id="aboutInner" style="width:100%;max-width:1200px;margin:0 auto;display:grid;grid-template-columns:480px 1fr;gap:70px;align-items:center;will-change:transform;">
+      <div id="aboutMedia" style="position:relative;height:560px;">
+        <div id="aboutImg1" style="position:absolute;left:0;top:8px;width:458px;height:540px;background:#000;border-radius:16px;overflow:hidden;will-change:transform;"><video class="about-vid" src="assets/about-video.mp4" autoplay="" muted="" loop="" playsinline="" preload="auto" style="position:absolute;left:-20px;top:-20px;width:calc(100% + 40px);height:calc(100% + 40px);object-fit:cover;display:block;"></video></div>
+      </div>
+      <div>
+        <div style="display:flex;align-items:center;gap:9px;margin-bottom:18px;">
+          <img src="assets/topquote-logo-grey.svg" alt="TopQuote" style="height:26px;width:auto;display:block;">
+        </div>
+        <h2 class="arva-h" style="font-size:43px;line-height:1.12;font-weight:600;color:#173B33;"><div>What could be more important than protecting the people you love and their future?</div></h2>
+        <div style="color:#6B7280;font-size:16px;line-height:1.75;margin-top:22px;max-width:560px;"><div>Whether you need life insurance, critical illness cover, or income protection, we simplify the process of selecting coverage and tailor it to your personal circumstances and those of your family</div></div>
+
+        <div style="display:flex;align-items:center;gap:28px;margin-top:38px;flex-wrap:wrap;">
+          <img src="assets/badge-trustpilot.png" alt="Trustpilot TrustScore 4.3, 517 reviews" style="height:104px;width:auto;object-fit:contain;">
+          <img src="assets/badge-feefo.png" alt="Feefo Service Rating, 743 reviews" style="height:88px;width:auto;object-fit:contain;">
+          <img src="assets/badge-bqa.png" alt="Business Quality Awards" style="height:120px;width:auto;object-fit:contain;">
+        </div>
+
+        <a href="About Us.dc.html" style="display:inline-block;margin-top:38px;background:#1EBABB;color:#fff;padding:15px 30px;border-radius:8px;text-decoration:none;font-weight:700;font-size:15px;">More About Us</a>
+      </div>
+    </div>
+  </section>
+  </div>
+  <!-- ===== /CINEMATIC STACK ===== -->
+
+  <!-- ============ TEAM ============ -->
+  <section data-screen-label="Team" style="background:#F6F7FB;padding:90px 40px;perspective:1400px;">
+    <div id="teamInner" style="max-width:1200px;margin:0 auto;will-change:transform;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:44px;">
+        <div>
+          <div style="display:flex;align-items:center;gap:9px;margin-bottom:16px;">
+            <img src="assets/topquote-mark-teal.png" alt="TopQuote" style="width:22px;height:22px;object-fit:contain;flex:none;">
+            <span style="color:#1EBABB;font-weight:700;font-size:15px;">Our Team Members</span>
+          </div>
+          <h2 class="arva-h" style="font-size:43px;line-height:1.12;font-weight:600;color:#173B33;">How do I get started?</h2>
+        </div>
+        <div style="color:#6B7280;font-size:15px;line-height:1.7;max-width:320px;margin-top:6px;"><div>Take advantage of our award-winning service and expertise. Protect your loved ones in just 3 simple steps:</div></div>
+      </div>
+
+      <div id="stepsRow" style="display:flex;align-items:stretch;">
+        <div style="flex:1;background:#fff;border:1px solid #E5E7F0;border-radius:18px;padding:40px 30px;text-align:center;display:flex;flex-direction:column;justify-content:flex-start;">
+          <div style="display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:16px;">
+            <span style="height:1px;width:36px;background:#D5D9E4;"></span>
+            <span class="arva-h" style="font-size:58px;font-weight:700;color:#1EBABB;line-height:1;">1</span>
+            <span style="height:1px;width:36px;background:#D5D9E4;"></span>
+          </div>
+          <h3 class="arva-h" style="font-size:22px;font-weight:700;color:#173B33;margin-bottom:12px;">Fill in our simple form</h3>
+          <p style="color:#6B7280;font-size:14.5px;line-height:1.65;max-width:280px;margin:0 auto;">Answer a few questions about yourself and the cover you need.</p>
+          <a href="#contactSection" style="margin:22px auto 0;background:#1EBABB;color:#fff;padding:12px 26px;border-radius:8px;text-decoration:none;font-weight:700;font-size:14px;display:inline-block;">Get started</a>
+        </div>
+        <div style="flex:none;display:flex;align-items:center;padding:0 16px;">
+          <span style="width:46px;height:46px;border-radius:50%;border:1.6px solid #173B33;display:flex;align-items:center;justify-content:center;flex:none;"><i data-lucide="arrow-right" style="width:20px;height:20px;color:#173B33;"></i></span>
+        </div>
+        <div style="flex:1;background:#fff;border:1px solid #E5E7F0;border-radius:18px;padding:40px 30px;text-align:center;display:flex;flex-direction:column;justify-content:flex-start;">
+          <div style="display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:16px;">
+            <span style="height:1px;width:36px;background:#D5D9E4;"></span>
+            <span class="arva-h" style="font-size:58px;font-weight:700;color:#1EBABB;line-height:1;">2</span>
+            <span style="height:1px;width:36px;background:#D5D9E4;"></span>
+          </div>
+          <h3 class="arva-h" style="font-size:22px;font-weight:700;color:#173B33;margin-bottom:12px;">Get your personalised quotes</h3>
+          <p style="color:#6B7280;font-size:14.5px;line-height:1.65;max-width:280px;margin:0 auto;">We provide the best quotes available from our trusted insurer partners and all the support you need to make a fully informed choice.</p>
+        </div>
+        <div style="flex:none;display:flex;align-items:center;padding:0 16px;">
+          <span style="width:46px;height:46px;border-radius:50%;border:1.6px solid #173B33;display:flex;align-items:center;justify-content:center;flex:none;"><i data-lucide="arrow-right" style="width:20px;height:20px;color:#173B33;"></i></span>
+        </div>
+        <div style="flex:1;background:#fff;border:1px solid #E5E7F0;border-radius:18px;padding:40px 30px;text-align:center;display:flex;flex-direction:column;justify-content:flex-start;">
+          <div style="display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:16px;">
+            <span style="height:1px;width:36px;background:#D5D9E4;"></span>
+            <span class="arva-h" style="font-size:58px;font-weight:700;color:#1EBABB;line-height:1;">3</span>
+            <span style="height:1px;width:36px;background:#D5D9E4;"></span>
+          </div>
+          <h3 class="arva-h" style="font-size:22px;font-weight:700;color:#173B33;margin-bottom:12px;">Secure your perfect policy</h3>
+          <p style="color:#6B7280;font-size:14.5px;line-height:1.65;max-width:280px;margin:0 auto;">Enjoy peace of mind that your family are financially protected.</p>
+        </div>
+      </div>
+    </div></section></div>
+  
+
+  <!-- ============ STATS CAROUSEL ============ -->
+  <section id="sx-stats" data-screen-label="Stats" style="position:relative;padding:96px 0;background:#F6F7FB;overflow:hidden;font-family:'Space Mono',monospace;">
+    <div class="sx-glow"></div>
+    <div style="position:relative;z-index:1;text-align:center;margin-bottom:44px;padding:0 40px;">
+      <div style="display:inline-flex;align-items:center;gap:9px;margin-bottom:16px;"><img src="assets/topquote-mark-teal.png" alt="TopQuote" style="width:22px;height:22px;object-fit:contain;flex:none;"><span style="color:#1EBABB;font-weight:700;font-size:15px;">Our Track Record</span></div>
+      <h2 class="arva-h" style="font-family:'Playfair Display',Georgia,serif;font-size:40px;font-weight:600;color:#173B33;">Trusted Protection, Proven Results</h2>
+    </div>
+    <div class="swiper" id="sx-stats-swiper">
+      <div class="swiper-wrapper">
+        <sc-for list="{{ stats }}" as="s" hint-placeholder-count="6">
+          <div class="swiper-slide">
+            <sc-if value="{{ s.isStat }}" hint-placeholder-val="{{ true }}">
+            <div style="padding:6px;border-radius:28px;background:rgba(8,30,22,.05);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);display:flex;flex-direction:column;justify-content:space-between;height:480px;">
+              <div class="sx-shadow" style="background:#0C1F19;border:1px solid rgba(255,255,255,.06);border-radius:23px;padding:32px;display:flex;flex-direction:column;justify-content:space-between;flex:1;">
+                <div>
+                  <span style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#fff;opacity:.8;">{{ s.title }}</span>
+                  <div style="font-size:clamp(58px,6vw,74px);font-weight:400;letter-spacing:-.04em;color:#fff;line-height:1;margin-top:24px;">{{ s.value }}</div>
+                </div>
+                <div style="display:flex;flex-direction:column;gap:10px;padding-top:16px;">
+                  <sc-for list="{{ s.details }}" as="d" hint-placeholder-count="3">
+                    <div style="display:flex;align-items:flex-start;gap:8px;font-size:11.5px;color:rgba(255,255,255,.62);font-weight:500;line-height:1.4;"><span style="width:6px;height:6px;border-radius:50%;background:#1EBABB;margin-top:4px;flex-shrink:0;"></span><span>{{ d }}</span></div>
+                  </sc-for>
+                </div>
+              </div>
+              <div style="padding:14px 24px 10px;font-size:10px;font-weight:500;color:rgba(255,255,255,.55);text-transform:uppercase;letter-spacing:.1em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">{{ s.footer }}</div>
+            </div>
+            </sc-if>
+            <sc-if value="{{ s.isTesti }}" hint-placeholder-val="{{ false }}">
+            <div style="padding:6px;border-radius:28px;background:rgba(8,30,22,.05);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);display:flex;flex-direction:column;height:480px;">
+              <div class="sx-shadow" style="background:#ECEDF1;border:1px solid rgba(8,30,22,.06);border-radius:23px;overflow:hidden;display:flex;flex-direction:column;flex:1;">
+                <div style="position:relative;flex:1;min-height:0;background:#ECEDF1;">
+                  <video class="sx-testi-vid" data-vid="{{ s.vid }}" muted="" loop="" playsinline="" preload="auto" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;"></video>
+                </div>
+                <div style="height:3px;background:#1EBABB;flex:none;"></div>
+                <div style="padding:22px 26px 26px;font-family:'Mulish',sans-serif;">
+                  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;">
+                    <span style="font-size:22px;font-weight:700;color:#173B33;">{{ s.name }}</span>
+                    <span style="color:#F5B301;font-size:18px;letter-spacing:2px;">★★★★★</span>
+                  </div>
+                  <p style="color:#4A5A54;font-size:14.5px;line-height:1.5;">{{ s.quote }}</p>
+                </div>
+              </div>
+            </div>
+            </sc-if>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROVIDERS ============ -->
+  <section data-screen-label="Providers" style="background:#ECEDF1;padding:64px 40px 74px;">
+    <div>
+      <div style="max-width:1280px;margin:0 auto;width:100%;">
+        <h2 class="arva-h" style="text-align:center;font-size:40px;line-height:1.1;font-weight:600;color:#173B33;margin-bottom:48px;">We work with some of the UK's leading insurers</h2>
+        <div class="pv-reveal" id="pvGrid" style="display:grid;grid-template-columns:repeat(6,1fr);gap:18px;align-items:start;">
+          <div class="pv-card" id="pv1" style="background:#fff;border-radius:8px;padding:34px 20px 26px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:26px;min-height:250px;will-change:transform;box-shadow:0 16px 36px rgba(20,40,35,.08);">
+            <div style="width:100%;flex:1;display:flex;align-items:center;justify-content:center;padding:8px;"><img src="assets/logo-lg.png" alt="Legal &amp; General" style="max-width:100%;max-height:100%;object-fit:contain;"></div>
+            <div style="font-size:15px;color:#173B33;font-weight:600;">Legal &amp; General</div>
+          </div>
+          <div class="pv-card" id="pv2" style="background:#fff;border-radius:8px;padding:34px 20px 26px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:26px;min-height:250px;will-change:transform;box-shadow:0 16px 36px rgba(20,40,35,.08);">
+            <div style="width:100%;flex:1;display:flex;align-items:center;justify-content:center;padding:8px;"><img src="assets/logo-royal-london.png" alt="Royal London" style="max-width:100%;max-height:100%;object-fit:contain;"></div>
+            <div style="font-size:15px;color:#173B33;font-weight:600;">Royal London</div>
+          </div>
+          <div class="pv-card" id="pv3" style="background:#fff;border-radius:8px;padding:34px 20px 26px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:26px;min-height:250px;will-change:transform;box-shadow:0 16px 36px rgba(20,40,35,.08);">
+            <div style="width:100%;flex:1;display:flex;align-items:center;justify-content:center;padding:8px;"><img src="assets/logo-aviva.png" alt="Aviva" style="max-width:100%;max-height:100%;object-fit:contain;"></div>
+            <div style="font-size:15px;color:#173B33;font-weight:600;">Aviva</div>
+          </div>
+          <div class="pv-card" id="pv4" style="background:#fff;border-radius:8px;padding:34px 20px 26px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:26px;min-height:250px;will-change:transform;box-shadow:0 16px 36px rgba(20,40,35,.08);">
+            <div style="width:100%;flex:1;display:flex;align-items:center;justify-content:center;padding:8px;"><img src="assets/logo-vitality.png" alt="Vitality" style="max-width:100%;max-height:100%;object-fit:contain;"></div>
+            <div style="font-size:15px;color:#173B33;font-weight:600;">Vitality</div>
+          </div>
+          <div class="pv-card" id="pv5" style="background:#fff;border-radius:8px;padding:34px 20px 26px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:26px;min-height:250px;will-change:transform;box-shadow:0 16px 36px rgba(20,40,35,.08);">
+            <div style="width:100%;flex:1;display:flex;align-items:center;justify-content:center;padding:8px;"><img src="assets/logo-lv.png" alt="LV" style="max-width:100%;max-height:100%;object-fit:contain;"></div>
+            <div style="font-size:15px;color:#173B33;font-weight:600;">LV</div>
+          </div>
+          <div class="pv-card" id="pv6" style="background:#fff;border-radius:8px;padding:34px 20px 26px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:26px;min-height:250px;will-change:transform;box-shadow:0 16px 36px rgba(20,40,35,.08);">
+            <div style="width:100%;flex:1;display:flex;align-items:center;justify-content:center;padding:8px;"><img src="assets/logo-guardian.png" alt="Guardian" style="max-width:100%;max-height:100%;object-fit:contain;"></div>
+            <div style="font-size:15px;color:#173B33;font-weight:600;">Guardian</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PARTNER WITH US ============ -->
+  <section data-screen-label="Partner" style="background:#F6F7FB;padding:70px 40px;">
+    <div id="partnerCard" style="position:relative;max-width:1200px;margin:0 auto;min-height:620px;display:flex;align-items:center;justify-content:center;background:#fff;border-radius:40px;overflow:hidden;padding:60px 40px;box-shadow:0 0 0 .5px rgba(0,0,0,.05),0 4px 30px rgba(0,0,0,.08);cursor:crosshair;">
+      <div style="position:relative;z-index:10;display:flex;flex-direction:column;align-items:center;text-align:center;pointer-events:none;">
+        <h2 id="partnerHeading" class="arva-h" style="font-size:clamp(48px,7vw,80px);line-height:1.1;letter-spacing:-.02em;color:#0D212C;font-weight:600;margin-bottom:36px;">Let's get you covered</h2>
+        <a id="partnerBtn" href="Contact.dc.html" style="pointer-events:auto;display:inline-flex;align-items:center;gap:12px;background:#1EBABB;color:#fff;padding:12px 22px 12px 12px;border-radius:14px;text-decoration:none;font-weight:600;font-size:15.5px;box-shadow:0 1px 2px 0 rgba(5,26,36,.1),0 4px 4px 0 rgba(5,26,36,.09),0 9px 6px 0 rgba(5,26,36,.05),0 17px 7px 0 rgba(5,26,36,.01),inset 0 2px 8px 0 rgba(255,255,255,.5);transition:background .2s ease;">
+          <span style="width:40px;height:40px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;flex:none;"><img src="assets/topquote-mark-teal.png" alt="TopQuote" style="width:26px;height:26px;object-fit:contain;"></span>
+          <span>Get in touch with an advisor</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES (pinned morph) ============ -->
+  <section id="coverPin" data-screen-label="Services" style="position:relative;background:#F6F7FB;height:480vh;">
+    <div style="position:sticky;top:0;height:100vh;overflow:hidden;display:flex;flex-direction:column;justify-content:center;">
+      <div style="position:relative;width:100%;max-width:1200px;margin:0 auto;padding:0 40px;">
+        <div id="cpHeading" style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:40px;will-change:opacity;">
+          <div>
+            <div style="display:flex;align-items:center;gap:9px;margin-bottom:16px;">
+              <img src="assets/topquote-mark-teal.png" alt="TopQuote" style="width:22px;height:22px;object-fit:contain;flex:none;">
+              <span style="color:#1EBABB;font-weight:700;font-size:15px;">Our Services</span>
+            </div>
+            <h2 class="arva-h" style="font-size:43px;line-height:1.12;font-weight:600;color:#173B33;">Insurance Solutions<br>Tailored To You</h2>
+          </div>
+          <a href="Life Insurance.dc.html" style="background:#1EBABB;color:#fff;padding:14px 26px;border-radius:8px;text-decoration:none;font-weight:700;font-size:15px;white-space:nowrap;">Views All Service</a>
+        </div>
+        <div id="cpStage" style="position:relative;width:100%;height:560px;perspective:1500px;">
+
+        <div id="cpCard2" style="position:absolute;top:0;background:#1EBABB;border-radius:14px;padding:38px;height:440px;overflow:hidden;color:#fff;will-change:transform,opacity;">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:24px;"><span style="width:50px;height:50px;border-radius:12px;background:#fff;display:flex;align-items:center;justify-content:center;"><i data-lucide="cross" style="width:24px;height:24px;color:#1EBABB;"></i></span><span class="arva-h" style="font-size:30px;color:rgba(255,255,255,.5);font-weight:600;">02</span></div>
+          <h3 class="arva-h" style="font-size:23px;font-weight:600;margin-bottom:12px;">Critical Illness Cover</h3>
+          <p style="color:rgba(255,255,255,.9);font-size:14.5px;line-height:1.7;margin-bottom:20px;">A tax-free lump sum paid on diagnosis of a serious illness, at the point when financial pressure can hit hardest. Available standalone or combined with life insurance.</p>
+          <span style="color:#fff;font-weight:700;font-size:14.5px;display:inline-flex;align-items:center;gap:6px;">Learn More <i data-lucide="arrow-up-right" style="width:16px;height:16px;"></i></span>
+        </div>
+        <div id="cpCard3" style="position:absolute;top:0;background:#EAEDFB;border-radius:14px;padding:38px;height:440px;overflow:hidden;will-change:transform,opacity;">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:24px;"><span style="width:50px;height:50px;border-radius:12px;background:#1EBABB;display:flex;align-items:center;justify-content:center;"><i data-lucide="file-check-2" style="width:24px;height:24px;color:#fff;"></i></span><span class="arva-h" style="font-size:30px;color:#C4C9DE;font-weight:600;">03</span></div>
+          <h3 class="arva-h" style="font-size:23px;font-weight:600;color:#173B33;margin-bottom:12px;">Income Protection</h3>
+          <p style="color:#6B7280;font-size:14.5px;line-height:1.7;margin-bottom:20px;">A monthly benefit if illness or injury stops you working. One of the most comprehensive safety nets available, because your income is everything.</p>
+          <span style="color:#173B33;font-weight:700;font-size:14.5px;display:inline-flex;align-items:center;gap:6px;">Learn More <i data-lucide="arrow-up-right" style="width:16px;height:16px;"></i></span>
+        </div>
+
+          <!-- expanding Life Insurance box -->
+          <div id="cpBox" style="position:absolute;left:0;top:0;background:#EAEDFB;border-radius:14px;overflow:hidden;will-change:width,height,top;">
+            <!-- teal tab -->
+            <div id="cpTab" style="position:absolute;left:30px;top:26px;z-index:3;background:#16B8A6;color:#fff;font-size:19px;font-weight:700;padding:9px 26px;border-radius:12px;opacity:0;font-family:Mulish,sans-serif;">Life Insurance</div>
+
+            <!-- initial card content -->
+            <div id="cpInit" style="position:absolute;left:0;top:0;width:380px;padding:38px;will-change:opacity;">
+              <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:24px;"><span style="width:50px;height:50px;border-radius:12px;background:#1EBABB;display:flex;align-items:center;justify-content:center;"><i data-lucide="heart-pulse" style="width:24px;height:24px;color:#fff;"></i></span><span class="arva-h" style="font-size:30px;color:#C4C9DE;font-weight:600;">01</span></div>
+              <h3 class="arva-h" style="font-size:23px;font-weight:600;color:#173B33;margin-bottom:12px;">Life Insurance</h3>
+              <p style="color:#6B7280;font-size:14.5px;line-height:1.7;margin-bottom:20px;">Ensure the people who depend on you are financially secure if the worst happens. We'll help you find the right level and type of cover for your circumstances.</p>
+              <span style="color:#173B33;font-weight:700;font-size:14.5px;display:inline-flex;align-items:center;gap:6px;">Learn More <i data-lucide="arrow-up-right" style="width:16px;height:16px;"></i></span>
+            </div>
+
+            <!-- expanded content -->
+            <div id="cpExp" style="position:absolute;inset:0;opacity:0;display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center;padding:40px;will-change:opacity;">
+              <div>
+                <div style="display:flex;align-items:center;gap:9px;margin-bottom:16px;"><img src="assets/topquote-mark-teal.png" alt="TopQuote" style="width:22px;height:22px;object-fit:contain;flex:none;"><span style="color:#1EBABB;font-weight:700;font-size:15px;">Cover Types</span></div>
+                <div style="position:relative;height:240px;overflow:hidden;">
+                  <div id="cpTextLevel" style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;will-change:transform,opacity;">
+                    <h2 class="arva-h" style="font-size:40px;line-height:1.1;font-weight:600;color:#173B33;">Level Term Insurance</h2>
+                    <p style="color:#6B7280;font-size:15.5px;line-height:1.7;margin-top:16px;">Your cover amount and monthly payments stay the same for the whole policy, the payout is fixed, ideal for ongoing commitments like family income or an interest-only mortgage.</p>
+                    <a href="Life Insurance.dc.html" class="lm" style="align-self:flex-start;margin-top:22px;color:#173B33;font-weight:700;font-size:14.5px;text-decoration:none;display:inline-flex;align-items:center;gap:6px;">Learn More <i data-lucide="arrow-up-right" style="width:16px;height:16px;"></i></a>
+                  </div>
+                  <div id="cpTextDec" style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;opacity:0;transform:translateY(40px);will-change:transform,opacity;">
+                    <h2 class="arva-h" style="font-size:40px;line-height:1.1;font-weight:600;color:#173B33;">Decreasing Term Insurance</h2>
+                    <p style="color:#6B7280;font-size:15.5px;line-height:1.7;margin-top:16px;">Your cover amount reduces over time, usually in line with a repayment mortgage, while monthly payments stay the same. Often the most affordable way to protect a shrinking debt.</p>
+                    <a href="Life Insurance.dc.html" class="lm" style="align-self:flex-start;margin-top:22px;color:#173B33;font-weight:700;font-size:14.5px;text-decoration:none;display:inline-flex;align-items:center;gap:6px;">Learn More <i data-lucide="arrow-up-right" style="width:16px;height:16px;"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div style="background:#fff;border-radius:16px;padding:10px 12px;box-shadow:0 12px 30px rgba(20,40,35,.10);">
+                <svg viewBox="0 0 420 300" style="width:100%;height:auto;display:block;">
+                  <line x1="70" y1="24" x2="70" y2="252" stroke="#C4C9DE" stroke-width="2"></line>
+                  <line x1="70" y1="252" x2="402" y2="252" stroke="#C4C9DE" stroke-width="2"></line>
+                  <line id="cpMonthlyLine" x1="82" y1="208" x2="396" y2="208" stroke="#173B33" stroke-width="4" stroke-linecap="round"></line>
+                  <line id="cpCoverLine" x1="82" y1="92" x2="396" y2="92" stroke="#1EBABB" stroke-width="4" stroke-linecap="round"></line>
+                  <text id="cpLblA" x="245" y="74" text-anchor="middle" font-size="14" font-weight="700" fill="#1EBABB" font-family="Mulish,sans-serif">Cover amounts stay the same</text>
+                  <text id="cpLblB" x="245" y="74" text-anchor="middle" font-size="14" font-weight="700" fill="#1EBABB" font-family="Mulish,sans-serif" opacity="0">Cover amount decreases to 0</text>
+                  <text x="239" y="196" text-anchor="middle" font-size="14" font-weight="700" fill="#173B33" font-family="Mulish,sans-serif">Monthly payments stay the same</text>
+                  <text x="34" y="138" text-anchor="middle" font-size="12" fill="#6B7280" font-family="Mulish,sans-serif" transform="rotate(-90 34 138)">Cost of cover</text>
+                  <text x="236" y="284" text-anchor="middle" font-size="12" fill="#6B7280" font-family="Mulish,sans-serif">Years of cover</text>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STACK (Working Process + Testimonials overlap reveal) ===== -->
+  <div id="wpStack" style="position:relative;">
+  <!-- ============ OUR PROCESS (scroll-driven panels) ============ -->
+  <section id="wpProcess" data-screen-label="Working Process" style="position:sticky;top:0;z-index:1;height:100vh;overflow:hidden;background:#F6F7FB;display:flex;align-items:center;padding:40px;">
+    <div style="max-width:1280px;margin:0 auto;width:100%;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:40px;margin-bottom:34px;">
+        <div>
+          <div style="display:flex;align-items:center;gap:9px;margin-bottom:16px;">
+            <img src="assets/topquote-mark-teal.png" alt="TopQuote" style="width:22px;height:22px;object-fit:contain;flex:none;">
+            <span style="color:#1EBABB;font-weight:700;font-size:15px;">Working Process</span>
+          </div>
+          <h2 class="arva-h" style="font-size:43px;line-height:1.12;font-weight:600;color:#173B33;">Your Journey To<br>Better Insurance</h2>
+        </div>
+        <p style="color:#6B7280;font-size:15px;line-height:1.7;max-width:340px;margin-top:6px;">Our clients come to us with different goals and leave with clarity, confidence direction. These stories capture the real-life value</p>
+      </div>
+
+      <div id="wpBand" style="position:relative;border-radius:20px;overflow:hidden;height:min(600px,64vh);background:#000;">
+        <div id="wpBg" style="position:absolute;inset:0;background:url('assets/process-advisor.jpg') center/cover no-repeat;"></div>
+        <div id="wpRow" style="position:absolute;inset:0;display:flex;">
+        <div class="wp-panel" data-idx="0" style="position:relative;flex:1 1 0;flex-grow:1;min-width:0;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;transition:flex-grow .65s cubic-bezier(.22,1,.36,1);">
+          <div class="wp-pov" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,26,20,.12),rgba(5,22,17,.72));opacity:0.4;transition:opacity .6s ease;"></div>
+          <div class="wp-pteal" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(30,186,187,0) 30%,rgba(15,140,141,.92));opacity:1;transition:opacity .6s ease;"></div>
+          <div style="position:relative;z-index:2;padding:clamp(28px,3vw,48px);">
+            <div class="wp-num arva-h" style="font-size:clamp(38px,3.2vw,56px);line-height:1;font-weight:600;color:rgba(255,255,255,.95);visibility:hidden;transition:color .5s ease;">01</div>
+            <div class="wp-title arva-h" style="font-size:clamp(22px,1.9vw,32px);line-height:1.1;font-weight:600;color:#fff;margin-top:12px;transition:color .5s ease;">Free Initial Consultation</div>
+            <p class="wp-desc" style="color:rgba(255,255,255,.9);font-size:14.5px;line-height:1.6;max-width:340px;margin-top:14px;opacity:1;transform:translateY(0);transition:opacity .6s ease,transform .6s ease;">We start by understanding your circumstances, priorities and budget, clear, jargon-free guidance with no pressure.</p>
+          </div>
+        </div>
+        <div class="wp-panel" data-idx="1" style="position:relative;flex:1 1 0;flex-grow:1;min-width:0;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;transition:flex-grow .65s cubic-bezier(.22,1,.36,1);">
+          <div class="wp-pov" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,26,20,.12),rgba(5,22,17,.72));opacity:1;transition:opacity .6s ease;"></div>
+          <div class="wp-pteal" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(30,186,187,0) 30%,rgba(15,140,141,.92));opacity:0;transition:opacity .6s ease;"></div>
+          <div style="position:relative;z-index:2;padding:clamp(28px,3vw,48px);">
+            <div class="wp-num arva-h" style="font-size:clamp(38px,3.2vw,56px);line-height:1;font-weight:600;color:rgba(255,255,255,.42);visibility:hidden;transition:color .5s ease;">02</div>
+            <div class="wp-title arva-h" style="font-size:clamp(22px,1.9vw,32px);line-height:1.1;font-weight:600;color:rgba(255,255,255,.74);margin-top:12px;transition:color .5s ease;">Expert Recommendations</div>
+            <p class="wp-desc" style="color:rgba(255,255,255,.9);font-size:14.5px;line-height:1.6;max-width:340px;margin-top:14px;opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease;">We evaluate your existing coverage, analyze potential gaps, and identify opportunities to improve protection tailored to your lifestyle.</p>
+          </div>
+        </div>
+        <div class="wp-panel" data-idx="2" style="position:relative;flex:1 1 0;flex-grow:1;min-width:0;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;transition:flex-grow .65s cubic-bezier(.22,1,.36,1);">
+          <div class="wp-pov" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,26,20,.12),rgba(5,22,17,.72));opacity:1;transition:opacity .6s ease;"></div>
+          <div class="wp-pteal" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(30,186,187,0) 30%,rgba(15,140,141,.92));opacity:0;transition:opacity .6s ease;"></div>
+          <div style="position:relative;z-index:2;padding:clamp(28px,3vw,48px);">
+            <div class="wp-num arva-h" style="font-size:clamp(38px,3.2vw,56px);line-height:1;font-weight:600;color:rgba(255,255,255,.42);visibility:hidden;transition:color .5s ease;">03</div>
+            <div class="wp-title arva-h" style="font-size:clamp(22px,1.9vw,32px);line-height:1.1;font-weight:600;color:rgba(255,255,255,.74);margin-top:12px;transition:color .5s ease;">Ongoing Support &amp; Review</div>
+            <p class="wp-desc" style="color:rgba(255,255,255,.9);font-size:14.5px;line-height:1.6;max-width:340px;margin-top:14px;opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease;">As life changes, we review your cover to make sure it still fits, keeping your protection right over time.</p>
+          </div>
+        </div>
+        </div>
+        <!-- floating Learn More button + trailing dot -->
+        <div id="wpDot" style="position:absolute;left:50%;top:26px;width:26px;height:26px;border-radius:50%;background:#fff;z-index:4;pointer-events:none;transform:translate(30px,84px);"></div>
+        <div id="wpBtn" style="position:absolute;left:50%;top:26px;transform:translate(-50%,0);z-index:5;filter:drop-shadow(0 14px 28px rgba(8,30,22,.32));cursor:pointer;">
+          <div style="width:104px;height:104px;border-radius:50%;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;">
+            <span style="width:34px;height:34px;border-radius:50%;background:#173B33;display:flex;align-items:center;justify-content:center;"><i data-lucide="arrow-up-right" style="width:16px;height:16px;color:#fff;"></i></span>
+            <span style="font-weight:700;font-size:13px;color:#173B33;">Learn More</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- scroll track: advances the panels while pinned, then Testimonials rises over it -->
+  <div id="wpTrack" style="height:200vh;background:#0C1F19;"></div>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section data-screen-label="Testimonials" style="position:sticky;top:0;z-index:2;background:#EAEDFB;min-height:100vh;display:flex;align-items:stretch;padding:0 40px;perspective:1500px;overflow:hidden;box-shadow:0 -34px 70px rgba(8,30,22,.16);">
+    <div id="testiInner" style="position:relative;z-index:1;max-width:1240px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;will-change:transform;">
+      <!-- LEFT: image with teal circle accents -->
+      <div style="position:relative;height:min(88vh,800px);align-self:end;">
+        <div style="position:absolute;top:-10px;left:-70px;width:250px;height:250px;border-radius:50%;background:#1EBABB;z-index:0;pointer-events:none;"></div>
+        
+        
+        <img src="assets/testimonial-photo.png" alt="Happy client" style="position: absolute; inset: 0; z-index: 1; width: 778px; height: 969px; object-fit: contain; object-position: center bottom; display: block; left: -171px; top: -170px">
+      </div>
+      <!-- RIGHT: testimonial content -->
+      <div style="display:flex;flex-direction:column;justify-content:center;padding:70px 0;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px;">
+          <img src="assets/topquote-mark-teal.png" alt="TopQuote" style="width:24px;height:24px;object-fit:contain;flex:none;">
+          <span style="color:#1EBABB;font-weight:700;font-size:16px;letter-spacing:.01em;">Trustpilot Reviews</span>
+        </div>
+        <h2 class="arva-h" style="font-size:clamp(34px,3.4vw,50px);line-height:1.1;font-weight:600;color:#173B33;">Experience the TopQuote<br>difference through our<br>clients' words</h2>
+        <div style="height:1px;background:#CDD3E4;margin:30px 0;max-width:560px;"></div>
+        <div style="display:flex;gap:6px;margin-bottom:22px;">
+          <i data-lucide="star" style="width:24px;height:24px;color:#00b67a;fill:#00b67a;"></i>
+          <i data-lucide="star" style="width:24px;height:24px;color:#00b67a;fill:#00b67a;"></i>
+          <i data-lucide="star" style="width:24px;height:24px;color:#00b67a;fill:#00b67a;"></i>
+          <i data-lucide="star" style="width:24px;height:24px;color:#00b67a;fill:#00b67a;"></i>
+          <i data-lucide="star" style="width:24px;height:24px;color:#00b67a;fill:#00b67a;"></i>
+        </div>
+        <p id="testiQuote" style="color:#5B6B78;font-size:17px;line-height:1.75;max-width:560px;min-height:130px;transition:opacity .3s ease;">Very helpful, informative and professional. A stress-free experience from start to finish.</p>
+
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-top:28px;max-width:560px;">
+          <div style="display:flex;align-items:center;gap:16px;">
+            <div id="testiAvatar" style="width:56px;height:56px;border-radius:50%;background:#1EBABB;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:20px;font-family:'Playfair Display',serif;flex:none;">S</div>
+            <div>
+              <div id="testiName" class="arva-h" style="font-size:19px;font-weight:700;color:#173B33;">Wayne Adin-Christie</div>
+              <div id="testiRole" style="color:#8A94A6;font-size:14px;margin-top:2px;">Verified customer · Feefo</div>
+            </div>
+          </div>
+          <i data-lucide="quote" style="width:52px;height:52px;color:#CBD1E2;fill:#CBD1E2;"></i>
+        </div>
+
+        <div style="display:flex;gap:14px;margin-top:34px;">
+          <button id="testiPrev" style="width:58px;height:52px;border-radius:10px;border:none;background:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 6px 18px rgba(20,40,35,.08);transition:transform .2s ease;"><i data-lucide="arrow-left" style="width:20px;height:20px;color:#173B33;"></i></button>
+          <button id="testiNext" style="width:58px;height:52px;border-radius:10px;border:none;background:#1EBABB;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:transform .2s ease,background .2s ease;"><i data-lucide="arrow-right" style="width:20px;height:20px;color:#fff;"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div style="height:75vh;background:#EAEDFB;"></div>
+  </div>
+  <!-- ===== /STACK ===== -->
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contactSection" data-screen-label="Contact" style="background:#EAEDFB;padding:90px 40px;">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:38px;">
+        <div>
+          <div style="display:flex;align-items:center;gap:9px;margin-bottom:16px;">
+            <img src="assets/topquote-mark-teal.png" alt="TopQuote" style="width:22px;height:22px;object-fit:contain;flex:none;">
+            <span style="color:#1EBABB;font-weight:700;font-size:15px;">Contact Us</span>
+          </div>
+          <h2 class="arva-h" style="font-size:43px;line-height:1.12;font-weight:600;color:#173B33;">One Message Could<br>Change Everything</h2>
+        </div>
+        <div style="color:#6B7280;font-size:15px;line-height:1.7;max-width:320px;margin-top:6px;"><div>Whether you have a question about your policy, want to talk through your options, or simply want to know more about who we are, we’re only a call or message away. No automated menus, no long waits.</div></div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:26px;">
+        <!-- map -->
+        <div style="position:relative;background:#EAEDFB;border-radius:16px;min-height:520px;overflow:hidden;">
+          <iframe title="Our location, GLASSHOUSE, Alderley Park" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2377.3!2d-2.2250527!3d53.2755674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487a4f3a65ab8a1b%3A0x11213affa5a3f894!2sGlasshouse!5e0!3m2!1sen!2suk!4v1720000000000!5m2!1sen!2suk" style="position:absolute;inset:0;width:100%;height:100%;border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen=""></iframe>
+        </div>
+        <!-- form -->
+        <div style="background:#fff;border-radius:16px;padding:38px;">
+          <h3 class="arva-h" style="font-size:28px;font-weight:600;color:#173B33;margin-bottom:12px;"><div>Protect What Matters Most</div></h3>
+          <div style="color:#6B7280;font-size:14.5px;line-height:1.65;margin-bottom:22px;"><div>Finding the right life insurance can feel overwhelming, but it doesn't have to be. Our specialists take the time to understand your situation and find the best cover at the right price. No hard sell, no jargon, just honest advice.</div></div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;">
+            <input placeholder="Full Name*" style="border:1px solid #E2E5F0;background:#F6F7FB;border-radius:8px;padding:14px 16px;font-size:14px;font-family:'Mulish',sans-serif;color:#173B33;">
+            <input placeholder="Phone Number*" style="border:1px solid #E2E5F0;background:#F6F7FB;border-radius:8px;padding:14px 16px;font-size:14px;font-family:'Mulish',sans-serif;color:#173B33;">
+            <input placeholder="Email Address*" style="border:1px solid #E2E5F0;background:#F6F7FB;border-radius:8px;padding:14px 16px;font-size:14px;font-family:'Mulish',sans-serif;color:#173B33;">
+            <select style="border:1px solid #E2E5F0;background:#F6F7FB;border-radius:8px;padding:14px 16px;font-size:14px;font-family:'Mulish',sans-serif;color:#6B7280;">
+              <option>Service Type*</option>
+              <option>Life Insurance</option>
+              <option>Critical Illness</option>
+              <option>Income Protection</option>
+            </select>
+          </div>
+          <textarea placeholder="Your Message" rows="4" style="width:100%;border:1px solid #E2E5F0;background:#F6F7FB;border-radius:8px;padding:14px 16px;font-size:14px;font-family:'Mulish',sans-serif;color:#173B33;resize:vertical;margin-bottom:18px;"></textarea>
+          <button style="width:100%;background:#1EBABB;color:#fff;border:none;border-radius:8px;padding:16px;font-weight:700;font-size:15px;cursor:pointer;">Send A Message</button>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:26px;">
+        <div style="background:#fff;border-radius:14px;padding:24px 28px;display:flex;align-items:center;gap:16px;">
+          <span style="width:48px;height:48px;border-radius:50%;background:#1EBABB;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i data-lucide="map-pin" style="width:22px;height:22px;color:#fff;"></i></span>
+          <div><div style="color:#173B33;font-weight:700;font-size:16px;">Locations</div><div style="color:#6B7280;font-size:14px;margin-top:3px;">Alderley Park, Suite 3, GLASSHOUSE, Congleton Road, Macclesfield, SK10 4TG</div></div>
+        </div>
+        <div style="background:#1EBABB;border-radius:14px;padding:24px 28px;display:flex;align-items:center;gap:16px;">
+          <span style="width:48px;height:48px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i data-lucide="phone" style="width:22px;height:22px;color:#1EBABB;"></i></span>
+          <div><div style="color:#fff;font-weight:700;font-size:16px;">Phone</div><div style="color:rgba(255,255,255,.9);font-size:14px;margin-top:3px;">0161 974 3710</div></div>
+        </div>
+        <div style="background:#fff;border-radius:14px;padding:24px 28px;display:flex;align-items:center;gap:16px;">
+          <span style="width:48px;height:48px;border-radius:50%;background:#1EBABB;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i data-lucide="mail" style="width:22px;height:22px;color:#fff;"></i></span>
+          <div><div style="color:#173B33;font-weight:700;font-size:16px;">Our Email</div><div style="color:#6B7280;font-size:14px;margin-top:3px;">hello@topquote.uk.com</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BLOG ============ -->
+  <section data-screen-label="Blog" style="background:#F6F7FB;padding:90px 40px;perspective:1500px;">
+    <div id="blogInner" style="max-width:1200px;margin:0 auto;will-change:transform;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:44px;">
+        <div>
+          <div style="display:flex;align-items:center;gap:9px;margin-bottom:16px;">
+            <img src="assets/topquote-mark-teal.png" alt="TopQuote" style="width:22px;height:22px;object-fit:contain;flex:none;">
+            <span style="color:#1EBABB;font-weight:700;font-size:15px;">Our Blog &amp; News</span>
+          </div>
+          <h2 class="arva-h" style="font-size:43px;line-height:1.12;font-weight:600;color:#173B33;">Navigate Insurance<br>With Confidence</h2>
+        </div>
+        <p style="color:#6B7280;font-size:15px;line-height:1.7;max-width:320px;margin-top:6px;">Stay informed with expert insights, practical tips, &amp; the latest trends in insurance. At TopQuote we're committed to making insurance easier.</p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:26px;">
+        <!-- post 1 -->
+        <div class="blog-card" style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 8px 24px rgba(20,40,35,.05);display:flex;flex-direction:column;">
+          <h3 class="arva-h" style="font-size:24px;font-weight:700;color:#173B33;line-height:1.2;margin-bottom:16px;">Smart Insurance For Startups</h3>
+          <div style="width:54px;height:3px;background:#1EBABB;border-radius:2px;margin-bottom:22px;"></div>
+          <p style="color:#7A867F;font-size:15px;line-height:1.7;margin-bottom:26px;flex:1;">Find out everything you need to know about protecting a young business, what cover you need, what it costs, and where to start.</p>
+          <div style="display:flex;align-items:center;gap:14px;margin-bottom:22px;">
+            <div style="width:52px;height:52px;border-radius:50%;background:#1EBABB;flex:none;display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Playfair Display',Georgia,serif;font-size:24px;font-weight:700;">T</div>
+            <div>
+              <div class="arva-h" style="font-size:17px;font-weight:700;color:#173B33;">Matt Taylor</div>
+              <div style="color:#8A94A6;font-size:13.5px;">Protection Expert</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;">
+            <span style="display:flex;align-items:center;gap:7px;color:#173B33;font-size:14px;font-weight:700;"><i data-lucide="clock" style="width:16px;height:16px;color:#1EBABB;"></i> 8 min</span>
+            <a href="Blog.dc.html" style="color:#1EBABB;font-weight:700;font-size:15px;text-decoration:none;">Read now &rsaquo;</a>
+          </div>
+        </div>
+        <!-- post 2 -->
+        <div class="blog-card" style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 8px 24px rgba(20,40,35,.05);display:flex;flex-direction:column;">
+          <h3 class="arva-h" style="font-size:24px;font-weight:700;color:#173B33;line-height:1.2;margin-bottom:16px;">What Is Whole Life Insurance?</h3>
+          <div style="width:54px;height:3px;background:#1EBABB;border-radius:2px;margin-bottom:22px;"></div>
+          <p style="color:#7A867F;font-size:15px;line-height:1.7;margin-bottom:26px;flex:1;">A straightforward guide to whole-of-life cover, how it works, what it costs, and whether it's the right fit for your family.</p>
+          <div style="display:flex;align-items:center;gap:14px;margin-bottom:22px;">
+            <div style="width:52px;height:52px;border-radius:50%;background:#1EBABB;flex:none;display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Playfair Display',Georgia,serif;font-size:24px;font-weight:700;">T</div>
+            <div>
+              <div class="arva-h" style="font-size:17px;font-weight:700;color:#173B33;">Ben Bendall</div>
+              <div style="color:#8A94A6;font-size:13.5px;">Protection Expert</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;">
+            <span style="display:flex;align-items:center;gap:7px;color:#173B33;font-size:14px;font-weight:700;"><i data-lucide="clock" style="width:16px;height:16px;color:#1EBABB;"></i> 10 min</span>
+            <a href="Blog.dc.html" style="color:#1EBABB;font-weight:700;font-size:15px;text-decoration:none;">Read now &rsaquo;</a>
+          </div>
+        </div>
+        <!-- post 3 -->
+        <div class="blog-card" style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 8px 24px rgba(20,40,35,.05);display:flex;flex-direction:column;">
+          <h3 class="arva-h" style="font-size:24px;font-weight:700;color:#173B33;line-height:1.2;margin-bottom:16px;">Business Coverage Checklist</h3>
+          <div style="width:54px;height:3px;background:#1EBABB;border-radius:2px;margin-bottom:22px;"></div>
+          <p style="color:#7A867F;font-size:15px;line-height:1.7;margin-bottom:26px;flex:1;">The essentials every business owner should have in place, a simple, no-jargon checklist to make sure nothing's missed.</p>
+          <div style="display:flex;align-items:center;gap:14px;margin-bottom:22px;">
+            <div style="width:52px;height:52px;border-radius:50%;background:#1EBABB;flex:none;display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Playfair Display',Georgia,serif;font-size:24px;font-weight:700;">T</div>
+            <div>
+              <div class="arva-h" style="font-size:17px;font-weight:700;color:#173B33;">Matt Taylor</div>
+              <div style="color:#8A94A6;font-size:13.5px;">Protection Expert</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;">
+            <span style="display:flex;align-items:center;gap:7px;color:#173B33;font-size:14px;font-weight:700;"><i data-lucide="clock" style="width:16px;height:16px;color:#1EBABB;"></i> 6 min</span>
+            <a href="Blog.dc.html" style="color:#1EBABB;font-weight:700;font-size:15px;text-decoration:none;">Read now &rsaquo;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA BANNER ============ -->
+  <section class="cta-fixed" data-screen-label="CTA" style="position:relative;background:#000 url('assets/beach-family.png') center center/cover fixed;color:#fff;overflow:hidden;">
+    <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,40,30,.92) 0%,rgba(8,40,30,.62) 45%,rgba(30,186,187,.32) 100%);"></div>
+    <div style="position:relative;max-width:1200px;margin:0 auto;padding:104px 40px;display:flex;align-items:center;justify-content:space-between;gap:40px;">
+      <div style="max-width:560px;">
+        <h2 style="font-family:Georgia,'Times New Roman',serif;font-size:46px;line-height:1.16;font-weight:700;">Experience the<br>difference...</h2>
+        <p style="color:rgba(255,255,255,.9);font-size:15px;line-height:1.7;margin-top:18px;max-width:480px;">Award-Winning Experts Dedicated to Tailoring Life Insurance Solutions for You and Your Loved Ones</p>
+        <div style="display:flex;gap:14px;margin-top:28px;">
+          <a href="Contact.dc.html" style="background:#1EBABB;color:#fff;padding:15px 30px;border-radius:8px;text-decoration:none;font-weight:700;font-size:15px;">Talk to an advisor</a>
+          <a href="About Us.dc.html" style="background:#fff;color:#173B33;padding:15px 30px;border-radius:8px;text-decoration:none;font-weight:700;font-size:15px;">About TopQuote</a>
+        </div>
+      </div>
+      <div style="margin-right:18%;flex-shrink:0;filter:drop-shadow(0 18px 34px rgba(8,40,30,.45));cursor:pointer;">
+        <div style="position:relative;width:176px;height:176px;">
+          <div style="width:152px;height:152px;border-radius:50%;background:linear-gradient(180deg,#3fd3d4 0%,#1ebabb 52%,#159a9b 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;">
+            <span style="width:42px;height:42px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;"><i data-lucide="arrow-up-right" style="width:20px;height:20px;color:#1EBABB;"></i></span>
+            <span style="font-weight:700;font-size:15px;color:#fff;">Get A Quote</span>
+          </div>
+          <div style="position:absolute;right:0;bottom:0;width:40px;height:40px;border-radius:50%;background:linear-gradient(180deg,#3fd3d4 0%,#1ebabb 60%,#159a9b 100%);"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer data-screen-label="Footer" style="background:#EAEDFB;padding:64px 40px 30px;">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div style="display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:40px;">
+        <div>
+          <div style="display:flex;align-items:center;margin-bottom:18px;">
+            <img src="assets/topquote-logo-dark.png" alt="TopQuote" style="height:38px;width:auto;display:block;">
+          </div>
+          <p style="color:#6B7280;font-size:13.5px;line-height:1.7;max-width:320px;margin-bottom:22px;">Top Quote Limited is an appointed representative of The Openwork Partnership, a trading style of Openwork Limited, which is authorised and regulated by the Financial Conduct Authority. Approved by The Openwork Partnership on the 20th January 2025.</p>
+          <div style="display:flex;gap:12px;">
+            <span style="width:42px;height:42px;border-radius:50%;background:#1EBABB;display:flex;align-items:center;justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"></path></svg></span>
+            <span style="width:42px;height:42px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="#173B33"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg></span>
+            <span style="width:42px;height:42px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="#173B33"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"></path></svg></span>
+          </div>
+        </div>
+        <div>
+          <h4 class="arva-h" style="font-size:20px;font-weight:600;color:#173B33;margin-bottom:20px;">Pages</h4>
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            <a href="Home Page.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">Home</a>
+            <a href="About Us.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">About</a>
+            <a href="Blog.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">News</a>
+            <a href="Contact.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">Contact</a>
+            <a href="Reconnect.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">Reconnect</a>
+            <a href="#" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">Privacy Notice</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="arva-h" style="font-size:20px;font-weight:600;color:#173B33;margin-bottom:20px;">Services</h4>
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            <a href="Life Insurance.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">Life Insurance</a>
+            <a href="Critical Illness.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">Critical Illness</a>
+            <a href="Income Protection.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">Income Protection</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="arva-h" style="font-size:20px;font-weight:600;color:#173B33;margin-bottom:20px;">Need Help?</h4>
+          <div style="display:flex;flex-direction:column;gap:16px;">
+            <span style="display:flex;align-items:flex-start;gap:10px;color:#6B7280;font-size:15px;line-height:1.55;"><i data-lucide="map-pin" style="width:17px;height:17px;color:#1EBABB;margin-top:2px;flex:none;"></i> <span>Alderley Park, Suite 3,<br>GLASSHOUSE, Congleton Road,<br>Macclesfield, SK10 4TG</span></span>
+            <span style="display:flex;align-items:center;gap:10px;color:#6B7280;font-size:15px;"><i data-lucide="phone" style="width:17px;height:17px;color:#1EBABB;flex:none;"></i> Customer support: 0161 974 3710</span>
+            <span style="display:flex;align-items:center;gap:10px;color:#6B7280;font-size:15px;"><i data-lucide="clock" style="width:17px;height:17px;color:#1EBABB;flex:none;"></i> Working time: Mon, Fri: 8:30, 18:00</span>
+            <span style="display:flex;align-items:center;gap:10px;color:#6B7280;font-size:15px;"><i data-lucide="mail" style="width:17px;height:17px;color:#1EBABB;flex:none;"></i> hello@topquote.uk.com</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="height:1px;background:#D2D6E8;margin:40px 0 22px;"></div>
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;">
+        <span style="color:#6B7280;font-size:14px;">© 2025 TopQuote. All Rights Reserved.</span>
+        <div style="display:flex;gap:18px;align-items:center;">
+          <a href="https://www.theopenworkpartnership.com/privacy-notice/" target="_blank" rel="noopener" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:14px;">Privacy Policy</a>
+          <span style="color:#C4C9DE;">|</span>
+          <a href="#" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:14px;">Cookie Policy</a>
+        </div>
+      </div>
+
+      <div style="text-align:left;color:#6B7280;font-size:13.5px;line-height:1.75;max-width:940px;margin:34px 0 0;">
+        <p>©2026 TopQuote Ltd., Registered in England Number: 04648763, Alderley Park, Suite 3, GLASSHOUSE, Macclesfield, SK10 4TG.</p>
+        <p style="margin-top:18px;">Registered in England Number: 04648763</p>
+        <p style="margin-top:14px;">The information on this website is for use of residents of the United Kingdom only. No representations are made as to whether the information is applicable or available in any other country which may have access to it.</p>
+      </div>
+    </div>
+  </footer>
+
+    <!-- ===== SERVICES MEGA-MENU (opens only from the blue Services button) ===== -->
+    <div id="svcMenu" style="position:fixed;inset:0;z-index:60;">
+      <div id="svcMenuBackdrop" style="position:absolute;inset:0;background:rgba(6,20,16,.55);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);"></div>
+      <div style="position:absolute;inset:0;display:grid;grid-template-columns:repeat(3,1fr);">
+        <div class="svc-pane" data-href="Life Insurance.dc.html" style="position:relative;overflow:hidden;cursor:pointer;background:#0C1F19;">
+          <div class="svc-pane-img" style="position:absolute;inset:0;background:#000;transition:transform .6s cubic-bezier(.22,1,.36,1);"><video class="svc-pane-vid" src="assets/svc-life.mp4" muted="" loop="" playsinline="" preload="auto" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;"></video></div>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,20,16,.15) 0%,rgba(6,20,16,.75) 100%);"></div>
+          <div style="position:absolute;left:0;right:0;top:0;padding:44px clamp(24px,3vw,52px) 0;text-align:center;">
+            <span style="display:inline-block;font-family:'Space Mono',monospace;font-size:13px;color:#1EBABB;letter-spacing:.14em;margin-bottom:14px;">01</span>
+            <h3 class="arva-h" style="font-size:clamp(28px,2.4vw,40px);font-weight:600;color:#fff;line-height:1.05;margin-bottom:14px;">Life Insurance</h3>
+            <p style="color:rgba(255,255,255,.72);font-size:14.5px;line-height:1.6;max-width:300px;min-height:70px;margin:0 auto 22px;">Financial security for the people who depend on you, at the right level of cover.</p>
+            <span style="display:inline-flex;align-items:center;gap:8px;color:#fff;font-weight:700;font-size:14px;letter-spacing:.02em;">View <i data-lucide="arrow-up-right" style="width:17px;height:17px;color:#1EBABB;"></i></span>
+          </div>
+        </div>
+        <div class="svc-pane" data-href="Critical Illness.dc.html" style="position:relative;overflow:hidden;cursor:pointer;background:#0C1F19;">
+          <div class="svc-pane-img" style="position:absolute;inset:0;background:#000;transition:transform .6s cubic-bezier(.22,1,.36,1);"><video class="svc-pane-vid" src="assets/svc-income.mp4" muted="" loop="" playsinline="" preload="auto" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;"></video></div>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,20,16,.15) 0%,rgba(6,20,16,.75) 100%);"></div>
+          <div style="position:absolute;left:0;right:0;top:0;padding:44px clamp(24px,3vw,52px) 0;text-align:center;">
+            <span style="display:inline-block;font-family:'Space Mono',monospace;font-size:13px;color:#1EBABB;letter-spacing:.14em;margin-bottom:14px;">02</span>
+            <h3 class="arva-h" style="font-size:clamp(28px,2.4vw,40px);font-weight:600;color:#fff;line-height:1.05;margin-bottom:14px;">Critical Illness Cover</h3>
+            <p style="color:rgba(255,255,255,.72);font-size:14.5px;line-height:1.6;max-width:300px;min-height:70px;margin:0 auto 22px;">A tax-free lump sum on diagnosis of a serious illness, when it matters most.</p>
+            <span style="display:inline-flex;align-items:center;gap:8px;color:#fff;font-weight:700;font-size:14px;letter-spacing:.02em;">View <i data-lucide="arrow-up-right" style="width:17px;height:17px;color:#1EBABB;"></i></span>
+          </div>
+        </div>
+        <div class="svc-pane" data-href="Income Protection.dc.html" style="position:relative;overflow:hidden;cursor:pointer;background:#0C1F19;">
+          <div class="svc-pane-img" style="position:absolute;inset:0;background:#000;transition:transform .6s cubic-bezier(.22,1,.36,1);"><video class="svc-pane-vid" src="assets/svc-critical.mp4" muted="" loop="" playsinline="" preload="auto" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;"></video></div>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,20,16,.15) 0%,rgba(6,20,16,.75) 100%);"></div>
+          <div style="position:absolute;left:0;right:0;top:0;padding:44px clamp(24px,3vw,52px) 0;text-align:center;">
+            <span style="display:inline-block;font-family:'Space Mono',monospace;font-size:13px;color:#1EBABB;letter-spacing:.14em;margin-bottom:14px;">03</span>
+            <h3 class="arva-h" style="font-size:clamp(28px,2.4vw,40px);font-weight:600;color:#fff;line-height:1.05;margin-bottom:14px;">Income Protection</h3>
+            <p style="color:rgba(255,255,255,.72);font-size:14.5px;line-height:1.6;max-width:300px;min-height:70px;margin:0 auto 22px;">A monthly benefit if illness or injury stops you working, because your income is everything.</p>
+            <span style="display:inline-flex;align-items:center;gap:8px;color:#fff;font-weight:700;font-size:14px;letter-spacing:.02em;">View <i data-lucide="arrow-up-right" style="width:17px;height:17px;color:#1EBABB;"></i></span>
+          </div>
+        </div>
+      </div>
+      <button id="svcMenuClose" aria-label="Close menu" style="position:absolute;top:24px;right:24px;z-index:2;display:inline-flex;align-items:center;justify-content:center;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);color:#fff;width:48px;height:48px;border-radius:50%;cursor:pointer;"><i data-lucide="x" style="width:20px;height:20px;"></i></button>
+    </div>
+
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  initScrollTop(){
+    if (document.getElementById('scrollTopBtn')) return;
+    var b = document.createElement('button');
+    b.id = 'scrollTopBtn'; b.setAttribute('aria-label','Back to top'); b.textContent = '\u2191';
+    b.style.cssText = 'position:fixed;right:26px;bottom:26px;z-index:9999;width:52px;height:52px;border-radius:50%;border:0;background:#1EBABB;color:#fff;font-size:22px;font-weight:700;cursor:pointer;box-shadow:0 10px 26px rgba(20,40,35,.28);opacity:0;visibility:hidden;transition:opacity .3s ease,visibility .3s ease,transform .2s ease;';
+    b.onmouseenter = function(){ b.style.transform = 'translateY(-3px)'; };
+    b.onmouseleave = function(){ b.style.transform = 'none'; };
+    b.onclick = function(){ window.scrollTo({ top:0, behavior:'smooth' }); };
+    document.body.appendChild(b);
+    var onScroll = function(){ var y = window.scrollY || document.documentElement.scrollTop; if (y > 500){ b.style.opacity='1'; b.style.visibility='visible'; } else { b.style.opacity='0'; b.style.visibility='hidden'; } };
+    window.addEventListener('scroll', onScroll, { passive:true }); onScroll();
+  }
+  componentDidMount(){ this.initScrollTop(); try{ const mute=()=>document.querySelectorAll('video').forEach(v=>{v.muted=true;v.volume=0;v.setAttribute('muted','');}); mute(); document.addEventListener('play',function(e){var v=e.target; if(v&&v.tagName==='VIDEO'){v.muted=true;v.volume=0;}},true); document.addEventListener('loadeddata',function(e){var v=e.target; if(v&&v.tagName==='VIDEO'){v.muted=true;v.volume=0;}},true); setInterval(mute,250); }catch(e){} this.renderIcons(); this.initStack(); this.initProviderReveal(); this.initStatsCarousel(); this.initSvcMenu(); this.initProcess(); this.initAboutVideos(); this.initPartner(); this.initTestiCarousel(); }
+
+  initTestiCarousel(){
+    const bind = () => {
+      const prev = document.getElementById('testiPrev');
+      const next = document.getElementById('testiNext');
+      const quote = document.getElementById('testiQuote');
+      const name = document.getElementById('testiName');
+      const role = document.getElementById('testiRole');
+      const avatar = document.getElementById('testiAvatar');
+      if (!prev || !next || !quote || prev.__wired) return;
+      prev.__wired = true;
+      const data = [
+        { q: "Very helpful, informative and professional. A stress-free experience from start to finish.", n: "Stephanie N.", r: "Verified customer · Feefo" },
+        { q: "Great to deal with. They fully explained my options and never once put any pressure on me to buy. They've since made several follow-up calls to make sure everything was in place. Genuinely reassuring.", n: "David M.", r: "Verified customer · Feefo" },
+        { q: "Everything was made very clear and the online documentation was easy to complete. Excellent service and straightforward from start to finish, exactly what you want when sorting life insurance.", n: "Priya K.", r: "Verified customer · Feefo" },
+        { q: "Easy, helpful and polite. The service from TopQuote was excellent from start to finish. Everyone I spoke to was knowledgeable and took the time to get things right for us.", n: "James T.", r: "Verified customer · Feefo" }
+      ];
+      let i = 0;
+      const render = () => {
+        quote.style.opacity = '0';
+        setTimeout(() => {
+          const d = data[i];
+          quote.textContent = d.q;
+          name.textContent = d.n;
+          role.innerHTML = d.r.replace('·', '&middot;');
+          avatar.textContent = d.n.charAt(0);
+          quote.style.opacity = '1';
+        }, 220);
+      };
+      next.addEventListener('click', () => { i = (i + 1) % data.length; render(); });
+      prev.addEventListener('click', () => { i = (i - 1 + data.length) % data.length; render(); });
+    };
+    bind(); setTimeout(bind, 400); setTimeout(bind, 1000);
+  }
+
+  initPartner(){
+    const card = document.getElementById('partnerCard');
+    if (!card || card.__wired) return;
+    card.__wired = true;
+
+    // reveal on scroll
+    const io = new IntersectionObserver((es) => {
+      es.forEach(e => { if (e.isIntersecting) card.classList.add('pv-in'); });
+    }, { threshold: 0.1 });
+    io.observe(card);
+
+    if (window.matchMedia('(prefers-reduced-motion:reduce)').matches) return;
+
+    const imgs = ['assets/partner-1.png','assets/partner-2.png','assets/partner-3.png','assets/partner-4.png','assets/partner-5.png','assets/partner-6.png','assets/partner-7.png','assets/partner-8.png'];
+    let hovered = false, last = 0;
+
+    card.addEventListener('mouseenter', () => { hovered = true; });
+    card.addEventListener('mouseleave', () => { hovered = false; });
+    card.addEventListener('mousemove', (ev) => {
+      if (!hovered) return;
+      const now = Date.now();
+      if (now - last < 80) return;
+      last = now;
+      const rect = card.getBoundingClientRect();
+      const x = ev.clientX - rect.left, y = ev.clientY - rect.top;
+      const src = imgs[Math.floor(Math.random() * imgs.length)];
+      const rot = (Math.random() - 0.5) * 20;
+      const el = document.createElement('img');
+      el.src = src;
+      el.className = 'partner-trail';
+      el.style.left = (x - 48) + 'px';
+      el.style.top = (y - 48) + 'px';
+      el.style.opacity = '1';
+      el.style.transform = 'scale(1) rotate(' + rot.toFixed(1) + 'deg)';
+      card.appendChild(el);
+      // next frame: fade + shrink
+      requestAnimationFrame(() => requestAnimationFrame(() => {
+        el.style.opacity = '0';
+        el.style.transform = 'scale(.85) rotate(' + rot.toFixed(1) + 'deg)';
+      }));
+      el.addEventListener('transitionend', () => { if (el.parentNode) el.parentNode.removeChild(el); }, { once: true });
+      setTimeout(() => { if (el.parentNode) el.parentNode.removeChild(el); }, 1300);
+    });
+  }
+
+  initAboutVideos(){
+    const vids = Array.from(document.querySelectorAll('.about-vid'));
+    if (vids.length < 1 || vids.__wired) return;
+    vids.__wired = true;
+    const master = vids[0];
+    vids.forEach(v => { v.muted = true; v.volume = 0; v.removeAttribute('controls'); v.loop = true; v.setAttribute('loop','');
+      const kick = () => { const p = v.play(); if (p && p.catch) p.catch(() => {}); };
+      v.addEventListener('ended', () => { try { v.currentTime = 0; kick(); } catch (e) {} });
+      if (v.readyState >= 2) kick(); else v.addEventListener('loadeddata', kick, { once: true });
+      // safety: if it ever stalls at the end, nudge it back
+      setInterval(() => { if (v.paused || (v.duration && v.currentTime >= v.duration - 0.05)) { try { if (v.currentTime >= (v.duration||1e9) - 0.05) v.currentTime = 0; kick(); } catch (e) {} } }, 500);
+    });
+    const sync = () => {
+      for (let i = 1; i < vids.length; i++) {
+        if (Math.abs(vids[i].currentTime - master.currentTime) > 0.08) {
+          try { vids[i].currentTime = master.currentTime; } catch (e) {}
+        }
+      }
+    };
+    setInterval(sync, 300);
+  }
+
+  setWpActive(active){
+    document.querySelectorAll('#wpRow .wp-panel').forEach((p, i) => {
+      const on = (i === active);
+      // columns stay equal width; only the highlight (teal + brightness + description) moves
+      const ov = p.querySelector('.wp-pov'); if (ov) ov.style.opacity = on ? '0.35' : '1';
+      const teal = p.querySelector('.wp-pteal'); if (teal) teal.style.opacity = on ? '1' : '0';
+      const num = p.querySelector('.wp-num'); if (num) num.style.color = on ? 'rgba(255,255,255,.95)' : 'rgba(255,255,255,.42)';
+      const title = p.querySelector('.wp-title'); if (title) title.style.color = on ? '#fff' : 'rgba(255,255,255,.72)';
+      const desc = p.querySelector('.wp-desc'); if (desc) { desc.style.opacity = on ? '1' : '0'; desc.style.transform = on ? 'translateY(0)' : 'translateY(20px)'; }
+    });
+  }
+
+  initProcess(){
+    const sec = document.getElementById('wpProcess');
+    if (!sec || sec.__wired) return;
+    sec.__wired = true;
+    this.__wpActive = 0; this.setWpActive(0);
+    const btn = document.getElementById('wpBtn'), dot = document.getElementById('wpDot');
+    let tx = 0, ty = 0, bx = 0, by = 0, dx = 0, dy = 0;
+    sec.addEventListener('mousemove', (e) => {
+      const r = sec.getBoundingClientRect();
+      const cx = r.left + r.width / 2, cy = r.top + r.height * 0.13;
+      tx = Math.max(-16, Math.min(16, (e.clientX - cx) * 0.05));
+      ty = Math.max(-10, Math.min(16, (e.clientY - cy) * 0.05));
+    });
+    sec.addEventListener('mouseleave', () => { tx = 0; ty = 0; });
+    const loop = () => {
+      bx += (tx - bx) * 0.16; by += (ty - by) * 0.16;   // button eases toward cursor
+      dx += (bx - dx) * 0.08; dy += (by - dy) * 0.08;    // dot trails the button (more lag)
+      if (btn) btn.style.transform = 'translate(-50%,0) translate(' + bx.toFixed(1) + 'px,' + by.toFixed(1) + 'px)';
+      if (dot) dot.style.transform = 'translate(' + (30 + dx).toFixed(1) + 'px,' + (84 + dy).toFixed(1) + 'px)';
+      this.__wpRaf = requestAnimationFrame(loop);
+    };
+    loop();
+  }
+
+  initSvcMenu(){
+    const menu = document.getElementById('svcMenu');
+    const btn = document.getElementById('svcBtn');
+    if (!menu || !btn || menu.__wired) return;
+    menu.__wired = true;
+    const open = (e) => { if (e) e.preventDefault(); document.documentElement.classList.add('svcmenu-open'); menu.classList.add('open'); document.body.style.overflow = 'hidden'; this.renderIcons(); };
+    const close = () => { document.documentElement.classList.remove('svcmenu-open'); menu.classList.remove('open'); document.body.style.overflow = ''; };
+    btn.addEventListener('click', open);
+    const cl = document.getElementById('svcMenuClose'); if (cl) cl.addEventListener('click', close);
+    const bd = document.getElementById('svcMenuBackdrop'); if (bd) bd.addEventListener('click', close);
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+    menu.querySelectorAll('.svc-pane').forEach(p => {
+      p.addEventListener('click', () => {
+        const href = p.getAttribute('data-href');
+        if (href) { window.location.href = href; return; }
+      });
+      // play the cover video only while hovering this panel
+      const vid = p.querySelector('.svc-pane-vid');
+      if (vid) {
+        p.addEventListener('mouseenter', () => { const pr = vid.play(); if (pr && pr.catch) pr.catch(() => {}); });
+        p.addEventListener('mouseleave', () => { vid.pause(); vid.currentTime = 0; });
+      }
+    });
+  }
+
+  initStatsCarousel(){
+    const setVidSrcs = () => {
+      document.querySelectorAll('.sx-testi-vid[data-vid]').forEach(v => {
+        const src = v.getAttribute('data-vid');
+        if (src && v.getAttribute('src') !== src) v.setAttribute('src', src);
+      });
+    };
+    setVidSrcs();
+    const mount = () => {
+      const el = document.getElementById('sx-stats-swiper');
+      if (!el || el.__sw || typeof Swiper === 'undefined') return false;
+      el.__sw = new Swiper(el, {
+        effect: 'coverflow', grabCursor: true, slidesPerView: 'auto',
+        centeredSlides: true, loop: true, spaceBetween: 32,
+        coverflowEffect: { rotate: 30, stretch: 0, depth: 100, modifier: 1, slideShadows: false },
+        observer: false, observeParents: false, updateOnWindowResize: true
+      });
+      el.__sw.on('slideChange', () => this.updateStatsVideos());
+      el.__sw.on('slideChangeTransitionEnd', () => this.updateStatsVideos());
+      this.updateStatsVideos();
+      // ── re-center after layout/font settle (fixes off-centre gap on first paint) ──
+      const recenter = () => { try { el.__sw.update(); el.__sw.slideToLoop(0, 0, false); } catch (e) {} };
+      requestAnimationFrame(() => requestAnimationFrame(recenter));
+      if (document.fonts && document.fonts.ready) document.fonts.ready.then(recenter);
+      if (document.readyState === 'complete') recenter(); else window.addEventListener('load', recenter);
+      [120, 300, 700, 1400].forEach(ms => setTimeout(recenter, ms));
+      // recenter whenever the strip's width actually changes (final layout settle)
+      if (window.ResizeObserver) {
+        let lastW = 0;
+        const ro = new ResizeObserver(() => { const w = el.clientWidth; if (w && w !== lastW) { lastW = w; recenter(); } });
+        ro.observe(el);
+      }
+      this.__sxRecenter = recenter;   // one-shot trigger from scroll handler on first on-screen frame
+      // reveal + parallax are driven by the global scroll handler (update()), proven to run every frame
+      return true;
+    };
+    if (!mount()){
+      let n = 0;
+      const t = setInterval(() => { if (mount() || ++n > 40) clearInterval(t); }, 150);
+    }
+  }
+
+  initProviderReveal(){
+    const grid = document.getElementById('pvGrid');
+    if (!grid || grid.__obs) return;
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting){ grid.classList.add('pv-in'); }
+        else { grid.classList.remove('pv-in'); }  // reset so it replays on re-entry (scroll up or down)
+      });
+    }, { threshold: 0.25 });
+    io.observe(grid);
+    grid.__obs = io;
+  }
+  componentDidUpdate(){ this.renderIcons(); }
+  renderIcons(){
+    const go = () => { if (window.lucide && window.lucide.createIcons) window.lucide.createIcons(); };
+    go();
+    setTimeout(go, 250);
+    setTimeout(go, 700);
+    setTimeout(go, 1500);
+  }
+  initStack(){
+    if (typeof window === 'undefined') return;
+    const update = () => {
+      this._raf = 0;
+      const hero = document.getElementById('heroPanel');
+      const darken = document.getElementById('heroDarken');
+      const title = document.getElementById('heroTitleWrap');
+      const octa = document.getElementById('heroOcta');
+      const para = document.getElementById('heroPara');
+      const aboutInner = document.getElementById('aboutInner');
+      if (!hero) return;
+      const vh = window.innerHeight || 1;
+      const y = window.pageYOffset || document.documentElement.scrollTop || 0;
+      const p = Math.max(0, Math.min(1, y / vh));
+      const ease = p * p * (3 - 2 * p);
+      hero.style.transform = 'scale(' + (1 - 0.018 * ease) + ')';
+      if (darken) darken.style.opacity = (0.6 * ease).toFixed(3);
+      if (title) { title.style.transform = 'translateY(' + (ease * -70) + 'px)'; title.style.opacity = (1 - ease * 0.5).toFixed(3); }
+      if (octa) { octa.style.transform = 'translateY(-50%) translateY(' + (ease * -52) + 'px)'; octa.style.opacity = (1 - ease * 0.5).toFixed(3); }
+      if (para) { para.style.transform = 'translateY(' + (ease * -40) + 'px)'; para.style.opacity = (1 - ease * 0.5).toFixed(3); }
+      if (aboutInner) {
+        // breathing tilt/settle, same clean parallax as the stats carousel
+        const ar = aboutInner.getBoundingClientRect();
+        const acenter = ar.top + ar.height / 2;
+        const ad = Math.max(-1, Math.min(1, (acenter - vh / 2) / vh));
+        if (this.__abCur === undefined) this.__abCur = ad;
+        this.__abCur += (ad - this.__abCur) * 0.10;
+        const ac = this.__abCur;
+        aboutInner.style.transform = 'translateY(' + ((1 - ease) * 48 + ac * 26).toFixed(1) + 'px) rotateX(' + (ac * 5).toFixed(2) + 'deg) scale(' + (1 - Math.abs(ac) * 0.03).toFixed(3) + ')';
+        aboutInner.style.opacity = (1 - Math.abs(ac) * 0.35).toFixed(3);
+      }
+      // about images parallax, drift at different speeds as the section scrolls
+      const ap = Math.max(0, Math.min(1, (y - vh * 0.35) / (vh * 1.3)));
+      const ae = ap * ap * (3 - 2 * ap);
+      const ai1 = document.getElementById('aboutImg1');
+      const ai2 = document.getElementById('aboutImg2');
+      if (ai1) ai1.style.transform = 'translateY(' + ((0.5 - ae) * 76).toFixed(1) + 'px)';
+      if (ai2) ai2.style.transform = 'translateY(' + ((0.5 - ae) * -64).toFixed(1) + 'px)';
+      // team section, breathing tilt/settle
+      const teamInner = document.getElementById('teamInner');
+      if (teamInner) {
+        const tr = teamInner.getBoundingClientRect();
+        const sr = document.getElementById('stepsRow');
+        if (sr) { if (tr.top < vh * 0.82 && tr.bottom > 0) sr.classList.add('revealed'); else sr.classList.remove('revealed'); }
+        const td = Math.max(-1, Math.min(1, ((tr.top + tr.height / 2) - vh / 2) / vh));
+        if (this.__tmCur === undefined) this.__tmCur = td;
+        this.__tmCur += (td - this.__tmCur) * 0.10;
+        const tc = this.__tmCur;
+        teamInner.style.transform = 'translateY(' + (tc * 26).toFixed(1) + 'px) rotateX(' + (tc * 5).toFixed(2) + 'deg) scale(' + (1 - Math.abs(tc) * 0.03).toFixed(3) + ')';
+        teamInner.style.opacity = (1 - Math.abs(tc) * 0.35).toFixed(3);
+      }
+      // generic breathing tilt/settle for the remaining sections (Working Process, Testimonials, Blog)
+      if (!this.__brCur) this.__brCur = {};
+      ['testiInner', 'blogInner'].forEach(id => {
+        const el = document.getElementById(id);
+        if (!el) return;
+        const r = el.getBoundingClientRect();
+        const d = Math.max(-1, Math.min(1, ((r.top + r.height / 2) - vh / 2) / vh));
+        if (this.__brCur[id] === undefined) this.__brCur[id] = d;
+        this.__brCur[id] += (d - this.__brCur[id]) * 0.10;
+        const c = this.__brCur[id];
+        el.style.transform = 'translateY(' + (c * 24).toFixed(1) + 'px) rotateX(' + (c * 5).toFixed(2) + 'deg) scale(' + (1 - Math.abs(c) * 0.03).toFixed(3) + ')';
+        el.style.opacity = (1 - Math.abs(c) * 0.32).toFixed(3);
+      });
+      // stats carousel, reveal + scroll parallax tilt/settle (driven by the proven scroll handler)
+      const sxSec = document.getElementById('sx-stats');
+      const sxSw = document.getElementById('sx-stats-swiper');
+      if (sxSec && sxSw) {
+        const sr = sxSec.getBoundingClientRect();
+        if (sr.top < vh * 0.85 && sr.bottom > 0) {
+          sxSec.classList.add('revealed');
+          // self-correcting recenter: keep nudging while in view until the active card is centred (<=2px)
+          if (!this.__sxCentered && this.__sxRecenter) {
+            const wrap = sxSw.querySelector('.swiper-wrapper');
+            const act = sxSw.querySelector('.swiper-slide-active');
+            if (act) {
+              const er = sxSw.getBoundingClientRect(), cr = act.getBoundingClientRect();
+              const off = (cr.left + cr.width / 2) - (er.left + er.width / 2);
+              if (Math.abs(off) <= 2) this.__sxCentered = true;
+              else this.__sxRecenter();
+            }
+            // if no active slide, bail, do NOT recenter unboundedly (runs realIndex away)
+          }
+        }
+        const secCenter = sr.top + sr.height / 2;
+        const d = Math.max(-1, Math.min(1, (secCenter - vh / 2) / vh));
+        if (this.__sxCur === undefined) this.__sxCur = d;
+        this.__sxCur += (d - this.__sxCur) * 0.12;
+        const c = this.__sxCur;
+        sxSw.style.transform = 'translateY(' + (c * 70).toFixed(2) + 'px) rotateX(' + (c * 9).toFixed(2) + 'deg) scale(' + (1 - Math.abs(c) * 0.06).toFixed(3) + ')';
+        sxSw.style.opacity = (1 - Math.abs(c) * 0.5).toFixed(3);
+        this.updateStatsVideos();
+      }
+      // testimonial video, scrub playback to scroll as the section rises into view
+      const tv = document.getElementById('testiVid');
+      if (tv) {
+        const tr = tv.getBoundingClientRect();
+        const vp = Math.max(0, Math.min(1, (vh - tr.top) / (vh * 0.9)));
+        const dur = tv.duration;
+        if (dur && isFinite(dur)) {
+          const t = vp * dur;
+          if (Math.abs(t - tv.currentTime) > 0.03) { try { tv.currentTime = t; } catch (e) {} }
+        }
+      }
+      // pinned cover-types: cards 2&3 vanish, Life Insurance box widens right, graph + text rotor
+      const cp = document.getElementById('coverPin');
+      if (cp) {
+        const stage = document.getElementById('cpStage');
+        const SW = stage ? stage.clientWidth : 0;
+        const GAP = 26, CARDH = 440, STAGEH = 560;
+        const cardW = (SW - GAP * 2) / 3;
+        const cr = cp.getBoundingClientRect();
+        const ct = (cp.offsetHeight - vh) || 1;
+        const p = Math.max(0, Math.min(1, (-cr.top) / ct));
+        const ec = t => (t = Math.max(0, Math.min(1, t)), t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
+        const seg = (a, b) => Math.max(0, Math.min(1, (p - a) / (b - a)));
+        // sequenced, gated timeline: fast transitions separated by readable holds
+        // --- initial HOLD: 3 service cards readable, p 0 -> 0.16 ---
+        const f23 = ec(seg(0.16, 0.225));    // cards 2 & 3 lift away
+        const hdC = 0;   // section header stays pinned/visible throughout
+        const boxW = ec(seg(0.185, 0.30));   // card 1 unfolds to full width
+        const initOut = ec(seg(0.185, 0.235));// card-1 copy clears out early (no stretch)
+        const expIn = ec(seg(0.31, 0.37));   // graph panel resolves in
+        // --- HOLD on Level Term:  p 0.37 -> 0.55 ---
+        const mo = ec(seg(0.55, 0.78));      // morph to Decreasing Term
+        // --- HOLD on Decreasing Term: p 0.682 -> 1.0 (extended end buffer) ---
+        const g = id => document.getElementById(id);
+        const c2 = g('cpCard2'), c3 = g('cpCard3'), box = g('cpBox'), init = g('cpInit'), exp = g('cpExp'), tab = g('cpTab');
+        const tL = g('cpTextLevel'), tD = g('cpTextDec'), cov = g('cpCoverLine'), la = g('cpLblA'), lb = g('cpLblB'), mon = g('cpMonthlyLine');
+        const cardTop = (STAGEH - CARDH) / 2;
+        // ── breathing parallax (same feel as section 2) during the 3-card intro; eases to neutral exactly as the morph begins ──
+        const il = seg(0, 0.16);           // intro-local progress 0 -> 1
+        const k = 1 - ec(il);              // 1 at entry, 0 by the time cards start morphing
+        const brDeg = (k * 4).toFixed(2);
+        const brSc = (1 - k * 0.025).toFixed(3);
+        if (c2) { c2.style.left = (cardW + GAP) + 'px'; c2.style.width = cardW + 'px'; c2.style.top = cardTop + 'px'; c2.style.opacity = (1 - f23).toFixed(3); c2.style.transform = 'translateY(' + (f23 * -60 + k * 22) + 'px) rotateX(' + brDeg + 'deg) scale(' + ((1 - f23 * 0.14) * (1 - k * 0.025)).toFixed(3) + ')'; }
+        if (c3) { c3.style.left = (2 * (cardW + GAP)) + 'px'; c3.style.width = cardW + 'px'; c3.style.top = cardTop + 'px'; c3.style.opacity = (1 - f23).toFixed(3); c3.style.transform = 'translateY(' + (f23 * -60 + k * 46) + 'px) rotateX(' + brDeg + 'deg) scale(' + ((1 - f23 * 0.14) * (1 - k * 0.025)).toFixed(3) + ')'; }
+        if (box) { const bw = cardW + boxW * (SW - cardW); const bh = CARDH + boxW * 120; box.style.width = bw + 'px'; box.style.height = bh + 'px'; box.style.top = ((STAGEH - bh) / 2) + 'px'; const bp = seg(0.30, 1.0); const wob = Math.sin(bp * Math.PI * 2); box.style.transform = 'translateY(' + (k * 34 + wob * 10).toFixed(2) + 'px) rotateX(' + (parseFloat(brDeg) + wob * 1.5).toFixed(2) + 'deg) scale(' + brSc + ')'; }
+        const hd = g('cpHeading');
+        if (hd) {
+          if (this._hdH == null && hdC < 0.02) this._hdH = hd.scrollHeight;
+          const base = this._hdH || hd.scrollHeight;
+          hd.style.opacity = (1 - hdC).toFixed(3);
+          hd.style.overflow = 'hidden';
+          hd.style.height = (base * (1 - hdC)).toFixed(1) + 'px';
+          hd.style.marginBottom = (40 * (1 - hdC)).toFixed(1) + 'px';
+        }
+        if (init) { init.style.width = cardW + 'px'; init.style.opacity = (1 - initOut).toFixed(3); init.style.pointerEvents = initOut > 0.5 ? 'none' : 'auto'; }
+        if (exp) exp.style.opacity = expIn.toFixed(3);
+        if (tab) tab.style.opacity = expIn.toFixed(3);
+        if (cov) cov.setAttribute('y2', (92 + mo * 100).toFixed(1));
+        // draw the two cover lines left -> right automatically (time-based), once the panel is expanded
+        const drawLine = (ln, len, prog) => { if (!ln) return; ln.setAttribute('stroke-dasharray', len.toFixed(1)); ln.setAttribute('stroke-dashoffset', (len * (1 - prog)).toFixed(1)); };
+        const applyLines = (prog) => { drawLine(cov, Math.hypot(314, mo * 100), prog); drawLine(mon, 314, prog); };
+        if (expIn > 0.55 && !this._drawStarted) {
+          this._drawStarted = true;
+          const t0 = performance.now(), dur = 1200;
+          const step = (now) => {
+            const k = Math.min(1, (now - t0) / dur);
+            this._drawProg = ec(k);
+            applyLines(this._drawProg);
+            if (k < 1) requestAnimationFrame(step);
+          };
+          requestAnimationFrame(step);
+        }
+        if (expIn < 0.2 && this._drawStarted) { this._drawStarted = false; this._drawProg = 0; }
+        applyLines(this._drawProg || 0);
+        // snappy gated cross-fade: outgoing is fully gone before incoming arrives (no overlap)
+        const outF = Math.max(0, Math.min(1, (0.46 - mo) / 0.1));
+        const inF = Math.max(0, Math.min(1, (mo - 0.54) / 0.1));
+        if (la) la.style.opacity = outF.toFixed(3);
+        if (lb) lb.style.opacity = inF.toFixed(3);
+        if (tL) { tL.style.opacity = outF.toFixed(3); tL.style.transform = 'translateY(' + ((1 - outF) * -12).toFixed(1) + 'px)'; }
+        if (tD) { tD.style.opacity = inF.toFixed(3); tD.style.transform = 'translateY(' + ((1 - inF) * 12).toFixed(1) + 'px)'; }
+      }
+      // working-process banner parallax (cover zoom, like the hero)
+      // our-process panels: scroll advances the active panel (widen + deepen teal + raise description)
+      const wpTrack = document.getElementById('wpTrack');
+      if (wpTrack) {
+        const tt = wpTrack.getBoundingClientRect().top;
+        const prog = Math.max(0, Math.min(1, (vh - tt) / (wpTrack.offsetHeight * 0.9)));
+        const active = prog < 0.34 ? 0 : prog < 0.67 ? 1 : 2;
+        if (this.__wpActive !== active) { this.__wpActive = active; this.setWpActive(active); }
+      }
+    };
+    const onScroll = () => { if (!this._raf) this._raf = requestAnimationFrame(update); };
+    if (this._onScroll) { window.removeEventListener('scroll', this._onScroll); window.removeEventListener('resize', this._onScroll); }
+    this._onScroll = onScroll;
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+    update();
+  }
+  componentWillUnmount(){ if (this._onScroll) { window.removeEventListener('scroll', this._onScroll); window.removeEventListener('resize', this._onScroll); } }
+  renderVals(){ const base = [
+    { isTesti: true, vid: 'assets/stats-vid-1.mp4', name: 'Feefo', quote: '"Great to deal with, fully explained my options and never once put any pressure on me to purchase anything. Have made several follow-up calls to make sure everything was in place."' },
+    { isTesti: true, vid: 'assets/stats-vid-2.mp4', name: 'Feefo', quote: '"Everything made very clear and the online documentation was easy to do. Excellent and very easy and clear from start to finish."' },
+    { isTesti: true, vid: 'assets/stats-vid-3.mp4', name: 'Feefo', quote: '"Easy, helpful and polite. The service from top quote was excellent from start to finish. Everyone I spoke to was helpful and knowledgeable."' },
+    { isTesti: true, vid: 'assets/stats-vid-4.mp4', name: 'Feefo', quote: '"Clear, thorough, courteous, three words that capture my experience. A trustworthy brokerage service, I felt in control."' },
+    { isTesti: true, vid: 'assets/stats-vid-5.mp4', name: 'Feefo', quote: '"From the first call to the final policy, everything was straightforward and stress-free. I always knew exactly where I stood."' },
+    { isTesti: true, vid: 'assets/stats-vid-6.mp4', name: 'Feefo', quote: '"Genuinely helpful advice with no jargon and no pressure. I would happily recommend them to friends and family."' }
+  ]; return { stats: base.concat(base, base) }; }
+
+  updateStatsVideos(){
+    const el = document.getElementById('sx-stats-swiper');
+    const sec = document.getElementById('sx-stats');
+    if (!el) return;
+    const r = sec ? sec.getBoundingClientRect() : null;
+    const vis = r && r.top < window.innerHeight * 0.85 && r.bottom > window.innerHeight * 0.15;
+    const active = el.querySelector('.swiper-slide-active');
+    el.querySelectorAll('.sx-testi-vid').forEach(v => {
+      const play = vis && active && active.contains(v);
+      if (play) { const p = v.play(); if (p && p.catch) p.catch(() => {}); }
+      else { try { v.pause(); } catch (e) {} }
+    });
+  }
+}
+</script>
+</body>
+</html>

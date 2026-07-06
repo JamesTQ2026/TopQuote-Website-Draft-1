@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;800&amp;family=Playfair+Display:wght@500;600;700;800;900&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script src="services-menu.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Mulish',sans-serif;}
+  .arva-h{font-family:'Playfair Display','Georgia',serif;}
+  .nav-link{white-space:nowrap;}
+  .nav-link:hover{color:#1EBABB !important;}
+  #rvSwiper .swiper{padding:20px 0 40px !important;overflow:visible !important;}
+  #rvSwiper .swiper-slide{width:380px;max-width:86%;height:auto;opacity:.4;transition:opacity .45s ease;}
+  #rvSwiper .swiper-slide-active{opacity:1;}
+  #rvSwiper .swiper-slide-prev,#rvSwiper .swiper-slide-next{opacity:.62;}
+  .nav-dd{position:relative;}
+  .nav-dd-menu{position:absolute;top:calc(100% + 6px);left:0;background:#0C1F19;border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:8px;min-width:190px;opacity:0;visibility:hidden;transform:translateY(6px);transition:opacity .2s ease,transform .2s ease;box-shadow:0 20px 40px rgba(0,0,0,.35);z-index:60;}
+  .nav-dd:hover .nav-dd-menu{opacity:1;visibility:visible;transform:translateY(0);}
+  .nav-dd-menu a{display:block;padding:10px 14px;color:#fff !important;text-decoration:none;font-size:15px;border-radius:8px;white-space:nowrap;}
+  .nav-dd-menu a:hover{background:rgba(255,255,255,.08);color:#1EBABB !important;}
+  i[data-lucide]{display:inline-flex;}
+  .reveal{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.22,1,.36,1),transform .8s cubic-bezier(.22,1,.36,1);}
+  .reveal.in{opacity:1;transform:none;}
+  .bl-card{transition:transform .25s ease,box-shadow .25s ease;opacity:0;transform:translateY(26px);display:flex;flex-direction:column;}
+  .bl-grid.in .bl-card{opacity:1;transform:none;transition:opacity .55s cubic-bezier(.22,1,.36,1),transform .55s cubic-bezier(.22,1,.36,1),box-shadow .25s ease;}
+  .bl-card:hover{transform:translateY(-5px);box-shadow:0 20px 44px rgba(20,40,35,.12);}
+  .bl-grid.in .bl-card:nth-child(1){transition-delay:0ms;}.bl-grid.in .bl-card:nth-child(2){transition-delay:60ms;}.bl-grid.in .bl-card:nth-child(3){transition-delay:120ms;}.bl-grid.in .bl-card:nth-child(4){transition-delay:180ms;}.bl-grid.in .bl-card:nth-child(5){transition-delay:120ms;}.bl-grid.in .bl-card:nth-child(6){transition-delay:180ms;}.bl-grid.in .bl-card:nth-child(7){transition-delay:240ms;}.bl-grid.in .bl-card:nth-child(8){transition-delay:300ms;}
+  .cat-chip{transition:color .2s ease,background .2s ease;cursor:pointer;}
+  .cat-chip:hover{color:#1EBABB !important;}
+  .pg-btn{transition:background .2s ease,color .2s ease;cursor:pointer;}
+  .abtn{transition:transform .3s cubic-bezier(.34,1.56,.44,1),filter .3s ease,background .25s ease;}
+  .abtn:hover{transform:translateY(-3px) scale(1.03);}
+  @media (prefers-reduced-motion:reduce){.reveal,.bl-card{opacity:1 !important;transform:none !important;}}
+  @media (max-width:980px){
+    header nav{display:none !important;}
+    .hero-grid{grid-template-columns:1fr !important;}
+    .bl-grid{grid-template-columns:repeat(2,1fr) !important;}
+    .cat-grid{grid-template-columns:1fr 1fr !important;}
+    .feat-card{grid-template-columns:1fr !important;}
+  }
+  @media (max-width:600px){.bl-grid{grid-template-columns:1fr !important;}.cat-grid{grid-template-columns:1fr !important;}}
+</style>
+</helmet>
+
+<div style="width:100%;overflow-x:clip;background:#F6F7FB;color:#1B3A33;">
+
+  <!-- ============ HERO ============ -->
+  <section style="position:relative;background:#0C1F19;color:#fff;overflow:hidden;">
+    <header style="position:relative;z-index:5;padding:30px clamp(24px,5vw,84px);display:flex;align-items:center;justify-content:space-between;gap:40px;">
+      <a href="Home Page.dc.html" style="display:flex;align-items:center;"><img src="assets/topquote-logo.png" alt="TopQuote" style="height:38px;width:auto;display:block;"></a>
+      <nav style="display:flex;align-items:center;gap:20px;font-size:16px;font-weight:600;">
+        <div class="nav-dd"><a href="Life Insurance.dc.html" style="background:#1EBABB;color:#fff;padding:9px 18px;border-radius:24px;text-decoration:none;display:inline-flex;align-items:center;gap:5px;">Services <span style="font-size:10px;">&#9662;</span></a><div class="nav-dd-menu"><a href="Life Insurance.dc.html">Life Insurance</a><a href="Critical Illness.dc.html">Critical Illness</a><a href="Income Protection.dc.html">Income Protection</a></div></div>
+        <div class="nav-dd"><a href="About Us.dc.html" class="nav-link" style="color:#fff;padding:9px 14px;text-decoration:none;display:inline-flex;align-items:center;gap:5px;">About <span style="font-size:10px;">&#9662;</span></a><div class="nav-dd-menu"><a href="About Us.dc.html">About Us</a><a href="Consumer Duty.dc.html">Consumer Duty</a></div></div>
+        <a href="Reconnect.dc.html" class="nav-link" style="color:#fff;padding:9px 14px;text-decoration:none;">Reconnect</a>
+        <a href="Blog.dc.html" class="nav-link" style="color:#fff;padding:9px 14px;text-decoration:none;">Blog</a>
+        <a href="Contact.dc.html" class="nav-link" style="color:#fff;padding:9px 14px;text-decoration:none;">Contact</a>
+        <a href="Careers.dc.html" class="nav-link" style="color:#fff;padding:9px 14px;text-decoration:none;">Careers</a>
+        <a href="Find Us.dc.html" class="nav-link" style="color:#fff;padding:9px 14px;text-decoration:none;">Find Us</a>
+      </nav>
+      <a href="Get a Quote.dc.html" class="abtn" style="background:#1EBABB;color:#fff;padding:14px 26px;border-radius:8px;text-decoration:none;font-weight:700;font-size:15px;white-space:nowrap;">Get a quote</a>
+    </header>
+
+    <div class="hero-grid" style="position:relative;z-index:4;display:grid;grid-template-columns:1.6fr 1fr;gap:44px;align-items:center;padding:56px clamp(24px,5vw,84px) 84px;max-width:1320px;margin:0 auto;width:100%;">
+      <div>
+        <div style="display:flex;align-items:center;gap:9px;margin-bottom:20px;">
+          <img src="assets/topquote-mark-teal.png" alt="TopQuote" style="width:24px;height:24px;object-fit:contain;">
+          <span style="color:#3fd3d4;font-weight:700;font-size:15px;">Articles &amp; Guides</span>
+        </div>
+        <h1 class="arva-h" style="font-size:clamp(40px,4.6vw,68px);line-height:1.05;font-weight:600;letter-spacing:.3px;text-transform:uppercase;">Life insurance &amp; income<br>protection articles</h1>
+        <p style="margin-top:22px;font-size:18px;line-height:1.6;color:rgba(255,255,255,.85);max-width:560px;">In-depth life insurance &amp; income protection articles, written in-house by our protection experts.</p>
+        <a href="Home Page.dc.html#contactSection" class="abtn" style="display:inline-flex;align-items:center;gap:10px;margin-top:32px;background:#1EBABB;color:#fff;padding:16px 32px;border-radius:10px;text-decoration:none;font-weight:700;font-size:16px;">Get a quote <i data-lucide="arrow-right" style="width:18px;height:18px;"></i></a>
+      </div>
+      <div style="background:#fff;border:1px solid #e6e8ec;border-radius:16px;padding:26px 34px;text-align:center;box-shadow:0 24px 60px rgba(0,0,0,.28);max-width:280px;margin:0 auto;">
+        <div style="display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:16px;color:#191919;font-weight:600;font-size:20px;"><span style="color:#00b67a;font-size:22px;line-height:1;">&#9733;</span> Trustpilot</div>
+        <div style="display:flex;gap:4px;justify-content:center;margin-bottom:18px;">
+          <span style="width:38px;height:38px;background:#00b67a;display:flex;align-items:center;justify-content:center;color:#fff;font-size:22px;line-height:1;">&#9733;</span>
+          <span style="width:38px;height:38px;background:#00b67a;display:flex;align-items:center;justify-content:center;color:#fff;font-size:22px;line-height:1;">&#9733;</span>
+          <span style="width:38px;height:38px;background:#00b67a;display:flex;align-items:center;justify-content:center;color:#fff;font-size:22px;line-height:1;">&#9733;</span>
+          <span style="width:38px;height:38px;background:#00b67a;display:flex;align-items:center;justify-content:center;color:#fff;font-size:22px;line-height:1;">&#9733;</span>
+          <span style="width:38px;height:38px;background:linear-gradient(90deg,#00b67a 58%,#dcdce6 58%);display:flex;align-items:center;justify-content:center;color:#fff;font-size:22px;line-height:1;">&#9733;</span>
+        </div>
+        <div style="font-weight:700;font-size:22px;color:#191919;margin-bottom:12px;">'Excellent'</div>
+        <div style="color:#4b4b4b;font-size:14.5px;line-height:1.55;">Rated <strong style="color:#191919;">4.3</strong> out of 5<br>based on <strong style="color:#191919;">517 reviews</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CATEGORIES ============ -->
+  <section style="background:#fff;padding:52px clamp(24px,5vw,40px);border-bottom:1px solid #ECEEF4;">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div id="catToggle" style="display:flex;align-items:center;gap:10px;margin-bottom:30px;cursor:pointer;user-select:none;">
+        <span class="arva-h" style="font-size:22px;font-weight:700;color:#173B33;">Browse by category</span>
+        <i id="catChevron" data-lucide="chevron-down" style="width:20px;height:20px;color:#1EBABB;transition:transform .3s ease;"></i>
+      </div>
+      <div id="catGrid" class="cat-grid" style="display:none;grid-template-columns:repeat(3,1fr);gap:20px 40px;">
+        <sc-for list="{{ categories }}" as="c" hint-placeholder-count="12">
+          <a href="#articles" class="cat-chip" style="color:#173B33;font-weight:600;font-size:16px;text-decoration:none;padding:6px 0;border-bottom:1px solid transparent;">{{ c }}</a>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURED ============ -->
+  <section style="background:#F6F7FB;padding:70px clamp(24px,5vw,40px) 20px;">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div style="font-size:13px;color:#9AA6A2;margin-bottom:22px;"><a href="Home Page.dc.html" style="color:#1EBABB;text-decoration:none;">Home</a> &nbsp;&rsaquo;&nbsp; Articles</div>
+      <h2 class="reveal arva-h" style="font-size:clamp(26px,3vw,38px);font-weight:700;color:#173B33;margin-bottom:26px;">Featured article</h2>
+      <div class="reveal feat-card" style="display:grid;grid-template-columns:1.6fr 1fr;gap:0;background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 16px 44px rgba(20,40,35,.08);">
+        <div style="padding:44px 46px;">
+          <h3 class="arva-h" style="font-size:26px;font-weight:700;color:#173B33;margin-bottom:16px;">Life insurance with a free gift</h3>
+          <div style="width:100%;height:3px;background:#1EBABB;border-radius:2px;margin-bottom:22px;"></div>
+          <p style="color:#5B6B66;font-size:16px;line-height:1.75;max-width:520px;">Many life insurance policies now come with a free welcome gift. But which insurers are offering the best gift, and are they actually worth it? Read our guide to the best life insurance with rewards and incentives.</p>
+        </div>
+        <div style="background:#ECEDF1;padding:44px 40px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:14px;">
+          <div style="width:70px;height:70px;border-radius:50%;background:#1EBABB;display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Playfair Display',Georgia,serif;font-size:32px;font-weight:700;">T</div>
+          <div>
+            <div class="arva-h" style="font-size:18px;font-weight:700;color:#173B33;">Tanweer Hussain</div>
+            <div style="color:#8A94A6;font-size:14px;">Protection Expert</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:7px;color:#173B33;font-size:14px;font-weight:700;"><i data-lucide="clock" style="width:16px;height:16px;color:#1EBABB;"></i> 10 min read</div>
+          <a href="#" class="abtn" style="margin-top:6px;background:#1EBABB;color:#fff;padding:12px 30px;border-radius:24px;text-decoration:none;font-weight:700;font-size:14px;">Read now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ARTICLE GRID ============ -->
+  <section id="articles" style="background:#F6F7FB;padding:50px clamp(24px,5vw,40px) 80px;">
+    <div style="max-width:1200px;margin:0 auto;">
+      <h2 class="reveal arva-h" style="font-size:clamp(26px,3vw,38px);font-weight:700;color:#173B33;margin-bottom:34px;">Financial protection articles from our experts</h2>
+      <div class="bl-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:26px;">
+        <sc-for list="{{ articles }}" as="a" hint-placeholder-count="9">
+          <div class="bl-card" style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 8px 24px rgba(20,40,35,.05);">
+            <h3 class="arva-h" style="font-size:24px;font-weight:700;color:#173B33;line-height:1.2;margin-bottom:16px;">{{ a.title }}</h3>
+            <div style="width:54px;height:3px;background:#1EBABB;border-radius:2px;margin-bottom:22px;"></div>
+            <p style="color:#7A867F;font-size:15px;line-height:1.7;margin-bottom:26px;flex:1;">{{ a.excerpt }}</p>
+            <div style="display:flex;align-items:center;gap:14px;margin-bottom:22px;">
+              <div style="width:52px;height:52px;border-radius:50%;background:#1EBABB;flex:none;display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Playfair Display',Georgia,serif;font-size:24px;font-weight:700;">T</div>
+              <div>
+                <div class="arva-h" style="font-size:17px;font-weight:700;color:#173B33;">{{ a.author }}</div>
+                <div style="color:#8A94A6;font-size:13.5px;">{{ a.role }}</div>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;justify-content:space-between;">
+              <span style="display:flex;align-items:center;gap:7px;color:#173B33;font-size:14px;font-weight:700;"><i data-lucide="clock" style="width:16px;height:16px;color:#1EBABB;"></i> {{ a.time }}</span>
+              <a href="#" style="color:#1EBABB;font-weight:700;font-size:15px;text-decoration:none;">Read now &rsaquo;</a>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+
+      <!-- pagination -->
+      <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-top:52px;">
+        <button class="pg-btn" style="width:44px;height:44px;border-radius:50%;border:none;background:#E7EAF2;color:#8A94A6;display:flex;align-items:center;justify-content:center;"><i data-lucide="chevron-left" style="width:18px;height:18px;"></i></button>
+        <button class="pg-btn" style="width:44px;height:44px;border-radius:50%;border:none;background:#1EBABB;color:#fff;font-weight:700;font-size:15px;">1</button>
+        <button class="pg-btn" style="width:44px;height:44px;border-radius:50%;border:none;background:transparent;color:#8A94A6;font-weight:700;font-size:15px;">2</button>
+        <button class="pg-btn" style="width:44px;height:44px;border-radius:50%;border:none;background:transparent;color:#8A94A6;font-weight:700;font-size:15px;">3</button>
+        <button class="pg-btn" style="width:44px;height:44px;border-radius:50%;border:none;background:transparent;color:#8A94A6;font-weight:700;font-size:15px;">4</button>
+        <button class="pg-btn" style="width:44px;height:44px;border-radius:50%;border:none;background:#173B33;color:#fff;display:flex;align-items:center;justify-content:center;"><i data-lucide="chevron-right" style="width:18px;height:18px;"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REVIEWS ============ -->
+  <section style="background:#1EBABB;padding:90px clamp(24px,5vw,40px);">
+    <div style="max-width:900px;margin:0 auto 50px;text-align:center;">
+      <h2 class="reveal arva-h" style="font-size:clamp(30px,3.6vw,46px);font-weight:600;color:#fff;margin-bottom:18px;">Don't take our word for it.</h2>
+      <p class="reveal" style="color:rgba(255,255,255,.88);font-size:16px;line-height:1.7;">Every review below belongs to a real person who trusted us with something important. We don't take that lightly.</p>
+    </div>
+    <div id="rvSwiper" class="reveal" style="max-width:1180px;margin:0 auto;">
+      <div class="swiper" id="rvSwiperEl">
+        <div class="swiper-wrapper">
+          <sc-for list="{{ reviews }}" as="r" hint-placeholder-count="6">
+            <div class="swiper-slide">
+              <div style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 18px 40px rgba(8,40,32,.18);min-height:290px;">
+                <div style="font-family:Georgia,serif;font-size:64px;line-height:.6;color:#1EBABB;height:34px;">&ldquo;</div>
+                <div style="margin-top:20px;color:#7A867F;font-size:14px;font-weight:600;">{{ r.name }}</div>
+                <div style="color:#00b67a;font-size:16px;letter-spacing:2px;margin:8px 0 16px;">{{ r.stars }}</div>
+                <p style="color:#5B6B66;font-size:14.5px;line-height:1.7;">{{ r.quote }}</p>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer style="background:#EAEDFB;padding:64px clamp(24px,5vw,40px) 30px;">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div style="display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:40px;">
+        <div>
+          <div style="display:flex;align-items:center;margin-bottom:18px;"><img src="assets/topquote-logo-dark.png" alt="TopQuote" style="height:38px;width:auto;display:block;"></div>
+          <p style="color:#6B7280;font-size:13.5px;line-height:1.7;max-width:320px;margin-bottom:22px;">Top Quote Limited is an appointed representative of The Openwork Partnership, a trading style of Openwork Limited, which is authorised and regulated by the Financial Conduct Authority. Approved by The Openwork Partnership on the 20th January 2025.</p>
+          <div style="display:flex;gap:12px;">
+            <span style="width:42px;height:42px;border-radius:50%;background:#1EBABB;display:flex;align-items:center;justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"></path></svg></span>
+            <span style="width:42px;height:42px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="#173B33"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg></span>
+            <span style="width:42px;height:42px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="#173B33"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"></path></svg></span>
+          </div>
+        </div>
+        <div>
+          <h4 class="arva-h" style="font-size:20px;font-weight:600;color:#173B33;margin-bottom:20px;">Pages</h4>
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            <a href="Home Page.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">Home</a>
+            <a href="About Us.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">About</a>
+            <a href="Blog.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">News</a>
+            <a href="Home Page.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">Contact</a>
+            <a href="Reconnect.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">Reconnect</a>
+            <a href="Home Page.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">Privacy Notice</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="arva-h" style="font-size:20px;font-weight:600;color:#173B33;margin-bottom:20px;">Services</h4>
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            <a href="Home Page.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">Life Insurance</a>
+            <a href="Home Page.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">Critical Illness</a>
+            <a href="Home Page.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">Income Protection</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="arva-h" style="font-size:20px;font-weight:600;color:#173B33;margin-bottom:20px;">Need Help?</h4>
+          <div style="display:flex;flex-direction:column;gap:16px;">
+            <span style="display:flex;align-items:flex-start;gap:10px;color:#6B7280;font-size:15px;line-height:1.55;"><i data-lucide="map-pin" style="width:17px;height:17px;color:#1EBABB;margin-top:2px;flex:none;"></i> <span>Alderley Park, Suite 3,<br>GLASSHOUSE, Congleton Road,<br>Macclesfield, SK10 4TG</span></span>
+            <span style="display:flex;align-items:center;gap:10px;color:#6B7280;font-size:15px;"><i data-lucide="phone" style="width:17px;height:17px;color:#1EBABB;flex:none;"></i> Customer support: 0161 974 3710</span>
+            <span style="display:flex;align-items:center;gap:10px;color:#6B7280;font-size:15px;"><i data-lucide="clock" style="width:17px;height:17px;color:#1EBABB;flex:none;"></i> Working time: Mon &ndash; Fri: 8:30 &ndash; 18:00</span>
+            <span style="display:flex;align-items:center;gap:10px;color:#6B7280;font-size:15px;"><i data-lucide="mail" style="width:17px;height:17px;color:#1EBABB;flex:none;"></i> hello@topquote.uk.com</span>
+          </div>
+        </div>
+      </div>
+      <div style="height:1px;background:#D2D6E8;margin:40px 0 22px;"></div>
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;">
+        <span style="color:#6B7280;font-size:14px;">© 2025 TopQuote. All Rights Reserved.</span>
+        <div style="display:flex;gap:18px;align-items:center;">
+          <a href="https://www.theopenworkpartnership.com/privacy-notice/" target="_blank" rel="noopener" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:14px;">Privacy Policy</a>
+          <span style="color:#C4C9DE;">|</span>
+          <a href="#" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:14px;">Cookie Policy</a>
+        </div>
+      </div>
+      <div style="text-align:left;color:#6B7280;font-size:13.5px;line-height:1.75;max-width:940px;margin:34px 0 0;">
+        <p>&copy;2026 TopQuote Ltd., Registered in England Number: 04648763, Alderley Park, Suite 3, GLASSHOUSE, Macclesfield, SK10 4TG.</p>
+        <p style="margin-top:18px;">Registered in England Number: 04648763</p>
+        <p style="margin-top:14px;">The information on this website is for use of residents of the United Kingdom only. No representations are made as to whether the information is applicable or available in any other country which may have access to it.</p>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  initScrollTop(){
+    if (document.getElementById('scrollTopBtn')) return;
+    var b = document.createElement('button');
+    b.id = 'scrollTopBtn'; b.setAttribute('aria-label','Back to top'); b.textContent = '\u2191';
+    b.style.cssText = 'position:fixed;right:26px;bottom:26px;z-index:9999;width:52px;height:52px;border-radius:50%;border:0;background:#1EBABB;color:#fff;font-size:22px;font-weight:700;cursor:pointer;box-shadow:0 10px 26px rgba(20,40,35,.28);opacity:0;visibility:hidden;transition:opacity .3s ease,visibility .3s ease,transform .2s ease;';
+    b.onmouseenter = function(){ b.style.transform = 'translateY(-3px)'; };
+    b.onmouseleave = function(){ b.style.transform = 'none'; };
+    b.onclick = function(){ window.scrollTo({ top:0, behavior:'smooth' }); };
+    document.body.appendChild(b);
+    var onScroll = function(){ var y = window.scrollY || document.documentElement.scrollTop; if (y > 500){ b.style.opacity='1'; b.style.visibility='visible'; } else { b.style.opacity='0'; b.style.visibility='hidden'; } };
+    window.addEventListener('scroll', onScroll, { passive:true }); onScroll();
+  }
+  componentDidMount(){ this.initScrollTop();
+    this.renderIcons();
+    this.initReveals();
+    this.initReviewsCarousel();
+    this.initCatToggle();
+  }
+
+  initCatToggle(){
+    const bind = () => {
+      const t = document.getElementById('catToggle');
+      const g = document.getElementById('catGrid');
+      const c = document.getElementById('catChevron');
+      if (!t || !g || t.__wired) return;
+      t.__wired = true;
+      t.addEventListener('click', () => {
+        const open = g.style.display !== 'none';
+        g.style.display = open ? 'none' : 'grid';
+        if (c) c.style.transform = open ? 'rotate(0deg)' : 'rotate(180deg)';
+      });
+    };
+    bind(); setTimeout(bind, 400); setTimeout(bind, 1000);
+  }
+
+  initReviewsCarousel(){
+    const mount = () => {
+      const el = document.getElementById('rvSwiperEl');
+      if (!el || el.__sw || typeof Swiper === 'undefined') return false;
+      el.__sw = new Swiper(el, {
+        effect: 'coverflow', grabCursor: true, slidesPerView: 'auto',
+        centeredSlides: true, loop: true, spaceBetween: 28,
+        coverflowEffect: { rotate: 28, stretch: 0, depth: 110, modifier: 1, slideShadows: false },
+        observer: true, observeParents: true, updateOnWindowResize: true
+      });
+      const recenter = () => { try { el.__sw.update(); el.__sw.slideToLoop(0, 0, false); } catch(e){} };
+      requestAnimationFrame(() => requestAnimationFrame(recenter));
+      if (document.fonts && document.fonts.ready) document.fonts.ready.then(recenter);
+      [150,400,900,1500].forEach(ms => setTimeout(recenter, ms));
+      if (window.ResizeObserver){ let lw=0; new ResizeObserver(()=>{const w=el.clientWidth; if(w&&w!==lw){lw=w;recenter();}}).observe(el); }
+      return true;
+    };
+    if (!mount()){ let n=0; const t=setInterval(()=>{ if(mount()||++n>40) clearInterval(t); },150); }
+  }
+  componentDidUpdate(){ this.renderIcons(); }
+
+  renderIcons(){
+    const go = () => { try { if (window.lucide) window.lucide.createIcons(); } catch(e){} };
+    go(); setTimeout(go, 300); setTimeout(go, 900);
+  }
+
+  initReveals(){
+    const io = new IntersectionObserver((es) => {
+      es.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+    }, { threshold: 0.1 });
+    setTimeout(() => {
+      document.querySelectorAll('.reveal, .bl-grid').forEach(el => io.observe(el));
+    }, 60);
+  }
+
+  renderVals(){
+    return {
+      reviews: (function(){ var b=[
+        { name:'Trustpilot', stars:'★★★★★', quote:'"Genuinely helpful advice with no jargon and no pressure. I would happily recommend them to friends and family."' },
+        { name:'Trustpilot', stars:'★★★★★', quote:'"Clear, thorough, courteous, three words that capture my experience. A trustworthy brokerage service, I felt in control."' },
+        { name:'Trustpilot', stars:'★★★★★', quote:'"Great to deal with, fully explained my options and never once put any pressure on me to purchase anything. Have made several follow-up calls to make sure everything was in place."' },
+        { name:'Trustpilot', stars:'★★★★☆', quote:'"Easy, helpful and polite. The service from TopQuote was excellent from start to finish. Everyone I spoke to was knowledgeable."' },
+        { name:'Trustpilot', stars:'★★★★★', quote:'"From the first call to the final policy, everything was straightforward and stress-free. I always knew exactly where I stood."' },
+        { name:'Trustpilot', stars:'★★★★★', quote:'"Everything made very clear and the online documentation was easy to do. Excellent from start to finish."' }
+      ]; return b.concat(b,b); })(),
+      categories: [
+        'Life insurance policies', 'Life insurance guides', 'Family & life insurance',
+        'Life insurance providers', 'Life insurance & medical conditions', 'Life insurance & occupations',
+        'Life insurance & hobbies', 'Income protection guides', 'Income protection & medical conditions',
+        'Income protection & occupations', 'Income protection providers', 'Senior life insurance guides',
+        'Over 50 providers', 'Funeral planning', 'Research articles'
+      ],
+      articles: [
+        { title:'Private medical insurance', excerpt:'Find out everything you need to know about private medical cover, what it includes, what it costs, and whether it\'s right for you.', author:'Tanweer Hussain', role:'Protection Expert', time:'8 min' },
+        { title:'Does income protection cover redundancy?', excerpt:'Will you be covered for redundancy with an income protection policy? We explain exactly what these policies do and don\'t pay out for.', author:'Tanweer Hussain', role:'Protection Expert', time:'8 min' },
+        { title:'Vitality serious illness cover', excerpt:'Serious illness cover is Vitality\'s version of critical illness. Here\'s how it works and how it compares to standard cover.', author:'Tanweer Hussain', role:'Protection Expert', time:'8 min' },
+        { title:'Child critical illness cover', excerpt:'Children\'s critical illness cover is an extra benefit that can be added to a policy. We look at what it covers and what to check.', author:'Tanweer Hussain', role:'Protection Expert', time:'7 min' },
+        { title:'Income protection vs payment protection insurance', excerpt:'Do you need income protection or payment protection? We break down the difference so you can choose the right cover.', author:'Tanweer Hussain', role:'Protection Expert', time:'6 min' },
+        { title:'Life insurance to cover inheritance tax', excerpt:'Whole of life insurance could help to avoid or minimise an inheritance tax bill for your family. Here\'s how it works.', author:'Tanweer Hussain', role:'Head of Customer Journey', time:'9 min' },
+        { title:'Life insurance for builders', excerpt:'Find out everything builders need to know about securing life insurance, including how your trade affects your premiums.', author:'Tanweer Hussain', role:'Protection Expert', time:'6 min' },
+        { title:'Tree surgeon life insurance', excerpt:'Despite the risks that come with working at height, tree surgeons can still find affordable, comprehensive life cover.', author:'Tanweer Hussain', role:'Protection Expert', time:'5 min' }
+      ],
+      shortReviews: [
+        { title:'A very concise conversation', body:'Had a very concise conversation with the adviser, he helped so much and made everything clear.' },
+        { title:'Fantastic and knowledgeable', body:'The team was fantastic and very knowledgeable. They answered every question I had without any pressure.' },
+        { title:'Brilliant service', body:'Brilliant, very friendly and made everything easy to understand. I felt properly looked after from start to finish.' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>
