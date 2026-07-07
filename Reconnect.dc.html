@@ -19,6 +19,7 @@
   .nav-link{white-space:nowrap;}
   .nav-link:hover{color:#1EBABB !important;}
   .nav-dd{position:relative;}
+  .nav-dd:hover::after{content:"";position:absolute;left:0;top:100%;width:100%;height:14px;}
   .nav-dd-menu{position:absolute;top:calc(100% + 6px);left:0;background:#0C1F19;border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:8px;min-width:190px;opacity:0;visibility:hidden;transform:translateY(6px);transition:opacity .2s ease,transform .2s ease;box-shadow:0 20px 40px rgba(0,0,0,.35);z-index:60;}
   .nav-dd:hover .nav-dd-menu{opacity:1;visibility:visible;transform:translateY(0);}
   .nav-dd-menu a{display:block;padding:10px 14px;color:#fff !important;text-decoration:none;font-size:15px;border-radius:8px;white-space:nowrap;}
@@ -34,6 +35,13 @@
   .steps-row.in .step-col{opacity:1;transform:none;transition:opacity .6s ease,transform .6s ease;}
   .steps-row.in .step-col:nth-child(1){transition-delay:0ms;}.steps-row.in .step-col:nth-child(2){transition-delay:110ms;}.steps-row.in .step-col:nth-child(3){transition-delay:220ms;}.steps-row.in .step-col:nth-child(4){transition-delay:330ms;}.steps-row.in .step-col:nth-child(5){transition-delay:440ms;}
   .faq-q{cursor:pointer;transition:background .25s ease;}
+  @keyframes partnerFadeUp{0%{opacity:0;transform:translateY(30px);}100%{opacity:1;transform:translateY(0);}}
+  #partnerHeading,#partnerBtn{opacity:0;}
+  #partnerCard.pv-in #partnerHeading{animation:partnerFadeUp .8s ease-out .1s forwards;}
+  #partnerCard.pv-in #partnerBtn{animation:partnerFadeUp .8s ease-out .25s forwards;}
+  #partnerBtn:hover{background:#159a9b !important;}
+  .partner-trail{position:absolute;width:150px;aspect-ratio:16/10;object-fit:cover;pointer-events:none;border-radius:12px;box-shadow:0 10px 24px rgba(0,0,0,.18);z-index:5;will-change:transform,opacity;transition:opacity 1s linear,transform 1s linear;}
+  @media (prefers-reduced-motion:reduce){#partnerHeading,#partnerBtn{opacity:1 !important;animation:none !important;}}
   .faq-item.open .faq-a{max-height:360px;opacity:1;}
   .faq-item.open .faq-plus{transform:rotate(45deg);}
   .abtn{transition:transform .3s cubic-bezier(.34,1.56,.44,1),filter .3s ease,background .25s ease;}
@@ -61,7 +69,7 @@
 
   <!-- ============ HERO ============ -->
   <section style="position:relative;height:100vh;min-height:640px;background:#000;color:#fff;overflow:hidden;display:flex;flex-direction:column;">
-    <video src="assets/reconnect-hero.mp4" autoplay="" muted="" loop="" playsinline="" preload="auto" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;z-index:0;"></video>
+    <img src="assets/reconnect-hero-poster.jpg" alt="TopQuote adviser with a family" fetchpriority="high" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;z-index:0;">
     <div style="position:absolute;inset:0;background:linear-gradient(112deg,rgba(9,34,25,.92) 0%,rgba(11,42,31,.7) 42%,rgba(24,140,140,.44) 78%,rgba(30,186,187,.32) 100%);z-index:1;"></div>
 
     <header style="position:relative;z-index:5;padding:30px clamp(24px,5vw,84px);display:flex;align-items:center;justify-content:space-between;gap:40px;">
@@ -100,7 +108,7 @@
   <section style="background:#F6F7FB;padding:100px clamp(24px,5vw,40px);">
     <div class="split" style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:480px 1fr;gap:70px;align-items:center;">
       <div class="reveal" style="height:560px;border-radius:16px;overflow:hidden;background:#000;">
-        <video src="assets/reconnect-people.mp4" autoplay="" muted="" loop="" playsinline="" preload="auto" style="width:100%;height:100%;object-fit:cover;display:block;"></video>
+        <img src="assets/reconnect-people-poster.jpg" alt="A family enjoying time together" style="width:100%;height:100%;object-fit:cover;display:block;">
       </div>
       <div>
         <div class="reveal" style="display:flex;align-items:center;gap:9px;margin-bottom:18px;">
@@ -134,7 +142,18 @@
       <h2 class="reveal arva-h" style="font-size:clamp(32px,4.2vw,52px);line-height:1.1;font-weight:600;color:#173B33;margin-bottom:28px;">A quick update on your<br>Legal &amp; General policy</h2>
       <div class="reveal" style="display:flex;flex-direction:column;gap:20px;color:#5B6B66;font-size:16.5px;line-height:1.8;max-width:820px;margin:0 auto;">
         <p>If you hold a Legal &amp; General life insurance or critical illness policy, your servicing has recently been transferred to TopQuote, a team of qualified advisers who specialise in Legal &amp; General protection products.</p>
-        <p>Your cover is unchanged. Your premiums, benefits and policy terms all stay exactly as they are. We've put this page together to explain who we are, why you're hearing from us, and the small things worth checking now you have a dedicated review partner.</p>
+    </div>
+  </section>
+
+  <!-- ============ LET'S GET YOU COVERED ============ -->
+  <section style="background:#F6F7FB;padding:70px 40px;">
+    <div id="partnerCard" style="position:relative;max-width:1200px;margin:0 auto;min-height:620px;display:flex;align-items:center;justify-content:center;background:#fff;border-radius:40px;overflow:hidden;padding:60px 40px;box-shadow:0 0 0 .5px rgba(0,0,0,.05),0 4px 30px rgba(0,0,0,.08);cursor:crosshair;">
+      <div style="position:relative;z-index:10;display:flex;flex-direction:column;align-items:center;text-align:center;pointer-events:none;">
+        <h2 id="partnerHeading" class="arva-h" style="font-size:clamp(48px,7vw,80px);line-height:1.1;letter-spacing:-.02em;color:#0D212C;font-weight:600;margin-bottom:36px;">Let's get you covered</h2>
+        <a id="partnerBtn" href="Contact.dc.html" style="pointer-events:auto;display:inline-flex;align-items:center;gap:12px;background:#1EBABB;color:#fff;padding:12px 22px 12px 12px;border-radius:14px;text-decoration:none;font-weight:600;font-size:15.5px;box-shadow:0 1px 2px 0 rgba(5,26,36,.1),0 4px 4px 0 rgba(5,26,36,.09),0 9px 6px 0 rgba(5,26,36,.05),0 17px 7px 0 rgba(5,26,36,.01),inset 0 2px 8px 0 rgba(255,255,255,.5);transition:background .2s ease;">
+          <span style="width:40px;height:40px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;flex:none;"><img src="assets/topquote-mark-teal.png" alt="TopQuote" style="width:26px;height:26px;object-fit:contain;"></span>
+          <span>Get in touch with an advisor</span>
+        </a>
       </div>
     </div>
   </section>
@@ -386,7 +405,7 @@
           <div style="display:flex;flex-direction:column;gap:16px;">
             <span style="display:flex;align-items:flex-start;gap:10px;color:#6B7280;font-size:15px;line-height:1.55;"><i data-lucide="map-pin" style="width:17px;height:17px;color:#1EBABB;margin-top:2px;flex:none;"></i> <span>Alderley Park, Suite 3,<br>GLASSHOUSE, Congleton Road,<br>Macclesfield, SK10 4TG</span></span>
             <span style="display:flex;align-items:center;gap:10px;color:#6B7280;font-size:15px;"><i data-lucide="phone" style="width:17px;height:17px;color:#1EBABB;flex:none;"></i> Customer support: 0161 974 3710</span>
-            <span style="display:flex;align-items:center;gap:10px;color:#6B7280;font-size:15px;"><i data-lucide="clock" style="width:17px;height:17px;color:#1EBABB;flex:none;"></i> Working time: Mon &ndash; Fri: 8:30 &ndash; 18:00</span>
+            <span style="display:flex;align-items:center;gap:10px;color:#6B7280;font-size:15px;white-space:nowrap;"><i data-lucide="clock" style="width:17px;height:17px;color:#1EBABB;flex:none;"></i> Working time: Mon &ndash; Fri: 8:30 &ndash; 18:00</span>
             <span style="display:flex;align-items:center;gap:10px;color:#6B7280;font-size:15px;"><i data-lucide="mail" style="width:17px;height:17px;color:#1EBABB;flex:none;"></i> hello@topquote.uk.com</span>
           </div>
         </div>
@@ -488,10 +507,10 @@ class Component extends DCLogic {
       ],
       faqs: [
         { q:'Why am I being contacted about my Legal & General policy?', a:'Legal & General appointed TopQuote to take over the servicing of policies that were previously looked after by your original broker, who is no longer working with them. Your policy hasn\'t moved or changed, only the team responsible for reviewing and updating it on a day-to-day basis has changed.' },
-        { q:'Has my Legal & General policy changed?', a:'No. Your cover, premiums, benefits and policy terms all remain exactly as they were. The only difference is that TopQuote is now your point of contact for reviews, updates and questions.' },
-        { q:'How can I verify TopQuote has been appointed by Legal & General?', a:'You can verify this directly with Legal & General using the customer line printed on any of your policy documents, or by calling 0370 010 4080. You can also confirm our FCA authorisation on the FCA Register at register.fca.org.uk.' },
-        { q:'What happens to life insurance after separation or divorce?', a:'Your policy stays in force, but separation or divorce can change who depends on you financially and who you\'d want to benefit from it. It\'s worth reviewing both your cover amount and your nominated beneficiary so they still reflect your wishes. We can talk you through the options.' },
-        { q:'Is there a cost for the policy review?', a:'No. There is no fee for reviewing your existing Legal & General cover or for keeping your details up to date. If you decide to arrange new or additional cover, we\'ll always be upfront about how we\'re paid before you commit to anything.' }
+        { q:'Has my Legal & General policy changed?', a:'No. Your provider, premiums, cover amount, and policy terms are all exactly as they were. The only thing that\'s different is who you\'ll hear from when it\'s time for a review, an update, or a question about your cover.' },
+        { q:'How can I verify TopQuote has been appointed by Legal & General?', a:'The simplest way is to call Legal & General directly. Their customer service line is 0370 010 4080, or you can use the number printed on your policy documents. Tell them you\'ve been contacted by TopQuote and ask them to confirm the appointment, they\'ll be happy to do so. We genuinely encourage this; it\'s the most reliable way to put any concerns to rest.' },
+        { q:'What happens to life insurance after separation or divorce?', a:'Relationship breakdown can have implications for existing policies, particularly if you have a joint policy or if your named beneficiaries have changed. It is generally advisable to review your cover following a separation or divorce, and to update beneficiary arrangements where necessary.' },
+        { q:'Is there a cost for the policy review?', a:'No. Policy reviews are completely free of charge, and there\'s no obligation to change anything. If a review shows you could benefit from updated terms or different cover, we\'ll explain the options clearly, but the decision is always yours.' }
       ]
     };
   }

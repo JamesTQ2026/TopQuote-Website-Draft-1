@@ -26,6 +26,7 @@
   #rvSwiper .swiper-slide-active{opacity:1;}
   #rvSwiper .swiper-slide-prev,#rvSwiper .swiper-slide-next{opacity:.62;}
   .nav-dd{position:relative;}
+  .nav-dd:hover::after{content:"";position:absolute;left:0;top:100%;width:100%;height:14px;}
   .nav-dd-menu{position:absolute;top:calc(100% + 6px);left:0;background:#0C1F19;border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:8px;min-width:190px;opacity:0;visibility:hidden;transform:translateY(6px);transition:opacity .2s ease,transform .2s ease;box-shadow:0 20px 40px rgba(0,0,0,.35);z-index:60;}
   .nav-dd:hover .nav-dd-menu{opacity:1;visibility:visible;transform:translateY(0);}
   .nav-dd-menu a{display:block;padding:10px 14px;color:#fff !important;text-decoration:none;font-size:15px;border-radius:8px;white-space:nowrap;}
@@ -40,6 +41,8 @@
   .cat-chip{transition:color .2s ease,background .2s ease;cursor:pointer;}
   .cat-chip:hover{color:#1EBABB !important;}
   .pg-btn{transition:background .2s ease,color .2s ease;cursor:pointer;}
+  .read-now{transition:background .22s ease,color .22s ease;padding:8px 16px;border-radius:999px;}
+  .bl-card:hover .read-now{background:#1EBABB;color:#fff !important;}
   .abtn{transition:transform .3s cubic-bezier(.34,1.56,.44,1),filter .3s ease,background .25s ease;}
   .abtn:hover{transform:translateY(-3px) scale(1.03);}
   @media (prefers-reduced-motion:reduce){.reveal,.bl-card{opacity:1 !important;transform:none !important;}}
@@ -80,7 +83,7 @@
         </div>
         <h1 class="arva-h" style="font-size:clamp(40px,4.6vw,68px);line-height:1.05;font-weight:600;letter-spacing:.3px;text-transform:uppercase;">Life insurance &amp; income<br>protection articles</h1>
         <p style="margin-top:22px;font-size:18px;line-height:1.6;color:rgba(255,255,255,.85);max-width:560px;">In-depth life insurance &amp; income protection articles, written in-house by our protection experts.</p>
-        <a href="Home Page.dc.html#contactSection" class="abtn" style="display:inline-flex;align-items:center;gap:10px;margin-top:32px;background:#1EBABB;color:#fff;padding:16px 32px;border-radius:10px;text-decoration:none;font-weight:700;font-size:16px;">Get a quote <i data-lucide="arrow-right" style="width:18px;height:18px;"></i></a>
+        <a href="Get a Quote.dc.html" class="abtn" style="display:inline-flex;align-items:center;gap:10px;margin-top:32px;background:#1EBABB;color:#fff;padding:16px 32px;border-radius:10px;text-decoration:none;font-weight:700;font-size:16px;">Get a quote <i data-lucide="arrow-right" style="width:18px;height:18px;"></i></a>
       </div>
       <div style="background:#fff;border:1px solid #e6e8ec;border-radius:16px;padding:26px 34px;text-align:center;box-shadow:0 24px 60px rgba(0,0,0,.28);max-width:280px;margin:0 auto;">
         <div style="display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:16px;color:#191919;font-weight:600;font-size:20px;"><span style="color:#00b67a;font-size:22px;line-height:1;">&#9733;</span> Trustpilot</div>
@@ -97,42 +100,12 @@
     </div>
   </section>
 
-  <!-- ============ CATEGORIES ============ -->
-  <section style="background:#fff;padding:52px clamp(24px,5vw,40px);border-bottom:1px solid #ECEEF4;">
-    <div style="max-width:1200px;margin:0 auto;">
-      <div id="catToggle" style="display:flex;align-items:center;gap:10px;margin-bottom:30px;cursor:pointer;user-select:none;">
-        <span class="arva-h" style="font-size:22px;font-weight:700;color:#173B33;">Browse by category</span>
-        <i id="catChevron" data-lucide="chevron-down" style="width:20px;height:20px;color:#1EBABB;transition:transform .3s ease;"></i>
-      </div>
-      <div id="catGrid" class="cat-grid" style="display:none;grid-template-columns:repeat(3,1fr);gap:20px 40px;">
-        <sc-for list="{{ categories }}" as="c" hint-placeholder-count="12">
-          <a href="#articles" class="cat-chip" style="color:#173B33;font-weight:600;font-size:16px;text-decoration:none;padding:6px 0;border-bottom:1px solid transparent;">{{ c }}</a>
-        </sc-for>
-      </div>
-    </div>
-  </section>
+
 
   <!-- ============ FEATURED ============ -->
   <section style="background:#F6F7FB;padding:70px clamp(24px,5vw,40px) 20px;">
     <div style="max-width:1200px;margin:0 auto;">
-      <div style="font-size:13px;color:#9AA6A2;margin-bottom:22px;"><a href="Home Page.dc.html" style="color:#1EBABB;text-decoration:none;">Home</a> &nbsp;&rsaquo;&nbsp; Articles</div>
-      <h2 class="reveal arva-h" style="font-size:clamp(26px,3vw,38px);font-weight:700;color:#173B33;margin-bottom:26px;">Featured article</h2>
-      <div class="reveal feat-card" style="display:grid;grid-template-columns:1.6fr 1fr;gap:0;background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 16px 44px rgba(20,40,35,.08);">
-        <div style="padding:44px 46px;">
-          <h3 class="arva-h" style="font-size:26px;font-weight:700;color:#173B33;margin-bottom:16px;">Life insurance with a free gift</h3>
-          <div style="width:100%;height:3px;background:#1EBABB;border-radius:2px;margin-bottom:22px;"></div>
-          <p style="color:#5B6B66;font-size:16px;line-height:1.75;max-width:520px;">Many life insurance policies now come with a free welcome gift. But which insurers are offering the best gift, and are they actually worth it? Read our guide to the best life insurance with rewards and incentives.</p>
-        </div>
-        <div style="background:#ECEDF1;padding:44px 40px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:14px;">
-          <div style="width:70px;height:70px;border-radius:50%;background:#1EBABB;display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Playfair Display',Georgia,serif;font-size:32px;font-weight:700;">T</div>
-          <div>
-            <div class="arva-h" style="font-size:18px;font-weight:700;color:#173B33;">Tanweer Hussain</div>
-            <div style="color:#8A94A6;font-size:14px;">Protection Expert</div>
-          </div>
-          <div style="display:flex;align-items:center;gap:7px;color:#173B33;font-size:14px;font-weight:700;"><i data-lucide="clock" style="width:16px;height:16px;color:#1EBABB;"></i> 10 min read</div>
-          <a href="#" class="abtn" style="margin-top:6px;background:#1EBABB;color:#fff;padding:12px 30px;border-radius:24px;text-decoration:none;font-weight:700;font-size:14px;">Read now</a>
-        </div>
-      </div>
+      <div style="font-size:13px;color:#9AA6A2;"><a href="Home Page.dc.html" style="color:#1EBABB;text-decoration:none;">Home</a> &nbsp;&rsaquo;&nbsp; Articles</div>
     </div>
   </section>
 
@@ -141,7 +114,7 @@
     <div style="max-width:1200px;margin:0 auto;">
       <h2 class="reveal arva-h" style="font-size:clamp(26px,3vw,38px);font-weight:700;color:#173B33;margin-bottom:34px;">Financial protection articles from our experts</h2>
       <div class="bl-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:26px;">
-        <sc-for list="{{ articles }}" as="a" hint-placeholder-count="9">
+        <sc-for list="{{ pagedArticles }}" as="a" hint-placeholder-count="6">
           <div class="bl-card" style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 8px 24px rgba(20,40,35,.05);">
             <h3 class="arva-h" style="font-size:24px;font-weight:700;color:#173B33;line-height:1.2;margin-bottom:16px;">{{ a.title }}</h3>
             <div style="width:54px;height:3px;background:#1EBABB;border-radius:2px;margin-bottom:22px;"></div>
@@ -155,20 +128,19 @@
             </div>
             <div style="display:flex;align-items:center;justify-content:space-between;">
               <span style="display:flex;align-items:center;gap:7px;color:#173B33;font-size:14px;font-weight:700;"><i data-lucide="clock" style="width:16px;height:16px;color:#1EBABB;"></i> {{ a.time }}</span>
-              <a href="#" style="color:#1EBABB;font-weight:700;font-size:15px;text-decoration:none;">Read now &rsaquo;</a>
+              <a href="{{ a.href }}" class="read-now" style="color:#1EBABB;font-weight:700;font-size:15px;text-decoration:none;">Read now &rsaquo;</a>
             </div>
           </div>
         </sc-for>
       </div>
 
       <!-- pagination -->
-      <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-top:52px;">
-        <button class="pg-btn" style="width:44px;height:44px;border-radius:50%;border:none;background:#E7EAF2;color:#8A94A6;display:flex;align-items:center;justify-content:center;"><i data-lucide="chevron-left" style="width:18px;height:18px;"></i></button>
-        <button class="pg-btn" style="width:44px;height:44px;border-radius:50%;border:none;background:#1EBABB;color:#fff;font-weight:700;font-size:15px;">1</button>
-        <button class="pg-btn" style="width:44px;height:44px;border-radius:50%;border:none;background:transparent;color:#8A94A6;font-weight:700;font-size:15px;">2</button>
-        <button class="pg-btn" style="width:44px;height:44px;border-radius:50%;border:none;background:transparent;color:#8A94A6;font-weight:700;font-size:15px;">3</button>
-        <button class="pg-btn" style="width:44px;height:44px;border-radius:50%;border:none;background:transparent;color:#8A94A6;font-weight:700;font-size:15px;">4</button>
-        <button class="pg-btn" style="width:44px;height:44px;border-radius:50%;border:none;background:#173B33;color:#fff;display:flex;align-items:center;justify-content:center;"><i data-lucide="chevron-right" style="width:18px;height:18px;"></i></button>
+      <div id="blPager" style="display:flex;align-items:center;justify-content:center;gap:10px;margin-top:52px;">
+        <button class="pg-btn" onClick="{{ goPrev }}" style="width:44px;height:44px;border-radius:50%;border:none;background:#E7EAF2;color:#8A94A6;display:flex;align-items:center;justify-content:center;cursor:pointer;"><i data-lucide="chevron-left" style="width:18px;height:18px;"></i></button>
+        <sc-for list="{{ pages }}" as="p" hint-placeholder-count="5">
+          <button class="pg-btn" onClick="{{ p.onClick }}" style="{{ p.style }}">{{ p.n }}</button>
+        </sc-for>
+        <button class="pg-btn" onClick="{{ goNext }}" style="width:44px;height:44px;border-radius:50%;border:none;background:#173B33;color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;"><i data-lucide="chevron-right" style="width:18px;height:18px;"></i></button>
       </div>
     </div>
   </section>
@@ -234,7 +206,7 @@
           <div style="display:flex;flex-direction:column;gap:16px;">
             <span style="display:flex;align-items:flex-start;gap:10px;color:#6B7280;font-size:15px;line-height:1.55;"><i data-lucide="map-pin" style="width:17px;height:17px;color:#1EBABB;margin-top:2px;flex:none;"></i> <span>Alderley Park, Suite 3,<br>GLASSHOUSE, Congleton Road,<br>Macclesfield, SK10 4TG</span></span>
             <span style="display:flex;align-items:center;gap:10px;color:#6B7280;font-size:15px;"><i data-lucide="phone" style="width:17px;height:17px;color:#1EBABB;flex:none;"></i> Customer support: 0161 974 3710</span>
-            <span style="display:flex;align-items:center;gap:10px;color:#6B7280;font-size:15px;"><i data-lucide="clock" style="width:17px;height:17px;color:#1EBABB;flex:none;"></i> Working time: Mon &ndash; Fri: 8:30 &ndash; 18:00</span>
+            <span style="display:flex;align-items:center;gap:10px;color:#6B7280;font-size:15px;white-space:nowrap;"><i data-lucide="clock" style="width:17px;height:17px;color:#1EBABB;flex:none;"></i> Working time: Mon &ndash; Fri: 8:30 &ndash; 18:00</span>
             <span style="display:flex;align-items:center;gap:10px;color:#6B7280;font-size:15px;"><i data-lucide="mail" style="width:17px;height:17px;color:#1EBABB;flex:none;"></i> hello@topquote.uk.com</span>
           </div>
         </div>
@@ -330,8 +302,18 @@ class Component extends DCLogic {
     }, 60);
   }
 
+  goTo(n){
+    const total = Math.ceil(30/6);
+    const p = Math.max(1, Math.min(total, n));
+    if (p !== (this.state.page||1)){
+      this.setState({ page: p });
+      const grid = document.getElementById('articles');
+      if (grid) window.scrollTo({ top: grid.getBoundingClientRect().top + window.scrollY - 110, behavior:'smooth' });
+    }
+  }
+
   renderVals(){
-    return {
+    const V = {
       reviews: (function(){ var b=[
         { name:'Trustpilot', stars:'★★★★★', quote:'"Genuinely helpful advice with no jargon and no pressure. I would happily recommend them to friends and family."' },
         { name:'Trustpilot', stars:'★★★★★', quote:'"Clear, thorough, courteous, three words that capture my experience. A trustworthy brokerage service, I felt in control."' },
@@ -348,14 +330,36 @@ class Component extends DCLogic {
         'Over 50 providers', 'Funeral planning', 'Research articles'
       ],
       articles: [
-        { title:'Private medical insurance', excerpt:'Find out everything you need to know about private medical cover, what it includes, what it costs, and whether it\'s right for you.', author:'Tanweer Hussain', role:'Protection Expert', time:'8 min' },
-        { title:'Does income protection cover redundancy?', excerpt:'Will you be covered for redundancy with an income protection policy? We explain exactly what these policies do and don\'t pay out for.', author:'Tanweer Hussain', role:'Protection Expert', time:'8 min' },
-        { title:'Vitality serious illness cover', excerpt:'Serious illness cover is Vitality\'s version of critical illness. Here\'s how it works and how it compares to standard cover.', author:'Tanweer Hussain', role:'Protection Expert', time:'8 min' },
-        { title:'Child critical illness cover', excerpt:'Children\'s critical illness cover is an extra benefit that can be added to a policy. We look at what it covers and what to check.', author:'Tanweer Hussain', role:'Protection Expert', time:'7 min' },
-        { title:'Income protection vs payment protection insurance', excerpt:'Do you need income protection or payment protection? We break down the difference so you can choose the right cover.', author:'Tanweer Hussain', role:'Protection Expert', time:'6 min' },
-        { title:'Life insurance to cover inheritance tax', excerpt:'Whole of life insurance could help to avoid or minimise an inheritance tax bill for your family. Here\'s how it works.', author:'Tanweer Hussain', role:'Head of Customer Journey', time:'9 min' },
-        { title:'Life insurance for builders', excerpt:'Find out everything builders need to know about securing life insurance, including how your trade affects your premiums.', author:'Tanweer Hussain', role:'Protection Expert', time:'6 min' },
-        { title:'Tree surgeon life insurance', excerpt:'Despite the risks that come with working at height, tree surgeons can still find affordable, comprehensive life cover.', author:'Tanweer Hussain', role:'Protection Expert', time:'5 min' }
+        { title:'Life Insurance for Married Couples: A UK Guide', excerpt:'Marriage tends to bring finances closer together. You may share a mortgage, plan for children, or simply build a life where each of you relies on the…', author:'Tanweer Hussain', role:'Protection Expert', time:'6 min', href:'blog-life-insurance-for-married-couples-a-uk-guide.html' },
+        { title:'Joint Life Insurance vs Single: A UK Guide', excerpt:'If you and your partner are thinking about cover, one of the first decisions is whether to take a single joint policy between you or a separate policy…', author:'Tanweer Hussain', role:'Protection Expert', time:'7 min', href:'blog-joint-life-insurance-vs-single-a-uk-guide.html' },
+        { title:'How to Buy Life Insurance in the UK: A Plain-English Guide', excerpt:'Buying life insurance in the UK is more straightforward than many people expect. The broad process is: work out what you need it to do, choose a policy…', author:'Tanweer Hussain', role:'Protection Expert', time:'12 min', href:'blog-buying-life-insurance.html' },
+        { title:'How Much Life Insurance Do I Need? A UK Guide', excerpt:'It is one of the most common questions people ask before taking out cover, and one of the hardest to answer with a single number: how much life insurance…', author:'Tanweer Hussain', role:'Protection Expert', time:'8 min', href:'blog-how-much-life-insurance-do-i-need-a-uk-guide.html' },
+        { title:'Income Protection for the Self-Employed', excerpt:'If you are self-employed and could not work because of illness or injury, your income would usually stop more or less straight away, and there is no…', author:'Tanweer Hussain', role:'Protection Expert', time:'7 min', href:'blog-income-protection-for-the-self-employed.html' },
+        { title:'Is Income Protection Insurance Worth It?', excerpt:'The honest answer is: it depends on you, and we are not going to pretend otherwise. For many working-age people, especially anyone who would struggle…', author:'Tanweer Hussain', role:'Protection Expert', time:'8 min', href:'blog-is-income-protection-insurance-worth-it.html' },
+        { title:'What Is Income Protection Insurance?', excerpt:'Income protection insurance pays you a regular, tax-free income if you cannot work because of illness or injury. Instead of a one-off lump sum, it tops up…', author:'Tanweer Hussain', role:'Protection Expert', time:'10 min', href:'blog-income-protection-insurance.html' },
+        { title:'Over 50s Life Insurance Explained', excerpt:'Over 50s life insurance is a type of whole-of-life cover, usually open to people aged roughly 50 to 80, that pays out a fixed, tax-free lump sum whenever…', author:'Tanweer Hussain', role:'Protection Expert', time:'9 min', href:'blog-over-50s-life-insurance.html' },
+        { title:'Income Protection vs Critical Illness Cover', excerpt:'Income protection and critical illness cover are easy to confuse, but they solve genuinely different problems. In short: income protection pays you a…', author:'Tanweer Hussain', role:'Protection Expert', time:'7 min', href:'blog-income-protection-vs-critical-illness.html' },
+        { title:'Can You Get Critical Illness Cover Without Life Insurance?', excerpt:'Short answer first, because it is the thing you came here to find out. Yes, you can get critical illness cover without life insurance. It is sold as a…', author:'Tanweer Hussain', role:'Protection Expert', time:'11 min', href:'blog-can-you-get-critical-illness-cover-without-life-insurance.html' },
+        { title:'Life Insurance for Parents', excerpt:'Life insurance for parents is simply cover arranged by mums and dads so that, if the worst happened, the people who depend on them would be looked after…', author:'Tanweer Hussain', role:'Protection Expert', time:'10 min', href:'blog-life-insurance-for-parents.html' },
+        { title:'Life Insurance With Pre-existing Conditions', excerpt:'If you have a health condition and you have quietly assumed life insurance is off the table, this is the bit worth reading first. For most people with a…', author:'Tanweer Hussain', role:'Protection Expert', time:'13 min', href:'blog-life-insurance-with-pre-existing-conditions.html' },
+        { title:'Is Life Insurance Part of Your Estate?', excerpt:'It is one of those questions that only tends to occur to people once the policy is already in a drawer, gathering dust and direct debits: is life…', author:'Tanweer Hussain', role:'Protection Expert', time:'9 min', href:'blog-is-life-insurance-part-of-your-estate.html' },
+        { title:'Life Insurance After Divorce: A Plain-English UK Guide', excerpt:'Divorce comes with a long and joyless to-do list, and somewhere below the solicitor, the house and who keeps the good frying pan sits a line that is easy…', author:'Tanweer Hussain', role:'Protection Expert', time:'10 min', href:'blog-life-insurance-after-divorce-guide.html' },
+        { title:'Family Life Insurance Explained: A Plain-English UK Guide', excerpt:'A new baby, a bigger mortgage, the slow realisation that several people now depend on your income: family life tends to arrive faster than the paperwork.…', author:'Tanweer Hussain', role:'Protection Expert', time:'9 min', href:'blog-family-life-insurance-2.html' },
+        { title:'Life Insurance After Cancer: What You Need to Know', excerpt:'Getting life insurance after cancer is possible for many people. Whether it is available, and on what terms, depends on the type and stage of the cancer,…', author:'Tanweer Hussain', role:'Protection Expert', time:'11 min', href:'blog-life-insurance-after-cancer.html' },
+        { title:'Family Life Insurance: What It Is, Who Needs It, and What to Think About', excerpt:'The strange thing about life insurance is that almost everyone agrees they should sort it out. It sits on the mental list alongside booking the dentist…', author:'Tanweer Hussain', role:'Protection Expert', time:'11 min', href:'blog-family-life-insurance.html' },
+        { title:'Do You Need Life Insurance for a Mortgage? A Plain-English UK Guide', excerpt:'The mortgage offer lands in your inbox. You allow yourself about four seconds of celebration, and then someone asks whether you have your life insurance…', author:'Tanweer Hussain', role:'Protection Expert', time:'11 min', href:'blog-do-you-need-life-insurance-for-a-mortgage.html' },
+        { title:'Using Life Insurance for Inheritance Tax Planning UK', excerpt:'Inheritance tax is a charge on the estate of a person who has died. For many families, particularly those who own property in the UK, the liability can…', author:'Tanweer Hussain', role:'Protection Expert', time:'6 min', href:'blog-using-life-insurance-for-inheritance-tax-planning-uk.html' },
+        { title:'Cohabiting Couples and Life Insurance UK: What You Need to Know', excerpt:'Cohabiting couples are the fastest-growing family type in the UK, yet many remain unaware of the significant legal gap that exists between their position…', author:'Tanweer Hussain', role:'Protection Expert', time:'6 min', href:'blog-cohabiting-couples-and-life-insurance-uk-what-you-need-to-know.html' },
+        { title:'Life Insurance for Stay-at-Home Parents UK: Do You Need Cover?', excerpt:'Life insurance decisions in households with a stay-at-home parent are often skewed heavily towards the earning partner. The working partner’s income is…', author:'Tanweer Hussain', role:'Protection Expert', time:'5 min', href:'blog-life-insurance-for-stay-at-home-parents-uk-do-you-need-cover.html' },
+        { title:'Life Insurance After a Heart Attack UK: Can You Get Cover?', excerpt:'A heart attack is a serious medical event, and it naturally raises concerns about whether life insurance remains accessible afterwards. The honest answer…', author:'Tanweer Hussain', role:'Protection Expert', time:'7 min', href:'blog-life-insurance-after-a-heart-attack-uk-can-you-get-cover.html' },
+        { title:'Waiver of Premium: What It Is and Whether You Need It', excerpt:'Waiver of premium is one of the most straightforward and potentially valuable add-ons available when taking out a life insurance policy. Despite its…', author:'Tanweer Hussain', role:'Protection Expert', time:'6 min', href:'blog-waiver-of-premium-what-it-is-and-whether-you-need-it.html' },
+        { title:'Life Insurance for First-Time Buyers UK: What You Need to Know', excerpt:'Taking on a mortgage for the first time is one of the most significant financial commitments most people make. A repayment mortgage runs for twenty-five…', author:'Tanweer Hussain', role:'Protection Expert', time:'6 min', href:'blog-life-insurance-for-first-time-buyers-uk-what-you-need-to-know.html' },
+        { title:'Can You Have Two Life Insurance Policies in the UK?', excerpt:'There is no legal restriction in the UK on how many life insurance policies you can hold at any one time. Individuals regularly hold two or more policies…', author:'Tanweer Hussain', role:'Protection Expert', time:'6 min', href:'blog-can-you-have-two-life-insurance-policies-in-the-uk.html' },
+        { title:'Decreasing Term vs Level Term Life Insurance: What Is the Difference?', excerpt:'When you take out life insurance in the UK, one of the first decisions you will face is whether to choose decreasing term or level term cover. The…', author:'Tanweer Hussain', role:'Protection Expert', time:'6 min', href:'blog-decreasing-term-vs-level-term-life-insurance-what-is-the-difference.html' },
+        { title:'Joint Life Insurance vs Two Single Policies: Which Is Better?', excerpt:'When two people take out life insurance together, they generally have two options: a joint policy that covers both lives under one plan, or two separate…', author:'Tanweer Hussain', role:'Protection Expert', time:'6 min', href:'blog-joint-life-insurance-vs-two-single-policies-which-is-better.html' },
+        { title:'Shareholder Protection Insurance UK: Keeping Control of Your Business', excerpt:'If a shareholder in a UK limited company dies, their shares pass automatically to their estate. The deceased\'s family may become unwilling co-owners of a…', author:'Tanweer Hussain', role:'Protection Expert', time:'4 min', href:'blog-shareholder-protection-insurance-uk-keeping-control-of-your-business.html' },
+        { title:'Life Insurance and Mental Health UK: Can You Still Get Cover?', excerpt:'A diagnosis of depression, anxiety, or another mental health condition does not automatically disqualify you from obtaining life insurance in the UK.…', author:'Tanweer Hussain', role:'Protection Expert', time:'6 min', href:'blog-life-insurance-and-mental-health-uk-can-you-still-get-cover.html' },
+        { title:'Life Insurance for Cancer Survivors UK: Can You Get Cover After Treatment?', excerpt:'Many cancer survivors in the UK are able to obtain life insurance, though the availability and cost of cover depends heavily on the type of cancer, the…', author:'Tanweer Hussain', role:'Protection Expert', time:'4 min', href:'blog-life-insurance-for-cancer-survivors-uk-can-you-get-cover-after-treatment.html' }
       ],
       shortReviews: [
         { title:'A very concise conversation', body:'Had a very concise conversation with the adviser, he helped so much and made everything clear.' },
@@ -363,6 +367,16 @@ class Component extends DCLogic {
         { title:'Brilliant service', body:'Brilliant, very friendly and made everything easy to understand. I felt properly looked after from start to finish.' }
       ]
     };
+    const PS = 6, pg = this.state.page || 1;
+    const tot = Math.ceil(V.articles.length / PS), s = (pg-1)*PS;
+    V.pagedArticles = V.articles.slice(s, s+PS);
+    const AB = 'width:44px;height:44px;border-radius:50%;border:none;background:#1EBABB;color:#fff;font-weight:700;font-size:15px;cursor:pointer;';
+    const IB = 'width:44px;height:44px;border-radius:50%;border:none;background:transparent;color:#8A94A6;font-weight:700;font-size:15px;cursor:pointer;';
+    V.pages = [];
+    for (let i=1;i<=tot;i++) V.pages.push({ n:i, style:(i===pg?AB:IB), onClick:()=>this.goTo(i) });
+    V.goPrev = () => this.goTo(pg-1);
+    V.goNext = () => this.goTo(pg+1);
+    return V;
   }
 }
 </script>

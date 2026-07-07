@@ -49,6 +49,7 @@
   #heroPara{}
   @media (prefers-reduced-motion:reduce){#heroHeading,#tpCard,#heroPara{animation:none !important;}}
   .nav-dd{position:relative;}
+  .nav-dd:hover::after{content:"";position:absolute;left:0;top:100%;width:100%;height:14px;}
   .nav-dd-menu{position:absolute;top:calc(100% + 6px);left:0;background:#0C1F19;border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:8px;min-width:190px;opacity:0;visibility:hidden;transform:translateY(6px);transition:opacity .2s ease,transform .2s ease;box-shadow:0 20px 40px rgba(0,0,0,.35);z-index:60;}
   .nav-dd:hover .nav-dd-menu{opacity:1;visibility:visible;transform:translateY(0);}
   .nav-dd-menu a{display:block;padding:10px 14px;color:#fff !important;text-decoration:none;font-size:15px;border-radius:8px;white-space:nowrap;}
@@ -86,7 +87,7 @@
 
   <!-- ============ HERO + HEADER ============ -->
   <section id="heroPanel" data-screen-label="Hero" style="position:relative;height:100vh;min-height:640px;background:#000;color:#fff;overflow:hidden;display:flex;flex-direction:column;will-change:transform;transform-origin:center top;">
-    <video id="heroVideo" src="assets/about-hero-bg.mp4" autoplay="" muted="" loop="" playsinline="" preload="auto" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;z-index:0;"></video>
+    <img id="heroVideo" src="assets/about-hero-bg-poster.jpg" alt="TopQuote team" fetchpriority="high" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;z-index:0;">
     <div style="position:absolute;inset:0;background:linear-gradient(118deg,rgba(11,42,31,.9) 0%,rgba(12,45,33,.6) 38%,rgba(24,140,140,.4) 72%,rgba(30,186,187,.28) 100%);"></div>
     <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,28,20,.55) 0%,rgba(7,28,20,0) 32%,rgba(7,28,20,.5) 100%);"></div>
     <!-- vertical grid lines (removed for now, restore to bring back): <div style="position:absolute;inset:0;pointer-events:none;background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.05) 0 1px,transparent 1px 240px);"></div> -->
@@ -277,12 +278,12 @@
       <div style="background:#fff;border-radius:18px;padding:44px 40px;box-shadow:0 14px 40px rgba(20,40,35,.07);">
         <span style="width:56px;height:56px;border-radius:13px;background:#1EBABB;display:inline-flex;align-items:center;justify-content:center;margin-bottom:26px;"><i data-lucide="shield" style="width:28px;height:28px;color:#fff;"></i></span>
         <h3 class="arva-h" style="font-size:23px;font-weight:700;color:#173B33;margin-bottom:16px;">Advised service</h3>
-        <p style="color:#5B6B66;font-size:15px;line-height:1.75;">We can help connect you with FCA-authorised advisers who can discuss life insurance options based on your individual circumstances. They can explain suitable products and answer any questions, helping you make an informed decision.</p>
+        <p style="color:#5B6B66;font-size:15px;line-height:1.75;">Our FCA-authorised advisers can discuss your life insurance options based on your individual circumstances, explain suitable products, and answer any questions, helping you make an informed decision.</p>
       </div>
       <div style="background:#fff;border-radius:18px;padding:44px 40px;box-shadow:0 14px 40px rgba(20,40,35,.07);">
         <span style="width:56px;height:56px;border-radius:13px;background:#1EBABB;display:inline-flex;align-items:center;justify-content:center;margin-bottom:26px;"><i data-lucide="user-check" style="width:28px;height:28px;color:#fff;"></i></span>
         <h3 class="arva-h" style="font-size:23px;font-weight:700;color:#173B33;margin-bottom:16px;">FCA regulated broker</h3>
-        <p style="color:#5B6B66;font-size:15px;line-height:1.75;">TopQuote is an appointed representative of The Openwork Partnership, a trading style of Openwork Limited, authorised and regulated by the <a href="#" style="color:#1EBABB;font-weight:600;text-decoration:none;">Financial Conduct Authority (FCA)</a>. We believe in treating our customers fairly and always provide the highest standard of service.</p>
+        <p style="color:#5B6B66;font-size:15px;line-height:1.75;">TopQuote is an appointed representative of The Openwork Partnership, a trading style of Openwork Limited, authorised and regulated by the <a href="https://www.fca.org.uk/" target="_blank" rel="noopener" style="color:#1EBABB;font-weight:600;text-decoration:none;">Financial Conduct Authority (FCA)</a>. We believe in treating our customers fairly and always provide the highest standard of service.</p>
       </div>
     </div>
   </section>
@@ -371,7 +372,7 @@
           <p>We were honoured to receive a beautiful recognition medallion this week, a replica of the one originally presented when TopQuote first contributed in 2021. It now sits proudly in our Cheshire office as a reminder of why supporting causes like this matters.</p>
           <p>Charitable giving has always been part of how we work at TopQuote. We're grateful to be a small part of The Christie's story.</p>
         </div>
-        <a href="#" class="abtn" style="display:inline-block;margin-top:32px;background:#1EBABB;color:#fff;padding:15px 32px;border-radius:9px;text-decoration:none;font-weight:700;font-size:15px;">Find Out More</a>
+        <a href="About Us.dc.html" class="abtn" style="display:inline-block;margin-top:32px;background:#1EBABB;color:#fff;padding:15px 32px;border-radius:9px;text-decoration:none;font-weight:700;font-size:15px;">Find Out More</a>
       </div>
       <div class="reveal" style="height:min(70vh,540px);border-radius:20px;overflow:hidden;background:#000;">
         <img src="assets/christie-award.jpg" alt="The Christie recognition medallion" style="width:100%;height:100%;object-fit:cover;display:block;">
@@ -442,7 +443,7 @@
           <div style="display:flex;flex-direction:column;gap:16px;">
             <span style="display:flex;align-items:flex-start;gap:10px;color:#6B7280;font-size:15px;line-height:1.55;"><i data-lucide="map-pin" style="width:17px;height:17px;color:#1EBABB;margin-top:2px;flex:none;"></i> <span>Alderley Park, Suite 3,<br>GLASSHOUSE, Congleton Road,<br>Macclesfield, SK10 4TG</span></span>
             <span style="display:flex;align-items:center;gap:10px;color:#6B7280;font-size:15px;"><i data-lucide="phone" style="width:17px;height:17px;color:#1EBABB;flex:none;"></i> Customer support: 0161 974 3710</span>
-            <span style="display:flex;align-items:center;gap:10px;color:#6B7280;font-size:15px;"><i data-lucide="clock" style="width:17px;height:17px;color:#1EBABB;flex:none;"></i> Working time: Mon, Fri: 8:30, 18:00</span>
+            <span style="display:flex;align-items:center;gap:10px;color:#6B7280;font-size:15px;white-space:nowrap;"><i data-lucide="clock" style="width:17px;height:17px;color:#1EBABB;flex:none;"></i> Working time: Mon, Fri: 8:30, 18:00</span>
             <span style="display:flex;align-items:center;gap:10px;color:#6B7280;font-size:15px;"><i data-lucide="mail" style="width:17px;height:17px;color:#1EBABB;flex:none;"></i> hello@topquote.uk.com</span>
           </div>
         </div>

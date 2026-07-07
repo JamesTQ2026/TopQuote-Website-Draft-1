@@ -393,7 +393,7 @@
       const showNext = !isSubmitted && (step === 1 ? (!isNaN(numericValue) && numericValue >= 1000) : rawEmail.length >= 4);
       const QUESTIONS = [
         { key: "quotesFor", type: "choice", line1: "I'd like quotes", line2: "for:", options: [{ k: "single", label: "Just me" }, { k: "couple", label: "Me and my partner" }] },
-        { key: "cover", type: "choice", line1: "What would you", line2: "like to cover?", options: [{ k: "family", label: "My Family" }, { k: "mortgage", label: "My Mortgage" }] },
+        { key: "cover", type: "choice", line1: "What would you", line2: "like to cover?", options: [{ k: "family", label: "My Family" }, { k: "mortgage", label: "My Mortgage" }, { k: "both", label: "Both" }] },
         { key: "smoker", type: "choice", line1: "Have you used nicotine", line2: "in the last 12 months?", options: [{ k: "no", label: "No" }, { k: "yes", label: "Yes" }] },
         { key: "heart", type: "choice", line1: "Any diagnosed", line2: "heart conditions?", options: [{ k: "no", label: "No" }, { k: "yes", label: "Yes" }] },
         { key: "amount", type: "select", line1: "How much cover", line2: "do you need?" },
@@ -408,8 +408,8 @@
         if (t === "dob") return !!form.dobD && !!form.dobM && !!form.dobY;
         if (t === "details") {
           const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
-          const phoneOk = /^0\d{9,10}$/.test((form.phone || "").replace(/[\s().-]/g, "").replace(/^\+44/, "0"));
-          return !!form.first.trim() && !!form.last.trim() && emailRe.test(form.email) && phoneOk;
+          const phoneOk = ((form.phone || "").replace(/\D/g, "")).length >= 10;
+          return !!form.title && !!form.first.trim() && !!form.last.trim() && emailRe.test(form.email) && phoneOk;
         }
         return true;
       };
@@ -420,6 +420,7 @@
         if (k === "couple") return <React.Fragment><circle cx="9" cy="8" r="3"/><path d="M3.5 19a5.5 5.5 0 0 1 11 0" strokeLinecap="round"/><path d="M16 6.2a3 3 0 0 1 0 5.6M16.5 13.4a5.5 5.5 0 0 1 4 5.3" strokeLinecap="round"/></React.Fragment>;
         if (k === "family") return <React.Fragment><circle cx="7" cy="7" r="2.2"/><circle cx="15" cy="6.5" r="2.5"/><path d="M3 19a4 4 0 0 1 8 0M10.5 19a4.5 4.5 0 0 1 9 0" strokeLinecap="round"/></React.Fragment>;
         if (k === "mortgage") return <React.Fragment><path d="M4 11.5 12 5l8 6.5M6 10.5V19h12v-8.5" strokeLinecap="round" strokeLinejoin="round"/><rect x="10.5" y="13.5" width="3" height="3.5"/></React.Fragment>;
+        if (k === "both") return <React.Fragment><path d="M2.5 10 8 5.5 13.5 10M4 9.3V16h8V9.3" strokeLinecap="round" strokeLinejoin="round"/><circle cx="18" cy="8.5" r="2.1"/><path d="M14.5 16a3.5 3.5 0 0 1 7 0" strokeLinecap="round"/></React.Fragment>;
         if (k === "no") return <React.Fragment><path d="M20 6 9 17l-5-5" strokeLinecap="round" strokeLinejoin="round"/></React.Fragment>;
         if (k === "yes") return <React.Fragment><circle cx="12" cy="12" r="9"/><path d="M12 8.5v4.5M12 15.5h.01" strokeLinecap="round"/></React.Fragment>;
         return null;
@@ -751,9 +752,11 @@
                       {currentQ.options.map((o) => (
                         <button key={o.k} onClick={() => setSelected(o.k)}
                           className={`w-[12.5rem] md:w-[14.5rem] h-[9.5rem] rounded-2xl flex flex-col items-center justify-center gap-4 backdrop-blur-md transition-all duration-200 cursor-pointer border ${selected===o.k ? "bg-[#1EBABB]/15 border-[#1EBABB] shadow-[0_8px_32px_rgba(30,186,187,0.25)]" : "bg-white border-[#E2E5EE] hover:border-[#1EBABB]/50 shadow-[0_4px_18px_rgba(12,31,25,0.06)]"}`}>
-                          <svg xmlns="http://www.w3.org/2000/svg" className="w-11 h-11 text-[#1EBABB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
-                            {optionIcon(o.k)}
-                          </svg>
+                          <div className="w-16 h-16 rounded-xl bg-[#1EBABB] flex items-center justify-center shadow-[0_6px_16px_rgba(30,186,187,0.35)]">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="w-9 h-9 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.7">
+                              {optionIcon(o.k)}
+                            </svg>
+                          </div>
                           <span className="font-sans text-[17px] md:text-[19px] font-medium text-[#0C1F19]">{o.label}</span>
                         </button>
                       ))}
@@ -822,8 +825,8 @@
 
               {/* 3D Carousel */}
               <motion.div className="scene"
-                initial={{ opacity: 0, scale: 0.9, y: "16rem" }}
-                animate={{ opacity: isSubmitted ? 0 : 1, scale: isSubmitted ? 0.80 : 1, y: isSubmitted ? "17.5rem" : "17.5rem" }}
+                initial={{ opacity: 0, scale: 0.9, y: "8rem" }}
+                animate={{ opacity: isSubmitted ? 0 : 1, scale: isSubmitted ? 0.80 : 1, y: isSubmitted ? "9.5rem" : "9.5rem" }}
                 transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
                 style={{ pointerEvents: isSubmitted ? "none" : "auto" }}>
                 <div className="a3d cursor-grab active:cursor-grabbing select-none"

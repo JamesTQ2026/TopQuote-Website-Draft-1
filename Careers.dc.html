@@ -21,6 +21,7 @@
   .nav-link{white-space:nowrap;}
   .nav-link:hover{color:#1EBABB !important;}
   .nav-dd{position:relative;}
+  .nav-dd:hover::after{content:"";position:absolute;left:0;top:100%;width:100%;height:14px;}
   .nav-dd-menu{position:absolute;top:calc(100% + 6px);left:0;background:#0C1F19;border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:8px;min-width:190px;opacity:0;visibility:hidden;transform:translateY(6px);transition:opacity .2s ease,transform .2s ease;box-shadow:0 20px 40px rgba(0,0,0,.35);z-index:60;}
   .nav-dd:hover .nav-dd-menu{opacity:1;visibility:visible;transform:translateY(0);}
   .nav-dd-menu a{display:block;padding:10px 14px;color:#fff !important;text-decoration:none;font-size:15px;border-radius:8px;white-space:nowrap;}
@@ -232,7 +233,7 @@
       <aside class="cf-side" style="display:flex;flex-direction:column;gap:18px;position:sticky;top:24px;">
         <div style="display:flex;flex-direction:column;gap:12px;background:#fff;border:1px solid #E7EAF2;border-radius:14px;padding:18px 20px;">
           <div style="display:flex;align-items:center;gap:12px;">
-            <span style="color:#00b67a;font-size:18px;letter-spacing:1px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            <span style="display:inline-flex;color:#00b67a;font-size:18px;letter-spacing:1px;">&#9733;&#9733;&#9733;&#9733;<span style="position:relative;display:inline-block;color:#d3d7dd;">&#9733;<span style="position:absolute;left:0;top:0;width:50%;overflow:hidden;color:#00b67a;">&#9733;</span></span></span>
             <div style="display:flex;flex-direction:column;line-height:1.2;"><strong style="color:#173B33;font-size:14px;">Trustpilot 4.3 / 5</strong><span style="font-size:12.5px;color:#8A94A6;">517 independent reviews</span></div>
           </div>
           <div style="display:flex;align-items:center;gap:12px;">
@@ -384,7 +385,7 @@
           <div style="display:flex;flex-direction:column;gap:16px;">
             <span style="display:flex;align-items:flex-start;gap:10px;color:#6B7280;font-size:15px;line-height:1.55;"><i data-lucide="map-pin" style="width:17px;height:17px;color:#1EBABB;margin-top:2px;flex:none;"></i> <span>Alderley Park, Suite 3,<br>GLASSHOUSE, Congleton Road,<br>Macclesfield, SK10 4TG</span></span>
             <span style="display:flex;align-items:center;gap:10px;color:#6B7280;font-size:15px;"><i data-lucide="phone" style="width:17px;height:17px;color:#1EBABB;flex:none;"></i> Customer support: 0161 974 3710</span>
-            <span style="display:flex;align-items:center;gap:10px;color:#6B7280;font-size:15px;"><i data-lucide="clock" style="width:17px;height:17px;color:#1EBABB;flex:none;"></i> Working time: Mon &ndash; Fri: 8:30 &ndash; 18:00</span>
+            <span style="display:flex;align-items:center;gap:10px;color:#6B7280;font-size:15px;white-space:nowrap;"><i data-lucide="clock" style="width:17px;height:17px;color:#1EBABB;flex:none;"></i> Working time: Mon &ndash; Fri: 8:30 &ndash; 18:00</span>
             <span style="display:flex;align-items:center;gap:10px;color:#6B7280;font-size:15px;"><i data-lucide="mail" style="width:17px;height:17px;color:#1EBABB;flex:none;"></i> hello@topquote.uk.com</span>
           </div>
         </div>

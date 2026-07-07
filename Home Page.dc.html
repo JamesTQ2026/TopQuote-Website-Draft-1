@@ -21,6 +21,7 @@
   .nav-link{white-space:nowrap;}
   .nav-link:hover{color:#1EBABB !important;}
   .nav-dd{position:relative;}
+  .nav-dd:hover::after{content:"";position:absolute;left:0;top:100%;width:100%;height:14px;}
   .nav-dd-menu{position:absolute;top:calc(100% + 6px);left:0;background:#0C1F19;border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:8px;min-width:190px;opacity:0;visibility:hidden;transform:translateY(6px);transition:opacity .2s ease,transform .2s ease;box-shadow:0 20px 40px rgba(0,0,0,.35);z-index:60;}
   .nav-dd:hover .nav-dd-menu{opacity:1;visibility:visible;transform:translateY(0);}
   .nav-dd-menu a{display:block;padding:10px 14px;color:#fff !important;text-decoration:none;font-size:15px;border-radius:8px;white-space:nowrap;}
@@ -260,7 +261,7 @@
             <span class="arva-h" style="font-size:58px;font-weight:700;color:#1EBABB;line-height:1;">1</span>
             <span style="height:1px;width:36px;background:#D5D9E4;"></span>
           </div>
-          <h3 class="arva-h" style="font-size:22px;font-weight:700;color:#173B33;margin-bottom:12px;">Fill in our simple form</h3>
+          <h3 class="arva-h" style="font-size:22px;font-weight:700;color:#173B33;margin-bottom:12px;min-height:88px;display:flex;align-items:center;justify-content:center;">Fill in our simple form</h3>
           <p style="color:#6B7280;font-size:14.5px;line-height:1.65;max-width:280px;margin:0 auto;">Answer a few questions about yourself and the cover you need.</p>
           <a href="#contactSection" style="margin:22px auto 0;background:#1EBABB;color:#fff;padding:12px 26px;border-radius:8px;text-decoration:none;font-weight:700;font-size:14px;display:inline-block;">Get started</a>
         </div>
@@ -273,7 +274,7 @@
             <span class="arva-h" style="font-size:58px;font-weight:700;color:#1EBABB;line-height:1;">2</span>
             <span style="height:1px;width:36px;background:#D5D9E4;"></span>
           </div>
-          <h3 class="arva-h" style="font-size:22px;font-weight:700;color:#173B33;margin-bottom:12px;">Get your personalised quotes</h3>
+          <h3 class="arva-h" style="font-size:22px;font-weight:700;color:#173B33;margin-bottom:12px;min-height:88px;display:flex;align-items:center;justify-content:center;">Get your personalised quotes</h3>
           <p style="color:#6B7280;font-size:14.5px;line-height:1.65;max-width:280px;margin:0 auto;">We provide the best quotes available from our trusted insurer partners and all the support you need to make a fully informed choice.</p>
         </div>
         <div style="flex:none;display:flex;align-items:center;padding:0 16px;">
@@ -285,7 +286,7 @@
             <span class="arva-h" style="font-size:58px;font-weight:700;color:#1EBABB;line-height:1;">3</span>
             <span style="height:1px;width:36px;background:#D5D9E4;"></span>
           </div>
-          <h3 class="arva-h" style="font-size:22px;font-weight:700;color:#173B33;margin-bottom:12px;">Secure your perfect policy</h3>
+          <h3 class="arva-h" style="font-size:22px;font-weight:700;color:#173B33;margin-bottom:12px;min-height:88px;display:flex;align-items:center;justify-content:center;">Secure your perfect policy</h3>
           <p style="color:#6B7280;font-size:14.5px;line-height:1.65;max-width:280px;margin:0 auto;">Enjoy peace of mind that your family are financially protected.</p>
         </div>
       </div>
@@ -296,7 +297,7 @@
   <section id="sx-stats" data-screen-label="Stats" style="position:relative;padding:96px 0;background:#F6F7FB;overflow:hidden;font-family:'Space Mono',monospace;">
     <div class="sx-glow"></div>
     <div style="position:relative;z-index:1;text-align:center;margin-bottom:44px;padding:0 40px;">
-      <div style="display:inline-flex;align-items:center;gap:9px;margin-bottom:16px;"><img src="assets/topquote-mark-teal.png" alt="TopQuote" style="width:22px;height:22px;object-fit:contain;flex:none;"><span style="color:#1EBABB;font-weight:700;font-size:15px;">Our Track Record</span></div>
+      <div style="display:inline-flex;align-items:center;gap:9px;margin-bottom:16px;"><img src="assets/topquote-mark-teal.png" alt="TopQuote" style="width:22px;height:22px;object-fit:contain;flex:none;"><span style="color:#1EBABB;font-weight:700;font-size:15px;font-family:'Mulish',sans-serif;">Our Track Record</span></div>
       <h2 class="arva-h" style="font-family:'Playfair Display',Georgia,serif;font-size:40px;font-weight:600;color:#173B33;">Trusted Protection, Proven Results</h2>
     </div>
     <div class="swiper" id="sx-stats-swiper">
@@ -323,7 +324,7 @@
             <div style="padding:6px;border-radius:28px;background:rgba(8,30,22,.05);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);display:flex;flex-direction:column;height:480px;">
               <div class="sx-shadow" style="background:#ECEDF1;border:1px solid rgba(8,30,22,.06);border-radius:23px;overflow:hidden;display:flex;flex-direction:column;flex:1;">
                 <div style="position:relative;flex:1;min-height:0;background:#ECEDF1;">
-                  <video class="sx-testi-vid" data-vid="{{ s.vid }}" muted="" loop="" playsinline="" preload="auto" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;"></video>
+                  <img class="sx-testi-img" src="{{ s.poster }}" alt="TopQuote customer" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;">
                 </div>
                 <div style="height:3px;background:#1EBABB;flex:none;"></div>
                 <div style="padding:22px 26px 26px;font-family:'Mulish',sans-serif;">
@@ -456,7 +457,7 @@
                   <line id="cpMonthlyLine" x1="82" y1="208" x2="396" y2="208" stroke="#173B33" stroke-width="4" stroke-linecap="round"></line>
                   <line id="cpCoverLine" x1="82" y1="92" x2="396" y2="92" stroke="#1EBABB" stroke-width="4" stroke-linecap="round"></line>
                   <text id="cpLblA" x="245" y="74" text-anchor="middle" font-size="14" font-weight="700" fill="#1EBABB" font-family="Mulish,sans-serif">Cover amounts stay the same</text>
-                  <text id="cpLblB" x="245" y="74" text-anchor="middle" font-size="14" font-weight="700" fill="#1EBABB" font-family="Mulish,sans-serif" opacity="0">Cover amount decreases to 0</text>
+                  <text id="cpLblB" x="245" y="74" text-anchor="middle" font-size="14" font-weight="700" fill="#1EBABB" font-family="Mulish,sans-serif" opacity="0">Cover amount decreases to zero</text>
                   <text x="239" y="196" text-anchor="middle" font-size="14" font-weight="700" fill="#173B33" font-family="Mulish,sans-serif">Monthly payments stay the same</text>
                   <text x="34" y="138" text-anchor="middle" font-size="12" fill="#6B7280" font-family="Mulish,sans-serif" transform="rotate(-90 34 138)">Cost of cover</text>
                   <text x="236" y="284" text-anchor="middle" font-size="12" fill="#6B7280" font-family="Mulish,sans-serif">Years of cover</text>
@@ -519,12 +520,12 @@
         </div>
         <!-- floating Learn More button + trailing dot -->
         <div id="wpDot" style="position:absolute;left:50%;top:26px;width:26px;height:26px;border-radius:50%;background:#fff;z-index:4;pointer-events:none;transform:translate(30px,84px);"></div>
-        <div id="wpBtn" style="position:absolute;left:50%;top:26px;transform:translate(-50%,0);z-index:5;filter:drop-shadow(0 14px 28px rgba(8,30,22,.32));cursor:pointer;">
+        <a id="wpBtn" href="About Us.dc.html" style="position:absolute;left:50%;top:26px;transform:translate(-50%,0);z-index:5;filter:drop-shadow(0 14px 28px rgba(8,30,22,.32));cursor:pointer;text-decoration:none;">
           <div style="width:104px;height:104px;border-radius:50%;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;">
             <span style="width:34px;height:34px;border-radius:50%;background:#173B33;display:flex;align-items:center;justify-content:center;"><i data-lucide="arrow-up-right" style="width:16px;height:16px;color:#fff;"></i></span>
             <span style="font-weight:700;font-size:13px;color:#173B33;">Learn More</span>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </section>
@@ -719,7 +720,7 @@
           <a href="About Us.dc.html" style="background:#fff;color:#173B33;padding:15px 30px;border-radius:8px;text-decoration:none;font-weight:700;font-size:15px;">About TopQuote</a>
         </div>
       </div>
-      <div style="margin-right:18%;flex-shrink:0;filter:drop-shadow(0 18px 34px rgba(8,40,30,.45));cursor:pointer;">
+      <a href="Get a Quote.dc.html" class="abtn" style="margin-right:18%;flex-shrink:0;filter:drop-shadow(0 18px 34px rgba(8,40,30,.45));text-decoration:none;">
         <div style="position:relative;width:176px;height:176px;">
           <div style="width:152px;height:152px;border-radius:50%;background:linear-gradient(180deg,#3fd3d4 0%,#1ebabb 52%,#159a9b 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;">
             <span style="width:42px;height:42px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;"><i data-lucide="arrow-up-right" style="width:20px;height:20px;color:#1EBABB;"></i></span>
@@ -727,7 +728,7 @@
           </div>
           <div style="position:absolute;right:0;bottom:0;width:40px;height:40px;border-radius:50%;background:linear-gradient(180deg,#3fd3d4 0%,#1ebabb 60%,#159a9b 100%);"></div>
         </div>
-      </div>
+      </a>
     </div>
   </section>
 
@@ -770,7 +771,7 @@
           <div style="display:flex;flex-direction:column;gap:16px;">
             <span style="display:flex;align-items:flex-start;gap:10px;color:#6B7280;font-size:15px;line-height:1.55;"><i data-lucide="map-pin" style="width:17px;height:17px;color:#1EBABB;margin-top:2px;flex:none;"></i> <span>Alderley Park, Suite 3,<br>GLASSHOUSE, Congleton Road,<br>Macclesfield, SK10 4TG</span></span>
             <span style="display:flex;align-items:center;gap:10px;color:#6B7280;font-size:15px;"><i data-lucide="phone" style="width:17px;height:17px;color:#1EBABB;flex:none;"></i> Customer support: 0161 974 3710</span>
-            <span style="display:flex;align-items:center;gap:10px;color:#6B7280;font-size:15px;"><i data-lucide="clock" style="width:17px;height:17px;color:#1EBABB;flex:none;"></i> Working time: Mon, Fri: 8:30, 18:00</span>
+            <span style="display:flex;align-items:center;gap:10px;color:#6B7280;font-size:15px;white-space:nowrap;"><i data-lucide="clock" style="width:17px;height:17px;color:#1EBABB;flex:none;"></i> Working time: Mon, Fri: 8:30, 18:00</span>
             <span style="display:flex;align-items:center;gap:10px;color:#6B7280;font-size:15px;"><i data-lucide="mail" style="width:17px;height:17px;color:#1EBABB;flex:none;"></i> hello@topquote.uk.com</span>
           </div>
         </div>
@@ -1268,12 +1269,12 @@ class Component extends DCLogic {
   }
   componentWillUnmount(){ if (this._onScroll) { window.removeEventListener('scroll', this._onScroll); window.removeEventListener('resize', this._onScroll); } }
   renderVals(){ const base = [
-    { isTesti: true, vid: 'assets/stats-vid-1.mp4', name: 'Feefo', quote: '"Great to deal with, fully explained my options and never once put any pressure on me to purchase anything. Have made several follow-up calls to make sure everything was in place."' },
-    { isTesti: true, vid: 'assets/stats-vid-2.mp4', name: 'Feefo', quote: '"Everything made very clear and the online documentation was easy to do. Excellent and very easy and clear from start to finish."' },
-    { isTesti: true, vid: 'assets/stats-vid-3.mp4', name: 'Feefo', quote: '"Easy, helpful and polite. The service from top quote was excellent from start to finish. Everyone I spoke to was helpful and knowledgeable."' },
-    { isTesti: true, vid: 'assets/stats-vid-4.mp4', name: 'Feefo', quote: '"Clear, thorough, courteous, three words that capture my experience. A trustworthy brokerage service, I felt in control."' },
-    { isTesti: true, vid: 'assets/stats-vid-5.mp4', name: 'Feefo', quote: '"From the first call to the final policy, everything was straightforward and stress-free. I always knew exactly where I stood."' },
-    { isTesti: true, vid: 'assets/stats-vid-6.mp4', name: 'Feefo', quote: '"Genuinely helpful advice with no jargon and no pressure. I would happily recommend them to friends and family."' }
+    { isTesti: true, vid: 'assets/stats-vid-1.mp4', poster: 'assets/stats-vid-1-poster.jpg', name: 'Feefo', quote: '"Great to deal with, fully explained my options and never once put any pressure on me to purchase anything. Have made several follow-up calls to make sure everything was in place."' },
+    { isTesti: true, vid: 'assets/stats-vid-2.mp4', poster: 'assets/stats-vid-2-poster.jpg', name: 'Feefo', quote: '"Everything made very clear and the online documentation was easy to do. Excellent and very easy and clear from start to finish."' },
+    { isTesti: true, vid: 'assets/stats-vid-3.mp4', poster: 'assets/stats-vid-3-poster.jpg', name: 'Feefo', quote: '"Easy, helpful and polite. The service from top quote was excellent from start to finish. Everyone I spoke to was helpful and knowledgeable."' },
+    { isTesti: true, vid: 'assets/stats-vid-4.mp4', poster: 'assets/stats-vid-4-poster.jpg', name: 'Feefo', quote: '"Clear, thorough, courteous, three words that capture my experience. A trustworthy brokerage service, I felt in control."' },
+    { isTesti: true, vid: 'assets/stats-vid-5.mp4', poster: 'assets/stats-vid-5-poster.jpg', name: 'Feefo', quote: '"From the first call to the final policy, everything was straightforward and stress-free. I always knew exactly where I stood."' },
+    { isTesti: true, vid: 'assets/stats-vid-6.mp4', poster: 'assets/stats-vid-6-poster.jpg', name: 'Feefo', quote: '"Genuinely helpful advice with no jargon and no pressure. I would happily recommend them to friends and family."' }
   ]; return { stats: base.concat(base, base) }; }
 
   updateStatsVideos(){
