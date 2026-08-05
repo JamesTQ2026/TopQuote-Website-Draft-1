@@ -93,6 +93,12 @@
     .cf-side{position:static !important;order:2;}
   }
   @media (max-width:560px){.cf-row{grid-template-columns:1fr !important;}.cf-btn{width:100%;}}
+  .faq2{border-radius:12px;overflow:hidden;box-shadow:0 6px 18px rgba(20,40,35,.06);}
+  .faq2 .faq-q{list-style:none;cursor:pointer;background:#1EBABB;color:#fff;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-weight:700;font-size:15.5px;font-family:'Mulish',sans-serif;}
+  .faq2 .faq-plus{font-size:22px;line-height:1;flex:none;transition:transform .3s ease;}
+  .faq2.open .faq-plus{transform:rotate(45deg);}
+  .faq2 .faq-a{max-height:0;opacity:0;overflow:hidden;transition:max-height .45s ease,opacity .45s ease;background:#fff;}
+  .faq2 p{padding:22px 26px;margin:0;color:#5B6B66;font-size:15px;line-height:1.75;}
   @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;}}
 </style>
 <script src="cookie-banner.js"></script>
@@ -139,6 +145,11 @@
       </div>
     </div>
   </section>
+
+  <!-- ============ BREADCRUMB ============ -->
+  <div style="padding:26px clamp(24px,5vw,40px) 0;">
+    <nav aria-label="Breadcrumb" style="max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:13.5px;font-weight:600;"><a href="Home Page.dc.html" style="color:#159a9b;text-decoration:underline;text-underline-offset:3px;">Home</a><span style="color:#8A94A6;">&raquo;</span><span style="color:#5B6B78;">Contact</span></nav>
+  </div>
 
   <!-- ============ FORM + SIDEBAR ============ -->
   <section style="background:#F6F7FB;padding:70px clamp(24px,5vw,40px) 96px;">
@@ -229,7 +240,7 @@
 
       <!-- RIGHT: TRUST SIDEBAR -->
       <aside class="cf-side" style="display:flex;flex-direction:column;gap:18px;position:sticky;top:24px;">
-        <div style="display:flex;flex-direction:column;gap:12px;background:#fff;border:1px solid #E7EAF2;border-radius:14px;padding:18px 20px;">
+        <div style="display:flex;flex-direction:row;flex-wrap:wrap;justify-content:space-around;align-items:center;gap:14px 28px;background:#fff;border:1px solid #E7EAF2;border-radius:14px;padding:18px 20px;">
           <div style="display:flex;align-items:center;gap:12px;">
             <span style="display:inline-flex;color:#00b67a;font-size:18px;letter-spacing:1px;">&#9733;&#9733;&#9733;&#9733;<span style="position:relative;display:inline-block;color:#d3d7dd;">&#9733;<span style="position:absolute;left:0;top:0;width:50%;overflow:hidden;color:#00b67a;">&#9733;</span></span></span>
             <div style="display:flex;flex-direction:column;line-height:1.2;"><strong style="color:#173B33;font-size:14px;">Trustpilot 4.3 / 5</strong><span style="font-size:12.5px;color:#8A94A6;">517 independent reviews</span></div>
@@ -306,6 +317,33 @@
     </div>
   </section>
 
+
+  <!-- ============ FAQS ============ -->
+  <section style="background:#F6F7FB;padding:10px clamp(24px,5vw,40px) 90px;">
+    <div style="max-width:900px;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:38px;">
+        <div style="display:inline-flex;align-items:center;gap:9px;margin-bottom:16px;">
+          <img src="assets/topquote-mark-teal.png" alt="TopQuote" style="width:20px;height:20px;object-fit:contain;">
+          <span style="color:#1EBABB;font-weight:700;font-size:15px;">FAQs</span>
+        </div>
+        <h2 class="arva-h" style="font-size:clamp(28px,3.6vw,46px);font-weight:600;color:#173B33;">Frequently asked questions</h2>
+      </div>
+      <div id="cfFaqList" style="display:flex;flex-direction:column;gap:14px;">
+        <div class="faq2">
+          <div class="faq-q"><span>How much is life insurance?</span><span class="faq-plus">+</span></div><div class="faq-a"><p>There's no standard price, because premiums are set by the insurer based on you. The main things that move the figure are your age, whether you smoke, your health and medical history, your occupation, how much cover you want and how long you want it for. The type of cover matters too, since <a href="Life Insurance.dc.html" style="color:#159a9b;font-weight:700;">level and decreasing term</a> are priced differently. We can't quote a figure without those details, but a short call is usually enough to <a href="Get a Quote.dc.html" style="color:#159a9b;font-weight:700;">get accurate quotes</a> back from our panel. There's no obligation to proceed.</p></div>
+        </div>
+        <div class="faq2">
+          <div class="faq-q"><span>Do you need life insurance for a mortgage?</span><span class="faq-plus">+</span></div><div class="faq-a"><p>Life insurance isn't a legal requirement for a mortgage in the UK. Some lenders make it a condition of the offer, and some don't, so it's worth checking your paperwork or asking your lender directly. Buildings insurance is the cover that's usually compulsory, and that's a different product. Plenty of people arrange <a href="Life Insurance.dc.html" style="color:#159a9b;font-weight:700;">life cover</a> alongside a mortgage by choice rather than obligation, so the loan could be repaid if they died before the term ended. We arrange the protection policy only, not the mortgage.<br><br><strong style="color:#173B33;">Your home may be repossessed if you do not keep up repayments on your mortgage.</strong></p></div>
+        </div>
+        <div class="faq2">
+          <div class="faq-q"><span>What does life insurance cover?</span><span class="faq-plus">+</span></div><div class="faq-a"><p>A <a href="Life Insurance.dc.html" style="color:#159a9b;font-weight:700;">term life insurance policy</a> pays a lump sum to your beneficiaries if you die during the term. What that money is used for is up to them, whether that's clearing a mortgage, <a href="Income Protection.dc.html" style="color:#159a9b;font-weight:700;">replacing lost income</a> or covering childcare and funeral costs. <a href="Critical Illness.dc.html" style="color:#159a9b;font-weight:700;">Critical illness cover</a> is a separate benefit some policies include, paying out on diagnosis of specific conditions listed by the insurer. Every policy has exclusions and each insurer words them differently, so the wording matters as much as the amount. Cover ends if you stop paying premiums, and if the term finishes without a claim there's no payout.</p></div>
+        </div>
+        <div class="faq2">
+          <div class="faq-q"><span>Is life insurance worth it?</span><span class="faq-plus">+</span></div><div class="faq-a"><p>That depends entirely on whether anyone would struggle financially if you died. If you have a mortgage, children, a partner who relies on your income or a business that depends on you, a payout would matter. If nobody is financially dependent on you and there's no debt anyone would inherit, it may be less of a priority. It's worth knowing that term life insurance only pays out if you die during the term, so if the policy runs its course you'll have paid premiums with no payout, which is the trade for the protection during the years you needed it. A <a href="Get a Quote.dc.html" style="color:#159a9b;font-weight:700;">no obligation conversation</a> will help you work out where you sit.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- ============ REVIEWS ============ -->
   <section style="background:#F6F7FB;padding:20px clamp(24px,5vw,40px) 80px;">
@@ -462,7 +500,33 @@ class Component extends DCLogic {
     var onScroll = function(){ var y = window.scrollY || document.documentElement.scrollTop; if (y > 500){ b.style.opacity='1'; b.style.visibility='visible'; } else { b.style.opacity='0'; b.style.visibility='hidden'; } };
     window.addEventListener('scroll', onScroll, { passive:true }); onScroll();
   }
-  componentDidMount(){ this.initScrollTop(); this.renderIcons(); this.initForm(); this.initReviewsCarousel(); this.initLetter(); this.initMiniReviews(); }
+  componentDidMount(){ this.initScrollTop(); this.renderIcons(); this.initForm(); this.initReviewsCarousel(); this.initLetter(); this.initMiniReviews(); this.initFaq(); }
+
+  initFaq(){
+    const bind = () => {
+      const list = document.getElementById('cfFaqList');
+      if (!list) { setTimeout(bind, 300); return; }
+      if (list.__delegated) return;
+      list.__delegated = true;
+      const setOpen = (item, open) => {
+        const a = item.querySelector('.faq-a');
+        if (!a) return;
+        if (open){ a.style.maxHeight = (a.scrollHeight + 40) + 'px'; a.style.opacity = '1'; }
+        else { a.style.maxHeight = '0px'; a.style.opacity = '0'; }
+      };
+      list.addEventListener('click', (e) => {
+        const q = e.target.closest && e.target.closest('.faq-q');
+        if (!q || !list.contains(q)) return;
+        const it = q.closest('.faq2');
+        const wasOpen = it.classList.contains('open');
+        list.querySelectorAll('.faq2').forEach(o => { o.classList.remove('open'); setOpen(o, false); });
+        if (!wasOpen){ it.classList.add('open'); setOpen(it, true); }
+      });
+      const items = list.querySelectorAll('.faq2');
+      if (items.length){ items.forEach(o => setOpen(o, false)); items[0].classList.add('open'); setOpen(items[0], true); }
+    };
+    bind();
+  }
 
   initMiniReviews(){
     var self = this;

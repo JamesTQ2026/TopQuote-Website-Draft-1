@@ -93,6 +93,12 @@
     .cf-side{position:static !important;order:2;}
   }
   @media (max-width:560px){.cf-row{grid-template-columns:1fr !important;}.cf-btn{width:100%;}}
+  .faq2{border-radius:12px;overflow:hidden;box-shadow:0 6px 18px rgba(20,40,35,.06);}
+  .faq2 .faq-q{list-style:none;cursor:pointer;background:#1EBABB;color:#fff;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-weight:700;font-size:15.5px;font-family:'Mulish',sans-serif;}
+  .faq2 .faq-plus{font-size:22px;line-height:1;flex:none;transition:transform .3s ease;}
+  .faq2.open .faq-plus{transform:rotate(45deg);}
+  .faq2 .faq-a{max-height:0;opacity:0;overflow:hidden;transition:max-height .45s ease,opacity .45s ease;background:#fff;}
+  .faq2 p{padding:22px 26px;margin:0;color:#5B6B66;font-size:15px;line-height:1.75;}
   @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;}}
 </style>
 <script src="cookie-banner.js"></script>
@@ -122,8 +128,8 @@
           <img src="assets/topquote-mark-teal.png" alt="TopQuote" style="width:22px;height:22px;object-fit:contain;">
           <span style="color:#3fd3d4;font-weight:700;font-size:15px;">Manchester &middot; Greater Manchester</span>
         </div>
-        <h1 class="arva-h" style="font-size:clamp(38px,4.4vw,64px);line-height:1.05;font-weight:600;letter-spacing:.3px;text-transform:uppercase;">Life insurance in Manchester</h1>
-        <p style="margin-top:16px;font-size:17px;line-height:1.6;color:rgba(255,255,255,.85);max-width:620px;">A no-obligation life insurance review for clients in Manchester and the surrounding area. Tell us how to reach you and a specialist will call at a time that suits you, no hard sell, no jargon.</p>
+        <h1 class="arva-h" style="font-size:clamp(38px,4.4vw,64px);line-height:1.05;font-weight:600;letter-spacing:.3px;text-transform:uppercase;">Life insurance in Manchester, arranged by a real adviser</h1>
+        <p style="margin-top:16px;font-size:17px;line-height:1.6;color:rgba(255,255,255,.85);max-width:620px;">Looking for a life insurance broker in Manchester? Tell us how to reach you and a specialist will call at a time that suits you, no hard sell, no jargon.</p>
       </div>
       <div style="background:#fff;border:1px solid #e6e8ec;border-radius:16px;padding:26px 34px;text-align:center;box-shadow:0 24px 60px rgba(0,0,0,.28);max-width:280px;margin:0 auto;">
         <div style="display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:16px;color:#191919;font-weight:600;font-size:20px;"><span style="color:#00b67a;font-size:22px;line-height:1;">&#9733;</span> Trustpilot</div>
@@ -140,6 +146,11 @@
     </div>
   </section>
 
+  <!-- ============ BREADCRUMB ============ -->
+  <div style="padding:26px clamp(24px,5vw,40px) 0;">
+    <nav aria-label="Breadcrumb" style="max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:13.5px;font-weight:600;"><a href="Home Page.dc.html" style="color:#159a9b;text-decoration:underline;text-underline-offset:3px;">Home</a><span style="color:#8A94A6;">&raquo;</span><a href="Contact.dc.html" style="color:#159a9b;text-decoration:underline;text-underline-offset:3px;">Contact</a><span style="color:#8A94A6;">&raquo;</span><span style="color:#5B6B78;">Manchester</span></nav>
+  </div>
+
   <!-- ============ FORM + SIDEBAR ============ -->
   <section style="background:#F6F7FB;padding:70px clamp(24px,5vw,40px) 96px;">
     <div class="cf-shell" style="display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:40px;max-width:1200px;margin:0 auto;align-items:start;">
@@ -147,9 +158,9 @@
       <!-- LEFT: FORM -->
       <div style="background:#fff;border-radius:20px;box-shadow:0 16px 44px rgba(20,40,35,.08);padding:clamp(28px,3.5vw,48px);">
         <div style="margin-bottom:26px;">
-          <span style="display:inline-flex;align-items:center;gap:9px;margin-bottom:12px;"><img src="assets/topquote-mark-teal.png" alt="TopQuote" style="width:22px;height:22px;object-fit:contain;"><span style="color:#1EBABB;font-weight:700;font-size:15px;">No-obligation review</span></span>
+          <span style="display:inline-flex;align-items:center;gap:9px;margin-bottom:12px;"><img src="assets/topquote-mark-teal.png" alt="TopQuote" style="width:22px;height:22px;object-fit:contain;"><span style="color:#1EBABB;font-weight:700;font-size:15px;">Get your no-obligation review</span></span>
           <h2 class="arva-h" style="font-size:clamp(26px,3vw,36px);line-height:1.12;font-weight:600;color:#173B33;margin-bottom:12px;">Protect what matters most in Manchester</h2>
-          <p style="color:#6B7280;font-size:15.5px;line-height:1.6;">Finding the right life insurance in Manchester can feel overwhelming, it doesn't have to be. We advise clients across Manchester city centre, Didsbury, Chorlton and Salford Quays. Tell us how to reach you and a specialist will call at a time that suits you.</p>
+          <p style="color:#6B7280;font-size:15.5px;line-height:1.6;">Tell us how to reach you and a specialist will call at a time that suits you.</p>
           <p style="margin-top:12px;font-size:13px;color:#8A94A6;"><span style="color:#159a9b;font-weight:700;">*</span> indicates a required field</p>
         </div>
 
@@ -229,7 +240,7 @@
 
       <!-- RIGHT: TRUST SIDEBAR -->
       <aside class="cf-side" style="display:flex;flex-direction:column;gap:18px;position:sticky;top:24px;">
-        <div style="display:flex;flex-direction:column;gap:12px;background:#fff;border:1px solid #E7EAF2;border-radius:14px;padding:18px 20px;">
+        <div style="display:flex;flex-direction:row;flex-wrap:wrap;justify-content:space-around;align-items:center;gap:14px 28px;background:#fff;border:1px solid #E7EAF2;border-radius:14px;padding:18px 20px;">
           <div style="display:flex;align-items:center;gap:12px;">
             <span style="display:inline-flex;color:#00b67a;font-size:18px;letter-spacing:1px;">&#9733;&#9733;&#9733;&#9733;<span style="position:relative;display:inline-block;color:#d3d7dd;">&#9733;<span style="position:absolute;left:0;top:0;width:50%;overflow:hidden;color:#00b67a;">&#9733;</span></span></span>
             <div style="display:flex;flex-direction:column;line-height:1.2;"><strong style="color:#173B33;font-size:14px;">Trustpilot 4.3 / 5</strong><span style="font-size:12.5px;color:#8A94A6;">517 independent reviews</span></div>
@@ -261,6 +272,14 @@
         </div>
       </aside>
 
+    </div>
+  </section>
+
+  <!-- ============ ADVICE ============ -->
+  <section style="background:#F6F7FB;padding:10px clamp(24px,5vw,40px) 40px;">
+    <div style="max-width:900px;margin:0 auto;text-align:center;">
+      <h2 class="arva-h" style="font-size:clamp(30px,3.8vw,48px);line-height:1.1;font-weight:600;color:#173B33;margin-bottom:20px;">Life insurance advice across Manchester</h2>
+      <p style="color:#6B7280;font-size:16px;line-height:1.75;">Finding the right life insurance in Manchester can feel overwhelming, it doesn't have to be. From the family life insurance Manchester parents choose to protect the household, to the life insurance for mortgage Manchester homeowners arrange alongside their repayment, we advise clients across Didsbury, Chorlton, Stockport, Altrincham and Sale. Tell us how to reach you and a specialist will call at a time that suits you.</p>
     </div>
   </section>
 
@@ -302,6 +321,40 @@
             <span style="display:inline-flex;align-items:center;gap:8px;color:#fff;font-weight:700;font-size:14px;letter-spacing:.02em;">View <i data-lucide="arrow-up-right" style="width:17px;height:17px;color:#1EBABB;"></i></span>
           </div>
         </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============ FAQS ============ -->
+  <section style="background:#F6F7FB;padding:10px clamp(24px,5vw,40px) 90px;">
+    <div style="max-width:900px;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:38px;">
+        <div style="display:inline-flex;align-items:center;gap:9px;margin-bottom:16px;">
+          <img src="assets/topquote-mark-teal.png" alt="TopQuote" style="width:20px;height:20px;object-fit:contain;">
+          <span style="color:#1EBABB;font-weight:700;font-size:15px;">FAQs</span>
+        </div>
+        <h2 class="arva-h" style="font-size:clamp(28px,3.6vw,46px);font-weight:600;color:#173B33;">Frequently asked questions</h2>
+      </div>
+      <div id="cfFaqList" style="display:flex;flex-direction:column;gap:14px;">
+        <div class="faq2">
+          <div class="faq-q"><span>Do you arrange life insurance Manchester wide?</span><span class="faq-plus">+</span></div><div class="faq-a"><p>Yes. We arrange life insurance Manchester wide and across Greater Manchester, covering Didsbury, Chorlton, Stockport, Altrincham, Sale, Salford and the surrounding areas. Our office is at Alderley Park, Suite 3, GLASSHOUSE, Congleton Road, Macclesfield SK10 4TG, a short drive from south Manchester. You'll speak to an FCA regulated protection adviser, and the first conversation is no obligation. Phone <a href="tel:+441619743710" style="color:#159a9b;font-weight:700;">0161 974 3710</a>, Monday to Friday, 8:30am to 6:00pm.</p></div>
+        </div>
+        <div class="faq2">
+          <div class="faq-q"><span>How do I compare life insurance companies Manchester residents can apply to?</span><span class="faq-plus">+</span></div><div class="faq-a"><p>You don't have to do it yourself. Rather than working through life insurance companies Manchester wide one quote at a time, you give us your details once and we look at the options across our panel, which includes Aviva, Legal &amp; General, Royal London, LV=, Vitality and Guardian. We work from that panel rather than the whole market. We'll explain how cover, definitions and exclusions differ between them, then handle the application through underwriting. Acceptance and the final premium are decided by the insurer, so cover isn't guaranteed.</p></div>
+        </div>
+        <div class="faq2">
+          <div class="faq-q"><span>What is family life insurance Manchester parents usually take out?</span><span class="faq-plus">+</span></div><div class="faq-a"><p>Most family life insurance Manchester parents arrange is a term policy that pays a lump sum if one of you dies during the term, so the household income or childcare costs are covered. Some people add a second policy on the other parent, or write cover in trust so the money reaches the family without waiting for probate. The policy has no cash value, cover ends if you stop paying premiums, and if the term finishes without a claim there's no payout.</p></div>
+        </div>
+        <div class="faq2">
+          <div class="faq-q"><span>What life insurance for mortgage Manchester homeowners need depends on the mortgage type</span><span class="faq-plus">+</span></div><div class="faq-a"><p>Life insurance for mortgage Manchester homeowners arrange normally comes in two shapes. Decreasing cover falls broadly in line with a repayment mortgage balance. Level cover stays the same throughout, which is the usual fit for an interest only mortgage where the balance doesn't reduce. Neither pays out if the term ends without a claim, and cover stops if premiums stop. We arrange the protection policy only, not the mortgage.<br><br><strong style="color:#173B33;">Your home may be repossessed if you do not keep up repayments on your mortgage.</strong></p></div>
+        </div>
+        <div class="faq2">
+          <div class="faq-q"><span>Can I get life and critical illness insurance Manchester wide on one policy?</span><span class="faq-plus">+</span></div><div class="faq-a"><p>Often yes. Life and critical illness insurance Manchester clients ask about is usually written as a combined policy that pays out on death or on diagnosis of one of the specific conditions listed by the insurer. Which conditions are covered, and how severe they must be to qualify, varies significantly between insurers, so the definitions matter more than the headline price. Not all illnesses are covered, and claims are subject to the policy terms.</p></div>
+        </div>
+        <div class="faq2">
+          <div class="faq-q"><span>How do I get life insurance quotes Manchester based advisers can actually explain?</span><span class="faq-plus">+</span></div><div class="faq-a"><p>Leave your details or call <a href="tel:+441619743710" style="color:#159a9b;font-weight:700;">0161 974 3710</a> and we'll go through what you're protecting and for how long. We'll then look at life insurance quotes Manchester clients are eligible for across our panel and talk you through what each one covers. There's no obligation to proceed. TopQuote is an Appointed Representative of The Openwork Partnership, which is authorised and regulated by the Financial Conduct Authority.</p></div>
+        </div>
       </div>
     </div>
   </section>
@@ -462,7 +515,33 @@ class Component extends DCLogic {
     var onScroll = function(){ var y = window.scrollY || document.documentElement.scrollTop; if (y > 500){ b.style.opacity='1'; b.style.visibility='visible'; } else { b.style.opacity='0'; b.style.visibility='hidden'; } };
     window.addEventListener('scroll', onScroll, { passive:true }); onScroll();
   }
-  componentDidMount(){ this.initScrollTop(); this.renderIcons(); this.initForm(); this.initReviewsCarousel(); this.initLetter(); this.initMiniReviews(); }
+  componentDidMount(){ this.initScrollTop(); this.renderIcons(); this.initForm(); this.initReviewsCarousel(); this.initLetter(); this.initMiniReviews(); this.initFaq(); }
+
+  initFaq(){
+    const bind = () => {
+      const list = document.getElementById('cfFaqList');
+      if (!list) { setTimeout(bind, 300); return; }
+      if (list.__delegated) return;
+      list.__delegated = true;
+      const setOpen = (item, open) => {
+        const a = item.querySelector('.faq-a');
+        if (!a) return;
+        if (open){ a.style.maxHeight = (a.scrollHeight + 40) + 'px'; a.style.opacity = '1'; }
+        else { a.style.maxHeight = '0px'; a.style.opacity = '0'; }
+      };
+      list.addEventListener('click', (e) => {
+        const q = e.target.closest && e.target.closest('.faq-q');
+        if (!q || !list.contains(q)) return;
+        const it = q.closest('.faq2');
+        const wasOpen = it.classList.contains('open');
+        list.querySelectorAll('.faq2').forEach(o => { o.classList.remove('open'); setOpen(o, false); });
+        if (!wasOpen){ it.classList.add('open'); setOpen(it, true); }
+      });
+      const items = list.querySelectorAll('.faq2');
+      if (items.length){ items.forEach(o => setOpen(o, false)); items[0].classList.add('open'); setOpen(items[0], true); }
+    };
+    bind();
+  }
 
   initMiniReviews(){
     var self = this;

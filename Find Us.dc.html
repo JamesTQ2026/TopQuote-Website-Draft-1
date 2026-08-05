@@ -143,6 +143,11 @@
     </div>
   </section>
 
+  <!-- ============ BREADCRUMB ============ -->
+  <div style="padding:26px clamp(24px,5vw,40px) 0;">
+    <nav aria-label="Breadcrumb" style="max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:13.5px;font-weight:600;"><a href="Home Page.dc.html" style="color:#159a9b;text-decoration:underline;text-underline-offset:3px;">Home</a><span style="color:#8A94A6;">&raquo;</span><span style="color:#5B6B78;">Find Us</span></nav>
+  </div>
+
   <!-- ============ FIND US ============ -->
   <section style="background:#F6F7FB;padding:70px clamp(24px,5vw,40px) 96px;">
     <div class="cf-shell" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:44px;max-width:1200px;margin:0 auto;align-items:stretch;">
@@ -498,7 +503,7 @@ class Component extends DCLogic {
   componentDidUpdate(){ this.renderIcons(); }
   renderVals(){ return { faqs: [
     { q:'Do you offer life insurance advice in Manchester?', a:'Yes. We advise clients across Greater Manchester, including Manchester city centre, Salford, Stockport, and surrounding areas. Appointments can be arranged by phone or online.' },
-    { q:'Do you cover the whole of Cheshire?', a:'Yes. We help clients throughout Cheshire, including Macclesfield, Wilmslow, Knutsford, Cheshire East, and nearby areas.' },
+    { q:'Do you cover the whole of Cheshire?', a:'Yes. We help clients throughout Cheshire, including Macclesfield, Wilmslow, Knutsford, and nearby areas.' },
     { q:'Is there a cost for your advice?', a:'No. There is no fee for our advice. We assess your circumstances and recommend suitable protection options at no direct cost to you.' },
     { q:'What types of cover can you help with?', a:'We can help with life insurance, critical illness cover, and income protection, depending on your needs and eligibility.' },
     { q:'Are you regulated?', a:'TopQuote is an appointed representative of The Openwork Partnership, a trading style of Openwork Limited which is authorised and regulated by the Financial Conduct Authority.' },
@@ -513,7 +518,7 @@ class Component extends DCLogic {
     { name:'Altrincham', bg:"url('assets/area-altrincham.jpg')", href:'Contact Altrincham.dc.html' },
     { name:'Wilmslow', bg:"url('assets/area-wilmslow.jpg')", href:'Contact Wilmslow.dc.html' },
     { name:'Knutsford', bg:"url('assets/area-knutsford.jpg')", href:'Contact Knutsford.dc.html' },
-    { name:'Cheshire East', bg:'none', href:'Contact Cheshire East.dc.html', showLogo:true }
+    { name:'Cheshire', bg:'none', href:'Contact Cheshire East.dc.html', showLogo:true }
   ], reviews: (function(){ var b=[
     { name:'Trustpilot', stars:'★★★★★', quote:'"Genuinely helpful advice with no jargon and no pressure. I would happily recommend them to friends and family."' },
     { name:'Trustpilot', stars:'★★★★★', quote:'"Clear, thorough, courteous, three words that capture my experience. A trustworthy brokerage service, I felt in control."' },
