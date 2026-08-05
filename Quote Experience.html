@@ -85,6 +85,7 @@
       cursor: pointer;
     }
   </style>
+<script src="mobile-nav.js" defer></script>
 </head>
 <body>
   <div id="root"></div>
@@ -267,11 +268,11 @@
     const PROVIDERS = [
       { type: "logo", src: "assets/logo-lg.png", name: "Legal & General" },
       { type: "trustpilot" },
-      { type: "logo", src: "assets/logo-royal-london.png", name: "Royal London" },
-      { type: "logo", src: "assets/logo-aviva.png", name: "Aviva" },
       { type: "logo", src: "assets/logo-vitality.png", name: "Vitality" },
+      { type: "logo", src: "assets/logo-aviva.png", name: "Aviva" },
+      { type: "logo", src: "assets/logo-royal-london.png", name: "Royal London" },
       { type: "feefo" },
-      { type: "logo", src: "assets/logo-lv.png", name: "LV" },
+      { type: "logo", src: "assets/logo-lv.png", name: "LV=" },
       { type: "logo", src: "assets/logo-guardian.png", name: "Guardian" },
     ];
     const DATA = [...PROVIDERS, ...PROVIDERS];
@@ -279,6 +280,8 @@
     const N = DATA.length;
     const BASE_ANGLE = 360 / N;
     const CARD_HEIGHT_EM = 24;
+    // Set to true to bring the insurer-logo carousel back (permission pending).
+    const SHOW_CAROUSEL = false;
     const BACK_COLOR = "#F6F7FB";
 
     const ProgressiveBlur = ({ className = "", backgroundColor = BACK_COLOR, position = "left", width = "25%", height = "100%", blurAmount = "12px" }) => {
@@ -350,6 +353,7 @@
       const [showCookies, setShowCookies] = useState(false);
       const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
       const [qIndex, setQIndex] = useState(0);
+      const [marketingOptIn, setMarketingOptIn] = useState(false);
       const [selected, setSelected] = useState(null);
       const [answers, setAnswers] = useState({});
       const [form, setForm] = useState({ amount: "\u00A3150,000", term: "20 years", title: "Mr", first: "", last: "", dobD: "", dobM: "", dobY: "", email: "", phone: "" });
@@ -431,11 +435,19 @@
         velocityRef.current = 2.4 * scrollDirectionRef.current;
         if (qIndex < QUESTIONS.length - 1) { setQIndex(qIndex + 1); setSelected(null); }
         else {
-          const payload = { ...answers, ...form };
+          const payload = { ...answers, ...form, marketingOptIn };
           try { window.parent && window.parent.postMessage({ type: "quoteComplete", data: payload }, "*"); } catch (e) {}
           setIsSubmitted(true);
           velocityRef.current = 7.5 * scrollDirectionRef.current;
         }
+      };
+
+      const goBackQuestion = () => {
+        if (qIndex === 0) return;
+        velocityRef.current = -2.4 * scrollDirectionRef.current;
+        const prev = QUESTIONS[qIndex - 1];
+        setQIndex(qIndex - 1);
+        setSelected(prev.type === "choice" ? (answers[prev.key] || null) : null);
       };
 
       const getScaleFactor = (text) => {
@@ -663,9 +675,10 @@
                 )}
               </AnimatePresence>
 
+
               {/* Progress Bar */}
               {!isSubmitted && (
-                <div className="absolute top-0 left-0 right-0 z-30 px-6 pt-7 pointer-events-none">
+                <div className="absolute top-0 left-0 right-0 z-30 px-6 pointer-events-none" style={{ paddingTop: 86 }}>
                   <div className="max-w-[1100px] mx-auto">
                     <div className="flex justify-between text-[13px] font-sans font-semibold text-[#5B6B78] mb-2.5">
                       <span>Step {Math.min(qIndex + 1, QUESTIONS.length)} of {QUESTIONS.length}</span>
@@ -809,6 +822,27 @@
                 )}
 
                 <AnimatePresence>
+                  {!isSubmitted && currentQ.type === "details" && (
+                    <motion.label key="optIn" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }}
+                      className="mt-[1.75rem] pointer-events-auto flex items-start gap-3 max-w-[33.75rem] text-left text-[#5B6B78] font-sans text-[13.5px] leading-[1.55] cursor-pointer select-none">
+                      <input type="checkbox" checked={marketingOptIn} onChange={(e) => setMarketingOptIn(e.target.checked)}
+                        style={{ width: 18, height: 18, marginTop: 1, accentColor: "#1EBABB", flex: "none" }} />
+                      <span>Tick this box if you want your details to be stored on our database, which may then be used for marketing purposes.</span>
+                    </motion.label>
+                  )}
+                </AnimatePresence>
+
+                <AnimatePresence>
+                  {!isSubmitted && qIndex > 0 && (
+                    <motion.button key="backBtn" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} whileHover={{ x: -3 }} whileTap={{ scale: 0.96 }}
+                      className="mt-[1.25rem] pointer-events-auto flex items-center gap-2 text-[#5B6B78] hover:text-[#173B33] font-sans font-semibold text-[13.5px] cursor-pointer select-none bg-transparent border-0"
+                      onClick={goBackQuestion}>
+                      « Back a step
+                    </motion.button>
+                  )}
+                </AnimatePresence>
+
+                <AnimatePresence>
                   {showContinue && (
                     <motion.button initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 10 }} transition={{ type: "spring", stiffness: 350, damping: 25, mass: 0.8 }} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}
                       className="mt-[1.75rem] pointer-events-auto flex items-center justify-center h-[50px] md:h-[60px] px-[2.1875rem] rounded-full bg-[#1EBABB] hover:bg-[#19a5a6] text-white font-sans font-semibold text-[clamp(13px,0.93rem,15px)] transition-colors duration-200 cursor-pointer select-none shadow-[0_8px_32px_rgba(30,186,187,0.35)]"
@@ -823,10 +857,11 @@
               <ProgressiveBlur position="left" backgroundColor={BACK_COLOR} />
               <ProgressiveBlur position="right" backgroundColor={BACK_COLOR} />
 
-              {/* 3D Carousel */}
+              {/* 3D Carousel — TEMP HIDDEN pending insurer logo permission; set SHOW_CAROUSEL = true to restore */}
+              {SHOW_CAROUSEL && (
               <motion.div className="scene"
                 initial={{ opacity: 0, scale: 0.9, y: "8rem" }}
-                animate={{ opacity: isSubmitted ? 0 : 1, scale: isSubmitted ? 0.80 : 1, y: isSubmitted ? "9.5rem" : "9.5rem" }}
+                animate={{ opacity: isSubmitted ? 0 : 1, scale: isSubmitted ? 0.80 : 1, y: isSubmitted ? "13rem" : "13rem" }}
                 transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
                 style={{ pointerEvents: isSubmitted ? "none" : "auto" }}>
                 <div className="a3d cursor-grab active:cursor-grabbing select-none"
@@ -873,6 +908,7 @@
                   })}
                 </div>
               </motion.div>
+              )}
 
               {/* Cookie Banner */}
               <AnimatePresence>

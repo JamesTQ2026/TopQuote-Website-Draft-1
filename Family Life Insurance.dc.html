@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Family life insurance arranged by our advisers. TopQuote compares cover from leading UK insurers to help you protect your family. No obligation.">
+<title>Family Life Insurance UK | Compare Quotes | TopQuote</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;800&amp;family=Playfair+Display:wght@500;600;700;800;900&amp;display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script src="services-menu.js"></script>
+<script src="mobile-nav.js"></script>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Mulish',sans-serif;}
+  .arva-h{font-family:'Playfair Display','Georgia',serif;}
+  .nav-link{white-space:nowrap;}
+  .nav-link:hover{color:#1EBABB !important;}
+  .nav-dd{position:relative;}
+  .nav-dd:hover::after{content:"";position:absolute;left:0;top:100%;width:100%;height:14px;}
+  .nav-dd-menu{position:absolute;top:calc(100% + 6px);left:0;background:#0C1F19;border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:8px;min-width:190px;opacity:0;visibility:hidden;transform:translateY(6px);transition:opacity .2s ease,transform .2s ease;box-shadow:0 20px 40px rgba(0,0,0,.35);z-index:60;}
+  .nav-dd:hover .nav-dd-menu{opacity:1;visibility:visible;transform:translateY(0);}
+  .nav-dd-menu a{display:block;padding:10px 14px;color:#fff !important;text-decoration:none;font-size:15px;border-radius:8px;white-space:nowrap;}
+  .nav-dd-menu a:hover{background:rgba(255,255,255,.08);color:#1EBABB !important;}
+  .nav-sub{position:relative;}
+  .nav-sub::after{content:"";position:absolute;top:0;left:100%;width:10px;height:100%;}
+  .nav-sub-menu{position:absolute;top:-8px;left:calc(100% + 6px);background:#0C1F19;border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:8px;min-width:230px;opacity:0;visibility:hidden;transform:translateX(6px);transition:opacity .2s ease,transform .2s ease;box-shadow:0 20px 40px rgba(0,0,0,.35);}
+  .nav-sub:hover .nav-sub-menu{opacity:1;visibility:visible;transform:translateX(0);}
+  i[data-lucide]{display:inline-flex;}
+  a{color:#1EBABB;}
+  .reveal{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.22,1,.36,1),transform .8s cubic-bezier(.22,1,.36,1);}
+  .reveal.in{opacity:1;transform:none;}
+  .abtn{transition:transform .3s cubic-bezier(.34,1.56,.44,1),filter .3s ease,background .25s ease;}
+  .abtn:hover{transform:translateY(-3px) scale(1.03);}
+  .card-lift{transition:transform .3s ease,box-shadow .3s ease;}
+  .card-lift:hover{transform:translateY(-6px);box-shadow:0 24px 50px rgba(20,40,35,.14);}
+  .faq-q{cursor:pointer;}
+  .faq-item.open .faq-a{max-height:600px !important;opacity:1 !important;}
+  .faq-item.open .faq-plus{transform:rotate(45deg);}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1 !important;transform:none !important;}}
+  @media (max-width:900px){header nav{display:none !important;}.hero-2col{grid-template-columns:1fr !important;}.g-4,.g-3,.g-2{grid-template-columns:1fr !important;}.stat-row{flex-direction:column !important;align-items:stretch !important;}.stat-card{min-height:280px !important;}}
+
+  @property --fg-x1 { syntax: '<percentage>'; inherits: false; initial-value: 12%; }
+  @property --fg-y1 { syntax: '<percentage>'; inherits: false; initial-value: 15%; }
+  @property --fg-x2 { syntax: '<percentage>'; inherits: false; initial-value: 88%; }
+  @property --fg-y2 { syntax: '<percentage>'; inherits: false; initial-value: 12%; }
+  @property --fg-x3 { syntax: '<percentage>'; inherits: false; initial-value: 20%; }
+  @property --fg-y3 { syntax: '<percentage>'; inherits: false; initial-value: 88%; }
+  @property --fg-x4 { syntax: '<percentage>'; inherits: false; initial-value: 85%; }
+  @property --fg-y4 { syntax: '<percentage>'; inherits: false; initial-value: 85%; }
+  @property --fg-x5 { syntax: '<percentage>'; inherits: false; initial-value: 55%; }
+  @property --fg-y5 { syntax: '<percentage>'; inherits: false; initial-value: 45%; }
+  @property --fg-s1 { syntax: '<percentage>'; inherits: false; initial-value: 60%; }
+  @property --fg-s2 { syntax: '<percentage>'; inherits: false; initial-value: 55%; }
+  @property --fg-s3 { syntax: '<percentage>'; inherits: false; initial-value: 58%; }
+  @property --fg-s4 { syntax: '<percentage>'; inherits: false; initial-value: 55%; }
+  @property --fg-s5 { syntax: '<percentage>'; inherits: false; initial-value: 65%; }
+
+  .fli-anim-grad{
+    background-color:#b3e7e5;
+    background-image:
+      radial-gradient(circle at var(--fg-x1) var(--fg-y1), #e4f7f6 0px, transparent var(--fg-s1)),
+      radial-gradient(circle at var(--fg-x2) var(--fg-y2), #1ebabb 0px, transparent var(--fg-s2)),
+      radial-gradient(circle at var(--fg-x3) var(--fg-y3), #cbf1f0 0px, transparent var(--fg-s3)),
+      radial-gradient(circle at var(--fg-x4) var(--fg-y4), #57cecd 0px, transparent var(--fg-s4)),
+      radial-gradient(circle at var(--fg-x5) var(--fg-y5), #dbf4f2 0px, transparent var(--fg-s5));
+    animation:
+      fg-b1 11s ease-in-out infinite, fg-b2 13s ease-in-out infinite, fg-b3 12s ease-in-out infinite,
+      fg-b4 14s ease-in-out infinite, fg-b5 9s ease-in-out infinite,
+      fg-s1 8s ease-in-out infinite, fg-s2 9.5s ease-in-out infinite, fg-s3 8.6s ease-in-out infinite,
+      fg-s4 10.4s ease-in-out infinite, fg-s5 7.4s ease-in-out infinite;
+  }
+  @keyframes fg-b1 {0%,100%{--fg-x1:8%;--fg-y1:10%;}25%{--fg-x1:42%;--fg-y1:24%;}50%{--fg-x1:28%;--fg-y1:52%;}75%{--fg-x1:2%;--fg-y1:32%;}}
+  @keyframes fg-b2 {0%,100%{--fg-x2:92%;--fg-y2:8%;}33%{--fg-x2:58%;--fg-y2:34%;}66%{--fg-x2:80%;--fg-y2:62%;}}
+  @keyframes fg-b3 {0%,100%{--fg-x3:8%;--fg-y3:92%;}40%{--fg-x3:44%;--fg-y3:64%;}70%{--fg-x3:26%;--fg-y3:98%;}}
+  @keyframes fg-b4 {0%,100%{--fg-x4:92%;--fg-y4:92%;}30%{--fg-x4:60%;--fg-y4:70%;}60%{--fg-x4:98%;--fg-y4:52%;}}
+  @keyframes fg-b5 {0%,100%{--fg-x5:52%;--fg-y5:48%;}25%{--fg-x5:70%;--fg-y5:30%;}50%{--fg-x5:40%;--fg-y5:68%;}75%{--fg-x5:32%;--fg-y5:42%;}}
+  @keyframes fg-s1 {0%,100%{--fg-s1:50%;}50%{--fg-s1:82%;}}
+  @keyframes fg-s2 {0%,100%{--fg-s2:48%;}50%{--fg-s2:84%;}}
+  @keyframes fg-s3 {0%,100%{--fg-s3:50%;}50%{--fg-s3:80%;}}
+  @keyframes fg-s4 {0%,100%{--fg-s4:48%;}50%{--fg-s4:82%;}}
+  @keyframes fg-s5 {0%,100%{--fg-s5:52%;}50%{--fg-s5:86%;}}
+  @media (prefers-reduced-motion:reduce){.fli-anim-grad{animation:none;}}
+
+  .stat-card{clip-path:inset(100% 0 0 0);transition:clip-path 1.15s cubic-bezier(.22,1,.36,1);will-change:clip-path;}
+  .stat-card.rise{clip-path:inset(0 0 0 0);}
+  .stat-row .stat-card:nth-child(1){transition-delay:0ms;}
+  .stat-row .stat-card:nth-child(2){transition-delay:140ms;}
+  .stat-row .stat-card:nth-child(3){transition-delay:280ms;}
+  @media (prefers-reduced-motion:reduce){.stat-card{clip-path:none !important;}}
+</style>
+<script src="cookie-banner.js"></script>
+</helmet>
+
+<div style="width:100%;overflow-x:clip;background:#F6F7FB;color:#1B3A33;">
+
+  <!-- HERO -->
+  <section style="position:relative;background:#0C1F19;color:#fff;overflow:hidden;min-height:100vh;display:flex;flex-direction:column;">
+    <video src="assets/svc-life.mp4" poster="assets/svc-life-poster.jpg" autoplay muted loop playsinline preload="auto" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 25%;display:block;z-index:0;"></video>
+    <div style="position:absolute;inset:0;background:linear-gradient(118deg,rgba(9,32,24,.93) 0%,rgba(10,33,25,.74) 44%,rgba(15,110,110,.5) 80%,rgba(30,186,187,.36) 100%);z-index:1;"></div>
+    <header style="position:relative;z-index:5;padding:30px clamp(24px,5vw,84px);display:flex;align-items:center;justify-content:space-between;gap:40px;">
+      <a href="Home Page.dc.html" style="display:flex;align-items:center;"><img src="assets/topquote-logo.png" alt="TopQuote" style="height:38px;width:auto;display:block;"></a>
+      <nav style="display:flex;align-items:center;gap:20px;font-size:16px;font-weight:600;">
+        <div class="nav-dd"><a href="Life Insurance.dc.html" style="background:#1EBABB;color:#fff;padding:9px 18px;border-radius:24px;text-decoration:none;display:inline-flex;align-items:center;gap:5px;">Services <span style="font-size:10px;">&#9662;</span></a><div class="nav-dd-menu"><a href="Life Insurance.dc.html">Life Insurance</a><a href="Critical Illness.dc.html">Critical Illness</a><a href="Income Protection.dc.html">Income Protection</a></div></div>
+        <div class="nav-dd"><a href="About Us.dc.html" class="nav-link" style="color:#fff;padding:9px 14px;text-decoration:none;display:inline-flex;align-items:center;gap:5px;">About <span style="font-size:10px;">&#9662;</span></a><div class="nav-dd-menu"><a href="About Us.dc.html">About Us</a><a href="Consumer Duty.dc.html">Consumer Duty</a></div></div>
+        <a href="Reconnect.dc.html" class="nav-link" style="color:#fff;padding:9px 14px;text-decoration:none;">Reconnect</a>
+        <a href="Contact.dc.html" class="nav-link" style="color:#fff;padding:9px 14px;text-decoration:none;">Contact</a>
+        <a href="Careers.dc.html" class="nav-link" style="color:#fff;padding:9px 14px;text-decoration:none;">Careers</a>
+        <a href="Blog.dc.html" class="nav-link" style="color:#fff;padding:9px 14px;text-decoration:none;">Blog</a>
+        <a href="Find Us.dc.html" class="nav-link" style="color:#fff;padding:9px 14px;text-decoration:none;">Find Us</a>
+      </nav>
+      <a href="Get a Quote.dc.html" class="abtn" style="background:#1EBABB;color:#fff;padding:14px 26px;border-radius:8px;text-decoration:none;font-weight:700;font-size:15px;white-space:nowrap;">Get a quote</a>
+    </header>
+
+    <div class="hero-2col" style="position:relative;z-index:4;flex:1;width:100%;padding:36px clamp(24px,5vw,84px) 76px;display:grid;grid-template-columns:1.15fr .85fr;gap:54px;align-items:center;">
+      <div>
+        <div style="display:flex;align-items:center;gap:9px;margin-bottom:18px;">
+          <img src="assets/topquote-mark-teal.png" alt="TopQuote" style="width:22px;height:22px;object-fit:contain;">
+          <span style="color:#3fd3d4;font-weight:700;font-size:15px;letter-spacing:.02em;">Family Protection</span>
+        </div>
+        <h1 class="arva-h" style="font-size:clamp(44px,6vw,86px);line-height:1.02;font-weight:600;letter-spacing:.3px;text-transform:uppercase;">Family Life<br>Insurance</h1>
+        <p style="margin-top:22px;font-size:17px;line-height:1.7;color:rgba(255,255,255,.9);max-width:620px;">A child loses a parent every 20 minutes in the UK. Make sure your family isn't left struggling with bills, childcare, or debt if the worst happens to you.</p>
+        <a href="Get a Quote.dc.html" class="abtn" style="display:inline-block;margin-top:30px;background:#1EBABB;color:#fff;padding:16px 34px;border-radius:8px;text-decoration:none;font-weight:700;font-size:16px;">Get a Quote</a>
+      </div>
+      <div style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:20px;padding:30px 32px;backdrop-filter:blur(10px);">
+        <div style="display:flex;flex-direction:column;gap:18px;">
+          <div style="display:flex;align-items:flex-start;gap:13px;"><span style="width:26px;height:26px;border-radius:8px;background:#1EBABB;display:inline-flex;align-items:center;justify-content:center;flex:none;margin-top:1px;"><i data-lucide="check" style="width:15px;height:15px;color:#fff;"></i></span><span style="font-size:15.5px;line-height:1.5;color:#fff;">Advisers with 20+ years' experience</span></div>
+          <div style="display:flex;align-items:flex-start;gap:13px;"><span style="width:26px;height:26px;border-radius:8px;background:#1EBABB;display:inline-flex;align-items:center;justify-content:center;flex:none;margin-top:1px;"><i data-lucide="check" style="width:15px;height:15px;color:#fff;"></i></span><span style="font-size:15.5px;line-height:1.5;color:#fff;">Compare Level Term, Decreasing Term, Critical Illness</span></div>
+          <div style="display:flex;align-items:flex-start;gap:13px;"><span style="width:26px;height:26px;border-radius:8px;background:#1EBABB;display:inline-flex;align-items:center;justify-content:center;flex:none;margin-top:1px;"><i data-lucide="check" style="width:15px;height:15px;color:#fff;"></i></span><span style="font-size:15.5px;line-height:1.5;color:#fff;">Personal advice, not just a comparison tool</span></div>
+          <div style="display:flex;align-items:flex-start;gap:13px;"><span style="width:26px;height:26px;border-radius:8px;background:#1EBABB;display:inline-flex;align-items:center;justify-content:center;flex:none;margin-top:1px;"><i data-lucide="check" style="width:15px;height:15px;color:#fff;"></i></span><span style="font-size:15.5px;line-height:1.5;color:#fff;">No obligation, free quotes in minutes</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KEY STATISTICS -->
+  <section style="background:#F6F7FB;padding:88px clamp(24px,5vw,40px);">
+    <div style="max-width:1180px;margin:0 auto;">
+      <div class="reveal" style="max-width:600px;margin-bottom:56px;">
+        <h2 class="arva-h" style="font-size:clamp(34px,4.6vw,58px);font-weight:700;color:#173B33;line-height:1.05;">Why family protection matters</h2>
+        <p style="margin-top:20px;font-size:17px;line-height:1.6;color:#6E7B77;max-width:400px;">UK data on the families life insurance is designed to protect.</p>
+      </div>
+      <div class="stat-row" style="display:flex;gap:26px;align-items:flex-end;">
+        <div class="stat-card fli-anim-grad" style="flex:1;min-height:440px;display:flex;flex-direction:column;justify-content:flex-end;border-radius:20px;padding:38px 34px;position:relative;overflow:hidden;">
+          <div class="arva-h stat-pop" style="font-size:clamp(34px,3.4vw,46px);font-weight:600;color:#123830;line-height:1.1;position:relative;opacity:0;transform:scale(.7);transition:opacity .6s ease,transform .6s cubic-bezier(.34,1.56,.44,1);">Every 20 minutes</div>
+          <p style="margin-top:15px;font-size:16.5px;line-height:1.5;color:#4E6B66;position:relative;">a child loses a parent in the UK</p>
+          <span class="stat-src" style="align-self:flex-start;margin-top:22px;background:rgba(255,255,255,.5);border:1px solid #4bc0c0;border-radius:8px;padding:8px 15px;font-size:12.5px;font-weight:700;color:#0f8f90;position:relative;">Source: TBC</span>
+        </div>
+        <div class="stat-card fli-anim-grad" style="flex:1;min-height:360px;display:flex;flex-direction:column;justify-content:flex-end;border-radius:20px;padding:38px 34px;position:relative;overflow:hidden;">
+          <div class="arva-h stat-num" data-count="57" data-suffix="%" style="font-size:clamp(44px,4.6vw,60px);font-weight:600;color:#123830;line-height:1;position:relative;">0%</div>
+          <p style="margin-top:15px;font-size:16.5px;line-height:1.5;color:#4E6B66;position:relative;">of UK families have no life insurance</p>
+          <span class="stat-src" style="align-self:flex-start;margin-top:22px;background:rgba(255,255,255,.5);border:1px solid #4bc0c0;border-radius:8px;padding:8px 15px;font-size:12.5px;font-weight:700;color:#0f8f90;position:relative;">Source: TBC</span>
+        </div>
+        <div class="stat-card fli-anim-grad" style="flex:1;min-height:440px;display:flex;flex-direction:column;justify-content:flex-end;border-radius:20px;padding:38px 34px;position:relative;overflow:hidden;">
+          <div class="arva-h stat-num" data-count="34" data-suffix="%" style="font-size:clamp(44px,4.6vw,60px);font-weight:600;color:#123830;line-height:1;position:relative;">0%</div>
+          <p style="margin-top:15px;font-size:16.5px;line-height:1.5;color:#4E6B66;position:relative;">of adults have less than &pound;1,000 in savings</p>
+          <span class="stat-src" style="align-self:flex-start;margin-top:22px;background:rgba(255,255,255,.5);border:1px solid #4bc0c0;border-radius:8px;padding:8px 15px;font-size:12.5px;font-weight:700;color:#0f8f90;position:relative;">Source: TBC</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY IT MATTERS -->
+  <section style="background:#fff;padding:92px clamp(24px,5vw,40px);">
+    <div style="max-width:1180px;margin:0 auto;">
+      <div class="reveal" style="max-width:760px;margin-bottom:52px;">
+        <div style="display:inline-flex;align-items:center;gap:9px;margin-bottom:14px;"><img src="assets/topquote-mark-teal.png" alt="TopQuote" style="width:20px;height:20px;object-fit:contain;"><span style="color:#1EBABB;font-weight:700;font-size:14px;letter-spacing:.02em;">Why It Matters</span></div>
+        <h2 class="arva-h" style="font-size:clamp(30px,4vw,46px);font-weight:600;color:#173B33;line-height:1.1;">What would your family do without your income?</h2>
+        <p style="margin-top:18px;font-size:17px;line-height:1.7;color:#4A5A55;">Life insurance isn't morbid, it's responsible. Here's what a payout could cover for your family.</p>
+      </div>
+      <div class="g-2" style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+        <div class="reveal card-lift" style="background:#F6F7FB;border:1px solid #E4E7F0;border-radius:18px;padding:34px;">
+          <span style="width:56px;height:56px;border-radius:14px;background:#1EBABB;display:inline-flex;align-items:center;justify-content:center;margin-bottom:22px;"><i data-lucide="home" style="width:26px;height:26px;color:#fff;"></i></span>
+          <h3 class="arva-h" style="font-size:22px;font-weight:700;color:#173B33;margin-bottom:10px;">Keep a Roof Over Their Heads</h3>
+          <p style="font-size:15.5px;line-height:1.65;color:#4A5A55;">Rent or mortgage payments don't stop. A lump sum payout means your family can stay in the home they know without financial pressure.</p>
+        </div>
+        <div class="reveal card-lift" style="background:#F6F7FB;border:1px solid #E4E7F0;border-radius:18px;padding:34px;">
+          <span style="width:56px;height:56px;border-radius:14px;background:#1EBABB;display:inline-flex;align-items:center;justify-content:center;margin-bottom:22px;"><i data-lucide="credit-card" style="width:26px;height:26px;color:#fff;"></i></span>
+          <h3 class="arva-h" style="font-size:22px;font-weight:700;color:#173B33;margin-bottom:10px;">Clear Outstanding Debts</h3>
+          <p style="font-size:15.5px;line-height:1.65;color:#4A5A55;">Credit cards, loans, and other debts don't disappear. Life insurance ensures your family inherits security, not your liabilities.</p>
+        </div>
+        <div class="reveal card-lift" style="background:#F6F7FB;border:1px solid #E4E7F0;border-radius:18px;padding:34px;">
+          <span style="width:56px;height:56px;border-radius:14px;background:#1EBABB;display:inline-flex;align-items:center;justify-content:center;margin-bottom:22px;"><i data-lucide="heart-pulse" style="width:26px;height:26px;color:#fff;"></i></span>
+          <h3 class="arva-h" style="font-size:22px;font-weight:700;color:#173B33;margin-bottom:10px;">Serious Illness Cover</h3>
+          <p style="font-size:15.5px;line-height:1.65;color:#4A5A55;">Critical Illness Cover pays a lump sum if you're diagnosed with cancer, heart attack, or stroke, giving you time to recover without financial worry.</p>
+        </div>
+        <div class="reveal card-lift" style="background:#F6F7FB;border:1px solid #E4E7F0;border-radius:18px;padding:34px;">
+          <span style="width:56px;height:56px;border-radius:14px;background:#1EBABB;display:inline-flex;align-items:center;justify-content:center;margin-bottom:22px;"><i data-lucide="pound-sterling" style="width:26px;height:26px;color:#fff;"></i></span>
+          <h3 class="arva-h" style="font-size:22px;font-weight:700;color:#173B33;margin-bottom:10px;">Replace Your Income</h3>
+          <p style="font-size:15.5px;line-height:1.65;color:#4A5A55;">Especially critical if you're self-employed or your partner relies on your salary. Income Protection can bridge the gap while you recover or in the event of serious illness.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section style="background:#F6F7FB;padding:92px clamp(24px,5vw,40px);">
+    <div style="max-width:1180px;margin:0 auto;">
+      <div class="reveal" style="max-width:780px;margin-bottom:52px;">
+        <div style="display:inline-flex;align-items:center;gap:9px;margin-bottom:14px;"><img src="assets/topquote-mark-teal.png" alt="TopQuote" style="width:20px;height:20px;object-fit:contain;"><span style="color:#1EBABB;font-weight:700;font-size:14px;letter-spacing:.02em;">Products</span></div>
+        <h2 class="arva-h" style="font-size:clamp(30px,4vw,46px);font-weight:600;color:#173B33;line-height:1.1;">Cover Options For Your Family</h2>
+        <p style="margin-top:18px;font-size:17px;line-height:1.7;color:#4A5A55;">TopQuote advisers will help you choose the right combination for your family's situation.</p>
+      </div>
+      <div class="g-2" style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+        <div class="reveal card-lift" style="background:#fff;border:1px solid #E4E7F0;border-radius:18px;padding:32px;">
+          <span style="width:52px;height:52px;border-radius:13px;background:#1EBABB;display:inline-flex;align-items:center;justify-content:center;margin-bottom:20px;"><i data-lucide="minus-square" style="width:24px;height:24px;color:#fff;"></i></span>
+          <h3 class="arva-h" style="font-size:20px;font-weight:700;color:#173B33;margin-bottom:10px;">Level Term Life Insurance</h3>
+          <p style="font-size:15px;line-height:1.65;color:#4A5A55;">A fixed lump sum paid to your family if you pass away during the policy term. The payout stays the same throughout, ideal for families with ongoing costs.</p>
+        </div>
+        <div class="reveal card-lift" style="background:#fff;border:1px solid #E4E7F0;border-radius:18px;padding:32px;">
+          <span style="width:52px;height:52px;border-radius:13px;background:#1EBABB;display:inline-flex;align-items:center;justify-content:center;margin-bottom:20px;"><i data-lucide="trending-down" style="width:24px;height:24px;color:#fff;"></i></span>
+          <h3 class="arva-h" style="font-size:20px;font-weight:700;color:#173B33;margin-bottom:10px;">Decreasing Term Life Insurance</h3>
+          <p style="font-size:15px;line-height:1.65;color:#4A5A55;">Cover that reduces in line with an outstanding debt over time. A cost-effective way to ensure debts don't fall to your family.</p>
+        </div>
+        <div class="reveal card-lift" style="background:#fff;border:1px solid #E4E7F0;border-radius:18px;padding:32px;">
+          <span style="width:52px;height:52px;border-radius:13px;background:#1EBABB;display:inline-flex;align-items:center;justify-content:center;margin-bottom:20px;"><i data-lucide="heart-pulse" style="width:24px;height:24px;color:#fff;"></i></span>
+          <h3 class="arva-h" style="font-size:20px;font-weight:700;color:#173B33;margin-bottom:10px;">Critical Illness Cover</h3>
+          <p style="font-size:15px;line-height:1.65;color:#4A5A55;">Pays a tax-free lump sum if you're diagnosed with a serious illness like cancer, heart attack, or stroke, while you're still alive.</p>
+        </div>
+        <div class="reveal card-lift" style="background:#fff;border:1px solid #E4E7F0;border-radius:18px;padding:32px;">
+          <span style="width:52px;height:52px;border-radius:13px;background:#1EBABB;display:inline-flex;align-items:center;justify-content:center;margin-bottom:20px;"><i data-lucide="shield-check" style="width:24px;height:24px;color:#fff;"></i></span>
+          <h3 class="arva-h" style="font-size:20px;font-weight:700;color:#173B33;margin-bottom:10px;">Income Protection</h3>
+          <p style="font-size:15px;line-height:1.65;color:#4A5A55;">Pays a regular monthly income if illness or injury stops you working, helping your family keep up with everyday costs while you recover.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section style="background:#0C1F19;color:#fff;padding:92px clamp(24px,5vw,40px);">
+    <div style="max-width:1180px;margin:0 auto;">
+      <div class="reveal" style="text-align:center;max-width:720px;margin:0 auto 52px;">
+        <div style="display:inline-flex;align-items:center;gap:9px;margin-bottom:14px;"><img src="assets/topquote-mark-teal.png" alt="TopQuote" style="width:20px;height:20px;object-fit:contain;"><span style="color:#3fd3d4;font-weight:700;font-size:14px;letter-spacing:.02em;">Next Steps</span></div>
+        <h2 class="arva-h" style="font-size:clamp(30px,4vw,46px);font-weight:600;">How to get protected</h2>
+        <p style="margin-top:16px;font-size:16.5px;line-height:1.7;color:rgba(255,255,255,.85);">TopQuote advisers will help you choose the right combination for your family's situation.</p>
+      </div>
+      <div class="g-4" style="display:grid;grid-template-columns:repeat(4,1fr);gap:22px;">
+        <div class="reveal" style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:32px 28px;">
+          <div class="arva-h" style="font-size:40px;font-weight:700;color:#3fd3d4;line-height:1;margin-bottom:16px;">01</div>
+          <h3 class="arva-h" style="font-size:19px;font-weight:700;margin-bottom:10px;">Complete the Form</h3>
+          <p style="font-size:14.5px;line-height:1.6;color:rgba(255,255,255,.8);">Answer a few quick questions about your family and the cover you need.</p>
+        </div>
+        <div class="reveal" style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:32px 28px;">
+          <div class="arva-h" style="font-size:40px;font-weight:700;color:#3fd3d4;line-height:1;margin-bottom:16px;">02</div>
+          <h3 class="arva-h" style="font-size:19px;font-weight:700;margin-bottom:10px;">Speak to an Adviser</h3>
+          <p style="font-size:14.5px;line-height:1.6;color:rgba(255,255,255,.8);">One of our advisers calls you to discuss your options in plain English.</p>
+        </div>
+        <div class="reveal" style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:32px 28px;">
+          <div class="arva-h" style="font-size:40px;font-weight:700;color:#3fd3d4;line-height:1;margin-bottom:16px;">03</div>
+          <h3 class="arva-h" style="font-size:19px;font-weight:700;margin-bottom:10px;">We Compare &amp; Recommend</h3>
+          <p style="font-size:14.5px;line-height:1.6;color:rgba(255,255,255,.8);">We search across multiple insurers to find the right cover at the right price for your family.</p>
+        </div>
+        <div class="reveal" style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:32px 28px;">
+          <div class="arva-h" style="font-size:40px;font-weight:700;color:#3fd3d4;line-height:1;margin-bottom:16px;">04</div>
+          <h3 class="arva-h" style="font-size:19px;font-weight:700;margin-bottom:10px;">Protection in Place</h3>
+          <p style="font-size:14.5px;line-height:1.6;color:rgba(255,255,255,.8);">We manage the application process for you. Your family is protected from day one.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOT A COMPARISON SITE -->
+  <section style="background:#fff;padding:92px clamp(24px,5vw,40px);">
+    <div class="reveal" style="max-width:900px;margin:0 auto;text-align:center;">
+      <span style="width:60px;height:60px;border-radius:15px;background:#1EBABB;display:inline-flex;align-items:center;justify-content:center;margin-bottom:24px;"><i data-lucide="users" style="width:28px;height:28px;color:#fff;"></i></span>
+      <h2 class="arva-h" style="font-size:clamp(28px,3.6vw,44px);font-weight:600;color:#173B33;line-height:1.12;">Not A Comparison Site</h2>
+      <p style="margin-top:20px;font-size:17px;line-height:1.75;color:#4A5A55;">Most comparison sites give you a price and leave you to figure the rest out. TopQuote advisers take the time to understand your family's situation and recommend the right protection.</p>
+      <a href="Get a Quote.dc.html" class="abtn" style="display:inline-block;margin-top:30px;background:#1EBABB;color:#fff;padding:16px 34px;border-radius:8px;text-decoration:none;font-weight:700;font-size:16px;">Get a Quote</a>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section style="background:#F6F7FB;padding:92px clamp(24px,5vw,40px);">
+    <div style="max-width:1180px;margin:0 auto;">
+      <div class="reveal" style="text-align:center;margin-bottom:44px;">
+        <div style="display:inline-flex;align-items:center;gap:9px;margin-bottom:14px;"><img src="assets/topquote-mark-teal.png" alt="TopQuote" style="width:20px;height:20px;object-fit:contain;"><span style="color:#1EBABB;font-weight:700;font-size:14px;letter-spacing:.02em;">Good to know</span></div>
+        <h2 class="arva-h" style="font-size:clamp(30px,4vw,46px);font-weight:600;color:#173B33;">Common questions about family insurance</h2>
+      </div>
+      <div id="faqList" class="faq-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start;">
+        <sc-for list="{{ faqs }}" as="faq" hint-placeholder-count="6">
+          <div class="faq-item reveal" style="background:#fff;border:1px solid #E4E7F0;border-radius:14px;overflow:hidden;">
+            <div class="faq-q" style="display:flex;align-items:center;justify-content:space-between;gap:18px;padding:22px 26px;">
+              <span class="arva-h" style="font-size:18px;font-weight:600;color:#173B33;">{{ faq.q }}</span>
+              <span class="faq-plus" style="flex:none;width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;color:#1EBABB;font-size:26px;font-weight:300;transition:transform .3s ease;line-height:1;">+</span>
+            </div>
+            <div class="faq-a" style="max-height:0;opacity:0;overflow:hidden;transition:max-height .4s ease,opacity .3s ease;">
+              <p style="padding:0 26px 24px;font-size:15.5px;line-height:1.7;color:#4A5A55;">{{ faq.a }}</p>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE THE DIFFERENCE CTA (parallax) -->
+  <section style="position:relative;background:#000 url('assets/beach-family.png') center center/cover fixed;color:#fff;overflow:hidden;">
+    <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,40,30,.92) 0%,rgba(8,40,30,.62) 45%,rgba(30,186,187,.32) 100%);"></div>
+    <div style="position:relative;max-width:1200px;margin:0 auto;padding:104px clamp(24px,5vw,40px);display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;">
+      <div style="max-width:560px;">
+        <h2 class="arva-h" style="font-size:clamp(34px,4vw,46px);line-height:1.16;font-weight:700;">Experience the<br>difference...</h2>
+        <p style="color:rgba(255,255,255,.9);font-size:15px;line-height:1.7;margin-top:18px;max-width:480px;">Award-Winning Experts Dedicated to Tailoring Life Insurance Solutions for You and Your Loved Ones</p>
+        <div style="display:flex;gap:14px;margin-top:28px;flex-wrap:wrap;">
+          <a href="Contact.dc.html" class="abtn" style="background:#1EBABB;color:#fff;padding:15px 30px;border-radius:8px;text-decoration:none;font-weight:700;font-size:15px;">Talk to an advisor</a>
+          <a href="About Us.dc.html" class="abtn" style="background:#fff;color:#173B33;padding:15px 30px;border-radius:8px;text-decoration:none;font-weight:700;font-size:15px;">About TopQuote</a>
+        </div>
+      </div>
+      <a href="Get a Quote.dc.html" class="abtn" style="margin-right:8%;flex-shrink:0;filter:drop-shadow(0 18px 34px rgba(8,40,30,.45));text-decoration:none;">
+        <div style="position:relative;width:176px;height:176px;">
+          <div style="width:152px;height:152px;border-radius:50%;background:linear-gradient(180deg,#3fd3d4 0%,#1ebabb 52%,#159a9b 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;">
+            <span style="width:42px;height:42px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;"><i data-lucide="arrow-up-right" style="width:20px;height:20px;color:#1EBABB;"></i></span>
+            <span style="font-weight:700;font-size:15px;color:#fff;">Get A Quote</span>
+          </div>
+          <div style="position:absolute;right:0;bottom:0;width:40px;height:40px;border-radius:50%;background:linear-gradient(180deg,#3fd3d4 0%,#1ebabb 60%,#159a9b 100%);"></div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background:#EAEDFB;padding:64px clamp(24px,5vw,40px) 30px;">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div style="display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:40px;" class="ft-grid">
+        <div>
+          <div style="display:flex;align-items:center;margin-bottom:18px;"><img src="assets/topquote-logo-dark.png" alt="TopQuote" style="height:38px;width:auto;display:block;"></div>
+          <div class="foot-badges" style="display:flex;align-items:center;gap:20px;margin:16px 0 18px;flex-wrap:wrap;"><img src="assets/trustpilot-43.png" alt="Rated 4.3 Excellent on Trustpilot from 517 reviews" style="height:110px;width:auto;"><img src="assets/platinum-trusted-service-award-2026.svg" alt="Platinum Trusted Service Award 2026" style="height:60px;width:auto;"></div>
+          <p style="color:#6B7280;font-size:13.5px;line-height:1.7;max-width:320px;margin-bottom:22px;">Top Quote Limited is an appointed representative of The Openwork Partnership, a trading style of Openwork Limited which is authorised and regulated by the Financial Conduct Authority.</p>
+          <div style="display:flex;gap:12px;">
+            <a href="https://www.facebook.com/TopQuoteInsurance/" target="_blank" rel="noopener" aria-label="Facebook" style="width:42px;height:42px;border-radius:50%;background:#1EBABB;display:flex;align-items:center;justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"></path></svg></a>
+            <a href="https://uk.linkedin.com/company/topquoteuk" target="_blank" rel="noopener" aria-label="LinkedIn" style="width:42px;height:42px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="#173B33"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="arva-h" style="font-size:20px;font-weight:600;color:#173B33;margin-bottom:20px;">Pages</h4>
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            <a href="Home Page.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">Home</a>
+            <a href="About Us.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">About</a>
+            <a href="Contact.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">Contact</a>
+            <a href="Reconnect.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">Reconnect</a>
+            <a href="Blog.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">Blog</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="arva-h" style="font-size:20px;font-weight:600;color:#173B33;margin-bottom:20px;">Services</h4>
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            <a href="Life Insurance.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">Life Insurance</a>
+            <a href="Critical Illness.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">Critical Illness</a>
+            <a href="Income Protection.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">Income Protection</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="arva-h" style="font-size:20px;font-weight:600;color:#173B33;margin-bottom:20px;">Need Help?</h4>
+          <div style="display:flex;flex-direction:column;gap:16px;">
+            <span style="display:flex;align-items:flex-start;gap:10px;color:#6B7280;font-size:15px;line-height:1.55;"><i data-lucide="map-pin" style="width:17px;height:17px;color:#1EBABB;margin-top:2px;flex:none;"></i> <span>Alderley Park, Suite 3,<br>GLASSHOUSE, Congleton Road,<br>Macclesfield, SK10 4TG</span></span>
+            <span style="display:flex;align-items:center;gap:10px;color:#6B7280;font-size:15px;"><i data-lucide="phone" style="width:17px;height:17px;color:#1EBABB;flex:none;"></i> Customer support: 0161 974 3710</span>
+            <span style="display:flex;align-items:center;gap:10px;color:#6B7280;font-size:15px;"><i data-lucide="mail" style="width:17px;height:17px;color:#1EBABB;flex:none;"></i> <a href="mailto:hello@topquote.uk.com" style="color:inherit;text-decoration:none;">hello@topquote.uk.com</a></span>
+          </div>
+        </div>
+      </div>
+      <div style="height:1px;background:#D2D6E8;margin:40px 0 22px;"></div>
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;">
+        <span style="color:#6B7280;font-size:14px;">&copy; 2026 Top Quote Limited. All rights reserved.</span>
+        <div style="display:flex;gap:18px;align-items:center;">
+          <a href="https://www.theopenworkpartnership.com/media/ky0cl3ka/data-privacy-policy_2022.pdf" target="_blank" rel="noopener" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:14px;">Privacy Policy</a>
+          <span style="color:#C4C9DE;">|</span>
+          <a href="Cookie Policy.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:14px;">Cookie Policy</a>
+        </div>
+      </div>
+      <!-- COMPLIANCE: FRN 408285 and all regulatory wording to be verified against Openwork's latest compliance-approved templates before launch -->
+      <div style="text-align:left;color:#6B7280;font-size:13.5px;line-height:1.75;max-width:940px;margin:28px 0 0;">
+        <p>Top Quote Limited is registered in England &amp; Wales, company number 04648763. Registered office: Alderley Park, Suite 3, Glasshouse, Congleton Road, Macclesfield, SK10 4TG.</p>
+        <p style="margin-top:14px;">Top Quote Limited is an appointed representative of The Openwork Partnership, a trading style of Openwork Limited which is authorised and regulated by the Financial Conduct Authority. You can check this on the FCA Register at <a href="https://register.fca.org.uk" target="_blank" rel="noopener" style="color:#1EBABB;text-decoration:none;">register.fca.org.uk</a> (Openwork Limited, firm reference number 408285).</p>
+        <p style="margin-top:14px;">The information on this website is general information only and does not constitute personal financial advice. Any personal recommendation will be based on your individual circumstances. This website is intended for UK residents only.</p>
+        <p style="margin-top:14px;">If you have a complaint about the service you have received, please contact us at <a href="mailto:hello@topquote.uk.com" style="color:#1EBABB;text-decoration:none;">hello@topquote.uk.com</a> or 0161 974 3710. If we cannot resolve your complaint to your satisfaction, you may be entitled to refer it to the Financial Ombudsman Service (<a href="https://www.financial-ombudsman.org.uk" target="_blank" rel="noopener" style="color:#1EBABB;text-decoration:none;">financial-ombudsman.org.uk</a>). We are covered by the Financial Services Compensation Scheme (<a href="https://www.fscs.org.uk" target="_blank" rel="noopener" style="color:#1EBABB;text-decoration:none;">fscs.org.uk</a>).</p>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount(){ document.title = 'Family Life Insurance UK | Compare Quotes | TopQuote'; this.initScrollTop(); this.renderIcons(); this.initReveals(); this.initFaq(); this.initMute(); this.initCounters(); this.initBars(); }
+  initBars(){
+    const bind=()=>{
+      const cards=document.querySelectorAll('.stat-card'); if(!cards.length)return false;
+      const io=new IntersectionObserver((es)=>{es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('rise'); io.unobserve(e.target); } });},{threshold:.15});
+      cards.forEach(c=>{ io.observe(c);
+        // safety net: if already in view or observer never fires, reveal anyway
+        const r=c.getBoundingClientRect();
+        if(r.top < (window.innerHeight||800)) c.classList.add('rise');
+      });
+      return true;
+    };
+    if(!bind()){ setTimeout(bind,400); setTimeout(bind,1000); }
+    setTimeout(()=>{ document.querySelectorAll('.stat-card:not(.rise)').forEach(c=>c.classList.add('rise')); },2500);
+  }
+  initCounters(){
+    const run=(el)=>{
+      if(el.__done)return; el.__done=true;
+      const target=parseFloat(el.getAttribute('data-count'))||0;
+      const pre=el.getAttribute('data-prefix')||''; const suf=el.getAttribute('data-suffix')||'';
+      const dur=1400; const t0=performance.now();
+      const step=(t)=>{ let p=Math.min(1,(t-t0)/dur); const e=1-Math.pow(1-p,3); el.textContent=pre+Math.round(target*e)+suf; if(p<1)requestAnimationFrame(step); };
+      requestAnimationFrame(step);
+    };
+    const bind=()=>{
+      const nums=document.querySelectorAll('.stat-num'); const pops=document.querySelectorAll('.stat-pop');
+      if(!nums.length&&!pops.length)return;
+      const io=new IntersectionObserver((es)=>{es.forEach(e=>{ if(e.isIntersecting){ if(e.target.classList.contains('stat-num'))run(e.target); else {e.target.style.opacity='1';e.target.style.transform='none';} io.unobserve(e.target); } });},{threshold:.4});
+      nums.forEach(n=>io.observe(n)); pops.forEach(p=>io.observe(p));
+    };
+    bind(); setTimeout(bind,400); setTimeout(bind,1000);
+  }
+  componentDidUpdate(){ this.renderIcons(); }
+  initMute(){ const m=()=>document.querySelectorAll('video:not([data-allow-audio])').forEach(v=>{v.muted=true;v.volume=0;v.setAttribute('muted','');v.loop=true;v.setAttribute('loop','');v.setAttribute('playsinline','');v.play&&v.play().catch(()=>{});}); m(); setTimeout(m,400); setTimeout(m,1200); }
+  renderIcons(){ const go=()=>{ try{ if(window.lucide) if (window.__safeIcons) window.__safeIcons(); }catch(e){} }; go(); setTimeout(go,300); setTimeout(go,900); }
+  initReveals(){ const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');});},{threshold:.12}); setTimeout(()=>{document.querySelectorAll('.reveal').forEach(el=>io.observe(el));},60); }
+  initScrollTop(){
+    if (document.getElementById('scrollTopBtn')) return;
+    var b = document.createElement('button');
+    b.id = 'scrollTopBtn'; b.setAttribute('aria-label','Back to top'); b.textContent = '\u2191';
+    b.style.cssText = 'position:fixed;right:26px;bottom:26px;z-index:9999;width:52px;height:52px;border-radius:50%;border:0;background:#1EBABB;color:#fff;font-size:22px;font-weight:700;cursor:pointer;box-shadow:0 10px 26px rgba(20,40,35,.28);opacity:0;visibility:hidden;transition:opacity .3s ease,visibility .3s ease,transform .2s ease;';
+    b.onmouseenter = function(){ b.style.transform = 'translateY(-3px)'; };
+    b.onmouseleave = function(){ b.style.transform = 'none'; };
+    b.onclick = function(){ window.scrollTo({ top:0, behavior:'smooth' }); };
+    document.body.appendChild(b);
+    var onScroll = function(){ var y = window.scrollY || document.documentElement.scrollTop; if (y > 500){ b.style.opacity='1'; b.style.visibility='visible'; } else { b.style.opacity='0'; b.style.visibility='hidden'; } };
+    window.addEventListener('scroll', onScroll, { passive:true }); onScroll();
+  }
+  initFaq(){
+    const bind=()=>{ const list=document.getElementById('faqList'); if(!list||list.__wired)return; const items=list.querySelectorAll('.faq-item'); if(!items.length)return; list.__wired=true;
+      items.forEach((it,i)=>{ if(i===0)it.classList.add('open'); it.querySelector('.faq-q').addEventListener('click',()=>{ const open=it.classList.contains('open'); items.forEach(o=>o.classList.remove('open')); if(!open)it.classList.add('open'); }); });
+    };
+    bind(); setTimeout(bind,400); setTimeout(bind,1000);
+  }
+  renderVals(){ return { faqs: [
+    { q:'What\u2019s the difference between Level Term and Decreasing Term?', a:'Level term pays the same fixed lump sum throughout the policy, ideal for covering ongoing family costs. Decreasing term reduces over time, typically in line with a repayment debt. Decreasing policies tend to have lower premiums. Your TopQuote adviser will explain which suits your family\u2019s needs best.' },
+    { q:'Can I get cover if I have a pre-existing medical condition?', a:'Yes, in the majority of cases. Having a health condition does not prevent you from getting life insurance. Most people with pre-existing conditions can obtain cover, sometimes at a slightly higher premium or with specific exclusions. TopQuote has experience placing clients with complex medical histories and will find the most suitable insurer for your situation.' },
+    { q:'Do I need Critical Illness Cover as well as life insurance?', a:'Life insurance pays out when you die, Critical Illness Cover pays out if you\u2019re diagnosed with a serious illness while still alive. Many families benefit from having both. The financial impact of a serious illness diagnosis, time off work, treatment costs, adaptations, can be just as devastating as death. Your adviser can help you decide what combination makes sense.' },
+    { q:'How long does it take to arrange cover?', a:'In many cases, cover can be in place within a week. TopQuote manages the entire application process on your behalf, from comparing quotes to submitting the application and liaising with the insurer. More complex cases, for example with medical history, may take a little longer, but we\u2019ll keep you updated throughout.' },
+    { q:'Is TopQuote\u2019s advice free?', a:'Yes, completely. There is no fee for our advice and no obligation to proceed after speaking with us. TopQuote is an appointed representative of The Openwork Partnership, a trading style of Openwork Limited which is authorised and regulated by the Financial Conduct Authority.' }
+  ] }; }
+}
+</script>
+</body>
+</html>

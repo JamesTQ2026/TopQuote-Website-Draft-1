@@ -2,7 +2,9 @@
 <html>
 <head>
 <meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Guides and news on life insurance, critical illness and income protection from TopQuote's advisers.">
 <script src="./support.js"></script>
 </head>
 <body>
@@ -13,6 +15,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;800&amp;family=Playfair+Display:wght@500;600;700;800;900&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
 <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 <script src="services-menu.js"></script>
+<script src="mobile-nav.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <style>
@@ -22,15 +25,19 @@
   .nav-link{white-space:nowrap;}
   .nav-link:hover{color:#1EBABB !important;}
   #rvSwiper .swiper{padding:20px 0 40px !important;overflow:visible !important;}
-  #rvSwiper .swiper-slide{width:380px;max-width:86%;height:auto;opacity:.4;transition:opacity .45s ease;}
-  #rvSwiper .swiper-slide-active{opacity:1;}
-  #rvSwiper .swiper-slide-prev,#rvSwiper .swiper-slide-next{opacity:.62;}
+  #rvSwiper .swiper-slide{width:380px;max-width:86%;height:auto;opacity:1;filter:brightness(.72);transition:filter .45s ease;}
+  #rvSwiper .swiper-slide-active{filter:brightness(1);}
+  #rvSwiper .swiper-slide-prev,#rvSwiper .swiper-slide-next{filter:brightness(.85);}
   .nav-dd{position:relative;}
   .nav-dd:hover::after{content:"";position:absolute;left:0;top:100%;width:100%;height:14px;}
   .nav-dd-menu{position:absolute;top:calc(100% + 6px);left:0;background:#0C1F19;border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:8px;min-width:190px;opacity:0;visibility:hidden;transform:translateY(6px);transition:opacity .2s ease,transform .2s ease;box-shadow:0 20px 40px rgba(0,0,0,.35);z-index:60;}
   .nav-dd:hover .nav-dd-menu{opacity:1;visibility:visible;transform:translateY(0);}
   .nav-dd-menu a{display:block;padding:10px 14px;color:#fff !important;text-decoration:none;font-size:15px;border-radius:8px;white-space:nowrap;}
   .nav-dd-menu a:hover{background:rgba(255,255,255,.08);color:#1EBABB !important;}
+  .nav-sub{position:relative;}
+  .nav-sub::after{content:"";position:absolute;top:0;left:100%;width:10px;height:100%;}
+  .nav-sub-menu{position:absolute;top:-8px;left:calc(100% + 6px);background:#0C1F19;border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:8px;min-width:230px;opacity:0;visibility:hidden;transform:translateX(6px);transition:opacity .2s ease,transform .2s ease;box-shadow:0 20px 40px rgba(0,0,0,.35);}
+  .nav-sub:hover .nav-sub-menu{opacity:1;visibility:visible;transform:translateX(0);}
   i[data-lucide]{display:inline-flex;}
   .reveal{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.22,1,.36,1),transform .8s cubic-bezier(.22,1,.36,1);}
   .reveal.in{opacity:1;transform:none;}
@@ -55,35 +62,35 @@
   }
   @media (max-width:600px){.bl-grid{grid-template-columns:1fr !important;}.cat-grid{grid-template-columns:1fr !important;}}
 </style>
+<script src="cookie-banner.js"></script>
 </helmet>
 
 <div style="width:100%;overflow-x:clip;background:#F6F7FB;color:#1B3A33;">
 
   <!-- ============ HERO ============ -->
-  <section style="position:relative;background:#0C1F19;color:#fff;overflow:hidden;">
+  <section style="position:relative;background:#444345;color:#fff;overflow:hidden;">
     <header style="position:relative;z-index:5;padding:30px clamp(24px,5vw,84px);display:flex;align-items:center;justify-content:space-between;gap:40px;">
       <a href="Home Page.dc.html" style="display:flex;align-items:center;"><img src="assets/topquote-logo.png" alt="TopQuote" style="height:38px;width:auto;display:block;"></a>
       <nav style="display:flex;align-items:center;gap:20px;font-size:16px;font-weight:600;">
         <div class="nav-dd"><a href="Life Insurance.dc.html" style="background:#1EBABB;color:#fff;padding:9px 18px;border-radius:24px;text-decoration:none;display:inline-flex;align-items:center;gap:5px;">Services <span style="font-size:10px;">&#9662;</span></a><div class="nav-dd-menu"><a href="Life Insurance.dc.html">Life Insurance</a><a href="Critical Illness.dc.html">Critical Illness</a><a href="Income Protection.dc.html">Income Protection</a></div></div>
         <div class="nav-dd"><a href="About Us.dc.html" class="nav-link" style="color:#fff;padding:9px 14px;text-decoration:none;display:inline-flex;align-items:center;gap:5px;">About <span style="font-size:10px;">&#9662;</span></a><div class="nav-dd-menu"><a href="About Us.dc.html">About Us</a><a href="Consumer Duty.dc.html">Consumer Duty</a></div></div>
         <a href="Reconnect.dc.html" class="nav-link" style="color:#fff;padding:9px 14px;text-decoration:none;">Reconnect</a>
-        <a href="Blog.dc.html" class="nav-link" style="color:#fff;padding:9px 14px;text-decoration:none;">Blog</a>
         <a href="Contact.dc.html" class="nav-link" style="color:#fff;padding:9px 14px;text-decoration:none;">Contact</a>
         <a href="Careers.dc.html" class="nav-link" style="color:#fff;padding:9px 14px;text-decoration:none;">Careers</a>
+        <a href="Blog.dc.html" class="nav-link" style="color:#fff;padding:9px 14px;text-decoration:none;">Blog</a>
         <a href="Find Us.dc.html" class="nav-link" style="color:#fff;padding:9px 14px;text-decoration:none;">Find Us</a>
       </nav>
-      <a href="Get a Quote.dc.html" class="abtn" style="background:#1EBABB;color:#fff;padding:14px 26px;border-radius:8px;text-decoration:none;font-weight:700;font-size:15px;white-space:nowrap;">Get a quote</a>
+      <a href="Get a Quote.dc.html" style="background:#1EBABB;color:#fff;padding:14px 26px;border-radius:8px;text-decoration:none;font-weight:700;font-size:15px;white-space:nowrap;">Get a quote</a>
     </header>
 
     <div class="hero-grid" style="position:relative;z-index:4;display:grid;grid-template-columns:1.6fr 1fr;gap:44px;align-items:center;padding:56px clamp(24px,5vw,84px) 84px;max-width:1320px;margin:0 auto;width:100%;">
       <div>
         <div style="display:flex;align-items:center;gap:9px;margin-bottom:20px;">
           <img src="assets/topquote-mark-teal.png" alt="TopQuote" style="width:24px;height:24px;object-fit:contain;">
-          <span style="color:#3fd3d4;font-weight:700;font-size:15px;">Articles &amp; Guides</span>
+          <span style="color:#3fd3d4;font-weight:700;font-size:15px;">Our Blog</span>
         </div>
-        <h1 class="arva-h" style="font-size:clamp(40px,4.6vw,68px);line-height:1.05;font-weight:600;letter-spacing:.3px;text-transform:uppercase;">Life insurance &amp; income<br>protection articles</h1>
-        <p style="margin-top:22px;font-size:18px;line-height:1.6;color:rgba(255,255,255,.85);max-width:560px;">In-depth life insurance &amp; income protection articles, written in-house by our protection experts.</p>
-        <a href="Get a Quote.dc.html" class="abtn" style="display:inline-flex;align-items:center;gap:10px;margin-top:32px;background:#1EBABB;color:#fff;padding:16px 32px;border-radius:10px;text-decoration:none;font-weight:700;font-size:16px;">Get a quote <i data-lucide="arrow-right" style="width:18px;height:18px;"></i></a>
+        <h1 class="arva-h" style="font-size:clamp(40px,4.6vw,68px);line-height:1.05;font-weight:600;letter-spacing:.3px;text-transform:uppercase;">Articles from<br>the TopQuote team</h1>
+        <p style="margin-top:22px;font-size:18px;line-height:1.6;color:rgba(255,255,255,.85);max-width:560px;">Tips and guides on health, wellbeing, family life and more, written by the TopQuote team.</p>
       </div>
       <div style="background:#fff;border:1px solid #e6e8ec;border-radius:16px;padding:26px 34px;text-align:center;box-shadow:0 24px 60px rgba(0,0,0,.28);max-width:280px;margin:0 auto;">
         <div style="display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:16px;color:#191919;font-weight:600;font-size:20px;"><span style="color:#00b67a;font-size:22px;line-height:1;">&#9733;</span> Trustpilot</div>
@@ -111,8 +118,13 @@
 
   <!-- ============ ARTICLE GRID ============ -->
   <section id="articles" style="background:#F6F7FB;padding:50px clamp(24px,5vw,40px) 80px;">
-    <div style="max-width:1200px;margin:0 auto;">
-      <h2 class="reveal arva-h" style="font-size:clamp(26px,3vw,38px);font-weight:700;color:#173B33;margin-bottom:34px;">Financial protection articles from our experts</h2>
+    <div style="max-width:1320px;margin:0 auto;">
+      <h2 class="reveal arva-h" style="font-size:clamp(26px,3vw,38px);font-weight:700;color:#173B33;margin-bottom:20px;">The latest articles from the TopQuote team</h2>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:34px;">
+        <sc-for list="{{ filterChips }}" as="c" hint-placeholder-count="8">
+          <button style="{{ c.style }}" onClick="{{ c.onClick }}">{{ c.label }}</button>
+        </sc-for>
+      </div>
       <div class="bl-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:26px;">
         <sc-for list="{{ pagedArticles }}" as="a" hint-placeholder-count="6">
           <div class="bl-card" style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 8px 24px rgba(20,40,35,.05);">
@@ -128,10 +140,10 @@
             </div>
             <div style="display:flex;align-items:center;justify-content:space-between;">
               <div style="display:flex;align-items:center;gap:14px;">
-                <span style="display:flex;align-items:center;gap:7px;color:#173B33;font-size:14px;font-weight:700;"><i data-lucide="clock" style="width:16px;height:16px;color:#1EBABB;"></i> {{ a.time }}</span>
-                <span style="display:flex;align-items:center;gap:7px;color:#8A94A6;font-size:14px;"><i data-lucide="calendar" style="width:15px;height:15px;color:#1EBABB;"></i> {{ a.date }}</span>
+                <span style="display:flex;align-items:center;gap:7px;color:#173B33;font-size:14px;font-weight:700;white-space:nowrap;"><i data-lucide="clock" style="width:16px;height:16px;color:#1EBABB;"></i> {{ a.time }}</span>
+                <span style="display:flex;align-items:center;gap:7px;color:#8A94A6;font-size:14px;white-space:nowrap;"><i data-lucide="calendar" style="width:15px;height:15px;color:#1EBABB;"></i> {{ a.date }}</span>
               </div>
-              <a href="{{ a.href }}" class="read-now" style="color:#1EBABB;font-weight:700;font-size:15px;text-decoration:none;">Read now &rsaquo;</a>
+              <a href="{{ a.href }}" class="read-now" style="color:#1EBABB;font-weight:700;font-size:15px;text-decoration:none;white-space:nowrap;">Read now &rsaquo;</a>
             </div>
           </div>
         </sc-for>
@@ -178,7 +190,8 @@
       <div style="display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:40px;">
         <div>
           <div style="display:flex;align-items:center;margin-bottom:18px;"><img src="assets/topquote-logo-dark.png" alt="TopQuote" style="height:38px;width:auto;display:block;"></div>
-          <p style="color:#6B7280;font-size:13.5px;line-height:1.7;max-width:320px;margin-bottom:22px;">Top Quote Limited is an appointed representative of The Openwork Partnership, a trading style of Openwork Limited, which is authorised and regulated by the Financial Conduct Authority. Approved by The Openwork Partnership on the 20th January 2025.</p>
+          <div class="foot-badges" style="display:flex;align-items:center;gap:20px;margin:16px 0 18px;flex-wrap:wrap;"><img src="assets/trustpilot-43.png" alt="Rated 4.3 Excellent on Trustpilot from 517 reviews" style="height:110px;width:auto;"><img src="assets/platinum-trusted-service-award-2026.svg" alt="Platinum Trusted Service Award 2026" style="height:60px;width:auto;"></div>
+          <p style="color:#6B7280;font-size:13.5px;line-height:1.7;max-width:320px;margin-bottom:22px;">Top Quote Limited is an appointed representative of The Openwork Partnership, a trading style of Openwork Limited which is authorised and regulated by the Financial Conduct Authority. Approved by The Openwork Partnership on the 20th January 2025.</p>
           <div style="display:flex;gap:12px;">
             <span style="width:42px;height:42px;border-radius:50%;background:#1EBABB;display:flex;align-items:center;justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"></path></svg></span>
             <span style="width:42px;height:42px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="#173B33"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg></span>
@@ -190,10 +203,9 @@
           <div style="display:flex;flex-direction:column;gap:14px;">
             <a href="Home Page.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">Home</a>
             <a href="About Us.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">About</a>
-            <a href="Blog.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">News</a>
             <a href="Home Page.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">Contact</a>
             <a href="Reconnect.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">Reconnect</a>
-            <a href="Home Page.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">Privacy Notice</a>
+            <a href="Blog.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">Blog</a>
           </div>
         </div>
         <div>
@@ -209,8 +221,8 @@
           <div style="display:flex;flex-direction:column;gap:16px;">
             <span style="display:flex;align-items:flex-start;gap:10px;color:#6B7280;font-size:15px;line-height:1.55;"><i data-lucide="map-pin" style="width:17px;height:17px;color:#1EBABB;margin-top:2px;flex:none;"></i> <span>Alderley Park, Suite 3,<br>GLASSHOUSE, Congleton Road,<br>Macclesfield, SK10 4TG</span></span>
             <span style="display:flex;align-items:center;gap:10px;color:#6B7280;font-size:15px;"><i data-lucide="phone" style="width:17px;height:17px;color:#1EBABB;flex:none;"></i> Customer support: 0161 974 3710</span>
-            <span style="display:flex;align-items:center;gap:10px;color:#6B7280;font-size:15px;white-space:nowrap;"><i data-lucide="clock" style="width:17px;height:17px;color:#1EBABB;flex:none;"></i> Working time: Mon &ndash; Fri: 8:30 &ndash; 18:00</span>
-            <span style="display:flex;align-items:center;gap:10px;color:#6B7280;font-size:15px;"><i data-lucide="mail" style="width:17px;height:17px;color:#1EBABB;flex:none;"></i> hello@topquote.uk.com</span>
+            <span style="display:flex;align-items:center;gap:10px;color:#6B7280;font-size:15px;white-space:nowrap;"><i data-lucide="clock" style="width:17px;height:17px;color:#1EBABB;flex:none;"></i> Working time: Mon &ndash; Fri: 8:30am &ndash; 5:00pm</span>
+            <span style="display:flex;align-items:center;gap:10px;color:#6B7280;font-size:15px;"><i data-lucide="mail" style="width:17px;height:17px;color:#1EBABB;flex:none;"></i> <a href="mailto:hello@topquote.uk.com" style="color:inherit;text-decoration:none;">hello@topquote.uk.com</a></span>
           </div>
         </div>
       </div>
@@ -218,15 +230,18 @@
       <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;">
         <span style="color:#6B7280;font-size:14px;">© 2025 TopQuote. All Rights Reserved.</span>
         <div style="display:flex;gap:18px;align-items:center;">
-          <a href="https://www.theopenworkpartnership.com/privacy-notice/" target="_blank" rel="noopener" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:14px;">Privacy Policy</a>
+          <a href="https://www.theopenworkpartnership.com/media/ky0cl3ka/data-privacy-policy_2022.pdf" target="_blank" rel="noopener" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:14px;">Privacy Policy</a>
           <span style="color:#C4C9DE;">|</span>
-          <a href="#" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:14px;">Cookie Policy</a>
+          <a href="Cookie Policy.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:14px;">Cookie Policy</a>
         </div>
       </div>
       <div style="text-align:left;color:#6B7280;font-size:13.5px;line-height:1.75;max-width:940px;margin:34px 0 0;">
-        <p>&copy;2026 TopQuote Ltd., Registered in England Number: 04648763, Alderley Park, Suite 3, GLASSHOUSE, Macclesfield, SK10 4TG.</p>
-        <p style="margin-top:18px;">Registered in England Number: 04648763</p>
-        <p style="margin-top:14px;">The information on this website is for use of residents of the United Kingdom only. No representations are made as to whether the information is applicable or available in any other country which may have access to it.</p>
+        <!-- COMPLIANCE: FRN 408285 and all regulatory wording to be verified against Openwork's latest compliance-approved templates before launch -->
+        <p>Top Quote Limited is registered in England &amp; Wales, company number 04648763. Registered office: Alderley Park, Suite 3, Glasshouse, Congleton Road, Macclesfield, SK10 4TG.</p>
+        <p style="margin-top:14px;">Top Quote Limited is an appointed representative of The Openwork Partnership, a trading style of Openwork Limited which is authorised and regulated by the Financial Conduct Authority. You can check this on the FCA Register at <a href="https://register.fca.org.uk" target="_blank" rel="noopener" style="color:#1EBABB;text-decoration:none;">register.fca.org.uk</a> (Openwork Limited, firm reference number 408285).</p>
+        <p style="margin-top:14px;">The information on this website is general information only and does not constitute personal financial advice. Any personal recommendation will be based on your individual circumstances. This website is intended for UK residents only.</p>
+        <p style="margin-top:14px;">If you have a complaint about the service you have received, please contact us at <a href="mailto:hello@topquote.uk.com" style="color:#1EBABB;text-decoration:none;">hello@topquote.uk.com</a> or 0161 974 3710. If we cannot resolve your complaint to your satisfaction, you may be entitled to refer it to the Financial Ombudsman Service (<a href="https://www.financial-ombudsman.org.uk" target="_blank" rel="noopener" style="color:#1EBABB;text-decoration:none;">financial-ombudsman.org.uk</a>). We are covered by the Financial Services Compensation Scheme (<a href="https://www.fscs.org.uk" target="_blank" rel="noopener" style="color:#1EBABB;text-decoration:none;">fscs.org.uk</a>).</p>
+        <p style="margin-top:14px;">&copy; 2026 Top Quote Limited. All rights reserved.</p>
       </div>
     </div>
   </footer>
@@ -292,7 +307,7 @@ class Component extends DCLogic {
   componentDidUpdate(){ this.renderIcons(); }
 
   renderIcons(){
-    const go = () => { try { if (window.lucide) window.lucide.createIcons(); } catch(e){} };
+    const go = () => { try { if (window.__safeIcons) window.__safeIcons(); } catch(e){} };
     go(); setTimeout(go, 300); setTimeout(go, 900);
   }
 
@@ -305,8 +320,19 @@ class Component extends DCLogic {
     }, 60);
   }
 
+  catOf(t){
+    t = t.toLowerCase();
+    if (/(charity|wood st|toy drop|donation|hospice|marathon|mcr|cake bake|congratulations|mission|nurse support|gp24|connecting you)/.test(t)) return 'TopQuote News';
+    if (/(mental|mind|stress|procrastinat|worry|worried|self esteem|self-esteem|mindfulness|dopamine|positive|overthink|grief|denial|anger|bargaining|depression|acceptance|loss of a spouse|resolutions|groundhog)/.test(t)) return 'Mind & Mood';
+    if (/(health|healthy|exercise|steps|smoking|vaping|caffeine|heart|wine|pancake|eat|check-ups|wearable|gp appointments|x-ray|spinal|10,000|thriving)/.test(t)) return 'Health & Wellbeing';
+    if (/(money|outgoings|debt|university|black friday|future of money|train tickets|cost of living|check your change)/.test(t)) return 'Money Tips';
+    if (/(holiday|travel|destination|winter break|skiing|days out|markets|de-icing|winter|summer|spring|easter|christmas|festive)/.test(t)) return 'Seasonal & Travel';
+    if (/(family|home|declutter|organis|dog|pet|school bag|grandchildren|weekend|couple|mother|expecting)/.test(t)) return 'Family & Home';
+    return 'Lifestyle';
+  }
+  setFilter(c){ this.setState({ filter: c, page: 1 }); }
   goTo(n){
-    const total = Math.ceil(30/6);
+    const total = this._tot || 1;
     const p = Math.max(1, Math.min(total, n));
     if (p !== (this.state.page||1)){
       this.setState({ page: p });
@@ -333,36 +359,118 @@ class Component extends DCLogic {
         'Over 50 providers', 'Funeral planning', 'Research articles'
       ],
       articles: [
-        { title:'Life Insurance for Married Couples: A UK Guide', excerpt:'Marriage tends to bring finances closer together. You may share a mortgage, plan for children, or simply build a life where each of you relies on the…', author:'Tanweer Hussain', role:'Protection Expert', time:'6 min', date:'2 Jul 2026', href:'blog-life-insurance-for-married-couples-a-uk-guide.html' },
-        { title:'Joint Life Insurance vs Single: A UK Guide', excerpt:'If you and your partner are thinking about cover, one of the first decisions is whether to take a single joint policy between you or a separate policy…', author:'Tanweer Hussain', role:'Protection Expert', time:'7 min', date:'1 Jul 2026', href:'blog-joint-life-insurance-vs-single-a-uk-guide.html' },
-        { title:'How to Buy Life Insurance in the UK: A Plain-English Guide', excerpt:'Buying life insurance in the UK is more straightforward than many people expect. The broad process is: work out what you need it to do, choose a policy…', author:'Tanweer Hussain', role:'Protection Expert', time:'12 min', date:'30 Jun 2026', href:'blog-buying-life-insurance.html' },
-        { title:'How Much Life Insurance Do I Need? A UK Guide', excerpt:'It is one of the most common questions people ask before taking out cover, and one of the hardest to answer with a single number: how much life insurance…', author:'Tanweer Hussain', role:'Protection Expert', time:'8 min', date:'29 Jun 2026', href:'blog-how-much-life-insurance-do-i-need-a-uk-guide.html' },
-        { title:'Income Protection for the Self-Employed', excerpt:'If you are self-employed and could not work because of illness or injury, your income would usually stop more or less straight away, and there is no…', author:'Tanweer Hussain', role:'Protection Expert', time:'7 min', date:'28 Jun 2026', href:'blog-income-protection-for-the-self-employed.html' },
-        { title:'Is Income Protection Insurance Worth It?', excerpt:'The honest answer is: it depends on you, and we are not going to pretend otherwise. For many working-age people, especially anyone who would struggle…', author:'Tanweer Hussain', role:'Protection Expert', time:'8 min', date:'27 Jun 2026', href:'blog-is-income-protection-insurance-worth-it.html' },
-        { title:'What Is Income Protection Insurance?', excerpt:'Income protection insurance pays you a regular, tax-free income if you cannot work because of illness or injury. Instead of a one-off lump sum, it tops up…', author:'Tanweer Hussain', role:'Protection Expert', time:'10 min', date:'26 Jun 2026', href:'blog-income-protection-insurance.html' },
-        { title:'Over 50s Life Insurance Explained', excerpt:'Over 50s life insurance is a type of whole-of-life cover, usually open to people aged roughly 50 to 80, that pays out a fixed, tax-free lump sum whenever…', author:'Tanweer Hussain', role:'Protection Expert', time:'9 min', date:'25 Jun 2026', href:'blog-over-50s-life-insurance.html' },
-        { title:'Income Protection vs Critical Illness Cover', excerpt:'Income protection and critical illness cover are easy to confuse, but they solve genuinely different problems. In short: income protection pays you a…', author:'Tanweer Hussain', role:'Protection Expert', time:'7 min', date:'24 Jun 2026', href:'blog-income-protection-vs-critical-illness.html' },
-        { title:'Can You Get Critical Illness Cover Without Life Insurance?', excerpt:'Short answer first, because it is the thing you came here to find out. Yes, you can get critical illness cover without life insurance. It is sold as a…', author:'Tanweer Hussain', role:'Protection Expert', time:'11 min', date:'20 Jun 2026', href:'blog-can-you-get-critical-illness-cover-without-life-insurance.html' },
-        { title:'Life Insurance for Parents', excerpt:'Life insurance for parents is simply cover arranged by mums and dads so that, if the worst happened, the people who depend on them would be looked after…', author:'Tanweer Hussain', role:'Protection Expert', time:'10 min', date:'20 Jun 2026', href:'blog-life-insurance-for-parents.html' },
-        { title:'Life Insurance With Pre-existing Conditions', excerpt:'If you have a health condition and you have quietly assumed life insurance is off the table, this is the bit worth reading first. For most people with a…', author:'Tanweer Hussain', role:'Protection Expert', time:'13 min', date:'19 Jun 2026', href:'blog-life-insurance-with-pre-existing-conditions.html' },
-        { title:'Is Life Insurance Part of Your Estate?', excerpt:'It is one of those questions that only tends to occur to people once the policy is already in a drawer, gathering dust and direct debits: is life…', author:'Tanweer Hussain', role:'Protection Expert', time:'9 min', date:'10 Jun 2026', href:'blog-is-life-insurance-part-of-your-estate.html' },
-        { title:'Life Insurance After Divorce: A Plain-English UK Guide', excerpt:'Divorce comes with a long and joyless to-do list, and somewhere below the solicitor, the house and who keeps the good frying pan sits a line that is easy…', author:'Tanweer Hussain', role:'Protection Expert', time:'10 min', date:'8 Jun 2026', href:'blog-life-insurance-after-divorce-guide.html' },
-        { title:'Family Life Insurance Explained: A Plain-English UK Guide', excerpt:'A new baby, a bigger mortgage, the slow realisation that several people now depend on your income: family life tends to arrive faster than the paperwork.…', author:'Tanweer Hussain', role:'Protection Expert', time:'9 min', date:'4 Jun 2026', href:'blog-family-life-insurance-2.html' },
-        { title:'Life Insurance After Cancer: What You Need to Know', excerpt:'Getting life insurance after cancer is possible for many people. Whether it is available, and on what terms, depends on the type and stage of the cancer,…', author:'Tanweer Hussain', role:'Protection Expert', time:'11 min', date:'3 Jun 2026', href:'blog-life-insurance-after-cancer.html' },
-        { title:'Family Life Insurance: What It Is, Who Needs It, and What to Think About', excerpt:'The strange thing about life insurance is that almost everyone agrees they should sort it out. It sits on the mental list alongside booking the dentist…', author:'Tanweer Hussain', role:'Protection Expert', time:'11 min', date:'3 Jun 2026', href:'blog-family-life-insurance.html' },
-        { title:'Do You Need Life Insurance for a Mortgage? A Plain-English UK Guide', excerpt:'The mortgage offer lands in your inbox. You allow yourself about four seconds of celebration, and then someone asks whether you have your life insurance…', author:'Tanweer Hussain', role:'Protection Expert', time:'11 min', date:'3 Jun 2026', href:'blog-do-you-need-life-insurance-for-a-mortgage.html' },
-        { title:'Using Life Insurance for Inheritance Tax Planning UK', excerpt:'Inheritance tax is a charge on the estate of a person who has died. For many families, particularly those who own property in the UK, the liability can…', author:'Tanweer Hussain', role:'Protection Expert', time:'6 min', date:'27 May 2026', href:'blog-using-life-insurance-for-inheritance-tax-planning-uk.html' },
-        { title:'Cohabiting Couples and Life Insurance UK: What You Need to Know', excerpt:'Cohabiting couples are the fastest-growing family type in the UK, yet many remain unaware of the significant legal gap that exists between their position…', author:'Tanweer Hussain', role:'Protection Expert', time:'6 min', date:'26 May 2026', href:'blog-cohabiting-couples-and-life-insurance-uk-what-you-need-to-know.html' },
-        { title:'Life Insurance for Stay-at-Home Parents UK: Do You Need Cover?', excerpt:'Life insurance decisions in households with a stay-at-home parent are often skewed heavily towards the earning partner. The working partner’s income is…', author:'Tanweer Hussain', role:'Protection Expert', time:'5 min', date:'23 May 2026', href:'blog-life-insurance-for-stay-at-home-parents-uk-do-you-need-cover.html' },
-        { title:'Life Insurance After a Heart Attack UK: Can You Get Cover?', excerpt:'A heart attack is a serious medical event, and it naturally raises concerns about whether life insurance remains accessible afterwards. The honest answer…', author:'Tanweer Hussain', role:'Protection Expert', time:'7 min', date:'22 May 2026', href:'blog-life-insurance-after-a-heart-attack-uk-can-you-get-cover.html' },
-        { title:'Waiver of Premium: What It Is and Whether You Need It', excerpt:'Waiver of premium is one of the most straightforward and potentially valuable add-ons available when taking out a life insurance policy. Despite its…', author:'Tanweer Hussain', role:'Protection Expert', time:'6 min', date:'21 May 2026', href:'blog-waiver-of-premium-what-it-is-and-whether-you-need-it.html' },
-        { title:'Life Insurance for First-Time Buyers UK: What You Need to Know', excerpt:'Taking on a mortgage for the first time is one of the most significant financial commitments most people make. A repayment mortgage runs for twenty-five…', author:'Tanweer Hussain', role:'Protection Expert', time:'6 min', date:'20 May 2026', href:'blog-life-insurance-for-first-time-buyers-uk-what-you-need-to-know.html' },
-        { title:'Can You Have Two Life Insurance Policies in the UK?', excerpt:'There is no legal restriction in the UK on how many life insurance policies you can hold at any one time. Individuals regularly hold two or more policies…', author:'Tanweer Hussain', role:'Protection Expert', time:'6 min', date:'19 May 2026', href:'blog-can-you-have-two-life-insurance-policies-in-the-uk.html' },
-        { title:'Decreasing Term vs Level Term Life Insurance: What Is the Difference?', excerpt:'When you take out life insurance in the UK, one of the first decisions you will face is whether to choose decreasing term or level term cover. The…', author:'Tanweer Hussain', role:'Protection Expert', time:'6 min', date:'16 May 2026', href:'blog-decreasing-term-vs-level-term-life-insurance-what-is-the-difference.html' },
-        { title:'Joint Life Insurance vs Two Single Policies: Which Is Better?', excerpt:'When two people take out life insurance together, they generally have two options: a joint policy that covers both lives under one plan, or two separate…', author:'Tanweer Hussain', role:'Protection Expert', time:'6 min', date:'15 May 2026', href:'blog-joint-life-insurance-vs-two-single-policies-which-is-better.html' },
-        { title:'Shareholder Protection Insurance UK: Keeping Control of Your Business', excerpt:'If a shareholder in a UK limited company dies, their shares pass automatically to their estate. The deceased\'s family may become unwilling co-owners of a…', author:'Tanweer Hussain', role:'Protection Expert', time:'4 min', date:'14 May 2026', href:'blog-shareholder-protection-insurance-uk-keeping-control-of-your-business.html' },
-        { title:'Life Insurance and Mental Health UK: Can You Still Get Cover?', excerpt:'A diagnosis of depression, anxiety, or another mental health condition does not automatically disqualify you from obtaining life insurance in the UK.…', author:'Tanweer Hussain', role:'Protection Expert', time:'6 min', date:'14 May 2026', href:'blog-life-insurance-and-mental-health-uk-can-you-still-get-cover.html' },
-        { title:'Life Insurance for Cancer Survivors UK: Can You Get Cover After Treatment?', excerpt:'Many cancer survivors in the UK are able to obtain life insurance, though the availability and cost of cover depends heavily on the type of cancer, the…', author:'Tanweer Hussain', role:'Protection Expert', time:'4 min', date:'13 May 2026', href:'blog-life-insurance-for-cancer-survivors-uk-can-you-get-cover-after-treatment.html' }
+        { title:'5 Simple Ways to Hit 10,000 Steps a Day, and Why It’s Worth It', excerpt:'The 10,000-step goal has become part of everyday life, a simple, visible reminder to move a little more each day.', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'24 Nov 2025', href:'blog-5-simple-ways-to-hit-10000-steps-a-day.html' },
+        { title:'How AI Is Changing GP Appointments', excerpt:'Technology is transforming how we live, and now it’s starting to change how we access healthcare too. If you’ve booked a GP appointment recently,…', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'31 Oct 2025', href:'blog-how-ai-is-changing-gp-appointments-topquote.html' },
+        { title:'Affordable Family Days Out Before Summer Ends', excerpt:'As summer begins to slip away, many of us want to make the most of the last warm days before school runs, packed lunches and work routines return.…', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'15 Sep 2025', href:'blog-affordable-family-days-out-before-summer-ends.html' },
+        { title:'The Rise of Wearable Health Tech', excerpt:'Smartwatches, fitness bands, health apps, and wearable health tech are everywhere. A recent survey reported that one in three Brits is now regularly…', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'29 Jul 2025', href:'blog-the-rise-of-wearable-health-tech.html' },
+        { title:'How to Quit Caffeine Without Feeling Miserable', excerpt:'Quitting caffeine can feel like a daunting task, especially for those who rely on it to get through the day. But with the right approach, you can…', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'11 Apr 2025', href:'blog-how-to-quit-caffeine-without-withdrawal.html' },
+        { title:'5 Conversations Every Couple Should Have About Their Future', excerpt:'5 Conversations Every Couple Should Have About Their Future', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'31 Mar 2025', href:'blog-5-conversations-every-couple-should-have-about-their-future.html' },
+        { title:'Managing Stress: Understanding Its Impact and Effective Strategies', excerpt:'As we navigate the complexities of modern life, stress becomes a seemingly inevitable companion. Yet, its impact on our health can be profound and…', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'31 Mar 2025', href:'blog-managing-stress-understanding-its-impact-and-effective-strategies.html' },
+        { title:'Spring Forward: Essential Early Preparation Tips for a Safer, Healthier Home', excerpt:'As the final frost thaws and we edge closer to spring, it\'s the perfect time to prepare your home and health for the brighter days ahead. At…', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'6 Mar 2025', href:'blog-spring-home-preparation-tips.html' },
+        { title:'Cold Weather Wellness Guide', excerpt:'With winter in the UK, it\'s vital for us to stay healthy. This guide offers strategies to confront the challenges colder weather brings, ensuring you…', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'20 Jan 2025', href:'blog-cold-weather-wellness-guide.html' },
+        { title:'Holiday Travel Tips for the Savvy Adventurer', excerpt:'Christmas travel can be a joy-or a headache-depending on how you prepare. For those of us with a few decades of travel experience under our belts,…', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'24 Dec 2024', href:'blog-holiday-travel-tips-for-the-savvy-adventurer.html' },
+        { title:'The Power of Pets: How Owning a Pet Can Improve Mental Health', excerpt:'As we journey through life finding joy and maintaining mental health become increasingly important. At TopQuote, we understand that the path to…', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'8 Nov 2024', href:'blog-how-owning-a-pet-can-improve-mental-health.html' },
+        { title:'Navigating the New Normal: Life After Retirement', excerpt:'Retirement is a significant milestone, marking the transition from decades of work to a new phase of life. For many in their 50s, the thought of…', author:'Tanweer Hussain', role:'Protection Expert', time:'4 min read', date:'25 Oct 2024', href:'blog-navigating-the-new-normal-life-after-retirement.html' },
+        { title:'De-Icing Your Car and Other Essential Winter Tips', excerpt:'As winter tightens its icy grip, many motorists find themselves faced with the task of de-icing their vehicles. It is essential to note that using…', author:'Tanweer Hussain', role:'Protection Expert', time:'4 min read', date:'13 Jan 2024', href:'blog-de-icing-your-car-and-other-essential-winter-tips.html' },
+        { title:'How are Portable X-rays Enhancing Healthcare in Remote Areas?', excerpt:'Radiographer Sam Pilkington has emphasised the life-saving importance of portable X-ray machines. These devices are particularly beneficial for…', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'10 Jan 2024', href:'blog-how-are-portable-x-rays-enhancing-healthcare-in-remote-areas.html' },
+        { title:'Five Ways To Get Cheaper Train Tickets', excerpt:'As many commuters return to their rail journeys following the Christmas break, the prospect of an impending increase in ticket prices may be met with…', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'4 Jan 2024', href:'blog-five-ways-to-get-cheaper-train-tickets.html' },
+        { title:'How To Quit Vaping', excerpt:'In today’s fast-paced world, where new trends emerge rapidly, vaping has become a prominent habit among various age groups. Here, we delve into an…', author:'Tanweer Hussain', role:'Protection Expert', time:'4 min read', date:'1 Jan 2024', href:'blog-how-to-quit-vaping.html' },
+        { title:'Simple Habits for a Healthier Lifestyle', excerpt:'In our fast-paced world, maintaining a healthy and balanced lifestyle can be a challenge, yet it\'s essential for our overall well-being. Adopting…', author:'Tanweer Hussain', role:'Protection Expert', time:'4 min read', date:'22 Dec 2023', href:'blog-simple-habits-for-a-healthier-lifestyle.html' },
+        { title:'10 Achievable New Year\'s Resolutions for a Healthier and Happier 2024', excerpt:'As we bid farewell to 2023 and welcome 2024, it\'s the perfect time to set intentions for a fresh start. New Year\'s resolutions often get a bad rap…', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'25 Nov 2023', href:'blog-10-achievable-new-years-resolutions-for-a-healthier-and-happier-2024.html' },
+        { title:'10 Delightful Christmas Activities You Can Do All December Long', excerpt:'As the festive season rolls in with its sparkling lights and merry jingles, it\'s time to dive into the spirit of Christmas. The holidays offer a…', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'24 Nov 2023', href:'blog-10-delightful-christmas-activities-you-can-do-all-december-long.html' },
+        { title:'UK\'s Top 12 Christmas Markets: A Festive Journey of Joy and Wonder', excerpt:'As the festive season unfurls its magic across the UK, streets and squares transform into enchanting wonderlands, hosting some of the most delightful…', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'23 Nov 2023', href:'blog-uks-top-12-christmas-markets-a-festive-journey-of-joy-and-wonder.html' },
+        { title:'How To Stop Procrastination In Two Minutes', excerpt:'David Allen\'s acclaimed time management book, "Getting Things Done," spans 267 pages, yet within it lies a remarkably simple, yet often overlooked,…', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'22 Nov 2023', href:'blog-how-to-stop-procrastination-in-two-minutes.html' },
+        { title:'Revolutionary Spinal Implant Revitalises Walking Ability in Parkinson\'s Patient', excerpt:'In a groundbreaking medical advancement, a 63-year-old Frenchman, Marc Gauthier from Bordeaux, has overcome severe mobility restrictions caused by…', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'20 Nov 2023', href:'blog-revolutionary-spinal-implant-revitalises-walking-ability-in-parkinsons-patient.html' },
+        { title:'What\'s the Best Time to Eat for Your Health? Discover Why When You Eat Matters as Much as What You Eat', excerpt:'In our ever-evolving understanding of wellness, the synchronisation of meal times with our body’s natural rhythms is emerging as a key component in…', author:'Tanweer Hussain', role:'Protection Expert', time:'4 min read', date:'13 Nov 2023', href:'blog-whats-the-best-time-to-eat-for-your-health-discover-why-when-you-eat-matters-as-much-as-what-you-eat.html' },
+        { title:'A Guide to Teaching Your Dog Their Name', excerpt:'As someone who\'s navigated the complexities of life, you understand the importance of a name-it\'s not just a label, it\'s an identity. It\'s your first…', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'12 Oct 2023', href:'blog-a-guide-to-teaching-your-dog-their-name.html' },
+        { title:'The Close Connection Between Your Mental and Physical Wellbeing', excerpt:'The relationship between your mental health and physical health isn\'t just one-way traffic. There\'s a deeply interconnected bond that can either…', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'12 Oct 2023', href:'blog-the-close-connection-between-your-mental-and-physical-wellbeing.html' },
+        { title:'Toilet Training Fundamentals For Dogs', excerpt:'Having successfully navigated the twists and turns of teaching your dog to respond to their name-as outlined in our previous guide-you\'ve laid a…', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'12 Oct 2023', href:'blog-toilet-training-fundamentals-for-dogs.html' },
+        { title:'How to Cope with the Loss of a Spouse', excerpt:'Losing a spouse is one of life\'s hardest experiences. You might find yourself sailing through a storm of emotions, feeling lost and overwhelmed. At…', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'22 Sep 2023', href:'blog-how-to-cope-with-the-loss-of-a-spouse.html' },
+        { title:'How to Get a Dopamine Boost in Your 50s', excerpt:'Welcome to TopQuote\'s blog, where we\'re exploring life in your 50s, a time filled with self-discovery, adventure, and cherishing the moments that…', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'22 Sep 2023', href:'blog-how-to-get-a-dopamine-boost-in-your-50.html' },
+        { title:'Thriving in Your 50s: Simple and Joyful Tips for a Vibrant Life', excerpt:'Entering our 50s is a wonderful milestone, a time ripe with opportunities to enjoy life to the fullest. Here, we present you with some delightful and…', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'22 Sep 2023', href:'blog-thriving-in-your-50s-simple-and-joyful-tips-for-a-vibrant-life.html' },
+        { title:'What\'s the Most Heartfelt Gift for Your Grandchildren?', excerpt:'The bond between grandparents and grandchildren is like a timeless symphony, a cherished melody that plays through the ages. In the vibrant tapestry…', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'14 Sep 2023', href:'blog-whats-the-most-heartfelt-gift-for-your-grandchildren.html' },
+        { title:'The Gut-Brain Connection: Foods that Boost Mental Well-being for over 50s', excerpt:'The gut-brain axis is an intricate network of communication that connects our intestines to our brain. Emerging research shows that our gut, often…', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'25 Aug 2023', href:'blog-the-gut-brain-connection-foods-that-boost-mental-well-being-for-over-50s.html' },
+        { title:'Understanding and Managing Debt: A Comprehensive Guide', excerpt:'Debt may often be viewed as a financial burden, but when managed effectively, it can serve as a useful tool for reaching your financial goals. This…', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'9 Jul 2023', href:'blog-understanding-and-managing-debt-a-comprehensive-guide.html' },
+        { title:'Investing in Your Health: The Importance of Regular Check-ups', excerpt:'Investing in your health is arguably the best investment you can make. Just as we save for retirement or put funds aside for a rainy day, we should…', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'7 Jul 2023', href:'blog-investing-in-your-health-the-importance-of-regular-check-ups.html' },
+        { title:'Digital Tools for Effective Personal Finance Management', excerpt:'In today\'s digital age, managing your finances has never been more accessible. Digital tools, ranging from budgeting apps to online banking, have…', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'5 Jul 2023', href:'blog-digital-tools-for-effective-personal-finance-management.html' },
+        { title:'Festive Family Ideas', excerpt:'With less than two weeks to go, Christmas really is right around the corner. If you aren’t feeling festive yet, you haven’t got long to get yourself…', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'16 Dec 2022', href:'blog-festive-family-ideas.html' },
+        { title:'Uncertainty Ahead This Winter', excerpt:'As summer draws to an incredibly abrupt end (a little too abrupt for our liking), it’s time to start thinking about winter. This of course means…', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'25 Oct 2022', href:'blog-uncertainty-ahead-this-winter.html' },
+        { title:'Make The Most of Your Weekends', excerpt:'There is a universal Monday morning feeling that’s ever present across the globe. No matter the industry, location, salary, or age of the individual,…', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'5 Sep 2022', href:'blog-make-the-most-of-your-weekends.html' },
+        { title:'TopQuote’s Top Three UK Holiday Destinations', excerpt:'The word ‘unprecedented’ has probably had more airtime and column inches over the past two and a half years than in its entire history. It pops up…', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'13 Jul 2022', href:'blog-topquotes-top-three-uk-holiday-destinations.html' },
+        { title:'TopQuote’s Charity Work Changes Lives', excerpt:'The Cost of Living Crisis has ushered in a new age of financial anxiety and worry for a huge number of families in the country. With both domestic…', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'8 Jun 2022', href:'blog-topquotes-charity-work-changes-lives.html' },
+        { title:'Mental Health Against the Backdrop of Rising Prices', excerpt:'One of the greatest aspects of our modern world is the ability to communicate more frequently and freely. This isn’t just limited to the advances in…', author:'Tanweer Hussain', role:'Protection Expert', time:'4 min read', date:'20 Apr 2022', href:'blog-mental-health-against-the-backdrop-of-rising-prices.html' },
+        { title:'The Cost of Living Crisis', excerpt:'It seems there is no escaping the financial challenges that the vast majority of us will be facing in the short-term future. The statistics are so…', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'11 Apr 2022', href:'blog-the-cost-of-living-crisis.html' },
+        { title:'The Mother of all National Holidays', excerpt:'Almost every single day in the calendar is given some kind of celebration, spotlight, or focus for the modern era. March the 1st alone accommodated…', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'25 Mar 2022', href:'blog-the-mother-of-all-national-holidays.html' },
+        { title:'The Pitfalls of Predicting the Future', excerpt:'William Shakespeare’s legacy on the English language is so vast and wide-reaching thatwe often forget to associate him with many of the everyday…', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'15 Mar 2022', href:'blog-the-pitfalls-of-predicting-the-future.html' },
+        { title:'The Joy of Lists', excerpt:'The start of the new year always brings a few inevitable and inescapable things alongwith it. There are the resolutions that we make and pursue with…', author:'Tanweer Hussain', role:'Protection Expert', time:'4 min read', date:'23 Feb 2022', href:'blog-the-joy-of-lists.html' },
+        { title:'Healthy Plate, Healthy Mind', excerpt:'The beginning of 2022 is turning out to be another challenging period to navigate. Ofcourse, most years start with the familiar feeling we must…', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'2 Feb 2022', href:'blog-healthy-plate-healthy-mind.html' },
+        { title:'Here We Go Again – How to Avoid Groundhog Day', excerpt:'Predicting what will happen in the future is fraught with uncertainty and danger. Withover seven billion people on the planet, all making hundreds of…', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'1 Feb 2022', href:'blog-here-we-go-again-how-to-avoid-groundhog-day.html' },
+        { title:'How to Make Those Resolutions Stick', excerpt:'There are very few things that we can rely on going into 2022.', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'5 Jan 2022', href:'blog-how-to-make-those-resolutions-stick.html' },
+        { title:'For Sale or Force Sale? - Black Friday Madness', excerpt:'Getting a good deal drives so much of our human behaviour. Sometimes, it feels theworld is built around it. If you look on any retail website, there…', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'23 Nov 2021', href:'blog-for-sale-or-force-sale-black-friday-madness.html' },
+        { title:'Wood St Mission - A Gift of Hope', excerpt:'In the modern age, we expect decisions to be supported by data, facts, figures & analysis.', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'5 Nov 2021', href:'blog-wood-st-mission-a-gift-of-hope.html' },
+        { title:'Always Check Your Change(s)', excerpt:'', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'18 Oct 2021', href:'blog-always-check-your-changes.html' },
+        { title:'Connecting You Now', excerpt:'There will always be defining images to accompany landmark moments in history. They often act as a jolt to the memory that can transport us back to…', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'28 Sep 2021', href:'blog-connecting-you-now.html' },
+        { title:'The Future of Money', excerpt:'', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'28 Sep 2021', href:'blog-the-future-of-money.html' },
+        { title:'Finding Peace of Mind in a Changing World', excerpt:'Peace of mind has always been incredibly important for us here at TopQuote.', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'31 Aug 2021', href:'blog-finding-peace-of-mind-in-a-changing-world.html' },
+        { title:'Is Red Wine Actually Good For You?', excerpt:'For a lot of us, there’s nothing better than settling in after a long week at work with a glass of red and a Netflix binge, but is red wine really…', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'9 Jun 2021', href:'blog-is-red-wine-actually-good-for-you.html' },
+        { title:'5 Exercises You Can Fit Into Everyday Life', excerpt:'With daily routines slowly returning back to normal, you may find that you have less time in the day for yourself. While it can be hard to find time…', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'21 May 2021', href:'blog-5-exercises-you-can-fit-into-everyday-life.html' },
+        { title:'The importance of being charitable in the Covid era:How we are doing our part', excerpt:'Now more than ever, it’s really important to remember those who are always the most affected by any major changes in the world – underprivileged…', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'14 Jul 2020', href:'blog-wsm.html' },
+        { title:'Legal & General GP24', excerpt:'For all Critical Illness Cover and Critical Illness Extra policies The person covered, or their immediate family, will have access to General…', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'30 Jun 2020', href:'blog-gp24.html' },
+        { title:'Legal & General Nurse Support Services', excerpt:'Legal & General Nurse Support Services is provided by qualified nurses that are designed to give long-term practical advice and emotional support to…', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'30 Jun 2020', href:'blog-nurse-support-services.html' },
+        { title:'Overcoming Procrastination During Lockdown', excerpt:'During these uncertain times, we understand that everybody can get into a slight lull with being cooped up at home during lockdown. Staying…', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'29 Apr 2020', href:'blog-overcoming-procrastination-during-lockdown.html' },
+        { title:'Positive COVID-19 News', excerpt:'Right now, the world is going through incredibly uncertain times. Coronavirus, otherwise known as COVID-19, has spread quickly worldwide which has…', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'30 Mar 2020', href:'blog-positive-covid19-news.html' },
+        { title:'Key Steps to Take to Have a More Positive Mental Attitude', excerpt:'With the growing conversation surrounding mental health in recent years, we all know that mental health is just as important as physical health. Here…', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'3 Mar 2020', href:'blog-key-steps-to-take-to-have-a-more-positive-mental-attitude.html' },
+        { title:'Our Favourite Healthy Pancake Recipe for Shrove Tuesday', excerpt:'Pancake Day is here, the traditional feast day before we give up an indulgence for lent. We wanted to share with you one of our favourite recipes so…', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'25 Feb 2020', href:'blog-healthy-pancake-recipes-for-shrove-tuesday.html' },
+        { title:'TopQuote’s Christmas Delivery to Wood Street Mission', excerpt:'Wood Street Mission is a charity based in Manchester City Centre, aiming to relieve poverty in Manchester and Salford and improve the lives of those…', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'17 Dec 2019', href:'blog-topquotes-christmas-delivery-to-wood-street-mission.html' },
+        { title:'5 Best Places to Visit for a Winter Break', excerpt:'With one in three people in the UK being affected by Seasonal Affective Disorder (see article here), it’s no wonder that Brits are increasingly…', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'25 Nov 2019', href:'blog-best-winter-breaks.html' },
+        { title:'5 Best Ways to Stop Smoking', excerpt:'Whether or not you smoke, is one of the most significant factors that affects your life insurance premium. At a time when we are planning our New…', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'29 Oct 2019', href:'blog-5-best-ways-to-stop-smoking.html' },
+        { title:'Money Saving Tips To Get You Through University', excerpt:'We all know that education is the main point of university but the learning doesn’t stop when you leave the lecture hall. For many, moving to…', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'15 May 2019', href:'blog-money-saving-tips-to-get-you-through-university.html' },
+        { title:'5 Destinations for An Active Holiday', excerpt:'Despite our best efforts in everyday life, staying healthy whilst on holiday can be a challenge. From laying by the pool all day to the abundance of…', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'10 Apr 2019', href:'blog-destinations-for-an-active-holiday.html' },
+        { title:'6 Ways to Stay Healthy in the Office', excerpt:'Spending a large chunk of your day sat in a chair, staring at a computer (and the clock) can make it hard to stay active. Combine it with work…', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'27 Mar 2019', href:'blog-6-ways-to-stay-healthy-in-the-office.html' },
+        { title:'Success for Wood Street Mission', excerpt:'We’re pleased to announce that our friendsover at the Wood Street Mission have just secured their second batch of funding this year from our partners…', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'12 Dec 2018', href:'blog-success-for-wood-street-mission.html' },
+        { title:'5 Ways to a Healthy Heart', excerpt:'', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'14 Feb 2018', href:'blog-5-ways-to-a-healthy-heart.html' },
+        { title:'Skiing in Britain? It’s better than you might think', excerpt:'', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'7 Feb 2018', href:'blog-skiing-in-britain-its-better-than-you-might-think.html' },
+        { title:'How To Beat the Winter Blues', excerpt:'', author:'Tanweer Hussain', role:'Protection Expert', time:'5 min read', date:'22 Jan 2018', href:'blog-beat-the-blues-with-these-winter-lighting-tips.html' },
+        { title:'Simple Steps for a Healthy Mind in a Healthy Body', excerpt:'', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'22 Jan 2018', href:'blog-simple-steps-for-a-healthy-mind-in-a-healthy-body.html' },
+        { title:'Organise Your Life With These 10 Habits', excerpt:'', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'16 Jan 2018', href:'blog-organise-your-life-with-these-10-habits.html' },
+        { title:'10 organisation hacks to declutter your home', excerpt:'', author:'Tanweer Hussain', role:'Protection Expert', time:'4 min read', date:'4 Jan 2018', href:'blog-10-organisation-hacks-to-declutter-your-home.html' },
+        { title:'Why New Year’s resolutions don’t work (and how to create lasting change)', excerpt:'', author:'Tanweer Hussain', role:'Protection Expert', time:'5 min read', date:'4 Jan 2018', href:'blog-why-new-years-resolutions-dont-work-and-how-to-create-lasting-change.html' },
+        { title:'3 ways to prepare for extreme weather this winter', excerpt:'', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'6 Dec 2017', href:'blog-3-ways-to-prepare-for-extreme-weather-this-winter.html' },
+        { title:'How valuable is your child’s school bag?', excerpt:'', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'5 Dec 2017', href:'blog-how-valuable-is-your-childs-school-bag.html' },
+        { title:'3 strategies to help you prioritise your monthly outgoings', excerpt:'', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'29 Nov 2017', href:'blog-3-strategies-to-help-you-prioritise-your-monthly-outgoings.html' },
+        { title:'Top 5 financial decisions for parents', excerpt:'', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'31 Oct 2017', href:'blog-top-5-financial-decisions-for-parents.html' },
+        { title:'Top health trends to get you moving this winter', excerpt:'', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'31 Oct 2017', href:'blog-top-health-trends-to-get-you-moving-this-winter.html' },
+        { title:'We Love MCR 2017', excerpt:'This month Top Quote donated £250 to our local We Love Manchester charity.', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'23 Oct 2017', href:'blog-we-love-mcr-2017.html' },
+        { title:'Easter 2016', excerpt:'Some extra work for the Easter Bunny! 1,000 Easter Eggs dropped off atRoyal Manchester Children\'s Hospital. Happy Easter to all!', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'22 Mar 2016', href:'blog-easter-2016.html' },
+        { title:'2015 Christmas Toy Drop', excerpt:'', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'24 Dec 2015', href:'blog-2015-christmas-toy-drop.html' },
+        { title:'Charity Video', excerpt:'', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'18 Dec 2015', href:'blog-charity-video.html' },
+        { title:'2015 Donations', excerpt:'', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'8 Feb 2015', href:'blog-2015-donations.html' },
+        { title:'Christmas 2014!', excerpt:'', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'8 Dec 2014', href:'blog-christmas-2014.html' },
+        { title:'Family always comes first…', excerpt:'', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'28 Nov 2014', href:'blog-family-always-comes-first.html' },
+        { title:'Holidays are coming!', excerpt:'', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'10 Oct 2014', href:'blog-holidays-are-coming.html' },
+        { title:'Mindfulness Mumbo Jumbo', excerpt:'', author:'Tanweer Hussain', role:'Protection Expert', time:'4 min read', date:'19 Aug 2014', href:'blog-mindfulness-mumbo-jumbo.html' },
+        { title:'Six weeks of sun, sea, sand or stress!', excerpt:'', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'14 Jul 2014', href:'blog-six-weeks-of-sun-sea-sand-or-stress.html' },
+        { title:'Self Esteem', excerpt:'', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'16 Jun 2014', href:'blog-self-esteem.html' },
+        { title:'Royal Manchester Children’s Hospital fund', excerpt:'', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'8 Jun 2014', href:'blog-royal-manchester-children-s-hospital-fund.html' },
+        { title:'Congratulations!', excerpt:'', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'8 Jun 2014', href:'blog-royal-manchester-ecg-machine.html' },
+        { title:'Charity Update', excerpt:'', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'22 May 2014', href:'blog-charity-update.html' },
+        { title:'Do you think you overthink?', excerpt:'', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'7 Apr 2014', href:'blog-do-you-think-you-overthink.html' },
+        { title:'Stress', excerpt:'', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'25 Mar 2014', href:'blog-stress.html' },
+        { title:'Cake Bake, Dress Down and Auction', excerpt:'So far this year we have donated £10,000 to the Royal Manchester Childrens Hospital, in order to buy some new equipment for the wards that need it…', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'22 Feb 2014', href:'blog-cake-bake-dress-down-and-auction.html' },
+        { title:'Expecting & Expectations', excerpt:'', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'18 Feb 2014', href:'blog-expecting-expectations.html' },
+        { title:'Acceptance', excerpt:'', author:'Tanweer Hussain', role:'Protection Expert', time:'4 min read', date:'23 Dec 2013', href:'blog-acceptance.html' },
+        { title:'Royal Manchester Children\'s Hospital', excerpt:'', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'22 Dec 2013', href:'blog-royal-machester-children-hospital-2013.html' },
+        { title:'Toy Drop', excerpt:'', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'8 Dec 2013', href:'blog-toy-drop.html' },
+        { title:'Wood Street Mission', excerpt:'', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'8 Dec 2013', href:'blog-wood-street-mission.html' },
+        { title:'Depression', excerpt:'', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'27 Nov 2013', href:'blog-depression.html' },
+        { title:'A Life of Worry', excerpt:'', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'26 Nov 2013', href:'blog-a-life-of-worry.html' },
+        { title:'Bargaining stage of grief', excerpt:'', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'11 Oct 2013', href:'blog-bargaining-stage-of-grief.html' },
+        { title:'Anger', excerpt:'', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'3 Sep 2013', href:'blog-anger.html' },
+        { title:'Denial', excerpt:'', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'13 Aug 2013', href:'blog-denial.html' },
+        { title:'This doesn’t happen to me', excerpt:'', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'20 Jul 2013', href:'blog-this-doesnt-happen-to-me.html' },
+        { title:'Jane’s experience, unexpected death', excerpt:'', author:'Tanweer Hussain', role:'Protection Expert', time:'4 min read', date:'9 Jul 2013', href:'blog-janes-experience-unexpected-death.html' },
+        { title:'Francis House Children\'s Hospice', excerpt:'', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'8 Jul 2013', href:'blog-francis-house-childrens-hospice.html' },
+        { title:'Marathon Des Sables 2012', excerpt:'', author:'Tanweer Hussain', role:'Protection Expert', time:'3 min read', date:'8 Aug 2012', href:'blog-marathon-des-sables-2012.html' }
       ],
       shortReviews: [
         { title:'A very concise conversation', body:'Had a very concise conversation with the adviser, he helped so much and made everything clear.' },
@@ -370,9 +478,16 @@ class Component extends DCLogic {
         { title:'Brilliant service', body:'Brilliant, very friendly and made everything easy to understand. I felt properly looked after from start to finish.' }
       ]
     };
+    const flt = this.state.filter || 'All';
+    const list = flt === 'All' ? V.articles : V.articles.filter(a => this.catOf(a.title) === flt);
     const PS = 6, pg = this.state.page || 1;
-    const tot = Math.ceil(V.articles.length / PS), s = (pg-1)*PS;
-    V.pagedArticles = V.articles.slice(s, s+PS);
+    const tot = Math.max(1, Math.ceil(list.length / PS)), s = (pg-1)*PS;
+    this._tot = tot;
+    V.pagedArticles = list.slice(s, s+PS);
+    const CATS = ['All','Health & Wellbeing','Mind & Mood','Family & Home','Seasonal & Travel','Money Tips','TopQuote News','Lifestyle'];
+    const CA = 'padding:10px 20px;border-radius:24px;border:1px solid #1EBABB;background:#1EBABB;color:#fff;font-weight:700;font-size:14px;cursor:pointer;';
+    const CI = 'padding:10px 20px;border-radius:24px;border:1px solid #D2D6E8;background:#fff;color:#5B6B78;font-weight:600;font-size:14px;cursor:pointer;';
+    V.filterChips = CATS.map(c => ({ label: c, style: c===flt?CA:CI, onClick: () => this.setFilter(c) }));
     const AB = 'width:44px;height:44px;border-radius:50%;border:none;background:#1EBABB;color:#fff;font-weight:700;font-size:15px;cursor:pointer;';
     const IB = 'width:44px;height:44px;border-radius:50%;border:none;background:transparent;color:#8A94A6;font-weight:700;font-size:15px;cursor:pointer;';
     V.pages = [];

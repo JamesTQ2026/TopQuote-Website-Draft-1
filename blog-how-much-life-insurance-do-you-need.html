@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>How Much Life Insurance Do You Need? | TopQuote</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,6 +22,10 @@
   .nav-dd:hover .nav-dd-menu{opacity:1;visibility:visible;transform:translateY(0);}
   .nav-dd-menu a{display:block;padding:10px 14px;color:#fff !important;text-decoration:none;font-size:15px;border-radius:8px;white-space:nowrap;}
   .nav-dd-menu a:hover{background:rgba(255,255,255,.08);color:#1EBABB !important;}
+  .nav-sub{position:relative;}
+  .nav-sub::after{content:"";position:absolute;top:0;left:100%;width:10px;height:100%;}
+  .nav-sub-menu{position:absolute;top:-8px;left:calc(100% + 6px);background:#0C1F19;border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:8px;min-width:230px;opacity:0;visibility:hidden;transform:translateX(6px);transition:opacity .2s ease,transform .2s ease;box-shadow:0 20px 40px rgba(0,0,0,.35);}
+  .nav-sub:hover .nav-sub-menu{opacity:1;visibility:visible;transform:translateX(0);}
   .abtn{transition:transform .3s cubic-bezier(.34,1.56,.44,1),filter .3s ease,background .25s ease;}
   .abtn:hover{transform:translateY(-3px) scale(1.03);}
   .article-body{max-width:760px;margin:0 auto;}
@@ -39,6 +44,7 @@
   i[data-lucide]{display:inline-flex;}
   @media (max-width:980px){header nav{display:none !important;}.ft-grid{grid-template-columns:1fr 1fr !important;}}
 </style>
+<script src="mobile-nav.js" defer></script>
 </head>
 <body>
   <section style="position:relative;background:#0C1F19;color:#fff;overflow:hidden;">
@@ -48,18 +54,17 @@
         <div class="nav-dd"><a href="Life Insurance.dc.html" style="background:#1EBABB;color:#fff;padding:9px 18px;border-radius:24px;text-decoration:none;display:inline-flex;align-items:center;gap:5px;">Services <span style="font-size:10px;">&#9662;</span></a><div class="nav-dd-menu"><a href="Life Insurance.dc.html">Life Insurance</a><a href="Critical Illness.dc.html">Critical Illness</a><a href="Income Protection.dc.html">Income Protection</a></div></div>
         <div class="nav-dd"><a href="About Us.dc.html" class="nav-link" style="color:#fff;padding:9px 14px;display:inline-flex;align-items:center;gap:5px;">About <span style="font-size:10px;">&#9662;</span></a><div class="nav-dd-menu"><a href="About Us.dc.html">About Us</a><a href="Consumer Duty.dc.html">Consumer Duty</a></div></div>
         <a href="Reconnect.dc.html" class="nav-link" style="color:#fff;padding:9px 14px;">Reconnect</a>
-        <a href="Blog.dc.html" class="nav-link" style="color:#fff;padding:9px 14px;">Blog</a>
         <a href="Contact.dc.html" class="nav-link" style="color:#fff;padding:9px 14px;">Contact</a>
         <a href="Careers.dc.html" class="nav-link" style="color:#fff;padding:9px 14px;">Careers</a>
+        <a href="Blog.dc.html" class="nav-link" style="color:#fff;padding:9px 14px;">Blog</a>
         <a href="Find Us.dc.html" class="nav-link" style="color:#fff;padding:9px 14px;">Find Us</a>
       </nav>
-      <a href="Get a Quote.dc.html" class="abtn" style="background:#1EBABB;color:#fff;padding:14px 26px;border-radius:8px;text-decoration:none;font-weight:700;font-size:15px;white-space:nowrap;">Get a quote</a>
     </header>
   </section>
   <section style="position:relative;height:clamp(360px,46vh,480px);background:#000;overflow:hidden;">
     <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,20,16,.5) 0%,rgba(6,20,16,.82) 100%);"></div>
     <div style="position:relative;z-index:1;max-width:900px;margin:0 auto;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding:0 clamp(24px,5vw,40px) 48px;color:#fff;">
-      <div style="font-size:13px;color:#3fd3d4;font-weight:700;letter-spacing:.04em;text-transform:uppercase;margin-bottom:16px;"><a href="Blog.dc.html" style="color:#3fd3d4;text-decoration:none;">Articles</a> &nbsp;&rsaquo;&nbsp; News</div>
+      <div style="font-size:13px;color:#3fd3d4;font-weight:700;letter-spacing:.04em;text-transform:uppercase;margin-bottom:16px;">Articles &nbsp;&rsaquo;&nbsp; News</div>
       <h1 class="arva-h" style="font-size:clamp(30px,4.2vw,52px);line-height:1.1;font-weight:700;max-width:780px;">How Much Life Insurance Do You Need?</h1>
       <div style="display:flex;align-items:center;gap:18px;margin-top:22px;flex-wrap:wrap;">
         <div style="display:flex;align-items:center;gap:11px;">
@@ -96,18 +101,12 @@
 
 <p>If you require more information on what your life insurance needs may be, feel free to give TopQuote a call on 0161 233 3110 and we’d be happy to tell you about your options. <br></p></div>
   </article>
-  <section style="background:#F6F7FB;padding:20px clamp(24px,5vw,40px) 80px;">
-    <div style="max-width:760px;margin:0 auto;background:#1EBABB;border-radius:16px;padding:44px 46px;text-align:center;color:#fff;box-shadow:0 20px 50px rgba(8,40,32,.2);">
-      <h2 class="arva-h" style="font-size:clamp(24px,3vw,34px);font-weight:600;margin-bottom:14px;">Thinking about your own cover?</h2>
-      <p style="font-size:16px;line-height:1.7;color:rgba(255,255,255,.92);margin-bottom:26px;">Speak with our friendly, award-winning advisers, honest guidance, no pressure and no jargon.</p>
-      <a href="Get a Quote.dc.html" class="abtn" style="display:inline-block;background:#fff;color:#159a9b;padding:15px 34px;border-radius:9px;text-decoration:none;font-weight:700;font-size:16px;">Get a Quote</a>
-    </div>
-  </section>
   <footer style="background:#EAEDFB;padding:64px clamp(24px,5vw,40px) 30px;">
     <div style="max-width:1200px;margin:0 auto;">
       <div class="ft-grid" style="display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:40px;">
         <div>
           <div style="display:flex;align-items:center;margin-bottom:18px;"><img src="assets/topquote-logo-dark.png" alt="TopQuote" style="height:38px;width:auto;display:block;"></div>
+          <div class="foot-badges" style="display:flex;align-items:center;gap:20px;margin:16px 0 18px;flex-wrap:wrap;"><img src="assets/trustpilot-43.png" alt="Rated 4.3 Excellent on Trustpilot from 517 reviews" style="height:110px;width:auto;"><img src="assets/platinum-trusted-service-award-2026.svg" alt="Platinum Trusted Service Award 2026" style="height:60px;width:auto;"></div>
           <p style="color:#6B7280;font-size:13.5px;line-height:1.7;max-width:320px;">Top Quote Limited is an appointed representative of The Openwork Partnership, a trading style of Openwork Limited, which is authorised and regulated by the Financial Conduct Authority.</p>
         </div>
         <div>
@@ -115,9 +114,9 @@
           <div style="display:flex;flex-direction:column;gap:14px;">
             <a href="Home Page.dc.html" class="nav-link" style="color:#6B7280;font-size:15px;">Home</a>
             <a href="About Us.dc.html" class="nav-link" style="color:#6B7280;font-size:15px;">About</a>
-            <a href="Blog.dc.html" class="nav-link" style="color:#6B7280;font-size:15px;">Blog</a>
             <a href="Contact.dc.html" class="nav-link" style="color:#6B7280;font-size:15px;">Contact</a>
             <a href="Reconnect.dc.html" class="nav-link" style="color:#6B7280;font-size:15px;">Reconnect</a>
+            <a href="Blog.dc.html" class="nav-link" style="color:#6B7280;font-size:15px;">Blog</a>
           </div>
         </div>
         <div>
@@ -133,7 +132,7 @@
           <div style="display:flex;flex-direction:column;gap:16px;">
             <span style="display:flex;align-items:flex-start;gap:10px;color:#6B7280;font-size:15px;line-height:1.55;"><i data-lucide="map-pin" style="width:17px;height:17px;color:#1EBABB;margin-top:2px;flex:none;"></i> <span>Alderley Park, Suite 3,<br>GLASSHOUSE, Congleton Road,<br>Macclesfield, SK10 4TG</span></span>
             <span style="display:flex;align-items:center;gap:10px;color:#6B7280;font-size:15px;"><i data-lucide="phone" style="width:17px;height:17px;color:#1EBABB;flex:none;"></i> 0161 974 3710</span>
-            <span style="display:flex;align-items:center;gap:10px;color:#6B7280;font-size:15px;"><i data-lucide="mail" style="width:17px;height:17px;color:#1EBABB;flex:none;"></i> hello@topquote.uk.com</span>
+            <span style="display:flex;align-items:center;gap:10px;color:#6B7280;font-size:15px;"><i data-lucide="mail" style="width:17px;height:17px;color:#1EBABB;flex:none;"></i> <a href="mailto:hello@topquote.uk.com" style="color:inherit;text-decoration:none;">hello@topquote.uk.com</a></span>
           </div>
         </div>
       </div>

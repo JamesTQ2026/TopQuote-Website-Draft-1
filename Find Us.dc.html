@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Find TopQuote in Macclesfield, Cheshire. Life insurance and protection advice across Greater Manchester and the North West.">
 <script src="./support.js"></script>
 </head>
 <body>
@@ -12,6 +13,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;800&amp;family=Playfair+Display:wght@500;600;700;800;900&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
 <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script src="services-menu.js"></script>
+<script src="mobile-nav.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <style>
@@ -26,6 +29,10 @@
   .nav-dd:hover .nav-dd-menu{opacity:1;visibility:visible;transform:translateY(0);}
   .nav-dd-menu a{display:block;padding:10px 14px;color:#fff !important;text-decoration:none;font-size:15px;border-radius:8px;white-space:nowrap;}
   .nav-dd-menu a:hover{background:rgba(255,255,255,.08);color:#1EBABB !important;}
+  .nav-sub{position:relative;}
+  .nav-sub::after{content:"";position:absolute;top:0;left:100%;width:10px;height:100%;}
+  .nav-sub-menu{position:absolute;top:-8px;left:calc(100% + 6px);background:#0C1F19;border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:8px;min-width:230px;opacity:0;visibility:hidden;transform:translateX(6px);transition:opacity .2s ease,transform .2s ease;box-shadow:0 20px 40px rgba(0,0,0,.35);}
+  .nav-sub:hover .nav-sub-menu{opacity:1;visibility:visible;transform:translateX(0);}
   i[data-lucide]{display:inline-flex;}
   .abtn{transition:transform .3s cubic-bezier(.34,1.56,.44,1),filter .3s ease,background .25s ease;}
   .abtn:hover{transform:translateY(-3px) scale(1.03);}
@@ -35,6 +42,16 @@
   #rvSwiper .swiper-slide-prev,#rvSwiper .swiper-slide-next{opacity:.62;}
   .cf-blcard{transition:transform .25s ease,box-shadow .25s ease;}
   .cf-blcard:hover{transform:translateY(-5px);box-shadow:0 20px 44px rgba(20,40,35,.12);}
+  .fu-svc{transition:transform .4s cubic-bezier(.22,1,.36,1);}
+  .fu-svc:hover{transform:translateY(-6px);}
+  .fu-svc:hover .fu-svc-img{transform:scale(1.07);}
+  .fu-area{position:relative;overflow:hidden;transition:transform .3s ease,box-shadow .3s ease;}
+  .fu-area:hover{transform:translateY(-5px);box-shadow:0 20px 44px rgba(20,40,35,.22);}
+  .fu-area:hover .fu-area-img{transform:scale(1.08);}
+  .faq-q{cursor:pointer;}
+  .faq-item.open .faq-a{max-height:600px !important;opacity:1 !important;}
+  .faq-item.open .faq-plus{transform:rotate(45deg);}
+  @media (max-width:900px){.fu-svc-grid{grid-template-columns:1fr !important;}.fu-areas-grid{grid-template-columns:1fr 1fr !important;}}
   #letterCard{opacity:0;transform:translateY(40px) rotate(-1.5deg);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1);}
   #letterCard.in{opacity:1;transform:none;}
   .letter-line{display:inline-block;opacity:0;transform:translateX(-14px);transition:opacity .5s ease,transform .5s ease;}
@@ -88,21 +105,24 @@
   @media (max-width:560px){.cf-row{grid-template-columns:1fr !important;}.cf-btn{width:100%;}}
   @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;}}
 </style>
+<script src="cookie-banner.js"></script>
 </helmet>
 
 <div style="width:100%;overflow-x:clip;background:#F6F7FB;color:#1B3A33;">
 
   <!-- ============ THIN BANNER ============ -->
   <section style="position:relative;background:#0C1F19;color:#fff;overflow:hidden;">
+    <img src="assets/find-us-hero-bg.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;z-index:0;">
+    <div style="position:absolute;inset:0;background:linear-gradient(118deg,rgba(9,32,24,.94) 0%,rgba(10,33,25,.8) 44%,rgba(15,110,110,.5) 82%,rgba(30,186,187,.34) 100%);z-index:1;"></div>
     <header style="position:relative;z-index:5;padding:30px clamp(24px,5vw,84px);display:flex;align-items:center;justify-content:space-between;gap:40px;">
       <a href="Home Page.dc.html" style="display:flex;align-items:center;"><img src="assets/topquote-logo.png" alt="TopQuote" style="height:38px;width:auto;display:block;"></a>
       <nav style="display:flex;align-items:center;gap:20px;font-size:16px;font-weight:600;">
-        <div class="nav-dd"><a href="Life Insurance.dc.html" style="background:#1EBABB;color:#fff;padding:9px 18px;border-radius:24px;text-decoration:none;display:inline-flex;align-items:center;gap:5px;">Services <span style="font-size:10px;">&#9662;</span></a><div class="nav-dd-menu"><a href="Life Insurance.dc.html">Life Insurance</a><a href="Critical Illness.dc.html">Critical Illness</a><a href="Income Protection.dc.html">Income Protection</a></div></div>
-        <div class="nav-dd"><a href="About Us.dc.html" class="nav-link" style="color:#fff;padding:9px 14px;text-decoration:none;display:inline-flex;align-items:center;gap:5px;">About <span style="font-size:10px;">&#9662;</span></a><div class="nav-dd-menu"><a href="About Us.dc.html">About Us</a><a href="Consumer Duty.dc.html">Consumer Duty</a></div></div>
+        <div class="nav-dd"><a href="Life Insurance.dc.html" style="background:#1EBABB;color:#fff;padding:9px 18px;border-radius:24px;text-decoration:none;display:inline-flex;align-items:center;gap:5px;">Services <span style="font-size:10px;">▾</span></a><div class="nav-dd-menu"><a href="Life Insurance.dc.html">Life Insurance</a><a href="Critical Illness.dc.html">Critical Illness</a><a href="Income Protection.dc.html">Income Protection</a></div></div>
+        <div class="nav-dd"><a href="About Us.dc.html" class="nav-link" style="color:#fff;padding:9px 14px;text-decoration:none;display:inline-flex;align-items:center;gap:5px;">About <span style="font-size:10px;">▾</span></a><div class="nav-dd-menu"><a href="About Us.dc.html">About Us</a><a href="Consumer Duty.dc.html">Consumer Duty</a></div></div>
         <a href="Reconnect.dc.html" class="nav-link" style="color:#fff;padding:9px 14px;text-decoration:none;">Reconnect</a>
-        <a href="Blog.dc.html" class="nav-link" style="color:#fff;padding:9px 14px;text-decoration:none;">Blog</a>
         <a href="Contact.dc.html" class="nav-link" style="color:#fff;padding:9px 14px;text-decoration:none;">Contact</a>
         <a href="Careers.dc.html" class="nav-link" style="color:#fff;padding:9px 14px;text-decoration:none;">Careers</a>
+        <a href="Blog.dc.html" class="nav-link" style="color:#fff;padding:9px 14px;text-decoration:none;">Blog</a>
         <a href="Find Us.dc.html" class="nav-link" style="color:#fff;padding:9px 14px;text-decoration:none;">Find Us</a>
       </nav>
       <a href="Get a Quote.dc.html" class="abtn" style="background:#1EBABB;color:#fff;padding:14px 26px;border-radius:8px;text-decoration:none;font-weight:700;font-size:15px;white-space:nowrap;">Get a quote</a>
@@ -114,7 +134,7 @@
           <img src="assets/topquote-mark-teal.png" alt="TopQuote" style="width:22px;height:22px;object-fit:contain;">
           <span style="color:#3fd3d4;font-weight:700;font-size:15px;">Find us</span>
         </div>
-        <h1 class="arva-h" style="font-size:clamp(38px,4.4vw,64px);line-height:1.05;font-weight:600;letter-spacing:.3px;text-transform:uppercase;">Life Insurance Cheshire</h1>
+        <h1 class="arva-h" style="font-size:clamp(38px,4.4vw,64px);line-height:1.05;font-weight:600;letter-spacing:.3px;text-transform:uppercase;">Life Insurance<br>BROKER Cheshire</h1>
         <p style="margin-top:16px;font-size:17px;line-height:1.6;color:rgba(255,255,255,.85);max-width:620px;">Our team is based at Alderley Park in Cheshire. Pop in by appointment, give us a call, or drop us a line, we're always happy to help.</p>
       </div>
       <div style="border-radius:16px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.28);">
@@ -151,7 +171,7 @@
 
         <div style="display:flex;gap:16px;align-items:flex-start;">
           <span style="width:46px;height:46px;border-radius:12px;background:rgba(30,186,187,.1);display:flex;align-items:center;justify-content:center;flex:none;"><i data-lucide="clock" style="width:22px;height:22px;color:#1EBABB;"></i></span>
-          <div><div style="font-weight:700;color:#173B33;font-size:16px;margin-bottom:5px;">Opening hours</div><p style="color:#6B7280;font-size:15px;line-height:1.65;">Monday&ndash;Friday: 8:30am&ndash;6:00pm<br>Saturday &amp; Sunday: Closed</p></div>
+          <div><div style="font-weight:700;color:#173B33;font-size:16px;margin-bottom:5px;">Opening hours</div><p style="color:#6B7280;font-size:15px;line-height:1.65;">Monday–Friday: 8:30am–5:00pm<br>Saturday &amp; Sunday: Closed</p></div>
         </div>
 
         <a href="Contact.dc.html" class="abtn" style="display:inline-flex;align-items:center;justify-content:center;gap:9px;margin-top:6px;background:#1EBABB;color:#fff;padding:15px 30px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px;">Book an appointment <i data-lucide="arrow-right" style="width:17px;height:17px;"></i></a>
@@ -162,6 +182,89 @@
         <iframe title="Our location, GLASSHOUSE, Alderley Park" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2377.3!2d-2.2250527!3d53.2755674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487a4f3a65ab8a1b%3A0x11213affa5a3f894!2sGlasshouse!5e0!3m2!1sen!2suk!4v1720000000000!5m2!1sen!2suk" style="width:100%;height:100%;min-height:460px;border:0;display:block;" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen=""></iframe>
       </div>
 
+    </div>
+  </section>
+
+  <!-- ============ AREAS WE SERVE ============ -->
+  <section style="background:#fff;padding:80px clamp(24px,5vw,40px);">
+    <div style="max-width:1180px;margin:0 auto;">
+      <div class="reveal" style="text-align:center;max-width:760px;margin:0 auto 44px;">
+        <div style="display:inline-flex;align-items:center;gap:9px;margin-bottom:14px;">
+          <img src="assets/topquote-mark-teal.png" alt="TopQuote" style="width:20px;height:20px;object-fit:contain;">
+          <span style="color:#1EBABB;font-weight:700;font-size:15px;">Areas We Serve</span>
+        </div>
+        <h2 class="arva-h" style="font-size:clamp(28px,3.6vw,46px);font-weight:600;color:#173B33;margin-bottom:12px;">Serving Cheshire</h2>
+        <p style="color:#7A867F;font-size:16px;line-height:1.7;">We advise clients across these regions.</p>
+      </div>
+      <div class="fu-areas-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:22px;">
+        <sc-for list="{{ areas }}" as="area" hint-placeholder-count="8">
+          <a class="reveal fu-area" href="{{ area.href }}" style="border-radius:14px;min-height:150px;display:flex;align-items:flex-end;box-shadow:0 12px 30px rgba(20,40,35,.12);text-decoration:none;">
+            <div class="fu-area-img" style="position:absolute;inset:0;background:#1EBABB;background-image:{{ area.bg }};background-size:cover;background-position:center;transition:transform .5s cubic-bezier(.22,1,.36,1);"></div>
+            <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,20,16,.05) 0%,rgba(6,20,16,.72) 100%);"></div>
+            <sc-if value="{{ area.showLogo }}" hint-placeholder-val="{{ false }}">
+              <img src="assets/topquote-logo.png" alt="TopQuote" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-60%);width:132px;height:auto;z-index:1;opacity:.95;">
+            </sc-if>
+            <span class="arva-h" style="position:relative;z-index:1;width:100%;padding:20px 22px;font-size:21px;font-weight:600;color:#fff;text-shadow:0 2px 10px rgba(0,0,0,.4);">{{ area.name }}</span>
+          </a>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHO WE ARE ============ -->
+  <section style="background:#F6F7FB;padding:80px clamp(24px,5vw,40px) 40px;">
+    <div class="reveal" style="max-width:900px;margin:0 auto;text-align:center;">
+      <div style="display:inline-flex;align-items:center;gap:9px;margin-bottom:16px;">
+        <img src="assets/topquote-mark-teal.png" alt="TopQuote" style="width:20px;height:20px;object-fit:contain;">
+        <span style="color:#1EBABB;font-weight:700;font-size:15px;">Who We Are</span>
+      </div>
+      <h2 class="arva-h" style="font-size:clamp(28px,3.6vw,46px);font-weight:600;color:#173B33;margin-bottom:24px;">Your local protection specialist</h2>
+      <div style="display:flex;flex-direction:column;gap:18px;color:#5B6B66;font-size:16.5px;line-height:1.8;">
+        <p>TopQuote is a life insurance broker based in the wider Cheshire region and an appointed representative of The Openwork Partnership, a trading style of Openwork Limited which is authorised and regulated by the Financial Conduct Authority.</p>
+        <p>We are qualified financial advisers who assess your individual circumstances and recommend cover that genuinely matches your needs, not just the lowest premium.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OUR SERVICES ============ -->
+  <section style="background:#F6F7FB;padding:20px clamp(24px,5vw,40px) 90px;">
+    <div style="max-width:1180px;margin:0 auto;">
+      <div class="reveal" style="text-align:center;max-width:760px;margin:0 auto 44px;">
+        <div style="display:inline-flex;align-items:center;gap:9px;margin-bottom:16px;">
+          <img src="assets/topquote-mark-teal.png" alt="TopQuote" style="width:20px;height:20px;object-fit:contain;">
+          <span style="color:#1EBABB;font-weight:700;font-size:15px;">Our Services</span>
+        </div>
+        <h2 class="arva-h" style="font-size:clamp(28px,3.6vw,46px);font-weight:600;color:#173B33;">Insurance solutions tailored to you</h2>
+      </div>
+      <div class="fu-svc-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px;">
+        <a href="Life Insurance.dc.html" class="fu-svc" style="position:relative;overflow:hidden;border-radius:18px;text-decoration:none;background:#0C1F19;min-height:440px;display:block;box-shadow:0 18px 44px rgba(20,40,35,.14);">
+          <div class="fu-svc-img" style="position:absolute;inset:0;background:#000;transition:transform .6s cubic-bezier(.22,1,.36,1);"><video src="assets/svc-life.mp4" autoplay="" muted="" loop="" playsinline="" preload="auto" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;"></video></div>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,20,16,.2) 0%,rgba(6,20,16,.78) 100%);"></div>
+          <div style="position:absolute;inset:0;padding:40px clamp(22px,2.4vw,40px);text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;">
+            <h3 class="arva-h" style="font-size:clamp(26px,2.2vw,34px);font-weight:600;color:#fff;line-height:1.05;margin-bottom:14px;">Life Insurance</h3>
+            <p style="color:rgba(255,255,255,.72);font-size:14.5px;line-height:1.6;max-width:300px;margin:0 auto 22px;">Financial security for the people who depend on you, at the right level of cover.</p>
+            <span style="display:inline-flex;align-items:center;gap:8px;color:#fff;font-weight:700;font-size:14px;letter-spacing:.02em;">View <i data-lucide="arrow-up-right" style="width:17px;height:17px;color:#1EBABB;"></i></span>
+          </div>
+        </a>
+        <a href="Critical Illness.dc.html" class="fu-svc" style="position:relative;overflow:hidden;border-radius:18px;text-decoration:none;background:#0C1F19;min-height:440px;display:block;box-shadow:0 18px 44px rgba(20,40,35,.14);">
+          <div class="fu-svc-img" style="position:absolute;inset:0;background:#000;transition:transform .6s cubic-bezier(.22,1,.36,1);"><video src="assets/svc-income.mp4" autoplay="" muted="" loop="" playsinline="" preload="auto" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;"></video></div>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,20,16,.2) 0%,rgba(6,20,16,.78) 100%);"></div>
+          <div style="position:absolute;inset:0;padding:40px clamp(22px,2.4vw,40px);text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;">
+            <h3 class="arva-h" style="font-size:clamp(26px,2.2vw,34px);font-weight:600;color:#fff;line-height:1.05;margin-bottom:14px;">Critical Illness Cover</h3>
+            <p style="color:rgba(255,255,255,.72);font-size:14.5px;line-height:1.6;max-width:300px;margin:0 auto 22px;">A tax-free lump sum on diagnosis of a specified critical illness, when it matters most.</p>
+            <span style="display:inline-flex;align-items:center;gap:8px;color:#fff;font-weight:700;font-size:14px;letter-spacing:.02em;">View <i data-lucide="arrow-up-right" style="width:17px;height:17px;color:#1EBABB;"></i></span>
+          </div>
+        </a>
+        <a href="Income Protection.dc.html" class="fu-svc" style="position:relative;overflow:hidden;border-radius:18px;text-decoration:none;background:#0C1F19;min-height:440px;display:block;box-shadow:0 18px 44px rgba(20,40,35,.14);">
+          <div class="fu-svc-img" style="position:absolute;inset:0;background:#000;transition:transform .6s cubic-bezier(.22,1,.36,1);"><video src="assets/svc-critical.mp4" autoplay="" muted="" loop="" playsinline="" preload="auto" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;"></video></div>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,20,16,.2) 0%,rgba(6,20,16,.78) 100%);"></div>
+          <div style="position:absolute;inset:0;padding:40px clamp(22px,2.4vw,40px);text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;">
+            <h3 class="arva-h" style="font-size:clamp(26px,2.2vw,34px);font-weight:600;color:#fff;line-height:1.05;margin-bottom:14px;">Income Protection</h3>
+            <p style="color:rgba(255,255,255,.72);font-size:14.5px;line-height:1.6;max-width:300px;margin:0 auto 22px;">A monthly benefit if illness or injury stops you working, because your income is everything.</p>
+            <span style="display:inline-flex;align-items:center;gap:8px;color:#fff;font-weight:700;font-size:14px;letter-spacing:.02em;">View <i data-lucide="arrow-up-right" style="width:17px;height:17px;color:#1EBABB;"></i></span>
+          </div>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -177,7 +280,7 @@
           <sc-for list="{{ reviews }}" as="r" hint-placeholder-count="6">
             <div class="swiper-slide">
               <div style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 12px 30px rgba(20,40,35,.06);min-height:290px;">
-                <div style="font-family:Georgia,serif;font-size:64px;line-height:.6;color:#1EBABB;height:34px;">&ldquo;</div>
+                <div style="font-family:Georgia,serif;font-size:64px;line-height:.6;color:#1EBABB;height:34px;">“</div>
                 <div style="margin-top:20px;color:#7A867F;font-size:14px;font-weight:600;">{{ r.name }}</div>
                 <div style="color:#00b67a;font-size:16px;letter-spacing:2px;margin:8px 0 16px;">{{ r.stars }}</div>
                 <p style="color:#5B6B66;font-size:14.5px;line-height:1.7;">{{ r.quote }}</p>
@@ -190,7 +293,7 @@
   </section>
 
   <!-- ============ WRITE TO US ============ -->
-  <section style="background:#ECEDF1;padding:80px clamp(24px,5vw,40px);">
+  <section style="background:#F6F7FB;padding:80px clamp(24px,5vw,40px);">
     <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;" class="cf-shell">
       <div>
         <div style="display:flex;align-items:center;gap:9px;margin-bottom:16px;">
@@ -214,14 +317,40 @@
         <div style="height:1px;background:#E7EAF2;margin:26px 0;"></div>
         <div style="display:flex;flex-direction:column;gap:12px;">
           <span style="display:flex;align-items:center;gap:10px;color:#6B7280;font-size:15px;"><i data-lucide="phone" style="width:17px;height:17px;color:#1EBABB;flex:none;"></i> 0161 974 3710</span>
-          <span style="display:flex;align-items:center;gap:10px;color:#6B7280;font-size:15px;"><i data-lucide="mail" style="width:17px;height:17px;color:#1EBABB;flex:none;"></i> hello@topquote.uk.com</span>
+          <span style="display:flex;align-items:center;gap:10px;color:#6B7280;font-size:15px;"><i data-lucide="mail" style="width:17px;height:17px;color:#1EBABB;flex:none;"></i> <a href="mailto:hello@topquote.uk.com" style="color:inherit;text-decoration:none;">hello@topquote.uk.com</a></span>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- ============ FAQ ============ -->
+  <section style="background:#EAEDFB;padding:80px clamp(24px,5vw,40px) 40px;">
+    <div style="max-width:860px;margin:0 auto;">
+      <div class="reveal" style="text-align:center;margin-bottom:44px;">
+        <div style="display:inline-flex;align-items:center;gap:9px;margin-bottom:14px;">
+          <img src="assets/topquote-mark-teal.png" alt="TopQuote" style="width:20px;height:20px;object-fit:contain;">
+          <span style="color:#1EBABB;font-weight:700;font-size:15px;">FAQs</span>
+        </div>
+        <h2 class="arva-h" style="font-size:clamp(28px,3.8vw,46px);font-weight:600;color:#173B33;">Frequently asked questions</h2>
+      </div>
+      <div id="faqList" style="display:flex;flex-direction:column;gap:14px;">
+        <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="8">
+          <div class="faq-item reveal" style="border-radius:12px;overflow:hidden;box-shadow:0 6px 18px rgba(20,40,35,.06);">
+            <div class="faq-q" style="background:#1EBABB;color:#fff;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-weight:700;font-size:15.5px;">
+              <span>{{ f.q }}</span>
+              <span class="faq-plus" style="font-size:22px;line-height:1;transition:transform .3s ease;flex:none;">+</span>
+            </div>
+            <div class="faq-a" style="max-height:0;opacity:0;overflow:hidden;transition:max-height .4s ease,opacity .4s ease;background:#fff;">
+              <p style="padding:22px 26px;color:#5B6B66;font-size:15px;line-height:1.75;">{{ f.a }}</p>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ BLOG ARTICLES ============ -->
-  <section style="background:#F6F7FB;padding:20px clamp(24px,5vw,40px) 90px;">
+  <section data-hidden-pending-approval="true" style="display:none;background:#F6F7FB;padding:20px clamp(24px,5vw,40px) 90px;">
     <div style="max-width:1200px;margin:0 auto;">
       <h2 class="arva-h" style="font-size:clamp(26px,3vw,38px);font-weight:700;color:#173B33;margin-bottom:34px;">Financial protection articles from our experts</h2>
       <div class="cf-blgrid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:26px;">
@@ -239,7 +368,7 @@
             </div>
             <div style="display:flex;align-items:center;justify-content:space-between;">
               <span style="display:flex;align-items:center;gap:7px;color:#173B33;font-size:14px;font-weight:700;"><i data-lucide="clock" style="width:16px;height:16px;color:#1EBABB;"></i> {{ a.time }}</span>
-              <a href="Blog.dc.html" style="color:#1EBABB;font-weight:700;font-size:15px;text-decoration:none;">Read now &rsaquo;</a>
+              <a href="Blog.dc.html" style="color:#1EBABB;font-weight:700;font-size:15px;text-decoration:none;">Read now ›</a>
             </div>
           </div>
         </sc-for>
@@ -253,17 +382,17 @@
       <div style="display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:40px;">
         <div>
           <div style="display:flex;align-items:center;margin-bottom:18px;"><img src="assets/topquote-logo-dark.png" alt="TopQuote" style="height:38px;width:auto;display:block;"></div>
-          <p style="color:#6B7280;font-size:13.5px;line-height:1.7;max-width:320px;">Top Quote Limited is an appointed representative of The Openwork Partnership, a trading style of Openwork Limited, which is authorised and regulated by the Financial Conduct Authority. Approved by The Openwork Partnership on the 20th January 2025.</p>
+          <div class="foot-badges" style="display:flex;align-items:center;gap:20px;margin:16px 0 18px;flex-wrap:wrap;"><img src="assets/trustpilot-43.png" alt="Rated 4.3 Excellent on Trustpilot from 517 reviews" style="height:110px;width:auto;"><img src="assets/platinum-trusted-service-award-2026.svg" alt="Platinum Trusted Service Award 2026" style="height:60px;width:auto;"></div>
+          <p style="color:#6B7280;font-size:13.5px;line-height:1.7;max-width:320px;">Top Quote Limited is an appointed representative of The Openwork Partnership, a trading style of Openwork Limited which is authorised and regulated by the Financial Conduct Authority. Approved by The Openwork Partnership on the 20th January 2025.</p>
         </div>
         <div>
           <h4 class="arva-h" style="font-size:20px;font-weight:600;color:#173B33;margin-bottom:20px;">Pages</h4>
           <div style="display:flex;flex-direction:column;gap:14px;">
             <a href="Home Page.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">Home</a>
             <a href="About Us.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">About</a>
-            <a href="Blog.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">News</a>
             <a href="Contact.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">Contact</a>
             <a href="Reconnect.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">Reconnect</a>
-            <a href="#" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">Privacy Notice</a>
+            <a href="Blog.dc.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:15px;">Blog</a>
           </div>
         </div>
         <div>
@@ -279,23 +408,27 @@
           <div style="display:flex;flex-direction:column;gap:16px;">
             <span style="display:flex;align-items:flex-start;gap:10px;color:#6B7280;font-size:15px;line-height:1.55;"><i data-lucide="map-pin" style="width:17px;height:17px;color:#1EBABB;margin-top:2px;flex:none;"></i> <span>Alderley Park, Suite 3,<br>GLASSHOUSE, Congleton Road,<br>Macclesfield, SK10 4TG</span></span>
             <span style="display:flex;align-items:center;gap:10px;color:#6B7280;font-size:15px;"><i data-lucide="phone" style="width:17px;height:17px;color:#1EBABB;flex:none;"></i> Customer support: 0161 974 3710</span>
-            <span style="display:flex;align-items:center;gap:10px;color:#6B7280;font-size:15px;white-space:nowrap;"><i data-lucide="clock" style="width:17px;height:17px;color:#1EBABB;flex:none;"></i> Working time: Mon &ndash; Fri: 8:30 &ndash; 18:00</span>
-            <span style="display:flex;align-items:center;gap:10px;color:#6B7280;font-size:15px;"><i data-lucide="mail" style="width:17px;height:17px;color:#1EBABB;flex:none;"></i> hello@topquote.uk.com</span>
+            <span style="display:flex;align-items:center;gap:10px;color:#6B7280;font-size:15px;white-space:nowrap;"><i data-lucide="clock" style="width:17px;height:17px;color:#1EBABB;flex:none;"></i> Working time: Mon – Fri: 8:30am – 5:00pm</span>
+            <span style="display:flex;align-items:center;gap:10px;color:#6B7280;font-size:15px;"><i data-lucide="mail" style="width:17px;height:17px;color:#1EBABB;flex:none;"></i> <a href="mailto:hello@topquote.uk.com" style="color:inherit;text-decoration:none;">hello@topquote.uk.com</a></span>
           </div>
         </div>
       </div>
       <div style="height:1px;background:#D2D6E8;margin:40px 0 22px;"></div>
       <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;">
-        <span style="color:#6B7280;font-size:14px;">&copy; 2025 TopQuote. All Rights Reserved.</span>
+        <span style="color:#6B7280;font-size:14px;">© 2025 TopQuote. All Rights Reserved.</span>
         <div style="display:flex;gap:18px;align-items:center;">
-          <a href="https://www.theopenworkpartnership.com/privacy-notice/" target="_blank" rel="noopener" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:14px;">Privacy Policy</a>
+          <a href="https://www.theopenworkpartnership.com/media/ky0cl3ka/data-privacy-policy_2022.pdf" target="_blank" rel="noopener" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:14px;">Privacy Policy</a>
           <span style="color:#C4C9DE;">|</span>
-          <a href="#" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:14px;">Cookie Policy</a>
+          <a href="Cookie Policy.html" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:14px;">Cookie Policy</a>
         </div>
       </div>
       <div style="text-align:left;color:#6B7280;font-size:13.5px;line-height:1.75;max-width:940px;margin:34px 0 0;">
-        <p>&copy;2026 TopQuote Ltd., Registered in England Number: 04648763, Alderley Park, Suite 3, GLASSHOUSE, Macclesfield, SK10 4TG.</p>
-        <p style="margin-top:14px;">The information on this website is for use of residents of the United Kingdom only. No representations are made as to whether the information is applicable or available in any other country which may have access to it.</p>
+        <!-- COMPLIANCE: FRN 408285 and all regulatory wording to be verified against Openwork's latest compliance-approved templates before launch -->
+        <p>Top Quote Limited is registered in England &amp; Wales, company number 04648763. Registered office: Alderley Park, Suite 3, Glasshouse, Congleton Road, Macclesfield, SK10 4TG.</p>
+        <p style="margin-top:14px;">Top Quote Limited is an appointed representative of The Openwork Partnership, a trading style of Openwork Limited which is authorised and regulated by the Financial Conduct Authority. You can check this on the FCA Register at <a href="https://register.fca.org.uk" target="_blank" rel="noopener" style="color:#1EBABB;text-decoration:none;">register.fca.org.uk</a> (Openwork Limited, firm reference number 408285).</p>
+        <p style="margin-top:14px;">The information on this website is general information only and does not constitute personal financial advice. Any personal recommendation will be based on your individual circumstances. This website is intended for UK residents only.</p>
+        <p style="margin-top:14px;">If you have a complaint about the service you have received, please contact us at <a href="mailto:hello@topquote.uk.com" style="color:#1EBABB;text-decoration:none;">hello@topquote.uk.com</a> or 0161 974 3710. If we cannot resolve your complaint to your satisfaction, you may be entitled to refer it to the Financial Ombudsman Service (<a href="https://www.financial-ombudsman.org.uk" target="_blank" rel="noopener" style="color:#1EBABB;text-decoration:none;">financial-ombudsman.org.uk</a>). We are covered by the Financial Services Compensation Scheme (<a href="https://www.fscs.org.uk" target="_blank" rel="noopener" style="color:#1EBABB;text-decoration:none;">fscs.org.uk</a>).</p>
+        <p style="margin-top:14px;">&copy; 2026 Top Quote Limited. All rights reserved.</p>
       </div>
     </div>
   </footer>
@@ -316,7 +449,19 @@ class Component extends DCLogic {
     var onScroll = function(){ var y = window.scrollY || document.documentElement.scrollTop; if (y > 500){ b.style.opacity='1'; b.style.visibility='visible'; } else { b.style.opacity='0'; b.style.visibility='hidden'; } };
     window.addEventListener('scroll', onScroll, { passive:true }); onScroll();
   }
-  componentDidMount(){ this.initScrollTop(); this.renderIcons(); this.initForm(); this.initReviewsCarousel(); this.initLetter(); }
+  componentDidMount(){ this.initScrollTop(); this.renderIcons(); this.initForm(); this.initReviewsCarousel(); this.initLetter(); this.initFaq(); this.initLoopVideos(); }
+
+  initLoopVideos(){
+    const go=()=>{ document.querySelectorAll('.fu-svc-img video').forEach(v=>{ v.loop=true; v.muted=true; v.setAttribute('loop',''); v.setAttribute('muted',''); if(!v.__loopWired){ v.__loopWired=true; v.addEventListener('ended',()=>{ v.currentTime=0; v.play&&v.play().catch(()=>{}); }); } v.play&&v.play().catch(()=>{}); }); };
+    go(); setTimeout(go,600); setTimeout(go,1600);
+  }
+
+  initFaq(){
+    const bind=()=>{ const list=document.getElementById('faqList'); if(!list||list.__wired)return; const items=list.querySelectorAll('.faq-item'); if(!items.length)return; list.__wired=true;
+      items.forEach((it,i)=>{ if(i===0)it.classList.add('open'); it.querySelector('.faq-q').addEventListener('click',()=>{ it.classList.toggle('open'); }); });
+    };
+    bind(); setTimeout(bind,400); setTimeout(bind,1000);
+  }
 
   initLetter(){
     const bind = () => {
@@ -351,7 +496,25 @@ class Component extends DCLogic {
     if (!mount()){ let n=0; const t=setInterval(()=>{ if(mount()||++n>40) clearInterval(t); },150); }
   }
   componentDidUpdate(){ this.renderIcons(); }
-  renderVals(){ return { reviews: (function(){ var b=[
+  renderVals(){ return { faqs: [
+    { q:'Do you offer life insurance advice in Manchester?', a:'Yes. We advise clients across Greater Manchester, including Manchester city centre, Salford, Stockport, and surrounding areas. Appointments can be arranged by phone or online.' },
+    { q:'Do you cover the whole of Cheshire?', a:'Yes. We help clients throughout Cheshire, including Macclesfield, Wilmslow, Knutsford, Cheshire East, and nearby areas.' },
+    { q:'Is there a cost for your advice?', a:'No. There is no fee for our advice. We assess your circumstances and recommend suitable protection options at no direct cost to you.' },
+    { q:'What types of cover can you help with?', a:'We can help with life insurance, critical illness cover, and income protection, depending on your needs and eligibility.' },
+    { q:'Are you regulated?', a:'TopQuote is an appointed representative of The Openwork Partnership, a trading style of Openwork Limited which is authorised and regulated by the Financial Conduct Authority.' },
+    { q:'Can I get advice if I do not live near your office?', a:'Yes. We can advise clients remotely by phone or online, so you do not need to visit the office in person.' },
+    { q:'How do I know how much cover I need?', a:'That depends on your income, debts, mortgage, dependants, and existing benefits. An adviser can help you work out an appropriate level of cover.' },
+    { q:'Can you help if I already have a policy?', a:'Yes. We can review your existing cover and help you understand whether it is still suitable for your current circumstances.' }
+  ], areas: [
+    { name:'Manchester', bg:"url('assets/area-manchester.jpg')", href:'Contact Manchester.dc.html' },
+    { name:'Salford', bg:"url('assets/area-salford.jpg')", href:'Contact Salford.dc.html' },
+    { name:'Stockport', bg:"url('assets/area-stockport.jpg')", href:'Contact Stockport.dc.html' },
+    { name:'Macclesfield', bg:"url('assets/area-macclesfield.jpg')", href:'Contact Macclesfield.dc.html' },
+    { name:'Altrincham', bg:"url('assets/area-altrincham.jpg')", href:'Contact Altrincham.dc.html' },
+    { name:'Wilmslow', bg:"url('assets/area-wilmslow.jpg')", href:'Contact Wilmslow.dc.html' },
+    { name:'Knutsford', bg:"url('assets/area-knutsford.jpg')", href:'Contact Knutsford.dc.html' },
+    { name:'Cheshire East', bg:'none', href:'Contact Cheshire East.dc.html', showLogo:true }
+  ], reviews: (function(){ var b=[
     { name:'Trustpilot', stars:'★★★★★', quote:'"Genuinely helpful advice with no jargon and no pressure. I would happily recommend them to friends and family."' },
     { name:'Trustpilot', stars:'★★★★★', quote:'"Clear, thorough, courteous, three words that capture my experience. A trustworthy brokerage service, I felt in control."' },
     { name:'Trustpilot', stars:'★★★★★', quote:'"Great to deal with, fully explained my options and never once put any pressure on me to purchase anything. Have made several follow-up calls to make sure everything was in place."' },
@@ -366,7 +529,7 @@ class Component extends DCLogic {
     { title:'Income protection vs payment protection insurance', excerpt:'Do you need income protection or payment protection? We break down the difference so you can choose the right cover.', author:'Tanweer Hussain', role:'Protection Expert', time:'9 min' },
     { title:'Life insurance to cover inheritance tax', excerpt:"Whole of life insurance could help to avoid or minimise an inheritance tax bill for your family. Here's how it works.", author:'Tanweer Hussain', role:'Protection Expert', time:'8 min' }
   ] }; }
-  renderIcons(){ const go=()=>{ try{ if(window.lucide) window.lucide.createIcons(); }catch(e){} }; go(); setTimeout(go,300); setTimeout(go,900); }
+  renderIcons(){ const go=()=>{ try{ if(window.lucide) if (window.__safeIcons) window.__safeIcons(); }catch(e){} }; go(); setTimeout(go,300); setTimeout(go,900); }
 
   initForm(){
     const form = document.getElementById('cfForm');

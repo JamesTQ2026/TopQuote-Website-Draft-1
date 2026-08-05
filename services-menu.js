@@ -45,7 +45,7 @@
       '<div id="svcMenuBackdrop" style="position:absolute;inset:0;background:rgba(6,20,16,.55);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);"></div>' +
       '<div class="svc-grid" style="position:absolute;inset:0;display:grid;grid-template-columns:repeat(3,1fr);">' +
         pane('01', 'Life Insurance', 'Financial security for the people who depend on you, at the right level of cover.', 'assets/svc-life.mp4', 'Life Insurance.dc.html') +
-        pane('02', 'Critical Illness Cover', 'A tax-free lump sum on diagnosis of a serious illness, when it matters most.', 'assets/svc-income.mp4', 'Critical Illness.dc.html') +
+        pane('02', 'Critical Illness Cover', 'A tax-free lump sum on diagnosis of a specified critical illness, when it matters most.', 'assets/svc-income.mp4', 'Critical Illness.dc.html') +
         pane('03', 'Income Protection', 'A monthly benefit if illness or injury stops you working, because your income is everything.', 'assets/svc-critical.mp4', 'Income Protection.dc.html') +
       '</div>' +
       '<button id="svcMenuClose" aria-label="Close menu" style="position:absolute;top:24px;right:24px;z-index:2;display:inline-flex;align-items:center;justify-content:center;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);color:#fff;width:48px;height:48px;border-radius:50%;cursor:pointer;"><i data-lucide="x" style="width:20px;height:20px;"></i></button>';
@@ -53,7 +53,29 @@
     return wrap;
   }
 
-  function icons() { try { if (window.lucide) window.lucide.createIcons(); } catch (e) {} }
+  // Safe icon rendering: append the <svg> INSIDE each <i data-lucide> instead of
+  // replacing the node (lucide.createIcons swaps nodes React owns, which crashes
+  // the page if a render is in flight). Exposed globally for the page scripts.
+  window.__safeIcons = function () {
+    var L = window.lucide;
+    if (!L) return;
+    document.querySelectorAll('i[data-lucide]').forEach(function (el) {
+      if (el.firstChild) return;
+      var name = el.getAttribute('data-lucide') || '';
+      var pas = name.replace(/(^|-)([a-z0-9])/g, function (m, p, c) { return c.toUpperCase(); });
+      var node = (L.icons && (L.icons[pas] || L.icons[name]));
+      if (!node || !L.createElement) return;
+      try {
+        var svg = L.createElement(node);
+        svg.setAttribute('width', '100%');
+        svg.setAttribute('height', '100%');
+        if (el.style.fill && el.style.fill !== 'none') svg.setAttribute('fill', el.style.fill);
+        svg.style.display = 'block';
+        el.appendChild(svg);
+      } catch (e) {}
+    });
+  };
+  function icons() { try { window.__safeIcons(); } catch (e) {} }
 
   function wire() {
     injectCSS();
