@@ -1,0 +1,30 @@
+/* ==========================================================================
+   TopQuote — mobile responsiveness overrides
+   These pages are Claude Design (.dc.html) exports: layout lives in INLINE
+   styles on class-less <div>s, so we target them with attribute selectors.
+   Stylesheet !important beats inline styles that have no !important.
+   Swiper carousels use flex (.swiper-wrapper/.swiper-slide) and are left alone.
+   ========================================================================== */
+
+@media (max-width: 700px) {
+  /* Kill sideways scrolling caused by fixed-width children */
+  html, body { overflow-x: hidden !important; }
+  *, *::before, *::after { box-sizing: border-box; }
+
+  /* Collapse every static multi-column grid to a single stacked column.
+     (Swiper carousels don't use grid-template-columns, so they're untouched.) */
+  [style*="grid-template-columns"]:not(.swiper-wrapper) {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Header rows (heading + button) and any space-between row may wrap
+     instead of pushing the button off-screen. Only wraps when it must. */
+  [style*="justify-content:space-between"] { flex-wrap: wrap !important; }
+
+  /* Media never exceeds the viewport */
+  img, video, svg, iframe { max-width: 100% !important; }
+
+  /* Large fixed-width boxes become fluid */
+  [style*="min-width:480px"], [style*="min-width:520px"], [style*="min-width:560px"],
+  [style*="min-width:600px"], [style*="min-width:640px"] { min-width: 0 !important; }
+}
