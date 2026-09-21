@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /Mega%20Menu%20Test.dc.html
+
+Sitemap: https://www.top-quote.co.uk/sitemap.xml
