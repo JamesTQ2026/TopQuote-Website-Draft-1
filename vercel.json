@@ -2669,6 +2669,10 @@
  ],
  "rewrites": [
   {
+   "source": "/",
+   "destination": "/Home%20Page.dc.html"
+  },
+  {
    "source": "/about",
    "destination": "/About%20Us.dc.html"
   },

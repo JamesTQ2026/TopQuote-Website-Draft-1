@@ -1,19 +1,20 @@
 // Generates vercel.json, sitemap.xml and robots.txt for the TopQuote static site.
-// Run from the repo root:  node tools/build-url-layer.js [--home]
+// Run from the repo root:  node tools/build-url-layer.js   (idempotent, re-run after every re-export)
 //
 // Why: the Claude Design export names pages "About Us.dc.html" etc, but Google has the old
 // WordPress URLs indexed (/about/, /life-insurance/, /blog/<category>/<slug>/). This script
 // makes every page answer on its clean URL and 301s the old URLs that moved.
 //
-// --home  also serves "/" straight from Home Page.dc.html. Only use once index.html
-//         (the JS bounce page) has been deleted from the repo, otherwise "/" loops.
+// "/" is rewritten to Home Page.dc.html. That only takes effect while index.html (the export's
+// JS bounce page) is absent from the repo, so delete index.html after each re-export.
+// Home Page.dc.html is deliberately NOT redirected to "/": if index.html ever comes back,
+// that redirect would loop. A canonical tag handles the duplicate instead.
 
 const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.resolve(__dirname, '..');
 const ORIGIN = 'https://www.top-quote.co.uk';
-const HOME_MODE = process.argv.includes('--home');
 
 // clean URL  ->  file in the repo root
 const PAGES = {
@@ -99,11 +100,6 @@ for (const [clean, file] of Object.entries(PAGES)) {
   r301(enc(file), clean);
   if (file.includes(' ')) r301('/' + file, clean);
 }
-if (HOME_MODE) {
-  r301('/Home%20Page.dc.html', '/');
-  r301('/Home Page.dc.html', '/');
-  r301('/index.html', '/');
-}
 r301('/(blog-[^/.]+)\\.html', '/$1');
 
 // 3. old blog posts: /blog/<category>/<slug>/ (and /blog/<slug>/) -> /blog-<slug>
@@ -115,7 +111,7 @@ for (const slug of blogSlugs) {
 r301('/blog/:path+', '/blog');
 
 // rewrites: clean URL -> actual file
-if (HOME_MODE) rewrites.push({ source: '/', destination: '/Home%20Page.dc.html' });
+rewrites.push({ source: '/', destination: '/Home%20Page.dc.html' });
 for (const [clean, file] of Object.entries(PAGES)) rewrites.push({ source: clean, destination: enc(file) });
 rewrites.push({ source: '/(blog-[^/.]+)', destination: '/$1.html' });
 
@@ -139,4 +135,21 @@ fs.writeFileSync(path.join(ROOT, 'sitemap.xml'), xml);
 fs.writeFileSync(path.join(ROOT, 'robots.txt'),
   `User-agent: *\nAllow: /\nDisallow: /api/\nDisallow: /Mega%20Menu%20Test.dc.html\n\nSitemap: ${ORIGIN}/sitemap.xml\n`);
 
-console.log(`vercel.json: ${redirects.length} redirects, ${rewrites.length} rewrites | sitemap: ${urls.length} urls | home mode: ${HOME_MODE}`);
+// canonical tags: tell Google the clean URL is the official one for each file
+let tagged = 0;
+const canon = Object.entries(PAGES).map(([clean, file]) => [file, clean])
+  .concat([['Home Page.dc.html', '/']])
+  .concat(blogSlugs.map((s) => [`blog-${s}.html`, '/blog-' + s]));
+for (const [file, clean] of canon) {
+  const fp = path.join(ROOT, file);
+  let html = fs.readFileSync(fp, 'utf8');
+  if (/<link[^>]+rel=["']canonical["']/i.test(html) || !/<\/head>/i.test(html)) continue;
+  html = html.replace(/<\/head>/i, `<link rel="canonical" href="${ORIGIN}${clean}">
+</head>`);
+  fs.writeFileSync(fp, html);
+  tagged++;
+}
+if (fs.existsSync(path.join(ROOT, 'index.html'))) console.warn('WARNING: index.html exists, so "/" will serve the bounce page. Delete it (git rm index.html).');
+
+console.log(`canonical tags added: ${tagged}`);
+console.log(`vercel.json: ${redirects.length} redirects, ${rewrites.length} rewrites | sitemap: ${urls.length} urls`);
