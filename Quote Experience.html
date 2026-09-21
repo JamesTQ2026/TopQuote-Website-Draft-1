@@ -89,7 +89,32 @@
 <link rel="stylesheet" href="/mobile-responsive.css">
 </head>
 <body>
-  <a href="/" aria-label="Back to TopQuote home" style="position:fixed;top:14px;left:14px;z-index:99999;display:inline-flex;align-items:center;gap:7px;background:#fff;color:#173B33;padding:9px 15px;border-radius:9px;font-family:'Mulish',system-ui,sans-serif;font-weight:700;font-size:14px;text-decoration:none;box-shadow:0 4px 16px rgba(0,0,0,.16);">&larr; Back to site</a>
+  <!-- Site header (matches the rest of the site; mobile-nav.js turns it into the hamburger menu on phones) -->
+  <style>
+    .tq-hdr{position:relative;z-index:50;background:#fff;padding:16px clamp(16px,5vw,84px);display:flex;align-items:center;justify-content:space-between;gap:40px;border-bottom:1px solid rgba(0,0,0,.07);font-family:'Mulish',system-ui,-apple-system,sans-serif;}
+    .tq-hdr nav{display:flex;align-items:center;gap:18px;font-size:16px;font-weight:600;}
+    .tq-hdr .nav-link{white-space:nowrap;color:#173B33 !important;padding:9px 12px;text-decoration:none;display:inline-flex;align-items:center;gap:5px;}
+    .tq-hdr .nav-link:hover{color:#1EBABB !important;}
+    .tq-hdr .nav-dd{position:relative;}
+    .tq-hdr .nav-dd:hover::after{content:"";position:absolute;left:0;top:100%;width:100%;height:14px;}
+    .tq-hdr .nav-dd-menu{position:absolute;top:calc(100% + 6px);left:0;background:#0C1F19;border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:8px;min-width:190px;opacity:0;visibility:hidden;transform:translateY(6px);transition:.18s;z-index:60;}
+    .tq-hdr .nav-dd:hover .nav-dd-menu{opacity:1;visibility:visible;transform:translateY(0);}
+    .tq-hdr .nav-dd-menu a{display:block;padding:10px 14px;color:#fff !important;text-decoration:none;font-size:15px;border-radius:8px;white-space:nowrap;}
+    .tq-hdr .nav-dd-menu a:hover{background:rgba(255,255,255,.08);color:#1EBABB !important;}
+  </style>
+  <header class="tq-hdr">
+    <a href="/" style="display:flex;align-items:center;"><img src="assets/topquote-logo-grey.svg" alt="TopQuote" style="height:34px;width:131px;min-width:131px;flex:none;display:block;"></a>
+    <nav>
+      <div class="nav-dd"><a href="Life Insurance.dc.html" style="background:#1EBABB;color:#fff;padding:9px 18px;border-radius:24px;text-decoration:none;display:inline-flex;align-items:center;gap:5px;">Services <span style="font-size:10px;">&#9662;</span></a><div class="nav-dd-menu"><a href="Life Insurance.dc.html">Life Insurance</a><a href="Critical Illness.dc.html">Critical Illness</a><a href="Income Protection.dc.html">Income Protection</a></div></div>
+      <div class="nav-dd"><a href="About Us.dc.html" class="nav-link">About <span style="font-size:10px;">&#9662;</span></a><div class="nav-dd-menu"><a href="About Us.dc.html">About Us</a><a href="Consumer Duty.dc.html">Consumer Duty</a></div></div>
+      <a href="Reconnect.dc.html" class="nav-link">Reconnect</a>
+      <a href="Contact.dc.html" class="nav-link">Contact</a>
+      <a href="Careers.dc.html" class="nav-link">Careers</a>
+      <a href="Blog.dc.html" class="nav-link">Blog</a>
+      <a href="Find Us.dc.html" class="nav-link">Find Us</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:24px;"><a href="Get a Quote.dc.html" style="background:#1EBABB;color:#fff;padding:12px 22px;border-radius:8px;text-decoration:none;font-weight:700;font-size:15px;white-space:nowrap;">Get a quote</a></div>
+  </header>
   <div id="root"></div>
   <script type="importmap">
     {
