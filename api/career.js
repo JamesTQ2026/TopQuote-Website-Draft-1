@@ -44,9 +44,19 @@ module.exports = async function handler(req, res) {
       return;
     }
 
-    // Attach the CV to the record we just created (if one was sent)
     const created = await r.json();
     if (created.id && b.cv && b.cv.data) {
       const up = await fetch(`https://content.airtable.com/v0/${baseId}/${created.id}/${encodeURIComponent('Upload your CV')}/uploadAttachment`, {
         method: 'POST',
         headers: { 'Authorization': `Bearer ${token}`, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ contentType: b.cv.type || 'application/octet-stream', filename: b.cv.name || 'cv', file: b.cv.data })
+      });
+      if (!up.ok) console.error('CV upload error', up.status, await up.text());
+    }
+
+    res.status(200).json({ ok: true });
+  } catch (e) {
+    console.error('Careers function error:', e);
+    res.status(500).json({ error: 'Server error' });
+  }
+};
