@@ -53,7 +53,13 @@ module.exports = async function handler(req, res) {
       });
       if (!up.ok) console.error('CV upload error', up.status, await up.text());
     }
-
+    if (created.id) {
+      await fetch(`https://api.airtable.com/v0/${baseId}/${encodeURIComponent(TABLE)}/${created.id}`, {
+        method: 'PATCH',
+        headers: { 'Authorization': `Bearer ${token}`, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ fields: { 'Ready': true } })
+      });
+    }
     res.status(200).json({ ok: true });
   } catch (e) {
     console.error('Careers function error:', e);
