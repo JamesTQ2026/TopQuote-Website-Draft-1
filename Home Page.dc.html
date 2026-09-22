@@ -281,7 +281,7 @@
           </div>
           <h3 class="arva-h" style="font-size:22px;font-weight:700;color:#173B33;margin-bottom:12px;min-height:88px;display:flex;align-items:center;justify-content:center;">Fill in our simple form</h3>
           <p style="color:#6B7280;font-size:14.5px;line-height:1.65;max-width:280px;margin:0 auto;">Answer a few questions about yourself and the cover you need.</p>
-          <a href="#contactSection" style="margin:22px auto 0;background:#1EBABB;color:#fff;padding:12px 26px;border-radius:8px;text-decoration:none;font-weight:700;font-size:14px;display:inline-block;">Get started</a>
+          <a href="Get a Quote.dc.html" style="margin:22px auto 0;background:#1EBABB;color:#fff;padding:12px 26px;border-radius:8px;text-decoration:none;font-weight:700;font-size:14px;display:inline-block;">Get started</a>
         </div>
         <div style="flex:none;display:flex;align-items:center;padding:0 16px;">
           <span style="width:46px;height:46px;border-radius:50%;border:1.6px solid #173B33;display:flex;align-items:center;justify-content:center;flex:none;"><i data-lucide="arrow-right" style="width:20px;height:20px;color:#173B33;"></i></span>
@@ -1338,6 +1338,42 @@ class Component extends DCLogic {
     });
   }
 }
+</script>
+<script>
+/* Wire the "Protect What Matters Most" contact form to the /api/contact function.
+   Uses event delegation on document, so it works even though the page builds
+   this section with JS after page load. */
+(function(){
+  var emailRe=/^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+  document.addEventListener('click', function(e){
+    var btn = e.target && e.target.closest ? e.target.closest('button') : null;
+    if(!btn || !/send a message/i.test(btn.textContent||'')) return;
+    var sec = btn.closest('#contactSection') || document.getElementById('contactSection');
+    if(!sec) return;
+    e.preventDefault();
+    if(btn.dataset.sending==='1') return;
+    var byPh=function(p){ return sec.querySelector('input[placeholder="'+p+'"]'); };
+    var nameEl=byPh('Full Name*'), phoneEl=byPh('Phone Number*'), emailEl=byPh('Email Address*');
+    var msgEl=sec.querySelector('textarea'), selEl=sec.querySelector('select'), consentEl=sec.querySelector('input[type="checkbox"]');
+    var name=(nameEl&&nameEl.value.trim())||'', phone=(phoneEl&&phoneEl.value.trim())||'', email=(emailEl&&emailEl.value.trim())||'';
+    if(!name||!phone||!email||!emailRe.test(email)){ alert('Please enter your name, phone number and a valid email address.'); return; }
+    var svc = (selEl && selEl.selectedIndex>0) ? selEl.value : '';
+    var msg=(msgEl&&msgEl.value.trim())||'', parts=name.split(/\s+/);
+    var payload={ firstName:parts.shift()||name, lastName:parts.join(' '), email:email, phone:phone,
+      message:(svc?('Service interest: '+svc+'\n\n'):'')+msg, privacyConsent:true,
+      marketingConsent:!!(consentEl&&consentEl.checked), source:'Home page' };
+    btn.dataset.sending='1'; btn.style.opacity='0.75'; btn.textContent='Sending…';
+    fetch('/api/contact',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)})
+      .then(function(r){ if(!r.ok) throw new Error('HTTP '+r.status); })
+      .catch(function(err){ console.error('Home contact submit failed:', err); })
+      .finally(function(){
+        btn.dataset.sending=''; btn.style.opacity='1'; btn.style.background='#159A9B';
+        btn.textContent='✓ Thanks — we’ll be in touch';
+        if(nameEl)nameEl.value=''; if(phoneEl)phoneEl.value=''; if(emailEl)emailEl.value='';
+        if(msgEl)msgEl.value=''; if(consentEl)consentEl.checked=false; if(selEl)selEl.selectedIndex=0;
+      });
+  }, true);
+})();
 </script>
 </body>
 </html>
