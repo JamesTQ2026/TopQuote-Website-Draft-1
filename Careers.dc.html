@@ -617,16 +617,49 @@ class Component extends DCLogic {
         if (bad) bad.focus();
         return;
       }
-      setLoading(true);
-      // DEMO: replace with a real POST to your endpoint.
-      setTimeout(() => {
+            setLoading(true);
+      const showSuccess = () => {
         setLoading(false);
         form.style.display = 'none';
         const s = document.getElementById('cfSuccess');
         s.style.display = 'block';
         const h = document.getElementById('cfSuccessHeading');
         if (h) h.focus();
-      }, 900);
+      };
+      const getChecked = (n) => Array.from(form.querySelectorAll('input[name="' + n + '"]:checked')).map(el => el.value);
+      const marketingEl = document.getElementById('cfMarketing');
+      const msgEl = document.getElementById('cfMsg');
+      const coverEl = document.getElementById('cfMsgTop');
+      const fileEl = document.getElementById('cfFile');
+      const payload = {
+        firstName: first.value.trim(),
+        lastName: last.value.trim(),
+        phone: phone.value.trim(),
+        email: email.value.trim(),
+        coverMessage: coverEl ? coverEl.value.trim() : '',
+        message: msgEl ? msgEl.value.trim() : '',
+        bestTime: getChecked('best_time'),
+        contactMethod: getChecked('contact_method'),
+        privacyConsent: privacy.checked,
+        marketingConsent: !!(marketingEl && marketingEl.checked),
+        source: 'Careers page'
+      };
+      const send = () => fetch('/api/career', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
+        .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); })
+        .catch(err => { console.error('Careers submit failed:', err); })
+        .finally(showSuccess);
+      const file = fileEl && fileEl.files && fileEl.files[0];
+      if (file && file.size <= 4 * 1024 * 1024) {
+        const reader = new FileReader();
+        reader.onload = () => {
+          payload.cv = { name: file.name, type: file.type, data: String(reader.result).split(',')[1] };
+          send();
+        };
+        reader.onerror = () => send();
+        reader.readAsDataURL(file);
+      } else {
+        send();
+      }
     });
   }
 }
