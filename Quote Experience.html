@@ -87,6 +87,7 @@
   </style>
 <script src="mobile-nav.js" defer></script>
 <link rel="stylesheet" href="/mobile-responsive.css">
+<link rel="icon" href="/favicon.ico" sizes="any">
 </head>
 <body>
   <!-- Site header (matches the rest of the site; mobile-nav.js turns it into the hamburger menu on phones) -->
@@ -105,15 +106,15 @@
   <header class="tq-hdr">
     <a href="/" style="display:flex;align-items:center;"><img src="assets/topquote-logo-grey.svg" alt="TopQuote" style="height:34px;width:131px;min-width:131px;flex:none;display:block;"></a>
     <nav>
-      <div class="nav-dd"><a href="Life Insurance.dc.html" style="background:#1EBABB;color:#fff;padding:9px 18px;border-radius:24px;text-decoration:none;display:inline-flex;align-items:center;gap:5px;">Services <span style="font-size:10px;">&#9662;</span></a><div class="nav-dd-menu"><a href="Life Insurance.dc.html">Life Insurance</a><a href="Critical Illness.dc.html">Critical Illness</a><a href="Income Protection.dc.html">Income Protection</a></div></div>
-      <div class="nav-dd"><a href="About Us.dc.html" class="nav-link">About <span style="font-size:10px;">&#9662;</span></a><div class="nav-dd-menu"><a href="About Us.dc.html">About Us</a><a href="Consumer Duty.dc.html">Consumer Duty</a></div></div>
+      <div class="nav-dd"><a href="Life Insurance.dc.html" style="background:#2563EB;color:#fff;padding:9px 18px;border-radius:24px;text-decoration:none;display:inline-flex;align-items:center;gap:5px;">Services <span style="font-size:10px;">&#9662;</span></a><div class="nav-dd-menu"><a href="Life Insurance.dc.html">Life Insurance</a><a href="Critical Illness.dc.html">Critical Illness</a><a href="Income Protection.dc.html">Income Protection</a></div></div>
+      <div class="nav-dd"><a href="About Us.dc.html" class="nav-link">About <span style="font-size:10px;">&#9662;</span></a><div class="nav-dd-menu"><a href="About Us.dc.html">About Us</a><a href="Consumer Duty.dc.html">Consumer Duty</a><a href="kids-pass.html">Kids Pass</a></div></div>
       <a href="Reconnect.dc.html" class="nav-link">Reconnect</a>
       <a href="Contact.dc.html" class="nav-link">Contact</a>
       <a href="Careers.dc.html" class="nav-link">Careers</a>
       <a href="Blog.dc.html" class="nav-link">Blog</a>
       <a href="Find Us.dc.html" class="nav-link">Find Us</a>
     </nav>
-    <div style="display:flex;align-items:center;gap:24px;"><a href="Get a Quote.dc.html" style="background:#1EBABB;color:#fff;padding:12px 22px;border-radius:8px;text-decoration:none;font-weight:700;font-size:15px;white-space:nowrap;">Get a quote</a></div>
+    <div style="display:flex;align-items:center;gap:24px;"><a href="Get a Quote.dc.html" style="background:#2563EB;color:#fff;padding:12px 22px;border-radius:8px;text-decoration:none;font-weight:700;font-size:15px;white-space:nowrap;">Get a quote</a></div>
   </header>
   <div id="root"></div>
   <script type="importmap">
@@ -282,7 +283,7 @@
       return (
         <div className="fixed inset-0 bg-black z-[9999] flex flex-col items-center justify-center select-none overflow-hidden transition-opacity duration-500 ease-in-out" style={{ opacity: isFadingOut ? 0 : 1, pointerEvents: isFadingOut ? "none" : "auto" }}>
           <div className="relative shadow-[0_16px_48px_rgba(0,0,0,0.85)]" style={{ width: "100px", height: "100px", borderRadius: "1.5em", overflow: "hidden", filter: `blur(${blurAmount}px)`, transform: `scale(${1 - (progress / 100) * 0.1})`, transition: "filter 0.1s ease-out, transform 0.1s ease-out", willChange: "filter, transform" }}>
-            <img src={images[currentImageIndex]} alt="loading preview" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "1.5em" }} className="select-none pointer-events-none" referrerPolicy="no-referrer" />
+            <img src={images[currentImageIndex]} alt="loading preview" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "1.5em" }} className="select-none pointer-events-none" referrerPolicy="no-referrer" / loading="lazy" decoding="async">
           </div>
           <div className="fixed bottom-8 right-8 md:bottom-12 md:right-16 z-[10000] font-sans font-[300] tracking-[-0.015em] text-[5rem] leading-none text-white select-none pointer-events-none tabular-nums" style={{ filter: `blur(${blurAmount * 0.6}px)`, transition: "filter 0.1s ease-out", willChange: "filter" }}>
             {progress}%
@@ -657,7 +658,7 @@
                       whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}
                       className="flex items-center p-[6px] pr-3.5 rounded-full bg-white/10 hover:bg-white/15 active:bg-white/20 backdrop-blur-md transition-colors duration-200 cursor-pointer select-none shadow-[0_4px_16px_rgba(0,0,0,0.4)] h-[38px] gap-2.5 group flex-shrink-0">
                       <div className="w-[26px] h-[26px] rounded-full overflow-hidden flex-shrink-0 bg-white/10 relative">
-                        <img src="https://pbs.twimg.com/profile_images/1941325782829113344/buT3DYqx_400x400.jpg" alt="Viktor Oddy" referrerPolicy="no-referrer" className="w-full h-full object-cover" />
+                        <img src="https://pbs.twimg.com/profile_images/1941325782829113344/buT3DYqx_400x400.jpg" alt="Viktor Oddy" referrerPolicy="no-referrer" className="w-full h-full object-cover" / loading="lazy" decoding="async">
                       </div>
                       <span className="font-sans font-medium text-[12px] leading-[18px] tracking-normal text-white/80 group-hover:text-white transition-colors duration-200">@viktoroddy</span>
                     </motion.a>
@@ -895,7 +896,7 @@
                 <AnimatePresence>
                   {showContinue && (
                     <motion.button initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 10 }} transition={{ type: "spring", stiffness: 350, damping: 25, mass: 0.8 }} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}
-                      className="mt-[1.75rem] pointer-events-auto flex items-center justify-center h-[50px] md:h-[60px] px-[2.1875rem] rounded-full bg-[#1EBABB] hover:bg-[#19a5a6] text-white font-sans font-semibold text-[clamp(13px,0.93rem,15px)] transition-colors duration-200 cursor-pointer select-none shadow-[0_8px_32px_rgba(30,186,187,0.35)]"
+                      className="mt-[1.75rem] pointer-events-auto flex items-center justify-center h-[50px] md:h-[60px] px-[2.1875rem] rounded-full bg-[#1EBABB] hover:bg-[#159a9b] text-white font-sans font-semibold text-[clamp(13px,0.93rem,15px)] transition-colors duration-200 cursor-pointer select-none shadow-[0_8px_32px_rgba(30,186,187,0.35)]"
                       onClick={advanceQuestion}>
                       Continue »
                     </motion.button>
@@ -950,7 +951,7 @@
                           </div>
                         ) : (
                           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", padding: "1.5em", width: "100%", height: "100%" }}>
-                            <img src={item.src} alt={item.name} style={{ maxWidth: "92%", maxHeight: "62%", objectFit: "contain" }} />
+                            <img src={item.src} alt={item.name} style={{ maxWidth: "92%", maxHeight: "62%", objectFit: "contain" }} / loading="lazy" decoding="async">
                           </div>
                         )}
                       </div>
