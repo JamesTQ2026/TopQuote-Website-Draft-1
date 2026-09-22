@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Get a Quote | TopQuote</title>
+  <title>Quote Experience | TopQuote</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -832,25 +832,25 @@
                   <div className="mt-[2.5rem] pointer-events-auto flex flex-col items-center gap-3 select-none w-full px-4" style={{ maxWidth: "26rem" }}>
                     {currentQ.type === "select" && (
                       <>
-                        <select value={form.amount} onChange={(e) => setF("amount", e.target.value)} className="w-full text-[15px] font-sans text-[#0C1F19] bg-white border-2 border-[#1EBABB] rounded-xl px-4 py-3 outline-none cursor-pointer">
+                        <select value={form.amount} onChange={(e) = aria-label="{v}"> setF("amount", e.target.value)} className="w-full text-[15px] font-sans text-[#0C1F19] bg-white border-2 border-[#1EBABB] rounded-xl px-4 py-3 outline-none cursor-pointer">
                           {["\u00A350,000","\u00A3100,000","\u00A3150,000","\u00A3200,000","\u00A3250,000","\u00A3300,000","\u00A3400,000","\u00A3500,000","\u00A3750,000","\u00A31,000,000"].map((v) => <option key={v}>{v}</option>)}
                         </select>
-                        <select value={form.term} onChange={(e) => setF("term", e.target.value)} className="w-full text-[15px] font-sans text-[#0C1F19] bg-white border-2 border-[#1EBABB] rounded-xl px-4 py-3 outline-none cursor-pointer">
+                        <select value={form.term} onChange={(e) = aria-label="{v}"> setF("term", e.target.value)} className="w-full text-[15px] font-sans text-[#0C1F19] bg-white border-2 border-[#1EBABB] rounded-xl px-4 py-3 outline-none cursor-pointer">
                           {["5 years","10 years","15 years","20 years","25 years","30 years"].map((v) => <option key={v}>{v}</option>)}
                         </select>
                       </>
                     )}
                     {currentQ.type === "dob" && (
                       <div className="grid grid-cols-3 gap-2.5 w-full">
-                        <select value={form.dobD} onChange={(e) => setF("dobD", e.target.value)} className="text-[15px] font-sans text-[#0C1F19] bg-white border-2 border-[#1EBABB] rounded-xl px-3 py-3 outline-none cursor-pointer">
+                        <select value={form.dobD} onChange={(e) = aria-label="Day"> setF("dobD", e.target.value)} className="text-[15px] font-sans text-[#0C1F19] bg-white border-2 border-[#1EBABB] rounded-xl px-3 py-3 outline-none cursor-pointer">
                           <option value="">Day</option>
                           {Array.from({ length: 31 }, (_, i) => i + 1).map((d) => <option key={d}>{d}</option>)}
                         </select>
-                        <select value={form.dobM} onChange={(e) => setF("dobM", e.target.value)} className="text-[15px] font-sans text-[#0C1F19] bg-white border-2 border-[#1EBABB] rounded-xl px-3 py-3 outline-none cursor-pointer">
+                        <select value={form.dobM} onChange={(e) = aria-label="Month"> setF("dobM", e.target.value)} className="text-[15px] font-sans text-[#0C1F19] bg-white border-2 border-[#1EBABB] rounded-xl px-3 py-3 outline-none cursor-pointer">
                           <option value="">Month</option>
                           {["January","February","March","April","May","June","July","August","September","October","November","December"].map((m) => <option key={m}>{m}</option>)}
                         </select>
-                        <select value={form.dobY} onChange={(e) => setF("dobY", e.target.value)} className="text-[15px] font-sans text-[#0C1F19] bg-white border-2 border-[#1EBABB] rounded-xl px-3 py-3 outline-none cursor-pointer">
+                        <select value={form.dobY} onChange={(e) = aria-label="Year"> setF("dobY", e.target.value)} className="text-[15px] font-sans text-[#0C1F19] bg-white border-2 border-[#1EBABB] rounded-xl px-3 py-3 outline-none cursor-pointer">
                           <option value="">Year</option>
                           {Array.from({ length: 63 }, (_, i) => new Date().getFullYear() - 18 - i).map((y) => <option key={y}>{y}</option>)}
                         </select>
@@ -859,7 +859,7 @@
                     {currentQ.type === "details" && (
                       <>
                         <div className="grid grid-cols-3 gap-2.5 w-full">
-                          <select value={form.title} onChange={(e) => setF("title", e.target.value)} className="text-[15px] font-sans text-[#0C1F19] bg-white border-2 border-[#1EBABB] rounded-xl px-3 py-3 outline-none cursor-pointer">
+                          <select value={form.title} onChange={(e) = aria-label="{t}"> setF("title", e.target.value)} className="text-[15px] font-sans text-[#0C1F19] bg-white border-2 border-[#1EBABB] rounded-xl px-3 py-3 outline-none cursor-pointer">
                             {["Mr","Mrs","Ms","Miss","Dr"].map((t) => <option key={t}>{t}</option>)}
                           </select>
                           <input value={form.first} onChange={(e) => setF("first", e.target.value)} placeholder="First name" className="text-[15px] font-sans text-[#0C1F19] bg-white border-2 border-[#1EBABB] rounded-xl px-3 py-3 outline-none placeholder:text-[#9aa2ad]" />
