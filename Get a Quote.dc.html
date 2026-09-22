@@ -371,12 +371,12 @@ class Component extends DCLogic {
   renderIcons(){ const go=()=>{ try{ if(window.lucide) if (window.__safeIcons) window.__safeIcons(); }catch(e){} }; go(); setTimeout(go,300); setTimeout(go,900); }
 
   renderVals(){ const base = [
-    { poster: 'assets/stats-vid-1-poster.jpg', name: 'Feefo', quote: '"Great to deal with, fully explained my options and never once put any pressure on me to purchase anything. Have made several follow-up calls to make sure everything was in place."' },
-    { poster: 'assets/stats-vid-2-poster.jpg', name: 'Feefo', quote: '"Everything made very clear and the online documentation was easy to do. Excellent and very easy and clear from start to finish."' },
-    { poster: 'assets/stats-vid-3-poster.jpg', name: 'Feefo', quote: '"Easy, helpful and polite. The service from top quote was excellent from start to finish. Everyone I spoke to was helpful and knowledgeable."' },
-    { poster: 'assets/stats-vid-4-poster.jpg', name: 'Feefo', quote: '"Clear, thorough, courteous, three words that capture my experience. A trustworthy brokerage service, I felt in control."' },
-    { poster: 'assets/stats-vid-5-poster.jpg', name: 'Feefo', quote: '"From the first call to the final policy, everything was straightforward and stress-free. I always knew exactly where I stood."' },
-    { poster: 'assets/stats-vid-6-poster.jpg', name: 'Feefo', quote: '"Genuinely helpful advice with no jargon and no pressure. I would happily recommend them to friends and family."' }
+    { poster: 'assets/stats-vid-1-poster.jpg', name: 'Trustpilot', quote: '"Great to deal with, fully explained my options and never once put any pressure on me to purchase anything. Have made several follow-up calls to make sure everything was in place."' },
+    { poster: 'assets/stats-vid-2-poster.jpg', name: 'Trustpilot', quote: '"Everything made very clear and the online documentation was easy to do. Excellent and very easy and clear from start to finish."' },
+    { poster: 'assets/stats-vid-3-poster.jpg', name: 'Trustpilot', quote: '"Easy, helpful and polite. The service from top quote was excellent from start to finish. Everyone I spoke to was helpful and knowledgeable."' },
+    { poster: 'assets/stats-vid-4-poster.jpg', name: 'Trustpilot', quote: '"Clear, thorough, courteous, three words that capture my experience. A trustworthy brokerage service, I felt in control."' },
+    { poster: 'assets/stats-vid-5-poster.jpg', name: 'Trustpilot', quote: '"From the first call to the final policy, everything was straightforward and stress-free. I always knew exactly where I stood."' },
+    { poster: 'assets/stats-vid-6-poster.jpg', name: 'Trustpilot', quote: '"Genuinely helpful advice with no jargon and no pressure. I would happily recommend them to friends and family."' }
   ]; return { stats: base.concat(base, base) }; }
   mountStatsSwiper(){
     const el = document.getElementById('sx-stats-swiper');

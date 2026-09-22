@@ -603,7 +603,7 @@
             <div id="testiAvatar" style="width:56px;height:56px;border-radius:50%;background:#1EBABB;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:20px;font-family:'Playfair Display',serif;flex:none;">S</div>
             <div>
               <div id="testiName" class="arva-h" style="font-size:19px;font-weight:700;color:#173B33;">Wayne Adin-Christie</div>
-              <div id="testiRole" style="color:#8A94A6;font-size:14px;margin-top:2px;">Verified customer · Feefo</div>
+              <div id="testiRole" style="color:#8A94A6;font-size:14px;margin-top:2px;">Verified customer · Trustpilot</div>
             </div>
           </div>
           <i data-lucide="quote" style="width:52px;height:52px;color:#CBD1E2;fill:#CBD1E2;"></i>
@@ -907,10 +907,10 @@ class Component extends DCLogic {
       if (!prev || !next || !quote || prev.__wired) return;
       prev.__wired = true;
       const data = [
-        { q: "Very helpful, informative and professional. A stress-free experience from start to finish.", n: "Stephanie N.", r: "Verified customer · Feefo" },
-        { q: "Great to deal with. They fully explained my options and never once put any pressure on me to buy. They've since made several follow-up calls to make sure everything was in place. Genuinely reassuring.", n: "David M.", r: "Verified customer · Feefo" },
-        { q: "Everything was made very clear and the online documentation was easy to complete. Excellent service and straightforward from start to finish, exactly what you want when sorting life insurance.", n: "Priya K.", r: "Verified customer · Feefo" },
-        { q: "Easy, helpful and polite. The service from TopQuote was excellent from start to finish. Everyone I spoke to was knowledgeable and took the time to get things right for us.", n: "James T.", r: "Verified customer · Feefo" }
+        { q: "Very helpful, informative and professional. A stress-free experience from start to finish.", n: "Stephanie N.", r: "Verified customer · Trustpilot" },
+        { q: "Great to deal with. They fully explained my options and never once put any pressure on me to buy. They've since made several follow-up calls to make sure everything was in place. Genuinely reassuring.", n: "David M.", r: "Verified customer · Trustpilot" },
+        { q: "Everything was made very clear and the online documentation was easy to complete. Excellent service and straightforward from start to finish, exactly what you want when sorting life insurance.", n: "Priya K.", r: "Verified customer · Trustpilot" },
+        { q: "Easy, helpful and polite. The service from TopQuote was excellent from start to finish. Everyone I spoke to was knowledgeable and took the time to get things right for us.", n: "James T.", r: "Verified customer · Trustpilot" }
       ];
       let i = 0;
       const render = () => {
@@ -1316,12 +1316,12 @@ class Component extends DCLogic {
   }
   componentWillUnmount(){ if (this._onScroll) { window.removeEventListener('scroll', this._onScroll); window.removeEventListener('resize', this._onScroll); } }
   renderVals(){ const base = [
-    { isTesti: true, vid: 'assets/stats-vid-1.mp4', poster: 'assets/stats-vid-1-poster.jpg', name: 'Feefo', quote: '"Great to deal with, fully explained my options and never once put any pressure on me to purchase anything. Have made several follow-up calls to make sure everything was in place."' },
-    { isTesti: true, vid: 'assets/stats-vid-2.mp4', poster: 'assets/stats-vid-2-poster.jpg', name: 'Feefo', quote: '"Everything made very clear and the online documentation was easy to do. Excellent and very easy and clear from start to finish."' },
-    { isTesti: true, vid: 'assets/stats-vid-3.mp4', poster: 'assets/stats-vid-3-poster.jpg', name: 'Feefo', quote: '"Easy, helpful and polite. The service from top quote was excellent from start to finish. Everyone I spoke to was helpful and knowledgeable."' },
-    { isTesti: true, vid: 'assets/stats-vid-4.mp4', poster: 'assets/stats-vid-4-poster.jpg', name: 'Feefo', quote: '"Clear, thorough, courteous, three words that capture my experience. A trustworthy brokerage service, I felt in control."' },
-    { isTesti: true, vid: 'assets/stats-vid-5.mp4', poster: 'assets/stats-vid-5-poster.jpg', name: 'Feefo', quote: '"From the first call to the final policy, everything was straightforward and stress-free. I always knew exactly where I stood."' },
-    { isTesti: true, vid: 'assets/stats-vid-6.mp4', poster: 'assets/stats-vid-6-poster.jpg', name: 'Feefo', quote: '"Genuinely helpful advice with no jargon and no pressure. I would happily recommend them to friends and family."' }
+    { isTesti: true, vid: 'assets/stats-vid-1.mp4', poster: 'assets/stats-vid-1-poster.jpg', name: 'Trustpilot', quote: '"Great to deal with, fully explained my options and never once put any pressure on me to purchase anything. Have made several follow-up calls to make sure everything was in place."' },
+    { isTesti: true, vid: 'assets/stats-vid-2.mp4', poster: 'assets/stats-vid-2-poster.jpg', name: 'Trustpilot', quote: '"Everything made very clear and the online documentation was easy to do. Excellent and very easy and clear from start to finish."' },
+    { isTesti: true, vid: 'assets/stats-vid-3.mp4', poster: 'assets/stats-vid-3-poster.jpg', name: 'Trustpilot', quote: '"Easy, helpful and polite. The service from top quote was excellent from start to finish. Everyone I spoke to was helpful and knowledgeable."' },
+    { isTesti: true, vid: 'assets/stats-vid-4.mp4', poster: 'assets/stats-vid-4-poster.jpg', name: 'Trustpilot', quote: '"Clear, thorough, courteous, three words that capture my experience. A trustworthy brokerage service, I felt in control."' },
+    { isTesti: true, vid: 'assets/stats-vid-5.mp4', poster: 'assets/stats-vid-5-poster.jpg', name: 'Trustpilot', quote: '"From the first call to the final policy, everything was straightforward and stress-free. I always knew exactly where I stood."' },
+    { isTesti: true, vid: 'assets/stats-vid-6.mp4', poster: 'assets/stats-vid-6-poster.jpg', name: 'Trustpilot', quote: '"Genuinely helpful advice with no jargon and no pressure. I would happily recommend them to friends and family."' }
   ]; return { stats: base.concat(base, base) }; }
 
   updateStatsVideos(){
