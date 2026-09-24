@@ -253,14 +253,14 @@
         <p style="color:#5B6B66;font-size:15.5px;line-height:1.75;margin-bottom:14px;max-width:520px;">Moved house? New phone number? Different beneficiary in mind? Letting us know takes a minute, and makes sure your cover does what it's supposed to when it matters.</p>
         <p style="color:#8A94A6;font-size:14px;font-style:italic;margin-bottom:26px;">Updating your details won't change your premiums, benefits or policy terms.</p>
         <h3 style="color:#1EBABB;font-weight:700;font-size:17px;margin-bottom:16px;">Tell us what's changed</h3>
-        <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:30px;">
-          <span style="display:flex;align-items:center;gap:12px;color:#173B33;font-size:15.5px;font-weight:600;"><i data-lucide="user" style="width:20px;height:20px;color:#1EBABB;"></i> Name</span>
-          <span style="display:flex;align-items:center;gap:12px;color:#173B33;font-size:15.5px;font-weight:600;"><i data-lucide="home" style="width:20px;height:20px;color:#1EBABB;"></i> Address</span>
-          <span style="display:flex;align-items:center;gap:12px;color:#173B33;font-size:15.5px;font-weight:600;"><i data-lucide="smartphone" style="width:20px;height:20px;color:#1EBABB;"></i> Mobile number</span>
-          <span style="display:flex;align-items:center;gap:12px;color:#173B33;font-size:15.5px;font-weight:600;"><i data-lucide="mail" style="width:20px;height:20px;color:#1EBABB;"></i> Email address</span>
-          <span style="display:flex;align-items:center;gap:12px;color:#173B33;font-size:15.5px;font-weight:600;"><i data-lucide="edit-3" style="width:20px;height:20px;color:#1EBABB;"></i> Beneficiary details</span>
-        </div>
-        <a href="Contact.dc.html" class="abtn" style="display:inline-block;background:#2563EB;color:#fff;padding:15px 32px;border-radius:9px;text-decoration:none;font-weight:700;font-size:15px;">Update My Details</a>
+        <form id="rcForm" novalidate style="display:flex;flex-direction:column;gap:12px;max-width:520px;margin-bottom:18px;">
+          <input name="name" type="text" autocomplete="name" required placeholder="Your name" style="padding:13px 16px;border:1px solid #CBD3DD;border-radius:9px;font-size:15px;font-family:inherit;background:#fff;color:#173B33;width:100%;">
+          <input name="email" type="email" autocomplete="email" required placeholder="Email address" style="padding:13px 16px;border:1px solid #CBD3DD;border-radius:9px;font-size:15px;font-family:inherit;background:#fff;color:#173B33;width:100%;">
+          <input name="phone" type="tel" autocomplete="tel" placeholder="Phone number" style="padding:13px 16px;border:1px solid #CBD3DD;border-radius:9px;font-size:15px;font-family:inherit;background:#fff;color:#173B33;width:100%;">
+          <textarea name="message" rows="3" placeholder="What's changed? (new address, phone, beneficiary…)" style="padding:13px 16px;border:1px solid #CBD3DD;border-radius:9px;font-size:15px;font-family:inherit;background:#fff;color:#173B33;width:100%;resize:vertical;"></textarea>
+          <button type="submit" style="align-self:flex-start;background:#2563EB;color:#fff;padding:15px 32px;border-radius:9px;border:0;font-weight:700;font-size:15px;cursor:pointer;">Send Update</button>
+          <div id="rcMsg" role="status" style="display:none;font-size:14.5px;font-weight:600;"></div>
+        </form>
         <p style="color:#5B6B66;font-size:14.5px;margin-top:20px;">Prefer to talk? Call us on <a href="tel:01619743710" style="color:#1EBABB;font-weight:700;text-decoration:none;">0161 974 3710</a>, Mon&ndash;Fri 8:30am&ndash;5:00pm.</p>
       </div>
     </div>
@@ -392,7 +392,7 @@
           <h4 class="arva-h" style="font-size:20px;font-weight:600;color:#173B33;margin-bottom:20px;">Need Help?</h4>
           <div style="display:flex;flex-direction:column;gap:16px;">
             <span style="display:flex;align-items:flex-start;gap:10px;color:#6B7280;font-size:15px;line-height:1.55;"><i data-lucide="map-pin" style="width:17px;height:17px;color:#1EBABB;margin-top:2px;flex:none;"></i> <span>Alderley Park, Suite 3,<br>GLASSHOUSE, Congleton Road,<br>Macclesfield, SK10 4TG</span></span>
-            <span style="display:flex;align-items:center;gap:10px;color:#6B7280;font-size:15px;"><i data-lucide="phone" style="width:17px;height:17px;color:#fff;flex:none;"></i> Customer support: 0161 974 3710</span>
+            <span style="display:flex;align-items:center;gap:10px;color:#6B7280;font-size:15px;"><i data-lucide="phone" style="width:17px;height:17px;color:#1EBABB;flex:none;"></i> Customer support: 0161 974 3710</span>
             <span style="display:flex;align-items:center;gap:10px;color:#6B7280;font-size:15px;white-space:nowrap;"><i data-lucide="clock" style="width:17px;height:17px;color:#1EBABB;flex:none;"></i> Working time: Mon &ndash; Fri: 8:30am &ndash; 5:00pm</span>
             <span style="display:flex;align-items:center;gap:10px;color:#6B7280;font-size:15px;"><i data-lucide="mail" style="width:17px;height:17px;color:#1EBABB;flex:none;"></i> <a href="mailto:hello@topquote.uk.com" style="color:inherit;text-decoration:none;">hello@topquote.uk.com</a></span>
           </div>
@@ -400,7 +400,7 @@
       </div>
       <div style="height:1px;background:#D2D6E8;margin:40px 0 22px;"></div>
       <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;">
-        <span style="color:#6B7280;font-size:14px;">© 2025 TopQuote. All Rights Reserved.</span>
+        <span style="color:#6B7280;font-size:14px;">© 2026 TopQuote. All Rights Reserved.</span>
         <div style="display:flex;gap:18px;align-items:center;">
           <a href="https://www.theopenworkpartnership.com/privacy-notice/" target="_blank" rel="noopener" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:14px;">Privacy Policy</a>
           <span style="color:#C4C9DE;">|</span>
@@ -413,7 +413,6 @@
         <p style="margin-top:14px;">Top Quote Limited is an appointed representative of The Openwork Partnership, a trading style of Openwork Limited which is authorised and regulated by the Financial Conduct Authority. You can check this on the FCA Register at <a href="https://register.fca.org.uk" target="_blank" rel="noopener" style="color:#1EBABB;text-decoration:none;">register.fca.org.uk</a> (Openwork Limited, firm reference number 408285).</p>
         <p style="margin-top:14px;">The information on this website is general information only and does not constitute personal financial advice. Any personal recommendation will be based on your individual circumstances. This website is intended for UK residents only.</p>
         <p style="margin-top:14px;">If you have a complaint about the service you have received, please contact us at <a href="mailto:hello@topquote.uk.com" style="color:#1EBABB;text-decoration:none;">hello@topquote.uk.com</a> or 0161 974 3710. If we cannot resolve your complaint to your satisfaction, you may be entitled to refer it to the Financial Ombudsman Service (<a href="https://www.financial-ombudsman.org.uk" target="_blank" rel="noopener" style="color:#1EBABB;text-decoration:none;">financial-ombudsman.org.uk</a>). We are covered by the Financial Services Compensation Scheme (<a href="https://www.fscs.org.uk" target="_blank" rel="noopener" style="color:#1EBABB;text-decoration:none;">fscs.org.uk</a>).</p>
-        <p style="margin-top:14px;">&copy; 2026 Top Quote Limited. All rights reserved.</p>
       </div>
     </div>
   </footer>
@@ -523,6 +522,28 @@ class Component extends DCLogic {
     };
   }
 }
+</script>
+<script>
+(function(){
+  document.addEventListener('submit', function(e){
+    var f = e.target;
+    if(!f || f.id !== 'rcForm') return;
+    e.preventDefault();
+    var btn = f.querySelector('button[type=submit]');
+    var msg = f.querySelector('#rcMsg');
+    var val = function(n){ var el=f.elements[n]; return el ? String(el.value).trim() : ''; };
+    var name = val('name'), email = val('email');
+    if(!name || !email){ if(msg){msg.style.display='block';msg.style.color='#c0392b';msg.textContent='Please add your name and email.';} return; }
+    var data = { firstName:name, email:email, phone:val('phone'), message:val('message'), source:'Reconnect - update details' };
+    var old = btn ? btn.textContent : '';
+    if(btn){ btn.disabled=true; btn.textContent='Sending...'; }
+    fetch('/api/contact', {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)})
+      .then(function(r){ if(!r.ok) throw 0; return r.json().catch(function(){return{};}); })
+      .then(function(){ f.reset(); if(msg){msg.style.display='block';msg.style.color='#159a9b';msg.textContent="Thanks - we've got your details and will be in touch shortly.";} })
+      .catch(function(){ if(msg){msg.style.display='block';msg.style.color='#c0392b';msg.textContent='Something went wrong. Please call us on 0161 974 3710.';} })
+      .finally(function(){ if(btn){btn.disabled=false;btn.textContent=old;} });
+  });
+})();
 </script>
 </body>
 </html>
