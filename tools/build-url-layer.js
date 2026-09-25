@@ -5,16 +5,21 @@
 // WordPress URLs indexed (/about/, /life-insurance/, /blog/<category>/<slug>/). This script
 // makes every page answer on its clean URL and 301s the old URLs that moved.
 //
-// "/" is rewritten to Home Page.dc.html. That only takes effect while index.html (the export's
-// JS bounce page) is absent from the repo, so delete index.html after each re-export.
-// Home Page.dc.html is deliberately NOT redirected to "/": if index.html ever comes back,
-// that redirect would loop. A canonical tag handles the duplicate instead.
+// "/" is rewritten to Home Page.dc.html, and /Home Page.dc.html is 301'd to "/" so the homepage
+// has one address. That redirect would LOOP if index.html (the export's JS bounce page to
+// "Home Page.dc.html") were present, because "/" would then serve index.html instead of the
+// rewrite. So this script refuses to run while index.html exists: delete it after each re-export.
 
 const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.resolve(__dirname, '..');
 const ORIGIN = 'https://www.top-quote.co.uk';
+
+if (fs.existsSync(path.join(ROOT, 'index.html'))) {
+  throw new Error('index.html exists (the Claude Design bounce page). With the /Home Page.dc.html -> / redirect ' +
+    'it would make the homepage loop forever. Delete it first:  git rm index.html');
+}
 
 // clean URL  ->  file in the repo root
 const PAGES = {
@@ -190,7 +195,7 @@ for (const [from, to] of Object.entries(LEGACY)) {
 
 // 2. export filenames -> clean URL, so internal links ("About Us.dc.html") land on /about.
 //    Both the raw and the %20 form are listed because the match is done on the request path.
-for (const [clean, file] of Object.entries(PAGES)) {
+for (const [clean, file] of Object.entries(PAGES).concat([['/', 'Home Page.dc.html']])) {
   r301(enc(file), clean);
   if (file.includes(' ')) r301('/' + file, clean);
 }
@@ -243,7 +248,6 @@ for (const [file, clean] of canon) {
   fs.writeFileSync(fp, html);
   tagged++;
 }
-if (fs.existsSync(path.join(ROOT, 'index.html'))) console.warn('WARNING: index.html exists, so "/" will serve the bounce page. Delete it (git rm index.html).');
 
 console.log(`canonical tags added: ${tagged}`);
 console.log(`vercel.json: ${redirects.length} redirects, ${rewrites.length} rewrites | sitemap: ${urls.length} urls | pending approval (hidden): ${pending.size}`);

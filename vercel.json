@@ -1962,6 +1962,16 @@
    "statusCode": 301
   },
   {
+   "source": "/Home%20Page.dc.html",
+   "destination": "/",
+   "statusCode": 301
+  },
+  {
+   "source": "/Home Page.dc.html",
+   "destination": "/",
+   "statusCode": 301
+  },
+  {
    "source": "/(blog-[^/.]+)\\.html",
    "destination": "/$1",
    "statusCode": 301
