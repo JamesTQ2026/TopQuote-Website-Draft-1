@@ -48,6 +48,7 @@ const PAGES = {
   '/cookie-policy': 'Cookie Policy.html',
   '/privacy-notice': 'Privacy Notice.html',
   '/terms-of-use': 'Terms of Use.html',
+  '/kids-pass': 'kids-pass.html',
 };
 
 // old WordPress URL -> clean URL, for pages whose slug changed or no longer exist
@@ -71,9 +72,83 @@ const MOVED = {
   '/relevant-life-insurance': '/life-insurance',
   '/update-your-details': '/reconnect',
   '/home-insurance': '/',
-  '/kids-pass': '/',
-  '/kids-pass-terms-and-conditions': '/',
+  '/kids-pass-terms-and-conditions': '/kids-pass',
   '/referral-form': '/contact',
+};
+
+// Older-generation URLs Google may still know (found via the Internet Archive, 25 Sep 2026).
+// 2016 WordPress put posts at the root or under /charity/ and /donations/, and the
+// 2009-2014 site used .html pages. Specific entries first; the :path* catch-alls last.
+// Deliberately NOT redirected (a 404 is correct): /test, /esigndocuments,
+// /forwardable-message-page, /get-a-quote-claude-test-test (test/utility pages).
+const LEGACY = {
+  // 2016 posts that still exist
+  '/a-life-of-worry-2': '/blog-a-life-of-worry',
+  '/acceptance': '/blog-acceptance',
+  '/anger': '/blog-anger',
+  '/bargaining-stage-of-grief': '/blog-bargaining-stage-of-grief',
+  '/denial': '/blog-denial',
+  '/depression': '/blog-depression',
+  '/do-you-think-you-overthink': '/blog-do-you-think-you-overthink',
+  '/expecting-expectations': '/blog-expecting-expectations',
+  '/family-always-comes-first': '/blog-family-always-comes-first',
+  '/holidays-are-coming': '/blog-holidays-are-coming',
+  '/janes-experience-unexpected-death': '/blog-janes-experience-unexpected-death',
+  '/mindfulness-mumbo-jumbo': '/blog-mindfulness-mumbo-jumbo',
+  '/self-esteem': '/blog-self-esteem',
+  '/six-weeks-of-sun-sea-sand-or-stress': '/blog-six-weeks-of-sun-sea-sand-or-stress',
+  '/stress': '/blog-stress',
+  '/this-doesnt-happen-to-me': '/blog-this-doesnt-happen-to-me',
+  '/charity/2015-christmas-toy-drop': '/blog-2015-christmas-toy-drop',
+  '/charity/charity-update': '/blog-charity-update',
+  '/charity/charity-video': '/blog-charity-video',
+  '/charity/easter-2016': '/blog-easter-2016',
+  '/charity/francis-house-childrens-hospice': '/blog-francis-house-childrens-hospice',
+  '/charity/marathon-des-sables-2012': '/blog-marathon-des-sables-2012',
+  '/charity/toy-drop': '/blog-toy-drop',
+  '/charity/wood-street-mission': '/blog-wood-street-mission',
+  '/donations/francis-house-childrens-hospice': '/blog-francis-house-childrens-hospice',
+  '/donations/francis-house-childrens-hospice-2': '/blog-francis-house-childrens-hospice',
+  '/donations/wood-st-mission': '/blog-wood-street-mission',
+  '/to-blog-or-not-to-blog-that-is-the-question': '/blog',
+  // older site sections / pages -> nearest current page
+  '/news': '/blog',
+  '/charity': '/blog',
+  '/awards': '/about',
+  '/life-assurance': '/life-insurance',
+  '/services/life-assurance': '/life-insurance',
+  '/services/critical-illness': '/critical-illness',
+  '/services/income-insurance': '/income-protection',
+  '/services/home-insurance': '/',
+  '/terms-and-conditions': '/terms-of-use',
+  '/terms-conditions': '/terms-of-use',
+  '/wp/cookie-policy': '/cookie-policy',
+  '/sitemap': '/',
+  '/useful-links': '/',
+  '/skyman': '/',
+  '/enquiry/1': '/contact',
+  '/enquiry/5': '/contact',
+  '/Referral-scheme/1.html': '/contact',
+  // 2009-2011 .html site
+  '/index.html': '/',
+  '/home.html': '/',
+  '/building.html': '/',
+  '/notice.html': '/',
+  '/products.html': '/',
+  '/careers.html': '/careers',
+  '/contact.html': '/contact',
+  '/quote.html': '/get-a-quote',
+  '/life.html': '/life-insurance',
+  '/lifeAssurance.html': '/life-insurance',
+  '/level.html': '/life-insurance',
+  '/decreasing.html': '/life-insurance',
+  '/decreasingFaq.html': '/life-insurance',
+  '/decreasingMore.html': '/life-insurance',
+  '/mortgage.html': '/life-insurance',
+  // catch-alls for the rest of those old sections (must stay last)
+  '/award/:path*': '/about',
+  '/charity/:path*': '/blog',
+  '/donations/:path*': '/blog',
 };
 
 const enc = (f) => '/' + encodeURIComponent(f).replace(/%2F/g, '/');
@@ -105,8 +180,13 @@ for (const slug of pending) {
   }
 }
 
-// 1. old WP pages that moved
+// 1. old WP pages that moved, then older-generation URLs
 for (const [from, to] of Object.entries(MOVED)) r301(from, to);
+for (const [from, to] of Object.entries(LEGACY)) {
+  const post = to.match(/^\/blog-(.+)$/);
+  if (post && !liveSlugs.includes(post[1])) throw new Error(`LEGACY ${from} points at a missing or unapproved post: ${to}`);
+  r301(from, to);
+}
 
 // 2. export filenames -> clean URL, so internal links ("About Us.dc.html") land on /about.
 //    Both the raw and the %20 form are listed because the match is done on the request path.

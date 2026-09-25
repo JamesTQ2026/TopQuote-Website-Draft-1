@@ -1357,18 +1357,328 @@
    "statusCode": 301
   },
   {
-   "source": "/kids-pass",
-   "destination": "/",
-   "statusCode": 301
-  },
-  {
    "source": "/kids-pass-terms-and-conditions",
-   "destination": "/",
+   "destination": "/kids-pass",
    "statusCode": 301
   },
   {
    "source": "/referral-form",
    "destination": "/contact",
+   "statusCode": 301
+  },
+  {
+   "source": "/a-life-of-worry-2",
+   "destination": "/blog-a-life-of-worry",
+   "statusCode": 301
+  },
+  {
+   "source": "/acceptance",
+   "destination": "/blog-acceptance",
+   "statusCode": 301
+  },
+  {
+   "source": "/anger",
+   "destination": "/blog-anger",
+   "statusCode": 301
+  },
+  {
+   "source": "/bargaining-stage-of-grief",
+   "destination": "/blog-bargaining-stage-of-grief",
+   "statusCode": 301
+  },
+  {
+   "source": "/denial",
+   "destination": "/blog-denial",
+   "statusCode": 301
+  },
+  {
+   "source": "/depression",
+   "destination": "/blog-depression",
+   "statusCode": 301
+  },
+  {
+   "source": "/do-you-think-you-overthink",
+   "destination": "/blog-do-you-think-you-overthink",
+   "statusCode": 301
+  },
+  {
+   "source": "/expecting-expectations",
+   "destination": "/blog-expecting-expectations",
+   "statusCode": 301
+  },
+  {
+   "source": "/family-always-comes-first",
+   "destination": "/blog-family-always-comes-first",
+   "statusCode": 301
+  },
+  {
+   "source": "/holidays-are-coming",
+   "destination": "/blog-holidays-are-coming",
+   "statusCode": 301
+  },
+  {
+   "source": "/janes-experience-unexpected-death",
+   "destination": "/blog-janes-experience-unexpected-death",
+   "statusCode": 301
+  },
+  {
+   "source": "/mindfulness-mumbo-jumbo",
+   "destination": "/blog-mindfulness-mumbo-jumbo",
+   "statusCode": 301
+  },
+  {
+   "source": "/self-esteem",
+   "destination": "/blog-self-esteem",
+   "statusCode": 301
+  },
+  {
+   "source": "/six-weeks-of-sun-sea-sand-or-stress",
+   "destination": "/blog-six-weeks-of-sun-sea-sand-or-stress",
+   "statusCode": 301
+  },
+  {
+   "source": "/stress",
+   "destination": "/blog-stress",
+   "statusCode": 301
+  },
+  {
+   "source": "/this-doesnt-happen-to-me",
+   "destination": "/blog-this-doesnt-happen-to-me",
+   "statusCode": 301
+  },
+  {
+   "source": "/charity/2015-christmas-toy-drop",
+   "destination": "/blog-2015-christmas-toy-drop",
+   "statusCode": 301
+  },
+  {
+   "source": "/charity/charity-update",
+   "destination": "/blog-charity-update",
+   "statusCode": 301
+  },
+  {
+   "source": "/charity/charity-video",
+   "destination": "/blog-charity-video",
+   "statusCode": 301
+  },
+  {
+   "source": "/charity/easter-2016",
+   "destination": "/blog-easter-2016",
+   "statusCode": 301
+  },
+  {
+   "source": "/charity/francis-house-childrens-hospice",
+   "destination": "/blog-francis-house-childrens-hospice",
+   "statusCode": 301
+  },
+  {
+   "source": "/charity/marathon-des-sables-2012",
+   "destination": "/blog-marathon-des-sables-2012",
+   "statusCode": 301
+  },
+  {
+   "source": "/charity/toy-drop",
+   "destination": "/blog-toy-drop",
+   "statusCode": 301
+  },
+  {
+   "source": "/charity/wood-street-mission",
+   "destination": "/blog-wood-street-mission",
+   "statusCode": 301
+  },
+  {
+   "source": "/donations/francis-house-childrens-hospice",
+   "destination": "/blog-francis-house-childrens-hospice",
+   "statusCode": 301
+  },
+  {
+   "source": "/donations/francis-house-childrens-hospice-2",
+   "destination": "/blog-francis-house-childrens-hospice",
+   "statusCode": 301
+  },
+  {
+   "source": "/donations/wood-st-mission",
+   "destination": "/blog-wood-street-mission",
+   "statusCode": 301
+  },
+  {
+   "source": "/to-blog-or-not-to-blog-that-is-the-question",
+   "destination": "/blog",
+   "statusCode": 301
+  },
+  {
+   "source": "/news",
+   "destination": "/blog",
+   "statusCode": 301
+  },
+  {
+   "source": "/charity",
+   "destination": "/blog",
+   "statusCode": 301
+  },
+  {
+   "source": "/awards",
+   "destination": "/about",
+   "statusCode": 301
+  },
+  {
+   "source": "/life-assurance",
+   "destination": "/life-insurance",
+   "statusCode": 301
+  },
+  {
+   "source": "/services/life-assurance",
+   "destination": "/life-insurance",
+   "statusCode": 301
+  },
+  {
+   "source": "/services/critical-illness",
+   "destination": "/critical-illness",
+   "statusCode": 301
+  },
+  {
+   "source": "/services/income-insurance",
+   "destination": "/income-protection",
+   "statusCode": 301
+  },
+  {
+   "source": "/services/home-insurance",
+   "destination": "/",
+   "statusCode": 301
+  },
+  {
+   "source": "/terms-and-conditions",
+   "destination": "/terms-of-use",
+   "statusCode": 301
+  },
+  {
+   "source": "/terms-conditions",
+   "destination": "/terms-of-use",
+   "statusCode": 301
+  },
+  {
+   "source": "/wp/cookie-policy",
+   "destination": "/cookie-policy",
+   "statusCode": 301
+  },
+  {
+   "source": "/sitemap",
+   "destination": "/",
+   "statusCode": 301
+  },
+  {
+   "source": "/useful-links",
+   "destination": "/",
+   "statusCode": 301
+  },
+  {
+   "source": "/skyman",
+   "destination": "/",
+   "statusCode": 301
+  },
+  {
+   "source": "/enquiry/1",
+   "destination": "/contact",
+   "statusCode": 301
+  },
+  {
+   "source": "/enquiry/5",
+   "destination": "/contact",
+   "statusCode": 301
+  },
+  {
+   "source": "/Referral-scheme/1.html",
+   "destination": "/contact",
+   "statusCode": 301
+  },
+  {
+   "source": "/index.html",
+   "destination": "/",
+   "statusCode": 301
+  },
+  {
+   "source": "/home.html",
+   "destination": "/",
+   "statusCode": 301
+  },
+  {
+   "source": "/building.html",
+   "destination": "/",
+   "statusCode": 301
+  },
+  {
+   "source": "/notice.html",
+   "destination": "/",
+   "statusCode": 301
+  },
+  {
+   "source": "/products.html",
+   "destination": "/",
+   "statusCode": 301
+  },
+  {
+   "source": "/careers.html",
+   "destination": "/careers",
+   "statusCode": 301
+  },
+  {
+   "source": "/contact.html",
+   "destination": "/contact",
+   "statusCode": 301
+  },
+  {
+   "source": "/quote.html",
+   "destination": "/get-a-quote",
+   "statusCode": 301
+  },
+  {
+   "source": "/life.html",
+   "destination": "/life-insurance",
+   "statusCode": 301
+  },
+  {
+   "source": "/lifeAssurance.html",
+   "destination": "/life-insurance",
+   "statusCode": 301
+  },
+  {
+   "source": "/level.html",
+   "destination": "/life-insurance",
+   "statusCode": 301
+  },
+  {
+   "source": "/decreasing.html",
+   "destination": "/life-insurance",
+   "statusCode": 301
+  },
+  {
+   "source": "/decreasingFaq.html",
+   "destination": "/life-insurance",
+   "statusCode": 301
+  },
+  {
+   "source": "/decreasingMore.html",
+   "destination": "/life-insurance",
+   "statusCode": 301
+  },
+  {
+   "source": "/mortgage.html",
+   "destination": "/life-insurance",
+   "statusCode": 301
+  },
+  {
+   "source": "/award/:path*",
+   "destination": "/about",
+   "statusCode": 301
+  },
+  {
+   "source": "/charity/:path*",
+   "destination": "/blog",
+   "statusCode": 301
+  },
+  {
+   "source": "/donations/:path*",
+   "destination": "/blog",
    "statusCode": 301
   },
   {
@@ -1644,6 +1954,11 @@
   {
    "source": "/Terms of Use.html",
    "destination": "/terms-of-use",
+   "statusCode": 301
+  },
+  {
+   "source": "/kids-pass.html",
+   "destination": "/kids-pass",
    "statusCode": 301
   },
   {
@@ -3421,6 +3736,10 @@
   {
    "source": "/terms-of-use",
    "destination": "/Terms%20of%20Use.html"
+  },
+  {
+   "source": "/kids-pass",
+   "destination": "/kids-pass.html"
   },
   {
    "source": "/(blog-[^/.]+)",
