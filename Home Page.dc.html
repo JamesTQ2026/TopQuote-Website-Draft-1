@@ -590,22 +590,21 @@
 
   <!-- ============ TESTIMONIALS ============ -->
   <section data-screen-label="Testimonials" style="position:sticky;top:0;z-index:2;background:#EAEDFB;min-height:100vh;display:flex;align-items:stretch;padding:0 40px;perspective:1500px;overflow:hidden;box-shadow:0 -34px 70px rgba(8,30,22,.16);">
-    <div id="testiInner" style="position:relative;z-index:1;max-width:1240px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;will-change:transform;">
+    <div id="testiInner" style="position:relative;z-index:1;max-width:1700px;margin:0 auto;width:100%;display:grid;grid-template-columns:minmax(0, min(calc(min(92vh,900px) * 0.9708), 50%)) 1fr;gap:72px;align-items:center;will-change:transform;">
       <!-- LEFT: image with teal circle accents -->
-      <div style="position:relative;height:min(88vh,800px);align-self:end;">
-        <div style="position:absolute;top:-10px;left:-70px;width:250px;height:250px;border-radius:50%;background:#1EBABB;z-index:0;pointer-events:none;"></div>
+      <div style="position:relative;height:min(92vh,900px);width:100%;align-self:end;">
         
         
-        <img src="assets/testimonial-photo.png" alt="Happy client" style="position:absolute;left:-171px;bottom:0;top:auto;right:auto;z-index:1;height:104%;width:auto;max-width:none;object-fit:contain;object-position:center bottom;display:block;" loading="lazy" decoding="async">
+        <img src="assets/testimonial-photo.png" alt="Happy client" style="position:absolute;left:0;bottom:0;top:auto;right:auto;z-index:1;height:104%;width:100%;max-width:none;object-fit:contain;object-position:left bottom;display:block;" loading="lazy" decoding="async">
       </div>
       <!-- RIGHT: testimonial content -->
-      <div id="testiContent" style="display:flex;flex-direction:column;justify-content:center;padding:70px 0;will-change:transform;">
+      <div id="testiContent" style="display:flex;flex-direction:column;justify-content:center;padding:clamp(24px,7vh,70px) 0;will-change:transform;">
         <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px;">
           <img src="assets/topquote-mark-teal.png" alt="TopQuote" style="width:24px;height:24px;object-fit:contain;flex:none;" loading="lazy" decoding="async">
-          <span style="color:#1EBABB;font-weight:700;font-size:16px;letter-spacing:.01em;">Trustpilot Reviews</span>
+          <span style="color:#1EBABB;font-weight:700;font-size:17px;letter-spacing:.01em;">Trustpilot Reviews</span>
         </div>
-        <h2 class="arva-h" style="font-size:clamp(34px,3.4vw,50px);line-height:1.1;font-weight:600;color:#173B33;">Experience the TopQuote<br>difference through our<br>clients' words</h2>
-        <div style="height:1px;background:#CDD3E4;margin:30px 0;max-width:560px;"></div>
+        <h2 class="arva-h" style="font-size:clamp(36px,3.6vw,58px);line-height:1.1;font-weight:600;color:#173B33;">Experience the TopQuote<br>difference through our<br>clients' words</h2>
+        <div style="height:1px;background:#CDD3E4;margin:32px 0;max-width:700px;"></div>
         <div style="display:flex;gap:6px;margin-bottom:22px;">
           <i data-lucide="star" style="width:24px;height:24px;color:#00b67a;fill:#00b67a;"></i>
           <i data-lucide="star" style="width:24px;height:24px;color:#00b67a;fill:#00b67a;"></i>
@@ -613,13 +612,13 @@
           <i data-lucide="star" style="width:24px;height:24px;color:#00b67a;fill:#00b67a;"></i>
           <i data-lucide="star" style="width:24px;height:24px;color:#00b67a;fill:#00b67a;"></i>
         </div>
-        <p id="testiQuote" style="color:#5B6B78;font-size:17px;line-height:1.75;max-width:560px;min-height:130px;transition:opacity .3s ease;">Very helpful, informative and professional. A stress-free experience from start to finish.</p>
+        <p id="testiQuote" style="color:#5B6B78;font-size:19px;line-height:1.75;max-width:700px;min-height:140px;transition:opacity .3s ease;">Very helpful, informative and professional. A stress-free experience from start to finish.</p>
 
-        <div style="display:flex;align-items:center;justify-content:space-between;margin-top:28px;max-width:560px;">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-top:28px;max-width:700px;">
           <div style="display:flex;align-items:center;gap:16px;">
             <div id="testiAvatar" style="width:56px;height:56px;border-radius:50%;background:#1EBABB;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:20px;font-family:'Playfair Display',serif;flex:none;">S</div>
             <div>
-              <div id="testiName" class="arva-h" style="font-size:19px;font-weight:700;color:#173B33;">Wayne Adin-Christie</div>
+              <div id="testiName" class="arva-h" style="font-size:21px;font-weight:700;color:#173B33;">Wayne Adin-Christie</div>
               <div id="testiRole" style="color:#8A94A6;font-size:14px;margin-top:2px;">Verified customer · Trustpilot</div>
             </div>
           </div>
