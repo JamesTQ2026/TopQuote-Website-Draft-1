@@ -14,7 +14,7 @@
     wrap.style.cssText = 'position:fixed;left:16px;right:16px;bottom:16px;z-index:2147483000;max-width:760px;margin:0 auto;background:#0C1F19;color:#fff;border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,.35);padding:20px 22px;font-family:Mulish,system-ui,sans-serif;display:flex;flex-wrap:wrap;align-items:center;gap:14px 18px;';
     var txt = document.createElement('div');
     txt.style.cssText = 'flex:1 1 320px;font-size:14px;line-height:1.6;color:rgba(255,255,255,.9);';
-    txt.innerHTML = 'We use essential cookies to make this site work. With your consent we\u2019d also like to use analytics and embedded content (maps, video). See our <a href="/cookie-policy" style="color:#3fd3d4;text-decoration:underline;">Cookie Policy</a>.';
+    txt.innerHTML = 'We use essential cookies to make this site work. With your consent we\u2019d also like to use analytics and embedded content (maps, video). See our <a href="/docs/topquote-cookie-policy.pdf" target="_blank" rel="noopener" style="color:#3fd3d4;text-decoration:underline;">Cookie Policy</a>.';
     var btns = document.createElement('div');
     btns.style.cssText = 'display:flex;gap:10px;flex:0 0 auto;';
     function mk(label, bg, fg, val, border) {
