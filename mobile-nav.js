@@ -13,7 +13,7 @@
     '@media (max-width:980px){',
     '  header nav{display:none !important;}',
     '  #mnavBtn{display:flex !important;}',
-    '  header a[href="Get a Quote.dc.html"]{margin-right:60px !important;}',
+    '  header .tq-hdr-cta a[href="/get-a-quote"]{margin-right:60px !important;}',
     '}',
     /* 3-4 column grids -> 2 columns on tablet */
     '@media (max-width:900px){',
@@ -36,20 +36,20 @@
   ].join('\n');
 
   var LINKS = [
-    ['Home Page.dc.html', 'Home'],
+    ['/', 'Home'],
     ['label', 'Services'],
-    ['Life Insurance.dc.html', 'Life Insurance', 'sub'],
-    ['Critical Illness.dc.html', 'Critical Illness', 'sub'],
-    ['Income Protection.dc.html', 'Income Protection', 'sub'],
+    ['/life-insurance', 'Life Insurance', 'sub'],
+    ['/critical-illness', 'Critical Illness', 'sub'],
+    ['/income-protection', 'Income Protection', 'sub'],
     ['label', 'Company'],
-    ['About Us.dc.html', 'About Us'],
-    ['Consumer Duty.dc.html', 'Consumer Duty'],
-    ['Reconnect.dc.html', 'Reconnect'],
-    ['Contact.dc.html', 'Contact'],
-    ['Careers.dc.html', 'Careers'],
-    ['Blog.dc.html', 'Blog'],
-    ['Find Us.dc.html', 'Find Us'],
-    ['Get a Quote.dc.html', 'Get a quote', 'cta']
+    ['/about', 'About Us'],
+    ['/consumer-duty', 'Consumer Duty'],
+    ['/reconnect', 'Reconnect'],
+    ['/contact', 'Contact'],
+    ['/careers', 'Careers'],
+    ['/blog', 'Blog'],
+    ['/find-us', 'Find Us'],
+    ['/get-a-quote', 'Get a quote', 'cta']
   ];
 
   ready(function () {
