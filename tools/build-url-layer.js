@@ -87,9 +87,23 @@ const blogSlugs = fs.readdirSync(ROOT)
   .map((f) => f.replace(/^blog-/, '').replace(/\.html$/, ''))
   .sort();
 
+// posts awaiting Openwork approval (tools/pending-approval.txt): kept off the live site
+const pending = new Set(
+  (fs.existsSync(path.join(__dirname, 'pending-approval.txt')) ? fs.readFileSync(path.join(__dirname, 'pending-approval.txt'), 'utf8') : '')
+    .split(/\r?\n/).map((l) => l.replace(/#.*/, '').trim()).filter(Boolean));
+for (const s of pending) if (!blogSlugs.includes(s)) throw new Error('pending-approval.txt lists a post that does not exist: ' + s);
+const liveSlugs = blogSlugs.filter((s) => !pending.has(s));
+
 const redirects = [];
 const rewrites = [];
 const r301 = (source, destination) => redirects.push({ source, destination, statusCode: 301 });
+
+// 0. unapproved posts: temporary redirect to the blog index (302, so they can go live later)
+for (const slug of pending) {
+  for (const src of [`/blog-${slug}`, `/blog-${slug}.html`, `/blog/:cat/${slug}`, `/blog/${slug}`]) {
+    redirects.push({ source: src, destination: '/blog', statusCode: 302 });
+  }
+}
 
 // 1. old WP pages that moved
 for (const [from, to] of Object.entries(MOVED)) r301(from, to);
@@ -103,7 +117,7 @@ for (const [clean, file] of Object.entries(PAGES)) {
 r301('/(blog-[^/.]+)\\.html', '/$1');
 
 // 3. old blog posts: /blog/<category>/<slug>/ (and /blog/<slug>/) -> /blog-<slug>
-for (const slug of blogSlugs) {
+for (const slug of liveSlugs) {
   r301(`/blog/:cat/${slug}`, `/blog-${slug}`);
   r301(`/blog/${slug}`, `/blog-${slug}`);
 }
@@ -126,7 +140,7 @@ try { manifest = JSON.parse(fs.readFileSync(path.join(ROOT, 'blog-data', 'manife
 const dateBySlug = Object.fromEntries(manifest.map((p) => [p.slug, p.date]));
 const urls = [{ loc: '/', pri: '1.0' }]
   .concat(Object.keys(PAGES).map((p) => ({ loc: p, pri: '0.8' })))
-  .concat(blogSlugs.map((s) => ({ loc: '/blog-' + s, pri: '0.5', lastmod: dateBySlug[s] })));
+  .concat(liveSlugs.map((s) => ({ loc: '/blog-' + s, pri: '0.5', lastmod: dateBySlug[s] })));
 const xml = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
   urls.map((u) => `<url><loc>${ORIGIN}${u.loc}</loc>${u.lastmod ? `<lastmod>${u.lastmod}</lastmod>` : ''}<priority>${u.pri}</priority></url>`).join('\n') +
   '\n</urlset>\n';
@@ -152,4 +166,4 @@ for (const [file, clean] of canon) {
 if (fs.existsSync(path.join(ROOT, 'index.html'))) console.warn('WARNING: index.html exists, so "/" will serve the bounce page. Delete it (git rm index.html).');
 
 console.log(`canonical tags added: ${tagged}`);
-console.log(`vercel.json: ${redirects.length} redirects, ${rewrites.length} rewrites | sitemap: ${urls.length} urls`);
+console.log(`vercel.json: ${redirects.length} redirects, ${rewrites.length} rewrites | sitemap: ${urls.length} urls | pending approval (hidden): ${pending.size}`);

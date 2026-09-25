@@ -2,6 +2,1266 @@
  "trailingSlash": false,
  "redirects": [
   {
+   "source": "/blog-life-insurance-for-married-couples-a-uk-guide",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-life-insurance-for-married-couples-a-uk-guide.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/life-insurance-for-married-couples-a-uk-guide",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/life-insurance-for-married-couples-a-uk-guide",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-joint-life-insurance-vs-single-a-uk-guide",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-joint-life-insurance-vs-single-a-uk-guide.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/joint-life-insurance-vs-single-a-uk-guide",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/joint-life-insurance-vs-single-a-uk-guide",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-buying-life-insurance",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-buying-life-insurance.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/buying-life-insurance",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/buying-life-insurance",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-how-much-life-insurance-do-i-need-a-uk-guide",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-how-much-life-insurance-do-i-need-a-uk-guide.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/how-much-life-insurance-do-i-need-a-uk-guide",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/how-much-life-insurance-do-i-need-a-uk-guide",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-income-protection-for-the-self-employed",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-income-protection-for-the-self-employed.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/income-protection-for-the-self-employed",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/income-protection-for-the-self-employed",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-is-income-protection-insurance-worth-it",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-is-income-protection-insurance-worth-it.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/is-income-protection-insurance-worth-it",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/is-income-protection-insurance-worth-it",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-income-protection-insurance",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-income-protection-insurance.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/income-protection-insurance",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/income-protection-insurance",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-over-50s-life-insurance",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-over-50s-life-insurance.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/over-50s-life-insurance",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/over-50s-life-insurance",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-income-protection-vs-critical-illness",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-income-protection-vs-critical-illness.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/income-protection-vs-critical-illness",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/income-protection-vs-critical-illness",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-can-you-get-critical-illness-cover-without-life-insurance",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-can-you-get-critical-illness-cover-without-life-insurance.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/can-you-get-critical-illness-cover-without-life-insurance",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/can-you-get-critical-illness-cover-without-life-insurance",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-life-insurance-for-parents",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-life-insurance-for-parents.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/life-insurance-for-parents",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/life-insurance-for-parents",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-life-insurance-with-pre-existing-conditions",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-life-insurance-with-pre-existing-conditions.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/life-insurance-with-pre-existing-conditions",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/life-insurance-with-pre-existing-conditions",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-is-life-insurance-part-of-your-estate",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-is-life-insurance-part-of-your-estate.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/is-life-insurance-part-of-your-estate",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/is-life-insurance-part-of-your-estate",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-life-insurance-after-divorce-guide",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-life-insurance-after-divorce-guide.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/life-insurance-after-divorce-guide",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/life-insurance-after-divorce-guide",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-family-life-insurance-2",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-family-life-insurance-2.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/family-life-insurance-2",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/family-life-insurance-2",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-life-insurance-after-cancer",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-life-insurance-after-cancer.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/life-insurance-after-cancer",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/life-insurance-after-cancer",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-family-life-insurance",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-family-life-insurance.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/family-life-insurance",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/family-life-insurance",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-do-you-need-life-insurance-for-a-mortgage",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-do-you-need-life-insurance-for-a-mortgage.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/do-you-need-life-insurance-for-a-mortgage",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/do-you-need-life-insurance-for-a-mortgage",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-using-life-insurance-for-inheritance-tax-planning-uk",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-using-life-insurance-for-inheritance-tax-planning-uk.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/using-life-insurance-for-inheritance-tax-planning-uk",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/using-life-insurance-for-inheritance-tax-planning-uk",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-cohabiting-couples-and-life-insurance-uk-what-you-need-to-know",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-cohabiting-couples-and-life-insurance-uk-what-you-need-to-know.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/cohabiting-couples-and-life-insurance-uk-what-you-need-to-know",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/cohabiting-couples-and-life-insurance-uk-what-you-need-to-know",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-life-insurance-for-stay-at-home-parents-uk-do-you-need-cover",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-life-insurance-for-stay-at-home-parents-uk-do-you-need-cover.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/life-insurance-for-stay-at-home-parents-uk-do-you-need-cover",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/life-insurance-for-stay-at-home-parents-uk-do-you-need-cover",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-life-insurance-after-a-heart-attack-uk-can-you-get-cover",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-life-insurance-after-a-heart-attack-uk-can-you-get-cover.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/life-insurance-after-a-heart-attack-uk-can-you-get-cover",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/life-insurance-after-a-heart-attack-uk-can-you-get-cover",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-waiver-of-premium-what-it-is-and-whether-you-need-it",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-waiver-of-premium-what-it-is-and-whether-you-need-it.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/waiver-of-premium-what-it-is-and-whether-you-need-it",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/waiver-of-premium-what-it-is-and-whether-you-need-it",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-life-insurance-for-first-time-buyers-uk-what-you-need-to-know",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-life-insurance-for-first-time-buyers-uk-what-you-need-to-know.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/life-insurance-for-first-time-buyers-uk-what-you-need-to-know",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/life-insurance-for-first-time-buyers-uk-what-you-need-to-know",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-can-you-have-two-life-insurance-policies-in-the-uk",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-can-you-have-two-life-insurance-policies-in-the-uk.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/can-you-have-two-life-insurance-policies-in-the-uk",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/can-you-have-two-life-insurance-policies-in-the-uk",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-decreasing-term-vs-level-term-life-insurance-what-is-the-difference",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-decreasing-term-vs-level-term-life-insurance-what-is-the-difference.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/decreasing-term-vs-level-term-life-insurance-what-is-the-difference",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/decreasing-term-vs-level-term-life-insurance-what-is-the-difference",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-joint-life-insurance-vs-two-single-policies-which-is-better",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-joint-life-insurance-vs-two-single-policies-which-is-better.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/joint-life-insurance-vs-two-single-policies-which-is-better",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/joint-life-insurance-vs-two-single-policies-which-is-better",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-shareholder-protection-insurance-uk-keeping-control-of-your-business",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-shareholder-protection-insurance-uk-keeping-control-of-your-business.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/shareholder-protection-insurance-uk-keeping-control-of-your-business",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/shareholder-protection-insurance-uk-keeping-control-of-your-business",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-life-insurance-and-mental-health-uk-can-you-still-get-cover",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-life-insurance-and-mental-health-uk-can-you-still-get-cover.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/life-insurance-and-mental-health-uk-can-you-still-get-cover",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/life-insurance-and-mental-health-uk-can-you-still-get-cover",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-life-insurance-for-cancer-survivors-uk-can-you-get-cover-after-treatment",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-life-insurance-for-cancer-survivors-uk-can-you-get-cover-after-treatment.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/life-insurance-for-cancer-survivors-uk-can-you-get-cover-after-treatment",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/life-insurance-for-cancer-survivors-uk-can-you-get-cover-after-treatment",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-how-are-life-insurance-premiums-calculated-in-the-uk",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-how-are-life-insurance-premiums-calculated-in-the-uk.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/how-are-life-insurance-premiums-calculated-in-the-uk",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/how-are-life-insurance-premiums-calculated-in-the-uk",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-life-insurance-for-high-risk-occupations-what-uk-workers-need-to-know",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-life-insurance-for-high-risk-occupations-what-uk-workers-need-to-know.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/life-insurance-for-high-risk-occupations-what-uk-workers-need-to-know",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/life-insurance-for-high-risk-occupations-what-uk-workers-need-to-know",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-life-insurance-and-diabetes-uk-can-you-get-cover",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-life-insurance-and-diabetes-uk-can-you-get-cover.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/life-insurance-and-diabetes-uk-can-you-get-cover",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/life-insurance-and-diabetes-uk-can-you-get-cover",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-key-person-insurance-uk-what-it-is-and-why-businesses-need-it",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-key-person-insurance-uk-what-it-is-and-why-businesses-need-it.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/key-person-insurance-uk-what-it-is-and-why-businesses-need-it",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/key-person-insurance-uk-what-it-is-and-why-businesses-need-it",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-life-insurance-for-over-50s-what-are-your-options-in-the-uk",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-life-insurance-for-over-50s-what-are-your-options-in-the-uk.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/life-insurance-for-over-50s-what-are-your-options-in-the-uk",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/life-insurance-for-over-50s-what-are-your-options-in-the-uk",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-family-income-benefit-uk-what-it-is-and-how-it-works",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-family-income-benefit-uk-what-it-is-and-how-it-works.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/family-income-benefit-uk-what-it-is-and-how-it-works",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/family-income-benefit-uk-what-it-is-and-how-it-works",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-death-in-service-vs-life-insurance-do-you-need-both",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-death-in-service-vs-life-insurance-do-you-need-both.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/death-in-service-vs-life-insurance-do-you-need-both",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/death-in-service-vs-life-insurance-do-you-need-both",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-relevant-life-insurance-a-tax-efficient-option-for-company-directors",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-relevant-life-insurance-a-tax-efficient-option-for-company-directors.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/relevant-life-insurance-a-tax-efficient-option-for-company-directors",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/relevant-life-insurance-a-tax-efficient-option-for-company-directors",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-how-long-does-a-life-insurance-claim-take-to-pay-out-in-the-uk",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-how-long-does-a-life-insurance-claim-take-to-pay-out-in-the-uk.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/how-long-does-a-life-insurance-claim-take-to-pay-out-in-the-uk",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/how-long-does-a-life-insurance-claim-take-to-pay-out-in-the-uk",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-writing-life-insurance-in-trust-uk-tax-rules-explained",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-writing-life-insurance-in-trust-uk-tax-rules-explained.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/writing-life-insurance-in-trust-uk-tax-rules-explained",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/writing-life-insurance-in-trust-uk-tax-rules-explained",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-relevant-life-insurance-uk",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-relevant-life-insurance-uk.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/relevant-life-insurance-uk",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/relevant-life-insurance-uk",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-life-insurance-over-50s-uk",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-life-insurance-over-50s-uk.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/life-insurance-over-50s-uk",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/life-insurance-over-50s-uk",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-how-much-life-insurance-do-i-need-uk",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-how-much-life-insurance-do-i-need-uk.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/how-much-life-insurance-do-i-need-uk",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/how-much-life-insurance-do-i-need-uk",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-critical-illness-cover-mental-health-uk",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-critical-illness-cover-mental-health-uk.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/critical-illness-cover-mental-health-uk",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/critical-illness-cover-mental-health-uk",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-income-protection-vs-life-insurance-whats-the-difference",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-income-protection-vs-life-insurance-whats-the-difference.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/income-protection-vs-life-insurance-whats-the-difference",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/income-protection-vs-life-insurance-whats-the-difference",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-level-term-life-insurance-uk-what-it-is-and-how-it-works",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-level-term-life-insurance-uk-what-it-is-and-how-it-works.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/level-term-life-insurance-uk-what-it-is-and-how-it-works",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/level-term-life-insurance-uk-what-it-is-and-how-it-works",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-critical-illness-cover-worth-it",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-critical-illness-cover-worth-it.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/critical-illness-cover-worth-it",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/critical-illness-cover-worth-it",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-income-protection-insurance-for-self-employed-uk-how-it-works",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-income-protection-insurance-for-self-employed-uk-how-it-works.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/income-protection-insurance-for-self-employed-uk-how-it-works",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/income-protection-insurance-for-self-employed-uk-how-it-works",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-life-insurance-after-divorce-in-the-uk-what-happens-to-existing-policies",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-life-insurance-after-divorce-in-the-uk-what-happens-to-existing-policies.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/life-insurance-after-divorce-in-the-uk-what-happens-to-existing-policies",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/life-insurance-after-divorce-in-the-uk-what-happens-to-existing-policies",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-what-is-family-income-benefit-life-insurance-in-the-uk",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-what-is-family-income-benefit-life-insurance-in-the-uk.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/what-is-family-income-benefit-life-insurance-in-the-uk",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/what-is-family-income-benefit-life-insurance-in-the-uk",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-writing-life-insurance-in-trust-uk-how-the-process-works",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-writing-life-insurance-in-trust-uk-how-the-process-works.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/writing-life-insurance-in-trust-uk-how-the-process-works",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/writing-life-insurance-in-trust-uk-how-the-process-works",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-life-insurance-for-over-50s-uk-what-types-of-cover-are-available",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-life-insurance-for-over-50s-uk-what-types-of-cover-are-available.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/life-insurance-for-over-50s-uk-what-types-of-cover-are-available",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/life-insurance-for-over-50s-uk-what-types-of-cover-are-available",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-life-insurance-with-pre-existing-conditions-uk-how-underwriting-works",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-life-insurance-with-pre-existing-conditions-uk-how-underwriting-works.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/life-insurance-with-pre-existing-conditions-uk-how-underwriting-works",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/life-insurance-with-pre-existing-conditions-uk-how-underwriting-works",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-life-insurance-for-the-self-employed-uk-what-you-need-to-know",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-life-insurance-for-the-self-employed-uk-what-you-need-to-know.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/life-insurance-for-the-self-employed-uk-what-you-need-to-know",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/life-insurance-for-the-self-employed-uk-what-you-need-to-know",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-life-insurance-claims-uk-what-happens-how-they-work-topquote",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-life-insurance-claims-uk-what-happens-how-they-work-topquote.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/life-insurance-claims-uk-what-happens-how-they-work-topquote",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/life-insurance-claims-uk-what-happens-how-they-work-topquote",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-do-i-need-life-insurance-uk-honest-guide-topquote",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-do-i-need-life-insurance-uk-honest-guide-topquote.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/do-i-need-life-insurance-uk-honest-guide-topquote",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/do-i-need-life-insurance-uk-honest-guide-topquote",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-is-income-protection-insurance-worth-it-uk-topquote",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-is-income-protection-insurance-worth-it-uk-topquote.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/is-income-protection-insurance-worth-it-uk-topquote",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/is-income-protection-insurance-worth-it-uk-topquote",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-life-insurance-for-parents-how-to-protect-your-family",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-life-insurance-for-parents-how-to-protect-your-family.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/life-insurance-for-parents-how-to-protect-your-family",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/life-insurance-for-parents-how-to-protect-your-family",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-what-is-critical-illness-cover-a-plain-english-uk-guide",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-what-is-critical-illness-cover-a-plain-english-uk-guide.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/what-is-critical-illness-cover-a-plain-english-uk-guide",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/what-is-critical-illness-cover-a-plain-english-uk-guide",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-income-protection-for-the-self-employed-uk-a-complete-guide",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-income-protection-for-the-self-employed-uk-a-complete-guide.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/income-protection-for-the-self-employed-uk-a-complete-guide",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/income-protection-for-the-self-employed-uk-a-complete-guide",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-term-vs-decreasing-term-life-insurance-which-is-right-for-you",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-term-vs-decreasing-term-life-insurance-which-is-right-for-you.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/term-vs-decreasing-term-life-insurance-which-is-right-for-you",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/term-vs-decreasing-term-life-insurance-which-is-right-for-you",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-life-insurance-with-pre-existing-medical-conditions-uk",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-life-insurance-with-pre-existing-medical-conditions-uk.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/life-insurance-with-pre-existing-medical-conditions-uk",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/life-insurance-with-pre-existing-medical-conditions-uk",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-average-life-insurance-cost-uk-2026-what-youll-actually-pay",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-average-life-insurance-cost-uk-2026-what-youll-actually-pay.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/average-life-insurance-cost-uk-2026-what-youll-actually-pay",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/average-life-insurance-cost-uk-2026-what-youll-actually-pay",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
    "source": "/home",
    "destination": "/",
    "statusCode": 301
@@ -612,16 +1872,6 @@
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/average-life-insurance-cost-uk-2026-what-youll-actually-pay",
-   "destination": "/blog-average-life-insurance-cost-uk-2026-what-youll-actually-pay",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/average-life-insurance-cost-uk-2026-what-youll-actually-pay",
-   "destination": "/blog-average-life-insurance-cost-uk-2026-what-youll-actually-pay",
-   "statusCode": 301
-  },
-  {
    "source": "/blog/:cat/bargaining-stage-of-grief",
    "destination": "/blog-bargaining-stage-of-grief",
    "statusCode": 301
@@ -662,16 +1912,6 @@
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/buying-life-insurance",
-   "destination": "/blog-buying-life-insurance",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/buying-life-insurance",
-   "destination": "/blog-buying-life-insurance",
-   "statusCode": 301
-  },
-  {
    "source": "/blog/:cat/cake-bake-dress-down-and-auction",
    "destination": "/blog-cake-bake-dress-down-and-auction",
    "statusCode": 301
@@ -682,16 +1922,6 @@
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/can-you-get-critical-illness-cover-without-life-insurance",
-   "destination": "/blog-can-you-get-critical-illness-cover-without-life-insurance",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/can-you-get-critical-illness-cover-without-life-insurance",
-   "destination": "/blog-can-you-get-critical-illness-cover-without-life-insurance",
-   "statusCode": 301
-  },
-  {
    "source": "/blog/:cat/can-you-have-more-than-one-life-insurance-policy",
    "destination": "/blog-can-you-have-more-than-one-life-insurance-policy",
    "statusCode": 301
@@ -699,16 +1929,6 @@
   {
    "source": "/blog/can-you-have-more-than-one-life-insurance-policy",
    "destination": "/blog-can-you-have-more-than-one-life-insurance-policy",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/:cat/can-you-have-two-life-insurance-policies-in-the-uk",
-   "destination": "/blog-can-you-have-two-life-insurance-policies-in-the-uk",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/can-you-have-two-life-insurance-policies-in-the-uk",
-   "destination": "/blog-can-you-have-two-life-insurance-policies-in-the-uk",
    "statusCode": 301
   },
   {
@@ -762,16 +1982,6 @@
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/cohabiting-couples-and-life-insurance-uk-what-you-need-to-know",
-   "destination": "/blog-cohabiting-couples-and-life-insurance-uk-what-you-need-to-know",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/cohabiting-couples-and-life-insurance-uk-what-you-need-to-know",
-   "destination": "/blog-cohabiting-couples-and-life-insurance-uk-what-you-need-to-know",
-   "statusCode": 301
-  },
-  {
    "source": "/blog/:cat/cold-weather-wellness-guide",
    "destination": "/blog-cold-weather-wellness-guide",
    "statusCode": 301
@@ -802,26 +2012,6 @@
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/critical-illness-cover-mental-health-uk",
-   "destination": "/blog-critical-illness-cover-mental-health-uk",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/critical-illness-cover-mental-health-uk",
-   "destination": "/blog-critical-illness-cover-mental-health-uk",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/:cat/critical-illness-cover-worth-it",
-   "destination": "/blog-critical-illness-cover-worth-it",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/critical-illness-cover-worth-it",
-   "destination": "/blog-critical-illness-cover-worth-it",
-   "statusCode": 301
-  },
-  {
    "source": "/blog/:cat/de-icing-your-car-and-other-essential-winter-tips",
    "destination": "/blog-de-icing-your-car-and-other-essential-winter-tips",
    "statusCode": 301
@@ -829,26 +2019,6 @@
   {
    "source": "/blog/de-icing-your-car-and-other-essential-winter-tips",
    "destination": "/blog-de-icing-your-car-and-other-essential-winter-tips",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/:cat/death-in-service-vs-life-insurance-do-you-need-both",
-   "destination": "/blog-death-in-service-vs-life-insurance-do-you-need-both",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/death-in-service-vs-life-insurance-do-you-need-both",
-   "destination": "/blog-death-in-service-vs-life-insurance-do-you-need-both",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/:cat/decreasing-term-vs-level-term-life-insurance-what-is-the-difference",
-   "destination": "/blog-decreasing-term-vs-level-term-life-insurance-what-is-the-difference",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/decreasing-term-vs-level-term-life-insurance-what-is-the-difference",
-   "destination": "/blog-decreasing-term-vs-level-term-life-insurance-what-is-the-difference",
    "statusCode": 301
   },
   {
@@ -902,16 +2072,6 @@
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/do-i-need-life-insurance-uk-honest-guide-topquote",
-   "destination": "/blog-do-i-need-life-insurance-uk-honest-guide-topquote",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/do-i-need-life-insurance-uk-honest-guide-topquote",
-   "destination": "/blog-do-i-need-life-insurance-uk-honest-guide-topquote",
-   "statusCode": 301
-  },
-  {
    "source": "/blog/:cat/do-you-need-income-protection",
    "destination": "/blog-do-you-need-income-protection",
    "statusCode": 301
@@ -919,16 +2079,6 @@
   {
    "source": "/blog/do-you-need-income-protection",
    "destination": "/blog-do-you-need-income-protection",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/:cat/do-you-need-life-insurance-for-a-mortgage",
-   "destination": "/blog-do-you-need-life-insurance-for-a-mortgage",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/do-you-need-life-insurance-for-a-mortgage",
-   "destination": "/blog-do-you-need-life-insurance-for-a-mortgage",
    "statusCode": 301
   },
   {
@@ -1009,36 +2159,6 @@
   {
    "source": "/blog/family-always-comes-first",
    "destination": "/blog-family-always-comes-first",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/:cat/family-income-benefit-uk-what-it-is-and-how-it-works",
-   "destination": "/blog-family-income-benefit-uk-what-it-is-and-how-it-works",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/family-income-benefit-uk-what-it-is-and-how-it-works",
-   "destination": "/blog-family-income-benefit-uk-what-it-is-and-how-it-works",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/:cat/family-life-insurance",
-   "destination": "/blog-family-life-insurance",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/family-life-insurance",
-   "destination": "/blog-family-life-insurance",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/:cat/family-life-insurance-2",
-   "destination": "/blog-family-life-insurance-2",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/family-life-insurance-2",
-   "destination": "/blog-family-life-insurance-2",
    "statusCode": 301
   },
   {
@@ -1162,16 +2282,6 @@
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/how-are-life-insurance-premiums-calculated-in-the-uk",
-   "destination": "/blog-how-are-life-insurance-premiums-calculated-in-the-uk",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/how-are-life-insurance-premiums-calculated-in-the-uk",
-   "destination": "/blog-how-are-life-insurance-premiums-calculated-in-the-uk",
-   "statusCode": 301
-  },
-  {
    "source": "/blog/:cat/how-are-portable-x-rays-enhancing-healthcare-in-remote-areas",
    "destination": "/blog-how-are-portable-x-rays-enhancing-healthcare-in-remote-areas",
    "statusCode": 301
@@ -1202,16 +2312,6 @@
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/how-long-does-a-life-insurance-claim-take-to-pay-out-in-the-uk",
-   "destination": "/blog-how-long-does-a-life-insurance-claim-take-to-pay-out-in-the-uk",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/how-long-does-a-life-insurance-claim-take-to-pay-out-in-the-uk",
-   "destination": "/blog-how-long-does-a-life-insurance-claim-take-to-pay-out-in-the-uk",
-   "statusCode": 301
-  },
-  {
    "source": "/blog/:cat/how-many-parents-are-without-life-insurance",
    "destination": "/blog-how-many-parents-are-without-life-insurance",
    "statusCode": 301
@@ -1219,26 +2319,6 @@
   {
    "source": "/blog/how-many-parents-are-without-life-insurance",
    "destination": "/blog-how-many-parents-are-without-life-insurance",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/:cat/how-much-life-insurance-do-i-need-a-uk-guide",
-   "destination": "/blog-how-much-life-insurance-do-i-need-a-uk-guide",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/how-much-life-insurance-do-i-need-a-uk-guide",
-   "destination": "/blog-how-much-life-insurance-do-i-need-a-uk-guide",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/:cat/how-much-life-insurance-do-i-need-uk",
-   "destination": "/blog-how-much-life-insurance-do-i-need-uk",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/how-much-life-insurance-do-i-need-uk",
-   "destination": "/blog-how-much-life-insurance-do-i-need-uk",
    "statusCode": 301
   },
   {
@@ -1362,66 +2442,6 @@
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/income-protection-for-the-self-employed",
-   "destination": "/blog-income-protection-for-the-self-employed",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/income-protection-for-the-self-employed",
-   "destination": "/blog-income-protection-for-the-self-employed",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/:cat/income-protection-for-the-self-employed-uk-a-complete-guide",
-   "destination": "/blog-income-protection-for-the-self-employed-uk-a-complete-guide",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/income-protection-for-the-self-employed-uk-a-complete-guide",
-   "destination": "/blog-income-protection-for-the-self-employed-uk-a-complete-guide",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/:cat/income-protection-insurance",
-   "destination": "/blog-income-protection-insurance",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/income-protection-insurance",
-   "destination": "/blog-income-protection-insurance",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/:cat/income-protection-insurance-for-self-employed-uk-how-it-works",
-   "destination": "/blog-income-protection-insurance-for-self-employed-uk-how-it-works",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/income-protection-insurance-for-self-employed-uk-how-it-works",
-   "destination": "/blog-income-protection-insurance-for-self-employed-uk-how-it-works",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/:cat/income-protection-vs-critical-illness",
-   "destination": "/blog-income-protection-vs-critical-illness",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/income-protection-vs-critical-illness",
-   "destination": "/blog-income-protection-vs-critical-illness",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/:cat/income-protection-vs-life-insurance-whats-the-difference",
-   "destination": "/blog-income-protection-vs-life-insurance-whats-the-difference",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/income-protection-vs-life-insurance-whats-the-difference",
-   "destination": "/blog-income-protection-vs-life-insurance-whats-the-difference",
-   "statusCode": 301
-  },
-  {
    "source": "/blog/:cat/investing-in-your-health-the-importance-of-regular-check-ups",
    "destination": "/blog-investing-in-your-health-the-importance-of-regular-check-ups",
    "statusCode": 301
@@ -1439,36 +2459,6 @@
   {
    "source": "/blog/is-cheap-life-insurance-worth-it",
    "destination": "/blog-is-cheap-life-insurance-worth-it",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/:cat/is-income-protection-insurance-worth-it",
-   "destination": "/blog-is-income-protection-insurance-worth-it",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/is-income-protection-insurance-worth-it",
-   "destination": "/blog-is-income-protection-insurance-worth-it",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/:cat/is-income-protection-insurance-worth-it-uk-topquote",
-   "destination": "/blog-is-income-protection-insurance-worth-it-uk-topquote",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/is-income-protection-insurance-worth-it-uk-topquote",
-   "destination": "/blog-is-income-protection-insurance-worth-it-uk-topquote",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/:cat/is-life-insurance-part-of-your-estate",
-   "destination": "/blog-is-life-insurance-part-of-your-estate",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/is-life-insurance-part-of-your-estate",
-   "destination": "/blog-is-life-insurance-part-of-your-estate",
    "statusCode": 301
   },
   {
@@ -1492,36 +2482,6 @@
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/joint-life-insurance-vs-single-a-uk-guide",
-   "destination": "/blog-joint-life-insurance-vs-single-a-uk-guide",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/joint-life-insurance-vs-single-a-uk-guide",
-   "destination": "/blog-joint-life-insurance-vs-single-a-uk-guide",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/:cat/joint-life-insurance-vs-two-single-policies-which-is-better",
-   "destination": "/blog-joint-life-insurance-vs-two-single-policies-which-is-better",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/joint-life-insurance-vs-two-single-policies-which-is-better",
-   "destination": "/blog-joint-life-insurance-vs-two-single-policies-which-is-better",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/:cat/key-person-insurance-uk-what-it-is-and-why-businesses-need-it",
-   "destination": "/blog-key-person-insurance-uk-what-it-is-and-why-businesses-need-it",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/key-person-insurance-uk-what-it-is-and-why-businesses-need-it",
-   "destination": "/blog-key-person-insurance-uk-what-it-is-and-why-businesses-need-it",
-   "statusCode": 301
-  },
-  {
    "source": "/blog/:cat/key-steps-to-take-to-have-a-more-positive-mental-attitude",
    "destination": "/blog-key-steps-to-take-to-have-a-more-positive-mental-attitude",
    "statusCode": 301
@@ -1542,36 +2502,6 @@
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/level-term-life-insurance-uk-what-it-is-and-how-it-works",
-   "destination": "/blog-level-term-life-insurance-uk-what-it-is-and-how-it-works",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/level-term-life-insurance-uk-what-it-is-and-how-it-works",
-   "destination": "/blog-level-term-life-insurance-uk-what-it-is-and-how-it-works",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/:cat/life-insurance-after-a-heart-attack-uk-can-you-get-cover",
-   "destination": "/blog-life-insurance-after-a-heart-attack-uk-can-you-get-cover",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/life-insurance-after-a-heart-attack-uk-can-you-get-cover",
-   "destination": "/blog-life-insurance-after-a-heart-attack-uk-can-you-get-cover",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/:cat/life-insurance-after-cancer",
-   "destination": "/blog-life-insurance-after-cancer",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/life-insurance-after-cancer",
-   "destination": "/blog-life-insurance-after-cancer",
-   "statusCode": 301
-  },
-  {
    "source": "/blog/:cat/life-insurance-after-divorce",
    "destination": "/blog-life-insurance-after-divorce",
    "statusCode": 301
@@ -1579,46 +2509,6 @@
   {
    "source": "/blog/life-insurance-after-divorce",
    "destination": "/blog-life-insurance-after-divorce",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/:cat/life-insurance-after-divorce-guide",
-   "destination": "/blog-life-insurance-after-divorce-guide",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/life-insurance-after-divorce-guide",
-   "destination": "/blog-life-insurance-after-divorce-guide",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/:cat/life-insurance-after-divorce-in-the-uk-what-happens-to-existing-policies",
-   "destination": "/blog-life-insurance-after-divorce-in-the-uk-what-happens-to-existing-policies",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/life-insurance-after-divorce-in-the-uk-what-happens-to-existing-policies",
-   "destination": "/blog-life-insurance-after-divorce-in-the-uk-what-happens-to-existing-policies",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/:cat/life-insurance-and-diabetes-uk-can-you-get-cover",
-   "destination": "/blog-life-insurance-and-diabetes-uk-can-you-get-cover",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/life-insurance-and-diabetes-uk-can-you-get-cover",
-   "destination": "/blog-life-insurance-and-diabetes-uk-can-you-get-cover",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/:cat/life-insurance-and-mental-health-uk-can-you-still-get-cover",
-   "destination": "/blog-life-insurance-and-mental-health-uk-can-you-still-get-cover",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/life-insurance-and-mental-health-uk-can-you-still-get-cover",
-   "destination": "/blog-life-insurance-and-mental-health-uk-can-you-still-get-cover",
    "statusCode": 301
   },
   {
@@ -1642,96 +2532,6 @@
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/life-insurance-claims-uk-what-happens-how-they-work-topquote",
-   "destination": "/blog-life-insurance-claims-uk-what-happens-how-they-work-topquote",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/life-insurance-claims-uk-what-happens-how-they-work-topquote",
-   "destination": "/blog-life-insurance-claims-uk-what-happens-how-they-work-topquote",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/:cat/life-insurance-for-cancer-survivors-uk-can-you-get-cover-after-treatment",
-   "destination": "/blog-life-insurance-for-cancer-survivors-uk-can-you-get-cover-after-treatment",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/life-insurance-for-cancer-survivors-uk-can-you-get-cover-after-treatment",
-   "destination": "/blog-life-insurance-for-cancer-survivors-uk-can-you-get-cover-after-treatment",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/:cat/life-insurance-for-first-time-buyers-uk-what-you-need-to-know",
-   "destination": "/blog-life-insurance-for-first-time-buyers-uk-what-you-need-to-know",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/life-insurance-for-first-time-buyers-uk-what-you-need-to-know",
-   "destination": "/blog-life-insurance-for-first-time-buyers-uk-what-you-need-to-know",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/:cat/life-insurance-for-high-risk-occupations-what-uk-workers-need-to-know",
-   "destination": "/blog-life-insurance-for-high-risk-occupations-what-uk-workers-need-to-know",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/life-insurance-for-high-risk-occupations-what-uk-workers-need-to-know",
-   "destination": "/blog-life-insurance-for-high-risk-occupations-what-uk-workers-need-to-know",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/:cat/life-insurance-for-married-couples-a-uk-guide",
-   "destination": "/blog-life-insurance-for-married-couples-a-uk-guide",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/life-insurance-for-married-couples-a-uk-guide",
-   "destination": "/blog-life-insurance-for-married-couples-a-uk-guide",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/:cat/life-insurance-for-over-50s-uk-what-types-of-cover-are-available",
-   "destination": "/blog-life-insurance-for-over-50s-uk-what-types-of-cover-are-available",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/life-insurance-for-over-50s-uk-what-types-of-cover-are-available",
-   "destination": "/blog-life-insurance-for-over-50s-uk-what-types-of-cover-are-available",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/:cat/life-insurance-for-over-50s-what-are-your-options-in-the-uk",
-   "destination": "/blog-life-insurance-for-over-50s-what-are-your-options-in-the-uk",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/life-insurance-for-over-50s-what-are-your-options-in-the-uk",
-   "destination": "/blog-life-insurance-for-over-50s-what-are-your-options-in-the-uk",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/:cat/life-insurance-for-parents",
-   "destination": "/blog-life-insurance-for-parents",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/life-insurance-for-parents",
-   "destination": "/blog-life-insurance-for-parents",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/:cat/life-insurance-for-parents-how-to-protect-your-family",
-   "destination": "/blog-life-insurance-for-parents-how-to-protect-your-family",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/life-insurance-for-parents-how-to-protect-your-family",
-   "destination": "/blog-life-insurance-for-parents-how-to-protect-your-family",
-   "statusCode": 301
-  },
-  {
    "source": "/blog/:cat/life-insurance-for-smokers",
    "destination": "/blog-life-insurance-for-smokers",
    "statusCode": 301
@@ -1739,26 +2539,6 @@
   {
    "source": "/blog/life-insurance-for-smokers",
    "destination": "/blog-life-insurance-for-smokers",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/:cat/life-insurance-for-stay-at-home-parents-uk-do-you-need-cover",
-   "destination": "/blog-life-insurance-for-stay-at-home-parents-uk-do-you-need-cover",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/life-insurance-for-stay-at-home-parents-uk-do-you-need-cover",
-   "destination": "/blog-life-insurance-for-stay-at-home-parents-uk-do-you-need-cover",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/:cat/life-insurance-for-the-self-employed-uk-what-you-need-to-know",
-   "destination": "/blog-life-insurance-for-the-self-employed-uk-what-you-need-to-know",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/life-insurance-for-the-self-employed-uk-what-you-need-to-know",
-   "destination": "/blog-life-insurance-for-the-self-employed-uk-what-you-need-to-know",
    "statusCode": 301
   },
   {
@@ -1772,16 +2552,6 @@
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/life-insurance-over-50s-uk",
-   "destination": "/blog-life-insurance-over-50s-uk",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/life-insurance-over-50s-uk",
-   "destination": "/blog-life-insurance-over-50s-uk",
-   "statusCode": 301
-  },
-  {
    "source": "/blog/:cat/life-insurance-when-pregnant",
    "destination": "/blog-life-insurance-when-pregnant",
    "statusCode": 301
@@ -1789,36 +2559,6 @@
   {
    "source": "/blog/life-insurance-when-pregnant",
    "destination": "/blog-life-insurance-when-pregnant",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/:cat/life-insurance-with-pre-existing-conditions",
-   "destination": "/blog-life-insurance-with-pre-existing-conditions",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/life-insurance-with-pre-existing-conditions",
-   "destination": "/blog-life-insurance-with-pre-existing-conditions",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/:cat/life-insurance-with-pre-existing-conditions-uk-how-underwriting-works",
-   "destination": "/blog-life-insurance-with-pre-existing-conditions-uk-how-underwriting-works",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/life-insurance-with-pre-existing-conditions-uk-how-underwriting-works",
-   "destination": "/blog-life-insurance-with-pre-existing-conditions-uk-how-underwriting-works",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/:cat/life-insurance-with-pre-existing-medical-conditions-uk",
-   "destination": "/blog-life-insurance-with-pre-existing-medical-conditions-uk",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/life-insurance-with-pre-existing-medical-conditions-uk",
-   "destination": "/blog-life-insurance-with-pre-existing-medical-conditions-uk",
    "statusCode": 301
   },
   {
@@ -1912,16 +2652,6 @@
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/over-50s-life-insurance",
-   "destination": "/blog-over-50s-life-insurance",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/over-50s-life-insurance",
-   "destination": "/blog-over-50s-life-insurance",
-   "statusCode": 301
-  },
-  {
    "source": "/blog/:cat/overcoming-procrastination-during-lockdown",
    "destination": "/blog-overcoming-procrastination-during-lockdown",
    "statusCode": 301
@@ -1979,26 +2709,6 @@
   {
    "source": "/blog/regular-housekeeping-for-your-life-insurance",
    "destination": "/blog-regular-housekeeping-for-your-life-insurance",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/:cat/relevant-life-insurance-a-tax-efficient-option-for-company-directors",
-   "destination": "/blog-relevant-life-insurance-a-tax-efficient-option-for-company-directors",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/relevant-life-insurance-a-tax-efficient-option-for-company-directors",
-   "destination": "/blog-relevant-life-insurance-a-tax-efficient-option-for-company-directors",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/:cat/relevant-life-insurance-uk",
-   "destination": "/blog-relevant-life-insurance-uk",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/relevant-life-insurance-uk",
-   "destination": "/blog-relevant-life-insurance-uk",
    "statusCode": 301
   },
   {
@@ -2069,16 +2779,6 @@
   {
    "source": "/blog/self-esteem",
    "destination": "/blog-self-esteem",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/:cat/shareholder-protection-insurance-uk-keeping-control-of-your-business",
-   "destination": "/blog-shareholder-protection-insurance-uk-keeping-control-of-your-business",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/shareholder-protection-insurance-uk-keeping-control-of-your-business",
-   "destination": "/blog-shareholder-protection-insurance-uk-keeping-control-of-your-business",
    "statusCode": 301
   },
   {
@@ -2169,16 +2869,6 @@
   {
    "source": "/blog/sum-assured",
    "destination": "/blog-sum-assured",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/:cat/term-vs-decreasing-term-life-insurance-which-is-right-for-you",
-   "destination": "/blog-term-vs-decreasing-term-life-insurance-which-is-right-for-you",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/term-vs-decreasing-term-life-insurance-which-is-right-for-you",
-   "destination": "/blog-term-vs-decreasing-term-life-insurance-which-is-right-for-you",
    "statusCode": 301
   },
   {
@@ -2422,26 +3112,6 @@
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/using-life-insurance-for-inheritance-tax-planning-uk",
-   "destination": "/blog-using-life-insurance-for-inheritance-tax-planning-uk",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/using-life-insurance-for-inheritance-tax-planning-uk",
-   "destination": "/blog-using-life-insurance-for-inheritance-tax-planning-uk",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/:cat/waiver-of-premium-what-it-is-and-whether-you-need-it",
-   "destination": "/blog-waiver-of-premium-what-it-is-and-whether-you-need-it",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/waiver-of-premium-what-it-is-and-whether-you-need-it",
-   "destination": "/blog-waiver-of-premium-what-it-is-and-whether-you-need-it",
-   "statusCode": 301
-  },
-  {
    "source": "/blog/:cat/we-love-mcr-2017",
    "destination": "/blog-we-love-mcr-2017",
    "statusCode": 301
@@ -2472,16 +3142,6 @@
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/what-is-critical-illness-cover-a-plain-english-uk-guide",
-   "destination": "/blog-what-is-critical-illness-cover-a-plain-english-uk-guide",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/what-is-critical-illness-cover-a-plain-english-uk-guide",
-   "destination": "/blog-what-is-critical-illness-cover-a-plain-english-uk-guide",
-   "statusCode": 301
-  },
-  {
    "source": "/blog/:cat/what-is-critical-illness-cover-and-why-you-might-need-it",
    "destination": "/blog-what-is-critical-illness-cover-and-why-you-might-need-it",
    "statusCode": 301
@@ -2489,16 +3149,6 @@
   {
    "source": "/blog/what-is-critical-illness-cover-and-why-you-might-need-it",
    "destination": "/blog-what-is-critical-illness-cover-and-why-you-might-need-it",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/:cat/what-is-family-income-benefit-life-insurance-in-the-uk",
-   "destination": "/blog-what-is-family-income-benefit-life-insurance-in-the-uk",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/what-is-family-income-benefit-life-insurance-in-the-uk",
-   "destination": "/blog-what-is-family-income-benefit-life-insurance-in-the-uk",
    "statusCode": 301
   },
   {
@@ -2619,26 +3269,6 @@
   {
    "source": "/blog/worried",
    "destination": "/blog-worried",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/:cat/writing-life-insurance-in-trust-uk-how-the-process-works",
-   "destination": "/blog-writing-life-insurance-in-trust-uk-how-the-process-works",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/writing-life-insurance-in-trust-uk-how-the-process-works",
-   "destination": "/blog-writing-life-insurance-in-trust-uk-how-the-process-works",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/:cat/writing-life-insurance-in-trust-uk-tax-rules-explained",
-   "destination": "/blog-writing-life-insurance-in-trust-uk-tax-rules-explained",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/writing-life-insurance-in-trust-uk-tax-rules-explained",
-   "destination": "/blog-writing-life-insurance-in-trust-uk-tax-rules-explained",
    "statusCode": 301
   },
   {

@@ -1,0 +1,68 @@
+# Blog posts awaiting Openwork approval. These are kept OFF the live site:
+# their URLs (clean, .html and old WordPress permalinks) redirect to /blog and they are left out of sitemap.xml.
+# To publish a post once Openwork approves it: delete its line, then run  node tools/build-url-layer.js  and push.
+# Format: slug   # date  title
+
+life-insurance-for-married-couples-a-uk-guide                                                   # 2026-07-02  Life Insurance for Married Couples: A UK Guide
+joint-life-insurance-vs-single-a-uk-guide                                                       # 2026-07-01  Joint Life Insurance vs Single: A UK Guide
+buying-life-insurance                                                                           # 2026-06-30  How to Buy Life Insurance in the UK: A Plain-English Guide
+how-much-life-insurance-do-i-need-a-uk-guide                                                    # 2026-06-29  How Much Life Insurance Do I Need? A UK Guide
+income-protection-for-the-self-employed                                                         # 2026-06-28  Income Protection for the Self-Employed
+is-income-protection-insurance-worth-it                                                         # 2026-06-27  Is Income Protection Insurance Worth It?
+income-protection-insurance                                                                     # 2026-06-26  What Is Income Protection Insurance?
+over-50s-life-insurance                                                                         # 2026-06-25  Over 50s Life Insurance Explained
+income-protection-vs-critical-illness                                                           # 2026-06-24  Income Protection vs Critical Illness Cover
+can-you-get-critical-illness-cover-without-life-insurance                                       # 2026-06-20  Can You Get Critical Illness Cover Without Life Insurance?
+life-insurance-for-parents                                                                      # 2026-06-20  Life Insurance for Parents
+life-insurance-with-pre-existing-conditions                                                     # 2026-06-19  Life Insurance With Pre-existing Conditions
+is-life-insurance-part-of-your-estate                                                           # 2026-06-10  Is Life Insurance Part of Your Estate?
+life-insurance-after-divorce-guide                                                              # 2026-06-08  Life Insurance After Divorce: A Plain-English UK Guide
+family-life-insurance-2                                                                         # 2026-06-04  Family Life Insurance Explained: A Plain-English UK Guide
+life-insurance-after-cancer                                                                     # 2026-06-03  Life Insurance After Cancer: What You Need to Know
+family-life-insurance                                                                           # 2026-06-03  Family Life Insurance: What It Is, Who Needs It, and What to Think About
+do-you-need-life-insurance-for-a-mortgage                                                       # 2026-06-03  Do You Need Life Insurance for a Mortgage? A Plain-English UK Guide
+using-life-insurance-for-inheritance-tax-planning-uk                                            # 2026-05-27  Using Life Insurance for Inheritance Tax Planning UK
+cohabiting-couples-and-life-insurance-uk-what-you-need-to-know                                  # 2026-05-26  Cohabiting Couples and Life Insurance UK: What You Need to Know
+life-insurance-for-stay-at-home-parents-uk-do-you-need-cover                                    # 2026-05-23  Life Insurance for Stay-at-Home Parents UK: Do You Need Cover?
+life-insurance-after-a-heart-attack-uk-can-you-get-cover                                        # 2026-05-22  Life Insurance After a Heart Attack UK: Can You Get Cover?
+waiver-of-premium-what-it-is-and-whether-you-need-it                                            # 2026-05-21  Waiver of Premium: What It Is and Whether You Need It
+life-insurance-for-first-time-buyers-uk-what-you-need-to-know                                   # 2026-05-20  Life Insurance for First-Time Buyers UK: What You Need to Know
+can-you-have-two-life-insurance-policies-in-the-uk                                              # 2026-05-19  Can You Have Two Life Insurance Policies in the UK?
+decreasing-term-vs-level-term-life-insurance-what-is-the-difference                             # 2026-05-16  Decreasing Term vs Level Term Life Insurance: What Is the Difference?
+joint-life-insurance-vs-two-single-policies-which-is-better                                     # 2026-05-15  Joint Life Insurance vs Two Single Policies: Which Is Better?
+shareholder-protection-insurance-uk-keeping-control-of-your-business                            # 2026-05-14  Shareholder Protection Insurance UK: Keeping Control of Your Business
+life-insurance-and-mental-health-uk-can-you-still-get-cover                                     # 2026-05-14  Life Insurance and Mental Health UK: Can You Still Get Cover?
+life-insurance-for-cancer-survivors-uk-can-you-get-cover-after-treatment                        # 2026-05-13  Life Insurance for Cancer Survivors UK: Can You Get Cover After Treatment?
+how-are-life-insurance-premiums-calculated-in-the-uk                                            # 2026-05-12  How Are Life Insurance Premiums Calculated in the UK?
+life-insurance-for-high-risk-occupations-what-uk-workers-need-to-know                           # 2026-05-11  Life Insurance for High-Risk Occupations: What UK Workers Need to Know
+life-insurance-and-diabetes-uk-can-you-get-cover                                                # 2026-05-08  Life Insurance and Diabetes UK: Can You Get Cover?
+key-person-insurance-uk-what-it-is-and-why-businesses-need-it                                   # 2026-05-07  Key Person Insurance UK: What It Is and Why Businesses Need It
+life-insurance-for-over-50s-what-are-your-options-in-the-uk                                     # 2026-05-06  Life Insurance for Over 50s: What Are Your Options in the UK?
+family-income-benefit-uk-what-it-is-and-how-it-works                                            # 2026-04-27  Family Income Benefit UK: What It Is and How It Works
+death-in-service-vs-life-insurance-do-you-need-both                                             # 2026-04-27  Death in Service vs Life Insurance: Do You Need Both?
+relevant-life-insurance-a-tax-efficient-option-for-company-directors                            # 2026-04-27  Relevant Life Insurance: A Tax-Efficient Option for Company Directors
+how-long-does-a-life-insurance-claim-take-to-pay-out-in-the-uk                                  # 2026-04-24  How Long Does a Life Insurance Claim Take to Pay Out in the UK?
+writing-life-insurance-in-trust-uk-tax-rules-explained                                          # 2026-04-13  Writing Life Insurance in Trust: UK Tax Rules Explained
+relevant-life-insurance-uk                                                                      # 2026-04-10  Relevant Life Insurance for Company Directors Explained
+life-insurance-over-50s-uk                                                                      # 2026-04-09  Life Insurance for Over 50s: What Are Your Options in the UK?
+how-much-life-insurance-do-i-need-uk                                                            # 2026-04-09  How Much Life Insurance Do I Need in the UK?
+critical-illness-cover-mental-health-uk                                                         # 2026-04-07  Does Critical Illness Cover Pay Out for Mental Health Conditions?
+income-protection-vs-life-insurance-whats-the-difference                                        # 2026-04-07  Income Protection vs Life Insurance: What’s the Difference?
+level-term-life-insurance-uk-what-it-is-and-how-it-works                                        # 2026-03-27  Level Term Life Insurance UK: What It Is and How It Works
+critical-illness-cover-worth-it                                                                 # 2026-03-27  Critical Illness Cover Worth It? Understanding How the Policy Works
+income-protection-insurance-for-self-employed-uk-how-it-works                                   # 2026-03-27  Income Protection Insurance for Self Employed UK: How It Works
+life-insurance-after-divorce-in-the-uk-what-happens-to-existing-policies                        # 2026-03-27  Life Insurance After Divorce in the UK: What Happens to Existing Policies
+what-is-family-income-benefit-life-insurance-in-the-uk                                          # 2026-03-27  What Is Family Income Benefit Life Insurance in the UK?
+writing-life-insurance-in-trust-uk-how-the-process-works                                        # 2026-03-27  Writing Life Insurance in Trust UK: How the Process Works
+life-insurance-for-over-50s-uk-what-types-of-cover-are-available                                # 2026-03-27  Life Insurance for Over 50s UK: What Types of Cover Are Available
+life-insurance-with-pre-existing-conditions-uk-how-underwriting-works                           # 2026-03-26  Life Insurance with Pre-Existing Conditions UK: How Underwriting Works
+life-insurance-for-the-self-employed-uk-what-you-need-to-know                                   # 2026-03-25  Life Insurance for the Self-Employed UK: What You Need to Know
+life-insurance-claims-uk-what-happens-how-they-work-topquote                                    # 2026-03-24  Life Insurance Claims in the UK: What You Need to Know
+do-i-need-life-insurance-uk-honest-guide-topquote                                               # 2026-03-24  Do I Need Life Insurance? A Realistic Guide for UK Adults
+is-income-protection-insurance-worth-it-uk-topquote                                             # 2026-03-24  Income Protection Insurance UK: Is It Worth It?
+life-insurance-for-parents-how-to-protect-your-family                                           # 2026-03-24  Life Insurance for Parents: How to Protect Your Family
+what-is-critical-illness-cover-a-plain-english-uk-guide                                         # 2026-03-24  What Is Critical Illness Cover? A Plain-English UK Guide
+income-protection-for-the-self-employed-uk-a-complete-guide                                     # 2026-03-24  Income Protection for the Self-Employed UK: A Complete Guide
+term-vs-decreasing-term-life-insurance-which-is-right-for-you                                   # 2026-03-24  Level Term vs Decreasing Term Life Insurance: Which Is Right for You?
+life-insurance-with-pre-existing-medical-conditions-uk                                          # 2026-03-24  Life Insurance with Pre-Existing Medical Conditions UK
+average-life-insurance-cost-uk-2026-what-youll-actually-pay                                     # 2026-03-24  Average Life Insurance Cost UK 2026: What You'll Actually Pay
