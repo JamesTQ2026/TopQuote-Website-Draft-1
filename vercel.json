@@ -2,26 +2,6 @@
  "trailingSlash": false,
  "redirects": [
   {
-   "source": "/blog-life-insurance-for-married-couples-a-uk-guide",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog-life-insurance-for-married-couples-a-uk-guide.html",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog/:cat/life-insurance-for-married-couples-a-uk-guide",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog/life-insurance-for-married-couples-a-uk-guide",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
    "source": "/blog-joint-life-insurance-vs-single-a-uk-guide",
    "destination": "/blog",
    "statusCode": 302
@@ -2854,6 +2834,16 @@
   {
    "source": "/blog/life-insurance-buying-for-someone-else",
    "destination": "/blog-life-insurance-buying-for-someone-else",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/:cat/life-insurance-for-married-couples-a-uk-guide",
+   "destination": "/blog-life-insurance-for-married-couples-a-uk-guide",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/life-insurance-for-married-couples-a-uk-guide",
+   "destination": "/blog-life-insurance-for-married-couples-a-uk-guide",
    "statusCode": 301
   },
   {

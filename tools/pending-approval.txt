@@ -3,7 +3,6 @@
 # To publish a post once Openwork approves it: delete its line, then run  node tools/build-url-layer.js  and push.
 # Format: slug   # date  title
 
-life-insurance-for-married-couples-a-uk-guide                                                   # 2026-07-02  Life Insurance for Married Couples: A UK Guide
 joint-life-insurance-vs-single-a-uk-guide                                                       # 2026-07-01  Joint Life Insurance vs Single: A UK Guide
 buying-life-insurance                                                                           # 2026-06-30  How to Buy Life Insurance in the UK: A Plain-English Guide
 how-much-life-insurance-do-i-need-a-uk-guide                                                    # 2026-06-29  How Much Life Insurance Do I Need? A UK Guide
