@@ -191,6 +191,13 @@
   #aboutMedia { display: none !important; }
 
   /* ----------------------------------------------------------------------
+     22. The decorative white ring beside the hero paragraph. Once rule 6
+     centres that row on a phone it floats over the text instead of sitting
+     beside it, so drop it. Decorative only, no content lost.
+     ---------------------------------------------------------------------- */
+  #heroCircle { display: none !important; }
+
+  /* ----------------------------------------------------------------------
      20. Rule 6 turns EVERY flex box inside a scroll section into a centred
      column. Right for big layout rows, wrong for small inline clusters,
      which stacked one item per line: the testimonial star row, its avatar
