@@ -30,7 +30,10 @@
         normally, stacked. No width:100% / align-items:stretch here, so small
         icons and badges keep their size (do NOT stretch into bars). */
   .sc-host { height: auto !important; min-height: 0 !important; overflow: visible !important; }
-  .sc-host * {
+  /* :not(svg):not(svg *) keeps this away from SVG internals. Chart axis labels
+     are rotated with an SVG transform attribute, and transform:none !important
+     stripped it, laying "Cost of cover" flat across the chart. */
+  .sc-host *:not(svg):not(svg *) {
     position: static !important;
     transform: none !important;
     inset: auto !important; left: auto !important; right: auto !important;
@@ -196,6 +199,57 @@
      beside it, so drop it. Decorative only, no content lost.
      ---------------------------------------------------------------------- */
   #heroCircle { display: none !important; }
+
+  /* ----------------------------------------------------------------------
+     23. The three how-it-works cards stack on a phone, so the connecting
+     arrows between them should point down, not right.
+     ---------------------------------------------------------------------- */
+  [data-screen-label="Team"] i[data-lucide="arrow-right"] { transform: rotate(90deg) !important; }
+
+  /* ----------------------------------------------------------------------
+     24. .sx-glow is a decorative teal radial gradient sized to sit behind
+     the stats section. Un-pinned by rule 6 it becomes a 351x620 block of
+     apparently empty space. Hide it.
+     ---------------------------------------------------------------------- */
+  .sx-glow { display: none !important; }
+
+  /* ----------------------------------------------------------------------
+     26. The View All Services button sat centred under a left-aligned
+     heading. The page's own rule sets align-items:flex-start on .svc-head,
+     but rule 6 (.sc-host [style*=...], specificity 0,2,0) beats a bare
+     .svc-head (0,1,0) and re-centres it, so match that specificity here.
+     ---------------------------------------------------------------------- */
+  .sc-host .svc-head {
+    align-items: flex-start !important;
+    text-align: left !important;
+  }
+
+  /* ----------------------------------------------------------------------
+     25. Review carousel. The card was 380px wide on a 390px screen with a
+     284px square image floating inside it and the text left-aligned. Make
+     the card narrower, let the image fill its width, and centre everything.
+     The carousel already loops and autoplays, so that needs no change.
+     ---------------------------------------------------------------------- */
+  .swiper-slide {
+    width: min(300px, calc(100vw - 80px)) !important;
+    max-width: min(300px, calc(100vw - 80px)) !important;
+  }
+  .swiper-slide > * {
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: center !important;
+    align-items: center !important;
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+  .swiper-slide img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 1 / 1 !important;
+    object-fit: cover !important;
+    display: block !important;
+  }
 
   /* ----------------------------------------------------------------------
      20. Rule 6 turns EVERY flex box inside a scroll section into a centred
