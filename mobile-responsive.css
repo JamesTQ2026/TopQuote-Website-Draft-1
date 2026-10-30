@@ -145,7 +145,22 @@
      line so the top of the page reads as one navigation bar.
      ---------------------------------------------------------------------- */
   #heroPanel > header { padding: 14px 16px !important; }
-  header .tq-hdr-cta { margin-right: 0 !important; gap: 10px !important; }
+  /* margin-left:auto anchors the CTA to the right edge; without it the CTA is
+     packed left by the logo and its right edge sits at a fixed 315px, so it
+     overlapped the menu button by 15px on a 360px phone. */
+  /* The real cause of the CTA overlapping the menu on a 360px phone was that
+     the header's contents did not fit: logo 138 + gap 40 + CTA 121 + clearance
+     58 + padding 32 = 389px of content in 360px. space-between then has no
+     free space to distribute and everything packs left, pushing the CTA under
+     the fixed menu button. Shrink the parts so the row fits, and keep the
+     clearance in normal flow. */
+  #heroPanel > header { gap: 12px !important; }
+  #heroPanel > header > a:first-child img { height: 32px !important; }
+  header .tq-hdr-cta {
+    margin-right: 60px !important;   /* 44px button + 16px gap */
+    gap: 10px !important;
+  }
+  header .tq-hdr-cta a[href*="get-a-quote"] { padding: 0 14px !important; font-size: 13.5px !important; }
   header .tq-hdr-cta a[href*="get-a-quote"] {
     display: inline-flex !important;
     align-items: center !important;
@@ -153,7 +168,6 @@
     padding: 0 20px !important;
     border-radius: 10px !important;
     font-size: 14.5px !important;
-    margin-right: 56px !important;   /* clears the 44px button + 12px gap */
   }
 
   /* ----------------------------------------------------------------------
@@ -206,7 +220,9 @@
     flex-direction: row !important;
     align-items: center !important;
     width: auto !important;
-    margin-right: 58px !important;   /* clear the fixed hamburger at the right edge */
+    /* margin-right lives in the header-bar rule above; setting it again here
+       overrode it (this rule comes later with the same specificity) and pinned
+       the CTA 58px from the right, which overlapped the menu on a 360px phone. */
   }
 
   /* Hero text: readable sizes, sensible rhythm, nothing pinned. */
@@ -305,4 +321,15 @@
   #wpRow .wp-panel .wp-desc { opacity: 1 !important; transform: none !important; max-width: 100% !important; }
   #wpRow .wp-panel .wp-num,
   #wpRow .wp-panel .wp-title { color: #fff !important; }
+}
+
+/* Very narrow phones (iPhone SE 1st gen and similar). Even with the header
+   shrunk, the CTA still ran 5px under the menu button at 320px, so trim its
+   padding and label size a little further. */
+@media (max-width: 340px) {
+  header .tq-hdr-cta a[href*="get-a-quote"] {
+    padding: 0 12px !important;
+    font-size: 12.5px !important;
+  }
+  #heroPanel > header > a:first-child img { height: 28px !important; }
 }
