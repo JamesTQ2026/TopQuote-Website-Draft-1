@@ -191,6 +191,61 @@
   #aboutMedia { display: none !important; }
 
   /* ----------------------------------------------------------------------
+     20. Rule 6 turns EVERY flex box inside a scroll section into a centred
+     column. Right for big layout rows, wrong for small inline clusters,
+     which stacked one item per line: the testimonial star row, its avatar
+     row and prev/next buttons, and the Feefo badge.
+
+     Two traps here. The framework re-serialises inline styles WITH a space
+     after the colon (gap: 6px), so each selector needs both spellings. And
+     rule 6 is .sc-host [style*=...] = (0,2,0), so an exemption must match
+     or beat that specificity - hence the .sc-host prefix on every line.
+     ---------------------------------------------------------------------- */
+  .sc-host div[aria-label*="Feefo"],
+  .sc-host div[aria-label*="Feefo"] [style*="display:flex"],
+  .sc-host div[aria-label*="Feefo"] [style*="display: flex"],
+  .sc-host #testiAvatar,
+  .sc-host #testiContent [style*="gap:6px"],
+  .sc-host #testiContent [style*="gap: 6px"],
+  .sc-host #testiContent [style*="gap:10px"],
+  .sc-host #testiContent [style*="gap: 10px"],
+  .sc-host #testiContent [style*="gap:14px"],
+  .sc-host #testiContent [style*="gap: 14px"],
+  .sc-host #testiContent [style*="gap:16px"],
+  .sc-host #testiContent [style*="gap: 16px"],
+  .sc-host #testiContent [style*="justify-content:space-between"],
+  .sc-host #testiContent [style*="justify-content: space-between"] {
+    flex-direction: row !important;
+    align-items: center !important;
+    flex-wrap: nowrap !important;
+  }
+  /* keeps the 214px width from rule 17 so it still matches the Kids Pass panel */
+  .sc-host div[aria-label*="Feefo"] { justify-content: center !important; }
+
+  /* ----------------------------------------------------------------------
+     21. The three trust badges (Trustpilot, Feefo, Business Quality Awards)
+     stacked one per line, eating ~400px of a phone screen. They share a
+     1.78 aspect ratio, so sizing each as a third of the row scales them on
+     any width instead of pinning a height that suits one screen.
+     ---------------------------------------------------------------------- */
+  .sc-host [style*="gap:28px"][style*="margin-top:38px"],
+  .sc-host [style*="gap: 28px"][style*="margin-top: 38px"] {
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 8px !important;
+  }
+  img[src*="badge-trustpilot"],
+  img[src*="badge-feefo"],
+  img[src*="badge-bqa"] {
+    width: calc((100% - 16px) / 3) !important;
+    max-width: calc((100% - 16px) / 3) !important;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+
+  /* ----------------------------------------------------------------------
      19. Overlays must stay hidden until opened. Rule 6 forces opacity:1 and
      visibility:visible on everything inside a scroll section, which unhid
      the services mega-menu and dumped 2783px of it below the footer. Put
