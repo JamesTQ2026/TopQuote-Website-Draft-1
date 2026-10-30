@@ -197,4 +197,46 @@
   }
   #cfForm label { min-height: 44px !important; display: flex !important; align-items: center !important; }
   #cfSubmit { width: 100% !important; }
+
+  /* ----------------------------------------------------------------------
+     14. WORKING PROCESS. The three panels highlight on hover, which phones
+     do not have, so stack them and show every description at once. Rule 6
+     also flattens #wpRow (originally position:absolute;inset:0) to zero
+     height, collapsing all three panels, so restore real heights.
+     ---------------------------------------------------------------------- */
+  #wpProcess { padding: 60px 20px !important; }
+  #wpBand {
+    height: auto !important;
+    min-height: 0 !important;
+    border-radius: 16px !important;
+    position: relative !important;
+  }
+  #wpBg { position: absolute !important; left: 0 !important; top: 0 !important; width: 100% !important; height: 100% !important; }
+  #wpRow {
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    height: auto !important;
+  }
+  #wpRow .wp-panel {
+    position: relative !important;
+    flex: 0 0 auto !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 190px !important;
+    align-items: stretch !important;
+    justify-content: flex-end !important;
+  }
+  #wpRow .wp-panel .wp-pov,
+  #wpRow .wp-panel .wp-pteal {
+    position: absolute !important;
+    left: 0 !important; top: 0 !important;
+    width: 100% !important; height: 100% !important;
+  }
+  /* No hover on touch, so every panel reads as "open". */
+  #wpRow .wp-panel .wp-pteal { opacity: 1 !important; }
+  #wpRow .wp-panel .wp-pov { opacity: .35 !important; }
+  #wpRow .wp-panel .wp-desc { opacity: 1 !important; transform: none !important; max-width: 100% !important; }
+  #wpRow .wp-panel .wp-num,
+  #wpRow .wp-panel .wp-title { color: #fff !important; }
 }
