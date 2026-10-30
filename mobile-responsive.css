@@ -6,6 +6,10 @@
    styles the page's own JS sets, e.g. scroll transforms). Desktop untouched.
    ========================================================================== */
 
+/* The per-panel Learn More links exist for phones; on desktop the floating
+   circular button does that job. */
+.wp-more { display: none; }
+
 @media (max-width: 700px) {
 
   /* 1. Stop sideways scrolling */
@@ -219,6 +223,55 @@
      but rule 6 (.sc-host [style*=...], specificity 0,2,0) beats a bare
      .svc-head (0,1,0) and re-centres it, so match that specificity here.
      ---------------------------------------------------------------------- */
+  /* ----------------------------------------------------------------------
+     27. Working process. One photo sits behind all three stacked panels, so
+     each showed an arbitrary slice of it, and the teal overlay is a gradient
+     that is transparent for its top 30% which let the photo punch through.
+     Make the overlay solid, drop the floating circular Learn More and its
+     trailing dot, and show a plain link under each panel's copy instead.
+     ---------------------------------------------------------------------- */
+  #wpBtn, #wpDot { display: none !important; }
+  #wpRow .wp-panel .wp-pteal {
+    background: linear-gradient(180deg, rgba(15,140,141,.92) 0%, rgba(11,92,93,.96) 100%) !important;
+  }
+  .wp-more {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    margin-top: 14px !important;
+    color: #fff !important;
+    font-weight: 700 !important;
+    font-size: 14.5px !important;
+    text-decoration: none !important;
+  }
+
+  /* ----------------------------------------------------------------------
+     28. The testimonial photo column is 776px of a phone screen before the
+     reviews themselves. Drop it and go straight into the reviews.
+     ---------------------------------------------------------------------- */
+  #testiInner > div:first-child { display: none !important; }
+
+  /* ----------------------------------------------------------------------
+     29. Rule 6 centres #testiContent's children, which left the star row
+     floating in the middle above left-aligned text. Align them left.
+     ---------------------------------------------------------------------- */
+  .sc-host #testiContent { align-items: flex-start !important; }
+  /* The heading carries two hard <br>s sized for the desktop column. At
+     310px each segment also wrapped, giving five ragged lines with 'our'
+     alone. Let it flow and balance instead. */
+  #testiContent h2 br { display: none !important; }
+  #testiContent h2 {
+    font-size: 26px !important;
+    line-height: 1.2 !important;
+    text-wrap: pretty;   /* measured: 3 even lines, vs 5 with an orphaned 'our' */
+  }
+  /* the label moved up under the title by initTestiRoleOnMobile() */
+  #testiContent > .testi-role-mobile {
+    margin: 0 0 14px !important;
+    text-align: left !important;
+    font-size: 14px !important;
+  }
+
   .sc-host .svc-head {
     align-items: flex-start !important;
     text-align: left !important;

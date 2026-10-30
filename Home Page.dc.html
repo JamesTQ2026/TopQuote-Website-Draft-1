@@ -552,7 +552,7 @@
           <div style="position:relative;z-index:2;padding:clamp(28px,3vw,48px);">
             <div class="wp-num arva-h" style="font-size:clamp(38px,3.2vw,56px);line-height:1;font-weight:600;color:rgba(255,255,255,.95);visibility:hidden;transition:color .5s ease;">01</div>
             <div class="wp-title arva-h" style="font-size:clamp(22px,1.9vw,32px);line-height:1.1;font-weight:600;color:#fff;margin-top:12px;transition:color .5s ease;">No-Obligation Initial Consultation</div>
-            <p class="wp-desc" style="color:rgba(255,255,255,.9);font-size:14.5px;line-height:1.6;max-width:340px;margin-top:14px;opacity:1;transform:translateY(0);transition:opacity .6s ease,transform .6s ease;">We start by understanding your circumstances, priorities and budget, clear, jargon-free guidance with no pressure.</p>
+            <p class="wp-desc" style="color:rgba(255,255,255,.9);font-size:14.5px;line-height:1.6;max-width:340px;margin-top:14px;opacity:1;transform:translateY(0);transition:opacity .6s ease,transform .6s ease;">We start by understanding your circumstances, priorities and budget, clear, jargon-free guidance with no pressure.</p><a class="wp-more" href="/about">Learn More <i data-lucide="arrow-up-right" style="width:16px;height:16px;"></i></a>
           </div>
         </div>
         <div class="wp-panel" data-idx="1" style="position:relative;flex:1 1 0;flex-grow:1;min-width:0;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;transition:flex-grow .65s cubic-bezier(.22,1,.36,1);">
@@ -561,7 +561,7 @@
           <div style="position:relative;z-index:2;padding:clamp(28px,3vw,48px);">
             <div class="wp-num arva-h" style="font-size:clamp(38px,3.2vw,56px);line-height:1;font-weight:600;color:rgba(255,255,255,.42);visibility:hidden;transition:color .5s ease;">02</div>
             <div class="wp-title arva-h" style="font-size:clamp(22px,1.9vw,32px);line-height:1.1;font-weight:600;color:rgba(255,255,255,.74);margin-top:12px;transition:color .5s ease;">Expert Recommendations</div>
-            <p class="wp-desc" style="color:rgba(255,255,255,.9);font-size:14.5px;line-height:1.6;max-width:340px;margin-top:14px;opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease;">We evaluate your existing coverage, analyze potential gaps, and identify opportunities to improve protection tailored to your lifestyle.</p>
+            <p class="wp-desc" style="color:rgba(255,255,255,.9);font-size:14.5px;line-height:1.6;max-width:340px;margin-top:14px;opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease;">We evaluate your existing coverage, analyze potential gaps, and identify opportunities to improve protection tailored to your lifestyle.</p><a class="wp-more" href="/about">Learn More <i data-lucide="arrow-up-right" style="width:16px;height:16px;"></i></a>
           </div>
         </div>
         <div class="wp-panel" data-idx="2" style="position:relative;flex:1 1 0;flex-grow:1;min-width:0;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;transition:flex-grow .65s cubic-bezier(.22,1,.36,1);">
@@ -570,7 +570,7 @@
           <div style="position:relative;z-index:2;padding:clamp(28px,3vw,48px);">
             <div class="wp-num arva-h" style="font-size:clamp(38px,3.2vw,56px);line-height:1;font-weight:600;color:rgba(255,255,255,.42);visibility:hidden;transition:color .5s ease;">03</div>
             <div class="wp-title arva-h" style="font-size:clamp(22px,1.9vw,32px);line-height:1.1;font-weight:600;color:rgba(255,255,255,.74);margin-top:12px;transition:color .5s ease;">Ongoing Support &amp; Review</div>
-            <p class="wp-desc" style="color:rgba(255,255,255,.9);font-size:14.5px;line-height:1.6;max-width:340px;margin-top:14px;opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease;">As life changes, we review your cover to make sure it still fits, keeping your protection right over time.</p>
+            <p class="wp-desc" style="color:rgba(255,255,255,.9);font-size:14.5px;line-height:1.6;max-width:340px;margin-top:14px;opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease;">As life changes, we review your cover to make sure it still fits, keeping your protection right over time.</p><a class="wp-more" href="/about">Learn More <i data-lucide="arrow-up-right" style="width:16px;height:16px;"></i></a>
           </div>
         </div>
         </div>
@@ -602,7 +602,7 @@
           <img src="assets/topquote-mark-teal.png" alt="TopQuote" style="width:24px;height:24px;object-fit:contain;flex:none;" loading="lazy" decoding="async">
           <span style="color:#1EBABB;font-weight:700;font-size:17px;letter-spacing:.01em;">Trustpilot Reviews</span>
         </div>
-        <h2 class="arva-h" style="font-size:clamp(36px,3.6vw,58px);line-height:1.1;font-weight:600;color:#173B33;">Experience the TopQuote<br>difference through our<br>clients' words</h2>
+        <h2 class="arva-h" style="font-size:clamp(36px,3.6vw,58px);line-height:1.1;font-weight:600;color:#173B33;">Experience the TopQuote <br>difference through our <br>clients' words</h2>
         <div style="height:1px;background:#CDD3E4;margin:32px 0;max-width:700px;"></div>
         <div style="display:flex;gap:6px;margin-bottom:22px;">
           <i data-lucide="star" style="width:24px;height:24px;color:#00b67a;fill:#00b67a;"></i>
@@ -1033,7 +1033,24 @@ class Component extends DCLogic {
     });
   }
 
+  initTestiRoleOnMobile(){
+    // On phones the 'Verified customer' label belongs under the title, above
+    // the stars. It lives three levels deep inside the avatar block, so CSS
+    // order cannot reach it; move the node instead. It keeps its id, so the
+    // carousel's per-review update still finds and rewrites it.
+    if (window.innerWidth > 700) return;
+    var tc = document.getElementById('testiContent');
+    var role = document.getElementById('testiRole');
+    if (!tc || !role || tc.__roleMoved) return;
+    var h2 = tc.querySelector('h2');
+    if (!h2) return;
+    tc.__roleMoved = 1;
+    role.classList.add('testi-role-mobile');
+    tc.insertBefore(role, h2.nextSibling);
+  }
+
   initProcess(){
+    this.initTestiRoleOnMobile();
     const sec = document.getElementById('wpProcess');
     if (!sec || sec.__wired) return;
     sec.__wired = true;
