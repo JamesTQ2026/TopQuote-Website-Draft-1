@@ -360,6 +360,41 @@
   .testi-attrib-row-empty { display: none !important; }
 
   /* ----------------------------------------------------------------------
+     49. The stat panel is 450px tall with its content pinned to the bottom,
+     which frames a short figure nicely in a desktop column. On a phone the
+     copy is the same few lines in a much narrower box, so the card opened
+     with a large empty gradient. Let it hug its content; the padding still
+     gives it room and the gradient still reads.
+     ---------------------------------------------------------------------- */
+  .sc-host .ci-bar {
+    min-height: 0 !important;
+    padding: 32px 28px !important;
+  }
+
+  /* ----------------------------------------------------------------------
+     50. Section eyebrows (a small mark beside a teal label). Rule 6 turns
+     the pair into a centred column, so the mark floated above its own word
+     in the middle of a left-aligned block.
+     ---------------------------------------------------------------------- */
+  .sc-host [style*="display:flex"][style*="gap:9px"],
+  .sc-host [style*="display: flex"][style*="gap: 9px"] {
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    align-self: flex-start !important;
+  }
+
+  /* ----------------------------------------------------------------------
+     48. Two-column splits alternate image-left and image-right down the
+     page, which reads well side by side but collapses inconsistently: one
+     block ends up photo-above-text and the next text-above-photo. Put the
+     photo first in every one. Matched on the frame's own vh height, so it
+     picks out the media column rather than any image in the copy.
+     ---------------------------------------------------------------------- */
+  .sc-host .sp-split > [style*="height:min("],
+  .sc-host .sp-split > [style*="height: min("] { order: -1 !important; }
+
+  /* ----------------------------------------------------------------------
      47. 'Need Help?' contact rows in the footer. Each is a span laid out as
      an icon beside its text, and rule 6 turned it into a centred column, so
      the pin, phone and envelope floated above their own lines. Back to a
