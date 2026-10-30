@@ -318,7 +318,14 @@
   .sc-host .sx-testi-photo {
     position: relative !important;
     overflow: hidden !important;
+    width: 100% !important;
+    align-self: stretch !important;
   }
+  /* The card is a column flex box and rule 6 centres its children. Now that
+     the photo is absolutely positioned again its frame holds no in-flow
+     content, so centring shrank the frame -- and the teal rule under it --
+     to zero width and the photo vanished. Stretch them back. */
+  .sc-host .sx-shadow:has(.sx-testi-photo) { align-items: stretch !important; }
   .sc-host .sx-testi-img {
     position: absolute !important;
     inset: 0 !important;
