@@ -35,7 +35,7 @@
     '#mnav.open{display:flex;}',
     "#mnav a{color:#fff;text-decoration:none;font-size:19px;font-weight:700;padding:14px 6px;border-bottom:1px solid rgba(255,255,255,.08);font-family:'Mulish',sans-serif;min-height:44px;display:flex;align-items:center;}",
     '#mnav a.sub{padding-left:24px;font-size:16px;color:rgba(255,255,255,.82);font-weight:500;}',
-    '#mnav .mnav-label{color:#3fd3d4;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin:18px 0 4px;font-family:sans-serif;}',
+    '#mnav .mnav-label{color:#3fd3d4;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin:18px 0 4px;font-family:Mulish,sans-serif;}',
     '#mnav a.cta{background:#1EBABB;border-radius:10px;justify-content:center;border:none;margin-top:22px;padding:16px;}',
     '#mnavClose{position:absolute;top:20px;right:20px;width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;font-size:22px;line-height:1;cursor:pointer;}'
   ].join('\n');
@@ -47,13 +47,15 @@
     ['/critical-illness', 'Critical Illness', 'sub'],
     ['/income-protection', 'Income Protection', 'sub'],
     ['label', 'Company'],
-    ['/about', 'About Us'],
-    ['/consumer-duty', 'Consumer Duty'],
-    ['/reconnect', 'Reconnect'],
-    ['/contact', 'Contact'],
-    ['/careers', 'Careers'],
-    ['/blog', 'Blog'],
-    ['/find-us', 'Find Us'],
+    ['/about', 'About Us', 'sub'],
+    ['/consumer-duty', 'Consumer Duty', 'sub'],
+    ['/reconnect', 'Reconnect', 'sub'],
+    ['label', 'Get in touch'],
+    ['/contact', 'Contact', 'sub'],
+    ['/careers', 'Careers', 'sub'],
+    ['label', 'Resources'],
+    ['/blog', 'Blog', 'sub'],
+    ['/find-us', 'Find Us', 'sub'],
     ['/get-a-quote', 'Get a quote', 'cta']
   ];
 

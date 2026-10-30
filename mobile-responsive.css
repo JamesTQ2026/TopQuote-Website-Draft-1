@@ -10,6 +10,12 @@
    circular button does that job. */
 .wp-more { display: none; }
 .sx-nav { display: none; }
+/* Numerals in the step circles: see the note in the mobile block -- this is
+   an optical correction for the typeface, so it is not width-specific. */
+.step-num {
+  box-sizing: border-box;
+  padding-bottom: 6px;
+}
 
 @media (max-width: 700px) {
 
@@ -301,8 +307,8 @@
      icons one per line. Align the lot left and put the icons back in a row.
      ---------------------------------------------------------------------- */
   footer { text-align: left !important; }
-  footer [style*="display:flex"][style*="flex"],
-  footer [style*="display: flex"][style*="flex"] { align-items: flex-start !important; }
+  footer div[style*="display:flex"],
+  footer div[style*="display: flex"] { align-items: flex-start !important; }
 
   /* ----------------------------------------------------------------------
      34. Review cards. Rule 6 stripped position:relative off the photo box
@@ -352,6 +358,81 @@
   .sc-host .testi-attrib-mobile * { text-align: left !important; }
   /* what is left of the old row is a lone decorative quote mark */
   .testi-attrib-row-empty { display: none !important; }
+
+  /* ----------------------------------------------------------------------
+     40. Full-bleed bands. A hero declares position:relative on the section
+     and lays its video or photo over it absolutely, with the copy stacked
+     above. Rule 6 flattened all three, so the media dropped into the flow
+     as a tall block and shoved the copy underneath it instead of sitting
+     behind it. Only children that were already absolute with inset:0 are
+     restored, so a corner badge is not stretched across the band.
+     ---------------------------------------------------------------------- */
+  .sc-host section[style*="position:relative"],
+  .sc-host section[style*="position: relative"] { position: relative !important; }
+
+  .sc-host section[style*="position: relative"] > [style*="position: absolute"][style*="inset: 0"],
+  .sc-host section[style*="position:relative"] > [style*="position:absolute"][style*="inset:0"] {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 0 !important;
+  }
+  .sc-host section[style*="position: relative"] > video[style*="position: absolute"],
+  .sc-host section[style*="position:relative"] > video[style*="position:absolute"],
+  .sc-host section[style*="position: relative"] > img[style*="position: absolute"],
+  .sc-host section[style*="position:relative"] > img[style*="position:absolute"] {
+    object-fit: cover !important;
+    pointer-events: none !important;
+  }
+  /* everything that is not one of those layers sits above them */
+  .sc-host section[style*="position: relative"] > *:not(video):not(img):not([style*="position: absolute"]):not([style*="position:absolute"]),
+  .sc-host section[style*="position:relative"] > *:not(video):not(img):not([style*="position: absolute"]):not([style*="position:absolute"]) {
+    position: relative !important;
+    z-index: 1 !important;
+  }
+
+  /* ----------------------------------------------------------------------
+     41. Breadcrumbs. Rule 6 stacks the row, which put each crumb and its
+     separator on its own line. It is short enough to stay inline.
+     ---------------------------------------------------------------------- */
+  .sc-host nav[aria-label="Breadcrumb"] {
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+  }
+
+  /* 42. 'Read More' pills follow the centred card copy on phones. */
+  .sc-host .read-more-pill { align-self: center !important; }
+
+  /* ----------------------------------------------------------------------
+     43. Wide comparison tables scroll sideways (section 10), but nothing
+     said so -- the cut-off column just looked like a bug. Keep a visible
+     scrollbar and fade the right edge so there is something to follow.
+     ---------------------------------------------------------------------- */
+  .tq-table-scroll {
+    scrollbar-width: auto !important;
+    scrollbar-color: #1EBABB rgba(8,30,22,.10) !important;
+    padding-bottom: 6px !important;
+  }
+  .tq-table-scroll::-webkit-scrollbar { height: 8px; -webkit-appearance: none; }
+  .tq-table-scroll::-webkit-scrollbar-track {
+    background: rgba(8,30,22,.10); border-radius: 4px;
+  }
+  .tq-table-scroll::-webkit-scrollbar-thumb {
+    background: #1EBABB; border-radius: 4px;
+  }
+  .tq-table-scroll::after {
+    content: 'Swipe for more \2192';
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    color: #159a9b;
+    padding: 8px 2px 0;
+    position: sticky;
+    left: 0;
+  }
 
   /* ----------------------------------------------------------------------
      37. Footer legal links. Rule 6 stacks the row, which left each '|'
