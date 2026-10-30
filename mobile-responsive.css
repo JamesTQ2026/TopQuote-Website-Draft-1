@@ -360,6 +360,29 @@
   .testi-attrib-row-empty { display: none !important; }
 
   /* ----------------------------------------------------------------------
+     44. Hero header on the inner pages. Every header fix above is scoped to
+     #heroPanel, which only the home page has, so the other pages kept rule
+     6's centred column: logo on one line, the quote button stacked beneath
+     it, 182px of bar against the home page's 72px. Same single row here.
+     The .tq-hdr-cta sizing and the tel: link removal are already global.
+     ---------------------------------------------------------------------- */
+  .sc-host section[style*="position: relative"] > header,
+  .sc-host section[style*="position:relative"] > header {
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    flex-wrap: nowrap !important;
+    width: 100% !important;
+    gap: 12px !important;
+    padding: 14px 16px !important;
+    min-height: 0 !important;
+  }
+  .sc-host section[style*="position: relative"] > header > *,
+  .sc-host section[style*="position:relative"] > header > * { flex: 0 0 auto !important; }
+  .sc-host section[style*="position: relative"] > header > a:first-child img,
+  .sc-host section[style*="position:relative"] > header > a:first-child img { height: 32px !important; }
+
+  /* ----------------------------------------------------------------------
      40. Full-bleed bands. A hero declares position:relative on the section
      and lays its video or photo over it absolutely, with the copy stacked
      above. Rule 6 flattened all three, so the media dropped into the flow
