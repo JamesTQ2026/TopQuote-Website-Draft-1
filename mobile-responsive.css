@@ -360,6 +360,25 @@
   .testi-attrib-row-empty { display: none !important; }
 
   /* ----------------------------------------------------------------------
+     55. The same eyebrow appears in two forms. The display:flex ones are
+     handled above; these are inline-flex, so they sit in the text flow and
+     a hero's text-align:center carries them to the middle. Making them
+     block-level flex takes them out of that centring, and the auto right
+     margin keeps them hard left without touching the copy below.
+     ---------------------------------------------------------------------- */
+  .sc-host [style*="display:inline-flex"][style*="gap:9px"][style*="margin-bottom"],
+  .sc-host [style*="display: inline-flex"][style*="gap: 9px"][style*="margin-bottom"] {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    align-self: flex-start !important;
+    width: fit-content !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+  }
+
+  /* ----------------------------------------------------------------------
      53. FAQ headers. Each is a space-between row holding the question and
      its + toggle, and rule 6 stacked it into a centred column, so the plus
      ended up on its own line under the middle of the question.
@@ -430,8 +449,8 @@
      the pair into a centred column, so the mark floated above its own word
      in the middle of a left-aligned block.
      ---------------------------------------------------------------------- */
-  .sc-host [style*="display:flex"][style*="gap:9px"][style*="margin-bottom:16px"],
-  .sc-host [style*="display: flex"][style*="gap: 9px"][style*="margin-bottom: 16px"] {
+  .sc-host [style*="display:flex"][style*="gap:9px"][style*="margin-bottom"],
+  .sc-host [style*="display: flex"][style*="gap: 9px"][style*="margin-bottom"] {
     flex-direction: row !important;
     align-items: center !important;
     justify-content: flex-start !important;
