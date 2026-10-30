@@ -98,7 +98,9 @@
         the normal flow and push their ancestors wider than the screen. Because
         rule 1 clips overflow, that content is silently CUT OFF rather than
         scrollable, so cap everything to the viewport. */
-  .sc-host, .sc-host * { max-width: 100vw !important; }
+  /* 100vw ignores where the element starts: a panel inside a 24px gutter is
+     still 24px too wide for the screen. 100% caps it to its parent. */
+  .sc-host, .sc-host * { max-width: 100% !important; }
 
   /* 9. Home page "about" media block: a fixed 458px image/video stack. */
   #aboutInner, #aboutMedia, #aboutImg1 { width: 100% !important; max-width: 100% !important; }
@@ -360,22 +362,155 @@
   .testi-attrib-row-empty { display: none !important; }
 
   /* ----------------------------------------------------------------------
-     55. The same eyebrow appears in two forms. The display:flex ones are
-     handled above; these are inline-flex, so they sit in the text flow and
-     a hero's text-align:center carries them to the middle. Making them
-     block-level flex takes them out of that centring, and the auto right
-     margin keeps them hard left without touching the copy below.
+     55. Eyebrows follow their own section. Most sections are left-aligned,
+     which the rule above handles. Where a section centres its copy, the
+     eyebrow belongs in the middle with it -- except in the About hero,
+     which this file turns left below.
      ---------------------------------------------------------------------- */
-  .sc-host [style*="display:inline-flex"][style*="gap:9px"][style*="margin-bottom"],
-  .sc-host [style*="display: inline-flex"][style*="gap: 9px"][style*="margin-bottom"] {
-    display: flex !important;
+  .sc-host [style*="text-align:center"]:not([style*="top: 50%"]) > [style*="gap:9px"][style*="margin-bottom"],
+  .sc-host [style*="text-align: center"]:not([style*="top: 50%"]) > [style*="gap: 9px"][style*="margin-bottom"] {
+    align-self: center !important;
+    margin-right: 0 !important;
+  }
+
+  /* ----------------------------------------------------------------------
+     56. About hero. Its copy is centred for the wide layout; on a phone it
+     reads better ranged left like every other hero.
+     ---------------------------------------------------------------------- */
+  .sc-host section [style*="top: 50%"],
+  .sc-host section [style*="top:50%"] {
+    text-align: left !important;
+  }
+
+  /* ----------------------------------------------------------------------
+     57. Trustpilot card. It is pinned to 390px, which is wider than the
+     phone it sits on once the page gutter is counted, so it ran off the
+     right edge. Its five star tiles are a gap:4px row that rule 6 stacked
+     into a column.
+     ---------------------------------------------------------------------- */
+  #tpCard {
+    width: auto !important;
+    max-width: 100% !important;
+    padding: 28px 20px !important;
+  }
+  #tpCard [style*="gap:4px"],
+  #tpCard [style*="gap: 4px"] {
     flex-direction: row !important;
+    justify-content: center !important;
     align-items: center !important;
-    justify-content: flex-start !important;
-    align-self: flex-start !important;
-    width: fit-content !important;
+    flex-wrap: nowrap !important;
+  }
+
+  /* ----------------------------------------------------------------------
+     58. The About 'what we stand for' cards are a deliberately scattered
+     stack: rotated, overlapping, and spaced by clamp(180px, 40vh, 460px)
+     so they drift past each other as the page scrolls. On a phone that is
+     325px of blank between each one, and the 0.4-alpha 60px shadow reads
+     as a grey smear. Make it a plain column. The number is meant to be the
+     absolutely positioned corner mark; rule 6 dropped it into the flow, so
+     put the icon in the corner instead and let the number lead at size.
+     ---------------------------------------------------------------------- */
+  .sc-host [style*="gap:clamp(180px"],
+  .sc-host [style*="gap: clamp(180px"] { gap: 22px !important; }
+  .sc-host [style*="gap: clamp(180px"] > div {
+    position: relative !important;
+    transform: none !important;
+    max-width: 100% !important;
     margin-left: 0 !important;
-    margin-right: auto !important;
+    box-shadow: 0 8px 20px rgba(8,30,22,.10) !important;
+  }
+  .sc-host [style*="gap: clamp(180px"] > div > span:first-child {
+    position: static !important;
+    display: block !important;
+    font-size: 20px !important;
+    margin-bottom: 10px !important;
+  }
+  .sc-host [style*="gap: clamp(180px"] > div > span:nth-child(2) {
+    position: absolute !important;
+    top: 22px !important;
+    right: 24px !important;
+  }
+
+  /* ----------------------------------------------------------------------
+     59. The About services grid keeps two columns because the page's own
+     stylesheet sets .ch-grid to repeat(2,1fr) !important, which outranks
+     the blanket single-column rule. At 150px a column the copy wrapped to
+     one or two words a line. One column, like the home page.
+     ---------------------------------------------------------------------- */
+  .sc-host .ch-grid { grid-template-columns: 1fr !important; }
+
+  /* ----------------------------------------------------------------------
+     61. Panels pinned to a desktop pixel width. A percentage max-width
+     cannot save these: it resolves against a parent whose own width these
+     same boxes decide, so the browser leaves the fixed width alone and the
+     panel hangs off the screen. Replace the width outright.
+     ---------------------------------------------------------------------- */
+  .sc-host [style*="width:400px"], .sc-host [style*="width: 400px"],
+  .sc-host [style*="width:390px"], .sc-host [style*="width: 390px"],
+  .sc-host [style*="width:380px"], .sc-host [style*="width: 380px"],
+  .sc-host [style*="width:384px"], .sc-host [style*="width: 384px"],
+  .sc-host [style*="width:440px"], .sc-host [style*="width: 440px"],
+  .sc-host [style*="width:360px"], .sc-host [style*="width: 360px"] {
+    width: 100% !important;
+  }
+  /* The Trustpilot card sets min-width:390px, and min-width beats max-width
+     in the cascade, so nothing could shrink it: on a 375px screen it hung
+     15px off the edge before the page gutter was even counted. */
+  /* Any pixel min-width is a desktop measurement on a phone. The one that
+     earns its keep is the comparison table, which uses it to stay wide
+     enough to scroll (section 10), so that is left alone. */
+  .sc-host [style*="min-width:"]:not(table):not(.tq-table-scroll *) {
+    min-width: 0 !important;
+  }
+  .sc-host [style*="padding: 40px 54px"],
+  .sc-host [style*="padding:40px 54px"] {
+    width: auto !important;
+    padding: 28px 20px !important;
+  }
+
+  /* ----------------------------------------------------------------------
+     60. The Consumer Duty pillars are a 3D deck: a perspective wrapper with
+     the cards stacked on top of each other and their copy pinned to the
+     card's corners. Rule 6 flattens the positioning, so the cards landed on
+     one another and the copy escaped its panel. On a phone it should simply
+     be one panel after the next, so the deck becomes a column, each panel
+     sizes to its own copy, and the number leads with the icon in the corner.
+     ---------------------------------------------------------------------- */
+  .sc-host [style*="perspective"] {
+    position: static !important;
+    height: auto !important;
+    min-height: 0 !important;
+    display: block !important;
+  }
+  .sc-host [style*="preserve-3d"] {
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    transform: none !important;
+    margin: 0 0 16px !important;
+  }
+  /* the gradient panel joins the flow so the card grows with its copy */
+  .sc-host [style*="preserve-3d"] > [style*="inset: 0"],
+  .sc-host [style*="preserve-3d"] > [style*="inset:0"] {
+    position: relative !important;
+    inset: auto !important;
+    height: auto !important;
+    padding: 22px 24px !important;
+  }
+  .sc-host [style*="preserve-3d"] h3,
+  .sc-host [style*="preserve-3d"] p {
+    position: static !important;
+    margin: 0 0 8px !important;
+  }
+  /* number on the left, icon in the top right, as on the home page */
+  .sc-host [style*="preserve-3d"] [style*="justify-content: space-between"] {
+    flex-direction: row-reverse !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    margin-bottom: 12px !important;
+  }
+  .sc-host [style*="preserve-3d"] [style*="justify-content: space-between"] > span:last-child {
+    font-size: 22px !important;
   }
 
   /* ----------------------------------------------------------------------
