@@ -136,6 +136,72 @@
   }
   #heroPanel > header > * { flex: 0 0 auto !important; }
   header .tq-hdr-cta a[href^="tel:"] { display: none !important; }
+
+  /* ----------------------------------------------------------------------
+     15. Mobile header bar. The CTA sits in the header flow while the menu
+     button is position:fixed, so they were measured apart: 5px out of
+     vertical alignment, overlapping by 10px, and with different corner
+     radii (8px vs 12px). Pin both to the same height, radius and centre
+     line so the top of the page reads as one navigation bar.
+     ---------------------------------------------------------------------- */
+  #heroPanel > header { padding: 14px 16px !important; }
+  header .tq-hdr-cta { margin-right: 0 !important; gap: 10px !important; }
+  header .tq-hdr-cta a[href*="get-a-quote"] {
+    display: inline-flex !important;
+    align-items: center !important;
+    height: 44px !important;
+    padding: 0 20px !important;
+    border-radius: 10px !important;
+    font-size: 14.5px !important;
+    margin-right: 56px !important;   /* clears the 44px button + 12px gap */
+  }
+
+  /* ----------------------------------------------------------------------
+     16. Hero heading a touch larger on phones (was ~43px at 390px wide).
+     ---------------------------------------------------------------------- */
+  #heroTitleWrap .arva-h, #heroHeading { font-size: clamp(46px, 13vw, 58px) !important; }
+
+  /* ----------------------------------------------------------------------
+     17. The Feefo badge was 115px against the Kids Pass panel's 214px, so
+     the two stacked badges had ragged edges. Match them.
+     ---------------------------------------------------------------------- */
+  div[aria-label*="Feefo"] {
+    width: 214px !important;
+    justify-content: center !important;
+  }
+
+  /* ----------------------------------------------------------------------
+     18. The about-section video is 560px tall on a 844px screen, most of a
+     phone viewport for a decorative clip. Hide it; the copy carries it.
+     ---------------------------------------------------------------------- */
+  #aboutMedia { display: none !important; }
+
+  /* ----------------------------------------------------------------------
+     19. Overlays must stay hidden until opened. Rule 6 forces opacity:1 and
+     visibility:visible on everything inside a scroll section, which unhid
+     the services mega-menu and dumped 2783px of it below the footer. Put
+     the closed state back, and let the open state win.
+     ---------------------------------------------------------------------- */
+  #svcMenu, #mnav, .tqmm-panel, .tqmm-dim {
+    position: fixed !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
+  #svcMenu { inset: 0 !important; }
+  #svcMenu.open, #mnav.open, .tqmm-panel.open, .tqmm-dim.on {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+  }
+
+  #mnavBtn {
+    top: 14px !important;            /* same centre line as the 44px CTA */
+    right: 16px !important;
+    width: 44px !important;
+    height: 44px !important;
+    border-radius: 10px !important;
+  }
   header .tq-hdr-cta {
     flex-direction: row !important;
     align-items: center !important;
