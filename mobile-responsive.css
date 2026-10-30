@@ -14,7 +14,16 @@
 @media (max-width: 700px) {
 
   /* 1. Stop sideways scrolling */
-  html, body { overflow-x: hidden !important; }
+  /* overflow-x:hidden on html AND body broke vertical scrolling. Per spec a
+     non-visible value on one axis forces the other axis to auto, so html --
+     which the page sizes at height:100% -- became its own 812px scroll
+     container and stopped body's overflow propagating to the viewport. The
+     page then held 17,699px of content that window scrolling could not
+     reach. overflow-x:clip is exempt from that forcing, so it clips
+     sideways without creating a scroll container. The plain hidden line
+     below stays as the fallback for browsers without clip support.  */
+  html, body { overflow-x: hidden; }
+  html, body { overflow-x: clip !important; }
   *, *::before, *::after { box-sizing: border-box; }
 
   /* 2. Collapse static multi-column grids to a single column */
@@ -260,12 +269,31 @@
      wash that shows on desktop was missing on phones. Restore it, and
      left-align the copy and buttons instead of centring them.
      ---------------------------------------------------------------------- */
-  .cta-fixed > div:first-child {
+  /* The section itself has to be put back first. Rule 6 flattened it to
+     position:static, so with the overlay absolute again and no positioned
+     ancestor left, inset:0 resolved against the initial containing block:
+     the gradient covered a full viewport height of the whole document as a
+     teal wash over every section, and ate touches so the page would not
+     scroll past it. Two class selectors clear rule 6's (0,1,2).
+     The wash is decoration, so it should never take a tap either. */
+  /* Matched on structure, not on .cta-fixed: the same full-bleed band (a
+     fixed-attachment cover photo, a gradient scrim over it, then the copy)
+     is used on the product pages too, where it carries no class and so was
+     left broken -- the scrim collapsed and the white copy sat on the bare
+     photo. Requiring the gradient on the child keeps this off any other
+     absolutely positioned content in these sections. */
+  .sc-host section[style*="cover fixed"] { position: relative !important; }
+  .sc-host section[style*="cover fixed"] > div[style*="position:absolute"][style*="linear-gradient"],
+  .sc-host section[style*="cover fixed"] > div[style*="position: absolute"][style*="linear-gradient"] {
     position: absolute !important;
-    left: 0 !important; top: 0 !important;
+    inset: 0 !important;
     width: 100% !important; height: 100% !important;
+    pointer-events: none !important;
   }
-  .cta-fixed > div:nth-child(2) { position: relative !important; z-index: 1 !important; }
+  .sc-host section[style*="cover fixed"] > div[style*="position:relative"],
+  .sc-host section[style*="cover fixed"] > div[style*="position: relative"] {
+    position: relative !important; z-index: 1 !important;
+  }
   .cta-fixed { text-align: left !important; }
 
   /* ----------------------------------------------------------------------
