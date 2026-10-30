@@ -431,30 +431,20 @@
 
   /* ----------------------------------------------------------------------
      43. Wide comparison tables scroll sideways (section 10), but nothing
-     said so -- the cut-off column just looked like a bug. Keep a visible
-     scrollbar and fade the right edge so there is something to follow.
+     said so -- the cut-off column just looked like a bug. A thick teal
+     scrollbar that stays visible is the cue.
      ---------------------------------------------------------------------- */
   .tq-table-scroll {
     scrollbar-width: auto !important;
     scrollbar-color: #1EBABB rgba(8,30,22,.10) !important;
     padding-bottom: 6px !important;
   }
-  .tq-table-scroll::-webkit-scrollbar { height: 8px; -webkit-appearance: none; }
+  .tq-table-scroll::-webkit-scrollbar { height: 14px; -webkit-appearance: none; }
   .tq-table-scroll::-webkit-scrollbar-track {
-    background: rgba(8,30,22,.10); border-radius: 4px;
+    background: rgba(8,30,22,.10); border-radius: 7px;
   }
   .tq-table-scroll::-webkit-scrollbar-thumb {
-    background: #1EBABB; border-radius: 4px;
-  }
-  .tq-table-scroll::after {
-    content: 'Swipe for more \2192';
-    display: block;
-    font-size: 12px;
-    font-weight: 700;
-    color: #159a9b;
-    padding: 8px 2px 0;
-    position: sticky;
-    left: 0;
+    background: #1EBABB; border-radius: 7px;
   }
 
   /* ----------------------------------------------------------------------
