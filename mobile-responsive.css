@@ -393,6 +393,8 @@
     max-width: 100% !important;
     padding: 28px 20px !important;
   }
+  .sc-host [style*="gap:4px"][style*="justify-content:center"],
+  .sc-host [style*="gap: 4px"][style*="justify-content: center"],
   #tpCard [style*="gap:4px"],
   #tpCard [style*="gap: 4px"] {
     flex-direction: row !important;
