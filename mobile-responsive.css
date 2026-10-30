@@ -307,8 +307,8 @@
      icons one per line. Align the lot left and put the icons back in a row.
      ---------------------------------------------------------------------- */
   footer { text-align: left !important; }
-  footer div[style*="display:flex"],
-  footer div[style*="display: flex"] { align-items: flex-start !important; }
+  .sc-host footer div[style*="display:flex"],
+  .sc-host footer div[style*="display: flex"] { align-items: flex-start !important; }
 
   /* ----------------------------------------------------------------------
      34. Review cards. Rule 6 stripped position:relative off the photo box
@@ -358,6 +358,43 @@
   .sc-host .testi-attrib-mobile * { text-align: left !important; }
   /* what is left of the old row is a lone decorative quote mark */
   .testi-attrib-row-empty { display: none !important; }
+
+  /* ----------------------------------------------------------------------
+     46. Hero button cluster and the round quote link. Rule 6 centres every
+     flex box, so on the product pages the two buttons sat in the middle of
+     a left-aligned column of copy and the circle followed them. The home
+     page escaped it because its cluster carries no flex-wrap and matched an
+     earlier rule. Line them up with the heading above them.
+     ---------------------------------------------------------------------- */
+  .sc-host [style*="gap:14px"][style*="margin-top:28px"],
+  .sc-host [style*="gap: 14px"][style*="margin-top: 28px"] {
+    align-items: flex-start !important;
+  }
+  .sc-host [style*="margin-right:8%"],
+  .sc-host [style*="margin-right: 8%"] {
+    align-self: flex-start !important;
+    margin-right: 0 !important;
+  }
+
+  /* ----------------------------------------------------------------------
+     45. Media frames sized by viewport height. These sit in a desktop
+     two-column split and are given height:min(NNvh, NNNpx) so the photo
+     matches the text column beside it. When the grid collapses to one
+     column the frame keeps that height -- 327x420 on a phone -- so a 3:2
+     landscape photo was cropped by object-fit:cover down to a narrow
+     vertical slice, which read as squashed. Letting the frame and the
+     photo size themselves shows the whole image at its own proportions,
+     whatever shape the source happens to be.
+     ---------------------------------------------------------------------- */
+  .sc-host [style*="height:min("],
+  .sc-host [style*="height: min("] {
+    height: auto !important;
+  }
+  .sc-host [style*="height:min("] > img:not([style*="position: absolute"]):not([style*="position:absolute"]),
+  .sc-host [style*="height: min("] > img:not([style*="position: absolute"]):not([style*="position:absolute"]) {
+    height: auto !important;
+    width: 100% !important;
+  }
 
   /* ----------------------------------------------------------------------
      44. Hero header on the inner pages. Every header fix above is scoped to
@@ -495,11 +532,11 @@
     height: 28px !important;
   }
 
-  footer [style*="display:flex"][style*="gap:12px"],
-  footer [style*="display: flex"][style*="gap: 12px"],
-  footer [style*="display:flex"][style*="gap: 12px"],
-  footer [style*="display: flex"][style*="gap:12px"],
-  footer .foot-badges.foot-badges {
+  .sc-host footer [style*="display:flex"][style*="gap:12px"],
+  .sc-host footer [style*="display: flex"][style*="gap: 12px"],
+  .sc-host footer [style*="display:flex"][style*="gap: 12px"],
+  .sc-host footer [style*="display: flex"][style*="gap:12px"],
+  .sc-host footer .foot-badges.foot-badges {
     flex-direction: row !important;
     align-items: center !important;
     justify-content: flex-start !important;
