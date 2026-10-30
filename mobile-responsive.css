@@ -303,10 +303,6 @@
   footer { text-align: left !important; }
   footer [style*="display:flex"][style*="flex"],
   footer [style*="display: flex"][style*="flex"] { align-items: flex-start !important; }
-  footer [style*="display:flex"][style*="gap:12px"],
-  footer [style*="display: flex"][style*="gap: 12px"],
-  footer [style*="display:flex"][style*="gap: 12px"],
-  footer [style*="display: flex"][style*="gap:12px"],
 
   /* ----------------------------------------------------------------------
      34. Review cards. Rule 6 stripped position:relative off the photo box
@@ -348,12 +344,67 @@
     flex-direction: row !important;
     align-items: center !important;
     justify-content: flex-start !important;
-    margin: 10px 0 18px !important;
+    /* The rule below this block already carries a 32px top margin, so the
+       space under the profile is that plus whatever is set here. Matching
+       32px above and nothing below leaves an even 32px on each side. */
+    margin: 32px 0 0 !important;
   }
   .sc-host .testi-attrib-mobile * { text-align: left !important; }
   /* what is left of the old row is a lone decorative quote mark */
   .testi-attrib-row-empty { display: none !important; }
 
+  /* ----------------------------------------------------------------------
+     37. Footer legal links. Rule 6 stacks the row, which left each '|'
+     separator sitting alone on its own line. They only read as separators
+     inline, so drop them once the links are stacked.
+     ---------------------------------------------------------------------- */
+  footer [style*="gap:10px 18px"] > span,
+  footer [style*="gap: 10px 18px"] > span { display: none !important; }
+
+  /* ----------------------------------------------------------------------
+     38. Consent checkbox. The label is a flex row, but rule 6 centres the
+     column it sits in and the label shrinks to its content, so the box
+     ended up floating above its own text instead of beside it.
+     ---------------------------------------------------------------------- */
+  .sc-host label:has(input[type="checkbox"]) {
+    width: 100% !important;
+    align-self: flex-start !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    text-align: left !important;
+  }
+  .sc-host label:has(input[type="checkbox"]) input[type="checkbox"] {
+    flex: none !important;
+    margin-top: 2px !important;
+  }
+
+  /* ----------------------------------------------------------------------
+     39. Service cards. Rule 6 turns the card's header into a centred
+     column, stacking the icon above its number. Back onto one line, with
+     the number at the left and the icon in the top right corner, sized up
+     a little. row-reverse puts the icon (first in the markup) on the right.
+     ---------------------------------------------------------------------- */
+  .svc-cards > div > div:first-child {
+    flex-direction: row-reverse !important;
+    align-items: flex-start !important;
+    justify-content: space-between !important;
+  }
+  .svc-cards > div > div:first-child > span:first-child {
+    width: 56px !important;
+    height: 56px !important;
+    flex: none !important;
+  }
+  .svc-cards > div > div:first-child > span:first-child > svg,
+  .svc-cards > div > div:first-child > span:first-child > i {
+    width: 28px !important;
+    height: 28px !important;
+  }
+
+  footer [style*="display:flex"][style*="gap:12px"],
+  footer [style*="display: flex"][style*="gap: 12px"],
+  footer [style*="display:flex"][style*="gap: 12px"],
+  footer [style*="display: flex"][style*="gap:12px"],
   footer .foot-badges.foot-badges {
     flex-direction: row !important;
     align-items: center !important;
