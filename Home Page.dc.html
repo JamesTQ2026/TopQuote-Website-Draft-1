@@ -383,6 +383,10 @@
         </sc-for>
       </div>
     </div>
+        <div class="sx-nav">
+          <button id="sxPrev" style="width:58px;height:52px;border-radius:10px;border:none;background:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 6px 18px rgba(20,40,35,.08);transition:transform .2s ease;" aria-label="Previous review"><i data-lucide="arrow-left" style="width:20px;height:20px;color:#173B33;"></i></button>
+          <button id="sxNext" style="width:58px;height:52px;border-radius:10px;border:none;background:#1EBABB;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:transform .2s ease,background .2s ease;" aria-label="Next review"><i data-lucide="arrow-right" style="width:20px;height:20px;color:#fff;"></i></button>
+        </div>
   </section>
 
   <!-- ============ PROVIDERS ============ -->
@@ -1033,24 +1037,82 @@ class Component extends DCLogic {
     });
   }
 
+  initReviewNav(){
+    // Delegated from document: the framework re-renders these buttons, which
+    // drops listeners bound straight to the nodes. The Swiper instance is
+    // kept on the element as __sw by the mount code above.
+    if (document.__sxNavWired) return;
+    document.__sxNavWired = 1;
+    var self = this;
+    document.addEventListener('click', function(e){
+      var t = e.target && e.target.closest ? e.target.closest('#sxPrev, #sxNext') : null;
+      if (!t) return;
+      var el = document.getElementById('sx-stats-swiper');
+      var sw = el && (el.__sw || el.swiper);
+      if (!sw) return;
+      self.unstickSwiper(sw);
+      sw.animating = false;
+      if (t.id === 'sxPrev') sw.slidePrev(); else sw.slideNext();
+    });
+  }
+
+  unstickSwiper(sw){
+    // Swiper treats a slide as still in flight until it sees a transitionend
+    // on the wrapper. That event does not arrive here, so the flag latches on
+    // and every later slide call is dropped -- autoplay's included, which is
+    // why the mobile carousel sat still. Clear it once the transition has had
+    // its full run. If a real transitionend does fire first, Swiper has
+    // already cleared the flag and this is a no-op.
+    if (sw.__unstickWired) return;
+    sw.__unstickWired = 1;
+    sw.on('setTransition', function(duration){
+      clearTimeout(sw.__unstickTimer);
+      if (!duration) return;
+      sw.__unstickTimer = setTimeout(function(){ sw.animating = false; }, duration + 120);
+    });
+    sw.animating = false;
+  }
+
+  watchReviewSwiper(){
+    // Autoplay hits the same latched flag, so the watchdog has to be in place
+    // before anyone touches an arrow. The swiper mounts asynchronously; poll
+    // briefly for it rather than racing the mount.
+    if (document.__sxWatchWired) return;
+    document.__sxWatchWired = 1;
+    var self = this, tries = 0;
+    var tick = setInterval(function(){
+      var el = document.getElementById('sx-stats-swiper');
+      var sw = el && (el.__sw || el.swiper);
+      if (sw) { self.unstickSwiper(sw); clearInterval(tick); }
+      else if (++tries > 40) clearInterval(tick);
+    }, 250);
+  }
   initTestiRoleOnMobile(){
-    // On phones the 'Verified customer' label belongs under the title, above
-    // the stars. It lives three levels deep inside the avatar block, so CSS
-    // order cannot reach it; move the node instead. It keeps its id, so the
-    // carousel's per-review update still finds and rewrites it.
+    // On phones the reviewer's name and the 'Verified customer' label read
+    // better under the title, above the stars. Both sit several levels deep
+    // inside the avatar block, so CSS order cannot reach them; move the
+    // nodes. They keep their ids, so the carousel's per-review update still
+    // finds and rewrites them.
     if (window.innerWidth > 700) return;
     var tc = document.getElementById('testiContent');
+    var name = document.getElementById('testiName');
     var role = document.getElementById('testiRole');
     if (!tc || !role || tc.__roleMoved) return;
     var h2 = tc.querySelector('h2');
     if (!h2) return;
     tc.__roleMoved = 1;
+    var after = h2.nextSibling;
+    if (name) { name.classList.add('testi-name-mobile'); tc.insertBefore(name, after); }
     role.classList.add('testi-role-mobile');
-    tc.insertBefore(role, h2.nextSibling);
+    tc.insertBefore(role, name ? name.nextSibling : after);
   }
-
   initProcess(){
-    this.initTestiRoleOnMobile();
+    // componentDidMount fires once while the component is still streaming in,
+    // when these three are not attached yet. Letting that pass throw aborted
+    // the rest of initProcess, so guard it; the later full mount does the work.
+    if (this.initReviewNav) this.initReviewNav();
+    if (this.watchReviewSwiper) this.watchReviewSwiper();
+    if (this.initTestiRoleOnMobile) this.initTestiRoleOnMobile();
     const sec = document.getElementById('wpProcess');
     if (!sec || sec.__wired) return;
     sec.__wired = true;

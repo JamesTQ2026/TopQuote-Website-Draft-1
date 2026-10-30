@@ -9,6 +9,7 @@
 /* The per-panel Learn More links exist for phones; on desktop the floating
    circular button does that job. */
 .wp-more { display: none; }
+.sx-nav { display: none; }
 
 @media (max-width: 700px) {
 
@@ -37,7 +38,12 @@
   /* :not(svg):not(svg *) keeps this away from SVG internals. Chart axis labels
      are rotated with an SVG transform attribute, and transform:none !important
      stripped it, laying "Cost of cover" flat across the chart. */
-  .sc-host *:not(svg):not(svg *) {
+  /* Swiper drives its carousel with an inline transform on .swiper-wrapper,
+     and an !important declaration in a stylesheet beats a plain inline
+     style, so transform:none froze every carousel on mobile. The wrapper
+     and its slides are excluded rather than given a counter-rule, because
+     there is no way to hand the inline transform back once it is lost. */
+  .sc-host *:not(svg):not(svg *):not(.swiper-wrapper):not(.swiper-slide) {
     position: static !important;
     transform: none !important;
     inset: auto !important; left: auto !important; right: auto !important;
@@ -231,8 +237,64 @@
      trailing dot, and show a plain link under each panel's copy instead.
      ---------------------------------------------------------------------- */
   #wpBtn, #wpDot { display: none !important; }
+  /* Drop the shared photo entirely on phones and let the panels be solid
+     teal cards. The dark overlay existed only to darken that photo. */
+  #wpBg { display: none !important; }
+  /* An empty 75vh spacer inside #wpStack gives the sticky testimonials room
+     to scroll over the pinned panels on desktop. The panels are not pinned
+     on phones, so it is 633px of dead space before the contact section. */
+  #wpStack > [style*="75vh"] { display: none !important; }
+
+  /* ----------------------------------------------------------------------
+     31. Contact cards (Locations / Phone / Our Email). Rule 6 made each a
+     centred column, stacking the icon above its text. Icon on the left with
+     the text beside it reads better and is far shorter.
+     ---------------------------------------------------------------------- */
+  #contactSection [style*="border-radius:14px"],
+  /* ----------------------------------------------------------------------
+     32. CTA section. Its teal gradient is an absolutely positioned overlay,
+     and rule 6 made it static, collapsing it to 390x0 - which is why the
+     wash that shows on desktop was missing on phones. Restore it, and
+     left-align the copy and buttons instead of centring them.
+     ---------------------------------------------------------------------- */
+  .cta-fixed > div:first-child {
+    position: absolute !important;
+    left: 0 !important; top: 0 !important;
+    width: 100% !important; height: 100% !important;
+  }
+  .cta-fixed > div:nth-child(2) { position: relative !important; z-index: 1 !important; }
+  .cta-fixed { text-align: left !important; }
+
+  /* ----------------------------------------------------------------------
+     33. Footer. Rule 6 centred every block in it and stacked the social
+     icons one per line. Align the lot left and put the icons back in a row.
+     ---------------------------------------------------------------------- */
+  footer { text-align: left !important; }
+  footer [style*="display:flex"][style*="flex"],
+  footer [style*="display: flex"][style*="flex"] { align-items: flex-start !important; }
+  footer [style*="display:flex"][style*="gap:12px"],
+  footer [style*="display: flex"][style*="gap: 12px"],
+  footer [style*="display:flex"][style*="gap: 12px"],
+  footer [style*="display: flex"][style*="gap:12px"],
+  footer .foot-badges.foot-badges {
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    flex-wrap: wrap !important;
+  }
+  .cta-fixed [style*="display:flex"],
+  .cta-fixed [style*="display: flex"] { align-items: flex-start !important; }
+
+  #contactSection [style*="border-radius: 14px"] {
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 16px !important;
+    text-align: left !important;
+  }
+  #wpBand { background: #0C6A6B !important; }
+  #wpRow .wp-panel .wp-pov { display: none !important; }
   #wpRow .wp-panel .wp-pteal {
-    background: linear-gradient(180deg, rgba(15,140,141,.92) 0%, rgba(11,92,93,.96) 100%) !important;
+    background: linear-gradient(180deg, #16908F 0%, #0C6A6B 100%) !important;
   }
   .wp-more {
     display: inline-flex !important;
@@ -256,6 +318,21 @@
      floating in the middle above left-aligned text. Align them left.
      ---------------------------------------------------------------------- */
   .sc-host #testiContent { align-items: flex-start !important; }
+  /* Same for the hero's Kids Pass / Feefo badges: rule 6 centred them at
+     88px while the hero text starts at 31px. Line them up with the copy. */
+  .sc-host .hero-badges { align-items: flex-start !important; }
+
+  /* ----------------------------------------------------------------------
+     30. Review carousel arrows. Swiping already works (allowTouchMove is
+     on), but nothing signals it, so give phones the same prev/next pair
+     the testimonials section uses.
+     ---------------------------------------------------------------------- */
+  .sx-nav {
+    display: flex !important;
+    gap: 14px !important;
+    justify-content: center !important;
+    margin-top: 24px !important;
+  }
   /* The heading carries two hard <br>s sized for the desktop column. At
      310px each segment also wrapped, giving five ragged lines with 'our'
      alone. Let it flow and balance instead. */
@@ -266,8 +343,13 @@
     text-wrap: pretty;   /* measured: 3 even lines, vs 5 with an orphaned 'our' */
   }
   /* the label moved up under the title by initTestiRoleOnMobile() */
+  #testiContent > .testi-name-mobile {
+    margin: 14px 0 2px !important;
+    text-align: left !important;
+    font-size: 19px !important;
+  }
   #testiContent > .testi-role-mobile {
-    margin: 0 0 14px !important;
+    margin: 0 0 18px !important;
     text-align: left !important;
     font-size: 14px !important;
   }
@@ -287,13 +369,14 @@
     width: min(300px, calc(100vw - 80px)) !important;
     max-width: min(300px, calc(100vw - 80px)) !important;
   }
+  /* No side padding here: the card's outer panel already carries a 6px
+     frosted edge, and overriding it to 18px turned that edge into a thick
+     grey band and pulled the photo away from the card's sides. */
   .swiper-slide > * {
     width: 100% !important;
     max-width: 100% !important;
     text-align: center !important;
     align-items: center !important;
-    padding-left: 18px !important;
-    padding-right: 18px !important;
   }
   .swiper-slide img {
     width: 100% !important;
@@ -446,7 +529,13 @@
     width: 24px !important; height: 24px !important;
     flex: 0 0 24px !important;
   }
-  #cfForm label { min-height: 44px !important; display: flex !important; align-items: center !important; }
+  #cfForm label {
+    min-height: 44px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;   /* rule 6 centred the tick box */
+    text-align: left !important;
+  }
   #cfSubmit { width: 100% !important; }
 
   /* ----------------------------------------------------------------------
