@@ -360,6 +360,26 @@
   .testi-attrib-row-empty { display: none !important; }
 
   /* ----------------------------------------------------------------------
+     53. FAQ headers. Each is a space-between row holding the question and
+     its + toggle, and rule 6 stacked it into a centred column, so the plus
+     ended up on its own line under the middle of the question.
+     ---------------------------------------------------------------------- */
+  .sc-host .faq-q {
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    text-align: left !important;
+  }
+  .sc-host .faq-plus { flex: none !important; }
+
+  /* ----------------------------------------------------------------------
+     54. Review cards ran 282px to 333px because each slide sizes to its own
+     quote. Stretch the row so every card matches the tallest.
+     ---------------------------------------------------------------------- */
+  #rvSwiper .swiper-wrapper { align-items: stretch !important; }
+  #rvSwiper .swiper-slide > * { height: 100% !important; }
+
+  /* ----------------------------------------------------------------------
      51. Social rows anywhere on the page, not just in the footer. Critical
      Illness and Income Protection carry a second cluster outside <footer>,
      which the footer-scoped rule never reached, so those stayed stacked.
@@ -394,8 +414,15 @@
      gives it room and the gradient still reads.
      ---------------------------------------------------------------------- */
   .sc-host .ci-bar {
+    min-height: 260px !important;
+    padding: 28px !important;
+    justify-content: flex-end !important;
+  }
+  /* figure and caption at the top, source line on the bottom edge */
+  .sc-host .ci-bar > div {
+    height: 100% !important;
     min-height: 0 !important;
-    padding: 32px 28px !important;
+    justify-content: space-between !important;
   }
 
   /* ----------------------------------------------------------------------
@@ -403,8 +430,8 @@
      the pair into a centred column, so the mark floated above its own word
      in the middle of a left-aligned block.
      ---------------------------------------------------------------------- */
-  .sc-host [style*="display:flex"][style*="gap:9px"],
-  .sc-host [style*="display: flex"][style*="gap: 9px"] {
+  .sc-host [style*="display:flex"][style*="gap:9px"][style*="margin-bottom:16px"],
+  .sc-host [style*="display: flex"][style*="gap: 9px"][style*="margin-bottom: 16px"] {
     flex-direction: row !important;
     align-items: center !important;
     justify-content: flex-start !important;
