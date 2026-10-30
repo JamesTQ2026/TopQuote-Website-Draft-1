@@ -360,6 +360,25 @@
   .testi-attrib-row-empty { display: none !important; }
 
   /* ----------------------------------------------------------------------
+     47. 'Need Help?' contact rows in the footer. Each is a span laid out as
+     an icon beside its text, and rule 6 turned it into a centred column, so
+     the pin, phone and envelope floated above their own lines. Back to a
+     row, icon first, lined up with the rest of the column.
+     ---------------------------------------------------------------------- */
+  .sc-host footer span[style*="display:flex"][style*="gap:10px"],
+  .sc-host footer span[style*="display: flex"][style*="gap: 10px"] {
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    text-align: left !important;
+  }
+  .sc-host footer span[style*="display:flex"][style*="gap:10px"] > svg,
+  .sc-host footer span[style*="display: flex"][style*="gap: 10px"] > svg {
+    flex: none !important;
+    margin-top: 3px !important;
+  }
+
+  /* ----------------------------------------------------------------------
      46. Hero button cluster and the round quote link. Rule 6 centres every
      flex box, so on the product pages the two buttons sat in the middle of
      a left-aligned column of copy and the circle followed them. The home
