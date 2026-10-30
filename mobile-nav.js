@@ -3,6 +3,11 @@
 (function () {
   if (window.__mnav) return; window.__mnav = 1;
 
+  /* When this page is embedded in an iframe (the quote journey on /get-a-quote),
+     the parent page already shows a hamburger. Building a second one here stacks
+     two burgers in the corner, so bail out and let the parent's nav be the one. */
+  try { if (window.self !== window.top) return; } catch (e) { return; }
+
   function ready(fn) {
     if (document.readyState !== 'loading') fn();
     else document.addEventListener('DOMContentLoaded', fn);

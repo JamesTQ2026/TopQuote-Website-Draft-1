@@ -61,4 +61,140 @@
   .sc-host [style*="border-radius: 50%"][style*="position: absolute"] {
     display: none !important;
   }
+
+  /* 8. Hard cap. Once rule 6 un-pins a scroll section, children that were
+        absolutely positioned at a fixed desktop width (e.g. width:458px) rejoin
+        the normal flow and push their ancestors wider than the screen. Because
+        rule 1 clips overflow, that content is silently CUT OFF rather than
+        scrollable, so cap everything to the viewport. */
+  .sc-host, .sc-host * { max-width: 100vw !important; }
+
+  /* 9. Home page "about" media block: a fixed 458px image/video stack. */
+  #aboutInner, #aboutMedia, #aboutImg1 { width: 100% !important; max-width: 100% !important; }
+  .about-vid {
+    position: static !important;
+    width: 100% !important; height: 100% !important;
+    left: auto !important; top: auto !important;
+  }
+
+  /* 10. Wide comparison tables keep their min-width and scroll sideways inside
+         a wrapper, rather than being clipped by rule 1. The table itself must
+         be exempt from rule 8, or it would be squashed instead of scrolling. */
+  .tq-table-scroll {
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+  .tq-table-scroll table, .tq-table-scroll table * { max-width: none !important; }
+
+  /* ----------------------------------------------------------------------
+     11. HERO. Rule 6 flattens everything in a scroll section to position:static,
+     which breaks the hero: its background image, its darkening overlay and its
+     heading are SIBLINGS meant to be layered, so they stacked up instead
+     (image strip, then header, then a tall slab of black). Put the layering
+     back: image and overlay fill the panel, content sits on top.
+     ---------------------------------------------------------------------- */
+  #heroPanel {
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-end !important;
+    min-height: 88vh !important;
+    height: auto !important;
+    overflow: hidden !important;
+  }
+  #heroPanel > #heroImg {
+    position: absolute !important;
+    left: 0 !important; top: 0 !important;
+    width: 100% !important; height: 100% !important;
+    object-fit: cover !important;
+    object-position: 50% 28% !important;
+    z-index: 0 !important;
+  }
+  #heroPanel > #heroDarken {
+    position: absolute !important;
+    display: block !important;
+    left: 0 !important; top: 0 !important;
+    width: 100% !important; height: 100% !important;
+    background: linear-gradient(180deg, rgba(4,19,13,.30) 0%, rgba(4,19,13,.62) 48%, rgba(4,19,13,.88) 100%) !important;
+    z-index: 1 !important;
+  }
+  #heroPanel > header { position: relative !important; z-index: 5 !important; }
+  #heroPanel #heroBand { position: relative !important; z-index: 4 !important; }
+
+  /* Header on one line: logo left, room for the fixed hamburger on the right.
+     The phone number is what forces the row to wrap, and it is already in the
+     menu and the footer, so drop it from the bar only. */
+  #heroPanel > header {
+    flex-direction: row !important;      /* rule 6 turns every flex box into a centred column */
+    align-items: center !important;
+    justify-content: space-between !important;
+    flex-wrap: nowrap !important;
+    width: 100% !important;
+    padding: 16px 20px !important;
+    min-height: 0 !important;
+  }
+  #heroPanel > header > * { flex: 0 0 auto !important; }
+  header .tq-hdr-cta a[href^="tel:"] { display: none !important; }
+  header .tq-hdr-cta {
+    flex-direction: row !important;
+    align-items: center !important;
+    width: auto !important;
+    margin-right: 58px !important;   /* clear the fixed hamburger at the right edge */
+  }
+
+  /* Hero text: readable sizes, sensible rhythm, nothing pinned. */
+  /* ----------------------------------------------------------------------
+     12. QUOTE FORM. Rule 6 zeroes the height of anything whose inline style
+     mentions 100vh. The quote journey is an iframe sized
+     height:calc(100vh - 66px), so on phones it collapsed to the browser's
+     default 300x150 box and the form was unusable. Give it back a real size.
+     ---------------------------------------------------------------------- */
+  #qzExpWrap { width: 100% !important; max-width: 100% !important; }
+  #qzExpWrap iframe,
+  .sc-host iframe[style*="100vh"] {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 100vh !important;
+    min-height: 560px !important;
+    border: 0 !important;
+  }
+
+  #heroBand { padding: 0 20px 36px !important; gap: 18px !important; }
+  #heroTitleWrap { margin: 0 !important; }
+  #heroTitleWrap, #heroPara { width: auto !important; max-width: 100% !important; }
+  #heroPara { font-size: 16px !important; line-height: 1.6 !important; }
+  #heroOcta { align-self: flex-start !important; margin: 4px 0 0 !important; }
+
+  /* ----------------------------------------------------------------------
+     13. CONTACT FORM. On a 390px screen the form sat at 286px with its name
+     and email fields inset to 231px, so inputs were narrower than the button
+     below them and the whole thing read as broken. Use the width available,
+     and make the consent checkboxes a real tap target (they were 22px).
+     ---------------------------------------------------------------------- */
+  /* The form is nested in section(24) > cf-shell(16) > card(28) padding, which
+     ate 136px of a 390px screen. Keep one gutter and one card inset. */
+  .cf-shell { padding-left: 0 !important; padding-right: 0 !important; }
+  .cf-shell > div { padding-left: 18px !important; padding-right: 18px !important; }
+  #cfForm { width: 100% !important; max-width: 100% !important; }
+  #cfForm .cf-row {
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    gap: 14px !important;
+  }
+  #cfForm .cf-field { width: 100% !important; max-width: 100% !important; }
+  #cfForm input:not([type="checkbox"]):not([type="radio"]),
+  #cfForm textarea,
+  #cfForm select {
+    width: 100% !important;
+    max-width: 100% !important;
+    font-size: 16px !important;        /* stops iOS zooming in on focus */
+  }
+  #cfForm input[type="checkbox"] {
+    width: 24px !important; height: 24px !important;
+    flex: 0 0 24px !important;
+  }
+  #cfForm label { min-height: 44px !important; display: flex !important; align-items: center !important; }
+  #cfSubmit { width: 100% !important; }
 }
