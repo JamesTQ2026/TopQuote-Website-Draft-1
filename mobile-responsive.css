@@ -360,6 +360,33 @@
   .testi-attrib-row-empty { display: none !important; }
 
   /* ----------------------------------------------------------------------
+     51. Social rows anywhere on the page, not just in the footer. Critical
+     Illness and Income Protection carry a second cluster outside <footer>,
+     which the footer-scoped rule never reached, so those stayed stacked.
+     Matching on a child link identifies a social row wherever it sits.
+     ---------------------------------------------------------------------- */
+  .sc-host [style*="display:flex"]:has(> a[href*="facebook.com"]),
+  .sc-host [style*="display: flex"]:has(> a[href*="facebook.com"]) {
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    flex-wrap: wrap !important;
+  }
+
+  /* ----------------------------------------------------------------------
+     52. Cover-type cards. These are 340px tall with the heading and body
+     pushed apart by space-between, which fills a desktop column evenly. On
+     a phone that left a wide gap between the title and its own paragraph.
+     Group them together and centre the pair in the card.
+     ---------------------------------------------------------------------- */
+  .sc-host [style*="justify-content:space-between"][style*="min-height:340px"],
+  .sc-host [style*="justify-content: space-between"][style*="min-height: 340px"] {
+    justify-content: center !important;
+    gap: 14px !important;
+    min-height: 0 !important;
+  }
+
+  /* ----------------------------------------------------------------------
      49. The stat panel is 450px tall with its content pinned to the bottom,
      which frames a short figure nicely in a desktop column. On a phone the
      copy is the same few lines in a much narrower box, so the card opened
