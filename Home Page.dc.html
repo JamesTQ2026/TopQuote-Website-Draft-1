@@ -118,7 +118,18 @@
   #sx-stats .swiper-slide-active{opacity:1;}
   #sx-stats .swiper-slide-prev,#sx-stats .swiper-slide-next{opacity:.62;}
   #sx-stats .sx-shadow{transition:box-shadow .4s ease, transform .4s ease;}
-  #sx-stats .swiper-slide-active .sx-shadow{box-shadow:0 40px 90px rgba(8,30,22,.5);}
+  /* The slide glide used the browser default 'ease' over 1.4s, which lands
+     soft and late. A short easeOutQuint leaves quickly and settles clean. */
+  #sx-stats-swiper .swiper-wrapper{transition-timing-function:cubic-bezier(.22,1,.36,1);}
+  .sx-nav-btn{transition:transform .18s cubic-bezier(.22,1,.36,1),box-shadow .18s ease,background .18s ease;}
+  .sx-nav-btn:active{transform:scale(.93);}
+  #sxNext:hover{background:#19a8a9;}
+  #sxPrev:hover{box-shadow:0 10px 24px rgba(20,40,35,.14);}
+  @media (prefers-reduced-motion:reduce){
+    #sx-stats-swiper .swiper-wrapper{transition-duration:1ms !important;}
+    .sx-nav-btn{transition:none;}
+  }
+  #sx-stats .swiper-slide-active .sx-shadow{box-shadow:0 18px 40px rgba(8,30,22,.16);}
   @media (prefers-reduced-motion:reduce){
     #sx-stats{opacity:1 !important;transform:none !important;}
     #sx-stats .sx-glow{animation:none !important;}
@@ -347,7 +358,7 @@
         <sc-for list="{{ stats }}" as="s" hint-placeholder-count="6">
           <div class="swiper-slide">
             <sc-if value="{{ s.isStat }}" hint-placeholder-val="{{ true }}">
-            <div style="padding:6px;border-radius:28px;background:rgba(8,30,22,.05);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);display:flex;flex-direction:column;justify-content:space-between;height:480px;">
+            <div style="padding:0;border-radius:23px;background:transparent;display:flex;flex-direction:column;justify-content:space-between;height:480px;">
               <div class="sx-shadow" style="background:#0C1F19;border:1px solid rgba(255,255,255,.06);border-radius:23px;padding:32px;display:flex;flex-direction:column;justify-content:space-between;flex:1;">
                 <div>
                   <span style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#fff;opacity:.8;">{{ s.title }}</span>
@@ -363,9 +374,9 @@
             </div>
             </sc-if>
             <sc-if value="{{ s.isTesti }}" hint-placeholder-val="{{ false }}">
-            <div style="padding:6px;border-radius:28px;background:rgba(8,30,22,.05);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);display:flex;flex-direction:column;height:480px;">
+            <div style="padding:0;border-radius:23px;background:transparent;display:flex;flex-direction:column;height:480px;">
               <div class="sx-shadow" style="background:#ECEDF1;border:1px solid rgba(8,30,22,.06);border-radius:23px;overflow:hidden;display:flex;flex-direction:column;flex:1;">
-                <div style="position:relative;flex:1;min-height:0;background:#ECEDF1;">
+                <div class="sx-testi-photo" style="position:relative;flex:1;min-height:0;background:#ECEDF1;">
                   <img class="sx-testi-img" src="{{ s.poster }}" alt="TopQuote customer" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;">
                 </div>
                 <div style="height:3px;background:#1EBABB;flex:none;"></div>
@@ -384,8 +395,8 @@
       </div>
     </div>
         <div class="sx-nav">
-          <button id="sxPrev" style="width:58px;height:52px;border-radius:10px;border:none;background:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 6px 18px rgba(20,40,35,.08);transition:transform .2s ease;" aria-label="Previous review"><i data-lucide="arrow-left" style="width:20px;height:20px;color:#173B33;"></i></button>
-          <button id="sxNext" style="width:58px;height:52px;border-radius:10px;border:none;background:#1EBABB;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:transform .2s ease,background .2s ease;" aria-label="Next review"><i data-lucide="arrow-right" style="width:20px;height:20px;color:#fff;"></i></button>
+          <button id="sxPrev" class="sx-nav-btn" style="width:58px;height:52px;border-radius:10px;border:none;background:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 6px 18px rgba(20,40,35,.08);transition:transform .2s ease;" aria-label="Previous review"><i data-lucide="arrow-left" style="width:20px;height:20px;color:#173B33;"></i></button>
+          <button id="sxNext" class="sx-nav-btn" style="width:58px;height:52px;border-radius:10px;border:none;background:#1EBABB;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:transform .2s ease,background .2s ease;" aria-label="Next review"><i data-lucide="arrow-right" style="width:20px;height:20px;color:#fff;"></i></button>
         </div>
   </section>
 
@@ -1102,9 +1113,21 @@ class Component extends DCLogic {
     if (!h2) return;
     tc.__roleMoved = 1;
     var after = h2.nextSibling;
-    if (name) { name.classList.add('testi-name-mobile'); tc.insertBefore(name, after); }
-    role.classList.add('testi-role-mobile');
-    tc.insertBefore(role, name ? name.nextSibling : after);
+    // Move the whole attribution group -- avatar, name and role together --
+    // rather than the two text nodes alone, which left the avatar stranded
+    // next to a decorative quote mark at the bottom of the block.
+    var avatar = document.getElementById('testiAvatar');
+    var group = avatar && avatar.parentElement;
+    var row = group && group.parentElement;
+    if (group) {
+      group.classList.add('testi-attrib-mobile');
+      tc.insertBefore(group, after);
+      if (row && !row.querySelector('#testiName')) row.classList.add('testi-attrib-row-empty');
+    } else {
+      if (name) { name.classList.add('testi-name-mobile'); tc.insertBefore(name, after); }
+      role.classList.add('testi-role-mobile');
+      tc.insertBefore(role, name ? name.nextSibling : after);
+    }
   }
   initProcess(){
     // componentDidMount fires once while the component is still streaming in,
@@ -1188,8 +1211,8 @@ class Component extends DCLogic {
       el.__sw = new Swiper(el, {
         effect: 'coverflow', grabCursor: true, slidesPerView: 'auto',
         centeredSlides: true, loop: true, spaceBetween: 32,
-        coverflowEffect: { rotate: 30, stretch: 0, depth: 100, modifier: 1, slideShadows: false },
-        speed: 1400, autoplay: { delay: 3200, disableOnInteraction: false, pauseOnMouseEnter: true },
+        coverflowEffect: { rotate: 22, stretch: 0, depth: 120, modifier: 1, slideShadows: false },
+        speed: 520, autoplay: false,
         observer: false, observeParents: false, updateOnWindowResize: true
       });
       el.__sw.on('slideChange', () => this.updateStatsVideos());

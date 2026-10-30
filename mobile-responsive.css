@@ -43,7 +43,10 @@
      style, so transform:none froze every carousel on mobile. The wrapper
      and its slides are excluded rather than given a counter-rule, because
      there is no way to hand the inline transform back once it is lost. */
-  .sc-host *:not(svg):not(svg *):not(.swiper-wrapper):not(.swiper-slide) {
+  .sc-host *:not(svg):not(svg *):not(:where(
+      .swiper-wrapper, .swiper-slide,
+      .sx-testi-photo, .sx-testi-img,
+      .sx-nav-btn)) {
     position: static !important;
     transform: none !important;
     inset: auto !important; left: auto !important; right: auto !important;
@@ -276,6 +279,46 @@
   footer [style*="display: flex"][style*="gap: 12px"],
   footer [style*="display:flex"][style*="gap: 12px"],
   footer [style*="display: flex"][style*="gap:12px"],
+
+  /* ----------------------------------------------------------------------
+     34. Review cards. Rule 6 stripped position:relative off the photo box
+     and position:absolute off the photo, so once the image loaded it kept
+     its own aspect ratio, grew past its share of the card and spilled over
+     the Trustpilot line beneath it. Two class selectors clear rule 6's
+     (0,1,2) and put the original containment back.
+     ---------------------------------------------------------------------- */
+  .sc-host .sx-testi-photo {
+    position: relative !important;
+    overflow: hidden !important;
+  }
+  .sc-host .sx-testi-img {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important; height: 100% !important;
+    object-fit: cover !important;
+  }
+
+  /* 35. The carousel arrows had no press feedback at all, because rule 6
+     removed the transform and transition they were given inline. A tap sat
+     dead until the slide moved. */
+  .sc-host .sx-nav-btn {
+    transition: transform .18s cubic-bezier(.22,1,.36,1), box-shadow .18s ease, background .18s ease !important;
+  }
+  .sc-host .sx-nav-btn:active { transform: scale(.93) !important; }
+
+  /* 36. The attribution block (avatar, name, role) is moved up under the
+     heading on phones. Keep it a left-aligned row; rule 6's flex handling
+     would otherwise stack and centre it. */
+  .sc-host .testi-attrib-mobile {
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    margin: 10px 0 18px !important;
+  }
+  .sc-host .testi-attrib-mobile * { text-align: left !important; }
+  /* what is left of the old row is a lone decorative quote mark */
+  .testi-attrib-row-empty { display: none !important; }
+
   footer .foot-badges.foot-badges {
     flex-direction: row !important;
     align-items: center !important;
