@@ -23,7 +23,6 @@
 </style>
 <script src="mobile-nav.js" defer></script>
 <script src="cookie-banner.js" defer></script>
-<script defer data-domain="top-quote.co.uk" src="https://plausible.io/js/script.js"></script>
 <link rel="stylesheet" href="/mobile-responsive.css">
 <link rel="canonical" href="https://www.top-quote.co.uk/cookie-policy">
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -138,7 +137,7 @@
 <p>This policy explains what this website stores on your device, what it loads from other companies, and how you can change your mind at any time. It covers cookies and the technologies the law treats the same way, such as local storage.</p>
 
 <h2>The short version</h2>
-<p>We store one thing on your device: the choice you make in our cookie banner. With your permission we use Google Analytics to measure how the site is used, and nothing is switched on until you say so. We also keep plain page counts with Plausible, which sets no cookies. We run no advertising cookies and no cross-site tracking. The only third-party content that sets cookies is the Google map of our office, and we do not load it unless you tell us to.</p>
+<p>We store one thing on your device: the choice you make in our cookie banner. With your permission we use Google Analytics to measure how the site is used. Nothing is switched on until you say so, and nothing is pre-ticked. We run no advertising cookies and no cross-site tracking. The only third-party content that sets cookies is the Google map of our office, and we do not load it unless you tell us to.</p>
 
 <h2>What we store</h2>
 <h3>Strictly necessary</h3>
@@ -146,31 +145,7 @@
 
 <h3>Analytics</h3>
 <p>With your permission we use <strong>Google Analytics 4</strong> to see which pages are read, how people arrive, and where they leave. It sets cookies on your device and sends the visit to Google, which uses it for its own purposes as well as ours, so it is not loaded at all unless you allow analytics in the banner. Refusing is one click and costs you nothing on this site.</p>
-<p>We keep Google Signals switched off, so your visit is not added to Google&rsquo;s advertising profiles, and we do not run Google Ads remarketing from it.</p>
-<p>We also count page views with <a href="https://plausible.io/privacy-focused-web-analytics" target="_blank" rel="noopener">Plausible</a>, which is a different thing: it sets no cookies, stores nothing on your device and collects nothing that identifies you, so it needs no consent. It gives us plain visitor counts whichever way you answer the banner. You can still switch it off:</p>
-<div id="an-opt" style="background:#F6F7FB;border:1px solid #E7EAF2;border-radius:12px;padding:18px 20px;margin:0 0 16px;">
-  <p style="margin:0 0 12px;"><strong>Plausible page counts:</strong> <span id="an-state">on</span></p>
-  <button id="an-btn" type="button" style="cursor:pointer;font-family:inherit;font-weight:700;font-size:15px;border:0;border-radius:999px;padding:11px 22px;background:#1EBABB;color:#0C1F19;">Turn it off</button>
-  <p style="margin:12px 0 0;font-size:14px;color:#6B7280;">Your choice is kept on this device only, in this browser.</p>
-</div>
-<script>
-(function () {
-  var KEY = "plausible_ignore";   // the opt-out Plausible itself reads
-  var state = document.getElementById("an-state");
-  var btn = document.getElementById("an-btn");
-  function read() { try { return localStorage.getItem(KEY) === "true"; } catch (e) { return false; } }
-  function paint() {
-    var off = read();
-    state.textContent = off ? "off" : "on";
-    btn.textContent = off ? "Turn it back on" : "Turn it off";
-  }
-  btn.addEventListener("click", function () {
-    try { read() ? localStorage.removeItem(KEY) : localStorage.setItem(KEY, "true"); } catch (e) {}
-    paint();
-  });
-  paint();
-})();
-</script>
+<p>We keep Google Signals switched off, so your visit is not added to Google&rsquo;s advertising profiles, and we do not run Google Ads remarketing from it. If you later change your mind, the Cookie settings link in the footer of any page withdraws your permission and deletes the cookies it set.</p>
 
 <h3>Advertising and social tracking</h3>
 <p>None. There are no advertising cookies, conversion pixels or social media trackers on this site.</p>

@@ -12,12 +12,6 @@
      embeds     The Google Maps frames on the home page and Find Us. Third party
                 and not needed to deliver the page, so they stay unloaded too.
 
-   Plausible is deliberately NOT gated here. It sets no cookies and reads nothing
-   from the device, so the consent rule is not engaged; visitors are told about
-   it and can switch it off from the Cookie Policy, which is what the rules ask
-   for instead. If the Plausible subscription is ever dropped, remove its script
-   tag from the pages and its paragraph from the policy in the same change.
-
    Refusing is one click, in a button of the same size and weight as accepting.
    Nothing is pre-ticked.
 
