@@ -520,6 +520,47 @@
   }
 
   /* ----------------------------------------------------------------------
+     79. Kids Pass header and hero. This page has no .sc-host wrapper, being
+     a plain .html rather than a .dc.html, so none of the header work above
+     reached it: the bar stayed 103px tall and its quote button ran from
+     216px to 351px straight under the menu button at 315px. Its button is
+     a.abtn where every other page uses .tq-hdr-cta, which is what makes
+     these selectors specific to this page.
+     ---------------------------------------------------------------------- */
+  header[style*="justify-content:space-between"] {
+    padding: 14px 16px !important;
+    gap: 12px !important;
+  }
+  header[style*="justify-content:space-between"] > a:first-child img {
+    height: 32px !important;
+  }
+  header > a.abtn {
+    margin-right: 58px !important;   /* 44px menu button + 14px gap */
+    padding: 0 14px !important;
+    height: 40px !important;
+    font-size: 13.5px !important;
+    white-space: nowrap !important;
+  }
+
+  /* The phone render is the point of this hero, so it is given real size and
+     the section gains room at the bottom for it to sit in rather than over
+     the copy. */
+  img[src*="kidspass-phone"] {
+    width: 270px !important;
+    height: auto !important;
+    left: auto !important;
+    top: auto !important;
+    right: -28px !important;
+    bottom: 0 !important;
+    transform: none !important;
+    z-index: 0 !important;
+    max-width: none !important;
+  }
+  section:has(img[src*="kidspass-phone"]) {
+    padding-bottom: 180px !important;
+  }
+
+  /* ----------------------------------------------------------------------
      78. Blog pagination. Rule 6 turns the row into a column, so the page
      numbers ran down the screen one per line. Eleven buttons at 44px will
      not fit across a phone, so they wrap onto a second line and shrink a
@@ -580,23 +621,6 @@
   [style*="display:flex"]:has(> [style*="width:38px"][style*="border-radius:50%"]),
   [style*="display: flex"]:has(> [style*="width: 38px"][style*="border-radius: 50%"]) {
     align-items: center !important;
-  }
-
-  /* ----------------------------------------------------------------------
-     74. Kids Pass hero. The phone render is a 729px desktop image centred
-     over the hero, so on a phone it covered the heading, the copy and both
-     buttons. Shrink it and tuck it into the bottom right corner, behind the
-     content rather than over it.
-     ---------------------------------------------------------------------- */
-  img[src*="kidspass-phone"] {
-    width: 185px !important;
-    height: auto !important;
-    left: auto !important;
-    right: -8px !important;
-    bottom: 0 !important;
-    transform: none !important;
-    z-index: 0 !important;
-    max-width: none !important;
   }
 
   /* ----------------------------------------------------------------------
