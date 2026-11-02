@@ -11,6 +11,12 @@
 .wp-more { display: none; }
 .sx-nav { display: none; }
 
+/* The Reconnect family photo appears twice in the markup: in the Update
+   Details split for wide screens, and again after the review section for
+   phones. The phone copy is hidden everywhere until the mobile block below
+   swaps the pair over. */
+.rc-walk-phone { display: none; }
+
 /* Ratings rows on the form pages pair a star cluster with its text. The
    Trustpilot tiles measure 132px and the Feefo glyph stars 113px, so the two
    text blocks began 19px apart. Pin the glyph row to the tiles' width, and to
@@ -488,11 +494,11 @@
      The partnership is still stated in the copy and in the footer.
      ---------------------------------------------------------------------- */
   .sc-host img[src*="lg-logo"] { display: none !important; }
-  .sc-host .reveal:has(img[src*="lg-logo"]),
-  .sc-host [style*="height:560px"]:has(img[src*="lg-logo"]),
-  .sc-host [style*="height: 560px"]:has(img[src*="lg-logo"]) {
-    display: none !important;
-  }
+  /* The wrapper is matched by its own class, not by what it contains: the
+     same mark appears in the eyebrow above the update form, and a
+     ":has(img)" selector hid that whole block -- form included -- on every
+     phone. */
+  .sc-host .lg-envelope { display: none !important; }
 
   /* ----------------------------------------------------------------------
      70. Filter pills and other wrap-on-purpose rows. These already ask to
@@ -538,6 +544,14 @@
      so it alone spanned the full width while every other line in the hero
      sat at 24px. Same gutter, and a size that still reads at 327px rather
      than the 20px meant for a 400px column. */
+  /* ----------------------------------------------------------------------
+     82. The Update Details photo reads as a lead-in to a form on a wide
+     screen, where it sits beside it. Stacked on a phone it just delays the
+     form, so there it comes after the review section instead.
+     ---------------------------------------------------------------------- */
+  .sc-host .rc-walk-wide { display: none !important; }
+  .sc-host .rc-walk-phone { display: block !important; }
+
   .sc-host .rc-hero-note {
     padding-left: 24px !important;
     padding-right: 24px !important;
