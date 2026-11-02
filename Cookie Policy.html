@@ -23,6 +23,7 @@
 </style>
 <script src="mobile-nav.js" defer></script>
 <script src="cookie-banner.js" defer></script>
+<script defer data-domain="top-quote.co.uk" src="https://plausible.io/js/script.js"></script>
 <link rel="stylesheet" href="/mobile-responsive.css">
 <link rel="canonical" href="https://www.top-quote.co.uk/cookie-policy">
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -137,14 +138,38 @@
 <p>This policy explains what this website stores on your device, what it loads from other companies, and how you can change your mind at any time. It covers cookies and the technologies the law treats the same way, such as local storage.</p>
 
 <h2>The short version</h2>
-<p>We store one thing on your device: the choice you make in our cookie banner. We run no analytics, no advertising and no tracking of any kind. The only third-party content that sets cookies is the Google map of our office, and we do not load it unless you tell us to.</p>
+<p>We store one thing on your device: the choice you make in our cookie banner. We count page views with Plausible, which sets no cookies and collects nothing personal, and you can switch that off below. We run no advertising and no tracking of any kind. The only third-party content that sets cookies is the Google map of our office, and we do not load it unless you tell us to.</p>
 
 <h2>What we store</h2>
 <h3>Strictly necessary</h3>
 <p>One item of local storage, <code>tq-cookie-consent</code>, recording whether you allowed embedded content and when you said so. It exists only to honour that choice, so it is kept whichever way you answer and needs no consent of its own. We ask again after about six months so your choice stays current.</p>
 
 <h3>Analytics</h3>
-<p>None. There is no analytics tool, tag manager or measurement script anywhere on this site, so nothing counts your visit or builds a picture of it. Since 5 February 2026 some first-party analytics may be used in the UK without consent, where visitors are told about it and can object, but we rely on no such exemption because we do not use analytics at all. If that ever changes we will update this policy and ask you first.</p>
+<p>We count page views using <a href="https://plausible.io/privacy-focused-web-analytics" target="_blank" rel="noopener">Plausible</a>, which tells us how many people read each page and which site they came from. It sets no cookies, stores nothing on your device, and collects nothing that identifies you: no profile is built, and nothing follows you to other sites. The figures are counts, not people.</p>
+<p>Because nothing is stored on or read from your device, this does not need your consent. What the rules do require is that we tell you and let you opt out, so:</p>
+<div id="an-opt" style="background:#F6F7FB;border:1px solid #E7EAF2;border-radius:12px;padding:18px 20px;margin:0 0 16px;">
+  <p style="margin:0 0 12px;"><strong>Counting page views:</strong> <span id="an-state">on</span></p>
+  <button id="an-btn" type="button" style="cursor:pointer;font-family:inherit;font-weight:700;font-size:15px;border:0;border-radius:999px;padding:11px 22px;background:#1EBABB;color:#0C1F19;">Turn it off</button>
+  <p style="margin:12px 0 0;font-size:14px;color:#6B7280;">Your choice is kept on this device only, in this browser.</p>
+</div>
+<script>
+(function () {
+  var KEY = "plausible_ignore";   // the opt-out Plausible itself reads
+  var state = document.getElementById("an-state");
+  var btn = document.getElementById("an-btn");
+  function read() { try { return localStorage.getItem(KEY) === "true"; } catch (e) { return false; } }
+  function paint() {
+    var off = read();
+    state.textContent = off ? "off" : "on";
+    btn.textContent = off ? "Turn it back on" : "Turn it off";
+  }
+  btn.addEventListener("click", function () {
+    try { read() ? localStorage.removeItem(KEY) : localStorage.setItem(KEY, "true"); } catch (e) {}
+    paint();
+  });
+  paint();
+})();
+</script>
 
 <h3>Advertising and social tracking</h3>
 <p>None. There are no advertising cookies, conversion pixels or social media trackers on this site.</p>

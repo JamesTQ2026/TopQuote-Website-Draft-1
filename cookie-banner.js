@@ -7,10 +7,12 @@
      - Google Maps embeds on the home page and Find Us. Third party and not
        necessary to deliver the page, so they stay unloaded until the visitor
        says yes.
-   There is no analytics, tag manager, advertising or social pixel anywhere on
-   the site, so there is nothing else to ask about. If any is ever added, give
-   it its own category here and gate it: do not let it ride along on the embed
-   consent, which was not given for it.
+   Plausible counts page views. It sets no cookies and reads nothing from the
+   device, so it is not gated here; visitors are told about it in the banner and
+   can switch it off from the Cookie Policy, which is what the rules ask for.
+   There is no tag manager, advertising or social pixel anywhere on the site. If
+   any is ever added, give it its own category here and gate it: do not let it
+   ride along on the embed consent, which was not given for it.
 
    COMPLIANCE: the wording shown to visitors must be approved by The Openwork
    Partnership before launch, alongside the Cookie Policy page it links to. */
@@ -130,7 +132,9 @@
     txt.style.cssText = 'flex:1 1 320px;font-size:14px;line-height:1.6;color:rgba(255,255,255,.9);';
     txt.innerHTML = 'We keep one item of local storage to remember the choice you make here, and ' +
       'nothing else by default. Our office map is loaded from Google, which sets its own cookies, ' +
-      'so it stays off unless you allow it. We use no analytics, advertising or tracking cookies. ' +
+      'so it stays off unless you allow it. We count page views with Plausible, which sets no ' +
+      'cookies and collects nothing personal, and you can switch it off in the policy. We use no ' +
+      'advertising or tracking cookies. ' +
       '<a href="/cookie-policy" style="color:#3fd3d4;text-decoration:underline;">Cookie Policy</a>.';
 
     var btns = document.createElement('div');
