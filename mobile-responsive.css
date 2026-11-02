@@ -606,14 +606,14 @@
      the grey star it drops into the flow beside it -- which is the extra
      green star appearing at the end of the row.
      ---------------------------------------------------------------------- */
-  .sc-host [style*="position:absolute"][style*="overflow:hidden"][style*="%"],
-  .sc-host [style*="position: absolute"][style*="overflow: hidden"][style*="%"] {
+  .sc-host [style*="position:absolute"][style*="overflow:hidden"][style*="width:50%"],
+  .sc-host [style*="position: absolute"][style*="overflow: hidden"][style*="width: 50%"] {
     position: absolute !important;
     left: 0 !important;
     top: 0 !important;
   }
-  .sc-host *:has(> [style*="position:absolute"][style*="overflow:hidden"][style*="%"]),
-  .sc-host *:has(> [style*="position: absolute"][style*="overflow: hidden"][style*="%"]) {
+  .sc-host *:has(> [style*="position:absolute"][style*="overflow:hidden"][style*="width:50%"]),
+  .sc-host *:has(> [style*="position: absolute"][style*="overflow: hidden"][style*="width: 50%"]) {
     position: relative !important;
   }
 
