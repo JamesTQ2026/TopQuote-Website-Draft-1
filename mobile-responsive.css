@@ -520,6 +520,21 @@
   }
 
   /* ----------------------------------------------------------------------
+     80. Hero copy blocks are held off the edges by left/right insets rather
+     than padding -- clamp(24px, 5vw, 84px) either side. Rule 6 clears every
+     inset, so on Reconnect the block spanned the full 375px with no gutter
+     at all and the heading ran to both edges. Padding gives the same 24px
+     without depending on positioning. Only this hero needs it -- the others
+     sit inside a parent that already provides the gutter, and padding them
+     too pushed About out to 48px and Consumer Duty to 68px.
+     ---------------------------------------------------------------------- */
+  .sc-host .rc-hero-copy {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* ----------------------------------------------------------------------
      79. Kids Pass header and hero. This page has no .sc-host wrapper, being
      a plain .html rather than a .dc.html, so none of the header work above
      reached it: the bar stayed 103px tall and its quote button ran from
