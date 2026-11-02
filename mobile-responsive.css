@@ -519,6 +519,24 @@
   }
 
   /* ----------------------------------------------------------------------
+     76. Reassurance lines under a form button -- a padlock beside a line of
+     small print. Rule 6 stacks the pair, so the padlock floated above the
+     text in the middle of an otherwise left-aligned column. Scoped to <p> so
+     it only catches these caption rows.
+     ---------------------------------------------------------------------- */
+  .sc-host p[style*="display:flex"][style*="gap:8px"],
+  .sc-host p[style*="display: flex"][style*="gap: 8px"] {
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    text-align: left !important;
+  }
+  .sc-host p[style*="display:flex"][style*="gap:8px"] > svg,
+  .sc-host p[style*="display: flex"][style*="gap: 8px"] > svg {
+    flex: none !important;
+  }
+
+  /* ----------------------------------------------------------------------
      75. Numbered step panels. The marker is pinned to the top of its panel,
      which looks right on one line of copy and increasingly odd as the text
      wraps to four or five. Centre it against the text it belongs to.
