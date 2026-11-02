@@ -249,7 +249,7 @@ const xml = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.s
 fs.writeFileSync(path.join(ROOT, 'sitemap.xml'), xml);
 
 fs.writeFileSync(path.join(ROOT, 'robots.txt'),
-  `User-agent: *\nAllow: /\nDisallow: /api/\nDisallow: /Mega%20Menu%20Test.dc.html\n\nSitemap: ${ORIGIN}/sitemap.xml\n`);
+  `User-agent: *\nAllow: /\nDisallow: /api/\n\nSitemap: ${ORIGIN}/sitemap.xml\n`);
 
 // canonical tags: tell Google the clean URL is the official one for each file
 let tagged = 0;
