@@ -520,6 +520,25 @@
   }
 
   /* ----------------------------------------------------------------------
+     78. Blog pagination. Rule 6 turns the row into a column, so the page
+     numbers ran down the screen one per line. Eleven buttons at 44px will
+     not fit across a phone, so they wrap onto a second line and shrink a
+     little rather than being pushed off the edge.
+     ---------------------------------------------------------------------- */
+  #blPager {
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 8px !important;
+  }
+  #blPager .pg-btn {
+    width: 38px !important;
+    height: 38px !important;
+    flex: 0 0 auto !important;
+  }
+
+  /* ----------------------------------------------------------------------
      77. The logo marquee has to be wider than the screen -- that is the
      whole point of it. Rule 8 caps everything at 100% of its parent, and
      since the track's width comes from its cards while the cards were being
