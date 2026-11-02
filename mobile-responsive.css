@@ -538,6 +538,11 @@
     padding-left: 24px !important;
     padding-right: 24px !important;
     box-sizing: border-box !important;
+    /* The block's top: 8% goes the same way as its side insets, so the
+       heading began level with the header. 82px is the gap the other hero
+       headings sit at, measured on Life Insurance, and the hero has the
+       room: its content used only 514px of 698px. */
+    padding-top: 82px !important;
   }
 
   /* The note below the button holds itself off the edges with insets too,
