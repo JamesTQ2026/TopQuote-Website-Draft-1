@@ -542,9 +542,10 @@
     padding-left: 24px !important;
     padding-right: 24px !important;
     box-sizing: border-box !important;
+    margin-top: 28px !important;
   }
   .sc-host .rc-hero-note > div {
-    font-size: 16.5px !important;
+    font-size: 18px !important;
     line-height: 1.6 !important;
   }
 
