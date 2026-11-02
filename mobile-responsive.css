@@ -86,11 +86,24 @@
         These are absolutely-positioned empty flourishes (desktop-only decoration)
         that otherwise become big floating blobs once un-pinned. Real icon-circles
         are not absolutely positioned, so they're unaffected. */
-  .sc-host [style*="border-radius:50%"][style*="position:absolute"],
-  .sc-host [style*="border-radius:50%"][style*="position: absolute"],
-  .sc-host [style*="border-radius: 50%"][style*="position:absolute"],
-  .sc-host [style*="border-radius: 50%"][style*="position: absolute"] {
+     The round CTA buttons carry a small satellite circle pinned to their
+     bottom right corner, which is part of the button, not decoration -- the
+     38px and 40px sizes single those out from the large blobs. */
+  .sc-host [style*="border-radius:50%"][style*="position:absolute"]:not([style*="width:38px"]):not([style*="width: 38px"]):not([style*="width:40px"]):not([style*="width: 40px"]),
+  .sc-host [style*="border-radius:50%"][style*="position: absolute"]:not([style*="width:38px"]):not([style*="width: 38px"]):not([style*="width:40px"]):not([style*="width: 40px"]),
+  .sc-host [style*="border-radius: 50%"][style*="position:absolute"]:not([style*="width:38px"]):not([style*="width: 38px"]):not([style*="width:40px"]):not([style*="width: 40px"]),
+  .sc-host [style*="border-radius: 50%"][style*="position: absolute"]:not([style*="width:38px"]):not([style*="width: 38px"]):not([style*="width:40px"]):not([style*="width: 40px"]) {
     display: none !important;
+  }
+  /* and the satellite keeps its corner */
+  .sc-host [style*="border-radius: 50%"][style*="width: 38px"][style*="position: absolute"],
+  .sc-host [style*="border-radius:50%"][style*="width:38px"][style*="position:absolute"],
+  .sc-host [style*="border-radius: 50%"][style*="width: 40px"][style*="position: absolute"],
+  .sc-host [style*="border-radius:50%"][style*="width:40px"][style*="position:absolute"] {
+    position: absolute !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    display: block !important;
   }
 
   /* 8. Hard cap. Once rule 6 un-pins a scroll section, children that were
@@ -417,7 +430,10 @@
      put the icon in the corner instead and let the number lead at size.
      ---------------------------------------------------------------------- */
   .sc-host [style*="gap:clamp(180px"],
-  .sc-host [style*="gap: clamp(180px"] { gap: 22px !important; }
+  .sc-host [style*="gap: clamp(180px"] {
+    gap: 22px !important;
+    margin-top: 30px !important;
+  }
   .sc-host [style*="gap: clamp(180px"] > div {
     position: relative !important;
     transform: none !important;
@@ -470,6 +486,30 @@
     flex-wrap: wrap !important;
     justify-content: flex-start !important;
     align-items: center !important;
+  }
+
+  /* ----------------------------------------------------------------------
+     71. Background layers. A panel's photo often sits on a child pinned with
+     position:absolute and inset:0 behind the caption -- the Find Us location
+     cards are built this way. Rule 6 flattens that child to a zero-height
+     box, so the photo vanishes and the card renders as an empty white
+     rectangle with white text on it. An inset:0 layer carrying a background
+     image is a fill by definition, so put it back and make whatever holds it
+     a positioning context again.
+     ---------------------------------------------------------------------- */
+  .sc-host .fu-area-img,
+  .sc-host [style*="position:absolute"][style*="inset:0"][style*="background-image"],
+  .sc-host [style*="position: absolute"][style*="inset: 0"][style*="background-image"] {
+    position: absolute !important;
+    inset: 0 !important;
+    display: block !important;
+    width: auto !important;
+    height: auto !important;
+  }
+  .sc-host .fu-area,
+  .sc-host *:has(> [style*="position:absolute"][style*="inset:0"][style*="background-image"]),
+  .sc-host *:has(> [style*="position: absolute"][style*="inset: 0"][style*="background-image"]) {
+    position: relative !important;
   }
 
   /* ----------------------------------------------------------------------
