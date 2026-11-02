@@ -75,6 +75,24 @@
   #sx-stats .sx-shadow{transition:box-shadow .4s ease, transform .4s ease;}
   #sx-stats .swiper-slide-active .sx-shadow{box-shadow:0 40px 90px rgba(8,30,22,.5);}
   @media (prefers-reduced-motion:reduce){#sx-stats .sx-glow{animation:none !important;}}
+  /* ---- insurer logo carousel -------------------------------------------
+     A marquee rather than a slider: nothing to reach for, no swipe to trap,
+     and the duplicated track means the loop never shows a seam. The edges are
+     faded so logos enter and leave instead of popping in. */
+  .pv-marquee{position:relative;overflow:hidden;padding:12px 0;
+    -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 7%,#000 93%,transparent 100%);
+            mask-image:linear-gradient(90deg,transparent 0,#000 7%,#000 93%,transparent 100%);}
+  .pv-marquee-track{display:flex;gap:18px;width:max-content;align-items:stretch;
+    animation:pvScroll 42s linear infinite;}
+  .pv-marquee:hover .pv-marquee-track,
+  .pv-marquee:focus-within .pv-marquee-track{animation-play-state:paused;}
+  /* half a gap comes off the distance so the second copy lands exactly where
+     the first one started */
+  @keyframes pvScroll{from{transform:translateX(0);}to{transform:translateX(calc(-50% - 9px));}}
+  @media (prefers-reduced-motion:reduce){
+    .pv-marquee-track{animation:none;}
+    .pv-marquee{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  }
 </style>
 <script src="cookie-banner.js"></script>
 </helmet>
@@ -142,30 +160,20 @@
     <section style="display:none;background:#ECEDF1;padding:64px 40px 74px;">
       <div style="max-width:1280px;margin:0 auto;width:100%;">
         <h2 class="arva-h" style="text-align:center;font-size:clamp(28px,3.4vw,40px);line-height:1.1;font-weight:600;color:#173B33;margin-bottom:48px;">We work with some of the UK's leading insurers</h2>
-        <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:18px;align-items:start;">
-          <div style="background:#fff;border-radius:8px;padding:34px 20px 26px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:26px;min-height:250px;box-shadow:0 16px 36px rgba(20,40,35,.08);">
-            <div style="width:100%;flex:1;display:flex;align-items:center;justify-content:center;padding:8px;"><img src="assets/logo-lg.webp" alt="Legal &amp; General" style="max-width:100%;max-height:100%;object-fit:contain;"></div>
-            <div style="font-size:15px;color:#173B33;font-weight:600;">Legal &amp; General</div>
-          </div>
-          <div style="background:#fff;border-radius:8px;padding:34px 20px 26px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:26px;min-height:250px;box-shadow:0 16px 36px rgba(20,40,35,.08);">
-            <div style="width:100%;flex:1;display:flex;align-items:center;justify-content:center;padding:8px;"><img src="assets/logo-royal-london.webp" alt="Royal London" style="max-width:100%;max-height:100%;object-fit:contain;" loading="lazy" decoding="async"></div>
-            <div style="font-size:15px;color:#173B33;font-weight:600;">Royal London</div>
-          </div>
-          <div style="background:#fff;border-radius:8px;padding:34px 20px 26px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:26px;min-height:250px;box-shadow:0 16px 36px rgba(20,40,35,.08);">
-            <div style="width:100%;flex:1;display:flex;align-items:center;justify-content:center;padding:8px;"><img src="assets/logo-aviva.webp" alt="Aviva" style="max-width:100%;max-height:100%;object-fit:contain;" loading="lazy" decoding="async"></div>
-            <div style="font-size:15px;color:#173B33;font-weight:600;">Aviva</div>
-          </div>
-          <div style="background:#fff;border-radius:8px;padding:34px 20px 26px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:26px;min-height:250px;box-shadow:0 16px 36px rgba(20,40,35,.08);">
-            <div style="width:100%;flex:1;display:flex;align-items:center;justify-content:center;padding:8px;"><img src="assets/logo-vitality.webp" alt="Vitality" style="max-width:100%;max-height:100%;object-fit:contain;" loading="lazy" decoding="async"></div>
-            <div style="font-size:15px;color:#173B33;font-weight:600;">Vitality</div>
-          </div>
-          <div style="background:#fff;border-radius:8px;padding:34px 20px 26px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:26px;min-height:250px;box-shadow:0 16px 36px rgba(20,40,35,.08);">
-            <div style="width:100%;flex:1;display:flex;align-items:center;justify-content:center;padding:8px;"><img src="assets/logo-lv.webp" alt="LV" style="max-width:100%;max-height:100%;object-fit:contain;" loading="lazy" decoding="async"></div>
-            <div style="font-size:15px;color:#173B33;font-weight:600;">LV</div>
-          </div>
-          <div style="background:#fff;border-radius:8px;padding:34px 20px 26px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:26px;min-height:250px;box-shadow:0 16px 36px rgba(20,40,35,.08);">
-            <div style="width:100%;flex:1;display:flex;align-items:center;justify-content:center;padding:8px;"><img src="assets/logo-guardian.webp" alt="Guardian" style="max-width:100%;max-height:100%;object-fit:contain;" loading="lazy" decoding="async"></div>
-            <div style="font-size:15px;color:#173B33;font-weight:600;">Guardian</div>
+        <div class="pv-marquee" id="pvMarqueeQuote" role="group" aria-label="Insurers we work with">
+          <div class="pv-marquee-track">
+            <div class="pv-card" style="flex:0 0 190px;background:#fff;border-radius:8px;padding:26px 18px 20px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:18px;min-height:168px;box-shadow:0 16px 36px rgba(20,40,35,.08);"><div style="width:100%;flex:1;display:flex;align-items:center;justify-content:center;padding:4px;"><img src="assets/logo-lg.webp" alt="Legal &amp; General" style="max-width:100%;max-height:56px;object-fit:contain;" loading="lazy" decoding="async"></div><div style="font-size:14.5px;color:#173B33;font-weight:600;text-align:center;">Legal &amp; General</div></div>
+            <div class="pv-card" style="flex:0 0 190px;background:#fff;border-radius:8px;padding:26px 18px 20px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:18px;min-height:168px;box-shadow:0 16px 36px rgba(20,40,35,.08);"><div style="width:100%;flex:1;display:flex;align-items:center;justify-content:center;padding:4px;"><img src="assets/logo-royal-london.webp" alt="Royal London" style="max-width:100%;max-height:56px;object-fit:contain;" loading="lazy" decoding="async"></div><div style="font-size:14.5px;color:#173B33;font-weight:600;text-align:center;">Royal London</div></div>
+            <div class="pv-card" style="flex:0 0 190px;background:#fff;border-radius:8px;padding:26px 18px 20px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:18px;min-height:168px;box-shadow:0 16px 36px rgba(20,40,35,.08);"><div style="width:100%;flex:1;display:flex;align-items:center;justify-content:center;padding:4px;"><img src="assets/logo-aviva.webp" alt="Aviva" style="max-width:100%;max-height:56px;object-fit:contain;" loading="lazy" decoding="async"></div><div style="font-size:14.5px;color:#173B33;font-weight:600;text-align:center;">Aviva</div></div>
+            <div class="pv-card" style="flex:0 0 190px;background:#fff;border-radius:8px;padding:26px 18px 20px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:18px;min-height:168px;box-shadow:0 16px 36px rgba(20,40,35,.08);"><div style="width:100%;flex:1;display:flex;align-items:center;justify-content:center;padding:4px;"><img src="assets/logo-vitality.webp" alt="Vitality" style="max-width:100%;max-height:56px;object-fit:contain;" loading="lazy" decoding="async"></div><div style="font-size:14.5px;color:#173B33;font-weight:600;text-align:center;">Vitality</div></div>
+            <div class="pv-card" style="flex:0 0 190px;background:#fff;border-radius:8px;padding:26px 18px 20px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:18px;min-height:168px;box-shadow:0 16px 36px rgba(20,40,35,.08);"><div style="width:100%;flex:1;display:flex;align-items:center;justify-content:center;padding:4px;"><img src="assets/logo-lv.webp" alt="LV=" style="max-width:100%;max-height:56px;object-fit:contain;" loading="lazy" decoding="async"></div><div style="font-size:14.5px;color:#173B33;font-weight:600;text-align:center;">LV=</div></div>
+            <div class="pv-card" style="flex:0 0 190px;background:#fff;border-radius:8px;padding:26px 18px 20px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:18px;min-height:168px;box-shadow:0 16px 36px rgba(20,40,35,.08);"><div style="width:100%;flex:1;display:flex;align-items:center;justify-content:center;padding:4px;"><img src="assets/logo-guardian.webp" alt="Guardian" style="max-width:100%;max-height:56px;object-fit:contain;" loading="lazy" decoding="async"></div><div style="font-size:14.5px;color:#173B33;font-weight:600;text-align:center;">Guardian</div></div>
+            <div class="pv-card" aria-hidden="true" style="flex:0 0 190px;background:#fff;border-radius:8px;padding:26px 18px 20px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:18px;min-height:168px;box-shadow:0 16px 36px rgba(20,40,35,.08);"><div style="width:100%;flex:1;display:flex;align-items:center;justify-content:center;padding:4px;"><img src="assets/logo-lg.webp" alt="Legal &amp; General" style="max-width:100%;max-height:56px;object-fit:contain;" loading="lazy" decoding="async"></div><div style="font-size:14.5px;color:#173B33;font-weight:600;text-align:center;">Legal &amp; General</div></div>
+            <div class="pv-card" aria-hidden="true" style="flex:0 0 190px;background:#fff;border-radius:8px;padding:26px 18px 20px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:18px;min-height:168px;box-shadow:0 16px 36px rgba(20,40,35,.08);"><div style="width:100%;flex:1;display:flex;align-items:center;justify-content:center;padding:4px;"><img src="assets/logo-royal-london.webp" alt="Royal London" style="max-width:100%;max-height:56px;object-fit:contain;" loading="lazy" decoding="async"></div><div style="font-size:14.5px;color:#173B33;font-weight:600;text-align:center;">Royal London</div></div>
+            <div class="pv-card" aria-hidden="true" style="flex:0 0 190px;background:#fff;border-radius:8px;padding:26px 18px 20px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:18px;min-height:168px;box-shadow:0 16px 36px rgba(20,40,35,.08);"><div style="width:100%;flex:1;display:flex;align-items:center;justify-content:center;padding:4px;"><img src="assets/logo-aviva.webp" alt="Aviva" style="max-width:100%;max-height:56px;object-fit:contain;" loading="lazy" decoding="async"></div><div style="font-size:14.5px;color:#173B33;font-weight:600;text-align:center;">Aviva</div></div>
+            <div class="pv-card" aria-hidden="true" style="flex:0 0 190px;background:#fff;border-radius:8px;padding:26px 18px 20px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:18px;min-height:168px;box-shadow:0 16px 36px rgba(20,40,35,.08);"><div style="width:100%;flex:1;display:flex;align-items:center;justify-content:center;padding:4px;"><img src="assets/logo-vitality.webp" alt="Vitality" style="max-width:100%;max-height:56px;object-fit:contain;" loading="lazy" decoding="async"></div><div style="font-size:14.5px;color:#173B33;font-weight:600;text-align:center;">Vitality</div></div>
+            <div class="pv-card" aria-hidden="true" style="flex:0 0 190px;background:#fff;border-radius:8px;padding:26px 18px 20px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:18px;min-height:168px;box-shadow:0 16px 36px rgba(20,40,35,.08);"><div style="width:100%;flex:1;display:flex;align-items:center;justify-content:center;padding:4px;"><img src="assets/logo-lv.webp" alt="LV=" style="max-width:100%;max-height:56px;object-fit:contain;" loading="lazy" decoding="async"></div><div style="font-size:14.5px;color:#173B33;font-weight:600;text-align:center;">LV=</div></div>
+            <div class="pv-card" aria-hidden="true" style="flex:0 0 190px;background:#fff;border-radius:8px;padding:26px 18px 20px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:18px;min-height:168px;box-shadow:0 16px 36px rgba(20,40,35,.08);"><div style="width:100%;flex:1;display:flex;align-items:center;justify-content:center;padding:4px;"><img src="assets/logo-guardian.webp" alt="Guardian" style="max-width:100%;max-height:56px;object-fit:contain;" loading="lazy" decoding="async"></div><div style="font-size:14.5px;color:#173B33;font-weight:600;text-align:center;">Guardian</div></div>
           </div>
         </div>
       </div>

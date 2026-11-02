@@ -74,7 +74,8 @@
   .sc-host *:not(svg):not(svg *):not(:where(
       .swiper-wrapper, .swiper-slide,
       .sx-testi-photo, .sx-testi-img,
-      .sx-nav-btn)) {
+      .sx-nav-btn,
+      .pv-marquee, .pv-marquee-track, .pv-card)) {
     position: static !important;
     transform: none !important;
     inset: auto !important; left: auto !important; right: auto !important;
@@ -98,10 +99,10 @@
   /* 7. Hide large decorative background circles inside scroll sections on mobile.
         These are absolutely-positioned empty flourishes (desktop-only decoration)
         that otherwise become big floating blobs once un-pinned. Real icon-circles
-        are not absolutely positioned, so they're unaffected. */
-     The round CTA buttons carry a small satellite circle pinned to their
-     bottom right corner, which is part of the button, not decoration -- the
-     38px and 40px sizes single those out from the large blobs. */
+        are not absolutely positioned, so they're unaffected.
+        The round CTA buttons carry a small satellite circle pinned to their
+        bottom right corner, which is part of the button rather than
+        decoration -- the 38px and 40px sizes single those out. */
   .sc-host [style*="border-radius:50%"][style*="position:absolute"]:not([style*="width:38px"]):not([style*="width: 38px"]):not([style*="width:40px"]):not([style*="width: 40px"]),
   .sc-host [style*="border-radius:50%"][style*="position: absolute"]:not([style*="width:38px"]):not([style*="width: 38px"]):not([style*="width:40px"]):not([style*="width: 40px"]),
   .sc-host [style*="border-radius: 50%"][style*="position:absolute"]:not([style*="width:38px"]):not([style*="width: 38px"]):not([style*="width:40px"]):not([style*="width: 40px"]),
@@ -516,6 +517,22 @@
   .sc-host [style*="position:sticky"][style*="flex-direction:column"],
   .sc-host [style*="position: sticky"][style*="flex-direction: column"] {
     align-items: stretch !important;
+  }
+
+  /* ----------------------------------------------------------------------
+     77. The logo marquee has to be wider than the screen -- that is the
+     whole point of it. Rule 8 caps everything at 100% of its parent, and
+     since the track's width comes from its cards while the cards were being
+     capped by the track, the pair resolved to zero and nothing rendered.
+     ---------------------------------------------------------------------- */
+  .sc-host .pv-marquee-track {
+    max-width: none !important;
+    width: max-content !important;
+  }
+  .sc-host .pv-marquee-track > .pv-card {
+    max-width: none !important;
+    flex: 0 0 170px !important;
+    min-height: 150px !important;
   }
 
   /* ----------------------------------------------------------------------
