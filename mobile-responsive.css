@@ -206,7 +206,11 @@
   /* ----------------------------------------------------------------------
      16. Hero heading a touch larger on phones (was ~43px at 390px wide).
      ---------------------------------------------------------------------- */
-  #heroTitleWrap .arva-h, #heroHeading { font-size: clamp(46px, 13vw, 58px) !important; }
+  #heroTitleWrap .arva-h, #heroHeading {
+    font-size: clamp(30px, 9vw, 42px) !important;
+    line-height: 1.08 !important;
+    overflow-wrap: break-word;
+  }
 
   /* ----------------------------------------------------------------------
      17. The Feefo badge was 115px against the Kids Pass panel's 214px, so
@@ -452,6 +456,96 @@
   .sc-host [style*="height:560px"]:has(img[src*="lg-logo"]),
   .sc-host [style*="height: 560px"]:has(img[src*="lg-logo"]) {
     display: none !important;
+  }
+
+  /* ----------------------------------------------------------------------
+     70. Filter pills and other wrap-on-purpose rows. These already ask to
+     wrap, so rule 6 turning them into a column puts every pill on its own
+     line down the middle. Let them run along the line and break when they
+     run out of room, which is what flex-wrap was there for.
+     ---------------------------------------------------------------------- */
+  .sc-host [style*="flex-wrap:wrap"][style*="gap:10px"],
+  .sc-host [style*="flex-wrap: wrap"][style*="gap: 10px"] {
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+  }
+
+  /* ----------------------------------------------------------------------
+     68. Full-height heroes. Rule 6 strips both the height and the min-height
+     off anything declaring 100vh, so a hero collapsed to whatever its copy
+     happened to measure -- 507px on Reconnect -- and the heading, label,
+     button and paragraph were pressed against each other and the edges.
+     Give it the room back. svh measures the phone's visible area, so the
+     browser's own chrome does not push the hero taller than the screen.
+     ---------------------------------------------------------------------- */
+  .sc-host section[style*="height:100vh"][style*="min-height"],
+  .sc-host section[style*="height: 100vh"][style*="min-height"] {
+    min-height: 640px !important;
+    min-height: 86svh !important;
+  }
+
+  /* ----------------------------------------------------------------------
+     69. Award badges. Scaled to 104px the Feefo mark's wording is too fine
+     to read and the badge looks like an empty white box beside the others.
+     ---------------------------------------------------------------------- */
+  .sc-host img[src*="badge-feefo"],
+  .sc-host img[src*="badge-bqa"] {
+    height: 76px !important;
+    width: auto !important;
+  }
+
+  /* ----------------------------------------------------------------------
+     67. Numbered step markers. Each circle sits alone in a flex row above
+     its own text, so rule 6's centring strands it in the middle of an
+     otherwise left-aligned block. Line it up with the words it belongs to.
+     ---------------------------------------------------------------------- */
+  .sc-host [style*="display:flex"]:has(> [style*="border-radius:50%"][style*="width:46px"]),
+  .sc-host [style*="display: flex"]:has(> [style*="border-radius: 50%"][style*="width: 46px"]) {
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+  }
+
+  /* ----------------------------------------------------------------------
+     65. Hero headings. 48px on a long title fills most of the screen before
+     the copy underneath even starts, which is what makes these heroes feel
+     cramped. Scale to the viewport with a lower ceiling. #heroHeading keeps
+     the larger size set in section 16, which suits its shorter titles.
+     ---------------------------------------------------------------------- */
+  .sc-host section h1:not(#heroHeading) {
+    font-size: clamp(30px, 8.4vw, 40px) !important;
+    line-height: 1.12 !important;
+  }
+
+  /* ----------------------------------------------------------------------
+     66. Section rhythm. The desktop layout breathes on 90-110px of vertical
+     padding, which on a phone is a third of the screen at every seam -- two
+     of them back to back read as a gap with nothing in it.
+     ---------------------------------------------------------------------- */
+  .sc-host section[style*="padding:90px"],
+  .sc-host section[style*="padding: 90px"],
+  .sc-host section[style*="padding:110px"],
+  .sc-host section[style*="padding: 110px"],
+  .sc-host section[style*="padding:100px"],
+  .sc-host section[style*="padding: 100px"] {
+    padding-top: 48px !important;
+    padding-bottom: 48px !important;
+  }
+
+  /* ----------------------------------------------------------------------
+     64. Sections given a tall viewport height as a runway for a pinned
+     scroll animation -- the pillar deck runs on 190vh. The animation does
+     not run on a phone, so the runway is just blank space below the
+     content. Rule 6 only catches the literal 100vh, so 190vh slipped past.
+     ---------------------------------------------------------------------- */
+  .sc-host section[style*="height:1"][style*="vh"],
+  .sc-host section[style*="height: 1"][style*="vh"],
+  .sc-host section[style*="height:2"][style*="vh"],
+  .sc-host section[style*="height: 2"][style*="vh"],
+  .sc-host section[style*="height:3"][style*="vh"],
+  .sc-host section[style*="height: 3"][style*="vh"] {
+    height: auto !important;
   }
 
   /* ----------------------------------------------------------------------
