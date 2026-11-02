@@ -534,6 +534,37 @@
     box-sizing: border-box !important;
   }
 
+  /* The note below the button holds itself off the edges with insets too,
+     so it alone spanned the full width while every other line in the hero
+     sat at 24px. Same gutter, and a size that still reads at 327px rather
+     than the 20px meant for a 400px column. */
+  .sc-host .rc-hero-note {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+    box-sizing: border-box !important;
+  }
+  .sc-host .rc-hero-note > div {
+    font-size: 16.5px !important;
+    line-height: 1.6 !important;
+  }
+
+  /* ----------------------------------------------------------------------
+     81. Footer link columns. The blanket grid rule at the top collapses
+     every grid to one column, so Pages, Services and Need Help ran one
+     after the other and the footer took several screens to scroll past.
+     Pages and Services are both short lists, so they share a row; the
+     brand block and the contact details keep the full width, since neither
+     fits in half of a phone.
+     ---------------------------------------------------------------------- */
+  footer div[style*="grid-template-columns"] {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 34px 18px !important;
+  }
+  footer div[style*="grid-template-columns"] > div:nth-child(1),
+  footer div[style*="grid-template-columns"] > div:nth-child(4) {
+    grid-column: 1 / -1 !important;
+  }
+
   /* ----------------------------------------------------------------------
      79. Kids Pass header and hero. This page has no .sc-host wrapper, being
      a plain .html rather than a .dc.html, so none of the header work above
