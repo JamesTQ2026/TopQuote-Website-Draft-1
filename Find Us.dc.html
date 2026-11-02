@@ -52,6 +52,14 @@
   .fu-area{position:relative;overflow:hidden;transition:transform .3s ease,box-shadow .3s ease;}
   .fu-area:hover{transform:translateY(-5px);box-shadow:0 20px 44px rgba(20,40,35,.22);}
   .fu-area:hover .fu-area-img{transform:scale(1.08);}
+  /* The Cheshire card carries no photograph of its own: it is the brand
+     panel of the set. Grey fill rather than the raw teal fallback, no
+     darkening scrim to sit text against, the dark logo centred, and the
+     name placed exactly where every other card places it -- which on a
+     phone is the top left. */
+  .fu-area[href="/contact-cheshire-east"] .fu-area-img{background:#ECEDF1 !important;background-image:none !important;}
+  .fu-area[href="/contact-cheshire-east"] .fu-area-scrim{background:none !important;}
+  .fu-area[href="/contact-cheshire-east"] .fu-area-name{color:#173B33 !important;text-shadow:none !important;}
   .faq-q{cursor:pointer;}
   .faq-item.open .faq-a{max-height:600px !important;opacity:1 !important;}
   .faq-item.open .faq-plus{transform:rotate(45deg);}
@@ -209,11 +217,11 @@
         <sc-for list="{{ areas }}" as="area" hint-placeholder-count="8">
           <a class="reveal fu-area" href="{{ area.href }}" style="border-radius:14px;min-height:150px;display:flex;align-items:flex-end;box-shadow:0 12px 30px rgba(20,40,35,.12);text-decoration:none;">
             <div class="fu-area-img" style="position:absolute;inset:0;background:#1EBABB;background-image:{{ area.bg }};background-size:cover;background-position:center;transition:transform .5s cubic-bezier(.22,1,.36,1);"></div>
-            <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,20,16,.05) 0%,rgba(6,20,16,.72) 100%);"></div>
+            <div class="fu-area-scrim" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,20,16,.05) 0%,rgba(6,20,16,.72) 100%);"></div>
             <sc-if value="{{ area.showLogo }}" hint-placeholder-val="{{ false }}">
-              <img src="assets/topquote-logo.png" alt="TopQuote" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-60%);width:132px;height:auto;z-index:1;opacity:.95;" loading="lazy" decoding="async">
+              <img class="fu-area-logo" src="assets/topquote-logo-dark.png" alt="TopQuote" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:118px;height:auto;z-index:1;" loading="lazy" decoding="async">
             </sc-if>
-            <span class="arva-h" style="position:relative;z-index:1;width:100%;padding:20px 22px;font-size:21px;font-weight:600;color:#fff;text-shadow:0 2px 10px rgba(0,0,0,.4);">{{ area.name }}</span>
+            <span class="arva-h fu-area-name" style="position:relative;z-index:1;width:100%;padding:20px 22px;font-size:21px;font-weight:600;color:#fff;text-shadow:0 2px 10px rgba(0,0,0,.4);">{{ area.name }}</span>
           </a>
         </sc-for>
       </div>

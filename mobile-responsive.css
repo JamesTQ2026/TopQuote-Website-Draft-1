@@ -550,6 +550,24 @@
      sat at 24px. Same gutter, and a size that still reads at 327px rather
      than the 20px meant for a 400px column. */
   /* ----------------------------------------------------------------------
+     84. Find Us area cards. Rule 6 centres the flex children, so each area
+     name sat centred at the top of its card, and on the Cheshire card the
+     logo lost its absolute centring and pushed the name down with it. The
+     names go to the top left on all eight, and the logo is centred again.
+     ---------------------------------------------------------------------- */
+  .sc-host .fu-area-name {
+    align-self: flex-start !important;
+    text-align: left !important;
+  }
+  .sc-host .fu-area-logo {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: 118px !important;
+  }
+
+  /* ----------------------------------------------------------------------
      83. Find Us contact rows. Rule 6 stacks each icon tile above its own
      text and centres it, so four tiles ran down the middle of a card whose
      text was left-aligned. Back to a row: every tile then starts at the
