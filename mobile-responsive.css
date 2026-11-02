@@ -547,6 +547,21 @@
   .sc-host section[style*="height: 3"][style*="vh"] {
     height: auto !important;
   }
+  /* Some runways are set as a min-height instead -- the About value cards
+     run on 460vh, which is 3735px of section around 907px of cards. Only
+     multi-hundred values are matched, so a hero's own 100vh floor (restored
+     further up) is left alone. */
+  .sc-host section[style*="min-height:2"][style*="vh"],
+  .sc-host section[style*="min-height: 2"][style*="vh"],
+  .sc-host section[style*="min-height:3"][style*="vh"],
+  .sc-host section[style*="min-height: 3"][style*="vh"],
+  .sc-host section[style*="min-height:4"][style*="vh"],
+  .sc-host section[style*="min-height: 4"][style*="vh"],
+  .sc-host section[style*="min-height:5"][style*="vh"],
+  .sc-host section[style*="min-height: 5"][style*="vh"] {
+    min-height: 0 !important;
+    height: auto !important;
+  }
 
   /* ----------------------------------------------------------------------
      62. Each pillar is a two-sided card: a gradient front and a white back
