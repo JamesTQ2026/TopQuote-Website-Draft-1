@@ -66,6 +66,8 @@ const MOVED = {
   '/locational-page': '/find-us',
   '/topquote-privacy-policy': '/privacy-notice',
   '/privacy-policy': '/privacy-notice',
+  '/privacy': '/privacy-notice',
+  '/critical-illness-cover': '/critical-illness',
   '/life-insurance-parents': '/life-insurance-for-parents',
   '/life-insurance-mums': '/life-insurance-for-mums',
   '/life-insurance-dads': '/life-insurance-for-dads',
