@@ -10,6 +10,19 @@
    circular button does that job. */
 .wp-more { display: none; }
 .sx-nav { display: none; }
+
+/* Ratings rows on the form pages pair a star cluster with its text. The
+   Trustpilot tiles measure 132px and the Feefo glyph stars 113px, so the two
+   text blocks began 19px apart. Pin the glyph row to the tiles' width, and to
+   one size: it is set at 26px on Contact and 18px on Careers. Desktop only --
+   on a phone the rows stack and a 132px floor would not fit. */
+@media (min-width: 701px) {
+  [style*="rgb(245, 166, 35)"][style*="letter-spacing"] {
+    display: inline-block !important;
+    min-width: 132px !important;
+    font-size: 26px !important;
+  }
+}
 /* Numerals in the step circles: see the note in the mobile block -- this is
    an optical correction for the typeface, so it is not width-specific. */
 .step-num {
@@ -410,8 +423,14 @@
     max-width: 100% !important;
     padding: 28px 20px !important;
   }
-  .sc-host [style*="gap:4px"][style*="justify-content:center"],
-  .sc-host [style*="gap: 4px"][style*="justify-content: center"],
+  .sc-host [style*="display:flex"][style*="gap:2px"],
+  .sc-host [style*="display: flex"][style*="gap: 2px"],
+  .sc-host [style*="display:flex"][style*="gap:3px"],
+  .sc-host [style*="display: flex"][style*="gap: 3px"],
+  .sc-host [style*="display:flex"][style*="gap:4px"],
+  .sc-host [style*="display: flex"][style*="gap: 4px"],
+  .sc-host [style*="display:flex"][style*="gap:5px"],
+  .sc-host [style*="display: flex"][style*="gap: 5px"],
   #tpCard [style*="gap:4px"],
   #tpCard [style*="gap: 4px"] {
     flex-direction: row !important;
@@ -486,6 +505,62 @@
     flex-wrap: wrap !important;
     justify-content: flex-start !important;
     align-items: center !important;
+  }
+
+  /* ----------------------------------------------------------------------
+     72. Sticky side columns. The ratings panel beside the contact form sits
+     in a sticky column, and rule 6's centring makes it shrink to its own
+     text -- 222px against the form's 327px card, so the two white panels
+     did not line up. Stretch the column's children to its width.
+     ---------------------------------------------------------------------- */
+  .sc-host [style*="position:sticky"][style*="flex-direction:column"],
+  .sc-host [style*="position: sticky"][style*="flex-direction: column"] {
+    align-items: stretch !important;
+  }
+
+  /* ----------------------------------------------------------------------
+     75. Numbered step panels. The marker is pinned to the top of its panel,
+     which looks right on one line of copy and increasingly odd as the text
+     wraps to four or five. Centre it against the text it belongs to.
+     ---------------------------------------------------------------------- */
+  [style*="display:flex"]:has(> [style*="width:38px"][style*="border-radius:50%"]),
+  [style*="display: flex"]:has(> [style*="width: 38px"][style*="border-radius: 50%"]) {
+    align-items: center !important;
+  }
+
+  /* ----------------------------------------------------------------------
+     74. Kids Pass hero. The phone render is a 729px desktop image centred
+     over the hero, so on a phone it covered the heading, the copy and both
+     buttons. Shrink it and tuck it into the bottom right corner, behind the
+     content rather than over it.
+     ---------------------------------------------------------------------- */
+  img[src*="kidspass-phone"] {
+    width: 185px !important;
+    height: auto !important;
+    left: auto !important;
+    right: -8px !important;
+    bottom: 0 !important;
+    transform: none !important;
+    z-index: 0 !important;
+    max-width: none !important;
+  }
+
+  /* ----------------------------------------------------------------------
+     73. Half-star overlays. A 4.3 rating is drawn as four solid stars then a
+     grey one with a green star laid over it, clipped to a percentage of its
+     width. Rule 6 makes that overlay static, so instead of sitting on top of
+     the grey star it drops into the flow beside it -- which is the extra
+     green star appearing at the end of the row.
+     ---------------------------------------------------------------------- */
+  .sc-host [style*="position:absolute"][style*="overflow:hidden"][style*="%"],
+  .sc-host [style*="position: absolute"][style*="overflow: hidden"][style*="%"] {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+  }
+  .sc-host *:has(> [style*="position:absolute"][style*="overflow:hidden"][style*="%"]),
+  .sc-host *:has(> [style*="position: absolute"][style*="overflow: hidden"][style*="%"]) {
+    position: relative !important;
   }
 
   /* ----------------------------------------------------------------------
@@ -636,9 +711,14 @@
     min-width: 0 !important;
   }
   .sc-host [style*="padding: 40px 54px"],
-  .sc-host [style*="padding:40px 54px"] {
+  .sc-host [style*="padding:40px 54px"],
+  .sc-host [style*="padding: 38px 50px"],
+  .sc-host [style*="padding:38px 50px"] {
     width: auto !important;
-    padding: 28px 20px !important;
+    max-width: calc(100vw - 48px) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: 26px 18px !important;
   }
 
   /* ----------------------------------------------------------------------
