@@ -557,22 +557,14 @@
     white-space: nowrap !important;
   }
 
-  /* The phone render is the point of this hero, so it is given real size and
-     the section gains room at the bottom for it to sit in rather than over
-     the copy. */
-  img[src*="kidspass-phone"] {
-    width: 270px !important;
-    height: auto !important;
-    left: auto !important;
-    top: auto !important;
-    right: -28px !important;
-    bottom: 0 !important;
-    transform: none !important;
-    z-index: 0 !important;
-    max-width: none !important;
-  }
-  section:has(img[src*="kidspass-phone"]) {
-    padding-bottom: 180px !important;
+  /* The phone render goes on phones. Its inline style positions it absolutely
+     and the page's own 980px rule only unpins the wrapper, so the image hung
+     off the section itself -- and the room made for it left a band of empty
+     blue under the copy. Hidden here, the hero keeps the page's own stacked
+     layout and sizes to its content.
+     ---------------------------------------------------------------------- */
+  .kp-hero-img {
+    display: none !important;
   }
 
   /* ----------------------------------------------------------------------
