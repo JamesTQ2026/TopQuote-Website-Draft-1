@@ -442,6 +442,28 @@
   .sc-host .ch-grid { grid-template-columns: 1fr !important; }
 
   /* ----------------------------------------------------------------------
+     63. The Legal & General mark sits on a rotated white card inside a
+     560px decorative block that holds nothing else. Shrunk to phone width
+     it reads as a large empty panel with a drop shadow, so the block goes.
+     The partnership is still stated in the copy and in the footer.
+     ---------------------------------------------------------------------- */
+  .sc-host img[src*="lg-logo"] { display: none !important; }
+  .sc-host .reveal:has(img[src*="lg-logo"]),
+  .sc-host [style*="height:560px"]:has(img[src*="lg-logo"]),
+  .sc-host [style*="height: 560px"]:has(img[src*="lg-logo"]) {
+    display: none !important;
+  }
+
+  /* ----------------------------------------------------------------------
+     62. Each pillar is a two-sided card: a gradient front and a white back
+     holding the logo, rotated 180deg behind it. In 3D the back is hidden by
+     backface-visibility, but once the deck is flattened into a column that
+     no longer applies and the back face stacked up underneath as a stray
+     white panel. There is no flip on a phone, so drop the back entirely.
+     ---------------------------------------------------------------------- */
+  .sc-host [style*="rotateX(180deg)"] { display: none !important; }
+
+  /* ----------------------------------------------------------------------
      61. Panels pinned to a desktop pixel width. A percentage max-width
      cannot save these: it resolves against a parent whose own width these
      same boxes decide, so the browser leaves the fixed width alone and the
