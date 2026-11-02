@@ -50,6 +50,7 @@
     ['/about', 'About Us', 'sub'],
     ['/consumer-duty', 'Consumer Duty', 'sub'],
     ['/reconnect', 'Reconnect', 'sub'],
+    ['/kids-pass', 'Kids Pass', 'sub'],
     ['label', 'Get in touch'],
     ['/contact', 'Contact', 'sub'],
     ['/careers', 'Careers', 'sub'],
