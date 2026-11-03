@@ -109,16 +109,17 @@
         The round CTA buttons carry a small satellite circle pinned to their
         bottom right corner, which is part of the button rather than
         decoration -- the 38px and 40px sizes single those out. */
-  .sc-host [style*="border-radius:50%"][style*="position:absolute"]:not([style*="width:38px"]):not([style*="width: 38px"]):not([style*="width:40px"]):not([style*="width: 40px"]),
-  .sc-host [style*="border-radius:50%"][style*="position: absolute"]:not([style*="width:38px"]):not([style*="width: 38px"]):not([style*="width:40px"]):not([style*="width: 40px"]),
-  .sc-host [style*="border-radius: 50%"][style*="position:absolute"]:not([style*="width:38px"]):not([style*="width: 38px"]):not([style*="width:40px"]):not([style*="width: 40px"]),
-  .sc-host [style*="border-radius: 50%"][style*="position: absolute"]:not([style*="width:38px"]):not([style*="width: 38px"]):not([style*="width:40px"]):not([style*="width: 40px"]) {
+  .sc-host [style*="border-radius:50%"][style*="position:absolute"]:not(:where(.cta-satellite)):not([style*="width:38px"]):not([style*="width: 38px"]):not([style*="width:40px"]):not([style*="width: 40px"]),
+  .sc-host [style*="border-radius:50%"][style*="position: absolute"]:not(:where(.cta-satellite)):not([style*="width:38px"]):not([style*="width: 38px"]):not([style*="width:40px"]):not([style*="width: 40px"]),
+  .sc-host [style*="border-radius: 50%"][style*="position:absolute"]:not(:where(.cta-satellite)):not([style*="width:38px"]):not([style*="width: 38px"]):not([style*="width:40px"]):not([style*="width: 40px"]),
+  .sc-host [style*="border-radius: 50%"][style*="position: absolute"]:not(:where(.cta-satellite)):not([style*="width:38px"]):not([style*="width: 38px"]):not([style*="width:40px"]):not([style*="width: 40px"]) {
     display: none !important;
   }
   /* and the satellite keeps its corner */
   .sc-host [style*="border-radius: 50%"][style*="width: 38px"][style*="position: absolute"],
   .sc-host [style*="border-radius:50%"][style*="width:38px"][style*="position:absolute"],
   .sc-host [style*="border-radius: 50%"][style*="width: 40px"][style*="position: absolute"],
+  .sc-host .cta-satellite,
   .sc-host [style*="border-radius:50%"][style*="width:40px"][style*="position:absolute"] {
     position: absolute !important;
     right: 0 !important;
