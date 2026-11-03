@@ -1368,7 +1368,9 @@ class Component extends DCLogic {
       const y = window.pageYOffset || document.documentElement.scrollTop || 0;
       const p = Math.max(0, Math.min(1, y / vh));
       const ease = p * p * (3 - 2 * p);
-      hero.style.transform = 'scale(' + (1 - 0.018 * ease) + ')';
+      // Scale down to 1, never below it: the panel's own background is black and
+        // anything under 100% leaves it showing either side of the photo.
+        hero.style.transform = 'scale(' + (1 + 0.018 * (1 - ease)) + ')';
       if (darken) darken.style.opacity = (0.6 * ease).toFixed(3);
       if (title) { title.style.transform = 'translateY(' + (ease * -70) + 'px)'; title.style.opacity = (1 - ease * 0.5).toFixed(3); }
       if (octa) { octa.style.transform = 'translateY(-50%) translateY(' + (ease * -52) + 'px)'; octa.style.opacity = (1 - ease * 0.5).toFixed(3); }
