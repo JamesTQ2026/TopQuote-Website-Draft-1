@@ -1384,6 +1384,7 @@
   }
   img[src*="badge-trustpilot"],
   img[src*="badge-feefo"],
+  .sc-host .tp-score,
   img[src*="badge-bqa"] {
     width: calc((100% - 16px) / 3) !important;
     max-width: calc((100% - 16px) / 3) !important;
