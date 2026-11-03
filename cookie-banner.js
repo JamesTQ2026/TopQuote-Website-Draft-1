@@ -289,17 +289,25 @@
     if (!links.length) return;
     var host = links[links.length - 1].parentNode;
 
+    // Match the row it joins rather than guessing: the last link's own classes
+    // and inline style, and a copy of whatever separator sits between them.
+    var model = links[links.length - 1];
     var a = document.createElement('a');
-    a.className = 'tq-cookie-settings';
+    a.className = ((model.className || '') + ' tq-cookie-settings').trim();
     a.href = '#';
     a.textContent = 'Cookie settings';
-    a.style.cssText = 'color:inherit;text-decoration:none;font:inherit;';
+    a.setAttribute('style', model.getAttribute('style') || '');
     a.addEventListener('click', function (e) {
       e.preventDefault();
       banner(true);   // straight to the per-category panel, showing what is set
     });
 
-    host.appendChild(document.createTextNode(' · '));
+    var sep = model.previousElementSibling;
+    if (sep && sep.tagName === 'SPAN' && sep.textContent.trim().length === 1) {
+      host.appendChild(sep.cloneNode(true));
+    } else {
+      host.appendChild(document.createTextNode(' · '));
+    }
     host.appendChild(a);
   }
 
