@@ -162,46 +162,6 @@
    "statusCode": 302
   },
   {
-   "source": "/blog-can-you-get-critical-illness-cover-without-life-insurance",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog-can-you-get-critical-illness-cover-without-life-insurance.html",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog/:cat/can-you-get-critical-illness-cover-without-life-insurance",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog/can-you-get-critical-illness-cover-without-life-insurance",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog-life-insurance-for-parents",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog-life-insurance-for-parents.html",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog/:cat/life-insurance-for-parents",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog/life-insurance-for-parents",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
    "source": "/blog-life-insurance-with-pre-existing-conditions",
    "destination": "/blog",
    "statusCode": 302
@@ -2237,6 +2197,16 @@
    "statusCode": 301
   },
   {
+   "source": "/blog/:cat/can-you-get-critical-illness-cover-without-life-insurance",
+   "destination": "/blog-can-you-get-critical-illness-cover-without-life-insurance",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/can-you-get-critical-illness-cover-without-life-insurance",
+   "destination": "/blog-can-you-get-critical-illness-cover-without-life-insurance",
+   "statusCode": 301
+  },
+  {
    "source": "/blog/:cat/can-you-have-more-than-one-life-insurance-policy",
    "destination": "/blog-can-you-have-more-than-one-life-insurance-policy",
    "statusCode": 301
@@ -2854,6 +2824,16 @@
   {
    "source": "/blog/life-insurance-for-married-couples-a-uk-guide",
    "destination": "/blog-life-insurance-for-married-couples-a-uk-guide",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/:cat/life-insurance-for-parents",
+   "destination": "/blog-life-insurance-for-parents",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/life-insurance-for-parents",
+   "destination": "/blog-life-insurance-for-parents",
    "statusCode": 301
   },
   {
