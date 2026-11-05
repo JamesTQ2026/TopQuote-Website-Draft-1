@@ -3,12 +3,6 @@
 # To publish a post once Openwork approves it: delete its line, then run  node tools/build-url-layer.js  and push.
 # Format: slug   # date  title
 
-joint-life-insurance-vs-single-a-uk-guide                                                       # 2026-07-01  Joint Life Insurance vs Single: A UK Guide
-buying-life-insurance                                                                           # 2026-06-30  How to Buy Life Insurance in the UK: A Plain-English Guide
-how-much-life-insurance-do-i-need-a-uk-guide                                                    # 2026-06-29  How Much Life Insurance Do I Need? A UK Guide
-income-protection-for-the-self-employed                                                         # 2026-06-28  Income Protection for the Self-Employed
-is-income-protection-insurance-worth-it                                                         # 2026-06-27  Is Income Protection Insurance Worth It?
-income-protection-insurance                                                                     # 2026-06-26  What Is Income Protection Insurance?
 over-50s-life-insurance                                                                         # 2026-06-25  Over 50s Life Insurance Explained
 cohabiting-couples-and-life-insurance-uk-what-you-need-to-know                                  # 2026-05-26  Cohabiting Couples and Life Insurance UK: What You Need to Know
 life-insurance-for-stay-at-home-parents-uk-do-you-need-cover                                    # 2026-05-23  Life Insurance for Stay-at-Home Parents UK: Do You Need Cover?

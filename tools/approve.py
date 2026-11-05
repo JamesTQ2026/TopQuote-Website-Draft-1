@@ -157,9 +157,27 @@ def main():
 
     rows = report(args)
     show(rows, 'after:')
-    ok = all(r['page exists'] and r['sitemap'] and r['JSON-LD'] and r['share tags']
-             and r['listed'] and not r['still 302s to /blog'] for _, r in rows)
-    print('\n%s' % ('all five in place; commit and push.' if ok else
+    today = datetime.date.today()
+
+    blog = io.open('Blog.dc.html', encoding='utf-8', newline='').read()
+
+    def fine(slug, r):
+        base = r['page exists'] and r['JSON-LD'] and r['share tags']
+        d = due_date(slug)
+        if d and d > today:
+            # not due yet: held back (302, no sitemap entry, not in the all-articles
+            # list) but its card must already be in the grid, which hides it until then
+            return (base and r['still 302s to /blog'] and not r['sitemap'] and not r['listed']
+                    and ("href:'/blog-%s'" % slug) in blog)
+        return base and r['listed'] and r['sitemap'] and not r['still 302s to /blog']
+
+    ok = all(fine(s, r) for s, r in rows)
+    later = sorted((due_date(s), s) for s, _ in rows if due_date(s) and due_date(s) > today)
+    if later:
+        print('\nscheduled (held back until the date on the post, then live after a rebuild that day):')
+        for d, slug in later:
+            print('  %s  %s' % (d.strftime('%d %b %Y'), slug))
+    print('\n%s' % ('all in place; commit and push.' if ok else
                     'SOMETHING IS MISSING above. Do not push until it is sorted.'))
     if not ok:
         sys.exit(1)
