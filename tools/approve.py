@@ -10,6 +10,7 @@ share card. So they go together:
                              the sitemap gains it, the all-articles list gains it
   3. schema.py               BlogPosting JSON-LD with its date and byline
   4. og-tags.py              Open Graph and Twitter card tags
+  4b. faq-schema.py          FAQPage JSON-LD from the post's visible FAQ, if it has one
   5. the report below        confirms all four actually landed
 
 Usage, from the repo root:
@@ -154,6 +155,7 @@ def main():
     run(['node', 'tools/build-url-layer.js'], 'url layer')
     run([sys.executable, '-I', 'tools/schema.py'], 'structured data')
     run([sys.executable, '-I', 'tools/og-tags.py'], 'share tags')
+    run([sys.executable, '-I', 'tools/faq-schema.py'], 'FAQ schema')
 
     rows = report(args)
     show(rows, 'after:')

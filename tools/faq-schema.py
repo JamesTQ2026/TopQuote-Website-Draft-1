@@ -1,0 +1,152 @@
+# -*- coding: utf-8 -*-
+"""FAQPage structured data for every page that shows an FAQ section.
+
+Standing rule: any page with a visible FAQ gets FAQPage JSON-LD, built from
+exactly the questions and answers a visitor sees (schema that does not match
+the page is against Google's guidelines). Nothing is written by hand.
+
+Three page formats are read:
+  1. blog posts      an "FAQ" / "Frequently asked questions" <h2>, then each
+                     question as an <h3> ending in "?" with its answer in the
+                     <p>/<ul>/<ol> that follow, up to the next <h3>/<h2>;
+                     or, in some posts, "<p><strong>Q: ...?</strong></p>"
+                     followed by the answer paragraph(s)
+  2. service pages   the `faqs: [ { q:'...', a:'...' } ]` list the accordion
+                     is rendered from (.dc.html pages), only where the page
+                     has the <sc-for list="{{ faqs }}"> that actually shows it
+  3. contact pages   static accordion markup: .faq-q <span> + .faq-a
+
+The block is fully regenerated on every run, so editing an FAQ and re-running
+keeps the schema in step. A page whose FAQ is removed loses its block.
+Posts awaiting approval get it too; they redirect, so it is harmless, and it
+is already in place the day they go live. tools/approve.py runs this script.
+
+Run from the repo root:  python -I tools/faq-schema.py          (DRY=1 to preview)
+"""
+import io, os, re, glob, json, html
+
+os.chdir(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
+MARK = '<!-- faq schema'
+DRY = os.environ.get('DRY') == '1'
+BLOCK_RE = re.compile(r'<!-- faq schema.*?</script>\s*', re.S)
+FAQ_H2 = re.compile(r'<h2[^>]*>([^<]*(?:frequently asked|\bFAQs?\b)[^<]*)</h2>', re.I)
+# the editor note that some posts carry after their last answer is not part of it
+NOT_ANSWER = re.compile(r'is the editor at TopQuote|reviewed for FCA compliance|is a [^.]{0,40}writer at TopQuote', re.I)
+
+
+def text(fragment):
+    t = re.sub(r'<br\s*/?>', ' ', fragment)
+    t = re.sub(r'</(p|li)>', ' ', t)
+    t = html.unescape(re.sub(r'<[^>]+>', '', t))
+    return re.sub(r'\s+', ' ', t).strip()
+
+
+def js_string(s):
+    """Body of a single-quoted JS literal -> text."""
+    s = s.replace("\\'", "'").replace('"', '\\"')
+    return json.loads('"' + s + '"')
+
+
+def from_blog(s):
+    m = FAQ_H2.search(s)
+    if not m:
+        return []
+    rest = s[m.end():]
+    stop = re.search(r'<h2[\s>]|<div class="tq-ac"|</article>', rest)
+    sect = rest[:stop.start()] if stop else rest
+    out = []
+    # 1b. some posts write "<p><strong>Q: ...?</strong></p>" then the answer paragraph(s)
+    if not re.search(r'<h3[\s>]', sect):
+        paras = re.findall(r'<(p|ul|ol)[^>]*>(.*?)</\1>', sect, re.S)
+        q, ans = None, []
+        for tag, body in paras + [('p', '<strong>Q: end</strong>')]:
+            t = text(body)
+            if tag == 'p' and re.match(r'\s*<strong>\s*Q\s*[:.]', body):
+                if q and ans:
+                    out.append((q, ' '.join(ans)))
+                q, ans = re.sub(r'^Q\s*[:.]\s*', '', t), []
+            elif q and t and not NOT_ANSWER.search(t):
+                ans.append(re.sub(r'^A\s*[:.]\s*', '', t))
+        return [(q, a) for q, a in out if q.endswith('?')]
+    parts = re.split(r'(<h3[^>]*>.*?</h3>)', sect, flags=re.S)
+    for i in range(1, len(parts), 2):
+        q = text(parts[i])
+        if not q.endswith('?'):
+            continue
+        blocks = re.findall(r'<(p|ul|ol)[^>]*>(.*?)</\1>', parts[i + 1], re.S)
+        a = ' '.join(text(b) for tag, b in blocks if not NOT_ANSWER.search(text(b)))
+        if a:
+            out.append((q, a))
+    return out
+
+
+def from_dc_list(s):
+    m = re.search(r'faqs:\s*\[(.*?)\n\s*\]', s, re.S)
+    # only when the page actually renders the list (Life Insurance carries one it never shows)
+    if not m or not re.search(r'list="\{\{\s*faqs\s*\}\}"', s):
+        return []
+    pairs = re.findall(r"\{\s*q:\s*'((?:[^'\\]|\\.)*)'\s*,\s*a:\s*'((?:[^'\\]|\\.)*)'\s*\}", m.group(1))
+    return [(text(js_string(q)), text(js_string(a))) for q, a in pairs]
+
+
+def from_accordion(s):
+    pairs = re.findall(r'<div class="faq-q"[^>]*>\s*<span>(.*?)</span>.*?<div class="faq-a"[^>]*>(.*?)</div>', s, re.S)
+    return [(text(q), text(a)) for q, a in pairs if text(q) and text(a)]
+
+
+def faqs_of(fn, s):
+    if fn.startswith('blog-'):
+        return from_blog(s), 'blog'
+    got = from_dc_list(s)
+    if got:
+        return got, 'faqs list'
+    got = from_accordion(s)
+    if got:
+        return got, 'accordion'
+    return [], None
+
+
+def block(url, faqs, eol):
+    node = {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        '@id': url + '#faq',
+        'url': url,
+        'mainEntity': [{'@type': 'Question', 'name': q,
+                        'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in faqs],
+    }
+    js = json.dumps(node, ensure_ascii=False, indent=1).replace('</', '<\\/')
+    return (MARK + ' -- generated by tools/faq-schema.py from the FAQ shown on this page; '
+            're-run it after editing the FAQ -->' + eol +
+            '<script type="application/ld+json">' + eol + js + eol + '</script>' + eol)
+
+
+report = {'added': 0, 'updated': 0, 'removed': 0, 'unchanged': 0, 'questions': 0}
+by_kind = {}
+for fn in sorted(glob.glob('*.html')):
+    s = io.open(fn, encoding='utf-8', newline='').read()
+    eol = '\r\n' if '\r\n' in s else '\n'
+    had = MARK in s
+    base = BLOCK_RE.sub('', s)
+    faqs, kind = faqs_of(fn, base)
+    url = re.search(r'<link rel="canonical" href="([^"]+)"', base)
+    if faqs and not url:
+        print('  skipped (no canonical): ' + fn)
+        continue
+    new = base
+    if faqs:
+        assert base.count('</head>') == 1, fn
+        new = base.replace('</head>', block(url.group(1), faqs, eol) + '</head>', 1)
+        by_kind[kind] = by_kind.get(kind, 0) + 1
+        report['questions'] += len(faqs)
+    if new == s:
+        report['unchanged'] += 1 if faqs else 0
+        continue
+    report['updated' if (had and faqs) else 'added' if faqs else 'removed'] += 1
+    if not DRY:
+        io.open(fn, 'w', encoding='utf-8', newline='').write(new)
+
+print(('DRY RUN, nothing written' + os.linesep) if DRY else '', end='')
+print('FAQ schema: %(added)d added, %(updated)d updated, %(removed)d removed, %(unchanged)d already current '
+      '| %(questions)d questions' % report)
+print('  by source: ' + ', '.join('%s %d' % kv for kv in sorted(by_kind.items())))
