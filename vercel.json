@@ -1022,6 +1022,186 @@
    "statusCode": 302
   },
   {
+   "source": "/blog-do-you-need-life-insurance-for-a-mortgage",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-do-you-need-life-insurance-for-a-mortgage.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/do-you-need-life-insurance-for-a-mortgage",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/do-you-need-life-insurance-for-a-mortgage",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-family-life-insurance",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-family-life-insurance.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/family-life-insurance",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/family-life-insurance",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-family-life-insurance-2",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-family-life-insurance-2.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/family-life-insurance-2",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/family-life-insurance-2",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-income-protection-vs-critical-illness",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-income-protection-vs-critical-illness.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/income-protection-vs-critical-illness",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/income-protection-vs-critical-illness",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-is-life-insurance-part-of-your-estate",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-is-life-insurance-part-of-your-estate.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/is-life-insurance-part-of-your-estate",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/is-life-insurance-part-of-your-estate",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-life-insurance-after-cancer",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-life-insurance-after-cancer.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/life-insurance-after-cancer",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/life-insurance-after-cancer",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-life-insurance-after-divorce-guide",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-life-insurance-after-divorce-guide.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/life-insurance-after-divorce-guide",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/life-insurance-after-divorce-guide",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-life-insurance-with-pre-existing-conditions",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-life-insurance-with-pre-existing-conditions.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/life-insurance-with-pre-existing-conditions",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/life-insurance-with-pre-existing-conditions",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-using-life-insurance-for-inheritance-tax-planning-uk",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-using-life-insurance-for-inheritance-tax-planning-uk.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/using-life-insurance-for-inheritance-tax-planning-uk",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/using-life-insurance-for-inheritance-tax-planning-uk",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
    "source": "/home",
    "destination": "/",
    "statusCode": 301
@@ -2187,16 +2367,6 @@
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/do-you-need-life-insurance-for-a-mortgage",
-   "destination": "/blog-do-you-need-life-insurance-for-a-mortgage",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/do-you-need-life-insurance-for-a-mortgage",
-   "destination": "/blog-do-you-need-life-insurance-for-a-mortgage",
-   "statusCode": 301
-  },
-  {
    "source": "/blog/:cat/do-you-think-you-overthink",
    "destination": "/blog-do-you-think-you-overthink",
    "statusCode": 301
@@ -2274,26 +2444,6 @@
   {
    "source": "/blog/family-always-comes-first",
    "destination": "/blog-family-always-comes-first",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/:cat/family-life-insurance",
-   "destination": "/blog-family-life-insurance",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/family-life-insurance",
-   "destination": "/blog-family-life-insurance",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/:cat/family-life-insurance-2",
-   "destination": "/blog-family-life-insurance-2",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/family-life-insurance-2",
-   "destination": "/blog-family-life-insurance-2",
    "statusCode": 301
   },
   {
@@ -2577,16 +2727,6 @@
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/income-protection-vs-critical-illness",
-   "destination": "/blog-income-protection-vs-critical-illness",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/income-protection-vs-critical-illness",
-   "destination": "/blog-income-protection-vs-critical-illness",
-   "statusCode": 301
-  },
-  {
    "source": "/blog/:cat/investing-in-your-health-the-importance-of-regular-check-ups",
    "destination": "/blog-investing-in-your-health-the-importance-of-regular-check-ups",
    "statusCode": 301
@@ -2604,16 +2744,6 @@
   {
    "source": "/blog/is-cheap-life-insurance-worth-it",
    "destination": "/blog-is-cheap-life-insurance-worth-it",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/:cat/is-life-insurance-part-of-your-estate",
-   "destination": "/blog-is-life-insurance-part-of-your-estate",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/is-life-insurance-part-of-your-estate",
-   "destination": "/blog-is-life-insurance-part-of-your-estate",
    "statusCode": 301
   },
   {
@@ -2657,16 +2787,6 @@
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/life-insurance-after-cancer",
-   "destination": "/blog-life-insurance-after-cancer",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/life-insurance-after-cancer",
-   "destination": "/blog-life-insurance-after-cancer",
-   "statusCode": 301
-  },
-  {
    "source": "/blog/:cat/life-insurance-after-divorce",
    "destination": "/blog-life-insurance-after-divorce",
    "statusCode": 301
@@ -2674,16 +2794,6 @@
   {
    "source": "/blog/life-insurance-after-divorce",
    "destination": "/blog-life-insurance-after-divorce",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/:cat/life-insurance-after-divorce-guide",
-   "destination": "/blog-life-insurance-after-divorce-guide",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/life-insurance-after-divorce-guide",
-   "destination": "/blog-life-insurance-after-divorce-guide",
    "statusCode": 301
   },
   {
@@ -2754,16 +2864,6 @@
   {
    "source": "/blog/life-insurance-when-pregnant",
    "destination": "/blog-life-insurance-when-pregnant",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/:cat/life-insurance-with-pre-existing-conditions",
-   "destination": "/blog-life-insurance-with-pre-existing-conditions",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/life-insurance-with-pre-existing-conditions",
-   "destination": "/blog-life-insurance-with-pre-existing-conditions",
    "statusCode": 301
   },
   {
@@ -3314,16 +3414,6 @@
   {
    "source": "/blog/understanding-and-managing-debt-a-comprehensive-guide",
    "destination": "/blog-understanding-and-managing-debt-a-comprehensive-guide",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/:cat/using-life-insurance-for-inheritance-tax-planning-uk",
-   "destination": "/blog-using-life-insurance-for-inheritance-tax-planning-uk",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/using-life-insurance-for-inheritance-tax-planning-uk",
-   "destination": "/blog-using-life-insurance-for-inheritance-tax-planning-uk",
    "statusCode": 301
   },
   {

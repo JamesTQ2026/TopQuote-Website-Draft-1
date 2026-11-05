@@ -174,14 +174,31 @@ const pending = new Set(
   (fs.existsSync(path.join(__dirname, 'pending-approval.txt')) ? fs.readFileSync(path.join(__dirname, 'pending-approval.txt'), 'utf8') : '')
     .split(/\r?\n/).map((l) => l.replace(/#.*/, '').trim()).filter(Boolean));
 for (const s of pending) if (!blogSlugs.includes(s)) throw new Error('pending-approval.txt lists a post that does not exist: ' + s);
-const liveSlugs = blogSlugs.filter((s) => !pending.has(s));
+
+// posts whose own date has not arrived yet: held back exactly like an unapproved one, so
+// writing a post ahead of time cannot put it live early. The date the post displays is the
+// only thing that decides this. Blog.dc.html gates its cards on the same test, in the browser.
+const MONTH = 'January February March April May June July August September October November December'.split(' ');
+const todayMs = (() => { const d = new Date(); return Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()); })();
+const scheduled = new Set();
+for (const slug of blogSlugs) {
+  if (pending.has(slug)) continue;
+  const m = fs.readFileSync(path.join(ROOT, `blog-${slug}.html`), 'utf8')
+    .match(/data-lucide="calendar"[^>]*><\/i>\s*(\d{1,2}) ([A-Z][a-z]+) (\d{4})/);
+  if (!m || MONTH.indexOf(m[2]) < 0) continue;
+  if (Date.UTC(+m[3], MONTH.indexOf(m[2]), +m[1]) > todayMs) scheduled.add(slug);
+}
+
+// the two reasons a post is not served, treated identically from here on
+const held = new Set([...pending, ...scheduled]);
+const liveSlugs = blogSlugs.filter((s) => !held.has(s));
 
 const redirects = [];
 const rewrites = [];
 const r301 = (source, destination) => redirects.push({ source, destination, statusCode: 301 });
 
 // 0. unapproved posts: temporary redirect to the blog index (302, so they can go live later)
-for (const slug of pending) {
+for (const slug of held) {
   for (const src of [`/blog-${slug}`, `/blog-${slug}.html`, `/blog/:cat/${slug}`, `/blog/${slug}`]) {
     redirects.push({ source: src, destination: '/blog', statusCode: 302 });
   }
@@ -301,4 +318,4 @@ ${items}
 }
 
 console.log(`canonical tags added: ${tagged}`);
-console.log(`vercel.json: ${redirects.length} redirects, ${rewrites.length} rewrites | sitemap: ${urls.length} urls | pending approval (hidden): ${pending.size}`);
+console.log(`vercel.json: ${redirects.length} redirects, ${rewrites.length} rewrites | sitemap: ${urls.length} urls | hidden: ${pending.size} awaiting approval, ${scheduled.size} not due yet`);

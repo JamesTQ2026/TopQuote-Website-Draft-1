@@ -21,7 +21,28 @@ Usage, from the repo root:
 The slug is the bit after "blog-", as written in pending-approval.txt.
 Commit and push afterwards; nothing here touches git.
 """
-import io, os, re, sys, json, glob, subprocess
+import io, os, re, sys, json, glob, datetime, subprocess
+
+DATE_RE = re.compile(r'data-lucide="calendar"[^>]*></i>\s*([0-9]{1,2} [A-Z][a-z]+ [0-9]{4})')
+
+
+def due_date(slug):
+    """The date a post displays, or None.
+
+    A date still in the future means the post is approved and written but not yet
+    due. tools/build-url-layer.js keeps its URL on a 302 and Blog.dc.html hides its
+    card until the day arrives, so such a post is not missing anything, just early.
+    """
+    f = 'blog-%s.html' % slug
+    if not os.path.exists(f):
+        return None
+    m = DATE_RE.search(io.open(f, encoding='utf-8', newline='').read())
+    if not m:
+        return None
+    try:
+        return datetime.datetime.strptime(m.group(1).strip(), '%d %B %Y').date()
+    except ValueError:
+        return None
 
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
 os.chdir(ROOT)
@@ -92,6 +113,9 @@ def main():
     if args[0] == '--check':
         live = [f[len('blog-'):-len('.html')] for f in sorted(glob.glob('blog-*.html'))]
         live = [s for s in live if s not in waiting]
+        today = datetime.date.today()
+        later = sorted((due_date(s) or today, s) for s in live if (due_date(s) or today) > today)
+        live = [s for s in live if s not in set(x[1] for x in later)]
         bad = [(s, r) for s, r in report(live)
                if not (r['sitemap'] and r['JSON-LD'] and r['share tags'] and r['listed'])
                or r['still 302s to /blog']]
@@ -100,6 +124,12 @@ def main():
             sys.exit(1)
         print('all %d published posts have their redirect, sitemap entry, JSON-LD, '
               'share tags and listing' % len(live))
+        if later:
+            print('\n%d approved but not due yet (the site holds these back until the '
+                  'date on the post):' % len(later))
+            for d, slug in later:
+                print('  %s  %s' % (d.strftime('%d %b %Y'), slug))
+            print('\nThey appear on their own date only when the site is rebuilt that day.')
         return
 
     unknown = [s for s in args if s not in waiting]
