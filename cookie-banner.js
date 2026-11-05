@@ -130,35 +130,73 @@
       f.style.display = 'none';
       if (f.parentNode.querySelector('.tq-embed-hold')) return;
 
+      /* Until embeds are allowed, show a picture of the map rather than a grey
+         box: a self-hosted OpenStreetMap image (no cookies, nothing loaded from
+         Google), centred on the office, with a pin. The interactive Google map
+         still loads only on consent; "Open in Google Maps" is a plain link out. */
       var hold = document.createElement('div');
       hold.className = 'tq-embed-hold';
-      hold.style.cssText = 'position:absolute;inset:0;display:flex;flex-direction:column;' +
-        'align-items:center;justify-content:center;gap:12px;text-align:center;padding:24px;' +
-        'background:#ECEDF1;color:#173B33;font-family:Mulish,system-ui,sans-serif;';
+      hold.style.cssText = 'position:absolute;inset:0;overflow:hidden;' +
+        'background:#E8EBE6 url(/assets/map-alderley-park.webp) center/cover no-repeat;' +
+        'font-family:Mulish,system-ui,sans-serif;color:#173B33;';
+
+      var pin = document.createElement('div');
+      pin.setAttribute('aria-hidden', 'true');
+      pin.style.cssText = 'position:absolute;left:50%;top:50%;transform:translate(-50%,-100%);' +
+        'filter:drop-shadow(0 4px 6px rgba(0,0,0,.3));';
+      pin.innerHTML = '<svg width="38" height="48" viewBox="0 0 38 48"><path d="M19 47S3 29.5 3 18a16 16 0 0 1 32 0c0 11.5-16 29-16 29z" fill="#1EBABB" stroke="#fff" stroke-width="3"/><circle cx="19" cy="18" r="6" fill="#fff"/></svg>';
+
+      var tag = document.createElement('div');
+      tag.style.cssText = 'position:absolute;left:50%;top:50%;transform:translate(-50%,10px);' +
+        'background:#fff;border-radius:999px;padding:6px 14px;font-size:13px;font-weight:700;' +
+        'white-space:nowrap;box-shadow:0 4px 14px rgba(0,0,0,.15);';
+      tag.textContent = 'TopQuote, Glasshouse, Alderley Park';
+
+      var card = document.createElement('div');
+      card.style.cssText = 'position:absolute;left:16px;right:16px;bottom:16px;margin:0 auto;max-width:27.5rem;' +
+        'background:rgba(255,255,255,.96);border-radius:14px;padding:14px 16px;text-align:center;' +
+        'box-shadow:0 10px 30px rgba(0,0,0,.18);';
 
       var msg = document.createElement('p');
-      msg.style.cssText = 'margin:0;font-size:14.5px;line-height:1.6;max-width:330px;color:#4A5A55;';
-      msg.textContent = 'This map comes from Google, which sets its own cookies. ' +
-        'It stays off until you allow embedded content.';
+      msg.style.cssText = 'margin:0 0 10px;font-size:13.5px;line-height:1.5;color:#4A5A55;';
+      msg.textContent = 'The interactive Google map sets its own cookies, so it loads only when you allow it.';
+
+      var row = document.createElement('div');
+      row.style.cssText = 'display:flex;flex-wrap:wrap;gap:8px;justify-content:center;';
 
       var btn = document.createElement('button');
       btn.type = 'button';
-      btn.textContent = 'Show the map';
+      btn.textContent = 'Show interactive map';
       btn.style.cssText = 'cursor:pointer;font-family:inherit;font-weight:700;font-size:14px;' +
-        'border:0;border-radius:999px;padding:11px 22px;background:#1EBABB;color:#0C1F19;';
+        'border:0;border-radius:999px;padding:10px 18px;background:#1EBABB;color:#0C1F19;';
       btn.addEventListener('click', function () {
         var c = read() || { analytics: false, embeds: false };
         c.embeds = true;
         apply(c, true);
       });
 
-      var alt = document.createElement('p');
-      alt.style.cssText = 'margin:0;font-size:13px;line-height:1.55;color:#6B7280;';
-      alt.innerHTML = 'The address is written out on <a href="/find-us" style="color:#159a9b;">Find Us</a>.';
+      var out = document.createElement('a');
+      out.href = 'https://www.google.com/maps/search/?api=1&query=Glasshouse%2C+Alderley+Park%2C+Macclesfield+SK10+4TG';
+      out.target = '_blank'; out.rel = 'noopener';
+      out.textContent = 'Open in Google Maps';
+      out.style.cssText = 'font-weight:700;font-size:14px;border-radius:999px;padding:10px 18px;' +
+        'border:1.5px solid #1EBABB;color:#159a9b;text-decoration:none;background:#fff;';
 
-      hold.appendChild(msg);
-      hold.appendChild(btn);
-      hold.appendChild(alt);
+      var credit = document.createElement('a');
+      credit.href = 'https://www.openstreetmap.org/copyright';
+      credit.target = '_blank'; credit.rel = 'noopener';
+      credit.textContent = '© OpenStreetMap contributors';
+      credit.style.cssText = 'position:absolute;right:0;top:0;font-size:11px;padding:3px 7px;' +
+        'background:rgba(255,255,255,.85);color:#4A5A55;text-decoration:none;border-bottom-left-radius:6px;';
+
+      row.appendChild(btn);
+      row.appendChild(out);
+      card.appendChild(msg);
+      card.appendChild(row);
+      hold.appendChild(pin);
+      hold.appendChild(tag);
+      hold.appendChild(card);
+      hold.appendChild(credit);
 
       var parent = f.parentNode;
       if (getComputedStyle(parent).position === 'static') parent.style.position = 'relative';
@@ -313,11 +351,34 @@
 
   /* ---------- go ---------- */
 
+  /* Pages built by the design framework can render the map after start() has
+     run, so it was missed: no placeholder and no map, just an empty box.
+     Watch for maps that appear later and give them the same treatment.
+     Debounced; holdFrames/loadFrames skip frames already handled, so the
+     changes they make do not trigger another pass. */
+  function watchFrames() {
+    if (!window.MutationObserver || !document.body) return;
+    var queued = false;
+    new MutationObserver(function () {
+      if (queued) return;
+      queued = true;
+      setTimeout(function () {
+        queued = false;
+        var c = read(), on = !!(c && c.embeds);
+        var need = frames().some(function (f) {
+          return on ? !f.getAttribute('src') : !f.parentNode.querySelector('.tq-embed-hold');
+        });
+        if (need) { if (on) loadFrames(); else holdFrames(); }
+      }, 60);
+    }).observe(document.body, { childList: true, subtree: true });
+  }
+
   function start() {
     var choice = read();
     apply(choice, false);        // nothing third-party loads until this has run
     if (!choice) setTimeout(function () { banner(false); }, 400);
     settingsLink();
+    watchFrames();
   }
 
   window.tqCookieConsent = {

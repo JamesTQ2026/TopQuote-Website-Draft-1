@@ -92,11 +92,17 @@ body:has(.hero-ring) header .nav-dd > a[href="/life-insurance"]:hover { backgrou
      style, so transform:none froze every carousel on mobile. The wrapper
      and its slides are excluded rather than given a counter-rule, because
      there is no way to hand the inline transform back once it is lost. */
+  /* Map boxes (the parent of iframe[data-consent="embeds"]), the map itself and
+     the map placeholder are excluded too: flattened to static, the Google map
+     showed as a 150px strip at the top of its box and the placeholder's pin and
+     card collapsed into the corner. */
   .sc-host *:not(svg):not(svg *):not(:where(
       .swiper-wrapper, .swiper-slide,
       .sx-testi-photo, .sx-testi-img,
       .sx-nav-btn,
-      .pv-marquee, .pv-marquee-track, .pv-card)) {
+      .pv-marquee, .pv-marquee-track, .pv-card,
+      :has(> iframe[data-consent="embeds"]), iframe[data-consent="embeds"],
+      .tq-embed-hold, .tq-embed-hold *)) {
     position: static !important;
     transform: none !important;
     inset: auto !important; left: auto !important; right: auto !important;
@@ -1608,4 +1614,10 @@ body:has(.hero-ring) header .nav-dd > a[href="/life-insurance"]:hover { backgrou
 }
 @media (min-width: 701px) and (max-width: 980px) {
   .tq-hdr a[href="/get-a-quote"] { margin-right: 92px !important; }
+}
+
+/* 86. Map boxes on phones: the card padding rules framed the live Google map in an
+   18px grey border; the map fills its box edge to edge, as on desktop. */
+@media (max-width: 700px) {
+  html body .sc-host div:has(> iframe[data-consent="embeds"]) { padding: 0 !important; }
 }
