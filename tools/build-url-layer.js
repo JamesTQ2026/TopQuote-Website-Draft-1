@@ -241,7 +241,7 @@ fs.writeFileSync(path.join(ROOT, 'vercel.json'), JSON.stringify(vercel, null, 1)
 // Legal pages still marked "Draft, pending legal & compliance review": kept noindex and out of
 // the sitemap. Once a page's wording is signed off (draft notice + date placeholder removed),
 // delete it from this list and re-run the script.
-const DRAFT_PAGES = ['/complaints', '/cookie-policy', '/privacy-notice', '/terms-of-use', '/accessibility-statement'];
+const DRAFT_PAGES = ['/complaints', '/privacy-notice', '/terms-of-use', '/accessibility-statement'];
 const NOINDEX = '<meta name="robots" content="noindex">';
 for (const clean of Object.keys(PAGES)) {
   const fp = path.join(ROOT, PAGES[clean]);

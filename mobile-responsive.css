@@ -16,6 +16,11 @@ header a[href="/get-a-quote"]:hover, a.tq-blue:hover, a.tq-blue.abtn:hover { bac
 a.tq-big { font-size: 18px !important; padding: 18px 38px !important; gap: 10px !important; }
 a.tq-big svg, a.tq-big i { width: 20px !important; height: 20px !important; }
 
+/* Teal heroes (the pages with the big white ring): the teal Services pill
+   vanished into the background, so there it is white with teal text. */
+body:has(.hero-ring) header .nav-dd > a[href="/life-insurance"] { background: #fff !important; color: #159a9b !important; }
+body:has(.hero-ring) header .nav-dd > a[href="/life-insurance"]:hover { background: #F0FBFB !important; }
+
 /* The per-panel Learn More links exist for phones; on desktop the floating
    circular button does that job. */
 .wp-more { display: none; }
