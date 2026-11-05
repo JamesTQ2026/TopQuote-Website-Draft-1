@@ -6,6 +6,16 @@
    styles the page's own JS sets, e.g. scroll transforms). Desktop untouched.
    ========================================================================== */
 
+/* Blue call-to-action buttons (Nov 2026).
+   - every page's top-right header "Get a quote": blue, size unchanged
+   - buttons tagged .tq-blue: blue; .tq-big: larger label for legibility
+   Inline styles on these buttons still say #1EBABB; !important wins over them,
+   and the hover beats the .abtn:hover rule some pages carry inline. */
+header a[href="/get-a-quote"], a.tq-blue { background: #4B9DF8 !important; color: #fff !important; }
+header a[href="/get-a-quote"]:hover, a.tq-blue:hover, a.tq-blue.abtn:hover { background: #2F86EC !important; color: #fff !important; }
+a.tq-big { font-size: 18px !important; padding: 18px 38px !important; gap: 10px !important; }
+a.tq-big svg, a.tq-big i { width: 20px !important; height: 20px !important; }
+
 /* The per-panel Learn More links exist for phones; on desktop the floating
    circular button does that job. */
 .wp-more { display: none; }
