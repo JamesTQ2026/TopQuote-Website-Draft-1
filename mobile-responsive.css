@@ -239,7 +239,7 @@ body:has(.hero-ring) header .nav-dd > a[href="/life-insurance"]:hover { backgrou
   #heroPanel > header { gap: 12px !important; }
   #heroPanel > header > a:first-child img { height: 32px !important; }
   header .tq-hdr-cta {
-    margin-right: 60px !important;   /* 44px button + 16px gap */
+    margin-right: 0 !important;      /* clearance now lives on the CTA, section 85 */
     gap: 10px !important;
   }
   header .tq-hdr-cta a[href*="get-a-quote"] { padding: 0 14px !important; font-size: 13.5px !important; }
@@ -1556,4 +1556,56 @@ body:has(.hero-ring) header .nav-dd > a[href="/life-insurance"]:hover { backgrou
     font-size: 12.5px !important;
   }
   #heroPanel > header > a:first-child img { height: 28px !important; }
+}
+
+/* ==========================================================================
+   85. Tap-to-call button (#mcallBtn, built by mobile-nav.js) beside the menu
+   button, top right on phones, where the header's own phone link is hidden
+   for space. Same size, radius and centre line as the menu button (which
+   is pinned to top 14px / right 16px / 44px above). The header "Get a quote"
+   is right-aligned against the pair with ONE clearance value:
+   16 (edge) + 44 (menu) + 8 + 44 (call) + 8 = 120px, minus the header's 16px
+   padding = 104px. html/body raise specificity over the tablet value that
+   mobile-nav.js injects later. Logo 26px (22px under 340px) so it all fits on
+   a 320px phone. Blog-style headers drop their text phone link, which the
+   call button replaces, so their CTA returns to the logo row.
+   ========================================================================== */
+@media (max-width: 700px) {
+  #mcallBtn {
+    top: 14px !important;
+    right: 68px !important;
+    width: 44px !important;
+    height: 44px !important;
+    border-radius: 10px !important;
+  }
+  header img[src*="topquote-logo"], #heroPanel > header > a:first-child img, header[style*="justify-content:space-between"] > a:first-child img, .sc-host section[style*="position: relative"] > header > a:first-child img, .sc-host section[style*="position:relative"] > header > a:first-child img { height: 26px !important; width: auto !important; min-width: 0 !important; }
+  html body header .tq-hdr-cta a[href*="get-a-quote"], html body header a[href="/get-a-quote"] {
+    display: inline-flex !important;
+    align-items: center !important;
+    height: 44px !important;
+    padding: 0 14px !important;
+    border-radius: 10px !important;
+    margin-right: 104px !important;
+    font-size: 14.5px !important;
+    white-space: nowrap !important;
+  }
+  header a.nav-tel { display: none !important; }
+  header:has(a.nav-tel) { flex-wrap: nowrap !important; gap: 10px !important; }
+}
+@media (max-width: 340px) {
+  header img[src*="topquote-logo"], #heroPanel > header > a:first-child img, header[style*="justify-content:space-between"] > a:first-child img, .sc-host section[style*="position: relative"] > header > a:first-child img, .sc-host section[style*="position:relative"] > header > a:first-child img { height: 22px !important; }
+  html body header .tq-hdr-cta a[href*="get-a-quote"], html body header a[href="/get-a-quote"] { font-size: 13px !important; padding: 0 12px !important; }
+}
+
+/* 85b. The quote form's own header (.tq-hdr inside the /get-a-quote frame).
+   mobile-nav.js does not run inside the frame, so its desktop menu never
+   collapsed: on phones it ran off the right edge under the page's menu
+   button. Hide it wherever the page shows the menu + call buttons (<=980px).
+   Phones get the CTA clearance from section 85 (it is a <header> too);
+   tablets need it here: call button right 76 + 46 + 8 = 130px from the edge. */
+@media (max-width: 980px) {
+  .tq-hdr nav { display: none !important; }
+}
+@media (min-width: 701px) and (max-width: 980px) {
+  .tq-hdr a[href="/get-a-quote"] { margin-right: 92px !important; }
 }

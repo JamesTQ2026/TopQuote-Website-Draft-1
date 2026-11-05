@@ -15,10 +15,13 @@
 
   var CSS = [
     '#mnavBtn{display:none;}',
+    /* tap-to-call: a phone button beside the menu button, same look, always on screen */
+    '#mcallBtn{display:none;}',
     '@media (max-width:980px){',
     '  header nav{display:none !important;}',
     '  #mnavBtn{display:flex !important;}',
-    '  header .tq-hdr-cta a[href="/get-a-quote"]{margin-right:60px !important;}',
+    '  #mcallBtn{display:flex !important;}',
+    '  header .tq-hdr-cta a[href="/get-a-quote"]{margin-right:92px !important;}',
     '}',
     /* 3-4 column grids -> 2 columns on tablet */
     '@media (max-width:900px){',
@@ -31,6 +34,7 @@
     '  [style*="padding:100px"],[style*="padding:90px"]{padding-left:20px !important;padding-right:20px !important;}',
     '}',
     '#mnavBtn{position:fixed;top:22px;right:20px;z-index:99991;width:46px;height:46px;border-radius:12px;border:none;background:#1EBABB;color:#fff;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,.25);}',
+    '#mcallBtn{position:fixed;top:22px;right:76px;z-index:99991;width:46px;height:46px;border-radius:12px;background:#1EBABB;color:#fff;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 6px 18px rgba(0,0,0,.25);}',
     '#mnav{position:fixed;inset:0;background:#0C1F19;z-index:99992;display:none;flex-direction:column;padding:26px 24px 40px;overflow:auto;-webkit-overflow-scrolling:touch;}',
     '#mnav.open{display:flex;}',
     "#mnav a{color:#fff;text-decoration:none;font-size:19px;font-weight:700;padding:14px 6px;border-bottom:1px solid rgba(255,255,255,.08);font-family:'Mulish',sans-serif;min-height:44px;display:flex;align-items:center;}",
@@ -70,6 +74,12 @@
     btn.id = 'mnavBtn'; btn.setAttribute('aria-label', 'Open menu');
     btn.innerHTML = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
     document.body.appendChild(btn);
+
+    var call = document.createElement('a');
+    call.id = 'mcallBtn'; call.href = 'tel:+441619743710';
+    call.setAttribute('aria-label', 'Call TopQuote on 0161 974 3710');
+    call.innerHTML = '<svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>';
+    document.body.appendChild(call);
 
     var nav = document.createElement('div');
     nav.id = 'mnav';
