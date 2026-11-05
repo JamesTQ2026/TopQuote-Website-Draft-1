@@ -380,7 +380,7 @@
         <div style="display:flex;flex-direction:column;gap:20px;">
           <sc-for list="{{ reasons }}" as="r" hint-placeholder-count="4">
             <div style="display:flex;gap:16px;align-items:flex-start;">
-              <span style="width:34px;height:34px;border-radius:50%;background:#1EBABB;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;flex:none;font-family:'Playfair Display',Georgia,serif;">{{ r.num }}</span>
+              <span class="tq-num" style="width:34px;height:34px;border-radius:50%;background:#1EBABB;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;flex:none;font-family:'Playfair Display',Georgia,serif;">{{ r.num }}</span>
               <p style="color:#5B6B66;font-size:15px;line-height:1.65;"><strong style="color:#173B33;">{{ r.title }}</strong>, {{ r.desc }}</p>
             </div>
           </sc-for>
@@ -478,7 +478,7 @@
       <sc-for list="{{ steps }}" as="s" hint-placeholder-count="5">
         <div class="step-col">
           <div style="display:flex;align-items:center;margin-bottom:20px;">
-            <span style="width:46px;height:46px;border-radius:50%;background:#1EBABB;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:20px;flex:none;font-family:'Playfair Display',Georgia,serif;">{{ s.num }}</span>
+            <span class="tq-num" style="width:46px;height:46px;border-radius:50%;background:#1EBABB;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:20px;flex:none;font-family:'Playfair Display',Georgia,serif;">{{ s.num }}</span>
           </div>
           <h3 class="arva-h" style="font-size:18px;font-weight:700;color:#173B33;margin-bottom:10px;">{{ s.title }}</h3>
           <p style="color:#7A867F;font-size:13.5px;line-height:1.65;">{{ s.desc }}</p>

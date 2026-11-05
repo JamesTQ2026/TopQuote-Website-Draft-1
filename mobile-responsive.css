@@ -21,6 +21,14 @@ a.tq-big svg, a.tq-big i { width: 20px !important; height: 20px !important; }
 body:has(.hero-ring) header .nav-dd > a[href="/life-insurance"] { background: #fff !important; color: #159a9b !important; }
 body:has(.hero-ring) header .nav-dd > a[href="/life-insurance"]:hover { background: #F0FBFB !important; }
 
+/* Numbered circles (.tq-num, all 47 across the site). Playfair Display uses
+   old-style figures by default, which sit like lowercase letters: measured
+   2-4.5px below centre, and unevenly (3/4/5 lower than 1/2). Lining figures
+   with a 1em line box centre them. */
+/* .step-num pages carried padding-bottom:6px to lift the old dropped figures;
+   with lining figures that pushed them high, so it goes. */
+.tq-num { font-variant-numeric: lining-nums !important; line-height: 1 !important; padding-top: 0 !important; padding-bottom: 0 !important; }
+
 /* The per-panel Learn More links exist for phones; on desktop the floating
    circular button does that job. */
 .wp-more { display: none; }
