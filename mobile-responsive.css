@@ -1640,3 +1640,9 @@ body:has(.hero-ring) header .nav-dd > a[href="/life-insurance"]:hover { backgrou
   /* name under the avatar, as on desktop (the inline-cluster rule put them side by side) */
   .sc-host #testiContent .testi-card div:has(> #testiAvatar) {   /* beats section 20 (1,2,0) */ flex-direction: column !important; align-items: flex-start !important; gap: 10px !important; }
 }
+
+/* 88. Tick lists in the Life Insurance cover panels: rule 6 turns every inline
+   flex row into a centred column, which put each tick above its text. */
+@media (max-width: 700px) {
+  .sc-host ul.tq-ticks > li { flex-direction: row !important; align-items: flex-start !important; text-align: left !important; }
+}

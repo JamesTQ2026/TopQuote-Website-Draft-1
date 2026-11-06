@@ -224,6 +224,10 @@
     #sx-stats{opacity:1 !important;transform:none !important;}
     #sx-stats .sx-glow{animation:none !important;}
   }
+  /* cover heading + panels fade up as they come into view, like the cards above */
+  .tq-fade{opacity:0;transform:translateY(28px);transition:opacity .6s cubic-bezier(.22,.61,.36,1),transform .6s cubic-bezier(.22,.61,.36,1);}
+  .tq-fade[data-tq-in]{opacity:1;transform:none;}  /* attribute, not class: the framework resets class on re-render */
+  @media (prefers-reduced-motion:reduce){.tq-fade{opacity:1 !important;transform:none !important;}}
   .pv-card{transition:transform .25s ease, box-shadow .25s ease;}
   .pv-card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(20,40,35,.13);}
   .pv-reveal .pv-card{opacity:0;transform:translateY(28px);transition:opacity .6s cubic-bezier(.22,.61,.36,1), box-shadow .25s ease, transform .6s cubic-bezier(.22,.61,.36,1);}
@@ -314,6 +318,11 @@
         <!-- title + slider -->
         <div id="heroTitleWrap" style="position:absolute;top:8%;left:clamp(24px,5vw,84px);right:clamp(24px,5vw,84px);">
           <h1 id="heroHeading" class="arva-h" style="font-size:clamp(44px,6.6vw,92px);line-height:1.02;font-weight:600;letter-spacing:.5px;text-transform:uppercase;max-width:760px;will-change:transform;text-shadow:0 2px 30px rgba(0,0,0,.28);">EXPERT UK LIFE INSURANCE GUIDANCE</h1>
+          <ul id="heroTrust" class="tq-ticks" style="list-style:none;margin:26px 0 0;padding:18px 24px;display:inline-grid;gap:12px;background:rgba(30,186,187,.42);border:1px solid rgba(255,255,255,.2);border-radius:12px;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);">
+            <li style="display:flex;align-items:center;gap:12px;color:#fff;font-weight:700;font-size:clamp(15px,1.25vw,18px);line-height:1.35;"><i data-lucide="circle-check" style="width:24px;height:24px;color:#fff;flex:none;"></i><span>Fee-free advice from FCA regulated advisers</span></li>
+            <li style="display:flex;align-items:center;gap:12px;color:#fff;font-weight:700;font-size:clamp(15px,1.25vw,18px);line-height:1.35;"><i data-lucide="circle-check" style="width:24px;height:24px;color:#fff;flex:none;"></i><span>20+ years experience</span></li>
+            <li style="display:flex;align-items:center;gap:12px;color:#fff;font-weight:700;font-size:clamp(15px,1.25vw,18px);line-height:1.35;"><i data-lucide="circle-check" style="width:24px;height:24px;color:#fff;flex:none;"></i><span>Expert support tailored to you</span></li>
+          </ul>
         </div>
 
         <!-- Get Started octagon -->
@@ -588,20 +597,20 @@
   <!-- ============ COVER TYPES HEADING ============ -->
   <section data-screen-label="Cover Types Heading" style="background:#F6F7FB;padding:60px 40px 6px;">
     <div style="max-width:1200px;margin:0 auto;width:100%;">
-      <h2 class="arva-h" style="font-size:43px;line-height:1.12;font-weight:600;color:#173B33;">What are the main types of life insurance?</h2>
+      <h2 class="arva-h tq-fade" style="font-size:43px;line-height:1.12;font-weight:600;color:#173B33;">What are the main types of life insurance?</h2>
     </div>
   </section>
 
   <!-- ============ COVER TYPE: LEVEL TERM (text left, chart right) ============ -->
   <section data-screen-label="Level Term" style="background:#F6F7FB;padding:30px 40px;">
     <div style="max-width:1200px;margin:0 auto;width:100%;">
-      <div class="cover-panel" style="position:relative;background:#EAEDFB;border-radius:14px;padding:44px 40px 40px;">
+      <div class="cover-panel tq-fade" style="position:relative;background:#EAEDFB;border-radius:14px;padding:44px 40px 40px;">
         <div class="cover-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center;">
           <div class="cover-copy">
             <div style="display:flex;align-items:center;gap:9px;margin-bottom:16px;"><img src="assets/topquote-mark-teal.png" alt="TopQuote" style="width:22px;height:22px;object-fit:contain;flex:none;" loading="lazy" decoding="async" width="501" height="501"><span style="color:#1EBABB;font-weight:700;font-size:15px;">Cover Types</span></div>
             <h2 class="arva-h" style="font-size:40px;line-height:1.1;font-weight:600;color:#173B33;">Level Term Insurance</h2>
             <p style="color:#6B7280;font-size:15.5px;line-height:1.7;margin-top:16px;">Your cover amount and monthly payments stay the same for the whole policy, the payout is fixed, ideal for ongoing commitments like family income or an interest-only mortgage.</p>
-            <a href="/life-insurance" class="lm" style="margin-top:22px;color:#173B33;font-weight:700;font-size:14.5px;text-decoration:none;display:inline-flex;align-items:center;gap:6px;">Learn More <i data-lucide="arrow-up-right" style="width:16px;height:16px;"></i></a>
+            <a href="/life-insurance#lifeTypes" class="lm" style="margin-top:22px;color:#173B33;font-weight:700;font-size:14.5px;text-decoration:none;display:inline-flex;align-items:center;gap:6px;">Learn More <i data-lucide="arrow-up-right" style="width:16px;height:16px;"></i></a>
           </div>
           <div class="cover-chart" style="background:#fff;border-radius:16px;padding:10px 12px;box-shadow:0 12px 30px rgba(20,40,35,.10);">
             <svg viewBox="0 0 420 300" style="width:100%;height:auto;display:block;" role="img" aria-label="Chart: with level term insurance the cover amount and the monthly payments both stay the same for the whole policy term.">
@@ -623,7 +632,7 @@
   <!-- ============ COVER TYPE: DECREASING TERM (chart left, text right) ============ -->
   <section data-screen-label="Decreasing Term" style="background:#F6F7FB;padding:30px 40px 90px;">
     <div style="max-width:1200px;margin:0 auto;width:100%;">
-      <div class="cover-panel" style="position:relative;background:#EAEDFB;border-radius:14px;padding:44px 40px 40px;">
+      <div class="cover-panel tq-fade" style="position:relative;background:#EAEDFB;border-radius:14px;padding:44px 40px 40px;">
         <div class="cover-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center;">
           <div class="cover-chart" style="background:#fff;border-radius:16px;padding:10px 12px;box-shadow:0 12px 30px rgba(20,40,35,.10);">
             <svg viewBox="0 0 420 300" style="width:100%;height:auto;display:block;" role="img" aria-label="Chart: with decreasing term insurance the cover amount reduces towards zero over the policy term while the monthly payments stay the same.">
@@ -641,7 +650,7 @@
             <div style="display:flex;align-items:center;gap:9px;margin-bottom:16px;"><img src="assets/topquote-mark-teal.png" alt="TopQuote" style="width:22px;height:22px;object-fit:contain;flex:none;" loading="lazy" decoding="async" width="501" height="501"><span style="color:#1EBABB;font-weight:700;font-size:15px;">Cover Types</span></div>
             <h2 class="arva-h" style="font-size:40px;line-height:1.1;font-weight:600;color:#173B33;">Decreasing Term Insurance</h2>
             <p style="color:#6B7280;font-size:15.5px;line-height:1.7;margin-top:16px;">Your cover amount reduces over time, usually in line with a repayment mortgage, while monthly payments stay the same. Often the most affordable way to protect a shrinking debt.</p>
-            <a href="/life-insurance" class="lm" style="margin-top:22px;color:#173B33;font-weight:700;font-size:14.5px;text-decoration:none;display:inline-flex;align-items:center;gap:6px;">Learn More <i data-lucide="arrow-up-right" style="width:16px;height:16px;"></i></a>
+            <a href="/life-insurance#decreasingTerm" class="lm" style="margin-top:22px;color:#173B33;font-weight:700;font-size:14.5px;text-decoration:none;display:inline-flex;align-items:center;gap:6px;">Learn More <i data-lucide="arrow-up-right" style="width:16px;height:16px;"></i></a>
           </div>
         </div>
       </div>
@@ -1613,6 +1622,21 @@ class Component extends DCLogic {
         if(msgEl)msgEl.value=''; if(consentEl)consentEl.checked=false; if(selEl)selEl.selectedIndex=0;
       });
   }, true);
+})();
+</script>
+<script>
+/* .tq-fade: fade up on entering the viewport, again when scrolled back down to.
+   Re-scans for a few seconds because the page framework renders late. */
+(function () {
+  if (!("IntersectionObserver" in window)) { document.querySelectorAll(".tq-fade").forEach(function (e) { e.setAttribute("data-tq-in", ""); }); return; }
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (e) {
+      if (e.isIntersecting) e.target.setAttribute("data-tq-in", "");
+      else if (e.boundingClientRect.top > 0) e.target.removeAttribute("data-tq-in");
+    });
+  }, { threshold: 0.18 });
+  function scan() { document.querySelectorAll(".tq-fade:not([data-tq-obs])").forEach(function (e) { e.setAttribute("data-tq-obs", ""); io.observe(e); }); }
+  scan(); var n = 0, t = setInterval(function () { scan(); if (++n > 20) clearInterval(t); }, 500);
 })();
 </script>
 </body>
