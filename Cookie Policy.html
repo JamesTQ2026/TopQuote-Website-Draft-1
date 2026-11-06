@@ -57,6 +57,7 @@
   .legal-body li{color:#4A5A55;font-size:16px;line-height:1.7;margin-bottom:8px;}
   .legal-body code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:14.5px;background:#F6F7FB;border:1px solid #E7EAF2;border-radius:5px;padding:1px 6px;}
 </style>
+<script src="services-menu.js" defer></script>
 <script src="mobile-nav.js" defer></script>
 <script src="cookie-banner.js" defer></script>
 <link rel="stylesheet" href="/mobile-responsive.css">
@@ -151,18 +152,24 @@
 </head>
 <body>
   <section style="position:absolute;top:0;left:0;right:0;z-index:50;background:transparent;color:#fff;">
-    <header style="position:relative;z-index:5;padding:30px clamp(24px,5vw,84px);display:flex;align-items:center;justify-content:space-between;gap:40px;">
-      <a href="/" style="display:flex;align-items:center;"><img src="assets/topquote-logo.png" alt="TopQuote" style="height:38px;width:auto;display:block;" width="1872" height="514"></a>
-      <nav style="display:flex;align-items:center;gap:20px;font-size:18px;font-weight:600;">
+    <header style="position:relative;z-index:5;max-width:none;margin:0;padding:30px clamp(24px,5vw,84px);display:flex;align-items:center;justify-content:space-between;gap:40px;">
+      <a href="/" style="display:flex;align-items:center;">
+        <img src="assets/topquote-logo.png" alt="TopQuote" style="height:38px;width:auto;display:block;" loading="lazy" decoding="async" width="1872" height="514">
+      </a>
+
+      <nav style="display:flex;align-items:center;gap:20px;font-size:16px;font-weight:600;">
         <div class="nav-dd"><a href="/life-insurance" style="background:#1EBABB;color:#fff;padding:9px 18px;border-radius:24px;text-decoration:none;display:inline-flex;align-items:center;gap:5px;">Services <span style="font-size:10px;">&#9662;</span></a><div class="nav-dd-menu"><a href="/life-insurance">Life Insurance</a><a href="/critical-illness">Critical Illness</a><a href="/income-protection">Income Protection</a></div></div>
-        <div class="nav-dd"><a href="/about" class="nav-link" style="color:#fff;padding:9px 14px;display:inline-flex;align-items:center;gap:5px;">About <span style="font-size:10px;">&#9662;</span></a><div class="nav-dd-menu"><a href="/about">About Us</a><a href="/consumer-duty">Consumer Duty</a><a href="/kids-pass">Kids Pass &amp; Popcorn Pass</a></div></div>
-        <a href="/reconnect" class="nav-link" style="color:#fff;padding:9px 14px;">Reconnect</a>
-        <a href="/contact" class="nav-link" style="color:#fff;padding:9px 14px;">Contact</a>
-        <a href="/careers" class="nav-link" style="color:#fff;padding:9px 14px;">Careers</a>
-        <a href="/blog" class="nav-link" style="color:#fff;padding:9px 14px;">Blog</a>
-        <a href="/find-us" class="nav-link" style="color:#fff;padding:9px 14px;">Find Us</a>
+        <div class="nav-dd"><a href="/about" class="nav-link" style="color:#fff;padding:9px 14px;text-decoration:none;display:inline-flex;align-items:center;gap:5px;">About <span style="font-size:10px;">&#9662;</span></a><div class="nav-dd-menu"><a href="/about">About Us</a><a href="/consumer-duty">Consumer Duty</a><a href="/kids-pass">Kids Pass</a></div></div>
+        <a href="/reconnect" class="nav-link" style="color:#fff;padding:9px 14px;text-decoration:none;">Reconnect</a>
+        <a href="/contact" class="nav-link" style="color:#fff;padding:9px 14px;text-decoration:none;">Contact</a>
+        <a href="/careers" class="nav-link" style="color:#fff;padding:9px 14px;text-decoration:none;">Careers</a>
+        <a href="/blog" class="nav-link" style="color:#fff;padding:9px 14px;text-decoration:none;">Blog</a>
+        <a href="/find-us" class="nav-link" style="color:#fff;padding:9px 14px;text-decoration:none;">Find Us</a>
       </nav>
-      <div style="display:flex;align-items:center;gap:22px;"><a href="tel:+441619743710" class="nav-tel" style="color:#fff;text-decoration:none;font-weight:600;font-size:18px;white-space:nowrap;display:inline-flex;align-items:center;gap:8px;"><i data-lucide="phone" style="width:17px;height:17px;color:#fff;"></i> 0161 974 3710</a><a href="/get-a-quote" class="abtn" style="background:#fff;color:#159a9b;padding:14px 26px;border-radius:8px;text-decoration:none;font-weight:700;font-size:15px;white-space:nowrap;">Get a quote</a></div>
+
+      <div style="display:flex;align-items:center;gap:24px;">
+        <div class="tq-hdr-cta" style="display:inline-flex;align-items:center;gap:18px;"><a href="tel:01619743710" class="tq-hdr-tel" style="color:#fff;font-weight:700;font-size:15px;text-decoration:none;display:inline-flex;align-items:center;gap:7px;white-space:nowrap;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>0161 974 3710</a><a href="/get-a-quote" style="background:#1EBABB;color:#fff;padding:14px 26px;border-radius:8px;text-decoration:none;font-weight:700;font-size:15px;white-space:nowrap;">Get a quote</a></div>
+      </div>
     </header>
   </section>
 
@@ -180,6 +187,7 @@
     <div class="legal-body" style="max-width:900px;margin:0 auto;">
       
 <p>This policy explains what this website stores on your device, what it loads from other companies, and how you can change your mind at any time. It covers cookies and the technologies the law treats the same way, such as local storage.</p>
+      <p class="tq-pdf-link" style="margin:-4px 0 26px;font-size:15px;"><a href="/docs/topquote-cookie-policy.pdf" target="_blank" rel="noopener" style="color:#159a9b;font-weight:700;text-decoration:none;">Read this policy as a PDF</a> <span style="color:#8A9691;">(opens in a new tab)</span></p>
 
 <h2>The short version</h2>
 <p>We store one thing on your device: the choice you make in our cookie banner. With your permission we use Google Analytics to measure how the site is used. Nothing is switched on until you say so, and nothing is pre-ticked. We run no advertising cookies and no cross-site tracking. The only third-party content that sets cookies is the Google map of our office, and we do not load it unless you tell us to.</p>
@@ -261,7 +269,7 @@
         <div style="display:flex;gap:18px;align-items:center;flex-wrap:wrap;">
           <a href="https://www.theopenworkpartnership.com/privacy-notice/" target="_blank" rel="noopener" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:14px;">Privacy Policy</a>
           <span style="color:#C4C9DE;">|</span>
-          <a href="/docs/topquote-cookie-policy.pdf" target="_blank" rel="noopener" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:14px;">Cookie Policy</a>
+          <a href="/cookie-policy" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:14px;">Cookie Policy</a>
           <span style="color:#C4C9DE;">|</span>
           <a href="/docs/topquote-consumer-duty-statement.pdf" target="_blank" rel="noopener" class="nav-link" style="color:#6B7280;text-decoration:none;font-size:14px;">Consumer Duty</a>
           <span style="color:#C4C9DE;">|</span>
