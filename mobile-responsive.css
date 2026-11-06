@@ -1629,3 +1629,12 @@ body:has(.hero-ring) header .nav-dd > a[href="/life-insurance"]:hover { backgrou
 @media (max-width: 700px) {
   html body .sc-host div:has(> iframe[data-consent="embeds"]) { padding: 0 !important; }
 }
+
+/* 87. Home review card on phones: the decorative quote mark squeezed the name onto
+   two lines and the role onto three; drop it there and size the text for a phone. */
+@media (max-width: 700px) {
+  .testi-card [data-lucide="quote"], .testi-card svg.lucide-quote { display: none !important; }
+  .testi-card #testiName { font-size: 20px !important; }
+  .testi-card #testiRole { font-size: 13.5px !important; }
+  .testi-card #testiQuote { font-size: 18.5px !important; min-height: 0 !important; }
+}
