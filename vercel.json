@@ -1042,26 +1042,6 @@
    "statusCode": 302
   },
   {
-   "source": "/blog-income-protection-vs-critical-illness",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog-income-protection-vs-critical-illness.html",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog/:cat/income-protection-vs-critical-illness",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog/income-protection-vs-critical-illness",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
    "source": "/blog-is-income-protection-insurance-worth-it",
    "destination": "/blog",
    "statusCode": 302
@@ -2724,6 +2704,16 @@
   {
    "source": "/blog/how-valuable-is-your-childs-school-bag",
    "destination": "/blog-how-valuable-is-your-childs-school-bag",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/:cat/income-protection-vs-critical-illness",
+   "destination": "/blog-income-protection-vs-critical-illness",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/income-protection-vs-critical-illness",
+   "destination": "/blog-income-protection-vs-critical-illness",
    "statusCode": 301
   },
   {
