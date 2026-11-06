@@ -200,9 +200,13 @@
   #sx-stats .sx-glow{position:absolute;left:50%;top:56%;width:min(1000px,90%);height:620px;transform:translate(-50%,-50%);background:radial-gradient(ellipse at center,rgba(30,186,187,.16) 0%,rgba(30,186,187,.07) 35%,transparent 70%);filter:blur(50px);pointer-events:none;z-index:0;animation:sxGlowPulse 9s ease-in-out infinite;}
   @keyframes sxGlowPulse{0%,100%{opacity:.6;}50%{opacity:1;}}
   #sx-stats .swiper{position:relative;z-index:1;width:100%;height:520px;padding-bottom:20px !important;overflow:visible !important;transform-style:preserve-3d;will-change:transform,opacity;}
-  #sx-stats .swiper-slide{width:380px;max-width:85%;height:480px;opacity:.42;transition:opacity .45s ease;}
-  #sx-stats .swiper-slide-active{opacity:1;}
-  #sx-stats .swiper-slide-prev,#sx-stats .swiper-slide-next{opacity:.62;}
+  #sx-stats .swiper-slide{width:380px;max-width:85%;height:480px;opacity:1;}
+  /* Side cards used opacity .42/.62, and in the overlapping 3D layout that let
+     the cards behind show through them. They stay solid now and are dimmed by
+     a light overlay instead. */
+  #sx-stats .swiper-slide::after{content:"";position:absolute;inset:0;border-radius:23px;background:#F6F7FB;opacity:.55;pointer-events:none;z-index:5;transition:opacity .45s ease;}
+  #sx-stats .swiper-slide-prev::after,#sx-stats .swiper-slide-next::after{opacity:.32;}
+  #sx-stats .swiper-slide-active::after{opacity:0;}
   #sx-stats .sx-shadow{transition:box-shadow .4s ease, transform .4s ease;}
   /* The slide glide used the browser default 'ease' over 1.4s, which lands
      soft and late. A short easeOutQuint leaves quickly and settles clean. */
@@ -722,11 +726,11 @@
         <h2 class="arva-h" style="font-size:clamp(36px,3.6vw,58px);line-height:1.1;font-weight:600;color:#173B33;">Experience the TopQuote <br>difference through our <br>clients' words</h2>
         <div class="testi-card" style="margin-top:32px;max-width:760px;background:#fff;border-radius:20px;padding:clamp(26px,3vw,40px);box-shadow:0 18px 50px rgba(20,40,35,.08);">
           <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;">
-            <div style="display:flex;align-items:center;gap:16px;">
+            <div style="display:flex;flex-direction:column;align-items:flex-start;gap:10px;">
               <div id="testiAvatar" style="width:60px;height:60px;border-radius:50%;background:#1EBABB;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:22px;font-family:'Playfair Display',serif;flex:none;">S</div>
               <div>
                 <div id="testiName" class="arva-h" style="font-size:23px;font-weight:700;color:#173B33;">Stephanie N.</div>
-                <div id="testiRole" style="color:#8A94A6;font-size:15px;margin-top:2px;">Verified customer &middot; Trustpilot</div>
+                <div id="testiRole" style="display:none;">Verified customer &middot; Trustpilot</div>
               </div>
             </div>
             <i data-lucide="quote" style="width:48px;height:48px;color:#CBD1E2;fill:#CBD1E2;flex:none;"></i>
