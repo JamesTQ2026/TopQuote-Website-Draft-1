@@ -1646,3 +1646,20 @@ body:has(.hero-ring) header .nav-dd > a[href="/life-insurance"]:hover { backgrou
 @media (max-width: 700px) {
   .sc-host ul.tq-ticks > li { flex-direction: row !important; align-items: flex-start !important; text-align: left !important; }
 }
+
+/* 89. Home hero on phones: the 190px 'Get a quote' circle (and its satellite) took most
+   of the first screen. There it is a regular button, matching the blue hero CTAs on
+   About Us and Consumer Duty. Desktop keeps the circle. */
+@media (max-width: 700px) {
+  #heroOcta { filter: none !important; transform: none !important; }
+  #heroOcta #heroOctaInner { width: auto !important; height: auto !important; animation: none !important; }
+  #heroOcta #heroOctaInner > div:first-child {
+    width: auto !important; height: auto !important; border-radius: 10px !important;
+    background: #4B9DF8 !important; flex-direction: row !important; gap: 10px !important;
+    padding: 16px 30px !important; box-shadow: 0 10px 24px rgba(6,34,22,.25) !important;
+  }
+  #heroOcta #heroOctaInner > div:first-child > span:first-child { display: none !important; }
+  #heroOcta #heroOctaInner > div:first-child > span:last-child { font-size: 18px !important; }
+  #heroOcta #heroOctaInner > div:first-child > span:last-child::after { content: "\2192"; margin-left: 10px; }
+  #heroOcta .cta-satellite { display: none !important; }
+}
