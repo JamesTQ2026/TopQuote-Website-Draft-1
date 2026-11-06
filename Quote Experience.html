@@ -96,8 +96,7 @@
   <!-- Site header (matches the rest of the site; mobile-nav.js turns it into the hamburger menu on phones) -->
   <style>
     .tq-hdr{position:relative;z-index:50;background:#fff;padding:16px clamp(16px,5vw,84px);display:flex;align-items:center;justify-content:space-between;gap:40px;border-bottom:1px solid rgba(0,0,0,.07);font-family:'Mulish',system-ui,-apple-system,sans-serif;}
-    /* step 7 is the tallest step; keep its heading modest so it fits under the bar */
-    [data-qx-scroll] h1{font-size:clamp(28px,2.4vw,34px) !important;line-height:1.05 !important;}
+    /* step 7 is the tallest step; its heading is the same size as every other step (the step scrolls if a screen is short) */
     [data-qx-scroll] > div{margin-top:18px !important;}
     [data-qx-scroll] > label{margin-top:14px !important;}
     [data-qx-scroll] > button{margin-top:10px !important;}
