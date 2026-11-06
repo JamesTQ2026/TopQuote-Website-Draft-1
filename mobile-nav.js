@@ -98,3 +98,36 @@
     nav.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', close); });
   });
 })();
+
+/* tqMailCopy: an email link opens the visitor's mail app, but on computers with
+   no mail app set up (webmail users) the click appears to do nothing. So the
+   address is also copied and a short note says so. */
+(function () {
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href^="mailto:"]');
+    if (!a) return;
+    var addr = a.getAttribute('href').slice(7).split('?')[0];
+    var done = function (ok) {
+      var t = document.getElementById('tqMailToast');
+      if (!t) {
+        t = document.createElement('div'); t.id = 'tqMailToast'; t.setAttribute('role', 'status');
+        t.style.cssText = 'position:fixed;left:50%;top:96px;transform:translateX(-50%);z-index:99999;background:#0C1F19;color:#fff;font:600 15px/1.4 Muli,Mulish,sans-serif;padding:12px 20px;border-radius:10px;box-shadow:0 12px 30px rgba(0,0,0,.25);transition:opacity .3s;max-width:90vw;text-align:center;';
+        document.body.appendChild(t);
+      }
+      t.textContent = ok ? 'Email address copied: ' + addr : 'Email us at ' + addr;
+      t.style.opacity = '1';
+      clearTimeout(done.t); done.t = setTimeout(function () { t.style.opacity = '0'; }, 3500);
+    };
+    var legacy = function () {
+      var ta = document.createElement('textarea'); ta.value = addr; ta.setAttribute('readonly', '');
+      ta.style.cssText = 'position:fixed;left:-9999px;top:0;'; document.body.appendChild(ta); ta.select();
+      var ok = false; try { ok = document.execCommand('copy'); } catch (err) {}
+      ta.remove(); return ok;
+    };
+    // the synchronous copy first: the async clipboard API can sit waiting on a
+    // permission prompt, which would leave the visitor with no feedback at all
+    var ok = legacy();
+    if (!ok && navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(addr).catch(function () {});
+    done(ok);
+  }, true);
+})();

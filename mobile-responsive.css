@@ -18,8 +18,8 @@ a.tq-big svg, a.tq-big i { width: 20px !important; height: 20px !important; }
 
 /* Teal heroes (the pages with the big white ring): the teal Services pill
    vanished into the background, so there it is white with teal text. */
-body:has(.hero-ring) header .nav-dd > a[href="/life-insurance"] { background: #fff !important; color: #159a9b !important; }
-body:has(.hero-ring) header .nav-dd > a[href="/life-insurance"]:hover { background: #F0FBFB !important; }
+body:has(.hero-ring) header .nav-dd > a[href="/life-insurance"] { background: #0C1F19 !important; color: #fff !important; }
+body:has(.hero-ring) header .nav-dd > a[href="/life-insurance"]:hover { background: #173B33 !important; }
 
 /* Numbered circles (.tq-num, all 47 across the site). Playfair Display uses
    old-style figures by default, which sit like lowercase letters: measured
@@ -1638,7 +1638,7 @@ body:has(.hero-ring) header .nav-dd > a[href="/life-insurance"]:hover { backgrou
   .testi-card #testiRole { font-size: 13.5px !important; }
   .testi-card #testiQuote { font-size: 18.5px !important; min-height: 0 !important; }
   /* name under the avatar, as on desktop (the inline-cluster rule put them side by side) */
-  .sc-host #testiContent .testi-card div:has(> #testiAvatar) {   /* beats section 20 (1,2,0) */ flex-direction: column !important; align-items: flex-start !important; gap: 10px !important; }
+  .sc-host #testiContent .testi-card div:has(> #testiAvatar) {   /* beats section 20 (1,2,0) */ flex-direction: row !important; align-items: center !important; gap: 10px !important; }
 }
 
 /* 88. Tick lists in the Life Insurance cover panels: rule 6 turns every inline
