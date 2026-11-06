@@ -96,6 +96,12 @@
   <!-- Site header (matches the rest of the site; mobile-nav.js turns it into the hamburger menu on phones) -->
   <style>
     .tq-hdr{position:relative;z-index:50;background:#fff;padding:16px clamp(16px,5vw,84px);display:flex;align-items:center;justify-content:space-between;gap:40px;border-bottom:1px solid rgba(0,0,0,.07);font-family:'Mulish',system-ui,-apple-system,sans-serif;}
+    /* step 7 is the tallest step; keep its heading modest so it fits under the bar */
+    [data-qx-scroll] h1{font-size:clamp(28px,2.4vw,34px) !important;line-height:1.05 !important;}
+    [data-qx-scroll] > div{margin-top:18px !important;}
+    [data-qx-scroll] > label{margin-top:14px !important;}
+    [data-qx-scroll] > button{margin-top:10px !important;}
+    [data-qx-scroll] > button:last-child{margin-top:14px !important;}
     .tq-hdr nav{display:flex;align-items:center;gap:18px;font-size:16px;font-weight:600;}
     .tq-hdr .nav-link{white-space:nowrap;color:#173B33 !important;padding:9px 12px;text-decoration:none;display:inline-flex;align-items:center;gap:5px;}
     .tq-hdr .nav-link:hover{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:6px;}
@@ -579,6 +585,8 @@
 
       useEffect(() => {
         const handleWheel = (e) => {
+          // step 7 scrolls on short screens: let the wheel through over it
+          if (e.target && e.target.closest && e.target.closest("[data-qx-scroll]")) return;
           e.preventDefault();
           clickTargetRotationRef.current = null;
           const delta = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
@@ -761,9 +769,10 @@
                 animate={{ opacity: 1, scale: 1, y: isDetailsStep ? "0rem" : "5rem" }}
                 transition={{ type: "spring", stiffness: 350, damping: 25, mass: 0.8 }}
                 style={isDetailsStep ? { touchAction: "pan-y" } : undefined}
-                className={"absolute top-[calc(7.5%_+_70px)] lg:top-[7.5%] left-0 right-0 z-20 flex flex-col items-center text-center px-4 select-none " + (isDetailsStep
-                  ? "mt-[52px] lg:mt-[0px] bottom-[92px] justify-start overflow-y-auto pointer-events-auto"
-                  : "mt-[90px] lg:mt-[110px] justify-center pointer-events-none")}>
+                data-qx-scroll={isDetailsStep ? "" : undefined}
+                className={"absolute left-0 right-0 z-20 flex flex-col items-center text-center px-4 select-none " + (isDetailsStep
+                  ? "top-[287px] sm:top-[201px] bottom-[92px] justify-start overflow-y-auto pointer-events-auto"
+                  : "top-[calc(7.5%_+_70px)] lg:top-[7.5%] mt-[90px] lg:mt-[110px] justify-center pointer-events-none")}>
                 <motion.h1
                   animate={{
                     scale: isSubmitted ? 1.0 : step === 1 ? (rawAmount.length >= 4 ? Math.max(0.55, 1.0 - (rawAmount.length - 3) * 0.08) : 1.0) : (rawEmail.length >= 4 ? Math.max(0.55, 1.0 - (rawEmail.length - 3) * 0.08) : 1.0),
