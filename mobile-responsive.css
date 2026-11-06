@@ -1663,3 +1663,23 @@ body:has(.hero-ring) header .nav-dd > a[href="/life-insurance"]:hover { backgrou
   #heroOcta #heroOctaInner > div:first-child > span:last-child::after { content: "\2192"; margin-left: 10px; }
   #heroOcta .cta-satellite { display: none !important; }
 }
+
+/* 90. Letter card ("Our Address"): a fountain pen resting on the page, to the
+   right of the address lines. Shot on white and blended with multiply, so only
+   the pen and its shadow show. */
+#letterCard::after {
+  content: ""; position: absolute; right: 18px; bottom: 112px; width: 240px; height: 147px;
+  background: url("assets/fountain-pen.webp") center / contain no-repeat;
+  mix-blend-mode: multiply; pointer-events: none; transform: rotate(-6deg); z-index: 1;
+}
+@media (max-width: 700px) {
+  .sc-host #letterCard { position: relative !important; }
+  #letterCard::after { right: 6px; bottom: 200px; width: 150px; height: 92px; }
+}
+
+/* 91. Trustpilot cards: the "★ Trustpilot" title row is caught by the inline
+   cluster rule (20) on phones and pushed to the left. Keep it centred.
+   :is(div#_, div) only lifts specificity above rule 20. */
+@media (max-width: 700px) {
+  .sc-host :is(div#_, div):has(> span[style*="color:#00b67a"], > span[style*="color: rgb(0, 182, 122)"]) { justify-content: center !important; text-align: center !important; }
+}
