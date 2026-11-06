@@ -1683,3 +1683,12 @@ body:has(.hero-ring) header .nav-dd > a[href="/life-insurance"]:hover { backgrou
 @media (max-width: 700px) {
   .sc-host :is(div#_, div):has(> span[style*="color:#00b67a"], > span[style*="color: rgb(0, 182, 122)"]) { justify-content: center !important; text-align: center !important; }
 }
+
+/* 92. One header everywhere: the main-page header is the reference.
+   - no underline on hover (main pages never showed one; the quote page and the
+     blog posts did, because their links lacked the inline text-decoration:none)
+   - blog posts used an 18px menu and an 18px phone number; main pages use 16px / 15px */
+header .nav-link:hover, .tq-hdr .nav-link:hover { text-decoration: none !important; }
+header nav[style*="font-size:18px"] { font-size: 16px !important; }
+header a.nav-tel { font-size: 15px !important; font-weight: 700 !important; gap: 7px !important; }
+header a.nav-tel svg, header a.nav-tel i { width: 16px !important; height: 16px !important; }
