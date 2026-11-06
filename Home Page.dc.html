@@ -159,7 +159,7 @@
   @keyframes aboutFloat{0%,100%{transform:translateY(0) rotate(0deg);}50%{transform:translateY(-12px) rotate(-.4deg);}}
   @keyframes aboutFloat{0%,100%{transform:translateY(0) rotate(0deg);}50%{transform:translateY(-12px) rotate(-.4deg);}}
   #aboutImg1{animation:aboutFloat 7s ease-in-out infinite;}
-  #aboutImg1 .about-vid{animation:aboutVidFix 7s ease-in-out infinite;} #aboutImg1 .about-still{animation:aboutVidFix 7s ease-in-out infinite;}
+  #aboutImg1 .about-vid{animation:aboutVidFix 7s ease-in-out infinite;} /* the photo floats with its frame and shows edge to edge (no counter-motion, so no oversize crop) */
   @keyframes aboutVidFix{0%,100%{transform:translateY(0) rotate(0deg);}50%{transform:translateY(12px) rotate(.4deg);}}
   @media (prefers-reduced-motion:reduce){#aboutImg1,#aboutImg1 .about-vid,#aboutImg1 .about-still{animation:none !important;}}
   @keyframes heroCircleFloat{0%,100%{transform:translateY(0);}50%{transform:translateY(15px);}}
@@ -389,7 +389,7 @@
   <section id="aboutPanel" data-screen-label="About" style="position:sticky;top:0;z-index:2;min-height:100vh;background:#F6F7FB;padding:90px 40px;display:flex;align-items:center;perspective:1400px;box-shadow:0 -34px 70px rgba(8,30,22,.16);">
     <div id="aboutInner" style="width:100%;max-width:1200px;margin:0 auto;display:grid;grid-template-columns:480px 1fr;gap:70px;align-items:center;will-change:transform;">
       <div id="aboutMedia" style="position:relative;height:560px;">
-        <div id="aboutImg1" style="position:absolute;left:0;top:8px;width:458px;height:540px;background:#000;border-radius:16px;overflow:hidden;will-change:transform;"><img class="about-still" src="assets/about-family-bedroom.webp" alt="A family playing together at home" style="position:absolute;left:-20px;top:-20px;width:calc(100% + 40px);height:calc(100% + 40px);object-fit:cover;display:block;" loading="lazy" decoding="async" width="1000" height="1179"></div>
+        <div id="aboutImg1" style="position:absolute;left:0;top:8px;width:458px;height:540px;background:#000;border-radius:16px;overflow:hidden;will-change:transform;"><img class="about-still" src="assets/about-family-bedroom.webp" alt="A family playing together at home" style="position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" decoding="async" width="1000" height="1179"></div>
       </div>
       <div>
         <div style="display:flex;align-items:center;gap:9px;margin-bottom:18px;">
