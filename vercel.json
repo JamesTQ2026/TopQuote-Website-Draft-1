@@ -22,26 +22,6 @@
    "statusCode": 302
   },
   {
-   "source": "/blog-cohabiting-couples-and-life-insurance-uk-what-you-need-to-know",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog-cohabiting-couples-and-life-insurance-uk-what-you-need-to-know.html",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog/:cat/cohabiting-couples-and-life-insurance-uk-what-you-need-to-know",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog/cohabiting-couples-and-life-insurance-uk-what-you-need-to-know",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
    "source": "/blog-life-insurance-for-stay-at-home-parents-uk-do-you-need-cover",
    "destination": "/blog",
    "statusCode": 302
@@ -918,6 +898,26 @@
   },
   {
    "source": "/blog/buying-life-insurance",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-cohabiting-couples-and-life-insurance-uk-what-you-need-to-know",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog-cohabiting-couples-and-life-insurance-uk-what-you-need-to-know.html",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/:cat/cohabiting-couples-and-life-insurance-uk-what-you-need-to-know",
+   "destination": "/blog",
+   "statusCode": 302
+  },
+  {
+   "source": "/blog/cohabiting-couples-and-life-insurance-uk-what-you-need-to-know",
    "destination": "/blog",
    "statusCode": 302
   },

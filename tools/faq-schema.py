@@ -52,7 +52,10 @@ def from_blog(s):
     if not m:
         return []
     rest = s[m.end():]
-    stop = re.search(r'<h2[\s>]|<div class="tq-ac"|</article>', rest)
+    # <hr>: the author box and disclaimer follow the FAQ in the approved copy
+    # compliance lines (approval line, 'not regulated by the FCA' notes) are not part of an answer
+    stop = re.search(r'<h2[\s>]|<hr[\s/>]|<div class="tq-ac"|</article>'
+                     r'|<p>(?:<em>)?(?:Approved by The Openwork Partnership|[^<]{0,90}not regulated by the Financial Conduct Authority)', rest)
     sect = rest[:stop.start()] if stop else rest
     out = []
     # 1b. some posts write "<p><strong>Q: ...?</strong></p>" then the answer paragraph(s)

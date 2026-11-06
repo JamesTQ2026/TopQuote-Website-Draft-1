@@ -4,7 +4,6 @@
 # Format: slug   # date  title
 
 over-50s-life-insurance                                                                         # 2026-06-25  Over 50s Life Insurance Explained
-cohabiting-couples-and-life-insurance-uk-what-you-need-to-know                                  # 2026-05-26  Cohabiting Couples and Life Insurance UK: What You Need to Know
 life-insurance-for-stay-at-home-parents-uk-do-you-need-cover                                    # 2026-05-23  Life Insurance for Stay-at-Home Parents UK: Do You Need Cover?
 life-insurance-after-a-heart-attack-uk-can-you-get-cover                                        # 2026-05-22  Life Insurance After a Heart Attack UK: Can You Get Cover?
 waiver-of-premium-what-it-is-and-whether-you-need-it                                            # 2026-05-21  Waiver of Premium: What It Is and Whether You Need It
