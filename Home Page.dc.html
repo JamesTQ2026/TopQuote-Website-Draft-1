@@ -154,8 +154,7 @@
   #heroOcta:active #heroOctaInner > div:first-child{transform:scale(1.04);}
   @keyframes heroFloatA{0%,100%{transform:translateY(0);}50%{transform:translateY(-11px);}}
   @keyframes heroFloatB{0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);}}
-  #heroHeading{animation:heroFloatA 5.6s ease-in-out infinite;}
-  #heroParaFloat{animation:heroFloatB 6.4s ease-in-out infinite;}
+  /* hero heading and paragraph no longer float; only the Get a quote circle does */
   @media (prefers-reduced-motion:reduce){#heroHeading,#heroParaFloat,#heroOctaInner{animation:none !important;}}
   @keyframes aboutFloat{0%,100%{transform:translateY(0) rotate(0deg);}50%{transform:translateY(-12px) rotate(-.4deg);}}
   @keyframes aboutFloat{0%,100%{transform:translateY(0) rotate(0deg);}50%{transform:translateY(-12px) rotate(-.4deg);}}
@@ -164,7 +163,7 @@
   @keyframes aboutVidFix{0%,100%{transform:translateY(0) rotate(0deg);}50%{transform:translateY(12px) rotate(.4deg);}}
   @media (prefers-reduced-motion:reduce){#aboutImg1,#aboutImg1 .about-vid,#aboutImg1 .about-still{animation:none !important;}}
   @keyframes heroCircleFloat{0%,100%{transform:translateY(0);}50%{transform:translateY(15px);}}
-  #heroCircle{animation:heroCircleFloat 4.4s ease-in-out infinite;}
+  /* #heroCircle no longer floats (James: only the Get a quote circle should) */
   @media (prefers-reduced-motion:reduce){#heroCircle{animation:none !important;}}
   @keyframes partnerFadeUp{0%{opacity:0;transform:translateY(30px);}100%{opacity:1;transform:translateY(0);}}
   #partnerHeading,#partnerBtn{opacity:0;}
