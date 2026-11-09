@@ -836,7 +836,7 @@ class Component extends DCLogic {
     window.addEventListener('scroll', onScroll, { passive:true }); onScroll();
   }
   componentDidMount(){ document.title = 'Critical Illness Cover | TopQuote'; this.initScrollTop(); this.renderIcons(); this.initReveals(); this.initFaq(); this.initCounters(); this.initBars(); this.initReviewsCarousel(); this.initMute(); }
-  initMute(){ const m=()=>document.querySelectorAll('video:not([data-allow-audio])').forEach(v=>{v.muted=true;v.volume=0;v.setAttribute('muted','');v.loop=true;v.setAttribute('loop','');v.setAttribute('playsinline','');v.play&&v.play().catch(()=>{});}); m(); setTimeout(m,400); setTimeout(m,1200); }
+  initMute(){ const m=()=>document.querySelectorAll('video:not([data-allow-audio])').forEach(v=>{if(v.closest('#svcMenu'))return;v.muted=true;v.volume=0;v.setAttribute('muted','');v.loop=true;v.setAttribute('loop','');v.setAttribute('playsinline','');v.play&&v.play().catch(()=>{});}); m(); setTimeout(m,400); setTimeout(m,1200); }
   initReviewsCarousel(){
     const mount = () => {
       const el = document.getElementById('rvSwiperEl');

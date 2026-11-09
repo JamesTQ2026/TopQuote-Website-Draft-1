@@ -912,7 +912,7 @@ class Component extends DCLogic {
     var onScroll = function(){ var y = window.scrollY || document.documentElement.scrollTop; if (y > 500){ b.style.opacity='1'; b.style.visibility='visible'; } else { b.style.opacity='0'; b.style.visibility='hidden'; } };
     window.addEventListener('scroll', onScroll, { passive:true }); onScroll();
   }
-  componentDidMount(){ this.initScrollTop(); try{ const mute=()=>document.querySelectorAll('video:not([data-allow-audio])').forEach(v=>{v.muted=true;v.volume=0;v.setAttribute('muted','');v.loop=true;v.setAttribute('loop','');v.setAttribute('playsinline','');v.removeAttribute('controls');}); mute(); document.addEventListener('play',function(e){var v=e.target; if(v&&v.tagName==='VIDEO'&&!v.hasAttribute('data-allow-audio')){v.muted=true;v.volume=0;}},true); document.addEventListener('loadeddata',function(e){var v=e.target; if(v&&v.tagName==='VIDEO'&&!v.hasAttribute('data-allow-audio')){v.muted=true;v.volume=0;}},true); setInterval(mute,250); }catch(e){}
+  componentDidMount(){ this.initScrollTop(); try{ const mute=()=>document.querySelectorAll('video:not([data-allow-audio])').forEach(v=>{if(v.closest('#svcMenu'))return;v.muted=true;v.volume=0;v.setAttribute('muted','');v.loop=true;v.setAttribute('loop','');v.setAttribute('playsinline','');v.removeAttribute('controls');}); mute(); document.addEventListener('play',function(e){var v=e.target; if(v&&v.tagName==='VIDEO'&&!v.hasAttribute('data-allow-audio')){v.muted=true;v.volume=0;}},true); document.addEventListener('loadeddata',function(e){var v=e.target; if(v&&v.tagName==='VIDEO'&&!v.hasAttribute('data-allow-audio')){v.muted=true;v.volume=0;}},true); setInterval(mute,250); }catch(e){}
     this.renderIcons();
     this.initReveals();
     this.initFaq();

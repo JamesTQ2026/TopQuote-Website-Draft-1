@@ -629,7 +629,7 @@ class Component extends DCLogic {
     window.addEventListener('scroll', onScroll, { passive:true }); onScroll();
   }
   componentDidMount(){ document.title = 'Life Insurance | TopQuote'; this.initScrollTop(); this.renderIcons(); this.initReveals(); this.initFaq(); this.initMute(); }
-  initMute(){ const m=()=>document.querySelectorAll('video:not([data-allow-audio])').forEach(v=>{v.muted=true;v.volume=0;v.setAttribute('muted','');v.loop=true;v.setAttribute('loop','');v.setAttribute('playsinline','');v.play&&v.play().catch(()=>{});}); m(); setTimeout(m,400); setTimeout(m,1200); }
+  initMute(){ const m=()=>document.querySelectorAll('video:not([data-allow-audio])').forEach(v=>{if(v.closest('#svcMenu'))return;v.muted=true;v.volume=0;v.setAttribute('muted','');v.loop=true;v.setAttribute('loop','');v.setAttribute('playsinline','');v.play&&v.play().catch(()=>{});}); m(); setTimeout(m,400); setTimeout(m,1200); }
   componentDidUpdate(){ this.renderIcons(); }
   renderIcons(){ const go=()=>{ try{ if(window.lucide) if (window.__safeIcons) window.__safeIcons(); }catch(e){} }; go(); setTimeout(go,300); setTimeout(go,900); }
   initReveals(){ const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');});},{threshold:.12}); setTimeout(()=>{document.querySelectorAll('.reveal').forEach(el=>io.observe(el));},60); }
