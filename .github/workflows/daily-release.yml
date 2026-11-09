@@ -1,0 +1,48 @@
+# Publishes scheduled blog posts on their date.
+# A post dated in the future is held back (302 to /blog, no sitemap entry, no card)
+# by tools/build-url-layer.js. This re-runs that build every morning; if a post has
+# come due, the regenerated vercel.json / sitemap.xml / Blog.dc.html are committed
+# and pushed, and Vercel deploys them. If nothing is due, nothing is committed.
+name: Daily post release
+
+on:
+  schedule:
+    - cron: '5 0 * * *'      # 00:05 UTC (00:05 UK time in winter, 01:05 in summer)
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-release
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Rebuild the URL layer for today's date
+        env:
+          TZ: Europe/London
+        run: node tools/build-url-layer.js
+
+      - name: Commit and push if a post came due
+        run: |
+          if git diff --quiet; then
+            echo "Nothing due today."
+            exit 0
+          fi
+          git config user.name "James Evans"
+          git config user.email "james@clearvolt.co.uk"
+          git add -A vercel.json sitemap.xml Blog.dc.html
+          git commit -m "Release posts due $(TZ=Europe/London date +%Y-%m-%d)"
+          git push origin HEAD:main
