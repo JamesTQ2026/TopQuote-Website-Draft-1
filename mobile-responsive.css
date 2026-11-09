@@ -809,7 +809,7 @@ body:has(.hero-ring) header .nav-dd > a[href="/life-insurance"]:hover { backgrou
      69. Award badges. Scaled to 104px the Feefo mark's wording is too fine
      to read and the badge looks like an empty white box beside the others.
      ---------------------------------------------------------------------- */
-  .sc-host img[src*="badge-feefo"],
+  .sc-host img[src*="business-quality-awards"],
   .sc-host img[src*="badge-bqa"] {
     height: 76px !important;
     width: auto !important;
@@ -1412,8 +1412,8 @@ body:has(.hero-ring) header .nav-dd > a[href="/life-insurance"]:hover { backgrou
     justify-content: space-between !important;
     gap: 8px !important;
   }
-  img[src*="badge-trustpilot"],
-  img[src*="badge-feefo"],
+  img[src*="feefo-service-rating"],
+  img[src*="business-quality-awards"],
   .sc-host .tp-score,
   img[src*="badge-bqa"] {
     width: calc((100% - 16px) / 3) !important;
