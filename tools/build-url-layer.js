@@ -225,6 +225,37 @@ for (const slug of liveSlugs) {
   r301(`/blog/:cat/${slug}`, `/blog-${slug}`);
   r301(`/blog/${slug}`, `/blog-${slug}`);
 }
+// 3b. posts that were live on the old WordPress site but were not carried over.
+//     Google still knows them (Search Console "Page with redirect", 9 Nov 2026), so each
+//     goes to the closest live page instead of the blog index.
+const RETIRED = {
+  'life-insurance-for-diabetics': '/blog-life-insurance-with-pre-existing-conditions',
+  'life-insurance-for-high-blood-pressure': '/blog-life-insurance-with-pre-existing-conditions',
+  'putting-life-insurance-in-trust-a-uk-guide': '/blog-is-life-insurance-part-of-your-estate',
+  'life-insurance-beneficiary-rules': '/blog-is-life-insurance-part-of-your-estate',
+  'do-you-need-a-medical-for-life-insurance': '/blog-how-do-life-insurance-companies-obtain-your-medical-information',
+  'how-is-life-insurance-paid-out-a-plain-english-uk-guide': '/blog-claiming',
+  'how-long-does-a-life-insurance-claim-take-to-pay-out-in-the-uk-refresh': '/blog-claiming',
+  'critical-illness-cover-for-cancer-what-it-covers': '/blog-what-is-critical-illness-cover-and-why-you-might-need-it',
+  'can-you-have-more-than-one-life-insurance-policy-2': '/blog-can-you-have-more-than-one-life-insurance-policy',
+  'life-insurance-and-dangerous-hobbies-what-uk-insurers-ask': '/blog-what-factors-affect-a-life-insurance-quote',
+  'do-you-need-life-insurance-if-you-have-no-children': '/blog-do-i-need-life-insurance-if-im-single',
+  'life-insurance-in-your-40s-what-to-think-about': '/blog-when-should-i-get-life-insurance',
+  'what-happens-to-life-insurance-when-the-mortgage-is-paid-off': '/blog-what-happens-if-you-outlive-your-life-insurance-term',
+  'can-you-cancel-life-insurance-what-happens-when-you-do': '/blog-why-is-it-important-to-review-life-cover',
+  'life-insurance-vs-income-protection-which-do-you-need': '/blog-do-you-need-income-protection',
+  'family-income-benefit-explained-how-it-works': '/family-life-insurance',
+  'life-insurance-for-over-60s-what-to-know-in-your-sixties': '/life-insurance',
+  'increasing-term-life-insurance-explained': '/life-insurance',
+  'is-death-in-service-enough': '/life-insurance',
+};
+for (const [slug, to] of Object.entries(RETIRED)) {
+  const post = to.match(/^\/blog-(.+)$/);
+  if (post && !liveSlugs.includes(post[1])) throw new Error(`RETIRED ${slug} points at a missing or unapproved post: ${to}`);
+  if (liveSlugs.includes(slug) || held.has?.(slug) || (Array.isArray(held) && held.includes(slug))) throw new Error(`RETIRED ${slug} is a current post; remove it from RETIRED`);
+  r301(`/blog/:cat/${slug}`, to);
+  r301(`/blog/${slug}`, to);
+}
 // anything else under /blog/ (categories, pagination, date archives, retired posts) -> blog index
 r301('/blog/:path+', '/blog');
 

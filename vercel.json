@@ -3557,6 +3557,196 @@
    "statusCode": 301
   },
   {
+   "source": "/blog/:cat/life-insurance-for-diabetics",
+   "destination": "/blog-life-insurance-with-pre-existing-conditions",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/life-insurance-for-diabetics",
+   "destination": "/blog-life-insurance-with-pre-existing-conditions",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/:cat/life-insurance-for-high-blood-pressure",
+   "destination": "/blog-life-insurance-with-pre-existing-conditions",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/life-insurance-for-high-blood-pressure",
+   "destination": "/blog-life-insurance-with-pre-existing-conditions",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/:cat/putting-life-insurance-in-trust-a-uk-guide",
+   "destination": "/blog-is-life-insurance-part-of-your-estate",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/putting-life-insurance-in-trust-a-uk-guide",
+   "destination": "/blog-is-life-insurance-part-of-your-estate",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/:cat/life-insurance-beneficiary-rules",
+   "destination": "/blog-is-life-insurance-part-of-your-estate",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/life-insurance-beneficiary-rules",
+   "destination": "/blog-is-life-insurance-part-of-your-estate",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/:cat/do-you-need-a-medical-for-life-insurance",
+   "destination": "/blog-how-do-life-insurance-companies-obtain-your-medical-information",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/do-you-need-a-medical-for-life-insurance",
+   "destination": "/blog-how-do-life-insurance-companies-obtain-your-medical-information",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/:cat/how-is-life-insurance-paid-out-a-plain-english-uk-guide",
+   "destination": "/blog-claiming",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/how-is-life-insurance-paid-out-a-plain-english-uk-guide",
+   "destination": "/blog-claiming",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/:cat/how-long-does-a-life-insurance-claim-take-to-pay-out-in-the-uk-refresh",
+   "destination": "/blog-claiming",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/how-long-does-a-life-insurance-claim-take-to-pay-out-in-the-uk-refresh",
+   "destination": "/blog-claiming",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/:cat/critical-illness-cover-for-cancer-what-it-covers",
+   "destination": "/blog-what-is-critical-illness-cover-and-why-you-might-need-it",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/critical-illness-cover-for-cancer-what-it-covers",
+   "destination": "/blog-what-is-critical-illness-cover-and-why-you-might-need-it",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/:cat/can-you-have-more-than-one-life-insurance-policy-2",
+   "destination": "/blog-can-you-have-more-than-one-life-insurance-policy",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/can-you-have-more-than-one-life-insurance-policy-2",
+   "destination": "/blog-can-you-have-more-than-one-life-insurance-policy",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/:cat/life-insurance-and-dangerous-hobbies-what-uk-insurers-ask",
+   "destination": "/blog-what-factors-affect-a-life-insurance-quote",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/life-insurance-and-dangerous-hobbies-what-uk-insurers-ask",
+   "destination": "/blog-what-factors-affect-a-life-insurance-quote",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/:cat/do-you-need-life-insurance-if-you-have-no-children",
+   "destination": "/blog-do-i-need-life-insurance-if-im-single",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/do-you-need-life-insurance-if-you-have-no-children",
+   "destination": "/blog-do-i-need-life-insurance-if-im-single",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/:cat/life-insurance-in-your-40s-what-to-think-about",
+   "destination": "/blog-when-should-i-get-life-insurance",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/life-insurance-in-your-40s-what-to-think-about",
+   "destination": "/blog-when-should-i-get-life-insurance",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/:cat/what-happens-to-life-insurance-when-the-mortgage-is-paid-off",
+   "destination": "/blog-what-happens-if-you-outlive-your-life-insurance-term",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/what-happens-to-life-insurance-when-the-mortgage-is-paid-off",
+   "destination": "/blog-what-happens-if-you-outlive-your-life-insurance-term",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/:cat/can-you-cancel-life-insurance-what-happens-when-you-do",
+   "destination": "/blog-why-is-it-important-to-review-life-cover",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/can-you-cancel-life-insurance-what-happens-when-you-do",
+   "destination": "/blog-why-is-it-important-to-review-life-cover",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/:cat/life-insurance-vs-income-protection-which-do-you-need",
+   "destination": "/blog-do-you-need-income-protection",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/life-insurance-vs-income-protection-which-do-you-need",
+   "destination": "/blog-do-you-need-income-protection",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/:cat/family-income-benefit-explained-how-it-works",
+   "destination": "/family-life-insurance",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/family-income-benefit-explained-how-it-works",
+   "destination": "/family-life-insurance",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/:cat/life-insurance-for-over-60s-what-to-know-in-your-sixties",
+   "destination": "/life-insurance",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/life-insurance-for-over-60s-what-to-know-in-your-sixties",
+   "destination": "/life-insurance",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/:cat/increasing-term-life-insurance-explained",
+   "destination": "/life-insurance",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/increasing-term-life-insurance-explained",
+   "destination": "/life-insurance",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/:cat/is-death-in-service-enough",
+   "destination": "/life-insurance",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/is-death-in-service-enough",
+   "destination": "/life-insurance",
+   "statusCode": 301
+  },
+  {
    "source": "/blog/:path+",
    "destination": "/blog",
    "statusCode": 301
