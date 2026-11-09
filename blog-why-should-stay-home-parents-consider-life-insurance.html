@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
-<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
 <style>
   *{box-sizing:border-box;margin:0;padding:0;}
   body{font-family:'Mulish',sans-serif;color:#1B3A33;background:#F6F7FB;}
@@ -323,7 +323,7 @@
       </div>
     </div>
   </footer>
-  <script>lucide.createIcons();</script>
+  <script>document.addEventListener('DOMContentLoaded',function(){lucide.createIcons();});</script>
 <script src="author-card-anim.js"></script>
 </body>
 </html>
