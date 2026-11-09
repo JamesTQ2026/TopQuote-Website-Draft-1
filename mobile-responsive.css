@@ -1668,7 +1668,7 @@ body:has(.hero-ring) header .nav-dd > a[href="/life-insurance"]:hover { backgrou
    right of the address lines. Shot on white and blended with multiply, so only
    the pen and its shadow show. */
 #letterCard::after {
-  content: ""; position: absolute; right: -215px; bottom: 50px; width: 600px; height: 368px;
+  content: ""; position: absolute; right: -290px; bottom: 50px; width: 600px; height: 368px;
   background: url("assets/fountain-pen.webp") center / contain no-repeat;
   mix-blend-mode: multiply; pointer-events: none; transform: rotate(-6deg); z-index: 5;
 }
