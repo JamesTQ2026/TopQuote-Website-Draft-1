@@ -471,12 +471,12 @@ class Component extends DCLogic {
   renderIcons(){ const go=()=>{ try{ if(window.lucide) if (window.__safeIcons) window.__safeIcons(); }catch(e){} }; go(); setTimeout(go,300); setTimeout(go,900); }
 
   renderVals(){ const base = [
-    { poster: 'assets/stats-vid-1-poster.webp', name: 'Trustpilot', quote: '"Great to deal with, fully explained my options and never once put any pressure on me to purchase anything. Have made several follow-up calls to make sure everything was in place."' },
-    { poster: 'assets/stats-vid-2-poster.webp', name: 'Trustpilot', quote: '"Everything made very clear and the online documentation was easy to do. Excellent and very easy and clear from start to finish."' },
-    { poster: 'assets/stats-vid-3-poster.webp', name: 'Trustpilot', quote: '"Easy, helpful and polite. The service from top quote was excellent from start to finish. Everyone I spoke to was helpful and knowledgeable."' },
-    { poster: 'assets/stats-vid-4-poster.webp', name: 'Trustpilot', quote: '"Clear, thorough, courteous, three words that capture my experience. A trustworthy brokerage service, I felt in control."' },
-    { poster: 'assets/stats-vid-5-poster.webp', name: 'Trustpilot', quote: '"From the first call to the final policy, everything was straightforward and stress-free. I always knew exactly where I stood."' },
-    { poster: 'assets/stats-vid-6-poster.webp', name: 'Trustpilot', quote: '"Genuinely helpful advice with no jargon and no pressure. I would happily recommend them to friends and family."' }
+    { poster: 'assets/stats-vid-1-poster.webp', name: 'Peter', quote: '"Great to deal with, fully explained my options and never once put any pressure on me to purchase anything. Have made several follow up calls to make sure everything was in place."' },
+    { poster: 'assets/stats-vid-2-poster.webp', name: 'Feefo customer', quote: '"Everything made very clear and the online documentation was easy to do. Excellent and very easy and clear from start to finish."' },
+    { poster: 'assets/stats-vid-3-poster.webp', name: 'Feefo customer', quote: '"Easy, helpful and polite. The service from Top Quote was excellent from start to finish. Everyone I spoke to was helpful and knowledgeable."' },
+    { poster: 'assets/stats-vid-4-poster.webp', name: 'Morgan', quote: '"Clear, thorough, courteous, three words that capture my experience. A trustworthy brokerage service, I felt in control."' },
+    { poster: 'assets/stats-vid-5-poster.webp', name: 'Justine', quote: '"Excellent customer service. Very clear in explaining the different options to us and spent time looking for best deal for us."' },
+    { poster: 'assets/stats-vid-6-poster.webp', name: 'Feefo customer', quote: '"Friendly and good explanation of product. No hurry and happy to answer any questions or recap information."' }
   ]; return { stats: base.concat(base, base) }; }
   mountStatsSwiper(){
     const el = document.getElementById('sx-stats-swiper');

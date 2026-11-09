@@ -408,8 +408,8 @@
 
         <figure style="margin:0;background:#fff;border-radius:14px;padding:20px 22px;">
           <div id="miniRev" style="transition:opacity .42s ease;min-height:104px;opacity:1;">
-            <blockquote id="miniRevQuote" style="margin:0 0 10px;font-style:italic;color:#111;font-size:15px;line-height:1.6;">&ldquo;Explained everything clearly, no pressure at all. Had my options within the hour. Genuinely excellent service.&rdquo;</blockquote>
-            <figcaption style="font-size:13px;color:#1EBABB;"><span id="miniRevAuthor">Sarah M., Cheshire</span> &middot; <span style="color:#1EBABB;font-weight:700;">Verified review</span></figcaption>
+            <blockquote id="miniRevQuote" style="margin:0 0 10px;font-style:italic;color:#111;font-size:15px;line-height:1.6;">&ldquo;Clear, thorough, courteous, three words that capture my experience. A trustworthy brokerage service, I felt in control.&rdquo;</blockquote>
+            <figcaption style="font-size:13px;color:#1EBABB;"><span id="miniRevAuthor">Morgan, Feefo</span> &middot; <span style="color:#1EBABB;font-weight:700;">Verified review</span></figcaption>
           </div>
         </figure>
 
@@ -725,12 +725,9 @@ class Component extends DCLogic {
   }
   componentWillUnmount(){ if (window.__tqMiniTimer) clearInterval(window.__tqMiniTimer); }
   miniReviews(){ return [
-    { quote:'\u201CExplained everything clearly, no pressure at all. Had my options within the hour. Genuinely excellent service.\u201D', author:'Sarah M., Cheshire' },
-    { quote:'\u201CGenuinely helpful advice with no jargon and no pressure. I would happily recommend them to friends and family.\u201D', author:'James P., Manchester' },
-    { quote:'\u201CClear, thorough, courteous, three words that capture my experience. A trustworthy brokerage service, I felt in control.\u201D', author:'Helen D., Stockport' },
-    { quote:'\u201CEasy, helpful and polite. The service from TopQuote was excellent from start to finish. Everyone I spoke to was knowledgeable.\u201D', author:'Mark T., Wilmslow' },
-    { quote:'\u201CFrom the first call to the final policy, everything was straightforward and easy. I always knew exactly where I stood.\u201D', author:'Aisha K., Altrincham' },
-    { quote:'\u201CEverything made very clear and the online documentation was easy to do. Excellent from start to finish.\u201D', author:'David R., Macclesfield' }
+    { quote:'\u201CClear, thorough, courteous, three words that capture my experience. A trustworthy brokerage service, I felt in control.\u201D', author:'Morgan, Feefo' },
+    { quote:'\u201CEasy, helpful and polite. The service from Top Quote was excellent from start to finish. Everyone I spoke to was helpful and knowledgeable.\u201D', author:'Feefo customer' },
+    { quote:'\u201CEverything made very clear and the online documentation was easy to do. Excellent and very easy and clear from start to finish.\u201D', author:'Feefo customer' }
   ]; }
 
   initLetter(){
@@ -767,12 +764,12 @@ class Component extends DCLogic {
   }
   componentDidUpdate(){ try{ if(window.lucide) if (window.__safeIcons) window.__safeIcons(); }catch(e){} }
   renderVals(){ return { reviews: (function(){ var b=[
-    { name:'Trustpilot', stars:'★★★★★', quote:'"Genuinely helpful advice with no jargon and no pressure. I would happily recommend them to friends and family."' },
-    { name:'Trustpilot', stars:'★★★★★', quote:'"Clear, thorough, courteous, three words that capture my experience. A trustworthy brokerage service, I felt in control."' },
-    { name:'Trustpilot', stars:'★★★★★', quote:'"Great to deal with, fully explained my options and never once put any pressure on me to purchase anything. Have made several follow-up calls to make sure everything was in place."' },
-    { name:'Trustpilot', stars:'★★★★☆', quote:'"Easy, helpful and polite. The service from TopQuote was excellent from start to finish. Everyone I spoke to was knowledgeable."' },
-    { name:'Trustpilot', stars:'★★★★★', quote:'"From the first call to the final policy, everything was straightforward and easy. I always knew exactly where I stood."' },
-    { name:'Trustpilot', stars:'★★★★★', quote:'"Everything made very clear and the online documentation was easy to do. Excellent from start to finish."' }
+    { name:'Peter, Feefo', stars:'★★★★★', quote:'"Great to deal with, fully explained my options and never once put any pressure on me to purchase anything. Have made several follow up calls to make sure everything was in place."' },
+    { name:'Morgan, Feefo', stars:'★★★★★', quote:'"Clear, thorough, courteous, three words that capture my experience. A trustworthy brokerage service, I felt in control."' },
+    { name:'Feefo customer', stars:'★★★★★', quote:'"Easy, helpful and polite. The service from Top Quote was excellent from start to finish. Everyone I spoke to was helpful and knowledgeable."' },
+    { name:'Justine, Feefo', stars:'★★★★★', quote:'"Excellent customer service. Very clear in explaining the different options to us and spent time looking for best deal for us."' },
+    { name:'Feefo customer', stars:'★★★★★', quote:'"Everything made very clear and the online documentation was easy to do. Excellent and very easy and clear from start to finish."' },
+    { name:'Feefo customer', stars:'★★★★★', quote:'"Friendly and good explanation of product. No hurry and happy to answer any questions or recap information."' }
   ]; return b.concat(b,b); })(), articles: [
     { title:'Private medical insurance', excerpt:"Find out everything you need to know about private medical cover, what it includes, what it costs, and whether it's right for you.", author:'Tanweer Hussain', role:'Protection Expert', time:'8 min' },
     { title:'Does income protection cover redundancy?', excerpt:"Will you be covered for redundancy with an income protection policy? We explain exactly what these policies do and don't pay out for.", author:'Tanweer Hussain', role:'Protection Expert', time:'8 min' },
