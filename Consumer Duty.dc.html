@@ -389,12 +389,37 @@
   <section style="display:none;background:#F6F7FB;padding:90px clamp(24px,5vw,40px);">
     <h2 class="reveal arva-h" style="text-align:center;font-size:clamp(30px,3.6vw,44px);font-weight:600;color:#173B33;margin-bottom:48px;">We work with some of the UK's leading insurers</h2>
     <div id="pvGrid" class="reveal" style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(6,1fr);gap:22px;">
-      <sc-for list="{{ providers }}" as="p" hint-placeholder-count="6">
+      
         <div class="pv-card" style="background:#fff;border-radius:8px;padding:34px 20px 26px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:24px;min-height:230px;box-shadow:0 12px 30px rgba(20,40,35,.06);">
-          <div style="flex:1;display:flex;align-items:center;justify-content:center;padding:6px;width:100%;"><img data-logo="{{ p.logo }}" alt="{{ p.name }}" style="max-width:100%;max-height:100%;object-fit:contain;" loading="lazy" decoding="async"></div>
-          <span style="color:#173B33;font-size:15px;font-weight:600;">{{ p.name }}</span>
+          <div style="flex:1;display:flex;align-items:center;justify-content:center;padding:6px;width:100%;"><img data-logo="assets/logo-lg.webp" alt="Legal &amp; General" style="max-width:100%;max-height:100%;object-fit:contain;" loading="lazy" decoding="async"></div>
+          <span style="color:#173B33;font-size:15px;font-weight:600;">Legal &amp; General</span>
         </div>
-      </sc-for>
+      
+        <div class="pv-card" style="background:#fff;border-radius:8px;padding:34px 20px 26px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:24px;min-height:230px;box-shadow:0 12px 30px rgba(20,40,35,.06);">
+          <div style="flex:1;display:flex;align-items:center;justify-content:center;padding:6px;width:100%;"><img data-logo="assets/logo-royal-london.webp" alt="Royal London" style="max-width:100%;max-height:100%;object-fit:contain;" loading="lazy" decoding="async"></div>
+          <span style="color:#173B33;font-size:15px;font-weight:600;">Royal London</span>
+        </div>
+      
+        <div class="pv-card" style="background:#fff;border-radius:8px;padding:34px 20px 26px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:24px;min-height:230px;box-shadow:0 12px 30px rgba(20,40,35,.06);">
+          <div style="flex:1;display:flex;align-items:center;justify-content:center;padding:6px;width:100%;"><img data-logo="assets/logo-aviva.webp" alt="Aviva" style="max-width:100%;max-height:100%;object-fit:contain;" loading="lazy" decoding="async"></div>
+          <span style="color:#173B33;font-size:15px;font-weight:600;">Aviva</span>
+        </div>
+      
+        <div class="pv-card" style="background:#fff;border-radius:8px;padding:34px 20px 26px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:24px;min-height:230px;box-shadow:0 12px 30px rgba(20,40,35,.06);">
+          <div style="flex:1;display:flex;align-items:center;justify-content:center;padding:6px;width:100%;"><img data-logo="assets/logo-vitality.webp" alt="Vitality" style="max-width:100%;max-height:100%;object-fit:contain;" loading="lazy" decoding="async"></div>
+          <span style="color:#173B33;font-size:15px;font-weight:600;">Vitality</span>
+        </div>
+      
+        <div class="pv-card" style="background:#fff;border-radius:8px;padding:34px 20px 26px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:24px;min-height:230px;box-shadow:0 12px 30px rgba(20,40,35,.06);">
+          <div style="flex:1;display:flex;align-items:center;justify-content:center;padding:6px;width:100%;"><img data-logo="assets/logo-lv.webp" alt="LV" style="max-width:100%;max-height:100%;object-fit:contain;" loading="lazy" decoding="async"></div>
+          <span style="color:#173B33;font-size:15px;font-weight:600;">LV</span>
+        </div>
+      
+        <div class="pv-card" style="background:#fff;border-radius:8px;padding:34px 20px 26px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:24px;min-height:230px;box-shadow:0 12px 30px rgba(20,40,35,.06);">
+          <div style="flex:1;display:flex;align-items:center;justify-content:center;padding:6px;width:100%;"><img data-logo="assets/logo-guardian.webp" alt="Guardian" style="max-width:100%;max-height:100%;object-fit:contain;" loading="lazy" decoding="async"></div>
+          <span style="color:#173B33;font-size:15px;font-weight:600;">Guardian</span>
+        </div>
+      
     </div>
   </section>
 
@@ -511,16 +536,169 @@
 <div id="rvSwiper" class="reveal" data-feefo-fallback style="max-width:1180px;margin:0 auto;">
       <div class="swiper" id="rvSwiperEl">
         <div class="swiper-wrapper">
-          <sc-for list="{{ reviews }}" as="r" hint-placeholder-count="6">
+          
             <div class="swiper-slide">
               <div style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 12px 30px rgba(20,40,35,.06);min-height:290px;">
                 <div style="font-family:Georgia,serif;font-size:64px;line-height:.6;color:#1EBABB;height:34px;">“</div>
-                <div style="margin-top:20px;color:#7A867F;font-size:14px;font-weight:600;">{{ r.name }}</div>
-                <div style="color:#F5A623;font-size:16px;letter-spacing:2px;margin:8px 0 16px;">{{ r.stars }}</div>
-                <p style="color:#5B6B66;font-size:14.5px;line-height:1.7;">{{ r.quote }}</p>
+                <div style="margin-top:20px;color:#7A867F;font-size:14px;font-weight:600;">Peter, Feefo</div>
+                <div style="color:#F5A623;font-size:16px;letter-spacing:2px;margin:8px 0 16px;">★★★★★</div>
+                <p style="color:#5B6B66;font-size:14.5px;line-height:1.7;">&quot;Great to deal with, fully explained my options and never once put any pressure on me to purchase anything. Have made several follow up calls to make sure everything was in place.&quot;</p>
               </div>
             </div>
-          </sc-for>
+          
+            <div class="swiper-slide">
+              <div style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 12px 30px rgba(20,40,35,.06);min-height:290px;">
+                <div style="font-family:Georgia,serif;font-size:64px;line-height:.6;color:#1EBABB;height:34px;">“</div>
+                <div style="margin-top:20px;color:#7A867F;font-size:14px;font-weight:600;">Morgan, Feefo</div>
+                <div style="color:#F5A623;font-size:16px;letter-spacing:2px;margin:8px 0 16px;">★★★★★</div>
+                <p style="color:#5B6B66;font-size:14.5px;line-height:1.7;">&quot;Clear, thorough, courteous, three words that capture my experience. A trustworthy brokerage service, I felt in control.&quot;</p>
+              </div>
+            </div>
+          
+            <div class="swiper-slide">
+              <div style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 12px 30px rgba(20,40,35,.06);min-height:290px;">
+                <div style="font-family:Georgia,serif;font-size:64px;line-height:.6;color:#1EBABB;height:34px;">“</div>
+                <div style="margin-top:20px;color:#7A867F;font-size:14px;font-weight:600;">Feefo customer</div>
+                <div style="color:#F5A623;font-size:16px;letter-spacing:2px;margin:8px 0 16px;">★★★★★</div>
+                <p style="color:#5B6B66;font-size:14.5px;line-height:1.7;">&quot;Easy, helpful and polite. The service from Top Quote was excellent from start to finish. Everyone I spoke to was helpful and knowledgeable.&quot;</p>
+              </div>
+            </div>
+          
+            <div class="swiper-slide">
+              <div style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 12px 30px rgba(20,40,35,.06);min-height:290px;">
+                <div style="font-family:Georgia,serif;font-size:64px;line-height:.6;color:#1EBABB;height:34px;">“</div>
+                <div style="margin-top:20px;color:#7A867F;font-size:14px;font-weight:600;">Justine, Feefo</div>
+                <div style="color:#F5A623;font-size:16px;letter-spacing:2px;margin:8px 0 16px;">★★★★★</div>
+                <p style="color:#5B6B66;font-size:14.5px;line-height:1.7;">&quot;Excellent customer service. Very clear in explaining the different options to us and spent time looking for best deal for us.&quot;</p>
+              </div>
+            </div>
+          
+            <div class="swiper-slide">
+              <div style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 12px 30px rgba(20,40,35,.06);min-height:290px;">
+                <div style="font-family:Georgia,serif;font-size:64px;line-height:.6;color:#1EBABB;height:34px;">“</div>
+                <div style="margin-top:20px;color:#7A867F;font-size:14px;font-weight:600;">Feefo customer</div>
+                <div style="color:#F5A623;font-size:16px;letter-spacing:2px;margin:8px 0 16px;">★★★★★</div>
+                <p style="color:#5B6B66;font-size:14.5px;line-height:1.7;">&quot;Everything made very clear and the online documentation was easy to do. Excellent and very easy and clear from start to finish.&quot;</p>
+              </div>
+            </div>
+          
+            <div class="swiper-slide">
+              <div style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 12px 30px rgba(20,40,35,.06);min-height:290px;">
+                <div style="font-family:Georgia,serif;font-size:64px;line-height:.6;color:#1EBABB;height:34px;">“</div>
+                <div style="margin-top:20px;color:#7A867F;font-size:14px;font-weight:600;">Feefo customer</div>
+                <div style="color:#F5A623;font-size:16px;letter-spacing:2px;margin:8px 0 16px;">★★★★★</div>
+                <p style="color:#5B6B66;font-size:14.5px;line-height:1.7;">&quot;Friendly and good explanation of product. No hurry and happy to answer any questions or recap information.&quot;</p>
+              </div>
+            </div>
+          
+            <div class="swiper-slide">
+              <div style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 12px 30px rgba(20,40,35,.06);min-height:290px;">
+                <div style="font-family:Georgia,serif;font-size:64px;line-height:.6;color:#1EBABB;height:34px;">“</div>
+                <div style="margin-top:20px;color:#7A867F;font-size:14px;font-weight:600;">Peter, Feefo</div>
+                <div style="color:#F5A623;font-size:16px;letter-spacing:2px;margin:8px 0 16px;">★★★★★</div>
+                <p style="color:#5B6B66;font-size:14.5px;line-height:1.7;">&quot;Great to deal with, fully explained my options and never once put any pressure on me to purchase anything. Have made several follow up calls to make sure everything was in place.&quot;</p>
+              </div>
+            </div>
+          
+            <div class="swiper-slide">
+              <div style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 12px 30px rgba(20,40,35,.06);min-height:290px;">
+                <div style="font-family:Georgia,serif;font-size:64px;line-height:.6;color:#1EBABB;height:34px;">“</div>
+                <div style="margin-top:20px;color:#7A867F;font-size:14px;font-weight:600;">Morgan, Feefo</div>
+                <div style="color:#F5A623;font-size:16px;letter-spacing:2px;margin:8px 0 16px;">★★★★★</div>
+                <p style="color:#5B6B66;font-size:14.5px;line-height:1.7;">&quot;Clear, thorough, courteous, three words that capture my experience. A trustworthy brokerage service, I felt in control.&quot;</p>
+              </div>
+            </div>
+          
+            <div class="swiper-slide">
+              <div style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 12px 30px rgba(20,40,35,.06);min-height:290px;">
+                <div style="font-family:Georgia,serif;font-size:64px;line-height:.6;color:#1EBABB;height:34px;">“</div>
+                <div style="margin-top:20px;color:#7A867F;font-size:14px;font-weight:600;">Feefo customer</div>
+                <div style="color:#F5A623;font-size:16px;letter-spacing:2px;margin:8px 0 16px;">★★★★★</div>
+                <p style="color:#5B6B66;font-size:14.5px;line-height:1.7;">&quot;Easy, helpful and polite. The service from Top Quote was excellent from start to finish. Everyone I spoke to was helpful and knowledgeable.&quot;</p>
+              </div>
+            </div>
+          
+            <div class="swiper-slide">
+              <div style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 12px 30px rgba(20,40,35,.06);min-height:290px;">
+                <div style="font-family:Georgia,serif;font-size:64px;line-height:.6;color:#1EBABB;height:34px;">“</div>
+                <div style="margin-top:20px;color:#7A867F;font-size:14px;font-weight:600;">Justine, Feefo</div>
+                <div style="color:#F5A623;font-size:16px;letter-spacing:2px;margin:8px 0 16px;">★★★★★</div>
+                <p style="color:#5B6B66;font-size:14.5px;line-height:1.7;">&quot;Excellent customer service. Very clear in explaining the different options to us and spent time looking for best deal for us.&quot;</p>
+              </div>
+            </div>
+          
+            <div class="swiper-slide">
+              <div style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 12px 30px rgba(20,40,35,.06);min-height:290px;">
+                <div style="font-family:Georgia,serif;font-size:64px;line-height:.6;color:#1EBABB;height:34px;">“</div>
+                <div style="margin-top:20px;color:#7A867F;font-size:14px;font-weight:600;">Feefo customer</div>
+                <div style="color:#F5A623;font-size:16px;letter-spacing:2px;margin:8px 0 16px;">★★★★★</div>
+                <p style="color:#5B6B66;font-size:14.5px;line-height:1.7;">&quot;Everything made very clear and the online documentation was easy to do. Excellent and very easy and clear from start to finish.&quot;</p>
+              </div>
+            </div>
+          
+            <div class="swiper-slide">
+              <div style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 12px 30px rgba(20,40,35,.06);min-height:290px;">
+                <div style="font-family:Georgia,serif;font-size:64px;line-height:.6;color:#1EBABB;height:34px;">“</div>
+                <div style="margin-top:20px;color:#7A867F;font-size:14px;font-weight:600;">Feefo customer</div>
+                <div style="color:#F5A623;font-size:16px;letter-spacing:2px;margin:8px 0 16px;">★★★★★</div>
+                <p style="color:#5B6B66;font-size:14.5px;line-height:1.7;">&quot;Friendly and good explanation of product. No hurry and happy to answer any questions or recap information.&quot;</p>
+              </div>
+            </div>
+          
+            <div class="swiper-slide">
+              <div style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 12px 30px rgba(20,40,35,.06);min-height:290px;">
+                <div style="font-family:Georgia,serif;font-size:64px;line-height:.6;color:#1EBABB;height:34px;">“</div>
+                <div style="margin-top:20px;color:#7A867F;font-size:14px;font-weight:600;">Peter, Feefo</div>
+                <div style="color:#F5A623;font-size:16px;letter-spacing:2px;margin:8px 0 16px;">★★★★★</div>
+                <p style="color:#5B6B66;font-size:14.5px;line-height:1.7;">&quot;Great to deal with, fully explained my options and never once put any pressure on me to purchase anything. Have made several follow up calls to make sure everything was in place.&quot;</p>
+              </div>
+            </div>
+          
+            <div class="swiper-slide">
+              <div style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 12px 30px rgba(20,40,35,.06);min-height:290px;">
+                <div style="font-family:Georgia,serif;font-size:64px;line-height:.6;color:#1EBABB;height:34px;">“</div>
+                <div style="margin-top:20px;color:#7A867F;font-size:14px;font-weight:600;">Morgan, Feefo</div>
+                <div style="color:#F5A623;font-size:16px;letter-spacing:2px;margin:8px 0 16px;">★★★★★</div>
+                <p style="color:#5B6B66;font-size:14.5px;line-height:1.7;">&quot;Clear, thorough, courteous, three words that capture my experience. A trustworthy brokerage service, I felt in control.&quot;</p>
+              </div>
+            </div>
+          
+            <div class="swiper-slide">
+              <div style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 12px 30px rgba(20,40,35,.06);min-height:290px;">
+                <div style="font-family:Georgia,serif;font-size:64px;line-height:.6;color:#1EBABB;height:34px;">“</div>
+                <div style="margin-top:20px;color:#7A867F;font-size:14px;font-weight:600;">Feefo customer</div>
+                <div style="color:#F5A623;font-size:16px;letter-spacing:2px;margin:8px 0 16px;">★★★★★</div>
+                <p style="color:#5B6B66;font-size:14.5px;line-height:1.7;">&quot;Easy, helpful and polite. The service from Top Quote was excellent from start to finish. Everyone I spoke to was helpful and knowledgeable.&quot;</p>
+              </div>
+            </div>
+          
+            <div class="swiper-slide">
+              <div style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 12px 30px rgba(20,40,35,.06);min-height:290px;">
+                <div style="font-family:Georgia,serif;font-size:64px;line-height:.6;color:#1EBABB;height:34px;">“</div>
+                <div style="margin-top:20px;color:#7A867F;font-size:14px;font-weight:600;">Justine, Feefo</div>
+                <div style="color:#F5A623;font-size:16px;letter-spacing:2px;margin:8px 0 16px;">★★★★★</div>
+                <p style="color:#5B6B66;font-size:14.5px;line-height:1.7;">&quot;Excellent customer service. Very clear in explaining the different options to us and spent time looking for best deal for us.&quot;</p>
+              </div>
+            </div>
+          
+            <div class="swiper-slide">
+              <div style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 12px 30px rgba(20,40,35,.06);min-height:290px;">
+                <div style="font-family:Georgia,serif;font-size:64px;line-height:.6;color:#1EBABB;height:34px;">“</div>
+                <div style="margin-top:20px;color:#7A867F;font-size:14px;font-weight:600;">Feefo customer</div>
+                <div style="color:#F5A623;font-size:16px;letter-spacing:2px;margin:8px 0 16px;">★★★★★</div>
+                <p style="color:#5B6B66;font-size:14.5px;line-height:1.7;">&quot;Everything made very clear and the online documentation was easy to do. Excellent and very easy and clear from start to finish.&quot;</p>
+              </div>
+            </div>
+          
+            <div class="swiper-slide">
+              <div style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 12px 30px rgba(20,40,35,.06);min-height:290px;">
+                <div style="font-family:Georgia,serif;font-size:64px;line-height:.6;color:#1EBABB;height:34px;">“</div>
+                <div style="margin-top:20px;color:#7A867F;font-size:14px;font-weight:600;">Feefo customer</div>
+                <div style="color:#F5A623;font-size:16px;letter-spacing:2px;margin:8px 0 16px;">★★★★★</div>
+                <p style="color:#5B6B66;font-size:14.5px;line-height:1.7;">&quot;Friendly and good explanation of product. No hurry and happy to answer any questions or recap information.&quot;</p>
+              </div>
+            </div>
+          
         </div>
       </div>
     </div>
@@ -530,17 +708,67 @@
   <section style="background:#EAEDFB;padding:90px clamp(24px,5vw,40px) 100px;">
     <h2 class="reveal arva-h" style="text-align:center;font-size:clamp(30px,3.6vw,46px);font-weight:600;color:#173B33;margin-bottom:44px;">Common questions about TopQuote</h2>
     <div id="faqList" style="max-width:1000px;margin:0 auto;display:flex;flex-direction:column;gap:14px;">
-      <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="6">
+      
         <div class="faq-item" style="border-radius:12px;overflow:hidden;box-shadow:0 6px 18px rgba(20,40,35,.06);">
           <div class="faq-q" style="background:#1EBABB;color:#fff;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-weight:700;font-size:15.5px;">
-            <span>{{ f.q }}</span>
+            <span>Is TopQuote a legitimate UK life insurance broker?</span>
             <span class="faq-plus" style="font-size:22px;line-height:1;transition:transform .3s ease;flex:none;">+</span>
           </div>
           <div class="faq-a" style="max-height:0;opacity:0;overflow:hidden;transition:max-height .4s ease,opacity .4s ease;background:#fff;">
-            <p style="padding:22px 26px;color:#5B6B66;font-size:15px;line-height:1.75;">{{ f.a }}</p>
+            <p style="padding:22px 26px;color:#5B6B66;font-size:15px;line-height:1.75;">Yes. TopQuote (Top Quote Limited) is a UK life insurance and protection broker, registered in England (company number 04648763) and based at Alderley Park in Cheshire. We're an Appointed Representative of The Openwork Partnership, a trading style of Openwork Limited which is authorised and regulated by the Financial Conduct Authority. You can verify our authorisation independently at any time by searching for us on the FCA Register at register.fca.org.uk.</p>
           </div>
         </div>
-      </sc-for>
+      
+        <div class="faq-item" style="border-radius:12px;overflow:hidden;box-shadow:0 6px 18px rgba(20,40,35,.06);">
+          <div class="faq-q" style="background:#1EBABB;color:#fff;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-weight:700;font-size:15.5px;">
+            <span>Who regulates TopQuote?</span>
+            <span class="faq-plus" style="font-size:22px;line-height:1;transition:transform .3s ease;flex:none;">+</span>
+          </div>
+          <div class="faq-a" style="max-height:0;opacity:0;overflow:hidden;transition:max-height .4s ease,opacity .4s ease;background:#fff;">
+            <p style="padding:22px 26px;color:#5B6B66;font-size:15px;line-height:1.75;">We operate as an Appointed Representative of The Openwork Partnership, a trading style of Openwork Limited which is authorised and regulated by the Financial Conduct Authority (FCA). This means our advice and conduct are overseen under FCA rules.</p>
+          </div>
+        </div>
+      
+        <div class="faq-item" style="border-radius:12px;overflow:hidden;box-shadow:0 6px 18px rgba(20,40,35,.06);">
+          <div class="faq-q" style="background:#1EBABB;color:#fff;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-weight:700;font-size:15.5px;">
+            <span>Where is TopQuote based?</span>
+            <span class="faq-plus" style="font-size:22px;line-height:1;transition:transform .3s ease;flex:none;">+</span>
+          </div>
+          <div class="faq-a" style="max-height:0;opacity:0;overflow:hidden;transition:max-height .4s ease,opacity .4s ease;background:#fff;">
+            <p style="padding:22px 26px;color:#5B6B66;font-size:15px;line-height:1.75;">Our office is at Alderley Park, Suite 3, GLASSHOUSE, Congleton Road, Macclesfield, SK10 4TG. We serve customers right across the United Kingdom, by phone and online.</p>
+          </div>
+        </div>
+      
+        <div class="faq-item" style="border-radius:12px;overflow:hidden;box-shadow:0 6px 18px rgba(20,40,35,.06);">
+          <div class="faq-q" style="background:#1EBABB;color:#fff;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-weight:700;font-size:15.5px;">
+            <span>What does &quot;Appointed Representative&quot; mean?</span>
+            <span class="faq-plus" style="font-size:22px;line-height:1;transition:transform .3s ease;flex:none;">+</span>
+          </div>
+          <div class="faq-a" style="max-height:0;opacity:0;overflow:hidden;transition:max-height .4s ease,opacity .4s ease;background:#fff;">
+            <p style="padding:22px 26px;color:#5B6B66;font-size:15px;line-height:1.75;">An Appointed Representative operates under the authorisation of a directly-regulated principal firm, in our case, The Openwork Partnership. The principal takes responsibility for ensuring we meet FCA standards, giving you the same protections you'd expect from any regulated adviser.</p>
+          </div>
+        </div>
+      
+        <div class="faq-item" style="border-radius:12px;overflow:hidden;box-shadow:0 6px 18px rgba(20,40,35,.06);">
+          <div class="faq-q" style="background:#1EBABB;color:#fff;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-weight:700;font-size:15.5px;">
+            <span>How does TopQuote get paid?</span>
+            <span class="faq-plus" style="font-size:22px;line-height:1;transition:transform .3s ease;flex:none;">+</span>
+          </div>
+          <div class="faq-a" style="max-height:0;opacity:0;overflow:hidden;transition:max-height .4s ease,opacity .4s ease;background:#fff;">
+            <p style="padding:22px 26px;color:#5B6B66;font-size:15px;line-height:1.75;">For most protection policies we arrange, we're paid a commission by the insurer when your policy starts. This does not increase the premium you pay, the cost is the same whether you come through us or go direct.</p>
+          </div>
+        </div>
+      
+        <div class="faq-item" style="border-radius:12px;overflow:hidden;box-shadow:0 6px 18px rgba(20,40,35,.06);">
+          <div class="faq-q" style="background:#1EBABB;color:#fff;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-weight:700;font-size:15.5px;">
+            <span>Is there a charge for advice?</span>
+            <span class="faq-plus" style="font-size:22px;line-height:1;transition:transform .3s ease;flex:none;">+</span>
+          </div>
+          <div class="faq-a" style="max-height:0;opacity:0;overflow:hidden;transition:max-height .4s ease,opacity .4s ease;background:#fff;">
+            <p style="padding:22px 26px;color:#5B6B66;font-size:15px;line-height:1.75;">No. There is no fee for the advice and support we provide when arranging your life insurance, critical illness or income protection cover. We'll always be clear and upfront about how we're remunerated before you commit to anything.</p>
+          </div>
+        </div>
+      
     </div>
   </section>
 

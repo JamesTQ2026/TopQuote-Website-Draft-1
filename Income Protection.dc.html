@@ -400,17 +400,47 @@
   <section style="background:#ECEDF1;padding:90px clamp(24px,5vw,40px) 100px;">
     <h2 class="reveal arva-h" style="text-align:center;font-size:clamp(28px,3.6vw,46px);font-weight:600;color:#173B33;margin-bottom:44px;">Frequently Asked Questions Income Protection</h2>
     <div id="faqList" style="max-width:1000px;margin:0 auto;display:flex;flex-direction:column;gap:14px;">
-      <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="4">
+      
         <div class="faq-item" style="border-radius:12px;overflow:hidden;box-shadow:0 6px 18px rgba(20,40,35,.06);">
           <div class="faq-q" style="background:#1EBABB;color:#fff;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-weight:700;font-size:15.5px;">
-            <span>{{ f.q }}</span>
+            <span>How long will an income protection policy pay out?</span>
             <span class="faq-plus" style="font-size:22px;line-height:1;transition:transform .3s ease;flex:none;">+</span>
           </div>
           <div class="faq-a" style="max-height:0;opacity:0;overflow:hidden;transition:max-height .4s ease,opacity .4s ease;background:#fff;">
-            <p style="padding:22px 26px;color:#5B6B66;font-size:15px;line-height:1.75;">{{ f.a }}</p>
+            <p style="padding:22px 26px;color:#5B6B66;font-size:15px;line-height:1.75;">Short-term policies pay out for a fixed period (typically 1 or 2 years) per claim. Long-term policies continue paying until you return to work or reach your chosen retirement age. Long-term cover is significantly more expensive but provides far more comprehensive protection.</p>
           </div>
         </div>
-      </sc-for>
+      
+        <div class="faq-item" style="border-radius:12px;overflow:hidden;box-shadow:0 6px 18px rgba(20,40,35,.06);">
+          <div class="faq-q" style="background:#1EBABB;color:#fff;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-weight:700;font-size:15.5px;">
+            <span>Does income protection cover redundancy?</span>
+            <span class="faq-plus" style="font-size:22px;line-height:1;transition:transform .3s ease;flex:none;">+</span>
+          </div>
+          <div class="faq-a" style="max-height:0;opacity:0;overflow:hidden;transition:max-height .4s ease,opacity .4s ease;background:#fff;">
+            <p style="padding:22px 26px;color:#5B6B66;font-size:15px;line-height:1.75;">Standard income protection policies do not cover redundancy, only inability to work through illness or injury. A separate payment protection insurance product may cover redundancy, though these products have limitations and should be assessed carefully.</p>
+          </div>
+        </div>
+      
+        <div class="faq-item" style="border-radius:12px;overflow:hidden;box-shadow:0 6px 18px rgba(20,40,35,.06);">
+          <div class="faq-q" style="background:#1EBABB;color:#fff;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-weight:700;font-size:15.5px;">
+            <span>How much of my income can I protect?</span>
+            <span class="faq-plus" style="font-size:22px;line-height:1;transition:transform .3s ease;flex:none;">+</span>
+          </div>
+          <div class="faq-a" style="max-height:0;opacity:0;overflow:hidden;transition:max-height .4s ease,opacity .4s ease;background:#fff;">
+            <p style="padding:22px 26px;color:#5B6B66;font-size:15px;line-height:1.75;">Policies are typically capped at 50% to 70% of your gross income. The limit exists to maintain a financial incentive to return to work. Because the benefit is usually paid tax-free, it can provide a portion of your take-home pay.</p>
+          </div>
+        </div>
+      
+        <div class="faq-item" style="border-radius:12px;overflow:hidden;box-shadow:0 6px 18px rgba(20,40,35,.06);">
+          <div class="faq-q" style="background:#1EBABB;color:#fff;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-weight:700;font-size:15.5px;">
+            <span>Can I have income protection alongside other cover?</span>
+            <span class="faq-plus" style="font-size:22px;line-height:1;transition:transform .3s ease;flex:none;">+</span>
+          </div>
+          <div class="faq-a" style="max-height:0;opacity:0;overflow:hidden;transition:max-height .4s ease,opacity .4s ease;background:#fff;">
+            <p style="padding:22px 26px;color:#5B6B66;font-size:15px;line-height:1.75;">Yes. Income protection works well alongside life insurance and critical illness cover, each protects against a different risk. Many people hold a combination, and an adviser can help you structure cover that addresses your specific gaps without over-insuring.</p>
+          </div>
+        </div>
+      
     </div>
   </section>
 
@@ -439,16 +469,169 @@
 <div id="rvSwiper" class="reveal" data-feefo-fallback style="max-width:1180px;margin:0 auto;">
       <div class="swiper" id="rvSwiperEl">
         <div class="swiper-wrapper">
-          <sc-for list="{{ reviews }}" as="r" hint-placeholder-count="6">
+          
             <div class="swiper-slide">
               <div style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 12px 30px rgba(20,40,35,.06);min-height:290px;">
                 <div style="font-family:Georgia,serif;font-size:64px;line-height:.6;color:#1EBABB;height:34px;">&ldquo;</div>
-                <div style="margin-top:20px;color:#7A867F;font-size:14px;font-weight:600;">{{ r.name }}</div>
-                <div style="color:#F5A623;font-size:16px;letter-spacing:2px;margin:8px 0 16px;">{{ r.stars }}</div>
-                <p style="color:#5B6B66;font-size:14.5px;line-height:1.7;">{{ r.quote }}</p>
+                <div style="margin-top:20px;color:#7A867F;font-size:14px;font-weight:600;">Peter, Feefo</div>
+                <div style="color:#F5A623;font-size:16px;letter-spacing:2px;margin:8px 0 16px;">★★★★★</div>
+                <p style="color:#5B6B66;font-size:14.5px;line-height:1.7;">&quot;Great to deal with, fully explained my options and never once put any pressure on me to purchase anything. Have made several follow up calls to make sure everything was in place.&quot;</p>
               </div>
             </div>
-          </sc-for>
+          
+            <div class="swiper-slide">
+              <div style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 12px 30px rgba(20,40,35,.06);min-height:290px;">
+                <div style="font-family:Georgia,serif;font-size:64px;line-height:.6;color:#1EBABB;height:34px;">&ldquo;</div>
+                <div style="margin-top:20px;color:#7A867F;font-size:14px;font-weight:600;">Morgan, Feefo</div>
+                <div style="color:#F5A623;font-size:16px;letter-spacing:2px;margin:8px 0 16px;">★★★★★</div>
+                <p style="color:#5B6B66;font-size:14.5px;line-height:1.7;">&quot;Clear, thorough, courteous, three words that capture my experience. A trustworthy brokerage service, I felt in control.&quot;</p>
+              </div>
+            </div>
+          
+            <div class="swiper-slide">
+              <div style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 12px 30px rgba(20,40,35,.06);min-height:290px;">
+                <div style="font-family:Georgia,serif;font-size:64px;line-height:.6;color:#1EBABB;height:34px;">&ldquo;</div>
+                <div style="margin-top:20px;color:#7A867F;font-size:14px;font-weight:600;">Feefo customer</div>
+                <div style="color:#F5A623;font-size:16px;letter-spacing:2px;margin:8px 0 16px;">★★★★★</div>
+                <p style="color:#5B6B66;font-size:14.5px;line-height:1.7;">&quot;Easy, helpful and polite. The service from Top Quote was excellent from start to finish. Everyone I spoke to was helpful and knowledgeable.&quot;</p>
+              </div>
+            </div>
+          
+            <div class="swiper-slide">
+              <div style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 12px 30px rgba(20,40,35,.06);min-height:290px;">
+                <div style="font-family:Georgia,serif;font-size:64px;line-height:.6;color:#1EBABB;height:34px;">&ldquo;</div>
+                <div style="margin-top:20px;color:#7A867F;font-size:14px;font-weight:600;">Justine, Feefo</div>
+                <div style="color:#F5A623;font-size:16px;letter-spacing:2px;margin:8px 0 16px;">★★★★★</div>
+                <p style="color:#5B6B66;font-size:14.5px;line-height:1.7;">&quot;Excellent customer service. Very clear in explaining the different options to us and spent time looking for best deal for us.&quot;</p>
+              </div>
+            </div>
+          
+            <div class="swiper-slide">
+              <div style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 12px 30px rgba(20,40,35,.06);min-height:290px;">
+                <div style="font-family:Georgia,serif;font-size:64px;line-height:.6;color:#1EBABB;height:34px;">&ldquo;</div>
+                <div style="margin-top:20px;color:#7A867F;font-size:14px;font-weight:600;">Feefo customer</div>
+                <div style="color:#F5A623;font-size:16px;letter-spacing:2px;margin:8px 0 16px;">★★★★★</div>
+                <p style="color:#5B6B66;font-size:14.5px;line-height:1.7;">&quot;Everything made very clear and the online documentation was easy to do. Excellent and very easy and clear from start to finish.&quot;</p>
+              </div>
+            </div>
+          
+            <div class="swiper-slide">
+              <div style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 12px 30px rgba(20,40,35,.06);min-height:290px;">
+                <div style="font-family:Georgia,serif;font-size:64px;line-height:.6;color:#1EBABB;height:34px;">&ldquo;</div>
+                <div style="margin-top:20px;color:#7A867F;font-size:14px;font-weight:600;">Feefo customer</div>
+                <div style="color:#F5A623;font-size:16px;letter-spacing:2px;margin:8px 0 16px;">★★★★★</div>
+                <p style="color:#5B6B66;font-size:14.5px;line-height:1.7;">&quot;Friendly and good explanation of product. No hurry and happy to answer any questions or recap information.&quot;</p>
+              </div>
+            </div>
+          
+            <div class="swiper-slide">
+              <div style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 12px 30px rgba(20,40,35,.06);min-height:290px;">
+                <div style="font-family:Georgia,serif;font-size:64px;line-height:.6;color:#1EBABB;height:34px;">&ldquo;</div>
+                <div style="margin-top:20px;color:#7A867F;font-size:14px;font-weight:600;">Peter, Feefo</div>
+                <div style="color:#F5A623;font-size:16px;letter-spacing:2px;margin:8px 0 16px;">★★★★★</div>
+                <p style="color:#5B6B66;font-size:14.5px;line-height:1.7;">&quot;Great to deal with, fully explained my options and never once put any pressure on me to purchase anything. Have made several follow up calls to make sure everything was in place.&quot;</p>
+              </div>
+            </div>
+          
+            <div class="swiper-slide">
+              <div style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 12px 30px rgba(20,40,35,.06);min-height:290px;">
+                <div style="font-family:Georgia,serif;font-size:64px;line-height:.6;color:#1EBABB;height:34px;">&ldquo;</div>
+                <div style="margin-top:20px;color:#7A867F;font-size:14px;font-weight:600;">Morgan, Feefo</div>
+                <div style="color:#F5A623;font-size:16px;letter-spacing:2px;margin:8px 0 16px;">★★★★★</div>
+                <p style="color:#5B6B66;font-size:14.5px;line-height:1.7;">&quot;Clear, thorough, courteous, three words that capture my experience. A trustworthy brokerage service, I felt in control.&quot;</p>
+              </div>
+            </div>
+          
+            <div class="swiper-slide">
+              <div style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 12px 30px rgba(20,40,35,.06);min-height:290px;">
+                <div style="font-family:Georgia,serif;font-size:64px;line-height:.6;color:#1EBABB;height:34px;">&ldquo;</div>
+                <div style="margin-top:20px;color:#7A867F;font-size:14px;font-weight:600;">Feefo customer</div>
+                <div style="color:#F5A623;font-size:16px;letter-spacing:2px;margin:8px 0 16px;">★★★★★</div>
+                <p style="color:#5B6B66;font-size:14.5px;line-height:1.7;">&quot;Easy, helpful and polite. The service from Top Quote was excellent from start to finish. Everyone I spoke to was helpful and knowledgeable.&quot;</p>
+              </div>
+            </div>
+          
+            <div class="swiper-slide">
+              <div style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 12px 30px rgba(20,40,35,.06);min-height:290px;">
+                <div style="font-family:Georgia,serif;font-size:64px;line-height:.6;color:#1EBABB;height:34px;">&ldquo;</div>
+                <div style="margin-top:20px;color:#7A867F;font-size:14px;font-weight:600;">Justine, Feefo</div>
+                <div style="color:#F5A623;font-size:16px;letter-spacing:2px;margin:8px 0 16px;">★★★★★</div>
+                <p style="color:#5B6B66;font-size:14.5px;line-height:1.7;">&quot;Excellent customer service. Very clear in explaining the different options to us and spent time looking for best deal for us.&quot;</p>
+              </div>
+            </div>
+          
+            <div class="swiper-slide">
+              <div style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 12px 30px rgba(20,40,35,.06);min-height:290px;">
+                <div style="font-family:Georgia,serif;font-size:64px;line-height:.6;color:#1EBABB;height:34px;">&ldquo;</div>
+                <div style="margin-top:20px;color:#7A867F;font-size:14px;font-weight:600;">Feefo customer</div>
+                <div style="color:#F5A623;font-size:16px;letter-spacing:2px;margin:8px 0 16px;">★★★★★</div>
+                <p style="color:#5B6B66;font-size:14.5px;line-height:1.7;">&quot;Everything made very clear and the online documentation was easy to do. Excellent and very easy and clear from start to finish.&quot;</p>
+              </div>
+            </div>
+          
+            <div class="swiper-slide">
+              <div style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 12px 30px rgba(20,40,35,.06);min-height:290px;">
+                <div style="font-family:Georgia,serif;font-size:64px;line-height:.6;color:#1EBABB;height:34px;">&ldquo;</div>
+                <div style="margin-top:20px;color:#7A867F;font-size:14px;font-weight:600;">Feefo customer</div>
+                <div style="color:#F5A623;font-size:16px;letter-spacing:2px;margin:8px 0 16px;">★★★★★</div>
+                <p style="color:#5B6B66;font-size:14.5px;line-height:1.7;">&quot;Friendly and good explanation of product. No hurry and happy to answer any questions or recap information.&quot;</p>
+              </div>
+            </div>
+          
+            <div class="swiper-slide">
+              <div style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 12px 30px rgba(20,40,35,.06);min-height:290px;">
+                <div style="font-family:Georgia,serif;font-size:64px;line-height:.6;color:#1EBABB;height:34px;">&ldquo;</div>
+                <div style="margin-top:20px;color:#7A867F;font-size:14px;font-weight:600;">Peter, Feefo</div>
+                <div style="color:#F5A623;font-size:16px;letter-spacing:2px;margin:8px 0 16px;">★★★★★</div>
+                <p style="color:#5B6B66;font-size:14.5px;line-height:1.7;">&quot;Great to deal with, fully explained my options and never once put any pressure on me to purchase anything. Have made several follow up calls to make sure everything was in place.&quot;</p>
+              </div>
+            </div>
+          
+            <div class="swiper-slide">
+              <div style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 12px 30px rgba(20,40,35,.06);min-height:290px;">
+                <div style="font-family:Georgia,serif;font-size:64px;line-height:.6;color:#1EBABB;height:34px;">&ldquo;</div>
+                <div style="margin-top:20px;color:#7A867F;font-size:14px;font-weight:600;">Morgan, Feefo</div>
+                <div style="color:#F5A623;font-size:16px;letter-spacing:2px;margin:8px 0 16px;">★★★★★</div>
+                <p style="color:#5B6B66;font-size:14.5px;line-height:1.7;">&quot;Clear, thorough, courteous, three words that capture my experience. A trustworthy brokerage service, I felt in control.&quot;</p>
+              </div>
+            </div>
+          
+            <div class="swiper-slide">
+              <div style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 12px 30px rgba(20,40,35,.06);min-height:290px;">
+                <div style="font-family:Georgia,serif;font-size:64px;line-height:.6;color:#1EBABB;height:34px;">&ldquo;</div>
+                <div style="margin-top:20px;color:#7A867F;font-size:14px;font-weight:600;">Feefo customer</div>
+                <div style="color:#F5A623;font-size:16px;letter-spacing:2px;margin:8px 0 16px;">★★★★★</div>
+                <p style="color:#5B6B66;font-size:14.5px;line-height:1.7;">&quot;Easy, helpful and polite. The service from Top Quote was excellent from start to finish. Everyone I spoke to was helpful and knowledgeable.&quot;</p>
+              </div>
+            </div>
+          
+            <div class="swiper-slide">
+              <div style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 12px 30px rgba(20,40,35,.06);min-height:290px;">
+                <div style="font-family:Georgia,serif;font-size:64px;line-height:.6;color:#1EBABB;height:34px;">&ldquo;</div>
+                <div style="margin-top:20px;color:#7A867F;font-size:14px;font-weight:600;">Justine, Feefo</div>
+                <div style="color:#F5A623;font-size:16px;letter-spacing:2px;margin:8px 0 16px;">★★★★★</div>
+                <p style="color:#5B6B66;font-size:14.5px;line-height:1.7;">&quot;Excellent customer service. Very clear in explaining the different options to us and spent time looking for best deal for us.&quot;</p>
+              </div>
+            </div>
+          
+            <div class="swiper-slide">
+              <div style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 12px 30px rgba(20,40,35,.06);min-height:290px;">
+                <div style="font-family:Georgia,serif;font-size:64px;line-height:.6;color:#1EBABB;height:34px;">&ldquo;</div>
+                <div style="margin-top:20px;color:#7A867F;font-size:14px;font-weight:600;">Feefo customer</div>
+                <div style="color:#F5A623;font-size:16px;letter-spacing:2px;margin:8px 0 16px;">★★★★★</div>
+                <p style="color:#5B6B66;font-size:14.5px;line-height:1.7;">&quot;Everything made very clear and the online documentation was easy to do. Excellent and very easy and clear from start to finish.&quot;</p>
+              </div>
+            </div>
+          
+            <div class="swiper-slide">
+              <div style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 12px 30px rgba(20,40,35,.06);min-height:290px;">
+                <div style="font-family:Georgia,serif;font-size:64px;line-height:.6;color:#1EBABB;height:34px;">&ldquo;</div>
+                <div style="margin-top:20px;color:#7A867F;font-size:14px;font-weight:600;">Feefo customer</div>
+                <div style="color:#F5A623;font-size:16px;letter-spacing:2px;margin:8px 0 16px;">★★★★★</div>
+                <p style="color:#5B6B66;font-size:14.5px;line-height:1.7;">&quot;Friendly and good explanation of product. No hurry and happy to answer any questions or recap information.&quot;</p>
+              </div>
+            </div>
+          
         </div>
       </div>
     </div>

@@ -397,16 +397,65 @@
         <p style="color:#7A867F;font-size:16px;line-height:1.7;">We advise clients across these regions.</p>
       </div>
       <div class="fu-areas-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:22px;">
-        <sc-for list="{{ areas }}" as="area" hint-placeholder-count="8">
-          <a class="reveal fu-area" href="{{ area.href }}" style="border-radius:14px;min-height:150px;display:flex;align-items:flex-end;box-shadow:0 12px 30px rgba(20,40,35,.12);text-decoration:none;">
-            <div class="fu-area-img" style="position:absolute;inset:0;background:#1EBABB;background-image:{{ area.bg }};background-size:cover;background-position:center;transition:transform .5s cubic-bezier(.22,1,.36,1);"></div>
+        
+          <a class="reveal fu-area" href="/contact-manchester" style="border-radius:14px;min-height:150px;display:flex;align-items:flex-end;box-shadow:0 12px 30px rgba(20,40,35,.12);text-decoration:none;">
+            <div class="fu-area-img" style="position:absolute;inset:0;background:#1EBABB;background-image:url('assets/area-manchester.jpg');background-size:cover;background-position:center;transition:transform .5s cubic-bezier(.22,1,.36,1);"></div>
             <div class="fu-area-scrim" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,20,16,.05) 0%,rgba(6,20,16,.72) 100%);"></div>
-            <sc-if value="{{ area.showLogo }}" hint-placeholder-val="{{ false }}">
-              <img class="fu-area-logo" src="assets/topquote-logo-dark.png" alt="TopQuote" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:118px;height:auto;z-index:1;" loading="lazy" decoding="async" width="1872" height="514">
-            </sc-if>
-            <span class="arva-h fu-area-name" style="position:relative;z-index:1;width:100%;padding:20px 22px;font-size:21px;font-weight:600;color:#fff;text-shadow:0 2px 10px rgba(0,0,0,.4);">{{ area.name }}</span>
+            
+            <span class="arva-h fu-area-name" style="position:relative;z-index:1;width:100%;padding:20px 22px;font-size:21px;font-weight:600;color:#fff;text-shadow:0 2px 10px rgba(0,0,0,.4);">Manchester</span>
           </a>
-        </sc-for>
+        
+          <a class="reveal fu-area" href="/contact-salford" style="border-radius:14px;min-height:150px;display:flex;align-items:flex-end;box-shadow:0 12px 30px rgba(20,40,35,.12);text-decoration:none;">
+            <div class="fu-area-img" style="position:absolute;inset:0;background:#1EBABB;background-image:url('assets/area-salford.jpg');background-size:cover;background-position:center;transition:transform .5s cubic-bezier(.22,1,.36,1);"></div>
+            <div class="fu-area-scrim" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,20,16,.05) 0%,rgba(6,20,16,.72) 100%);"></div>
+            
+            <span class="arva-h fu-area-name" style="position:relative;z-index:1;width:100%;padding:20px 22px;font-size:21px;font-weight:600;color:#fff;text-shadow:0 2px 10px rgba(0,0,0,.4);">Salford</span>
+          </a>
+        
+          <a class="reveal fu-area" href="/contact-stockport" style="border-radius:14px;min-height:150px;display:flex;align-items:flex-end;box-shadow:0 12px 30px rgba(20,40,35,.12);text-decoration:none;">
+            <div class="fu-area-img" style="position:absolute;inset:0;background:#1EBABB;background-image:url('assets/area-stockport.jpg');background-size:cover;background-position:center;transition:transform .5s cubic-bezier(.22,1,.36,1);"></div>
+            <div class="fu-area-scrim" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,20,16,.05) 0%,rgba(6,20,16,.72) 100%);"></div>
+            
+            <span class="arva-h fu-area-name" style="position:relative;z-index:1;width:100%;padding:20px 22px;font-size:21px;font-weight:600;color:#fff;text-shadow:0 2px 10px rgba(0,0,0,.4);">Stockport</span>
+          </a>
+        
+          <a class="reveal fu-area" href="/contact-macclesfield" style="border-radius:14px;min-height:150px;display:flex;align-items:flex-end;box-shadow:0 12px 30px rgba(20,40,35,.12);text-decoration:none;">
+            <div class="fu-area-img" style="position:absolute;inset:0;background:#1EBABB;background-image:url('assets/area-macclesfield.webp');background-size:cover;background-position:center;transition:transform .5s cubic-bezier(.22,1,.36,1);"></div>
+            <div class="fu-area-scrim" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,20,16,.05) 0%,rgba(6,20,16,.72) 100%);"></div>
+            
+            <span class="arva-h fu-area-name" style="position:relative;z-index:1;width:100%;padding:20px 22px;font-size:21px;font-weight:600;color:#fff;text-shadow:0 2px 10px rgba(0,0,0,.4);">Macclesfield</span>
+          </a>
+        
+          <a class="reveal fu-area" href="/contact-altrincham" style="border-radius:14px;min-height:150px;display:flex;align-items:flex-end;box-shadow:0 12px 30px rgba(20,40,35,.12);text-decoration:none;">
+            <div class="fu-area-img" style="position:absolute;inset:0;background:#1EBABB;background-image:url('assets/area-altrincham.jpg');background-size:cover;background-position:center;transition:transform .5s cubic-bezier(.22,1,.36,1);"></div>
+            <div class="fu-area-scrim" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,20,16,.05) 0%,rgba(6,20,16,.72) 100%);"></div>
+            
+            <span class="arva-h fu-area-name" style="position:relative;z-index:1;width:100%;padding:20px 22px;font-size:21px;font-weight:600;color:#fff;text-shadow:0 2px 10px rgba(0,0,0,.4);">Altrincham</span>
+          </a>
+        
+          <a class="reveal fu-area" href="/contact-wilmslow" style="border-radius:14px;min-height:150px;display:flex;align-items:flex-end;box-shadow:0 12px 30px rgba(20,40,35,.12);text-decoration:none;">
+            <div class="fu-area-img" style="position:absolute;inset:0;background:#1EBABB;background-image:url('assets/area-wilmslow.jpg');background-size:cover;background-position:center;transition:transform .5s cubic-bezier(.22,1,.36,1);"></div>
+            <div class="fu-area-scrim" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,20,16,.05) 0%,rgba(6,20,16,.72) 100%);"></div>
+            
+            <span class="arva-h fu-area-name" style="position:relative;z-index:1;width:100%;padding:20px 22px;font-size:21px;font-weight:600;color:#fff;text-shadow:0 2px 10px rgba(0,0,0,.4);">Wilmslow</span>
+          </a>
+        
+          <a class="reveal fu-area" href="/contact-knutsford" style="border-radius:14px;min-height:150px;display:flex;align-items:flex-end;box-shadow:0 12px 30px rgba(20,40,35,.12);text-decoration:none;">
+            <div class="fu-area-img" style="position:absolute;inset:0;background:#1EBABB;background-image:url('assets/area-knutsford.jpg');background-size:cover;background-position:center;transition:transform .5s cubic-bezier(.22,1,.36,1);"></div>
+            <div class="fu-area-scrim" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,20,16,.05) 0%,rgba(6,20,16,.72) 100%);"></div>
+            
+            <span class="arva-h fu-area-name" style="position:relative;z-index:1;width:100%;padding:20px 22px;font-size:21px;font-weight:600;color:#fff;text-shadow:0 2px 10px rgba(0,0,0,.4);">Knutsford</span>
+          </a>
+        
+          <a class="reveal fu-area" href="/contact-cheshire-east" style="border-radius:14px;min-height:150px;display:flex;align-items:flex-end;box-shadow:0 12px 30px rgba(20,40,35,.12);text-decoration:none;">
+            <div class="fu-area-img" style="position:absolute;inset:0;background:#1EBABB;background-image:none;background-size:cover;background-position:center;transition:transform .5s cubic-bezier(.22,1,.36,1);"></div>
+            <div class="fu-area-scrim" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,20,16,.05) 0%,rgba(6,20,16,.72) 100%);"></div>
+            
+              <img class="fu-area-logo" src="assets/topquote-logo-dark.png" alt="TopQuote" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:118px;height:auto;z-index:1;" loading="lazy" decoding="async" width="1872" height="514">
+            
+            <span class="arva-h fu-area-name" style="position:relative;z-index:1;width:100%;padding:20px 22px;font-size:21px;font-weight:600;color:#fff;text-shadow:0 2px 10px rgba(0,0,0,.4);">Cheshire</span>
+          </a>
+        
       </div>
     </div>
   </section>
@@ -477,16 +526,169 @@
     <div id="rvSwiper" style="max-width:1180px;margin:0 auto;">
       <div class="swiper" id="rvSwiperEl">
         <div class="swiper-wrapper">
-          <sc-for list="{{ reviews }}" as="r" hint-placeholder-count="6">
+          
             <div class="swiper-slide">
               <div style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 12px 30px rgba(20,40,35,.06);min-height:290px;">
                 <div style="font-family:Georgia,serif;font-size:64px;line-height:.6;color:#1EBABB;height:34px;">“</div>
-                <div style="margin-top:20px;color:#7A867F;font-size:14px;font-weight:600;">{{ r.name }}</div>
-                <div style="color:#00b67a;font-size:16px;letter-spacing:2px;margin:8px 0 16px;">{{ r.stars }}</div>
-                <p style="color:#5B6B66;font-size:14.5px;line-height:1.7;">{{ r.quote }}</p>
+                <div style="margin-top:20px;color:#7A867F;font-size:14px;font-weight:600;">Peter, Feefo</div>
+                <div style="color:#00b67a;font-size:16px;letter-spacing:2px;margin:8px 0 16px;">★★★★★</div>
+                <p style="color:#5B6B66;font-size:14.5px;line-height:1.7;">&quot;Great to deal with, fully explained my options and never once put any pressure on me to purchase anything. Have made several follow up calls to make sure everything was in place.&quot;</p>
               </div>
             </div>
-          </sc-for>
+          
+            <div class="swiper-slide">
+              <div style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 12px 30px rgba(20,40,35,.06);min-height:290px;">
+                <div style="font-family:Georgia,serif;font-size:64px;line-height:.6;color:#1EBABB;height:34px;">“</div>
+                <div style="margin-top:20px;color:#7A867F;font-size:14px;font-weight:600;">Morgan, Feefo</div>
+                <div style="color:#00b67a;font-size:16px;letter-spacing:2px;margin:8px 0 16px;">★★★★★</div>
+                <p style="color:#5B6B66;font-size:14.5px;line-height:1.7;">&quot;Clear, thorough, courteous, three words that capture my experience. A trustworthy brokerage service, I felt in control.&quot;</p>
+              </div>
+            </div>
+          
+            <div class="swiper-slide">
+              <div style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 12px 30px rgba(20,40,35,.06);min-height:290px;">
+                <div style="font-family:Georgia,serif;font-size:64px;line-height:.6;color:#1EBABB;height:34px;">“</div>
+                <div style="margin-top:20px;color:#7A867F;font-size:14px;font-weight:600;">Feefo customer</div>
+                <div style="color:#00b67a;font-size:16px;letter-spacing:2px;margin:8px 0 16px;">★★★★★</div>
+                <p style="color:#5B6B66;font-size:14.5px;line-height:1.7;">&quot;Easy, helpful and polite. The service from Top Quote was excellent from start to finish. Everyone I spoke to was helpful and knowledgeable.&quot;</p>
+              </div>
+            </div>
+          
+            <div class="swiper-slide">
+              <div style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 12px 30px rgba(20,40,35,.06);min-height:290px;">
+                <div style="font-family:Georgia,serif;font-size:64px;line-height:.6;color:#1EBABB;height:34px;">“</div>
+                <div style="margin-top:20px;color:#7A867F;font-size:14px;font-weight:600;">Justine, Feefo</div>
+                <div style="color:#00b67a;font-size:16px;letter-spacing:2px;margin:8px 0 16px;">★★★★★</div>
+                <p style="color:#5B6B66;font-size:14.5px;line-height:1.7;">&quot;Excellent customer service. Very clear in explaining the different options to us and spent time looking for best deal for us.&quot;</p>
+              </div>
+            </div>
+          
+            <div class="swiper-slide">
+              <div style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 12px 30px rgba(20,40,35,.06);min-height:290px;">
+                <div style="font-family:Georgia,serif;font-size:64px;line-height:.6;color:#1EBABB;height:34px;">“</div>
+                <div style="margin-top:20px;color:#7A867F;font-size:14px;font-weight:600;">Feefo customer</div>
+                <div style="color:#00b67a;font-size:16px;letter-spacing:2px;margin:8px 0 16px;">★★★★★</div>
+                <p style="color:#5B6B66;font-size:14.5px;line-height:1.7;">&quot;Everything made very clear and the online documentation was easy to do. Excellent and very easy and clear from start to finish.&quot;</p>
+              </div>
+            </div>
+          
+            <div class="swiper-slide">
+              <div style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 12px 30px rgba(20,40,35,.06);min-height:290px;">
+                <div style="font-family:Georgia,serif;font-size:64px;line-height:.6;color:#1EBABB;height:34px;">“</div>
+                <div style="margin-top:20px;color:#7A867F;font-size:14px;font-weight:600;">Feefo customer</div>
+                <div style="color:#00b67a;font-size:16px;letter-spacing:2px;margin:8px 0 16px;">★★★★★</div>
+                <p style="color:#5B6B66;font-size:14.5px;line-height:1.7;">&quot;Friendly and good explanation of product. No hurry and happy to answer any questions or recap information.&quot;</p>
+              </div>
+            </div>
+          
+            <div class="swiper-slide">
+              <div style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 12px 30px rgba(20,40,35,.06);min-height:290px;">
+                <div style="font-family:Georgia,serif;font-size:64px;line-height:.6;color:#1EBABB;height:34px;">“</div>
+                <div style="margin-top:20px;color:#7A867F;font-size:14px;font-weight:600;">Peter, Feefo</div>
+                <div style="color:#00b67a;font-size:16px;letter-spacing:2px;margin:8px 0 16px;">★★★★★</div>
+                <p style="color:#5B6B66;font-size:14.5px;line-height:1.7;">&quot;Great to deal with, fully explained my options and never once put any pressure on me to purchase anything. Have made several follow up calls to make sure everything was in place.&quot;</p>
+              </div>
+            </div>
+          
+            <div class="swiper-slide">
+              <div style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 12px 30px rgba(20,40,35,.06);min-height:290px;">
+                <div style="font-family:Georgia,serif;font-size:64px;line-height:.6;color:#1EBABB;height:34px;">“</div>
+                <div style="margin-top:20px;color:#7A867F;font-size:14px;font-weight:600;">Morgan, Feefo</div>
+                <div style="color:#00b67a;font-size:16px;letter-spacing:2px;margin:8px 0 16px;">★★★★★</div>
+                <p style="color:#5B6B66;font-size:14.5px;line-height:1.7;">&quot;Clear, thorough, courteous, three words that capture my experience. A trustworthy brokerage service, I felt in control.&quot;</p>
+              </div>
+            </div>
+          
+            <div class="swiper-slide">
+              <div style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 12px 30px rgba(20,40,35,.06);min-height:290px;">
+                <div style="font-family:Georgia,serif;font-size:64px;line-height:.6;color:#1EBABB;height:34px;">“</div>
+                <div style="margin-top:20px;color:#7A867F;font-size:14px;font-weight:600;">Feefo customer</div>
+                <div style="color:#00b67a;font-size:16px;letter-spacing:2px;margin:8px 0 16px;">★★★★★</div>
+                <p style="color:#5B6B66;font-size:14.5px;line-height:1.7;">&quot;Easy, helpful and polite. The service from Top Quote was excellent from start to finish. Everyone I spoke to was helpful and knowledgeable.&quot;</p>
+              </div>
+            </div>
+          
+            <div class="swiper-slide">
+              <div style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 12px 30px rgba(20,40,35,.06);min-height:290px;">
+                <div style="font-family:Georgia,serif;font-size:64px;line-height:.6;color:#1EBABB;height:34px;">“</div>
+                <div style="margin-top:20px;color:#7A867F;font-size:14px;font-weight:600;">Justine, Feefo</div>
+                <div style="color:#00b67a;font-size:16px;letter-spacing:2px;margin:8px 0 16px;">★★★★★</div>
+                <p style="color:#5B6B66;font-size:14.5px;line-height:1.7;">&quot;Excellent customer service. Very clear in explaining the different options to us and spent time looking for best deal for us.&quot;</p>
+              </div>
+            </div>
+          
+            <div class="swiper-slide">
+              <div style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 12px 30px rgba(20,40,35,.06);min-height:290px;">
+                <div style="font-family:Georgia,serif;font-size:64px;line-height:.6;color:#1EBABB;height:34px;">“</div>
+                <div style="margin-top:20px;color:#7A867F;font-size:14px;font-weight:600;">Feefo customer</div>
+                <div style="color:#00b67a;font-size:16px;letter-spacing:2px;margin:8px 0 16px;">★★★★★</div>
+                <p style="color:#5B6B66;font-size:14.5px;line-height:1.7;">&quot;Everything made very clear and the online documentation was easy to do. Excellent and very easy and clear from start to finish.&quot;</p>
+              </div>
+            </div>
+          
+            <div class="swiper-slide">
+              <div style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 12px 30px rgba(20,40,35,.06);min-height:290px;">
+                <div style="font-family:Georgia,serif;font-size:64px;line-height:.6;color:#1EBABB;height:34px;">“</div>
+                <div style="margin-top:20px;color:#7A867F;font-size:14px;font-weight:600;">Feefo customer</div>
+                <div style="color:#00b67a;font-size:16px;letter-spacing:2px;margin:8px 0 16px;">★★★★★</div>
+                <p style="color:#5B6B66;font-size:14.5px;line-height:1.7;">&quot;Friendly and good explanation of product. No hurry and happy to answer any questions or recap information.&quot;</p>
+              </div>
+            </div>
+          
+            <div class="swiper-slide">
+              <div style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 12px 30px rgba(20,40,35,.06);min-height:290px;">
+                <div style="font-family:Georgia,serif;font-size:64px;line-height:.6;color:#1EBABB;height:34px;">“</div>
+                <div style="margin-top:20px;color:#7A867F;font-size:14px;font-weight:600;">Peter, Feefo</div>
+                <div style="color:#00b67a;font-size:16px;letter-spacing:2px;margin:8px 0 16px;">★★★★★</div>
+                <p style="color:#5B6B66;font-size:14.5px;line-height:1.7;">&quot;Great to deal with, fully explained my options and never once put any pressure on me to purchase anything. Have made several follow up calls to make sure everything was in place.&quot;</p>
+              </div>
+            </div>
+          
+            <div class="swiper-slide">
+              <div style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 12px 30px rgba(20,40,35,.06);min-height:290px;">
+                <div style="font-family:Georgia,serif;font-size:64px;line-height:.6;color:#1EBABB;height:34px;">“</div>
+                <div style="margin-top:20px;color:#7A867F;font-size:14px;font-weight:600;">Morgan, Feefo</div>
+                <div style="color:#00b67a;font-size:16px;letter-spacing:2px;margin:8px 0 16px;">★★★★★</div>
+                <p style="color:#5B6B66;font-size:14.5px;line-height:1.7;">&quot;Clear, thorough, courteous, three words that capture my experience. A trustworthy brokerage service, I felt in control.&quot;</p>
+              </div>
+            </div>
+          
+            <div class="swiper-slide">
+              <div style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 12px 30px rgba(20,40,35,.06);min-height:290px;">
+                <div style="font-family:Georgia,serif;font-size:64px;line-height:.6;color:#1EBABB;height:34px;">“</div>
+                <div style="margin-top:20px;color:#7A867F;font-size:14px;font-weight:600;">Feefo customer</div>
+                <div style="color:#00b67a;font-size:16px;letter-spacing:2px;margin:8px 0 16px;">★★★★★</div>
+                <p style="color:#5B6B66;font-size:14.5px;line-height:1.7;">&quot;Easy, helpful and polite. The service from Top Quote was excellent from start to finish. Everyone I spoke to was helpful and knowledgeable.&quot;</p>
+              </div>
+            </div>
+          
+            <div class="swiper-slide">
+              <div style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 12px 30px rgba(20,40,35,.06);min-height:290px;">
+                <div style="font-family:Georgia,serif;font-size:64px;line-height:.6;color:#1EBABB;height:34px;">“</div>
+                <div style="margin-top:20px;color:#7A867F;font-size:14px;font-weight:600;">Justine, Feefo</div>
+                <div style="color:#00b67a;font-size:16px;letter-spacing:2px;margin:8px 0 16px;">★★★★★</div>
+                <p style="color:#5B6B66;font-size:14.5px;line-height:1.7;">&quot;Excellent customer service. Very clear in explaining the different options to us and spent time looking for best deal for us.&quot;</p>
+              </div>
+            </div>
+          
+            <div class="swiper-slide">
+              <div style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 12px 30px rgba(20,40,35,.06);min-height:290px;">
+                <div style="font-family:Georgia,serif;font-size:64px;line-height:.6;color:#1EBABB;height:34px;">“</div>
+                <div style="margin-top:20px;color:#7A867F;font-size:14px;font-weight:600;">Feefo customer</div>
+                <div style="color:#00b67a;font-size:16px;letter-spacing:2px;margin:8px 0 16px;">★★★★★</div>
+                <p style="color:#5B6B66;font-size:14.5px;line-height:1.7;">&quot;Everything made very clear and the online documentation was easy to do. Excellent and very easy and clear from start to finish.&quot;</p>
+              </div>
+            </div>
+          
+            <div class="swiper-slide">
+              <div style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 12px 30px rgba(20,40,35,.06);min-height:290px;">
+                <div style="font-family:Georgia,serif;font-size:64px;line-height:.6;color:#1EBABB;height:34px;">“</div>
+                <div style="margin-top:20px;color:#7A867F;font-size:14px;font-weight:600;">Feefo customer</div>
+                <div style="color:#00b67a;font-size:16px;letter-spacing:2px;margin:8px 0 16px;">★★★★★</div>
+                <p style="color:#5B6B66;font-size:14.5px;line-height:1.7;">&quot;Friendly and good explanation of product. No hurry and happy to answer any questions or recap information.&quot;</p>
+              </div>
+            </div>
+          
         </div>
       </div>
     </div>
@@ -534,17 +736,87 @@
         <h2 class="arva-h" style="font-size:clamp(28px,3.8vw,46px);font-weight:600;color:#173B33;">Frequently asked questions</h2>
       </div>
       <div id="faqList" style="display:flex;flex-direction:column;gap:14px;">
-        <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="8">
+        
           <div class="faq-item reveal" style="border-radius:12px;overflow:hidden;box-shadow:0 6px 18px rgba(20,40,35,.06);">
             <div class="faq-q" style="background:#1EBABB;color:#fff;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-weight:700;font-size:15.5px;">
-              <span>{{ f.q }}</span>
+              <span>Do you offer life insurance advice in Manchester?</span>
               <span class="faq-plus" style="font-size:22px;line-height:1;transition:transform .3s ease;flex:none;">+</span>
             </div>
             <div class="faq-a" style="max-height:0;opacity:0;overflow:hidden;transition:max-height .4s ease,opacity .4s ease;background:#fff;">
-              <p style="padding:22px 26px;color:#5B6B66;font-size:15px;line-height:1.75;">{{ f.a }}</p>
+              <p style="padding:22px 26px;color:#5B6B66;font-size:15px;line-height:1.75;">Yes. We advise clients across Greater Manchester, including Manchester city centre, Salford, Stockport, and surrounding areas. Appointments can be arranged by phone or online.</p>
             </div>
           </div>
-        </sc-for>
+        
+          <div class="faq-item reveal" style="border-radius:12px;overflow:hidden;box-shadow:0 6px 18px rgba(20,40,35,.06);">
+            <div class="faq-q" style="background:#1EBABB;color:#fff;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-weight:700;font-size:15.5px;">
+              <span>Do you cover the whole of Cheshire?</span>
+              <span class="faq-plus" style="font-size:22px;line-height:1;transition:transform .3s ease;flex:none;">+</span>
+            </div>
+            <div class="faq-a" style="max-height:0;opacity:0;overflow:hidden;transition:max-height .4s ease,opacity .4s ease;background:#fff;">
+              <p style="padding:22px 26px;color:#5B6B66;font-size:15px;line-height:1.75;">Yes. We help clients throughout Cheshire, including Macclesfield, Wilmslow, Knutsford, and nearby areas.</p>
+            </div>
+          </div>
+        
+          <div class="faq-item reveal" style="border-radius:12px;overflow:hidden;box-shadow:0 6px 18px rgba(20,40,35,.06);">
+            <div class="faq-q" style="background:#1EBABB;color:#fff;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-weight:700;font-size:15.5px;">
+              <span>Is there a cost for your advice?</span>
+              <span class="faq-plus" style="font-size:22px;line-height:1;transition:transform .3s ease;flex:none;">+</span>
+            </div>
+            <div class="faq-a" style="max-height:0;opacity:0;overflow:hidden;transition:max-height .4s ease,opacity .4s ease;background:#fff;">
+              <p style="padding:22px 26px;color:#5B6B66;font-size:15px;line-height:1.75;">No. There is no fee for our advice. We assess your circumstances and recommend suitable protection options at no direct cost to you.</p>
+            </div>
+          </div>
+        
+          <div class="faq-item reveal" style="border-radius:12px;overflow:hidden;box-shadow:0 6px 18px rgba(20,40,35,.06);">
+            <div class="faq-q" style="background:#1EBABB;color:#fff;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-weight:700;font-size:15.5px;">
+              <span>What types of cover can you help with?</span>
+              <span class="faq-plus" style="font-size:22px;line-height:1;transition:transform .3s ease;flex:none;">+</span>
+            </div>
+            <div class="faq-a" style="max-height:0;opacity:0;overflow:hidden;transition:max-height .4s ease,opacity .4s ease;background:#fff;">
+              <p style="padding:22px 26px;color:#5B6B66;font-size:15px;line-height:1.75;">We can help with life insurance, critical illness cover, and income protection, depending on your needs and eligibility.</p>
+            </div>
+          </div>
+        
+          <div class="faq-item reveal" style="border-radius:12px;overflow:hidden;box-shadow:0 6px 18px rgba(20,40,35,.06);">
+            <div class="faq-q" style="background:#1EBABB;color:#fff;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-weight:700;font-size:15.5px;">
+              <span>Are you regulated?</span>
+              <span class="faq-plus" style="font-size:22px;line-height:1;transition:transform .3s ease;flex:none;">+</span>
+            </div>
+            <div class="faq-a" style="max-height:0;opacity:0;overflow:hidden;transition:max-height .4s ease,opacity .4s ease;background:#fff;">
+              <p style="padding:22px 26px;color:#5B6B66;font-size:15px;line-height:1.75;">TopQuote is an appointed representative of The Openwork Partnership, a trading style of Openwork Limited which is authorised and regulated by the Financial Conduct Authority.</p>
+            </div>
+          </div>
+        
+          <div class="faq-item reveal" style="border-radius:12px;overflow:hidden;box-shadow:0 6px 18px rgba(20,40,35,.06);">
+            <div class="faq-q" style="background:#1EBABB;color:#fff;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-weight:700;font-size:15.5px;">
+              <span>Can I get advice if I do not live near your office?</span>
+              <span class="faq-plus" style="font-size:22px;line-height:1;transition:transform .3s ease;flex:none;">+</span>
+            </div>
+            <div class="faq-a" style="max-height:0;opacity:0;overflow:hidden;transition:max-height .4s ease,opacity .4s ease;background:#fff;">
+              <p style="padding:22px 26px;color:#5B6B66;font-size:15px;line-height:1.75;">Yes. We can advise clients remotely by phone or online, so you do not need to visit the office in person.</p>
+            </div>
+          </div>
+        
+          <div class="faq-item reveal" style="border-radius:12px;overflow:hidden;box-shadow:0 6px 18px rgba(20,40,35,.06);">
+            <div class="faq-q" style="background:#1EBABB;color:#fff;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-weight:700;font-size:15.5px;">
+              <span>How do I know how much cover I need?</span>
+              <span class="faq-plus" style="font-size:22px;line-height:1;transition:transform .3s ease;flex:none;">+</span>
+            </div>
+            <div class="faq-a" style="max-height:0;opacity:0;overflow:hidden;transition:max-height .4s ease,opacity .4s ease;background:#fff;">
+              <p style="padding:22px 26px;color:#5B6B66;font-size:15px;line-height:1.75;">That depends on your income, debts, mortgage, dependants, and existing benefits. An adviser can help you work out an appropriate level of cover.</p>
+            </div>
+          </div>
+        
+          <div class="faq-item reveal" style="border-radius:12px;overflow:hidden;box-shadow:0 6px 18px rgba(20,40,35,.06);">
+            <div class="faq-q" style="background:#1EBABB;color:#fff;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-weight:700;font-size:15.5px;">
+              <span>Can you help if I already have a policy?</span>
+              <span class="faq-plus" style="font-size:22px;line-height:1;transition:transform .3s ease;flex:none;">+</span>
+            </div>
+            <div class="faq-a" style="max-height:0;opacity:0;overflow:hidden;transition:max-height .4s ease,opacity .4s ease;background:#fff;">
+              <p style="padding:22px 26px;color:#5B6B66;font-size:15px;line-height:1.75;">Yes. We can review your existing cover and help you understand whether it is still suitable for your current circumstances.</p>
+            </div>
+          </div>
+        
       </div>
     </div>
   </section>
@@ -554,24 +826,109 @@
     <div style="max-width:1200px;margin:0 auto;">
       <h2 class="arva-h" style="font-size:clamp(26px,3vw,38px);font-weight:700;color:#173B33;margin-bottom:34px;">Financial protection articles from our experts</h2>
       <div class="cf-blgrid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:26px;">
-        <sc-for list="{{ articles }}" as="a" hint-placeholder-count="6">
+        
           <div class="cf-blcard" style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 8px 24px rgba(20,40,35,.05);display:flex;flex-direction:column;">
-            <h3 class="arva-h" style="font-size:24px;font-weight:700;color:#173B33;line-height:1.2;margin-bottom:16px;">{{ a.title }}</h3>
+            <h3 class="arva-h" style="font-size:24px;font-weight:700;color:#173B33;line-height:1.2;margin-bottom:16px;">Private medical insurance</h3>
             <div style="width:54px;height:3px;background:#1EBABB;border-radius:2px;margin-bottom:22px;"></div>
-            <p style="color:#7A867F;font-size:15px;line-height:1.7;margin-bottom:26px;flex:1;">{{ a.excerpt }}</p>
+            <p style="color:#7A867F;font-size:15px;line-height:1.7;margin-bottom:26px;flex:1;">Find out everything you need to know about private medical cover, what it includes, what it costs, and whether it's right for you.</p>
             <div style="display:flex;align-items:center;gap:14px;margin-bottom:22px;">
               <div style="width:52px;height:52px;border-radius:50%;background:#1EBABB;flex:none;display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Playfair Display',Georgia,serif;font-size:24px;font-weight:700;">T</div>
               <div>
-                <div class="arva-h" style="font-size:17px;font-weight:700;color:#173B33;">{{ a.author }}</div>
-                <div style="color:#8A94A6;font-size:13.5px;">{{ a.role }}</div>
+                <div class="arva-h" style="font-size:17px;font-weight:700;color:#173B33;">Tanweer Hussain</div>
+                <div style="color:#8A94A6;font-size:13.5px;">Protection Expert</div>
               </div>
             </div>
             <div style="display:flex;align-items:center;justify-content:space-between;">
-              <span style="display:flex;align-items:center;gap:7px;color:#173B33;font-size:14px;font-weight:700;"><i data-lucide="clock" style="width:16px;height:16px;color:#1EBABB;"></i> {{ a.time }}</span>
+              <span style="display:flex;align-items:center;gap:7px;color:#173B33;font-size:14px;font-weight:700;"><i data-lucide="clock" style="width:16px;height:16px;color:#1EBABB;"></i> 8 min</span>
               <a href="/blog" style="color:#1EBABB;font-weight:700;font-size:15px;text-decoration:none;">Read now ›</a>
             </div>
           </div>
-        </sc-for>
+        
+          <div class="cf-blcard" style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 8px 24px rgba(20,40,35,.05);display:flex;flex-direction:column;">
+            <h3 class="arva-h" style="font-size:24px;font-weight:700;color:#173B33;line-height:1.2;margin-bottom:16px;">Does income protection cover redundancy?</h3>
+            <div style="width:54px;height:3px;background:#1EBABB;border-radius:2px;margin-bottom:22px;"></div>
+            <p style="color:#7A867F;font-size:15px;line-height:1.7;margin-bottom:26px;flex:1;">Will you be covered for redundancy with an income protection policy? We explain exactly what these policies do and don't pay out for.</p>
+            <div style="display:flex;align-items:center;gap:14px;margin-bottom:22px;">
+              <div style="width:52px;height:52px;border-radius:50%;background:#1EBABB;flex:none;display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Playfair Display',Georgia,serif;font-size:24px;font-weight:700;">T</div>
+              <div>
+                <div class="arva-h" style="font-size:17px;font-weight:700;color:#173B33;">Tanweer Hussain</div>
+                <div style="color:#8A94A6;font-size:13.5px;">Protection Expert</div>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;justify-content:space-between;">
+              <span style="display:flex;align-items:center;gap:7px;color:#173B33;font-size:14px;font-weight:700;"><i data-lucide="clock" style="width:16px;height:16px;color:#1EBABB;"></i> 8 min</span>
+              <a href="/blog" style="color:#1EBABB;font-weight:700;font-size:15px;text-decoration:none;">Read now ›</a>
+            </div>
+          </div>
+        
+          <div class="cf-blcard" style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 8px 24px rgba(20,40,35,.05);display:flex;flex-direction:column;">
+            <h3 class="arva-h" style="font-size:24px;font-weight:700;color:#173B33;line-height:1.2;margin-bottom:16px;">Vitality serious illness cover</h3>
+            <div style="width:54px;height:3px;background:#1EBABB;border-radius:2px;margin-bottom:22px;"></div>
+            <p style="color:#7A867F;font-size:15px;line-height:1.7;margin-bottom:26px;flex:1;">Serious illness cover is Vitality's version of critical illness. Here's how it works and how it compares to standard cover.</p>
+            <div style="display:flex;align-items:center;gap:14px;margin-bottom:22px;">
+              <div style="width:52px;height:52px;border-radius:50%;background:#1EBABB;flex:none;display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Playfair Display',Georgia,serif;font-size:24px;font-weight:700;">T</div>
+              <div>
+                <div class="arva-h" style="font-size:17px;font-weight:700;color:#173B33;">Tanweer Hussain</div>
+                <div style="color:#8A94A6;font-size:13.5px;">Protection Expert</div>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;justify-content:space-between;">
+              <span style="display:flex;align-items:center;gap:7px;color:#173B33;font-size:14px;font-weight:700;"><i data-lucide="clock" style="width:16px;height:16px;color:#1EBABB;"></i> 8 min</span>
+              <a href="/blog" style="color:#1EBABB;font-weight:700;font-size:15px;text-decoration:none;">Read now ›</a>
+            </div>
+          </div>
+        
+          <div class="cf-blcard" style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 8px 24px rgba(20,40,35,.05);display:flex;flex-direction:column;">
+            <h3 class="arva-h" style="font-size:24px;font-weight:700;color:#173B33;line-height:1.2;margin-bottom:16px;">Child critical illness cover</h3>
+            <div style="width:54px;height:3px;background:#1EBABB;border-radius:2px;margin-bottom:22px;"></div>
+            <p style="color:#7A867F;font-size:15px;line-height:1.7;margin-bottom:26px;flex:1;">Children's critical illness cover is an extra benefit that can be added to a policy. We look at what it covers and what to check.</p>
+            <div style="display:flex;align-items:center;gap:14px;margin-bottom:22px;">
+              <div style="width:52px;height:52px;border-radius:50%;background:#1EBABB;flex:none;display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Playfair Display',Georgia,serif;font-size:24px;font-weight:700;">T</div>
+              <div>
+                <div class="arva-h" style="font-size:17px;font-weight:700;color:#173B33;">Tanweer Hussain</div>
+                <div style="color:#8A94A6;font-size:13.5px;">Protection Expert</div>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;justify-content:space-between;">
+              <span style="display:flex;align-items:center;gap:7px;color:#173B33;font-size:14px;font-weight:700;"><i data-lucide="clock" style="width:16px;height:16px;color:#1EBABB;"></i> 7 min</span>
+              <a href="/blog" style="color:#1EBABB;font-weight:700;font-size:15px;text-decoration:none;">Read now ›</a>
+            </div>
+          </div>
+        
+          <div class="cf-blcard" style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 8px 24px rgba(20,40,35,.05);display:flex;flex-direction:column;">
+            <h3 class="arva-h" style="font-size:24px;font-weight:700;color:#173B33;line-height:1.2;margin-bottom:16px;">Income protection vs payment protection insurance</h3>
+            <div style="width:54px;height:3px;background:#1EBABB;border-radius:2px;margin-bottom:22px;"></div>
+            <p style="color:#7A867F;font-size:15px;line-height:1.7;margin-bottom:26px;flex:1;">Do you need income protection or payment protection? We break down the difference so you can choose the right cover.</p>
+            <div style="display:flex;align-items:center;gap:14px;margin-bottom:22px;">
+              <div style="width:52px;height:52px;border-radius:50%;background:#1EBABB;flex:none;display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Playfair Display',Georgia,serif;font-size:24px;font-weight:700;">T</div>
+              <div>
+                <div class="arva-h" style="font-size:17px;font-weight:700;color:#173B33;">Tanweer Hussain</div>
+                <div style="color:#8A94A6;font-size:13.5px;">Protection Expert</div>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;justify-content:space-between;">
+              <span style="display:flex;align-items:center;gap:7px;color:#173B33;font-size:14px;font-weight:700;"><i data-lucide="clock" style="width:16px;height:16px;color:#1EBABB;"></i> 9 min</span>
+              <a href="/blog" style="color:#1EBABB;font-weight:700;font-size:15px;text-decoration:none;">Read now ›</a>
+            </div>
+          </div>
+        
+          <div class="cf-blcard" style="background:#fff;border-radius:16px;padding:34px 32px;box-shadow:0 8px 24px rgba(20,40,35,.05);display:flex;flex-direction:column;">
+            <h3 class="arva-h" style="font-size:24px;font-weight:700;color:#173B33;line-height:1.2;margin-bottom:16px;">Life insurance to cover inheritance tax</h3>
+            <div style="width:54px;height:3px;background:#1EBABB;border-radius:2px;margin-bottom:22px;"></div>
+            <p style="color:#7A867F;font-size:15px;line-height:1.7;margin-bottom:26px;flex:1;">Whole of life insurance could help to avoid or minimise an inheritance tax bill for your family. Here's how it works.</p>
+            <div style="display:flex;align-items:center;gap:14px;margin-bottom:22px;">
+              <div style="width:52px;height:52px;border-radius:50%;background:#1EBABB;flex:none;display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Playfair Display',Georgia,serif;font-size:24px;font-weight:700;">T</div>
+              <div>
+                <div class="arva-h" style="font-size:17px;font-weight:700;color:#173B33;">Tanweer Hussain</div>
+                <div style="color:#8A94A6;font-size:13.5px;">Protection Expert</div>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;justify-content:space-between;">
+              <span style="display:flex;align-items:center;gap:7px;color:#173B33;font-size:14px;font-weight:700;"><i data-lucide="clock" style="width:16px;height:16px;color:#1EBABB;"></i> 8 min</span>
+              <a href="/blog" style="color:#1EBABB;font-weight:700;font-size:15px;text-decoration:none;">Read now ›</a>
+            </div>
+          </div>
+        
       </div>
     </div>
   </section>

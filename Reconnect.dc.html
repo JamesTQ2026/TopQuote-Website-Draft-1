@@ -383,12 +383,27 @@
         <h2 class="arva-h" style="font-size:clamp(28px,3.2vw,42px);line-height:1.14;font-weight:600;color:#173B33;margin-bottom:18px;">Specialists who know<br>your policy inside out.</h2>
         <p style="color:#5B6B66;font-size:15.5px;line-height:1.75;margin-bottom:28px;max-width:520px;">As qualified financial advisers with deep expertise in Legal &amp; General protection products, we're uniquely placed to review your cover and make sure it still fits your life.</p>
         <div style="display:flex;flex-direction:column;gap:20px;">
-          <sc-for list="{{ reasons }}" as="r" hint-placeholder-count="4">
+          
             <div style="display:flex;gap:16px;align-items:flex-start;">
-              <span class="tq-num" style="width:34px;height:34px;border-radius:50%;background:#1EBABB;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;flex:none;font-family:'Playfair Display',Georgia,serif;">{{ r.num }}</span>
-              <p style="color:#5B6B66;font-size:15px;line-height:1.65;"><strong style="color:#173B33;">{{ r.title }}</strong>, {{ r.desc }}</p>
+              <span class="tq-num" style="width:34px;height:34px;border-radius:50%;background:#1EBABB;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;flex:none;font-family:'Playfair Display',Georgia,serif;">1</span>
+              <p style="color:#5B6B66;font-size:15px;line-height:1.65;"><strong style="color:#173B33;">You might be entitled to more than you think</strong>, Some policyholders are paying for cover they no longer need, or have grounds to claim and don't realise. We check.</p>
             </div>
-          </sc-for>
+          
+            <div style="display:flex;gap:16px;align-items:flex-start;">
+              <span class="tq-num" style="width:34px;height:34px;border-radius:50%;background:#1EBABB;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;flex:none;font-family:'Playfair Display',Georgia,serif;">2</span>
+              <p style="color:#5B6B66;font-size:15px;line-height:1.65;"><strong style="color:#173B33;">The market has moved on</strong>, Underwriting has loosened on certain risks since many policies were written. Better terms or wider cover may now be available, but only if you ask.</p>
+            </div>
+          
+            <div style="display:flex;gap:16px;align-items:flex-start;">
+              <span class="tq-num" style="width:34px;height:34px;border-radius:50%;background:#1EBABB;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;flex:none;font-family:'Playfair Display',Georgia,serif;">3</span>
+              <p style="color:#5B6B66;font-size:15px;line-height:1.65;"><strong style="color:#173B33;">Your life has changed</strong>, New job, new home, new family. Cover that fit ten years ago might not fit now. A review tells you whether it still does.</p>
+            </div>
+          
+            <div style="display:flex;gap:16px;align-items:flex-start;">
+              <span class="tq-num" style="width:34px;height:34px;border-radius:50%;background:#1EBABB;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;flex:none;font-family:'Playfair Display',Georgia,serif;">4</span>
+              <p style="color:#5B6B66;font-size:15px;line-height:1.65;"><strong style="color:#173B33;">Your records stay accurate</strong>, Out-of-date contact details can delay claims at the worst possible moment. We keep yours current.</p>
+            </div>
+          
         </div>
         <a href="/contact" class="abtn" style="display:inline-block;margin-top:32px;background:#1EBABB;color:#fff;padding:15px 32px;border-radius:9px;text-decoration:none;font-weight:700;font-size:15px;">Book your policy review</a>
       </div>
@@ -433,15 +448,47 @@
       <p class="reveal" style="color:#5B6B66;font-size:16.5px;">You may need to review your cover if you have:</p>
     </div>
     <div class="rv-grid" style="max-width:1040px;margin:0 auto;display:flex;flex-direction:column;gap:18px;">
-      <sc-for list="{{ triggers }}" as="t" hint-placeholder-count="5">
+      
         <div class="rv-card" style="background:#fff;border-radius:16px;padding:30px 34px;display:flex;gap:24px;align-items:flex-start;box-shadow:0 8px 24px rgba(20,40,35,.05);">
-          <span style="width:60px;height:60px;border-radius:14px;background:#1EBABB;display:flex;align-items:center;justify-content:center;flex:none;"><i data-lucide="{{ t.icon }}" style="width:28px;height:28px;color:#fff;"></i></span>
+          <span style="width:60px;height:60px;border-radius:14px;background:#1EBABB;display:flex;align-items:center;justify-content:center;flex:none;"><i data-lucide="home" style="width:28px;height:28px;color:#fff;"></i></span>
           <div>
-            <h3 class="arva-h" style="font-size:20px;font-weight:700;color:#173B33;margin-bottom:8px;">{{ t.title }}</h3>
-            <p style="color:#7A867F;font-size:14.5px;line-height:1.7;">{{ t.desc }}</p>
+            <h3 class="arva-h" style="font-size:20px;font-weight:700;color:#173B33;margin-bottom:8px;">Moved House</h3>
+            <p style="color:#7A867F;font-size:14.5px;line-height:1.7;">A move usually means a new mortgage, perhaps a bigger one, perhaps over a longer term. Your existing cover may no longer match what your family would actually need to clear if the worst happened. It's also worth making sure your address is up to date, so we can always reach you.</p>
           </div>
         </div>
-      </sc-for>
+      
+        <div class="rv-card" style="background:#fff;border-radius:16px;padding:30px 34px;display:flex;gap:24px;align-items:flex-start;box-shadow:0 8px 24px rgba(20,40,35,.05);">
+          <span style="width:60px;height:60px;border-radius:14px;background:#1EBABB;display:flex;align-items:center;justify-content:center;flex:none;"><i data-lucide="percent" style="width:28px;height:28px;color:#fff;"></i></span>
+          <div>
+            <h3 class="arva-h" style="font-size:20px;font-weight:700;color:#173B33;margin-bottom:8px;">Re-Mortgaged</h3>
+            <p style="color:#7A867F;font-size:14.5px;line-height:1.7;">Remortgaging changes the size of your loan and how long you'll be paying it. Your cover might now be too high (if your balance has dropped) or too low (if you've borrowed more, or extended the term). A short review keeps the two in step.</p>
+          </div>
+        </div>
+      
+        <div class="rv-card" style="background:#fff;border-radius:16px;padding:30px 34px;display:flex;gap:24px;align-items:flex-start;box-shadow:0 8px 24px rgba(20,40,35,.05);">
+          <span style="width:60px;height:60px;border-radius:14px;background:#1EBABB;display:flex;align-items:center;justify-content:center;flex:none;"><i data-lucide="baby" style="width:28px;height:28px;color:#fff;"></i></span>
+          <div>
+            <h3 class="arva-h" style="font-size:20px;font-weight:700;color:#173B33;margin-bottom:8px;">Had A Child Or Grandchild</h3>
+            <p style="color:#7A867F;font-size:14.5px;line-height:1.7;">A new child or grandchild often changes who you'd want to provide for, and for how long. Many parents extend their cover to support their children all the way to financial independence. Grandparents sometimes use the moment to put a small legacy in place, too.</p>
+          </div>
+        </div>
+      
+        <div class="rv-card" style="background:#fff;border-radius:16px;padding:30px 34px;display:flex;gap:24px;align-items:flex-start;box-shadow:0 8px 24px rgba(20,40,35,.05);">
+          <span style="width:60px;height:60px;border-radius:14px;background:#1EBABB;display:flex;align-items:center;justify-content:center;flex:none;"><i data-lucide="heart" style="width:28px;height:28px;color:#fff;"></i></span>
+          <div>
+            <h3 class="arva-h" style="font-size:20px;font-weight:700;color:#173B33;margin-bottom:8px;">Got Married Or Divorced</h3>
+            <p style="color:#7A867F;font-size:14.5px;line-height:1.7;">Marriage, divorce, or losing a partner can all change who depends on you financially, and who you'd want to benefit from your policy. A quick review makes sure your cover amount and your nominated beneficiary still reflect the people closest to you.</p>
+          </div>
+        </div>
+      
+        <div class="rv-card" style="background:#fff;border-radius:16px;padding:30px 34px;display:flex;gap:24px;align-items:flex-start;box-shadow:0 8px 24px rgba(20,40,35,.05);">
+          <span style="width:60px;height:60px;border-radius:14px;background:#1EBABB;display:flex;align-items:center;justify-content:center;flex:none;"><i data-lucide="briefcase" style="width:28px;height:28px;color:#fff;"></i></span>
+          <div>
+            <h3 class="arva-h" style="font-size:20px;font-weight:700;color:#173B33;margin-bottom:8px;">Changed Jobs</h3>
+            <p style="color:#7A867F;font-size:14.5px;line-height:1.7;">A new role often comes with different benefits. Your employer may now provide some life cover automatically, or the cover you used to have may have disappeared (especially if you've gone self-employed). Either way, the amount of personal cover you actually need has probably shifted.</p>
+          </div>
+        </div>
+      
     </div>
     <div style="text-align:center;margin-top:44px;">
       <a href="/contact" class="tq-blue tq-big abtn reveal" style="display:inline-block;background:#1EBABB;color:#fff;padding:15px 34px;border-radius:9px;text-decoration:none;font-weight:700;font-size:15px;">Update My Details</a>
@@ -480,18 +527,54 @@
       <p class="reveal" style="color:#5B6B66;font-size:16px;">If you're considering a review of your cover, the process typically involves:</p>
     </div>
     <div class="steps-row" style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(5,1fr);gap:26px;">
-      <sc-for list="{{ steps }}" as="s" hint-placeholder-count="5">
+      
         <div class="step-col">
           <div style="display:flex;align-items:center;margin-bottom:20px;">
-            <span class="tq-num" style="width:46px;height:46px;border-radius:50%;background:#1EBABB;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:20px;flex:none;font-family:'Playfair Display',Georgia,serif;">{{ s.num }}</span>
+            <span class="tq-num" style="width:46px;height:46px;border-radius:50%;background:#1EBABB;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:20px;flex:none;font-family:'Playfair Display',Georgia,serif;">1</span>
           </div>
-          <h3 class="arva-h" style="font-size:18px;font-weight:700;color:#173B33;margin-bottom:10px;">{{ s.title }}</h3>
-          <p style="color:#7A867F;font-size:13.5px;line-height:1.65;">{{ s.desc }}</p>
-          <sc-if value="{{ s.cta }}" hint-placeholder-val="{{ false }}">
-            <a href="/contact" class="abtn" style="display:inline-block;margin-top:18px;background:#1EBABB;color:#fff;padding:11px 22px;border-radius:8px;text-decoration:none;font-weight:700;font-size:13.5px;">{{ s.cta }}</a>
-          </sc-if>
+          <h3 class="arva-h" style="font-size:18px;font-weight:700;color:#173B33;margin-bottom:10px;">You get in touch</h3>
+          <p style="color:#7A867F;font-size:13.5px;line-height:1.65;">Use the form on this page or give us a call. It takes a minute, and there's no commitment. You're just letting us know you'd like to talk.</p>
+          
+            <a href="/contact" class="abtn" style="display:inline-block;margin-top:18px;background:#1EBABB;color:#fff;padding:11px 22px;border-radius:8px;text-decoration:none;font-weight:700;font-size:13.5px;">Contact us</a>
+          
         </div>
-      </sc-for>
+      
+        <div class="step-col">
+          <div style="display:flex;align-items:center;margin-bottom:20px;">
+            <span class="tq-num" style="width:46px;height:46px;border-radius:50%;background:#1EBABB;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:20px;flex:none;font-family:'Playfair Display',Georgia,serif;">2</span>
+          </div>
+          <h3 class="arva-h" style="font-size:18px;font-weight:700;color:#173B33;margin-bottom:10px;">A call at a time that suits you</h3>
+          <p style="color:#7A867F;font-size:13.5px;line-height:1.65;">Your adviser arranges a convenient time to speak. The call itself usually takes 15 to 20 minutes, and there's no charge.</p>
+          
+        </div>
+      
+        <div class="step-col">
+          <div style="display:flex;align-items:center;margin-bottom:20px;">
+            <span class="tq-num" style="width:46px;height:46px;border-radius:50%;background:#1EBABB;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:20px;flex:none;font-family:'Playfair Display',Georgia,serif;">3</span>
+          </div>
+          <h3 class="arva-h" style="font-size:18px;font-weight:700;color:#173B33;margin-bottom:10px;">A clear walk-through of your cover</h3>
+          <p style="color:#7A867F;font-size:13.5px;line-height:1.65;">We explain what your policy actually does, what it doesn't, and what benefits you may not realise you have, in plain English, not jargon.</p>
+          
+        </div>
+      
+        <div class="step-col">
+          <div style="display:flex;align-items:center;margin-bottom:20px;">
+            <span class="tq-num" style="width:46px;height:46px;border-radius:50%;background:#1EBABB;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:20px;flex:none;font-family:'Playfair Display',Georgia,serif;">4</span>
+          </div>
+          <h3 class="arva-h" style="font-size:18px;font-weight:700;color:#173B33;margin-bottom:10px;">Honest recommendations, only if needed</h3>
+          <p style="color:#7A867F;font-size:13.5px;line-height:1.65;">If your cover still fits your life, we'll say so. If something genuinely needs adjusting, we'll explain why and walk you through the options. No pressure either way.</p>
+          
+        </div>
+      
+        <div class="step-col">
+          <div style="display:flex;align-items:center;margin-bottom:20px;">
+            <span class="tq-num" style="width:46px;height:46px;border-radius:50%;background:#1EBABB;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:20px;flex:none;font-family:'Playfair Display',Georgia,serif;">5</span>
+          </div>
+          <h3 class="arva-h" style="font-size:18px;font-weight:700;color:#173B33;margin-bottom:10px;">We stay in touch</h3>
+          <p style="color:#7A867F;font-size:13.5px;line-height:1.65;">We check in periodically, and any time you tell us something has changed: a move, a marriage, a new child. Your cover should keep up with your life.</p>
+          
+        </div>
+      
     </div>
   </section>
 
@@ -509,17 +592,57 @@
   <section style="background:#fff;padding:90px clamp(24px,5vw,40px) 100px;">
     <h2 class="reveal arva-h" style="text-align:center;font-size:clamp(30px,3.6vw,46px);font-weight:600;color:#173B33;margin-bottom:44px;">Common questions about your policy</h2>
     <div id="faqList" style="max-width:1000px;margin:0 auto;display:flex;flex-direction:column;gap:14px;">
-      <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="5">
+      
         <div class="faq-item" style="border-radius:12px;overflow:hidden;box-shadow:0 6px 18px rgba(20,40,35,.06);">
           <div class="faq-q" style="background:#1EBABB;color:#fff;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-weight:700;font-size:15.5px;">
-            <span>{{ f.q }}</span>
+            <span>Why am I being contacted about my Legal &amp; General policy?</span>
             <span class="faq-plus" style="font-size:22px;line-height:1;transition:transform .3s ease;flex:none;">+</span>
           </div>
           <div class="faq-a" style="max-height:0;opacity:0;overflow:hidden;transition:max-height .4s ease,opacity .4s ease;background:#fff;">
-            <p style="padding:22px 26px;color:#5B6B66;font-size:15px;line-height:1.75;">{{ f.a }}</p>
+            <p style="padding:22px 26px;color:#5B6B66;font-size:15px;line-height:1.75;">Legal &amp; General appointed TopQuote to take over the servicing of policies that were previously looked after by your original broker, who is no longer working with them. Your policy hasn't moved or changed, only the team responsible for reviewing and updating it on a day-to-day basis has changed.</p>
           </div>
         </div>
-      </sc-for>
+      
+        <div class="faq-item" style="border-radius:12px;overflow:hidden;box-shadow:0 6px 18px rgba(20,40,35,.06);">
+          <div class="faq-q" style="background:#1EBABB;color:#fff;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-weight:700;font-size:15.5px;">
+            <span>Has my Legal &amp; General policy changed?</span>
+            <span class="faq-plus" style="font-size:22px;line-height:1;transition:transform .3s ease;flex:none;">+</span>
+          </div>
+          <div class="faq-a" style="max-height:0;opacity:0;overflow:hidden;transition:max-height .4s ease,opacity .4s ease;background:#fff;">
+            <p style="padding:22px 26px;color:#5B6B66;font-size:15px;line-height:1.75;">No. Your provider, premiums, cover amount, and policy terms are all exactly as they were. The only thing that's different is who you'll hear from when it's time for a review, an update, or a question about your cover.</p>
+          </div>
+        </div>
+      
+        <div class="faq-item" style="border-radius:12px;overflow:hidden;box-shadow:0 6px 18px rgba(20,40,35,.06);">
+          <div class="faq-q" style="background:#1EBABB;color:#fff;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-weight:700;font-size:15.5px;">
+            <span>How can I verify TopQuote has been appointed by Legal &amp; General?</span>
+            <span class="faq-plus" style="font-size:22px;line-height:1;transition:transform .3s ease;flex:none;">+</span>
+          </div>
+          <div class="faq-a" style="max-height:0;opacity:0;overflow:hidden;transition:max-height .4s ease,opacity .4s ease;background:#fff;">
+            <p style="padding:22px 26px;color:#5B6B66;font-size:15px;line-height:1.75;">The simplest way is to call Legal &amp; General directly. Their customer service line is 0370 010 4080, or you can use the number printed on your policy documents. Tell them you've been contacted by TopQuote and ask them to confirm the appointment, they'll be happy to do so. We genuinely encourage this; it's the most reliable way to put any concerns to rest.</p>
+          </div>
+        </div>
+      
+        <div class="faq-item" style="border-radius:12px;overflow:hidden;box-shadow:0 6px 18px rgba(20,40,35,.06);">
+          <div class="faq-q" style="background:#1EBABB;color:#fff;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-weight:700;font-size:15.5px;">
+            <span>What happens to life insurance after separation or divorce?</span>
+            <span class="faq-plus" style="font-size:22px;line-height:1;transition:transform .3s ease;flex:none;">+</span>
+          </div>
+          <div class="faq-a" style="max-height:0;opacity:0;overflow:hidden;transition:max-height .4s ease,opacity .4s ease;background:#fff;">
+            <p style="padding:22px 26px;color:#5B6B66;font-size:15px;line-height:1.75;">Relationship breakdown can have implications for existing policies, particularly if you have a joint policy or if your named beneficiaries have changed. It is generally advisable to review your cover following a separation or divorce, and to update beneficiary arrangements where necessary.</p>
+          </div>
+        </div>
+      
+        <div class="faq-item" style="border-radius:12px;overflow:hidden;box-shadow:0 6px 18px rgba(20,40,35,.06);">
+          <div class="faq-q" style="background:#1EBABB;color:#fff;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-weight:700;font-size:15.5px;">
+            <span>Is there a cost for the policy review?</span>
+            <span class="faq-plus" style="font-size:22px;line-height:1;transition:transform .3s ease;flex:none;">+</span>
+          </div>
+          <div class="faq-a" style="max-height:0;opacity:0;overflow:hidden;transition:max-height .4s ease,opacity .4s ease;background:#fff;">
+            <p style="padding:22px 26px;color:#5B6B66;font-size:15px;line-height:1.75;">Policy reviews carry no obligation to change anything. If a review shows you could benefit from updated terms or different cover, we'll explain the options clearly, but the decision is always yours.</p>
+          </div>
+        </div>
+      
     </div>
   </section>
 
