@@ -25,7 +25,7 @@
   function pane(num, title, desc, vid, href) {
     return '' +
       '<div class="svc-pane" data-href="' + href + '" style="position:relative;overflow:hidden;cursor:pointer;background:#0C1F19;">' +
-        '<div class="svc-pane-img" style="position:absolute;inset:0;background:#000;transition:transform .6s cubic-bezier(.22,1,.36,1);"><video class="svc-pane-vid" src="' + vid + '" muted="" loop="" playsinline="" preload="auto" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;"></video></div>' +
+        '<div class="svc-pane-img" style="position:absolute;inset:0;background:#000;transition:transform .6s cubic-bezier(.22,1,.36,1);"><video class="svc-pane-vid" src="' + vid + '" muted="" loop="" playsinline="" preload="none" poster="' + vid.replace('.mp4', '-poster.webp') + '" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;"></video></div>' +
         '<div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,20,16,.15) 0%,rgba(6,20,16,.75) 100%);"></div>' +
         '<div style="position:absolute;left:0;right:0;top:0;padding:44px clamp(24px,3vw,52px) 0;text-align:center;">' +
           '<span style="display:inline-block;font-family:monospace;font-size:13px;color:#1EBABB;letter-spacing:.14em;margin-bottom:14px;">' + num + '</span>' +
