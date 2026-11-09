@@ -1699,4 +1699,9 @@ header a.nav-tel svg, header a.nav-tel i { width: 16px !important; height: 16px 
 html:not([data-feefo="on"]) [data-feefo-live] { display: none !important; }
 html[data-feefo="on"] [data-feefo-fallback] { display: none !important; }
 [data-feefo-live] feefo-service-carousel { display: block; min-height: 200px; }
+/* Feefo draws the carousel at a fixed size; scale it up as a whole on wider screens */
+@media (min-width: 1100px) {
+  [data-feefo-live] feefo-service-carousel { zoom: 1.2; }
+  [data-feefo-live]:has(> feefo-service-carousel) { max-width: 1420px !important; }
+}
 [data-feefo-live] feefo-brand-reviews { display: block; min-height: 400px; }
