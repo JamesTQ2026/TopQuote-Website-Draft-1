@@ -28,14 +28,14 @@ const PAGES = {
   '/careers': 'Careers.dc.html',
   '/consumer-duty': 'Consumer Duty.dc.html',
   '/contact': 'Contact.dc.html',
-  '/contact-altrincham': 'Contact Altrincham.dc.html',
-  '/contact-cheshire-east': 'Contact Cheshire East.dc.html',
-  '/contact-knutsford': 'Contact Knutsford.dc.html',
-  '/contact-macclesfield': 'Contact Macclesfield.dc.html',
-  '/contact-manchester': 'Contact Manchester.dc.html',
-  '/contact-salford': 'Contact Salford.dc.html',
-  '/contact-stockport': 'Contact Stockport.dc.html',
-  '/contact-wilmslow': 'Contact Wilmslow.dc.html',
+  '/life-insurance-altrincham': 'Contact Altrincham.dc.html',
+  '/life-insurance-cheshire-east': 'Contact Cheshire East.dc.html',
+  '/life-insurance-knutsford': 'Contact Knutsford.dc.html',
+  '/life-insurance-macclesfield': 'Contact Macclesfield.dc.html',
+  '/life-insurance-manchester': 'Contact Manchester.dc.html',
+  '/life-insurance-salford': 'Contact Salford.dc.html',
+  '/life-insurance-stockport': 'Contact Stockport.dc.html',
+  '/life-insurance-wilmslow': 'Contact Wilmslow.dc.html',
   '/critical-illness': 'Critical Illness.dc.html',
   '/family-life-insurance': 'Family Life Insurance.dc.html',
   '/find-us': 'Find Us.dc.html',
@@ -81,6 +81,14 @@ const MOVED = {
   '/home-insurance': '/',
   '/kids-pass-terms-and-conditions': '/kids-pass',
   '/referral-form': '/contact',
+  '/contact-altrincham': '/life-insurance-altrincham',   // renamed 9 Nov 2026 (targets 'life insurance <town>')
+  '/contact-cheshire-east': '/life-insurance-cheshire-east',   // renamed 9 Nov 2026 (targets 'life insurance <town>')
+  '/contact-knutsford': '/life-insurance-knutsford',   // renamed 9 Nov 2026 (targets 'life insurance <town>')
+  '/contact-macclesfield': '/life-insurance-macclesfield',   // renamed 9 Nov 2026 (targets 'life insurance <town>')
+  '/contact-manchester': '/life-insurance-manchester',   // renamed 9 Nov 2026 (targets 'life insurance <town>')
+  '/contact-salford': '/life-insurance-salford',   // renamed 9 Nov 2026 (targets 'life insurance <town>')
+  '/contact-stockport': '/life-insurance-stockport',   // renamed 9 Nov 2026 (targets 'life insurance <town>')
+  '/contact-wilmslow': '/life-insurance-wilmslow',   // renamed 9 Nov 2026 (targets 'life insurance <town>')
 };
 
 // Older-generation URLs Google may still know (found via the Internet Archive, 25 Sep 2026).

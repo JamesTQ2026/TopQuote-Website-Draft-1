@@ -1236,6 +1236,46 @@
    "statusCode": 301
   },
   {
+   "source": "/contact-altrincham{/}?",
+   "destination": "/life-insurance-altrincham",
+   "statusCode": 301
+  },
+  {
+   "source": "/contact-cheshire-east{/}?",
+   "destination": "/life-insurance-cheshire-east",
+   "statusCode": 301
+  },
+  {
+   "source": "/contact-knutsford{/}?",
+   "destination": "/life-insurance-knutsford",
+   "statusCode": 301
+  },
+  {
+   "source": "/contact-macclesfield{/}?",
+   "destination": "/life-insurance-macclesfield",
+   "statusCode": 301
+  },
+  {
+   "source": "/contact-manchester{/}?",
+   "destination": "/life-insurance-manchester",
+   "statusCode": 301
+  },
+  {
+   "source": "/contact-salford{/}?",
+   "destination": "/life-insurance-salford",
+   "statusCode": 301
+  },
+  {
+   "source": "/contact-stockport{/}?",
+   "destination": "/life-insurance-stockport",
+   "statusCode": 301
+  },
+  {
+   "source": "/contact-wilmslow{/}?",
+   "destination": "/life-insurance-wilmslow",
+   "statusCode": 301
+  },
+  {
    "source": "/a-life-of-worry-2{/}?",
    "destination": "/blog-a-life-of-worry",
    "statusCode": 301
@@ -1587,82 +1627,82 @@
   },
   {
    "source": "/Contact%20Altrincham.dc.html{/}?",
-   "destination": "/contact-altrincham",
+   "destination": "/life-insurance-altrincham",
    "statusCode": 301
   },
   {
    "source": "/Contact Altrincham.dc.html{/}?",
-   "destination": "/contact-altrincham",
+   "destination": "/life-insurance-altrincham",
    "statusCode": 301
   },
   {
    "source": "/Contact%20Cheshire%20East.dc.html{/}?",
-   "destination": "/contact-cheshire-east",
+   "destination": "/life-insurance-cheshire-east",
    "statusCode": 301
   },
   {
    "source": "/Contact Cheshire East.dc.html{/}?",
-   "destination": "/contact-cheshire-east",
+   "destination": "/life-insurance-cheshire-east",
    "statusCode": 301
   },
   {
    "source": "/Contact%20Knutsford.dc.html{/}?",
-   "destination": "/contact-knutsford",
+   "destination": "/life-insurance-knutsford",
    "statusCode": 301
   },
   {
    "source": "/Contact Knutsford.dc.html{/}?",
-   "destination": "/contact-knutsford",
+   "destination": "/life-insurance-knutsford",
    "statusCode": 301
   },
   {
    "source": "/Contact%20Macclesfield.dc.html{/}?",
-   "destination": "/contact-macclesfield",
+   "destination": "/life-insurance-macclesfield",
    "statusCode": 301
   },
   {
    "source": "/Contact Macclesfield.dc.html{/}?",
-   "destination": "/contact-macclesfield",
+   "destination": "/life-insurance-macclesfield",
    "statusCode": 301
   },
   {
    "source": "/Contact%20Manchester.dc.html{/}?",
-   "destination": "/contact-manchester",
+   "destination": "/life-insurance-manchester",
    "statusCode": 301
   },
   {
    "source": "/Contact Manchester.dc.html{/}?",
-   "destination": "/contact-manchester",
+   "destination": "/life-insurance-manchester",
    "statusCode": 301
   },
   {
    "source": "/Contact%20Salford.dc.html{/}?",
-   "destination": "/contact-salford",
+   "destination": "/life-insurance-salford",
    "statusCode": 301
   },
   {
    "source": "/Contact Salford.dc.html{/}?",
-   "destination": "/contact-salford",
+   "destination": "/life-insurance-salford",
    "statusCode": 301
   },
   {
    "source": "/Contact%20Stockport.dc.html{/}?",
-   "destination": "/contact-stockport",
+   "destination": "/life-insurance-stockport",
    "statusCode": 301
   },
   {
    "source": "/Contact Stockport.dc.html{/}?",
-   "destination": "/contact-stockport",
+   "destination": "/life-insurance-stockport",
    "statusCode": 301
   },
   {
    "source": "/Contact%20Wilmslow.dc.html{/}?",
-   "destination": "/contact-wilmslow",
+   "destination": "/life-insurance-wilmslow",
    "statusCode": 301
   },
   {
    "source": "/Contact Wilmslow.dc.html{/}?",
-   "destination": "/contact-wilmslow",
+   "destination": "/life-insurance-wilmslow",
    "statusCode": 301
   },
   {
@@ -4597,35 +4637,35 @@
    "destination": "/Contact.dc.html"
   },
   {
-   "source": "/contact-altrincham",
+   "source": "/life-insurance-altrincham",
    "destination": "/Contact%20Altrincham.dc.html"
   },
   {
-   "source": "/contact-cheshire-east",
+   "source": "/life-insurance-cheshire-east",
    "destination": "/Contact%20Cheshire%20East.dc.html"
   },
   {
-   "source": "/contact-knutsford",
+   "source": "/life-insurance-knutsford",
    "destination": "/Contact%20Knutsford.dc.html"
   },
   {
-   "source": "/contact-macclesfield",
+   "source": "/life-insurance-macclesfield",
    "destination": "/Contact%20Macclesfield.dc.html"
   },
   {
-   "source": "/contact-manchester",
+   "source": "/life-insurance-manchester",
    "destination": "/Contact%20Manchester.dc.html"
   },
   {
-   "source": "/contact-salford",
+   "source": "/life-insurance-salford",
    "destination": "/Contact%20Salford.dc.html"
   },
   {
-   "source": "/contact-stockport",
+   "source": "/life-insurance-stockport",
    "destination": "/Contact%20Stockport.dc.html"
   },
   {
-   "source": "/contact-wilmslow",
+   "source": "/life-insurance-wilmslow",
    "destination": "/Contact%20Wilmslow.dc.html"
   },
   {
