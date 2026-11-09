@@ -1692,3 +1692,10 @@ header .nav-link:hover, .tq-hdr .nav-link:hover { text-decoration: none !importa
 header nav[style*="font-size:18px"] { font-size: 16px !important; }
 header a.nav-tel { font-size: 15px !important; font-weight: 700 !important; gap: 7px !important; }
 header a.nav-tel svg, header a.nav-tel i { width: 16px !important; height: 16px !important; }
+
+/* 93. Live Feefo widgets (cookie-banner.js loads them only after "Embedded content"
+   is accepted, and then sets html[data-feefo="on"]). Until then each slot shows the
+   page's own version, so nobody sees a gap. */
+html:not([data-feefo="on"]) [data-feefo-live] { display: none !important; }
+html[data-feefo="on"] [data-feefo-fallback] { display: none !important; }
+[data-feefo-live] feefo-service-carousel { display: block; min-height: 200px; }

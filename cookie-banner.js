@@ -9,7 +9,9 @@
                 Google's own purposes, so it is not loaded at all until the
                 visitor says yes. Google Consent Mode is set to denied before
                 anything runs, and updated only on a yes.
-     embeds     The Google Maps frames on the home page and Find Us. Third party
+     embeds     The Google Maps frames on the home page and Find Us, and the live
+                Feefo review widgets (their script sets a feefo.com cookie and
+                reports widget views to Feefo). Third party
                 and not needed to deliver the page, so they stay unloaded too.
 
    Refusing is one click, in a button of the same size and weight as accepting.
@@ -26,7 +28,7 @@
   var GA4_ID = '';
 
   var KEY = 'tq-cookie-consent';
-  var VERSION = 3;   // bump when the categories change, so visitors are re-asked
+  var VERSION = 4;   // bump when the categories change, so visitors are re-asked
   var MAX_AGE = 182 * 24 * 60 * 60 * 1000;   // ~6 months; the ICO expects consent to be refreshed
   var CATS = ['analytics', 'embeds'];
 
@@ -206,10 +208,37 @@
 
   /* ---------- putting a choice into effect ---------- */
 
+  /* ---------- live Feefo widgets ---------- */
+
+  // Pages mark a live slot with data-feefo-live and today's version with
+  // data-feefo-fallback; the CSS swaps them once html[data-feefo="on"] is set.
+  var feefoLoaded = false;
+  function loadFeefo() {
+    // not inside the quote journey's iframe: the page around it has its own tab
+    try { if (window.self !== window.top) return; } catch (e) { return; }
+    document.documentElement.setAttribute('data-feefo', 'on');
+    if (feefoLoaded) return;
+    feefoLoaded = true;
+    // the slide-out reviews tab, on every page; added to <body> directly so the
+    // page framework never re-renders it away
+    if (!document.querySelector('feefo-slideout')) {
+      document.body.appendChild(document.createElement('feefo-slideout'));
+    }
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://api.feefo.com/api/javascript/top-quote';
+    (document.body || document.head).appendChild(s);
+  }
+  function holdFeefo() {
+    // a script already running in this page view cannot be unloaded; the next
+    // page view starts clean because nothing loads without a yes
+    document.documentElement.removeAttribute('data-feefo');
+  }
+
   function apply(choice, persist) {
     if (persist) write(choice);
     if (choice && choice.analytics) loadGA(); else denyGA();
-    if (choice && choice.embeds) loadFrames(); else holdFrames();
+    if (choice && choice.embeds) { loadFrames(); loadFeefo(); } else { holdFrames(); holdFeefo(); }
     if (persist) close();
   }
 
@@ -261,7 +290,7 @@
     var rows = [
       ['necessary', 'Strictly necessary', 'Remembers this choice. Always on.', null],
       ['analytics', 'Analytics', 'Google Analytics, so we can see which pages are read.', 'analytics'],
-      ['embeds', 'Embedded content', 'The Google map of our office at Alderley Park.', 'embeds']
+      ['embeds', 'Embedded content', 'The Google map of our office at Alderley Park, and our live Feefo reviews.', 'embeds']
     ];
     var boxes = {};
     rows.forEach(function (r) {
