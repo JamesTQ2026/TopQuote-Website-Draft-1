@@ -25,7 +25,7 @@
    *  Admin > Data streams in Google Analytics. While it is empty the    *
    *  consent choice is still recorded and honoured; nothing is loaded.  *
    * ------------------------------------------------------------------ */
-  var GA4_ID = '';
+  var GA4_ID = 'G-T6XJWR7ZRW';   // TopQuote Website property (530525971)
 
   var KEY = 'tq-cookie-consent';
   var VERSION = 4;   // bump when the categories change, so visitors are re-asked
