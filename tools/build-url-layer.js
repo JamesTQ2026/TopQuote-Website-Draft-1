@@ -195,12 +195,16 @@ const liveSlugs = blogSlugs.filter((s) => !held.has(s));
 
 const redirects = [];
 const rewrites = [];
-const r301 = (source, destination) => redirects.push({ source, destination, statusCode: 301 });
+// '{/}?' lets each rule match with or without a trailing slash in ONE hop. Vercel's own
+// trailingSlash setting would strip the slash first (a second hop), so it is off and a
+// catch-all at the end strips slashes from everything else.
+const slashOpt = (src) => (/[/?*+)]$/.test(src) || src.endsWith('}') ? src : src + '{/}?');
+const r301 = (source, destination) => redirects.push({ source: slashOpt(source), destination, statusCode: 301 });
 
 // 0. unapproved posts: temporary redirect to the blog index (302, so they can go live later)
 for (const slug of held) {
   for (const src of [`/blog-${slug}`, `/blog-${slug}.html`, `/blog/:cat/${slug}`, `/blog/${slug}`]) {
-    redirects.push({ source: src, destination: '/blog', statusCode: 302 });
+    redirects.push({ source: slashOpt(src), destination: '/blog', statusCode: 302 });
   }
 }
 
@@ -275,6 +279,11 @@ for (const [ph, to] of [['a.href', '/blog'], ['area.href', '/find-us'], ['s.post
 }
 // anything else under /blog/ (categories, pagination, date archives, retired posts) -> blog index
 r301('/blog/:path+', '/blog');
+// old WordPress archives outside /blog/: categories, tags, authors, paging, date archives, feeds
+for (const p of ['/category/:path*', '/tag/:path*', '/author/:path*', '/page/:path*', '/feed/:path*', '/comments/:path*']) r301(p, '/blog');
+r301('/:year(\\d{4})/:path*', '/blog');
+// last: any other address with a trailing slash -> the same address without it (one hop)
+redirects.push({ source: '/:path+/', destination: '/:path+', statusCode: 308 });
 
 // rewrites: clean URL -> actual file
 rewrites.push({ source: '/', destination: '/Home%20Page.dc.html' });
@@ -283,7 +292,7 @@ rewrites.push({ source: '/(blog-[^/.]+)', destination: '/$1.html' });
 
 if (redirects.length > 1000) throw new Error('Too many redirects for Vercel (limit 1024): ' + redirects.length);
 
-const vercel = { trailingSlash: false, redirects, rewrites };
+const vercel = { redirects, rewrites };   // trailingSlash handled above, in one hop
 fs.writeFileSync(path.join(ROOT, 'vercel.json'), JSON.stringify(vercel, null, 1) + '\n');
 
 // Legal pages still marked "Draft, pending legal & compliance review": kept noindex and out of

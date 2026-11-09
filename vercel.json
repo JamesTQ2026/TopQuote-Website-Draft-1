@@ -1,1538 +1,1537 @@
 {
- "trailingSlash": false,
  "redirects": [
   {
-   "source": "/blog-over-50s-life-insurance",
+   "source": "/blog-over-50s-life-insurance{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-over-50s-life-insurance.html",
+   "source": "/blog-over-50s-life-insurance.html{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/:cat/over-50s-life-insurance",
+   "source": "/blog/:cat/over-50s-life-insurance{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/over-50s-life-insurance",
+   "source": "/blog/over-50s-life-insurance{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-life-insurance-for-stay-at-home-parents-uk-do-you-need-cover",
+   "source": "/blog-life-insurance-for-stay-at-home-parents-uk-do-you-need-cover{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-life-insurance-for-stay-at-home-parents-uk-do-you-need-cover.html",
+   "source": "/blog-life-insurance-for-stay-at-home-parents-uk-do-you-need-cover.html{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/:cat/life-insurance-for-stay-at-home-parents-uk-do-you-need-cover",
+   "source": "/blog/:cat/life-insurance-for-stay-at-home-parents-uk-do-you-need-cover{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/life-insurance-for-stay-at-home-parents-uk-do-you-need-cover",
+   "source": "/blog/life-insurance-for-stay-at-home-parents-uk-do-you-need-cover{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-life-insurance-after-a-heart-attack-uk-can-you-get-cover",
+   "source": "/blog-life-insurance-after-a-heart-attack-uk-can-you-get-cover{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-life-insurance-after-a-heart-attack-uk-can-you-get-cover.html",
+   "source": "/blog-life-insurance-after-a-heart-attack-uk-can-you-get-cover.html{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/:cat/life-insurance-after-a-heart-attack-uk-can-you-get-cover",
+   "source": "/blog/:cat/life-insurance-after-a-heart-attack-uk-can-you-get-cover{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/life-insurance-after-a-heart-attack-uk-can-you-get-cover",
+   "source": "/blog/life-insurance-after-a-heart-attack-uk-can-you-get-cover{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-waiver-of-premium-what-it-is-and-whether-you-need-it",
+   "source": "/blog-waiver-of-premium-what-it-is-and-whether-you-need-it{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-waiver-of-premium-what-it-is-and-whether-you-need-it.html",
+   "source": "/blog-waiver-of-premium-what-it-is-and-whether-you-need-it.html{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/:cat/waiver-of-premium-what-it-is-and-whether-you-need-it",
+   "source": "/blog/:cat/waiver-of-premium-what-it-is-and-whether-you-need-it{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/waiver-of-premium-what-it-is-and-whether-you-need-it",
+   "source": "/blog/waiver-of-premium-what-it-is-and-whether-you-need-it{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-life-insurance-for-first-time-buyers-uk-what-you-need-to-know",
+   "source": "/blog-life-insurance-for-first-time-buyers-uk-what-you-need-to-know{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-life-insurance-for-first-time-buyers-uk-what-you-need-to-know.html",
+   "source": "/blog-life-insurance-for-first-time-buyers-uk-what-you-need-to-know.html{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/:cat/life-insurance-for-first-time-buyers-uk-what-you-need-to-know",
+   "source": "/blog/:cat/life-insurance-for-first-time-buyers-uk-what-you-need-to-know{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/life-insurance-for-first-time-buyers-uk-what-you-need-to-know",
+   "source": "/blog/life-insurance-for-first-time-buyers-uk-what-you-need-to-know{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-can-you-have-two-life-insurance-policies-in-the-uk",
+   "source": "/blog-can-you-have-two-life-insurance-policies-in-the-uk{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-can-you-have-two-life-insurance-policies-in-the-uk.html",
+   "source": "/blog-can-you-have-two-life-insurance-policies-in-the-uk.html{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/:cat/can-you-have-two-life-insurance-policies-in-the-uk",
+   "source": "/blog/:cat/can-you-have-two-life-insurance-policies-in-the-uk{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/can-you-have-two-life-insurance-policies-in-the-uk",
+   "source": "/blog/can-you-have-two-life-insurance-policies-in-the-uk{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-decreasing-term-vs-level-term-life-insurance-what-is-the-difference",
+   "source": "/blog-decreasing-term-vs-level-term-life-insurance-what-is-the-difference{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-decreasing-term-vs-level-term-life-insurance-what-is-the-difference.html",
+   "source": "/blog-decreasing-term-vs-level-term-life-insurance-what-is-the-difference.html{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/:cat/decreasing-term-vs-level-term-life-insurance-what-is-the-difference",
+   "source": "/blog/:cat/decreasing-term-vs-level-term-life-insurance-what-is-the-difference{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/decreasing-term-vs-level-term-life-insurance-what-is-the-difference",
+   "source": "/blog/decreasing-term-vs-level-term-life-insurance-what-is-the-difference{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-joint-life-insurance-vs-two-single-policies-which-is-better",
+   "source": "/blog-joint-life-insurance-vs-two-single-policies-which-is-better{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-joint-life-insurance-vs-two-single-policies-which-is-better.html",
+   "source": "/blog-joint-life-insurance-vs-two-single-policies-which-is-better.html{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/:cat/joint-life-insurance-vs-two-single-policies-which-is-better",
+   "source": "/blog/:cat/joint-life-insurance-vs-two-single-policies-which-is-better{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/joint-life-insurance-vs-two-single-policies-which-is-better",
+   "source": "/blog/joint-life-insurance-vs-two-single-policies-which-is-better{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-shareholder-protection-insurance-uk-keeping-control-of-your-business",
+   "source": "/blog-shareholder-protection-insurance-uk-keeping-control-of-your-business{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-shareholder-protection-insurance-uk-keeping-control-of-your-business.html",
+   "source": "/blog-shareholder-protection-insurance-uk-keeping-control-of-your-business.html{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/:cat/shareholder-protection-insurance-uk-keeping-control-of-your-business",
+   "source": "/blog/:cat/shareholder-protection-insurance-uk-keeping-control-of-your-business{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/shareholder-protection-insurance-uk-keeping-control-of-your-business",
+   "source": "/blog/shareholder-protection-insurance-uk-keeping-control-of-your-business{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-life-insurance-and-mental-health-uk-can-you-still-get-cover",
+   "source": "/blog-life-insurance-and-mental-health-uk-can-you-still-get-cover{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-life-insurance-and-mental-health-uk-can-you-still-get-cover.html",
+   "source": "/blog-life-insurance-and-mental-health-uk-can-you-still-get-cover.html{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/:cat/life-insurance-and-mental-health-uk-can-you-still-get-cover",
+   "source": "/blog/:cat/life-insurance-and-mental-health-uk-can-you-still-get-cover{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/life-insurance-and-mental-health-uk-can-you-still-get-cover",
+   "source": "/blog/life-insurance-and-mental-health-uk-can-you-still-get-cover{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-life-insurance-for-cancer-survivors-uk-can-you-get-cover-after-treatment",
+   "source": "/blog-life-insurance-for-cancer-survivors-uk-can-you-get-cover-after-treatment{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-life-insurance-for-cancer-survivors-uk-can-you-get-cover-after-treatment.html",
+   "source": "/blog-life-insurance-for-cancer-survivors-uk-can-you-get-cover-after-treatment.html{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/:cat/life-insurance-for-cancer-survivors-uk-can-you-get-cover-after-treatment",
+   "source": "/blog/:cat/life-insurance-for-cancer-survivors-uk-can-you-get-cover-after-treatment{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/life-insurance-for-cancer-survivors-uk-can-you-get-cover-after-treatment",
+   "source": "/blog/life-insurance-for-cancer-survivors-uk-can-you-get-cover-after-treatment{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-how-are-life-insurance-premiums-calculated-in-the-uk",
+   "source": "/blog-how-are-life-insurance-premiums-calculated-in-the-uk{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-how-are-life-insurance-premiums-calculated-in-the-uk.html",
+   "source": "/blog-how-are-life-insurance-premiums-calculated-in-the-uk.html{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/:cat/how-are-life-insurance-premiums-calculated-in-the-uk",
+   "source": "/blog/:cat/how-are-life-insurance-premiums-calculated-in-the-uk{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/how-are-life-insurance-premiums-calculated-in-the-uk",
+   "source": "/blog/how-are-life-insurance-premiums-calculated-in-the-uk{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-life-insurance-for-high-risk-occupations-what-uk-workers-need-to-know",
+   "source": "/blog-life-insurance-for-high-risk-occupations-what-uk-workers-need-to-know{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-life-insurance-for-high-risk-occupations-what-uk-workers-need-to-know.html",
+   "source": "/blog-life-insurance-for-high-risk-occupations-what-uk-workers-need-to-know.html{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/:cat/life-insurance-for-high-risk-occupations-what-uk-workers-need-to-know",
+   "source": "/blog/:cat/life-insurance-for-high-risk-occupations-what-uk-workers-need-to-know{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/life-insurance-for-high-risk-occupations-what-uk-workers-need-to-know",
+   "source": "/blog/life-insurance-for-high-risk-occupations-what-uk-workers-need-to-know{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-life-insurance-and-diabetes-uk-can-you-get-cover",
+   "source": "/blog-life-insurance-and-diabetes-uk-can-you-get-cover{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-life-insurance-and-diabetes-uk-can-you-get-cover.html",
+   "source": "/blog-life-insurance-and-diabetes-uk-can-you-get-cover.html{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/:cat/life-insurance-and-diabetes-uk-can-you-get-cover",
+   "source": "/blog/:cat/life-insurance-and-diabetes-uk-can-you-get-cover{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/life-insurance-and-diabetes-uk-can-you-get-cover",
+   "source": "/blog/life-insurance-and-diabetes-uk-can-you-get-cover{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-key-person-insurance-uk-what-it-is-and-why-businesses-need-it",
+   "source": "/blog-key-person-insurance-uk-what-it-is-and-why-businesses-need-it{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-key-person-insurance-uk-what-it-is-and-why-businesses-need-it.html",
+   "source": "/blog-key-person-insurance-uk-what-it-is-and-why-businesses-need-it.html{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/:cat/key-person-insurance-uk-what-it-is-and-why-businesses-need-it",
+   "source": "/blog/:cat/key-person-insurance-uk-what-it-is-and-why-businesses-need-it{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/key-person-insurance-uk-what-it-is-and-why-businesses-need-it",
+   "source": "/blog/key-person-insurance-uk-what-it-is-and-why-businesses-need-it{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-life-insurance-for-over-50s-what-are-your-options-in-the-uk",
+   "source": "/blog-life-insurance-for-over-50s-what-are-your-options-in-the-uk{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-life-insurance-for-over-50s-what-are-your-options-in-the-uk.html",
+   "source": "/blog-life-insurance-for-over-50s-what-are-your-options-in-the-uk.html{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/:cat/life-insurance-for-over-50s-what-are-your-options-in-the-uk",
+   "source": "/blog/:cat/life-insurance-for-over-50s-what-are-your-options-in-the-uk{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/life-insurance-for-over-50s-what-are-your-options-in-the-uk",
+   "source": "/blog/life-insurance-for-over-50s-what-are-your-options-in-the-uk{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-family-income-benefit-uk-what-it-is-and-how-it-works",
+   "source": "/blog-family-income-benefit-uk-what-it-is-and-how-it-works{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-family-income-benefit-uk-what-it-is-and-how-it-works.html",
+   "source": "/blog-family-income-benefit-uk-what-it-is-and-how-it-works.html{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/:cat/family-income-benefit-uk-what-it-is-and-how-it-works",
+   "source": "/blog/:cat/family-income-benefit-uk-what-it-is-and-how-it-works{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/family-income-benefit-uk-what-it-is-and-how-it-works",
+   "source": "/blog/family-income-benefit-uk-what-it-is-and-how-it-works{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-death-in-service-vs-life-insurance-do-you-need-both",
+   "source": "/blog-death-in-service-vs-life-insurance-do-you-need-both{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-death-in-service-vs-life-insurance-do-you-need-both.html",
+   "source": "/blog-death-in-service-vs-life-insurance-do-you-need-both.html{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/:cat/death-in-service-vs-life-insurance-do-you-need-both",
+   "source": "/blog/:cat/death-in-service-vs-life-insurance-do-you-need-both{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/death-in-service-vs-life-insurance-do-you-need-both",
+   "source": "/blog/death-in-service-vs-life-insurance-do-you-need-both{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-relevant-life-insurance-a-tax-efficient-option-for-company-directors",
+   "source": "/blog-relevant-life-insurance-a-tax-efficient-option-for-company-directors{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-relevant-life-insurance-a-tax-efficient-option-for-company-directors.html",
+   "source": "/blog-relevant-life-insurance-a-tax-efficient-option-for-company-directors.html{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/:cat/relevant-life-insurance-a-tax-efficient-option-for-company-directors",
+   "source": "/blog/:cat/relevant-life-insurance-a-tax-efficient-option-for-company-directors{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/relevant-life-insurance-a-tax-efficient-option-for-company-directors",
+   "source": "/blog/relevant-life-insurance-a-tax-efficient-option-for-company-directors{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-how-long-does-a-life-insurance-claim-take-to-pay-out-in-the-uk",
+   "source": "/blog-how-long-does-a-life-insurance-claim-take-to-pay-out-in-the-uk{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-how-long-does-a-life-insurance-claim-take-to-pay-out-in-the-uk.html",
+   "source": "/blog-how-long-does-a-life-insurance-claim-take-to-pay-out-in-the-uk.html{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/:cat/how-long-does-a-life-insurance-claim-take-to-pay-out-in-the-uk",
+   "source": "/blog/:cat/how-long-does-a-life-insurance-claim-take-to-pay-out-in-the-uk{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/how-long-does-a-life-insurance-claim-take-to-pay-out-in-the-uk",
+   "source": "/blog/how-long-does-a-life-insurance-claim-take-to-pay-out-in-the-uk{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-writing-life-insurance-in-trust-uk-tax-rules-explained",
+   "source": "/blog-writing-life-insurance-in-trust-uk-tax-rules-explained{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-writing-life-insurance-in-trust-uk-tax-rules-explained.html",
+   "source": "/blog-writing-life-insurance-in-trust-uk-tax-rules-explained.html{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/:cat/writing-life-insurance-in-trust-uk-tax-rules-explained",
+   "source": "/blog/:cat/writing-life-insurance-in-trust-uk-tax-rules-explained{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/writing-life-insurance-in-trust-uk-tax-rules-explained",
+   "source": "/blog/writing-life-insurance-in-trust-uk-tax-rules-explained{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-relevant-life-insurance-uk",
+   "source": "/blog-relevant-life-insurance-uk{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-relevant-life-insurance-uk.html",
+   "source": "/blog-relevant-life-insurance-uk.html{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/:cat/relevant-life-insurance-uk",
+   "source": "/blog/:cat/relevant-life-insurance-uk{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/relevant-life-insurance-uk",
+   "source": "/blog/relevant-life-insurance-uk{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-life-insurance-over-50s-uk",
+   "source": "/blog-life-insurance-over-50s-uk{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-life-insurance-over-50s-uk.html",
+   "source": "/blog-life-insurance-over-50s-uk.html{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/:cat/life-insurance-over-50s-uk",
+   "source": "/blog/:cat/life-insurance-over-50s-uk{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/life-insurance-over-50s-uk",
+   "source": "/blog/life-insurance-over-50s-uk{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-how-much-life-insurance-do-i-need-uk",
+   "source": "/blog-how-much-life-insurance-do-i-need-uk{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-how-much-life-insurance-do-i-need-uk.html",
+   "source": "/blog-how-much-life-insurance-do-i-need-uk.html{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/:cat/how-much-life-insurance-do-i-need-uk",
+   "source": "/blog/:cat/how-much-life-insurance-do-i-need-uk{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/how-much-life-insurance-do-i-need-uk",
+   "source": "/blog/how-much-life-insurance-do-i-need-uk{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-critical-illness-cover-mental-health-uk",
+   "source": "/blog-critical-illness-cover-mental-health-uk{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-critical-illness-cover-mental-health-uk.html",
+   "source": "/blog-critical-illness-cover-mental-health-uk.html{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/:cat/critical-illness-cover-mental-health-uk",
+   "source": "/blog/:cat/critical-illness-cover-mental-health-uk{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/critical-illness-cover-mental-health-uk",
+   "source": "/blog/critical-illness-cover-mental-health-uk{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-income-protection-vs-life-insurance-whats-the-difference",
+   "source": "/blog-income-protection-vs-life-insurance-whats-the-difference{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-income-protection-vs-life-insurance-whats-the-difference.html",
+   "source": "/blog-income-protection-vs-life-insurance-whats-the-difference.html{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/:cat/income-protection-vs-life-insurance-whats-the-difference",
+   "source": "/blog/:cat/income-protection-vs-life-insurance-whats-the-difference{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/income-protection-vs-life-insurance-whats-the-difference",
+   "source": "/blog/income-protection-vs-life-insurance-whats-the-difference{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-level-term-life-insurance-uk-what-it-is-and-how-it-works",
+   "source": "/blog-level-term-life-insurance-uk-what-it-is-and-how-it-works{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-level-term-life-insurance-uk-what-it-is-and-how-it-works.html",
+   "source": "/blog-level-term-life-insurance-uk-what-it-is-and-how-it-works.html{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/:cat/level-term-life-insurance-uk-what-it-is-and-how-it-works",
+   "source": "/blog/:cat/level-term-life-insurance-uk-what-it-is-and-how-it-works{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/level-term-life-insurance-uk-what-it-is-and-how-it-works",
+   "source": "/blog/level-term-life-insurance-uk-what-it-is-and-how-it-works{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-critical-illness-cover-worth-it",
+   "source": "/blog-critical-illness-cover-worth-it{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-critical-illness-cover-worth-it.html",
+   "source": "/blog-critical-illness-cover-worth-it.html{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/:cat/critical-illness-cover-worth-it",
+   "source": "/blog/:cat/critical-illness-cover-worth-it{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/critical-illness-cover-worth-it",
+   "source": "/blog/critical-illness-cover-worth-it{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-income-protection-insurance-for-self-employed-uk-how-it-works",
+   "source": "/blog-income-protection-insurance-for-self-employed-uk-how-it-works{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-income-protection-insurance-for-self-employed-uk-how-it-works.html",
+   "source": "/blog-income-protection-insurance-for-self-employed-uk-how-it-works.html{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/:cat/income-protection-insurance-for-self-employed-uk-how-it-works",
+   "source": "/blog/:cat/income-protection-insurance-for-self-employed-uk-how-it-works{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/income-protection-insurance-for-self-employed-uk-how-it-works",
+   "source": "/blog/income-protection-insurance-for-self-employed-uk-how-it-works{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-life-insurance-after-divorce-in-the-uk-what-happens-to-existing-policies",
+   "source": "/blog-life-insurance-after-divorce-in-the-uk-what-happens-to-existing-policies{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-life-insurance-after-divorce-in-the-uk-what-happens-to-existing-policies.html",
+   "source": "/blog-life-insurance-after-divorce-in-the-uk-what-happens-to-existing-policies.html{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/:cat/life-insurance-after-divorce-in-the-uk-what-happens-to-existing-policies",
+   "source": "/blog/:cat/life-insurance-after-divorce-in-the-uk-what-happens-to-existing-policies{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/life-insurance-after-divorce-in-the-uk-what-happens-to-existing-policies",
+   "source": "/blog/life-insurance-after-divorce-in-the-uk-what-happens-to-existing-policies{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-what-is-family-income-benefit-life-insurance-in-the-uk",
+   "source": "/blog-what-is-family-income-benefit-life-insurance-in-the-uk{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-what-is-family-income-benefit-life-insurance-in-the-uk.html",
+   "source": "/blog-what-is-family-income-benefit-life-insurance-in-the-uk.html{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/:cat/what-is-family-income-benefit-life-insurance-in-the-uk",
+   "source": "/blog/:cat/what-is-family-income-benefit-life-insurance-in-the-uk{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/what-is-family-income-benefit-life-insurance-in-the-uk",
+   "source": "/blog/what-is-family-income-benefit-life-insurance-in-the-uk{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-writing-life-insurance-in-trust-uk-how-the-process-works",
+   "source": "/blog-writing-life-insurance-in-trust-uk-how-the-process-works{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-writing-life-insurance-in-trust-uk-how-the-process-works.html",
+   "source": "/blog-writing-life-insurance-in-trust-uk-how-the-process-works.html{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/:cat/writing-life-insurance-in-trust-uk-how-the-process-works",
+   "source": "/blog/:cat/writing-life-insurance-in-trust-uk-how-the-process-works{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/writing-life-insurance-in-trust-uk-how-the-process-works",
+   "source": "/blog/writing-life-insurance-in-trust-uk-how-the-process-works{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-life-insurance-for-over-50s-uk-what-types-of-cover-are-available",
+   "source": "/blog-life-insurance-for-over-50s-uk-what-types-of-cover-are-available{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-life-insurance-for-over-50s-uk-what-types-of-cover-are-available.html",
+   "source": "/blog-life-insurance-for-over-50s-uk-what-types-of-cover-are-available.html{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/:cat/life-insurance-for-over-50s-uk-what-types-of-cover-are-available",
+   "source": "/blog/:cat/life-insurance-for-over-50s-uk-what-types-of-cover-are-available{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/life-insurance-for-over-50s-uk-what-types-of-cover-are-available",
+   "source": "/blog/life-insurance-for-over-50s-uk-what-types-of-cover-are-available{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-life-insurance-with-pre-existing-conditions-uk-how-underwriting-works",
+   "source": "/blog-life-insurance-with-pre-existing-conditions-uk-how-underwriting-works{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-life-insurance-with-pre-existing-conditions-uk-how-underwriting-works.html",
+   "source": "/blog-life-insurance-with-pre-existing-conditions-uk-how-underwriting-works.html{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/:cat/life-insurance-with-pre-existing-conditions-uk-how-underwriting-works",
+   "source": "/blog/:cat/life-insurance-with-pre-existing-conditions-uk-how-underwriting-works{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/life-insurance-with-pre-existing-conditions-uk-how-underwriting-works",
+   "source": "/blog/life-insurance-with-pre-existing-conditions-uk-how-underwriting-works{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-life-insurance-for-the-self-employed-uk-what-you-need-to-know",
+   "source": "/blog-life-insurance-for-the-self-employed-uk-what-you-need-to-know{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-life-insurance-for-the-self-employed-uk-what-you-need-to-know.html",
+   "source": "/blog-life-insurance-for-the-self-employed-uk-what-you-need-to-know.html{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/:cat/life-insurance-for-the-self-employed-uk-what-you-need-to-know",
+   "source": "/blog/:cat/life-insurance-for-the-self-employed-uk-what-you-need-to-know{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/life-insurance-for-the-self-employed-uk-what-you-need-to-know",
+   "source": "/blog/life-insurance-for-the-self-employed-uk-what-you-need-to-know{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-life-insurance-claims-uk-what-happens-how-they-work-topquote",
+   "source": "/blog-life-insurance-claims-uk-what-happens-how-they-work-topquote{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-life-insurance-claims-uk-what-happens-how-they-work-topquote.html",
+   "source": "/blog-life-insurance-claims-uk-what-happens-how-they-work-topquote.html{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/:cat/life-insurance-claims-uk-what-happens-how-they-work-topquote",
+   "source": "/blog/:cat/life-insurance-claims-uk-what-happens-how-they-work-topquote{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/life-insurance-claims-uk-what-happens-how-they-work-topquote",
+   "source": "/blog/life-insurance-claims-uk-what-happens-how-they-work-topquote{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-do-i-need-life-insurance-uk-honest-guide-topquote",
+   "source": "/blog-do-i-need-life-insurance-uk-honest-guide-topquote{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-do-i-need-life-insurance-uk-honest-guide-topquote.html",
+   "source": "/blog-do-i-need-life-insurance-uk-honest-guide-topquote.html{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/:cat/do-i-need-life-insurance-uk-honest-guide-topquote",
+   "source": "/blog/:cat/do-i-need-life-insurance-uk-honest-guide-topquote{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/do-i-need-life-insurance-uk-honest-guide-topquote",
+   "source": "/blog/do-i-need-life-insurance-uk-honest-guide-topquote{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-is-income-protection-insurance-worth-it-uk-topquote",
+   "source": "/blog-is-income-protection-insurance-worth-it-uk-topquote{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-is-income-protection-insurance-worth-it-uk-topquote.html",
+   "source": "/blog-is-income-protection-insurance-worth-it-uk-topquote.html{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/:cat/is-income-protection-insurance-worth-it-uk-topquote",
+   "source": "/blog/:cat/is-income-protection-insurance-worth-it-uk-topquote{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/is-income-protection-insurance-worth-it-uk-topquote",
+   "source": "/blog/is-income-protection-insurance-worth-it-uk-topquote{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-life-insurance-for-parents-how-to-protect-your-family",
+   "source": "/blog-life-insurance-for-parents-how-to-protect-your-family{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-life-insurance-for-parents-how-to-protect-your-family.html",
+   "source": "/blog-life-insurance-for-parents-how-to-protect-your-family.html{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/:cat/life-insurance-for-parents-how-to-protect-your-family",
+   "source": "/blog/:cat/life-insurance-for-parents-how-to-protect-your-family{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/life-insurance-for-parents-how-to-protect-your-family",
+   "source": "/blog/life-insurance-for-parents-how-to-protect-your-family{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-what-is-critical-illness-cover-a-plain-english-uk-guide",
+   "source": "/blog-what-is-critical-illness-cover-a-plain-english-uk-guide{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-what-is-critical-illness-cover-a-plain-english-uk-guide.html",
+   "source": "/blog-what-is-critical-illness-cover-a-plain-english-uk-guide.html{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/:cat/what-is-critical-illness-cover-a-plain-english-uk-guide",
+   "source": "/blog/:cat/what-is-critical-illness-cover-a-plain-english-uk-guide{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/what-is-critical-illness-cover-a-plain-english-uk-guide",
+   "source": "/blog/what-is-critical-illness-cover-a-plain-english-uk-guide{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-income-protection-for-the-self-employed-uk-a-complete-guide",
+   "source": "/blog-income-protection-for-the-self-employed-uk-a-complete-guide{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-income-protection-for-the-self-employed-uk-a-complete-guide.html",
+   "source": "/blog-income-protection-for-the-self-employed-uk-a-complete-guide.html{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/:cat/income-protection-for-the-self-employed-uk-a-complete-guide",
+   "source": "/blog/:cat/income-protection-for-the-self-employed-uk-a-complete-guide{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/income-protection-for-the-self-employed-uk-a-complete-guide",
+   "source": "/blog/income-protection-for-the-self-employed-uk-a-complete-guide{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-term-vs-decreasing-term-life-insurance-which-is-right-for-you",
+   "source": "/blog-term-vs-decreasing-term-life-insurance-which-is-right-for-you{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-term-vs-decreasing-term-life-insurance-which-is-right-for-you.html",
+   "source": "/blog-term-vs-decreasing-term-life-insurance-which-is-right-for-you.html{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/:cat/term-vs-decreasing-term-life-insurance-which-is-right-for-you",
+   "source": "/blog/:cat/term-vs-decreasing-term-life-insurance-which-is-right-for-you{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/term-vs-decreasing-term-life-insurance-which-is-right-for-you",
+   "source": "/blog/term-vs-decreasing-term-life-insurance-which-is-right-for-you{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-life-insurance-with-pre-existing-medical-conditions-uk",
+   "source": "/blog-life-insurance-with-pre-existing-medical-conditions-uk{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-life-insurance-with-pre-existing-medical-conditions-uk.html",
+   "source": "/blog-life-insurance-with-pre-existing-medical-conditions-uk.html{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/:cat/life-insurance-with-pre-existing-medical-conditions-uk",
+   "source": "/blog/:cat/life-insurance-with-pre-existing-medical-conditions-uk{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/life-insurance-with-pre-existing-medical-conditions-uk",
+   "source": "/blog/life-insurance-with-pre-existing-medical-conditions-uk{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-average-life-insurance-cost-uk-2026-what-youll-actually-pay",
+   "source": "/blog-average-life-insurance-cost-uk-2026-what-youll-actually-pay{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-average-life-insurance-cost-uk-2026-what-youll-actually-pay.html",
+   "source": "/blog-average-life-insurance-cost-uk-2026-what-youll-actually-pay.html{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/:cat/average-life-insurance-cost-uk-2026-what-youll-actually-pay",
+   "source": "/blog/:cat/average-life-insurance-cost-uk-2026-what-youll-actually-pay{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/average-life-insurance-cost-uk-2026-what-youll-actually-pay",
+   "source": "/blog/average-life-insurance-cost-uk-2026-what-youll-actually-pay{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-buying-life-insurance",
+   "source": "/blog-buying-life-insurance{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-buying-life-insurance.html",
+   "source": "/blog-buying-life-insurance.html{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/:cat/buying-life-insurance",
+   "source": "/blog/:cat/buying-life-insurance{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/buying-life-insurance",
+   "source": "/blog/buying-life-insurance{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-cohabiting-couples-and-life-insurance-uk-what-you-need-to-know",
+   "source": "/blog-cohabiting-couples-and-life-insurance-uk-what-you-need-to-know{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-cohabiting-couples-and-life-insurance-uk-what-you-need-to-know.html",
+   "source": "/blog-cohabiting-couples-and-life-insurance-uk-what-you-need-to-know.html{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/:cat/cohabiting-couples-and-life-insurance-uk-what-you-need-to-know",
+   "source": "/blog/:cat/cohabiting-couples-and-life-insurance-uk-what-you-need-to-know{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/cohabiting-couples-and-life-insurance-uk-what-you-need-to-know",
+   "source": "/blog/cohabiting-couples-and-life-insurance-uk-what-you-need-to-know{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-do-you-need-life-insurance-for-a-mortgage",
+   "source": "/blog-do-you-need-life-insurance-for-a-mortgage{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-do-you-need-life-insurance-for-a-mortgage.html",
+   "source": "/blog-do-you-need-life-insurance-for-a-mortgage.html{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/:cat/do-you-need-life-insurance-for-a-mortgage",
+   "source": "/blog/:cat/do-you-need-life-insurance-for-a-mortgage{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/do-you-need-life-insurance-for-a-mortgage",
+   "source": "/blog/do-you-need-life-insurance-for-a-mortgage{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-family-life-insurance",
+   "source": "/blog-family-life-insurance{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-family-life-insurance.html",
+   "source": "/blog-family-life-insurance.html{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/:cat/family-life-insurance",
+   "source": "/blog/:cat/family-life-insurance{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/family-life-insurance",
+   "source": "/blog/family-life-insurance{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-family-life-insurance-2",
+   "source": "/blog-family-life-insurance-2{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-family-life-insurance-2.html",
+   "source": "/blog-family-life-insurance-2.html{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/:cat/family-life-insurance-2",
+   "source": "/blog/:cat/family-life-insurance-2{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/family-life-insurance-2",
+   "source": "/blog/family-life-insurance-2{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-how-much-life-insurance-do-i-need-a-uk-guide",
+   "source": "/blog-how-much-life-insurance-do-i-need-a-uk-guide{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-how-much-life-insurance-do-i-need-a-uk-guide.html",
+   "source": "/blog-how-much-life-insurance-do-i-need-a-uk-guide.html{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/:cat/how-much-life-insurance-do-i-need-a-uk-guide",
+   "source": "/blog/:cat/how-much-life-insurance-do-i-need-a-uk-guide{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/how-much-life-insurance-do-i-need-a-uk-guide",
+   "source": "/blog/how-much-life-insurance-do-i-need-a-uk-guide{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-income-protection-for-the-self-employed",
+   "source": "/blog-income-protection-for-the-self-employed{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-income-protection-for-the-self-employed.html",
+   "source": "/blog-income-protection-for-the-self-employed.html{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/:cat/income-protection-for-the-self-employed",
+   "source": "/blog/:cat/income-protection-for-the-self-employed{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/income-protection-for-the-self-employed",
+   "source": "/blog/income-protection-for-the-self-employed{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-income-protection-insurance",
+   "source": "/blog-income-protection-insurance{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-income-protection-insurance.html",
+   "source": "/blog-income-protection-insurance.html{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/:cat/income-protection-insurance",
+   "source": "/blog/:cat/income-protection-insurance{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/income-protection-insurance",
+   "source": "/blog/income-protection-insurance{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-is-income-protection-insurance-worth-it",
+   "source": "/blog-is-income-protection-insurance-worth-it{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-is-income-protection-insurance-worth-it.html",
+   "source": "/blog-is-income-protection-insurance-worth-it.html{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/:cat/is-income-protection-insurance-worth-it",
+   "source": "/blog/:cat/is-income-protection-insurance-worth-it{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/is-income-protection-insurance-worth-it",
+   "source": "/blog/is-income-protection-insurance-worth-it{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-joint-life-insurance-vs-single-a-uk-guide",
+   "source": "/blog-joint-life-insurance-vs-single-a-uk-guide{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-joint-life-insurance-vs-single-a-uk-guide.html",
+   "source": "/blog-joint-life-insurance-vs-single-a-uk-guide.html{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/:cat/joint-life-insurance-vs-single-a-uk-guide",
+   "source": "/blog/:cat/joint-life-insurance-vs-single-a-uk-guide{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/joint-life-insurance-vs-single-a-uk-guide",
+   "source": "/blog/joint-life-insurance-vs-single-a-uk-guide{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-life-insurance-after-cancer",
+   "source": "/blog-life-insurance-after-cancer{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-life-insurance-after-cancer.html",
+   "source": "/blog-life-insurance-after-cancer.html{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/:cat/life-insurance-after-cancer",
+   "source": "/blog/:cat/life-insurance-after-cancer{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/life-insurance-after-cancer",
+   "source": "/blog/life-insurance-after-cancer{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-using-life-insurance-for-inheritance-tax-planning-uk",
+   "source": "/blog-using-life-insurance-for-inheritance-tax-planning-uk{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog-using-life-insurance-for-inheritance-tax-planning-uk.html",
+   "source": "/blog-using-life-insurance-for-inheritance-tax-planning-uk.html{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/:cat/using-life-insurance-for-inheritance-tax-planning-uk",
+   "source": "/blog/:cat/using-life-insurance-for-inheritance-tax-planning-uk{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/blog/using-life-insurance-for-inheritance-tax-planning-uk",
+   "source": "/blog/using-life-insurance-for-inheritance-tax-planning-uk{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
   {
-   "source": "/home",
+   "source": "/home{/}?",
    "destination": "/",
    "statusCode": 301
   },
   {
-   "source": "/home-page",
+   "source": "/home-page{/}?",
    "destination": "/",
    "statusCode": 301
   },
   {
-   "source": "/home-2",
+   "source": "/home-2{/}?",
    "destination": "/",
    "statusCode": 301
   },
   {
-   "source": "/about-us",
+   "source": "/about-us{/}?",
    "destination": "/about",
    "statusCode": 301
   },
   {
-   "source": "/contact-us",
+   "source": "/contact-us{/}?",
    "destination": "/contact",
    "statusCode": 301
   },
   {
-   "source": "/locational-page",
+   "source": "/locational-page{/}?",
    "destination": "/find-us",
    "statusCode": 301
   },
   {
-   "source": "/topquote-privacy-policy",
+   "source": "/topquote-privacy-policy{/}?",
    "destination": "/privacy-notice",
    "statusCode": 301
   },
   {
-   "source": "/privacy-policy",
+   "source": "/privacy-policy{/}?",
    "destination": "/privacy-notice",
    "statusCode": 301
   },
   {
-   "source": "/privacy",
+   "source": "/privacy{/}?",
    "destination": "/privacy-notice",
    "statusCode": 301
   },
   {
-   "source": "/critical-illness-cover",
+   "source": "/critical-illness-cover{/}?",
    "destination": "/critical-illness",
    "statusCode": 301
   },
   {
-   "source": "/life-insurance-parents",
+   "source": "/life-insurance-parents{/}?",
    "destination": "/life-insurance-for-parents",
    "statusCode": 301
   },
   {
-   "source": "/life-insurance-mums",
+   "source": "/life-insurance-mums{/}?",
    "destination": "/life-insurance-for-mums",
    "statusCode": 301
   },
   {
-   "source": "/life-insurance-dads",
+   "source": "/life-insurance-dads{/}?",
    "destination": "/life-insurance-for-dads",
    "statusCode": 301
   },
   {
-   "source": "/life-insurance-pregnant",
+   "source": "/life-insurance-pregnant{/}?",
    "destination": "/life-insurance-when-pregnant",
    "statusCode": 301
   },
   {
-   "source": "/life-insurance-divorce",
+   "source": "/life-insurance-divorce{/}?",
    "destination": "/life-insurance-after-divorce",
    "statusCode": 301
   },
   {
-   "source": "/heart-attack-critical-illness-cover",
+   "source": "/heart-attack-critical-illness-cover{/}?",
    "destination": "/critical-illness",
    "statusCode": 301
   },
   {
-   "source": "/life-insurance-medical-conditions",
+   "source": "/life-insurance-medical-conditions{/}?",
    "destination": "/life-insurance",
    "statusCode": 301
   },
   {
-   "source": "/over-50s-life-insurance",
+   "source": "/over-50s-life-insurance{/}?",
    "destination": "/life-insurance",
    "statusCode": 301
   },
   {
-   "source": "/relevant-life-insurance",
+   "source": "/relevant-life-insurance{/}?",
    "destination": "/life-insurance",
    "statusCode": 301
   },
   {
-   "source": "/update-your-details",
+   "source": "/update-your-details{/}?",
    "destination": "/reconnect",
    "statusCode": 301
   },
   {
-   "source": "/home-insurance",
+   "source": "/home-insurance{/}?",
    "destination": "/",
    "statusCode": 301
   },
   {
-   "source": "/kids-pass-terms-and-conditions",
+   "source": "/kids-pass-terms-and-conditions{/}?",
    "destination": "/kids-pass",
    "statusCode": 301
   },
   {
-   "source": "/referral-form",
+   "source": "/referral-form{/}?",
    "destination": "/contact",
    "statusCode": 301
   },
   {
-   "source": "/a-life-of-worry-2",
+   "source": "/a-life-of-worry-2{/}?",
    "destination": "/blog-a-life-of-worry",
    "statusCode": 301
   },
   {
-   "source": "/acceptance",
+   "source": "/acceptance{/}?",
    "destination": "/blog-acceptance",
    "statusCode": 301
   },
   {
-   "source": "/anger",
+   "source": "/anger{/}?",
    "destination": "/blog-anger",
    "statusCode": 301
   },
   {
-   "source": "/bargaining-stage-of-grief",
+   "source": "/bargaining-stage-of-grief{/}?",
    "destination": "/blog-bargaining-stage-of-grief",
    "statusCode": 301
   },
   {
-   "source": "/denial",
+   "source": "/denial{/}?",
    "destination": "/blog-denial",
    "statusCode": 301
   },
   {
-   "source": "/depression",
+   "source": "/depression{/}?",
    "destination": "/blog-depression",
    "statusCode": 301
   },
   {
-   "source": "/do-you-think-you-overthink",
+   "source": "/do-you-think-you-overthink{/}?",
    "destination": "/blog-do-you-think-you-overthink",
    "statusCode": 301
   },
   {
-   "source": "/expecting-expectations",
+   "source": "/expecting-expectations{/}?",
    "destination": "/blog-expecting-expectations",
    "statusCode": 301
   },
   {
-   "source": "/family-always-comes-first",
+   "source": "/family-always-comes-first{/}?",
    "destination": "/blog-family-always-comes-first",
    "statusCode": 301
   },
   {
-   "source": "/holidays-are-coming",
+   "source": "/holidays-are-coming{/}?",
    "destination": "/blog-holidays-are-coming",
    "statusCode": 301
   },
   {
-   "source": "/janes-experience-unexpected-death",
+   "source": "/janes-experience-unexpected-death{/}?",
    "destination": "/blog-janes-experience-unexpected-death",
    "statusCode": 301
   },
   {
-   "source": "/mindfulness-mumbo-jumbo",
+   "source": "/mindfulness-mumbo-jumbo{/}?",
    "destination": "/blog-mindfulness-mumbo-jumbo",
    "statusCode": 301
   },
   {
-   "source": "/self-esteem",
+   "source": "/self-esteem{/}?",
    "destination": "/blog-self-esteem",
    "statusCode": 301
   },
   {
-   "source": "/six-weeks-of-sun-sea-sand-or-stress",
+   "source": "/six-weeks-of-sun-sea-sand-or-stress{/}?",
    "destination": "/blog-six-weeks-of-sun-sea-sand-or-stress",
    "statusCode": 301
   },
   {
-   "source": "/stress",
+   "source": "/stress{/}?",
    "destination": "/blog-stress",
    "statusCode": 301
   },
   {
-   "source": "/this-doesnt-happen-to-me",
+   "source": "/this-doesnt-happen-to-me{/}?",
    "destination": "/blog-this-doesnt-happen-to-me",
    "statusCode": 301
   },
   {
-   "source": "/charity/2015-christmas-toy-drop",
+   "source": "/charity/2015-christmas-toy-drop{/}?",
    "destination": "/blog-2015-christmas-toy-drop",
    "statusCode": 301
   },
   {
-   "source": "/charity/charity-update",
+   "source": "/charity/charity-update{/}?",
    "destination": "/blog-charity-update",
    "statusCode": 301
   },
   {
-   "source": "/charity/charity-video",
+   "source": "/charity/charity-video{/}?",
    "destination": "/blog-charity-video",
    "statusCode": 301
   },
   {
-   "source": "/charity/easter-2016",
+   "source": "/charity/easter-2016{/}?",
    "destination": "/blog-easter-2016",
    "statusCode": 301
   },
   {
-   "source": "/charity/francis-house-childrens-hospice",
+   "source": "/charity/francis-house-childrens-hospice{/}?",
    "destination": "/blog-francis-house-childrens-hospice",
    "statusCode": 301
   },
   {
-   "source": "/charity/marathon-des-sables-2012",
+   "source": "/charity/marathon-des-sables-2012{/}?",
    "destination": "/blog-marathon-des-sables-2012",
    "statusCode": 301
   },
   {
-   "source": "/charity/toy-drop",
+   "source": "/charity/toy-drop{/}?",
    "destination": "/blog-toy-drop",
    "statusCode": 301
   },
   {
-   "source": "/charity/wood-street-mission",
+   "source": "/charity/wood-street-mission{/}?",
    "destination": "/blog-wood-street-mission",
    "statusCode": 301
   },
   {
-   "source": "/donations/francis-house-childrens-hospice",
+   "source": "/donations/francis-house-childrens-hospice{/}?",
    "destination": "/blog-francis-house-childrens-hospice",
    "statusCode": 301
   },
   {
-   "source": "/donations/francis-house-childrens-hospice-2",
+   "source": "/donations/francis-house-childrens-hospice-2{/}?",
    "destination": "/blog-francis-house-childrens-hospice",
    "statusCode": 301
   },
   {
-   "source": "/donations/wood-st-mission",
+   "source": "/donations/wood-st-mission{/}?",
    "destination": "/blog-wood-street-mission",
    "statusCode": 301
   },
   {
-   "source": "/to-blog-or-not-to-blog-that-is-the-question",
+   "source": "/to-blog-or-not-to-blog-that-is-the-question{/}?",
    "destination": "/blog",
    "statusCode": 301
   },
   {
-   "source": "/news",
+   "source": "/news{/}?",
    "destination": "/blog",
    "statusCode": 301
   },
   {
-   "source": "/charity",
+   "source": "/charity{/}?",
    "destination": "/blog",
    "statusCode": 301
   },
   {
-   "source": "/awards",
+   "source": "/awards{/}?",
    "destination": "/about",
    "statusCode": 301
   },
   {
-   "source": "/life-assurance",
+   "source": "/life-assurance{/}?",
    "destination": "/life-insurance",
    "statusCode": 301
   },
   {
-   "source": "/services/life-assurance",
+   "source": "/services/life-assurance{/}?",
    "destination": "/life-insurance",
    "statusCode": 301
   },
   {
-   "source": "/services/critical-illness",
+   "source": "/services/critical-illness{/}?",
    "destination": "/critical-illness",
    "statusCode": 301
   },
   {
-   "source": "/services/income-insurance",
+   "source": "/services/income-insurance{/}?",
    "destination": "/income-protection",
    "statusCode": 301
   },
   {
-   "source": "/services/home-insurance",
+   "source": "/services/home-insurance{/}?",
    "destination": "/",
    "statusCode": 301
   },
   {
-   "source": "/terms-and-conditions",
+   "source": "/terms-and-conditions{/}?",
    "destination": "/terms-of-use",
    "statusCode": 301
   },
   {
-   "source": "/terms-conditions",
+   "source": "/terms-conditions{/}?",
    "destination": "/terms-of-use",
    "statusCode": 301
   },
   {
-   "source": "/wp/cookie-policy",
+   "source": "/wp/cookie-policy{/}?",
    "destination": "/cookie-policy",
    "statusCode": 301
   },
   {
-   "source": "/sitemap",
+   "source": "/sitemap{/}?",
    "destination": "/",
    "statusCode": 301
   },
   {
-   "source": "/useful-links",
+   "source": "/useful-links{/}?",
    "destination": "/",
    "statusCode": 301
   },
   {
-   "source": "/skyman",
+   "source": "/skyman{/}?",
    "destination": "/",
    "statusCode": 301
   },
   {
-   "source": "/enquiry/1",
+   "source": "/enquiry/1{/}?",
    "destination": "/contact",
    "statusCode": 301
   },
   {
-   "source": "/enquiry/5",
+   "source": "/enquiry/5{/}?",
    "destination": "/contact",
    "statusCode": 301
   },
   {
-   "source": "/Referral-scheme/1.html",
+   "source": "/Referral-scheme/1.html{/}?",
    "destination": "/contact",
    "statusCode": 301
   },
   {
-   "source": "/index.html",
+   "source": "/index.html{/}?",
    "destination": "/",
    "statusCode": 301
   },
   {
-   "source": "/home.html",
+   "source": "/home.html{/}?",
    "destination": "/",
    "statusCode": 301
   },
   {
-   "source": "/building.html",
+   "source": "/building.html{/}?",
    "destination": "/",
    "statusCode": 301
   },
   {
-   "source": "/notice.html",
+   "source": "/notice.html{/}?",
    "destination": "/",
    "statusCode": 301
   },
   {
-   "source": "/products.html",
+   "source": "/products.html{/}?",
    "destination": "/",
    "statusCode": 301
   },
   {
-   "source": "/careers.html",
+   "source": "/careers.html{/}?",
    "destination": "/careers",
    "statusCode": 301
   },
   {
-   "source": "/contact.html",
+   "source": "/contact.html{/}?",
    "destination": "/contact",
    "statusCode": 301
   },
   {
-   "source": "/quote.html",
+   "source": "/quote.html{/}?",
    "destination": "/get-a-quote",
    "statusCode": 301
   },
   {
-   "source": "/life.html",
+   "source": "/life.html{/}?",
    "destination": "/life-insurance",
    "statusCode": 301
   },
   {
-   "source": "/lifeAssurance.html",
+   "source": "/lifeAssurance.html{/}?",
    "destination": "/life-insurance",
    "statusCode": 301
   },
   {
-   "source": "/level.html",
+   "source": "/level.html{/}?",
    "destination": "/life-insurance",
    "statusCode": 301
   },
   {
-   "source": "/decreasing.html",
+   "source": "/decreasing.html{/}?",
    "destination": "/life-insurance",
    "statusCode": 301
   },
   {
-   "source": "/decreasingFaq.html",
+   "source": "/decreasingFaq.html{/}?",
    "destination": "/life-insurance",
    "statusCode": 301
   },
   {
-   "source": "/decreasingMore.html",
+   "source": "/decreasingMore.html{/}?",
    "destination": "/life-insurance",
    "statusCode": 301
   },
   {
-   "source": "/mortgage.html",
+   "source": "/mortgage.html{/}?",
    "destination": "/life-insurance",
    "statusCode": 301
   },
@@ -1552,2977 +1551,2977 @@
    "statusCode": 301
   },
   {
-   "source": "/About%20Us.dc.html",
+   "source": "/About%20Us.dc.html{/}?",
    "destination": "/about",
    "statusCode": 301
   },
   {
-   "source": "/About Us.dc.html",
+   "source": "/About Us.dc.html{/}?",
    "destination": "/about",
    "statusCode": 301
   },
   {
-   "source": "/Blog.dc.html",
+   "source": "/Blog.dc.html{/}?",
    "destination": "/blog",
    "statusCode": 301
   },
   {
-   "source": "/Careers.dc.html",
+   "source": "/Careers.dc.html{/}?",
    "destination": "/careers",
    "statusCode": 301
   },
   {
-   "source": "/Consumer%20Duty.dc.html",
+   "source": "/Consumer%20Duty.dc.html{/}?",
    "destination": "/consumer-duty",
    "statusCode": 301
   },
   {
-   "source": "/Consumer Duty.dc.html",
+   "source": "/Consumer Duty.dc.html{/}?",
    "destination": "/consumer-duty",
    "statusCode": 301
   },
   {
-   "source": "/Contact.dc.html",
+   "source": "/Contact.dc.html{/}?",
    "destination": "/contact",
    "statusCode": 301
   },
   {
-   "source": "/Contact%20Altrincham.dc.html",
+   "source": "/Contact%20Altrincham.dc.html{/}?",
    "destination": "/contact-altrincham",
    "statusCode": 301
   },
   {
-   "source": "/Contact Altrincham.dc.html",
+   "source": "/Contact Altrincham.dc.html{/}?",
    "destination": "/contact-altrincham",
    "statusCode": 301
   },
   {
-   "source": "/Contact%20Cheshire%20East.dc.html",
+   "source": "/Contact%20Cheshire%20East.dc.html{/}?",
    "destination": "/contact-cheshire-east",
    "statusCode": 301
   },
   {
-   "source": "/Contact Cheshire East.dc.html",
+   "source": "/Contact Cheshire East.dc.html{/}?",
    "destination": "/contact-cheshire-east",
    "statusCode": 301
   },
   {
-   "source": "/Contact%20Knutsford.dc.html",
+   "source": "/Contact%20Knutsford.dc.html{/}?",
    "destination": "/contact-knutsford",
    "statusCode": 301
   },
   {
-   "source": "/Contact Knutsford.dc.html",
+   "source": "/Contact Knutsford.dc.html{/}?",
    "destination": "/contact-knutsford",
    "statusCode": 301
   },
   {
-   "source": "/Contact%20Macclesfield.dc.html",
+   "source": "/Contact%20Macclesfield.dc.html{/}?",
    "destination": "/contact-macclesfield",
    "statusCode": 301
   },
   {
-   "source": "/Contact Macclesfield.dc.html",
+   "source": "/Contact Macclesfield.dc.html{/}?",
    "destination": "/contact-macclesfield",
    "statusCode": 301
   },
   {
-   "source": "/Contact%20Manchester.dc.html",
+   "source": "/Contact%20Manchester.dc.html{/}?",
    "destination": "/contact-manchester",
    "statusCode": 301
   },
   {
-   "source": "/Contact Manchester.dc.html",
+   "source": "/Contact Manchester.dc.html{/}?",
    "destination": "/contact-manchester",
    "statusCode": 301
   },
   {
-   "source": "/Contact%20Salford.dc.html",
+   "source": "/Contact%20Salford.dc.html{/}?",
    "destination": "/contact-salford",
    "statusCode": 301
   },
   {
-   "source": "/Contact Salford.dc.html",
+   "source": "/Contact Salford.dc.html{/}?",
    "destination": "/contact-salford",
    "statusCode": 301
   },
   {
-   "source": "/Contact%20Stockport.dc.html",
+   "source": "/Contact%20Stockport.dc.html{/}?",
    "destination": "/contact-stockport",
    "statusCode": 301
   },
   {
-   "source": "/Contact Stockport.dc.html",
+   "source": "/Contact Stockport.dc.html{/}?",
    "destination": "/contact-stockport",
    "statusCode": 301
   },
   {
-   "source": "/Contact%20Wilmslow.dc.html",
+   "source": "/Contact%20Wilmslow.dc.html{/}?",
    "destination": "/contact-wilmslow",
    "statusCode": 301
   },
   {
-   "source": "/Contact Wilmslow.dc.html",
+   "source": "/Contact Wilmslow.dc.html{/}?",
    "destination": "/contact-wilmslow",
    "statusCode": 301
   },
   {
-   "source": "/Critical%20Illness.dc.html",
+   "source": "/Critical%20Illness.dc.html{/}?",
    "destination": "/critical-illness",
    "statusCode": 301
   },
   {
-   "source": "/Critical Illness.dc.html",
+   "source": "/Critical Illness.dc.html{/}?",
    "destination": "/critical-illness",
    "statusCode": 301
   },
   {
-   "source": "/Family%20Life%20Insurance.dc.html",
+   "source": "/Family%20Life%20Insurance.dc.html{/}?",
    "destination": "/family-life-insurance",
    "statusCode": 301
   },
   {
-   "source": "/Family Life Insurance.dc.html",
+   "source": "/Family Life Insurance.dc.html{/}?",
    "destination": "/family-life-insurance",
    "statusCode": 301
   },
   {
-   "source": "/Find%20Us.dc.html",
+   "source": "/Find%20Us.dc.html{/}?",
    "destination": "/find-us",
    "statusCode": 301
   },
   {
-   "source": "/Find Us.dc.html",
+   "source": "/Find Us.dc.html{/}?",
    "destination": "/find-us",
    "statusCode": 301
   },
   {
-   "source": "/Get%20a%20Quote.dc.html",
+   "source": "/Get%20a%20Quote.dc.html{/}?",
    "destination": "/get-a-quote",
    "statusCode": 301
   },
   {
-   "source": "/Get a Quote.dc.html",
+   "source": "/Get a Quote.dc.html{/}?",
    "destination": "/get-a-quote",
    "statusCode": 301
   },
   {
-   "source": "/Income%20Protection.dc.html",
+   "source": "/Income%20Protection.dc.html{/}?",
    "destination": "/income-protection",
    "statusCode": 301
   },
   {
-   "source": "/Income Protection.dc.html",
+   "source": "/Income Protection.dc.html{/}?",
    "destination": "/income-protection",
    "statusCode": 301
   },
   {
-   "source": "/Life%20Insurance.dc.html",
+   "source": "/Life%20Insurance.dc.html{/}?",
    "destination": "/life-insurance",
    "statusCode": 301
   },
   {
-   "source": "/Life Insurance.dc.html",
+   "source": "/Life Insurance.dc.html{/}?",
    "destination": "/life-insurance",
    "statusCode": 301
   },
   {
-   "source": "/Life%20Insurance%20After%20Divorce.dc.html",
+   "source": "/Life%20Insurance%20After%20Divorce.dc.html{/}?",
    "destination": "/life-insurance-after-divorce",
    "statusCode": 301
   },
   {
-   "source": "/Life Insurance After Divorce.dc.html",
+   "source": "/Life Insurance After Divorce.dc.html{/}?",
    "destination": "/life-insurance-after-divorce",
    "statusCode": 301
   },
   {
-   "source": "/Life%20Insurance%20When%20Pregnant.dc.html",
+   "source": "/Life%20Insurance%20When%20Pregnant.dc.html{/}?",
    "destination": "/life-insurance-when-pregnant",
    "statusCode": 301
   },
   {
-   "source": "/Life Insurance When Pregnant.dc.html",
+   "source": "/Life Insurance When Pregnant.dc.html{/}?",
    "destination": "/life-insurance-when-pregnant",
    "statusCode": 301
   },
   {
-   "source": "/Life%20Insurance%20for%20Dads.dc.html",
+   "source": "/Life%20Insurance%20for%20Dads.dc.html{/}?",
    "destination": "/life-insurance-for-dads",
    "statusCode": 301
   },
   {
-   "source": "/Life Insurance for Dads.dc.html",
+   "source": "/Life Insurance for Dads.dc.html{/}?",
    "destination": "/life-insurance-for-dads",
    "statusCode": 301
   },
   {
-   "source": "/Life%20Insurance%20for%20Mums.dc.html",
+   "source": "/Life%20Insurance%20for%20Mums.dc.html{/}?",
    "destination": "/life-insurance-for-mums",
    "statusCode": 301
   },
   {
-   "source": "/Life Insurance for Mums.dc.html",
+   "source": "/Life Insurance for Mums.dc.html{/}?",
    "destination": "/life-insurance-for-mums",
    "statusCode": 301
   },
   {
-   "source": "/Life%20Insurance%20for%20Parents.dc.html",
+   "source": "/Life%20Insurance%20for%20Parents.dc.html{/}?",
    "destination": "/life-insurance-for-parents",
    "statusCode": 301
   },
   {
-   "source": "/Life Insurance for Parents.dc.html",
+   "source": "/Life Insurance for Parents.dc.html{/}?",
    "destination": "/life-insurance-for-parents",
    "statusCode": 301
   },
   {
-   "source": "/Reconnect.dc.html",
+   "source": "/Reconnect.dc.html{/}?",
    "destination": "/reconnect",
    "statusCode": 301
   },
   {
-   "source": "/Accessibility%20Statement.html",
+   "source": "/Accessibility%20Statement.html{/}?",
    "destination": "/accessibility-statement",
    "statusCode": 301
   },
   {
-   "source": "/Accessibility Statement.html",
+   "source": "/Accessibility Statement.html{/}?",
    "destination": "/accessibility-statement",
    "statusCode": 301
   },
   {
-   "source": "/Complaints.html",
+   "source": "/Complaints.html{/}?",
    "destination": "/complaints",
    "statusCode": 301
   },
   {
-   "source": "/Cookie%20Policy.html",
+   "source": "/Cookie%20Policy.html{/}?",
    "destination": "/cookie-policy",
    "statusCode": 301
   },
   {
-   "source": "/Cookie Policy.html",
+   "source": "/Cookie Policy.html{/}?",
    "destination": "/cookie-policy",
    "statusCode": 301
   },
   {
-   "source": "/Privacy%20Notice.html",
+   "source": "/Privacy%20Notice.html{/}?",
    "destination": "/privacy-notice",
    "statusCode": 301
   },
   {
-   "source": "/Privacy Notice.html",
+   "source": "/Privacy Notice.html{/}?",
    "destination": "/privacy-notice",
    "statusCode": 301
   },
   {
-   "source": "/Terms%20of%20Use.html",
+   "source": "/Terms%20of%20Use.html{/}?",
    "destination": "/terms-of-use",
    "statusCode": 301
   },
   {
-   "source": "/Terms of Use.html",
+   "source": "/Terms of Use.html{/}?",
    "destination": "/terms-of-use",
    "statusCode": 301
   },
   {
-   "source": "/kids-pass.html",
+   "source": "/kids-pass.html{/}?",
    "destination": "/kids-pass",
    "statusCode": 301
   },
   {
-   "source": "/Home%20Page.dc.html",
+   "source": "/Home%20Page.dc.html{/}?",
    "destination": "/",
    "statusCode": 301
   },
   {
-   "source": "/Home Page.dc.html",
+   "source": "/Home Page.dc.html{/}?",
    "destination": "/",
    "statusCode": 301
   },
   {
-   "source": "/(blog-[^/.]+)\\.html",
+   "source": "/(blog-[^/.]+)\\.html{/}?",
    "destination": "/$1",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/10-achievable-new-years-resolutions-for-a-healthier-and-happier-2024",
+   "source": "/blog/:cat/10-achievable-new-years-resolutions-for-a-healthier-and-happier-2024{/}?",
    "destination": "/blog-10-achievable-new-years-resolutions-for-a-healthier-and-happier-2024",
    "statusCode": 301
   },
   {
-   "source": "/blog/10-achievable-new-years-resolutions-for-a-healthier-and-happier-2024",
+   "source": "/blog/10-achievable-new-years-resolutions-for-a-healthier-and-happier-2024{/}?",
    "destination": "/blog-10-achievable-new-years-resolutions-for-a-healthier-and-happier-2024",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/10-delightful-christmas-activities-you-can-do-all-december-long",
+   "source": "/blog/:cat/10-delightful-christmas-activities-you-can-do-all-december-long{/}?",
    "destination": "/blog-10-delightful-christmas-activities-you-can-do-all-december-long",
    "statusCode": 301
   },
   {
-   "source": "/blog/10-delightful-christmas-activities-you-can-do-all-december-long",
+   "source": "/blog/10-delightful-christmas-activities-you-can-do-all-december-long{/}?",
    "destination": "/blog-10-delightful-christmas-activities-you-can-do-all-december-long",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/10-organisation-hacks-to-declutter-your-home",
+   "source": "/blog/:cat/10-organisation-hacks-to-declutter-your-home{/}?",
    "destination": "/blog-10-organisation-hacks-to-declutter-your-home",
    "statusCode": 301
   },
   {
-   "source": "/blog/10-organisation-hacks-to-declutter-your-home",
+   "source": "/blog/10-organisation-hacks-to-declutter-your-home{/}?",
    "destination": "/blog-10-organisation-hacks-to-declutter-your-home",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/2015-christmas-toy-drop",
+   "source": "/blog/:cat/2015-christmas-toy-drop{/}?",
    "destination": "/blog-2015-christmas-toy-drop",
    "statusCode": 301
   },
   {
-   "source": "/blog/2015-christmas-toy-drop",
+   "source": "/blog/2015-christmas-toy-drop{/}?",
    "destination": "/blog-2015-christmas-toy-drop",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/2015-donations",
+   "source": "/blog/:cat/2015-donations{/}?",
    "destination": "/blog-2015-donations",
    "statusCode": 301
   },
   {
-   "source": "/blog/2015-donations",
+   "source": "/blog/2015-donations{/}?",
    "destination": "/blog-2015-donations",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/3-strategies-to-help-you-prioritise-your-monthly-outgoings",
+   "source": "/blog/:cat/3-strategies-to-help-you-prioritise-your-monthly-outgoings{/}?",
    "destination": "/blog-3-strategies-to-help-you-prioritise-your-monthly-outgoings",
    "statusCode": 301
   },
   {
-   "source": "/blog/3-strategies-to-help-you-prioritise-your-monthly-outgoings",
+   "source": "/blog/3-strategies-to-help-you-prioritise-your-monthly-outgoings{/}?",
    "destination": "/blog-3-strategies-to-help-you-prioritise-your-monthly-outgoings",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/3-ways-to-prepare-for-extreme-weather-this-winter",
+   "source": "/blog/:cat/3-ways-to-prepare-for-extreme-weather-this-winter{/}?",
    "destination": "/blog-3-ways-to-prepare-for-extreme-weather-this-winter",
    "statusCode": 301
   },
   {
-   "source": "/blog/3-ways-to-prepare-for-extreme-weather-this-winter",
+   "source": "/blog/3-ways-to-prepare-for-extreme-weather-this-winter{/}?",
    "destination": "/blog-3-ways-to-prepare-for-extreme-weather-this-winter",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/5-best-ways-to-stop-smoking",
+   "source": "/blog/:cat/5-best-ways-to-stop-smoking{/}?",
    "destination": "/blog-5-best-ways-to-stop-smoking",
    "statusCode": 301
   },
   {
-   "source": "/blog/5-best-ways-to-stop-smoking",
+   "source": "/blog/5-best-ways-to-stop-smoking{/}?",
    "destination": "/blog-5-best-ways-to-stop-smoking",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/5-conversations-every-couple-should-have-about-their-future",
+   "source": "/blog/:cat/5-conversations-every-couple-should-have-about-their-future{/}?",
    "destination": "/blog-5-conversations-every-couple-should-have-about-their-future",
    "statusCode": 301
   },
   {
-   "source": "/blog/5-conversations-every-couple-should-have-about-their-future",
+   "source": "/blog/5-conversations-every-couple-should-have-about-their-future{/}?",
    "destination": "/blog-5-conversations-every-couple-should-have-about-their-future",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/5-exercises-you-can-fit-into-everyday-life",
+   "source": "/blog/:cat/5-exercises-you-can-fit-into-everyday-life{/}?",
    "destination": "/blog-5-exercises-you-can-fit-into-everyday-life",
    "statusCode": 301
   },
   {
-   "source": "/blog/5-exercises-you-can-fit-into-everyday-life",
+   "source": "/blog/5-exercises-you-can-fit-into-everyday-life{/}?",
    "destination": "/blog-5-exercises-you-can-fit-into-everyday-life",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/5-reasons-to-use-an-insurance-broker",
+   "source": "/blog/:cat/5-reasons-to-use-an-insurance-broker{/}?",
    "destination": "/blog-5-reasons-to-use-an-insurance-broker",
    "statusCode": 301
   },
   {
-   "source": "/blog/5-reasons-to-use-an-insurance-broker",
+   "source": "/blog/5-reasons-to-use-an-insurance-broker{/}?",
    "destination": "/blog-5-reasons-to-use-an-insurance-broker",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/5-simple-ways-to-hit-10000-steps-a-day",
+   "source": "/blog/:cat/5-simple-ways-to-hit-10000-steps-a-day{/}?",
    "destination": "/blog-5-simple-ways-to-hit-10000-steps-a-day",
    "statusCode": 301
   },
   {
-   "source": "/blog/5-simple-ways-to-hit-10000-steps-a-day",
+   "source": "/blog/5-simple-ways-to-hit-10000-steps-a-day{/}?",
    "destination": "/blog-5-simple-ways-to-hit-10000-steps-a-day",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/5-ways-to-a-healthy-heart",
+   "source": "/blog/:cat/5-ways-to-a-healthy-heart{/}?",
    "destination": "/blog-5-ways-to-a-healthy-heart",
    "statusCode": 301
   },
   {
-   "source": "/blog/5-ways-to-a-healthy-heart",
+   "source": "/blog/5-ways-to-a-healthy-heart{/}?",
    "destination": "/blog-5-ways-to-a-healthy-heart",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/6-ways-to-stay-healthy-in-the-office",
+   "source": "/blog/:cat/6-ways-to-stay-healthy-in-the-office{/}?",
    "destination": "/blog-6-ways-to-stay-healthy-in-the-office",
    "statusCode": 301
   },
   {
-   "source": "/blog/6-ways-to-stay-healthy-in-the-office",
+   "source": "/blog/6-ways-to-stay-healthy-in-the-office{/}?",
    "destination": "/blog-6-ways-to-stay-healthy-in-the-office",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/8-times-you-should-review-your-life-cover",
+   "source": "/blog/:cat/8-times-you-should-review-your-life-cover{/}?",
    "destination": "/blog-8-times-you-should-review-your-life-cover",
    "statusCode": 301
   },
   {
-   "source": "/blog/8-times-you-should-review-your-life-cover",
+   "source": "/blog/8-times-you-should-review-your-life-cover{/}?",
    "destination": "/blog-8-times-you-should-review-your-life-cover",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/a-guide-to-teaching-your-dog-their-name",
+   "source": "/blog/:cat/a-guide-to-teaching-your-dog-their-name{/}?",
    "destination": "/blog-a-guide-to-teaching-your-dog-their-name",
    "statusCode": 301
   },
   {
-   "source": "/blog/a-guide-to-teaching-your-dog-their-name",
+   "source": "/blog/a-guide-to-teaching-your-dog-their-name{/}?",
    "destination": "/blog-a-guide-to-teaching-your-dog-their-name",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/a-life-of-worry",
+   "source": "/blog/:cat/a-life-of-worry{/}?",
    "destination": "/blog-a-life-of-worry",
    "statusCode": 301
   },
   {
-   "source": "/blog/a-life-of-worry",
+   "source": "/blog/a-life-of-worry{/}?",
    "destination": "/blog-a-life-of-worry",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/acceptance",
+   "source": "/blog/:cat/acceptance{/}?",
    "destination": "/blog-acceptance",
    "statusCode": 301
   },
   {
-   "source": "/blog/acceptance",
+   "source": "/blog/acceptance{/}?",
    "destination": "/blog-acceptance",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/affordable-family-days-out-before-summer-ends",
+   "source": "/blog/:cat/affordable-family-days-out-before-summer-ends{/}?",
    "destination": "/blog-affordable-family-days-out-before-summer-ends",
    "statusCode": 301
   },
   {
-   "source": "/blog/affordable-family-days-out-before-summer-ends",
+   "source": "/blog/affordable-family-days-out-before-summer-ends{/}?",
    "destination": "/blog-affordable-family-days-out-before-summer-ends",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/always-check-your-changes",
+   "source": "/blog/:cat/always-check-your-changes{/}?",
    "destination": "/blog-always-check-your-changes",
    "statusCode": 301
   },
   {
-   "source": "/blog/always-check-your-changes",
+   "source": "/blog/always-check-your-changes{/}?",
    "destination": "/blog-always-check-your-changes",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/amidst-the-current-economic-challenges-the-significance-of-financial-planning-becomes-undeniable-why-is-it-more",
+   "source": "/blog/:cat/amidst-the-current-economic-challenges-the-significance-of-financial-planning-becomes-undeniable-why-is-it-more{/}?",
    "destination": "/blog-amidst-the-current-economic-challenges-the-significance-of-financial-planning-becomes-undeniable-why-is-it-more",
    "statusCode": 301
   },
   {
-   "source": "/blog/amidst-the-current-economic-challenges-the-significance-of-financial-planning-becomes-undeniable-why-is-it-more",
+   "source": "/blog/amidst-the-current-economic-challenges-the-significance-of-financial-planning-becomes-undeniable-why-is-it-more{/}?",
    "destination": "/blog-amidst-the-current-economic-challenges-the-significance-of-financial-planning-becomes-undeniable-why-is-it-more",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/anger",
+   "source": "/blog/:cat/anger{/}?",
    "destination": "/blog-anger",
    "statusCode": 301
   },
   {
-   "source": "/blog/anger",
+   "source": "/blog/anger{/}?",
    "destination": "/blog-anger",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/bargaining-stage-of-grief",
+   "source": "/blog/:cat/bargaining-stage-of-grief{/}?",
    "destination": "/blog-bargaining-stage-of-grief",
    "statusCode": 301
   },
   {
-   "source": "/blog/bargaining-stage-of-grief",
+   "source": "/blog/bargaining-stage-of-grief{/}?",
    "destination": "/blog-bargaining-stage-of-grief",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/beat-the-blues-with-these-winter-lighting-tips",
+   "source": "/blog/:cat/beat-the-blues-with-these-winter-lighting-tips{/}?",
    "destination": "/blog-beat-the-blues-with-these-winter-lighting-tips",
    "statusCode": 301
   },
   {
-   "source": "/blog/beat-the-blues-with-these-winter-lighting-tips",
+   "source": "/blog/beat-the-blues-with-these-winter-lighting-tips{/}?",
    "destination": "/blog-beat-the-blues-with-these-winter-lighting-tips",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/best-winter-breaks",
+   "source": "/blog/:cat/best-winter-breaks{/}?",
    "destination": "/blog-best-winter-breaks",
    "statusCode": 301
   },
   {
-   "source": "/blog/best-winter-breaks",
+   "source": "/blog/best-winter-breaks{/}?",
    "destination": "/blog-best-winter-breaks",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/busting-common-life-insurance-myths",
+   "source": "/blog/:cat/busting-common-life-insurance-myths{/}?",
    "destination": "/blog-busting-common-life-insurance-myths",
    "statusCode": 301
   },
   {
-   "source": "/blog/busting-common-life-insurance-myths",
+   "source": "/blog/busting-common-life-insurance-myths{/}?",
    "destination": "/blog-busting-common-life-insurance-myths",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/cake-bake-dress-down-and-auction",
+   "source": "/blog/:cat/cake-bake-dress-down-and-auction{/}?",
    "destination": "/blog-cake-bake-dress-down-and-auction",
    "statusCode": 301
   },
   {
-   "source": "/blog/cake-bake-dress-down-and-auction",
+   "source": "/blog/cake-bake-dress-down-and-auction{/}?",
    "destination": "/blog-cake-bake-dress-down-and-auction",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/can-you-get-critical-illness-cover-without-life-insurance",
+   "source": "/blog/:cat/can-you-get-critical-illness-cover-without-life-insurance{/}?",
    "destination": "/blog-can-you-get-critical-illness-cover-without-life-insurance",
    "statusCode": 301
   },
   {
-   "source": "/blog/can-you-get-critical-illness-cover-without-life-insurance",
+   "source": "/blog/can-you-get-critical-illness-cover-without-life-insurance{/}?",
    "destination": "/blog-can-you-get-critical-illness-cover-without-life-insurance",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/can-you-have-more-than-one-life-insurance-policy",
+   "source": "/blog/:cat/can-you-have-more-than-one-life-insurance-policy{/}?",
    "destination": "/blog-can-you-have-more-than-one-life-insurance-policy",
    "statusCode": 301
   },
   {
-   "source": "/blog/can-you-have-more-than-one-life-insurance-policy",
+   "source": "/blog/can-you-have-more-than-one-life-insurance-policy{/}?",
    "destination": "/blog-can-you-have-more-than-one-life-insurance-policy",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/charity-update",
+   "source": "/blog/:cat/charity-update{/}?",
    "destination": "/blog-charity-update",
    "statusCode": 301
   },
   {
-   "source": "/blog/charity-update",
+   "source": "/blog/charity-update{/}?",
    "destination": "/blog-charity-update",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/charity-video",
+   "source": "/blog/:cat/charity-video{/}?",
    "destination": "/blog-charity-video",
    "statusCode": 301
   },
   {
-   "source": "/blog/charity-video",
+   "source": "/blog/charity-video{/}?",
    "destination": "/blog-charity-video",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/choosing-the-right-length-of-time-for-your-life-insurance-cover",
+   "source": "/blog/:cat/choosing-the-right-length-of-time-for-your-life-insurance-cover{/}?",
    "destination": "/blog-choosing-the-right-length-of-time-for-your-life-insurance-cover",
    "statusCode": 301
   },
   {
-   "source": "/blog/choosing-the-right-length-of-time-for-your-life-insurance-cover",
+   "source": "/blog/choosing-the-right-length-of-time-for-your-life-insurance-cover{/}?",
    "destination": "/blog-choosing-the-right-length-of-time-for-your-life-insurance-cover",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/christmas-2014",
+   "source": "/blog/:cat/christmas-2014{/}?",
    "destination": "/blog-christmas-2014",
    "statusCode": 301
   },
   {
-   "source": "/blog/christmas-2014",
+   "source": "/blog/christmas-2014{/}?",
    "destination": "/blog-christmas-2014",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/claiming",
+   "source": "/blog/:cat/claiming{/}?",
    "destination": "/blog-claiming",
    "statusCode": 301
   },
   {
-   "source": "/blog/claiming",
+   "source": "/blog/claiming{/}?",
    "destination": "/blog-claiming",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/cold-weather-wellness-guide",
+   "source": "/blog/:cat/cold-weather-wellness-guide{/}?",
    "destination": "/blog-cold-weather-wellness-guide",
    "statusCode": 301
   },
   {
-   "source": "/blog/cold-weather-wellness-guide",
+   "source": "/blog/cold-weather-wellness-guide{/}?",
    "destination": "/blog-cold-weather-wellness-guide",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/connecting-you-now",
+   "source": "/blog/:cat/connecting-you-now{/}?",
    "destination": "/blog-connecting-you-now",
    "statusCode": 301
   },
   {
-   "source": "/blog/connecting-you-now",
+   "source": "/blog/connecting-you-now{/}?",
    "destination": "/blog-connecting-you-now",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/coronavirus-what-you-need-to-know-about-whether-youre-covered",
+   "source": "/blog/:cat/coronavirus-what-you-need-to-know-about-whether-youre-covered{/}?",
    "destination": "/blog-coronavirus-what-you-need-to-know-about-whether-youre-covered",
    "statusCode": 301
   },
   {
-   "source": "/blog/coronavirus-what-you-need-to-know-about-whether-youre-covered",
+   "source": "/blog/coronavirus-what-you-need-to-know-about-whether-youre-covered{/}?",
    "destination": "/blog-coronavirus-what-you-need-to-know-about-whether-youre-covered",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/de-icing-your-car-and-other-essential-winter-tips",
+   "source": "/blog/:cat/de-icing-your-car-and-other-essential-winter-tips{/}?",
    "destination": "/blog-de-icing-your-car-and-other-essential-winter-tips",
    "statusCode": 301
   },
   {
-   "source": "/blog/de-icing-your-car-and-other-essential-winter-tips",
+   "source": "/blog/de-icing-your-car-and-other-essential-winter-tips{/}?",
    "destination": "/blog-de-icing-your-car-and-other-essential-winter-tips",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/denial",
+   "source": "/blog/:cat/denial{/}?",
    "destination": "/blog-denial",
    "statusCode": 301
   },
   {
-   "source": "/blog/denial",
+   "source": "/blog/denial{/}?",
    "destination": "/blog-denial",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/depression",
+   "source": "/blog/:cat/depression{/}?",
    "destination": "/blog-depression",
    "statusCode": 301
   },
   {
-   "source": "/blog/depression",
+   "source": "/blog/depression{/}?",
    "destination": "/blog-depression",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/destinations-for-an-active-holiday",
+   "source": "/blog/:cat/destinations-for-an-active-holiday{/}?",
    "destination": "/blog-destinations-for-an-active-holiday",
    "statusCode": 301
   },
   {
-   "source": "/blog/destinations-for-an-active-holiday",
+   "source": "/blog/destinations-for-an-active-holiday{/}?",
    "destination": "/blog-destinations-for-an-active-holiday",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/digital-tools-for-effective-personal-finance-management",
+   "source": "/blog/:cat/digital-tools-for-effective-personal-finance-management{/}?",
    "destination": "/blog-digital-tools-for-effective-personal-finance-management",
    "statusCode": 301
   },
   {
-   "source": "/blog/digital-tools-for-effective-personal-finance-management",
+   "source": "/blog/digital-tools-for-effective-personal-finance-management{/}?",
    "destination": "/blog-digital-tools-for-effective-personal-finance-management",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/do-i-need-life-insurance-if-im-single",
+   "source": "/blog/:cat/do-i-need-life-insurance-if-im-single{/}?",
    "destination": "/blog-do-i-need-life-insurance-if-im-single",
    "statusCode": 301
   },
   {
-   "source": "/blog/do-i-need-life-insurance-if-im-single",
+   "source": "/blog/do-i-need-life-insurance-if-im-single{/}?",
    "destination": "/blog-do-i-need-life-insurance-if-im-single",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/do-you-need-income-protection",
+   "source": "/blog/:cat/do-you-need-income-protection{/}?",
    "destination": "/blog-do-you-need-income-protection",
    "statusCode": 301
   },
   {
-   "source": "/blog/do-you-need-income-protection",
+   "source": "/blog/do-you-need-income-protection{/}?",
    "destination": "/blog-do-you-need-income-protection",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/do-you-think-you-overthink",
+   "source": "/blog/:cat/do-you-think-you-overthink{/}?",
    "destination": "/blog-do-you-think-you-overthink",
    "statusCode": 301
   },
   {
-   "source": "/blog/do-you-think-you-overthink",
+   "source": "/blog/do-you-think-you-overthink{/}?",
    "destination": "/blog-do-you-think-you-overthink",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/easter-2016",
+   "source": "/blog/:cat/easter-2016{/}?",
    "destination": "/blog-easter-2016",
    "statusCode": 301
   },
   {
-   "source": "/blog/easter-2016",
+   "source": "/blog/easter-2016{/}?",
    "destination": "/blog-easter-2016",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/enhancing-financial-protection-how-life-insurance-complements-emergency-funds-and-more",
+   "source": "/blog/:cat/enhancing-financial-protection-how-life-insurance-complements-emergency-funds-and-more{/}?",
    "destination": "/blog-enhancing-financial-protection-how-life-insurance-complements-emergency-funds-and-more",
    "statusCode": 301
   },
   {
-   "source": "/blog/enhancing-financial-protection-how-life-insurance-complements-emergency-funds-and-more",
+   "source": "/blog/enhancing-financial-protection-how-life-insurance-complements-emergency-funds-and-more{/}?",
    "destination": "/blog-enhancing-financial-protection-how-life-insurance-complements-emergency-funds-and-more",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/ensuring-a-stable-future-how-life-insurance-safeguards-your-loved-ones-in-the-uk",
+   "source": "/blog/:cat/ensuring-a-stable-future-how-life-insurance-safeguards-your-loved-ones-in-the-uk{/}?",
    "destination": "/blog-ensuring-a-stable-future-how-life-insurance-safeguards-your-loved-ones-in-the-uk",
    "statusCode": 301
   },
   {
-   "source": "/blog/ensuring-a-stable-future-how-life-insurance-safeguards-your-loved-ones-in-the-uk",
+   "source": "/blog/ensuring-a-stable-future-how-life-insurance-safeguards-your-loved-ones-in-the-uk{/}?",
    "destination": "/blog-ensuring-a-stable-future-how-life-insurance-safeguards-your-loved-ones-in-the-uk",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/ensuring-business-succession-and-continuity-the-significance-of-life-insurance",
+   "source": "/blog/:cat/ensuring-business-succession-and-continuity-the-significance-of-life-insurance{/}?",
    "destination": "/blog-ensuring-business-succession-and-continuity-the-significance-of-life-insurance",
    "statusCode": 301
   },
   {
-   "source": "/blog/ensuring-business-succession-and-continuity-the-significance-of-life-insurance",
+   "source": "/blog/ensuring-business-succession-and-continuity-the-significance-of-life-insurance{/}?",
    "destination": "/blog-ensuring-business-succession-and-continuity-the-significance-of-life-insurance",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/essential-questions-to-ask-your-life-insurance-broker",
+   "source": "/blog/:cat/essential-questions-to-ask-your-life-insurance-broker{/}?",
    "destination": "/blog-essential-questions-to-ask-your-life-insurance-broker",
    "statusCode": 301
   },
   {
-   "source": "/blog/essential-questions-to-ask-your-life-insurance-broker",
+   "source": "/blog/essential-questions-to-ask-your-life-insurance-broker{/}?",
    "destination": "/blog-essential-questions-to-ask-your-life-insurance-broker",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/expecting-expectations",
+   "source": "/blog/:cat/expecting-expectations{/}?",
    "destination": "/blog-expecting-expectations",
    "statusCode": 301
   },
   {
-   "source": "/blog/expecting-expectations",
+   "source": "/blog/expecting-expectations{/}?",
    "destination": "/blog-expecting-expectations",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/family-always-comes-first",
+   "source": "/blog/:cat/family-always-comes-first{/}?",
    "destination": "/blog-family-always-comes-first",
    "statusCode": 301
   },
   {
-   "source": "/blog/family-always-comes-first",
+   "source": "/blog/family-always-comes-first{/}?",
    "destination": "/blog-family-always-comes-first",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/festive-family-ideas",
+   "source": "/blog/:cat/festive-family-ideas{/}?",
    "destination": "/blog-festive-family-ideas",
    "statusCode": 301
   },
   {
-   "source": "/blog/festive-family-ideas",
+   "source": "/blog/festive-family-ideas{/}?",
    "destination": "/blog-festive-family-ideas",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/finding-peace-of-mind-in-a-changing-world",
+   "source": "/blog/:cat/finding-peace-of-mind-in-a-changing-world{/}?",
    "destination": "/blog-finding-peace-of-mind-in-a-changing-world",
    "statusCode": 301
   },
   {
-   "source": "/blog/finding-peace-of-mind-in-a-changing-world",
+   "source": "/blog/finding-peace-of-mind-in-a-changing-world{/}?",
    "destination": "/blog-finding-peace-of-mind-in-a-changing-world",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/five-ways-to-get-cheaper-train-tickets",
+   "source": "/blog/:cat/five-ways-to-get-cheaper-train-tickets{/}?",
    "destination": "/blog-five-ways-to-get-cheaper-train-tickets",
    "statusCode": 301
   },
   {
-   "source": "/blog/five-ways-to-get-cheaper-train-tickets",
+   "source": "/blog/five-ways-to-get-cheaper-train-tickets{/}?",
    "destination": "/blog-five-ways-to-get-cheaper-train-tickets",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/for-sale-or-force-sale-black-friday-madness",
+   "source": "/blog/:cat/for-sale-or-force-sale-black-friday-madness{/}?",
    "destination": "/blog-for-sale-or-force-sale-black-friday-madness",
    "statusCode": 301
   },
   {
-   "source": "/blog/for-sale-or-force-sale-black-friday-madness",
+   "source": "/blog/for-sale-or-force-sale-black-friday-madness{/}?",
    "destination": "/blog-for-sale-or-force-sale-black-friday-madness",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/francis-house-childrens-hospice",
+   "source": "/blog/:cat/francis-house-childrens-hospice{/}?",
    "destination": "/blog-francis-house-childrens-hospice",
    "statusCode": 301
   },
   {
-   "source": "/blog/francis-house-childrens-hospice",
+   "source": "/blog/francis-house-childrens-hospice{/}?",
    "destination": "/blog-francis-house-childrens-hospice",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/gp24",
+   "source": "/blog/:cat/gp24{/}?",
    "destination": "/blog-gp24",
    "statusCode": 301
   },
   {
-   "source": "/blog/gp24",
+   "source": "/blog/gp24{/}?",
    "destination": "/blog-gp24",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/healthy-pancake-recipes-for-shrove-tuesday",
+   "source": "/blog/:cat/healthy-pancake-recipes-for-shrove-tuesday{/}?",
    "destination": "/blog-healthy-pancake-recipes-for-shrove-tuesday",
    "statusCode": 301
   },
   {
-   "source": "/blog/healthy-pancake-recipes-for-shrove-tuesday",
+   "source": "/blog/healthy-pancake-recipes-for-shrove-tuesday{/}?",
    "destination": "/blog-healthy-pancake-recipes-for-shrove-tuesday",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/healthy-plate-healthy-mind",
+   "source": "/blog/:cat/healthy-plate-healthy-mind{/}?",
    "destination": "/blog-healthy-plate-healthy-mind",
    "statusCode": 301
   },
   {
-   "source": "/blog/healthy-plate-healthy-mind",
+   "source": "/blog/healthy-plate-healthy-mind{/}?",
    "destination": "/blog-healthy-plate-healthy-mind",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/here-we-go-again-how-to-avoid-groundhog-day",
+   "source": "/blog/:cat/here-we-go-again-how-to-avoid-groundhog-day{/}?",
    "destination": "/blog-here-we-go-again-how-to-avoid-groundhog-day",
    "statusCode": 301
   },
   {
-   "source": "/blog/here-we-go-again-how-to-avoid-groundhog-day",
+   "source": "/blog/here-we-go-again-how-to-avoid-groundhog-day{/}?",
    "destination": "/blog-here-we-go-again-how-to-avoid-groundhog-day",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/holiday-travel-tips-for-the-savvy-adventurer",
+   "source": "/blog/:cat/holiday-travel-tips-for-the-savvy-adventurer{/}?",
    "destination": "/blog-holiday-travel-tips-for-the-savvy-adventurer",
    "statusCode": 301
   },
   {
-   "source": "/blog/holiday-travel-tips-for-the-savvy-adventurer",
+   "source": "/blog/holiday-travel-tips-for-the-savvy-adventurer{/}?",
    "destination": "/blog-holiday-travel-tips-for-the-savvy-adventurer",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/holidays-are-coming",
+   "source": "/blog/:cat/holidays-are-coming{/}?",
    "destination": "/blog-holidays-are-coming",
    "statusCode": 301
   },
   {
-   "source": "/blog/holidays-are-coming",
+   "source": "/blog/holidays-are-coming{/}?",
    "destination": "/blog-holidays-are-coming",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/how-ai-is-changing-gp-appointments-topquote",
+   "source": "/blog/:cat/how-ai-is-changing-gp-appointments-topquote{/}?",
    "destination": "/blog-how-ai-is-changing-gp-appointments-topquote",
    "statusCode": 301
   },
   {
-   "source": "/blog/how-ai-is-changing-gp-appointments-topquote",
+   "source": "/blog/how-ai-is-changing-gp-appointments-topquote{/}?",
    "destination": "/blog-how-ai-is-changing-gp-appointments-topquote",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/how-are-portable-x-rays-enhancing-healthcare-in-remote-areas",
+   "source": "/blog/:cat/how-are-portable-x-rays-enhancing-healthcare-in-remote-areas{/}?",
    "destination": "/blog-how-are-portable-x-rays-enhancing-healthcare-in-remote-areas",
    "statusCode": 301
   },
   {
-   "source": "/blog/how-are-portable-x-rays-enhancing-healthcare-in-remote-areas",
+   "source": "/blog/how-are-portable-x-rays-enhancing-healthcare-in-remote-areas{/}?",
    "destination": "/blog-how-are-portable-x-rays-enhancing-healthcare-in-remote-areas",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/how-close-are-you-to-the-breadline",
+   "source": "/blog/:cat/how-close-are-you-to-the-breadline{/}?",
    "destination": "/blog-how-close-are-you-to-the-breadline",
    "statusCode": 301
   },
   {
-   "source": "/blog/how-close-are-you-to-the-breadline",
+   "source": "/blog/how-close-are-you-to-the-breadline{/}?",
    "destination": "/blog-how-close-are-you-to-the-breadline",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/how-do-life-insurance-companies-obtain-your-medical-information",
+   "source": "/blog/:cat/how-do-life-insurance-companies-obtain-your-medical-information{/}?",
    "destination": "/blog-how-do-life-insurance-companies-obtain-your-medical-information",
    "statusCode": 301
   },
   {
-   "source": "/blog/how-do-life-insurance-companies-obtain-your-medical-information",
+   "source": "/blog/how-do-life-insurance-companies-obtain-your-medical-information{/}?",
    "destination": "/blog-how-do-life-insurance-companies-obtain-your-medical-information",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/how-many-parents-are-without-life-insurance",
+   "source": "/blog/:cat/how-many-parents-are-without-life-insurance{/}?",
    "destination": "/blog-how-many-parents-are-without-life-insurance",
    "statusCode": 301
   },
   {
-   "source": "/blog/how-many-parents-are-without-life-insurance",
+   "source": "/blog/how-many-parents-are-without-life-insurance{/}?",
    "destination": "/blog-how-many-parents-are-without-life-insurance",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/how-much-life-insurance-do-parents-really-need",
+   "source": "/blog/:cat/how-much-life-insurance-do-parents-really-need{/}?",
    "destination": "/blog-how-much-life-insurance-do-parents-really-need",
    "statusCode": 301
   },
   {
-   "source": "/blog/how-much-life-insurance-do-parents-really-need",
+   "source": "/blog/how-much-life-insurance-do-parents-really-need{/}?",
    "destination": "/blog-how-much-life-insurance-do-parents-really-need",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/how-much-life-insurance-do-you-need",
+   "source": "/blog/:cat/how-much-life-insurance-do-you-need{/}?",
    "destination": "/blog-how-much-life-insurance-do-you-need",
    "statusCode": 301
   },
   {
-   "source": "/blog/how-much-life-insurance-do-you-need",
+   "source": "/blog/how-much-life-insurance-do-you-need{/}?",
    "destination": "/blog-how-much-life-insurance-do-you-need",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/how-owning-a-pet-can-improve-mental-health",
+   "source": "/blog/:cat/how-owning-a-pet-can-improve-mental-health{/}?",
    "destination": "/blog-how-owning-a-pet-can-improve-mental-health",
    "statusCode": 301
   },
   {
-   "source": "/blog/how-owning-a-pet-can-improve-mental-health",
+   "source": "/blog/how-owning-a-pet-can-improve-mental-health{/}?",
    "destination": "/blog-how-owning-a-pet-can-improve-mental-health",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/how-to-cope-with-the-loss-of-a-spouse",
+   "source": "/blog/:cat/how-to-cope-with-the-loss-of-a-spouse{/}?",
    "destination": "/blog-how-to-cope-with-the-loss-of-a-spouse",
    "statusCode": 301
   },
   {
-   "source": "/blog/how-to-cope-with-the-loss-of-a-spouse",
+   "source": "/blog/how-to-cope-with-the-loss-of-a-spouse{/}?",
    "destination": "/blog-how-to-cope-with-the-loss-of-a-spouse",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/how-to-find-lost-life-insurance",
+   "source": "/blog/:cat/how-to-find-lost-life-insurance{/}?",
    "destination": "/blog-how-to-find-lost-life-insurance",
    "statusCode": 301
   },
   {
-   "source": "/blog/how-to-find-lost-life-insurance",
+   "source": "/blog/how-to-find-lost-life-insurance{/}?",
    "destination": "/blog-how-to-find-lost-life-insurance",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/how-to-get-a-dopamine-boost-in-your-50",
+   "source": "/blog/:cat/how-to-get-a-dopamine-boost-in-your-50{/}?",
    "destination": "/blog-how-to-get-a-dopamine-boost-in-your-50",
    "statusCode": 301
   },
   {
-   "source": "/blog/how-to-get-a-dopamine-boost-in-your-50",
+   "source": "/blog/how-to-get-a-dopamine-boost-in-your-50{/}?",
    "destination": "/blog-how-to-get-a-dopamine-boost-in-your-50",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/how-to-make-life-insurance-claim",
+   "source": "/blog/:cat/how-to-make-life-insurance-claim{/}?",
    "destination": "/blog-how-to-make-life-insurance-claim",
    "statusCode": 301
   },
   {
-   "source": "/blog/how-to-make-life-insurance-claim",
+   "source": "/blog/how-to-make-life-insurance-claim{/}?",
    "destination": "/blog-how-to-make-life-insurance-claim",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/how-to-make-those-resolutions-stick",
+   "source": "/blog/:cat/how-to-make-those-resolutions-stick{/}?",
    "destination": "/blog-how-to-make-those-resolutions-stick",
    "statusCode": 301
   },
   {
-   "source": "/blog/how-to-make-those-resolutions-stick",
+   "source": "/blog/how-to-make-those-resolutions-stick{/}?",
    "destination": "/blog-how-to-make-those-resolutions-stick",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/how-to-quit-caffeine-without-withdrawal",
+   "source": "/blog/:cat/how-to-quit-caffeine-without-withdrawal{/}?",
    "destination": "/blog-how-to-quit-caffeine-without-withdrawal",
    "statusCode": 301
   },
   {
-   "source": "/blog/how-to-quit-caffeine-without-withdrawal",
+   "source": "/blog/how-to-quit-caffeine-without-withdrawal{/}?",
    "destination": "/blog-how-to-quit-caffeine-without-withdrawal",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/how-to-quit-vaping",
+   "source": "/blog/:cat/how-to-quit-vaping{/}?",
    "destination": "/blog-how-to-quit-vaping",
    "statusCode": 301
   },
   {
-   "source": "/blog/how-to-quit-vaping",
+   "source": "/blog/how-to-quit-vaping{/}?",
    "destination": "/blog-how-to-quit-vaping",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/how-to-stop-procrastination-in-two-minutes",
+   "source": "/blog/:cat/how-to-stop-procrastination-in-two-minutes{/}?",
    "destination": "/blog-how-to-stop-procrastination-in-two-minutes",
    "statusCode": 301
   },
   {
-   "source": "/blog/how-to-stop-procrastination-in-two-minutes",
+   "source": "/blog/how-to-stop-procrastination-in-two-minutes{/}?",
    "destination": "/blog-how-to-stop-procrastination-in-two-minutes",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/how-valuable-is-your-childs-school-bag",
+   "source": "/blog/:cat/how-valuable-is-your-childs-school-bag{/}?",
    "destination": "/blog-how-valuable-is-your-childs-school-bag",
    "statusCode": 301
   },
   {
-   "source": "/blog/how-valuable-is-your-childs-school-bag",
+   "source": "/blog/how-valuable-is-your-childs-school-bag{/}?",
    "destination": "/blog-how-valuable-is-your-childs-school-bag",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/income-protection-vs-critical-illness",
+   "source": "/blog/:cat/income-protection-vs-critical-illness{/}?",
    "destination": "/blog-income-protection-vs-critical-illness",
    "statusCode": 301
   },
   {
-   "source": "/blog/income-protection-vs-critical-illness",
+   "source": "/blog/income-protection-vs-critical-illness{/}?",
    "destination": "/blog-income-protection-vs-critical-illness",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/investing-in-your-health-the-importance-of-regular-check-ups",
+   "source": "/blog/:cat/investing-in-your-health-the-importance-of-regular-check-ups{/}?",
    "destination": "/blog-investing-in-your-health-the-importance-of-regular-check-ups",
    "statusCode": 301
   },
   {
-   "source": "/blog/investing-in-your-health-the-importance-of-regular-check-ups",
+   "source": "/blog/investing-in-your-health-the-importance-of-regular-check-ups{/}?",
    "destination": "/blog-investing-in-your-health-the-importance-of-regular-check-ups",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/is-cheap-life-insurance-worth-it",
+   "source": "/blog/:cat/is-cheap-life-insurance-worth-it{/}?",
    "destination": "/blog-is-cheap-life-insurance-worth-it",
    "statusCode": 301
   },
   {
-   "source": "/blog/is-cheap-life-insurance-worth-it",
+   "source": "/blog/is-cheap-life-insurance-worth-it{/}?",
    "destination": "/blog-is-cheap-life-insurance-worth-it",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/is-life-insurance-part-of-your-estate",
+   "source": "/blog/:cat/is-life-insurance-part-of-your-estate{/}?",
    "destination": "/blog-is-life-insurance-part-of-your-estate",
    "statusCode": 301
   },
   {
-   "source": "/blog/is-life-insurance-part-of-your-estate",
+   "source": "/blog/is-life-insurance-part-of-your-estate{/}?",
    "destination": "/blog-is-life-insurance-part-of-your-estate",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/is-red-wine-actually-good-for-you",
+   "source": "/blog/:cat/is-red-wine-actually-good-for-you{/}?",
    "destination": "/blog-is-red-wine-actually-good-for-you",
    "statusCode": 301
   },
   {
-   "source": "/blog/is-red-wine-actually-good-for-you",
+   "source": "/blog/is-red-wine-actually-good-for-you{/}?",
    "destination": "/blog-is-red-wine-actually-good-for-you",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/janes-experience-unexpected-death",
+   "source": "/blog/:cat/janes-experience-unexpected-death{/}?",
    "destination": "/blog-janes-experience-unexpected-death",
    "statusCode": 301
   },
   {
-   "source": "/blog/janes-experience-unexpected-death",
+   "source": "/blog/janes-experience-unexpected-death{/}?",
    "destination": "/blog-janes-experience-unexpected-death",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/key-steps-to-take-to-have-a-more-positive-mental-attitude",
+   "source": "/blog/:cat/key-steps-to-take-to-have-a-more-positive-mental-attitude{/}?",
    "destination": "/blog-key-steps-to-take-to-have-a-more-positive-mental-attitude",
    "statusCode": 301
   },
   {
-   "source": "/blog/key-steps-to-take-to-have-a-more-positive-mental-attitude",
+   "source": "/blog/key-steps-to-take-to-have-a-more-positive-mental-attitude{/}?",
    "destination": "/blog-key-steps-to-take-to-have-a-more-positive-mental-attitude",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/lets-talk-tips-for-discussing-life-insurance-with-your-spouse",
+   "source": "/blog/:cat/lets-talk-tips-for-discussing-life-insurance-with-your-spouse{/}?",
    "destination": "/blog-lets-talk-tips-for-discussing-life-insurance-with-your-spouse",
    "statusCode": 301
   },
   {
-   "source": "/blog/lets-talk-tips-for-discussing-life-insurance-with-your-spouse",
+   "source": "/blog/lets-talk-tips-for-discussing-life-insurance-with-your-spouse{/}?",
    "destination": "/blog-lets-talk-tips-for-discussing-life-insurance-with-your-spouse",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/life-insurance-after-divorce",
+   "source": "/blog/:cat/life-insurance-after-divorce{/}?",
    "destination": "/blog-life-insurance-after-divorce",
    "statusCode": 301
   },
   {
-   "source": "/blog/life-insurance-after-divorce",
+   "source": "/blog/life-insurance-after-divorce{/}?",
    "destination": "/blog-life-insurance-after-divorce",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/life-insurance-after-divorce-guide",
+   "source": "/blog/:cat/life-insurance-after-divorce-guide{/}?",
    "destination": "/blog-life-insurance-after-divorce-guide",
    "statusCode": 301
   },
   {
-   "source": "/blog/life-insurance-after-divorce-guide",
+   "source": "/blog/life-insurance-after-divorce-guide{/}?",
    "destination": "/blog-life-insurance-after-divorce-guide",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/life-insurance-and-tax",
+   "source": "/blog/:cat/life-insurance-and-tax{/}?",
    "destination": "/blog-life-insurance-and-tax",
    "statusCode": 301
   },
   {
-   "source": "/blog/life-insurance-and-tax",
+   "source": "/blog/life-insurance-and-tax{/}?",
    "destination": "/blog-life-insurance-and-tax",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/life-insurance-buying-for-someone-else",
+   "source": "/blog/:cat/life-insurance-buying-for-someone-else{/}?",
    "destination": "/blog-life-insurance-buying-for-someone-else",
    "statusCode": 301
   },
   {
-   "source": "/blog/life-insurance-buying-for-someone-else",
+   "source": "/blog/life-insurance-buying-for-someone-else{/}?",
    "destination": "/blog-life-insurance-buying-for-someone-else",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/life-insurance-for-married-couples-a-uk-guide",
+   "source": "/blog/:cat/life-insurance-for-married-couples-a-uk-guide{/}?",
    "destination": "/blog-life-insurance-for-married-couples-a-uk-guide",
    "statusCode": 301
   },
   {
-   "source": "/blog/life-insurance-for-married-couples-a-uk-guide",
+   "source": "/blog/life-insurance-for-married-couples-a-uk-guide{/}?",
    "destination": "/blog-life-insurance-for-married-couples-a-uk-guide",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/life-insurance-for-parents",
+   "source": "/blog/:cat/life-insurance-for-parents{/}?",
    "destination": "/blog-life-insurance-for-parents",
    "statusCode": 301
   },
   {
-   "source": "/blog/life-insurance-for-parents",
+   "source": "/blog/life-insurance-for-parents{/}?",
    "destination": "/blog-life-insurance-for-parents",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/life-insurance-for-smokers",
+   "source": "/blog/:cat/life-insurance-for-smokers{/}?",
    "destination": "/blog-life-insurance-for-smokers",
    "statusCode": 301
   },
   {
-   "source": "/blog/life-insurance-for-smokers",
+   "source": "/blog/life-insurance-for-smokers{/}?",
    "destination": "/blog-life-insurance-for-smokers",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/life-insurance-myths-debunked",
+   "source": "/blog/:cat/life-insurance-myths-debunked{/}?",
    "destination": "/blog-life-insurance-myths-debunked",
    "statusCode": 301
   },
   {
-   "source": "/blog/life-insurance-myths-debunked",
+   "source": "/blog/life-insurance-myths-debunked{/}?",
    "destination": "/blog-life-insurance-myths-debunked",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/life-insurance-when-pregnant",
+   "source": "/blog/:cat/life-insurance-when-pregnant{/}?",
    "destination": "/blog-life-insurance-when-pregnant",
    "statusCode": 301
   },
   {
-   "source": "/blog/life-insurance-when-pregnant",
+   "source": "/blog/life-insurance-when-pregnant{/}?",
    "destination": "/blog-life-insurance-when-pregnant",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/life-insurance-with-pre-existing-conditions",
+   "source": "/blog/:cat/life-insurance-with-pre-existing-conditions{/}?",
    "destination": "/blog-life-insurance-with-pre-existing-conditions",
    "statusCode": 301
   },
   {
-   "source": "/blog/life-insurance-with-pre-existing-conditions",
+   "source": "/blog/life-insurance-with-pre-existing-conditions{/}?",
    "destination": "/blog-life-insurance-with-pre-existing-conditions",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/make-the-most-of-your-weekends",
+   "source": "/blog/:cat/make-the-most-of-your-weekends{/}?",
    "destination": "/blog-make-the-most-of-your-weekends",
    "statusCode": 301
   },
   {
-   "source": "/blog/make-the-most-of-your-weekends",
+   "source": "/blog/make-the-most-of-your-weekends{/}?",
    "destination": "/blog-make-the-most-of-your-weekends",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/managing-stress-understanding-its-impact-and-effective-strategies",
+   "source": "/blog/:cat/managing-stress-understanding-its-impact-and-effective-strategies{/}?",
    "destination": "/blog-managing-stress-understanding-its-impact-and-effective-strategies",
    "statusCode": 301
   },
   {
-   "source": "/blog/managing-stress-understanding-its-impact-and-effective-strategies",
+   "source": "/blog/managing-stress-understanding-its-impact-and-effective-strategies{/}?",
    "destination": "/blog-managing-stress-understanding-its-impact-and-effective-strategies",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/marathon-des-sables-2012",
+   "source": "/blog/:cat/marathon-des-sables-2012{/}?",
    "destination": "/blog-marathon-des-sables-2012",
    "statusCode": 301
   },
   {
-   "source": "/blog/marathon-des-sables-2012",
+   "source": "/blog/marathon-des-sables-2012{/}?",
    "destination": "/blog-marathon-des-sables-2012",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/mental-health-against-the-backdrop-of-rising-prices",
+   "source": "/blog/:cat/mental-health-against-the-backdrop-of-rising-prices{/}?",
    "destination": "/blog-mental-health-against-the-backdrop-of-rising-prices",
    "statusCode": 301
   },
   {
-   "source": "/blog/mental-health-against-the-backdrop-of-rising-prices",
+   "source": "/blog/mental-health-against-the-backdrop-of-rising-prices{/}?",
    "destination": "/blog-mental-health-against-the-backdrop-of-rising-prices",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/mindfulness-mumbo-jumbo",
+   "source": "/blog/:cat/mindfulness-mumbo-jumbo{/}?",
    "destination": "/blog-mindfulness-mumbo-jumbo",
    "statusCode": 301
   },
   {
-   "source": "/blog/mindfulness-mumbo-jumbo",
+   "source": "/blog/mindfulness-mumbo-jumbo{/}?",
    "destination": "/blog-mindfulness-mumbo-jumbo",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/money-saving-tips-to-get-you-through-university",
+   "source": "/blog/:cat/money-saving-tips-to-get-you-through-university{/}?",
    "destination": "/blog-money-saving-tips-to-get-you-through-university",
    "statusCode": 301
   },
   {
-   "source": "/blog/money-saving-tips-to-get-you-through-university",
+   "source": "/blog/money-saving-tips-to-get-you-through-university{/}?",
    "destination": "/blog-money-saving-tips-to-get-you-through-university",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/navigating-the-new-normal-life-after-retirement",
+   "source": "/blog/:cat/navigating-the-new-normal-life-after-retirement{/}?",
    "destination": "/blog-navigating-the-new-normal-life-after-retirement",
    "statusCode": 301
   },
   {
-   "source": "/blog/navigating-the-new-normal-life-after-retirement",
+   "source": "/blog/navigating-the-new-normal-life-after-retirement{/}?",
    "destination": "/blog-navigating-the-new-normal-life-after-retirement",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/nurse-support-services",
+   "source": "/blog/:cat/nurse-support-services{/}?",
    "destination": "/blog-nurse-support-services",
    "statusCode": 301
   },
   {
-   "source": "/blog/nurse-support-services",
+   "source": "/blog/nurse-support-services{/}?",
    "destination": "/blog-nurse-support-services",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/organise-your-life-with-these-10-habits",
+   "source": "/blog/:cat/organise-your-life-with-these-10-habits{/}?",
    "destination": "/blog-organise-your-life-with-these-10-habits",
    "statusCode": 301
   },
   {
-   "source": "/blog/organise-your-life-with-these-10-habits",
+   "source": "/blog/organise-your-life-with-these-10-habits{/}?",
    "destination": "/blog-organise-your-life-with-these-10-habits",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/overcoming-procrastination-during-lockdown",
+   "source": "/blog/:cat/overcoming-procrastination-during-lockdown{/}?",
    "destination": "/blog-overcoming-procrastination-during-lockdown",
    "statusCode": 301
   },
   {
-   "source": "/blog/overcoming-procrastination-during-lockdown",
+   "source": "/blog/overcoming-procrastination-during-lockdown{/}?",
    "destination": "/blog-overcoming-procrastination-during-lockdown",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/positive-covid19-news",
+   "source": "/blog/:cat/positive-covid19-news{/}?",
    "destination": "/blog-positive-covid19-news",
    "statusCode": 301
   },
   {
-   "source": "/blog/positive-covid19-news",
+   "source": "/blog/positive-covid19-news{/}?",
    "destination": "/blog-positive-covid19-news",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/protecting-your-business-and-loved-ones-the-benefits-of-life-insurance-for-uk-business-owners",
+   "source": "/blog/:cat/protecting-your-business-and-loved-ones-the-benefits-of-life-insurance-for-uk-business-owners{/}?",
    "destination": "/blog-protecting-your-business-and-loved-ones-the-benefits-of-life-insurance-for-uk-business-owners",
    "statusCode": 301
   },
   {
-   "source": "/blog/protecting-your-business-and-loved-ones-the-benefits-of-life-insurance-for-uk-business-owners",
+   "source": "/blog/protecting-your-business-and-loved-ones-the-benefits-of-life-insurance-for-uk-business-owners{/}?",
    "destination": "/blog-protecting-your-business-and-loved-ones-the-benefits-of-life-insurance-for-uk-business-owners",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/protecting-your-legacy-which-financial-assets-are-safeguarded-by-life-insurance-in-the-uk",
+   "source": "/blog/:cat/protecting-your-legacy-which-financial-assets-are-safeguarded-by-life-insurance-in-the-uk{/}?",
    "destination": "/blog-protecting-your-legacy-which-financial-assets-are-safeguarded-by-life-insurance-in-the-uk",
    "statusCode": 301
   },
   {
-   "source": "/blog/protecting-your-legacy-which-financial-assets-are-safeguarded-by-life-insurance-in-the-uk",
+   "source": "/blog/protecting-your-legacy-which-financial-assets-are-safeguarded-by-life-insurance-in-the-uk{/}?",
    "destination": "/blog-protecting-your-legacy-which-financial-assets-are-safeguarded-by-life-insurance-in-the-uk",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/reasons-why-people-believe-they-dont-need-life-insurance",
+   "source": "/blog/:cat/reasons-why-people-believe-they-dont-need-life-insurance{/}?",
    "destination": "/blog-reasons-why-people-believe-they-dont-need-life-insurance",
    "statusCode": 301
   },
   {
-   "source": "/blog/reasons-why-people-believe-they-dont-need-life-insurance",
+   "source": "/blog/reasons-why-people-believe-they-dont-need-life-insurance{/}?",
    "destination": "/blog-reasons-why-people-believe-they-dont-need-life-insurance",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/regular-housekeeping-for-your-life-insurance",
+   "source": "/blog/:cat/regular-housekeeping-for-your-life-insurance{/}?",
    "destination": "/blog-regular-housekeeping-for-your-life-insurance",
    "statusCode": 301
   },
   {
-   "source": "/blog/regular-housekeeping-for-your-life-insurance",
+   "source": "/blog/regular-housekeeping-for-your-life-insurance{/}?",
    "destination": "/blog-regular-housekeeping-for-your-life-insurance",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/renewing-your-life-insurance-policy-understanding-the-importance",
+   "source": "/blog/:cat/renewing-your-life-insurance-policy-understanding-the-importance{/}?",
    "destination": "/blog-renewing-your-life-insurance-policy-understanding-the-importance",
    "statusCode": 301
   },
   {
-   "source": "/blog/renewing-your-life-insurance-policy-understanding-the-importance",
+   "source": "/blog/renewing-your-life-insurance-policy-understanding-the-importance{/}?",
    "destination": "/blog-renewing-your-life-insurance-policy-understanding-the-importance",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/revolutionary-spinal-implant-revitalises-walking-ability-in-parkinsons-patient",
+   "source": "/blog/:cat/revolutionary-spinal-implant-revitalises-walking-ability-in-parkinsons-patient{/}?",
    "destination": "/blog-revolutionary-spinal-implant-revitalises-walking-ability-in-parkinsons-patient",
    "statusCode": 301
   },
   {
-   "source": "/blog/revolutionary-spinal-implant-revitalises-walking-ability-in-parkinsons-patient",
+   "source": "/blog/revolutionary-spinal-implant-revitalises-walking-ability-in-parkinsons-patient{/}?",
    "destination": "/blog-revolutionary-spinal-implant-revitalises-walking-ability-in-parkinsons-patient",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/royal-machester-children-hospital-2013",
+   "source": "/blog/:cat/royal-machester-children-hospital-2013{/}?",
    "destination": "/blog-royal-machester-children-hospital-2013",
    "statusCode": 301
   },
   {
-   "source": "/blog/royal-machester-children-hospital-2013",
+   "source": "/blog/royal-machester-children-hospital-2013{/}?",
    "destination": "/blog-royal-machester-children-hospital-2013",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/royal-manchester-children-s-hospital-fund",
+   "source": "/blog/:cat/royal-manchester-children-s-hospital-fund{/}?",
    "destination": "/blog-royal-manchester-children-s-hospital-fund",
    "statusCode": 301
   },
   {
-   "source": "/blog/royal-manchester-children-s-hospital-fund",
+   "source": "/blog/royal-manchester-children-s-hospital-fund{/}?",
    "destination": "/blog-royal-manchester-children-s-hospital-fund",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/royal-manchester-ecg-machine",
+   "source": "/blog/:cat/royal-manchester-ecg-machine{/}?",
    "destination": "/blog-royal-manchester-ecg-machine",
    "statusCode": 301
   },
   {
-   "source": "/blog/royal-manchester-ecg-machine",
+   "source": "/blog/royal-manchester-ecg-machine{/}?",
    "destination": "/blog-royal-manchester-ecg-machine",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/self-employed-life-insurance",
+   "source": "/blog/:cat/self-employed-life-insurance{/}?",
    "destination": "/blog-self-employed-life-insurance",
    "statusCode": 301
   },
   {
-   "source": "/blog/self-employed-life-insurance",
+   "source": "/blog/self-employed-life-insurance{/}?",
    "destination": "/blog-self-employed-life-insurance",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/self-esteem",
+   "source": "/blog/:cat/self-esteem{/}?",
    "destination": "/blog-self-esteem",
    "statusCode": 301
   },
   {
-   "source": "/blog/self-esteem",
+   "source": "/blog/self-esteem{/}?",
    "destination": "/blog-self-esteem",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/simple-habits-for-a-healthier-lifestyle",
+   "source": "/blog/:cat/simple-habits-for-a-healthier-lifestyle{/}?",
    "destination": "/blog-simple-habits-for-a-healthier-lifestyle",
    "statusCode": 301
   },
   {
-   "source": "/blog/simple-habits-for-a-healthier-lifestyle",
+   "source": "/blog/simple-habits-for-a-healthier-lifestyle{/}?",
    "destination": "/blog-simple-habits-for-a-healthier-lifestyle",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/simple-steps-for-a-healthy-mind-in-a-healthy-body",
+   "source": "/blog/:cat/simple-steps-for-a-healthy-mind-in-a-healthy-body{/}?",
    "destination": "/blog-simple-steps-for-a-healthy-mind-in-a-healthy-body",
    "statusCode": 301
   },
   {
-   "source": "/blog/simple-steps-for-a-healthy-mind-in-a-healthy-body",
+   "source": "/blog/simple-steps-for-a-healthy-mind-in-a-healthy-body{/}?",
    "destination": "/blog-simple-steps-for-a-healthy-mind-in-a-healthy-body",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/single-vs-joint-life-insurance",
+   "source": "/blog/:cat/single-vs-joint-life-insurance{/}?",
    "destination": "/blog-single-vs-joint-life-insurance",
    "statusCode": 301
   },
   {
-   "source": "/blog/single-vs-joint-life-insurance",
+   "source": "/blog/single-vs-joint-life-insurance{/}?",
    "destination": "/blog-single-vs-joint-life-insurance",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/six-weeks-of-sun-sea-sand-or-stress",
+   "source": "/blog/:cat/six-weeks-of-sun-sea-sand-or-stress{/}?",
    "destination": "/blog-six-weeks-of-sun-sea-sand-or-stress",
    "statusCode": 301
   },
   {
-   "source": "/blog/six-weeks-of-sun-sea-sand-or-stress",
+   "source": "/blog/six-weeks-of-sun-sea-sand-or-stress{/}?",
    "destination": "/blog-six-weeks-of-sun-sea-sand-or-stress",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/skiing-in-britain-its-better-than-you-might-think",
+   "source": "/blog/:cat/skiing-in-britain-its-better-than-you-might-think{/}?",
    "destination": "/blog-skiing-in-britain-its-better-than-you-might-think",
    "statusCode": 301
   },
   {
-   "source": "/blog/skiing-in-britain-its-better-than-you-might-think",
+   "source": "/blog/skiing-in-britain-its-better-than-you-might-think{/}?",
    "destination": "/blog-skiing-in-britain-its-better-than-you-might-think",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/spring-home-preparation-tips",
+   "source": "/blog/:cat/spring-home-preparation-tips{/}?",
    "destination": "/blog-spring-home-preparation-tips",
    "statusCode": 301
   },
   {
-   "source": "/blog/spring-home-preparation-tips",
+   "source": "/blog/spring-home-preparation-tips{/}?",
    "destination": "/blog-spring-home-preparation-tips",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/stress",
+   "source": "/blog/:cat/stress{/}?",
    "destination": "/blog-stress",
    "statusCode": 301
   },
   {
-   "source": "/blog/stress",
+   "source": "/blog/stress{/}?",
    "destination": "/blog-stress",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/success-for-wood-street-mission",
+   "source": "/blog/:cat/success-for-wood-street-mission{/}?",
    "destination": "/blog-success-for-wood-street-mission",
    "statusCode": 301
   },
   {
-   "source": "/blog/success-for-wood-street-mission",
+   "source": "/blog/success-for-wood-street-mission{/}?",
    "destination": "/blog-success-for-wood-street-mission",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/sum-assured",
+   "source": "/blog/:cat/sum-assured{/}?",
    "destination": "/blog-sum-assured",
    "statusCode": 301
   },
   {
-   "source": "/blog/sum-assured",
+   "source": "/blog/sum-assured{/}?",
    "destination": "/blog-sum-assured",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/the-close-connection-between-your-mental-and-physical-wellbeing",
+   "source": "/blog/:cat/the-close-connection-between-your-mental-and-physical-wellbeing{/}?",
    "destination": "/blog-the-close-connection-between-your-mental-and-physical-wellbeing",
    "statusCode": 301
   },
   {
-   "source": "/blog/the-close-connection-between-your-mental-and-physical-wellbeing",
+   "source": "/blog/the-close-connection-between-your-mental-and-physical-wellbeing{/}?",
    "destination": "/blog-the-close-connection-between-your-mental-and-physical-wellbeing",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/the-cost-of-living-crisis",
+   "source": "/blog/:cat/the-cost-of-living-crisis{/}?",
    "destination": "/blog-the-cost-of-living-crisis",
    "statusCode": 301
   },
   {
-   "source": "/blog/the-cost-of-living-crisis",
+   "source": "/blog/the-cost-of-living-crisis{/}?",
    "destination": "/blog-the-cost-of-living-crisis",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/the-future-of-money",
+   "source": "/blog/:cat/the-future-of-money{/}?",
    "destination": "/blog-the-future-of-money",
    "statusCode": 301
   },
   {
-   "source": "/blog/the-future-of-money",
+   "source": "/blog/the-future-of-money{/}?",
    "destination": "/blog-the-future-of-money",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/the-gut-brain-connection-foods-that-boost-mental-well-being-for-over-50s",
+   "source": "/blog/:cat/the-gut-brain-connection-foods-that-boost-mental-well-being-for-over-50s{/}?",
    "destination": "/blog-the-gut-brain-connection-foods-that-boost-mental-well-being-for-over-50s",
    "statusCode": 301
   },
   {
-   "source": "/blog/the-gut-brain-connection-foods-that-boost-mental-well-being-for-over-50s",
+   "source": "/blog/the-gut-brain-connection-foods-that-boost-mental-well-being-for-over-50s{/}?",
    "destination": "/blog-the-gut-brain-connection-foods-that-boost-mental-well-being-for-over-50s",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/the-importance-of-periodic-life-insurance-coverage-reviews-protecting-your-financial-future",
+   "source": "/blog/:cat/the-importance-of-periodic-life-insurance-coverage-reviews-protecting-your-financial-future{/}?",
    "destination": "/blog-the-importance-of-periodic-life-insurance-coverage-reviews-protecting-your-financial-future",
    "statusCode": 301
   },
   {
-   "source": "/blog/the-importance-of-periodic-life-insurance-coverage-reviews-protecting-your-financial-future",
+   "source": "/blog/the-importance-of-periodic-life-insurance-coverage-reviews-protecting-your-financial-future{/}?",
    "destination": "/blog-the-importance-of-periodic-life-insurance-coverage-reviews-protecting-your-financial-future",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/the-joy-of-lists",
+   "source": "/blog/:cat/the-joy-of-lists{/}?",
    "destination": "/blog-the-joy-of-lists",
    "statusCode": 301
   },
   {
-   "source": "/blog/the-joy-of-lists",
+   "source": "/blog/the-joy-of-lists{/}?",
    "destination": "/blog-the-joy-of-lists",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/the-mother-of-all-national-holidays",
+   "source": "/blog/:cat/the-mother-of-all-national-holidays{/}?",
    "destination": "/blog-the-mother-of-all-national-holidays",
    "statusCode": 301
   },
   {
-   "source": "/blog/the-mother-of-all-national-holidays",
+   "source": "/blog/the-mother-of-all-national-holidays{/}?",
    "destination": "/blog-the-mother-of-all-national-holidays",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/the-pitfalls-of-predicting-the-future",
+   "source": "/blog/:cat/the-pitfalls-of-predicting-the-future{/}?",
    "destination": "/blog-the-pitfalls-of-predicting-the-future",
    "statusCode": 301
   },
   {
-   "source": "/blog/the-pitfalls-of-predicting-the-future",
+   "source": "/blog/the-pitfalls-of-predicting-the-future{/}?",
    "destination": "/blog-the-pitfalls-of-predicting-the-future",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/the-power-of-protection-scenarios-where-critical-illness-cover-is-invaluable-in-the-uk",
+   "source": "/blog/:cat/the-power-of-protection-scenarios-where-critical-illness-cover-is-invaluable-in-the-uk{/}?",
    "destination": "/blog-the-power-of-protection-scenarios-where-critical-illness-cover-is-invaluable-in-the-uk",
    "statusCode": 301
   },
   {
-   "source": "/blog/the-power-of-protection-scenarios-where-critical-illness-cover-is-invaluable-in-the-uk",
+   "source": "/blog/the-power-of-protection-scenarios-where-critical-illness-cover-is-invaluable-in-the-uk{/}?",
    "destination": "/blog-the-power-of-protection-scenarios-where-critical-illness-cover-is-invaluable-in-the-uk",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/the-rise-of-wearable-health-tech",
+   "source": "/blog/:cat/the-rise-of-wearable-health-tech{/}?",
    "destination": "/blog-the-rise-of-wearable-health-tech",
    "statusCode": 301
   },
   {
-   "source": "/blog/the-rise-of-wearable-health-tech",
+   "source": "/blog/the-rise-of-wearable-health-tech{/}?",
    "destination": "/blog-the-rise-of-wearable-health-tech",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/the-value-of-a-life-insurance-broker-how-they-can-secure-the-best-policy-for-you",
+   "source": "/blog/:cat/the-value-of-a-life-insurance-broker-how-they-can-secure-the-best-policy-for-you{/}?",
    "destination": "/blog-the-value-of-a-life-insurance-broker-how-they-can-secure-the-best-policy-for-you",
    "statusCode": 301
   },
   {
-   "source": "/blog/the-value-of-a-life-insurance-broker-how-they-can-secure-the-best-policy-for-you",
+   "source": "/blog/the-value-of-a-life-insurance-broker-how-they-can-secure-the-best-policy-for-you{/}?",
    "destination": "/blog-the-value-of-a-life-insurance-broker-how-they-can-secure-the-best-policy-for-you",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/this-doesnt-happen-to-me",
+   "source": "/blog/:cat/this-doesnt-happen-to-me{/}?",
    "destination": "/blog-this-doesnt-happen-to-me",
    "statusCode": 301
   },
   {
-   "source": "/blog/this-doesnt-happen-to-me",
+   "source": "/blog/this-doesnt-happen-to-me{/}?",
    "destination": "/blog-this-doesnt-happen-to-me",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/thriving-in-your-50s-simple-and-joyful-tips-for-a-vibrant-life",
+   "source": "/blog/:cat/thriving-in-your-50s-simple-and-joyful-tips-for-a-vibrant-life{/}?",
    "destination": "/blog-thriving-in-your-50s-simple-and-joyful-tips-for-a-vibrant-life",
    "statusCode": 301
   },
   {
-   "source": "/blog/thriving-in-your-50s-simple-and-joyful-tips-for-a-vibrant-life",
+   "source": "/blog/thriving-in-your-50s-simple-and-joyful-tips-for-a-vibrant-life{/}?",
    "destination": "/blog-thriving-in-your-50s-simple-and-joyful-tips-for-a-vibrant-life",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/toilet-training-fundamentals-for-dogs",
+   "source": "/blog/:cat/toilet-training-fundamentals-for-dogs{/}?",
    "destination": "/blog-toilet-training-fundamentals-for-dogs",
    "statusCode": 301
   },
   {
-   "source": "/blog/toilet-training-fundamentals-for-dogs",
+   "source": "/blog/toilet-training-fundamentals-for-dogs{/}?",
    "destination": "/blog-toilet-training-fundamentals-for-dogs",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/top-5-financial-decisions-for-parents",
+   "source": "/blog/:cat/top-5-financial-decisions-for-parents{/}?",
    "destination": "/blog-top-5-financial-decisions-for-parents",
    "statusCode": 301
   },
   {
-   "source": "/blog/top-5-financial-decisions-for-parents",
+   "source": "/blog/top-5-financial-decisions-for-parents{/}?",
    "destination": "/blog-top-5-financial-decisions-for-parents",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/top-health-trends-to-get-you-moving-this-winter",
+   "source": "/blog/:cat/top-health-trends-to-get-you-moving-this-winter{/}?",
    "destination": "/blog-top-health-trends-to-get-you-moving-this-winter",
    "statusCode": 301
   },
   {
-   "source": "/blog/top-health-trends-to-get-you-moving-this-winter",
+   "source": "/blog/top-health-trends-to-get-you-moving-this-winter{/}?",
    "destination": "/blog-top-health-trends-to-get-you-moving-this-winter",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/topquotes-charity-work-changes-lives",
+   "source": "/blog/:cat/topquotes-charity-work-changes-lives{/}?",
    "destination": "/blog-topquotes-charity-work-changes-lives",
    "statusCode": 301
   },
   {
-   "source": "/blog/topquotes-charity-work-changes-lives",
+   "source": "/blog/topquotes-charity-work-changes-lives{/}?",
    "destination": "/blog-topquotes-charity-work-changes-lives",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/topquotes-christmas-delivery-to-wood-street-mission",
+   "source": "/blog/:cat/topquotes-christmas-delivery-to-wood-street-mission{/}?",
    "destination": "/blog-topquotes-christmas-delivery-to-wood-street-mission",
    "statusCode": 301
   },
   {
-   "source": "/blog/topquotes-christmas-delivery-to-wood-street-mission",
+   "source": "/blog/topquotes-christmas-delivery-to-wood-street-mission{/}?",
    "destination": "/blog-topquotes-christmas-delivery-to-wood-street-mission",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/topquotes-guide-is-your-life-insurance-keeping-up-with-rising-prices",
+   "source": "/blog/:cat/topquotes-guide-is-your-life-insurance-keeping-up-with-rising-prices{/}?",
    "destination": "/blog-topquotes-guide-is-your-life-insurance-keeping-up-with-rising-prices",
    "statusCode": 301
   },
   {
-   "source": "/blog/topquotes-guide-is-your-life-insurance-keeping-up-with-rising-prices",
+   "source": "/blog/topquotes-guide-is-your-life-insurance-keeping-up-with-rising-prices{/}?",
    "destination": "/blog-topquotes-guide-is-your-life-insurance-keeping-up-with-rising-prices",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/topquotes-top-three-uk-holiday-destinations",
+   "source": "/blog/:cat/topquotes-top-three-uk-holiday-destinations{/}?",
    "destination": "/blog-topquotes-top-three-uk-holiday-destinations",
    "statusCode": 301
   },
   {
-   "source": "/blog/topquotes-top-three-uk-holiday-destinations",
+   "source": "/blog/topquotes-top-three-uk-holiday-destinations{/}?",
    "destination": "/blog-topquotes-top-three-uk-holiday-destinations",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/toy-drop",
+   "source": "/blog/:cat/toy-drop{/}?",
    "destination": "/blog-toy-drop",
    "statusCode": 301
   },
   {
-   "source": "/blog/toy-drop",
+   "source": "/blog/toy-drop{/}?",
    "destination": "/blog-toy-drop",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/uks-top-12-christmas-markets-a-festive-journey-of-joy-and-wonder",
+   "source": "/blog/:cat/uks-top-12-christmas-markets-a-festive-journey-of-joy-and-wonder{/}?",
    "destination": "/blog-uks-top-12-christmas-markets-a-festive-journey-of-joy-and-wonder",
    "statusCode": 301
   },
   {
-   "source": "/blog/uks-top-12-christmas-markets-a-festive-journey-of-joy-and-wonder",
+   "source": "/blog/uks-top-12-christmas-markets-a-festive-journey-of-joy-and-wonder{/}?",
    "destination": "/blog-uks-top-12-christmas-markets-a-festive-journey-of-joy-and-wonder",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/uncertainty-ahead-this-winter",
+   "source": "/blog/:cat/uncertainty-ahead-this-winter{/}?",
    "destination": "/blog-uncertainty-ahead-this-winter",
    "statusCode": 301
   },
   {
-   "source": "/blog/uncertainty-ahead-this-winter",
+   "source": "/blog/uncertainty-ahead-this-winter{/}?",
    "destination": "/blog-uncertainty-ahead-this-winter",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/understanding-and-managing-debt-a-comprehensive-guide",
+   "source": "/blog/:cat/understanding-and-managing-debt-a-comprehensive-guide{/}?",
    "destination": "/blog-understanding-and-managing-debt-a-comprehensive-guide",
    "statusCode": 301
   },
   {
-   "source": "/blog/understanding-and-managing-debt-a-comprehensive-guide",
+   "source": "/blog/understanding-and-managing-debt-a-comprehensive-guide{/}?",
    "destination": "/blog-understanding-and-managing-debt-a-comprehensive-guide",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/we-love-mcr-2017",
+   "source": "/blog/:cat/we-love-mcr-2017{/}?",
    "destination": "/blog-we-love-mcr-2017",
    "statusCode": 301
   },
   {
-   "source": "/blog/we-love-mcr-2017",
+   "source": "/blog/we-love-mcr-2017{/}?",
    "destination": "/blog-we-love-mcr-2017",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/what-factors-affect-a-life-insurance-quote",
+   "source": "/blog/:cat/what-factors-affect-a-life-insurance-quote{/}?",
    "destination": "/blog-what-factors-affect-a-life-insurance-quote",
    "statusCode": 301
   },
   {
-   "source": "/blog/what-factors-affect-a-life-insurance-quote",
+   "source": "/blog/what-factors-affect-a-life-insurance-quote{/}?",
    "destination": "/blog-what-factors-affect-a-life-insurance-quote",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/what-happens-if-you-outlive-your-life-insurance-term",
+   "source": "/blog/:cat/what-happens-if-you-outlive-your-life-insurance-term{/}?",
    "destination": "/blog-what-happens-if-you-outlive-your-life-insurance-term",
    "statusCode": 301
   },
   {
-   "source": "/blog/what-happens-if-you-outlive-your-life-insurance-term",
+   "source": "/blog/what-happens-if-you-outlive-your-life-insurance-term{/}?",
    "destination": "/blog-what-happens-if-you-outlive-your-life-insurance-term",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/what-is-critical-illness-cover-and-why-you-might-need-it",
+   "source": "/blog/:cat/what-is-critical-illness-cover-and-why-you-might-need-it{/}?",
    "destination": "/blog-what-is-critical-illness-cover-and-why-you-might-need-it",
    "statusCode": 301
   },
   {
-   "source": "/blog/what-is-critical-illness-cover-and-why-you-might-need-it",
+   "source": "/blog/what-is-critical-illness-cover-and-why-you-might-need-it{/}?",
    "destination": "/blog-what-is-critical-illness-cover-and-why-you-might-need-it",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/what-is-the-loyalty-penalty",
+   "source": "/blog/:cat/what-is-the-loyalty-penalty{/}?",
    "destination": "/blog-what-is-the-loyalty-penalty",
    "statusCode": 301
   },
   {
-   "source": "/blog/what-is-the-loyalty-penalty",
+   "source": "/blog/what-is-the-loyalty-penalty{/}?",
    "destination": "/blog-what-is-the-loyalty-penalty",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/whats-the-best-time-to-eat-for-your-health-discover-why-when-you-eat-matters-as-much-as-what-you-eat",
+   "source": "/blog/:cat/whats-the-best-time-to-eat-for-your-health-discover-why-when-you-eat-matters-as-much-as-what-you-eat{/}?",
    "destination": "/blog-whats-the-best-time-to-eat-for-your-health-discover-why-when-you-eat-matters-as-much-as-what-you-eat",
    "statusCode": 301
   },
   {
-   "source": "/blog/whats-the-best-time-to-eat-for-your-health-discover-why-when-you-eat-matters-as-much-as-what-you-eat",
+   "source": "/blog/whats-the-best-time-to-eat-for-your-health-discover-why-when-you-eat-matters-as-much-as-what-you-eat{/}?",
    "destination": "/blog-whats-the-best-time-to-eat-for-your-health-discover-why-when-you-eat-matters-as-much-as-what-you-eat",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/whats-the-difference-between-critical-illness-and-terminal-illness",
+   "source": "/blog/:cat/whats-the-difference-between-critical-illness-and-terminal-illness{/}?",
    "destination": "/blog-whats-the-difference-between-critical-illness-and-terminal-illness",
    "statusCode": 301
   },
   {
-   "source": "/blog/whats-the-difference-between-critical-illness-and-terminal-illness",
+   "source": "/blog/whats-the-difference-between-critical-illness-and-terminal-illness{/}?",
    "destination": "/blog-whats-the-difference-between-critical-illness-and-terminal-illness",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/whats-the-most-heartfelt-gift-for-your-grandchildren",
+   "source": "/blog/:cat/whats-the-most-heartfelt-gift-for-your-grandchildren{/}?",
    "destination": "/blog-whats-the-most-heartfelt-gift-for-your-grandchildren",
    "statusCode": 301
   },
   {
-   "source": "/blog/whats-the-most-heartfelt-gift-for-your-grandchildren",
+   "source": "/blog/whats-the-most-heartfelt-gift-for-your-grandchildren{/}?",
    "destination": "/blog-whats-the-most-heartfelt-gift-for-your-grandchildren",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/when-should-i-get-life-insurance",
+   "source": "/blog/:cat/when-should-i-get-life-insurance{/}?",
    "destination": "/blog-when-should-i-get-life-insurance",
    "statusCode": 301
   },
   {
-   "source": "/blog/when-should-i-get-life-insurance",
+   "source": "/blog/when-should-i-get-life-insurance{/}?",
    "destination": "/blog-when-should-i-get-life-insurance",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/why-is-it-important-to-review-life-cover",
+   "source": "/blog/:cat/why-is-it-important-to-review-life-cover{/}?",
    "destination": "/blog-why-is-it-important-to-review-life-cover",
    "statusCode": 301
   },
   {
-   "source": "/blog/why-is-it-important-to-review-life-cover",
+   "source": "/blog/why-is-it-important-to-review-life-cover{/}?",
    "destination": "/blog-why-is-it-important-to-review-life-cover",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/why-new-years-resolutions-dont-work-and-how-to-create-lasting-change",
+   "source": "/blog/:cat/why-new-years-resolutions-dont-work-and-how-to-create-lasting-change{/}?",
    "destination": "/blog-why-new-years-resolutions-dont-work-and-how-to-create-lasting-change",
    "statusCode": 301
   },
   {
-   "source": "/blog/why-new-years-resolutions-dont-work-and-how-to-create-lasting-change",
+   "source": "/blog/why-new-years-resolutions-dont-work-and-how-to-create-lasting-change{/}?",
    "destination": "/blog-why-new-years-resolutions-dont-work-and-how-to-create-lasting-change",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/why-should-millennials-get-life-insurance",
+   "source": "/blog/:cat/why-should-millennials-get-life-insurance{/}?",
    "destination": "/blog-why-should-millennials-get-life-insurance",
    "statusCode": 301
   },
   {
-   "source": "/blog/why-should-millennials-get-life-insurance",
+   "source": "/blog/why-should-millennials-get-life-insurance{/}?",
    "destination": "/blog-why-should-millennials-get-life-insurance",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/why-should-stay-home-parents-consider-life-insurance",
+   "source": "/blog/:cat/why-should-stay-home-parents-consider-life-insurance{/}?",
    "destination": "/blog-why-should-stay-home-parents-consider-life-insurance",
    "statusCode": 301
   },
   {
-   "source": "/blog/why-should-stay-home-parents-consider-life-insurance",
+   "source": "/blog/why-should-stay-home-parents-consider-life-insurance{/}?",
    "destination": "/blog-why-should-stay-home-parents-consider-life-insurance",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/wood-st-mission-a-gift-of-hope",
+   "source": "/blog/:cat/wood-st-mission-a-gift-of-hope{/}?",
    "destination": "/blog-wood-st-mission-a-gift-of-hope",
    "statusCode": 301
   },
   {
-   "source": "/blog/wood-st-mission-a-gift-of-hope",
+   "source": "/blog/wood-st-mission-a-gift-of-hope{/}?",
    "destination": "/blog-wood-st-mission-a-gift-of-hope",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/wood-street-mission",
+   "source": "/blog/:cat/wood-street-mission{/}?",
    "destination": "/blog-wood-street-mission",
    "statusCode": 301
   },
   {
-   "source": "/blog/wood-street-mission",
+   "source": "/blog/wood-street-mission{/}?",
    "destination": "/blog-wood-street-mission",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/worried",
+   "source": "/blog/:cat/worried{/}?",
    "destination": "/blog-worried",
    "statusCode": 301
   },
   {
-   "source": "/blog/worried",
+   "source": "/blog/worried{/}?",
    "destination": "/blog-worried",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/wsm",
+   "source": "/blog/:cat/wsm{/}?",
    "destination": "/blog-wsm",
    "statusCode": 301
   },
   {
-   "source": "/blog/wsm",
+   "source": "/blog/wsm{/}?",
    "destination": "/blog-wsm",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/youre-wrong",
+   "source": "/blog/:cat/youre-wrong{/}?",
    "destination": "/blog-youre-wrong",
    "statusCode": 301
   },
   {
-   "source": "/blog/youre-wrong",
+   "source": "/blog/youre-wrong{/}?",
    "destination": "/blog-youre-wrong",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/life-insurance-for-diabetics",
+   "source": "/blog/:cat/life-insurance-for-diabetics{/}?",
    "destination": "/blog-life-insurance-with-pre-existing-conditions",
    "statusCode": 301
   },
   {
-   "source": "/blog/life-insurance-for-diabetics",
+   "source": "/blog/life-insurance-for-diabetics{/}?",
    "destination": "/blog-life-insurance-with-pre-existing-conditions",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/life-insurance-for-high-blood-pressure",
+   "source": "/blog/:cat/life-insurance-for-high-blood-pressure{/}?",
    "destination": "/blog-life-insurance-with-pre-existing-conditions",
    "statusCode": 301
   },
   {
-   "source": "/blog/life-insurance-for-high-blood-pressure",
+   "source": "/blog/life-insurance-for-high-blood-pressure{/}?",
    "destination": "/blog-life-insurance-with-pre-existing-conditions",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/putting-life-insurance-in-trust-a-uk-guide",
+   "source": "/blog/:cat/putting-life-insurance-in-trust-a-uk-guide{/}?",
    "destination": "/blog-is-life-insurance-part-of-your-estate",
    "statusCode": 301
   },
   {
-   "source": "/blog/putting-life-insurance-in-trust-a-uk-guide",
+   "source": "/blog/putting-life-insurance-in-trust-a-uk-guide{/}?",
    "destination": "/blog-is-life-insurance-part-of-your-estate",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/life-insurance-beneficiary-rules",
+   "source": "/blog/:cat/life-insurance-beneficiary-rules{/}?",
    "destination": "/blog-is-life-insurance-part-of-your-estate",
    "statusCode": 301
   },
   {
-   "source": "/blog/life-insurance-beneficiary-rules",
+   "source": "/blog/life-insurance-beneficiary-rules{/}?",
    "destination": "/blog-is-life-insurance-part-of-your-estate",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/do-you-need-a-medical-for-life-insurance",
+   "source": "/blog/:cat/do-you-need-a-medical-for-life-insurance{/}?",
    "destination": "/blog-how-do-life-insurance-companies-obtain-your-medical-information",
    "statusCode": 301
   },
   {
-   "source": "/blog/do-you-need-a-medical-for-life-insurance",
+   "source": "/blog/do-you-need-a-medical-for-life-insurance{/}?",
    "destination": "/blog-how-do-life-insurance-companies-obtain-your-medical-information",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/how-is-life-insurance-paid-out-a-plain-english-uk-guide",
+   "source": "/blog/:cat/how-is-life-insurance-paid-out-a-plain-english-uk-guide{/}?",
    "destination": "/blog-claiming",
    "statusCode": 301
   },
   {
-   "source": "/blog/how-is-life-insurance-paid-out-a-plain-english-uk-guide",
+   "source": "/blog/how-is-life-insurance-paid-out-a-plain-english-uk-guide{/}?",
    "destination": "/blog-claiming",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/how-long-does-a-life-insurance-claim-take-to-pay-out-in-the-uk-refresh",
+   "source": "/blog/:cat/how-long-does-a-life-insurance-claim-take-to-pay-out-in-the-uk-refresh{/}?",
    "destination": "/blog-claiming",
    "statusCode": 301
   },
   {
-   "source": "/blog/how-long-does-a-life-insurance-claim-take-to-pay-out-in-the-uk-refresh",
+   "source": "/blog/how-long-does-a-life-insurance-claim-take-to-pay-out-in-the-uk-refresh{/}?",
    "destination": "/blog-claiming",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/critical-illness-cover-for-cancer-what-it-covers",
+   "source": "/blog/:cat/critical-illness-cover-for-cancer-what-it-covers{/}?",
    "destination": "/blog-what-is-critical-illness-cover-and-why-you-might-need-it",
    "statusCode": 301
   },
   {
-   "source": "/blog/critical-illness-cover-for-cancer-what-it-covers",
+   "source": "/blog/critical-illness-cover-for-cancer-what-it-covers{/}?",
    "destination": "/blog-what-is-critical-illness-cover-and-why-you-might-need-it",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/can-you-have-more-than-one-life-insurance-policy-2",
+   "source": "/blog/:cat/can-you-have-more-than-one-life-insurance-policy-2{/}?",
    "destination": "/blog-can-you-have-more-than-one-life-insurance-policy",
    "statusCode": 301
   },
   {
-   "source": "/blog/can-you-have-more-than-one-life-insurance-policy-2",
+   "source": "/blog/can-you-have-more-than-one-life-insurance-policy-2{/}?",
    "destination": "/blog-can-you-have-more-than-one-life-insurance-policy",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/life-insurance-and-dangerous-hobbies-what-uk-insurers-ask",
+   "source": "/blog/:cat/life-insurance-and-dangerous-hobbies-what-uk-insurers-ask{/}?",
    "destination": "/blog-what-factors-affect-a-life-insurance-quote",
    "statusCode": 301
   },
   {
-   "source": "/blog/life-insurance-and-dangerous-hobbies-what-uk-insurers-ask",
+   "source": "/blog/life-insurance-and-dangerous-hobbies-what-uk-insurers-ask{/}?",
    "destination": "/blog-what-factors-affect-a-life-insurance-quote",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/do-you-need-life-insurance-if-you-have-no-children",
+   "source": "/blog/:cat/do-you-need-life-insurance-if-you-have-no-children{/}?",
    "destination": "/blog-do-i-need-life-insurance-if-im-single",
    "statusCode": 301
   },
   {
-   "source": "/blog/do-you-need-life-insurance-if-you-have-no-children",
+   "source": "/blog/do-you-need-life-insurance-if-you-have-no-children{/}?",
    "destination": "/blog-do-i-need-life-insurance-if-im-single",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/life-insurance-in-your-40s-what-to-think-about",
+   "source": "/blog/:cat/life-insurance-in-your-40s-what-to-think-about{/}?",
    "destination": "/blog-when-should-i-get-life-insurance",
    "statusCode": 301
   },
   {
-   "source": "/blog/life-insurance-in-your-40s-what-to-think-about",
+   "source": "/blog/life-insurance-in-your-40s-what-to-think-about{/}?",
    "destination": "/blog-when-should-i-get-life-insurance",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/what-happens-to-life-insurance-when-the-mortgage-is-paid-off",
+   "source": "/blog/:cat/what-happens-to-life-insurance-when-the-mortgage-is-paid-off{/}?",
    "destination": "/blog-what-happens-if-you-outlive-your-life-insurance-term",
    "statusCode": 301
   },
   {
-   "source": "/blog/what-happens-to-life-insurance-when-the-mortgage-is-paid-off",
+   "source": "/blog/what-happens-to-life-insurance-when-the-mortgage-is-paid-off{/}?",
    "destination": "/blog-what-happens-if-you-outlive-your-life-insurance-term",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/can-you-cancel-life-insurance-what-happens-when-you-do",
+   "source": "/blog/:cat/can-you-cancel-life-insurance-what-happens-when-you-do{/}?",
    "destination": "/blog-why-is-it-important-to-review-life-cover",
    "statusCode": 301
   },
   {
-   "source": "/blog/can-you-cancel-life-insurance-what-happens-when-you-do",
+   "source": "/blog/can-you-cancel-life-insurance-what-happens-when-you-do{/}?",
    "destination": "/blog-why-is-it-important-to-review-life-cover",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/life-insurance-vs-income-protection-which-do-you-need",
+   "source": "/blog/:cat/life-insurance-vs-income-protection-which-do-you-need{/}?",
    "destination": "/blog-do-you-need-income-protection",
    "statusCode": 301
   },
   {
-   "source": "/blog/life-insurance-vs-income-protection-which-do-you-need",
+   "source": "/blog/life-insurance-vs-income-protection-which-do-you-need{/}?",
    "destination": "/blog-do-you-need-income-protection",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/family-income-benefit-explained-how-it-works",
+   "source": "/blog/:cat/family-income-benefit-explained-how-it-works{/}?",
    "destination": "/family-life-insurance",
    "statusCode": 301
   },
   {
-   "source": "/blog/family-income-benefit-explained-how-it-works",
+   "source": "/blog/family-income-benefit-explained-how-it-works{/}?",
    "destination": "/family-life-insurance",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/life-insurance-for-over-60s-what-to-know-in-your-sixties",
+   "source": "/blog/:cat/life-insurance-for-over-60s-what-to-know-in-your-sixties{/}?",
    "destination": "/life-insurance",
    "statusCode": 301
   },
   {
-   "source": "/blog/life-insurance-for-over-60s-what-to-know-in-your-sixties",
+   "source": "/blog/life-insurance-for-over-60s-what-to-know-in-your-sixties{/}?",
    "destination": "/life-insurance",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/increasing-term-life-insurance-explained",
+   "source": "/blog/:cat/increasing-term-life-insurance-explained{/}?",
    "destination": "/life-insurance",
    "statusCode": 301
   },
   {
-   "source": "/blog/increasing-term-life-insurance-explained",
+   "source": "/blog/increasing-term-life-insurance-explained{/}?",
    "destination": "/life-insurance",
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/is-death-in-service-enough",
+   "source": "/blog/:cat/is-death-in-service-enough{/}?",
    "destination": "/life-insurance",
    "statusCode": 301
   },
   {
-   "source": "/blog/is-death-in-service-enough",
+   "source": "/blog/is-death-in-service-enough{/}?",
    "destination": "/life-insurance",
    "statusCode": 301
   },
   {
-   "source": "/10-achievable-new-years-resolutions-for-a-healthier-and-happier-2024",
+   "source": "/10-achievable-new-years-resolutions-for-a-healthier-and-happier-2024{/}?",
    "destination": "/blog-10-achievable-new-years-resolutions-for-a-healthier-and-happier-2024",
    "statusCode": 301
   },
   {
-   "source": "/10-delightful-christmas-activities-you-can-do-all-december-long",
+   "source": "/10-delightful-christmas-activities-you-can-do-all-december-long{/}?",
    "destination": "/blog-10-delightful-christmas-activities-you-can-do-all-december-long",
    "statusCode": 301
   },
   {
-   "source": "/10-organisation-hacks-to-declutter-your-home",
+   "source": "/10-organisation-hacks-to-declutter-your-home{/}?",
    "destination": "/blog-10-organisation-hacks-to-declutter-your-home",
    "statusCode": 301
   },
   {
-   "source": "/2015-christmas-toy-drop",
+   "source": "/2015-christmas-toy-drop{/}?",
    "destination": "/blog-2015-christmas-toy-drop",
    "statusCode": 301
   },
   {
-   "source": "/2015-donations",
+   "source": "/2015-donations{/}?",
    "destination": "/blog-2015-donations",
    "statusCode": 301
   },
   {
-   "source": "/3-strategies-to-help-you-prioritise-your-monthly-outgoings",
+   "source": "/3-strategies-to-help-you-prioritise-your-monthly-outgoings{/}?",
    "destination": "/blog-3-strategies-to-help-you-prioritise-your-monthly-outgoings",
    "statusCode": 301
   },
   {
-   "source": "/3-ways-to-prepare-for-extreme-weather-this-winter",
+   "source": "/3-ways-to-prepare-for-extreme-weather-this-winter{/}?",
    "destination": "/blog-3-ways-to-prepare-for-extreme-weather-this-winter",
    "statusCode": 301
   },
   {
-   "source": "/5-best-ways-to-stop-smoking",
+   "source": "/5-best-ways-to-stop-smoking{/}?",
    "destination": "/blog-5-best-ways-to-stop-smoking",
    "statusCode": 301
   },
   {
-   "source": "/5-conversations-every-couple-should-have-about-their-future",
+   "source": "/5-conversations-every-couple-should-have-about-their-future{/}?",
    "destination": "/blog-5-conversations-every-couple-should-have-about-their-future",
    "statusCode": 301
   },
   {
-   "source": "/5-exercises-you-can-fit-into-everyday-life",
+   "source": "/5-exercises-you-can-fit-into-everyday-life{/}?",
    "destination": "/blog-5-exercises-you-can-fit-into-everyday-life",
    "statusCode": 301
   },
   {
-   "source": "/5-reasons-to-use-an-insurance-broker",
+   "source": "/5-reasons-to-use-an-insurance-broker{/}?",
    "destination": "/blog-5-reasons-to-use-an-insurance-broker",
    "statusCode": 301
   },
   {
-   "source": "/5-simple-ways-to-hit-10000-steps-a-day",
+   "source": "/5-simple-ways-to-hit-10000-steps-a-day{/}?",
    "destination": "/blog-5-simple-ways-to-hit-10000-steps-a-day",
    "statusCode": 301
   },
   {
-   "source": "/5-ways-to-a-healthy-heart",
+   "source": "/5-ways-to-a-healthy-heart{/}?",
    "destination": "/blog-5-ways-to-a-healthy-heart",
    "statusCode": 301
   },
   {
-   "source": "/6-ways-to-stay-healthy-in-the-office",
+   "source": "/6-ways-to-stay-healthy-in-the-office{/}?",
    "destination": "/blog-6-ways-to-stay-healthy-in-the-office",
    "statusCode": 301
   },
   {
-   "source": "/8-times-you-should-review-your-life-cover",
+   "source": "/8-times-you-should-review-your-life-cover{/}?",
    "destination": "/blog-8-times-you-should-review-your-life-cover",
    "statusCode": 301
   },
   {
-   "source": "/a-guide-to-teaching-your-dog-their-name",
+   "source": "/a-guide-to-teaching-your-dog-their-name{/}?",
    "destination": "/blog-a-guide-to-teaching-your-dog-their-name",
    "statusCode": 301
   },
   {
-   "source": "/a-life-of-worry",
+   "source": "/a-life-of-worry{/}?",
    "destination": "/blog-a-life-of-worry",
    "statusCode": 301
   },
   {
-   "source": "/affordable-family-days-out-before-summer-ends",
+   "source": "/affordable-family-days-out-before-summer-ends{/}?",
    "destination": "/blog-affordable-family-days-out-before-summer-ends",
    "statusCode": 301
   },
   {
-   "source": "/always-check-your-changes",
+   "source": "/always-check-your-changes{/}?",
    "destination": "/blog-always-check-your-changes",
    "statusCode": 301
   },
   {
-   "source": "/amidst-the-current-economic-challenges-the-significance-of-financial-planning-becomes-undeniable-why-is-it-more",
+   "source": "/amidst-the-current-economic-challenges-the-significance-of-financial-planning-becomes-undeniable-why-is-it-more{/}?",
    "destination": "/blog-amidst-the-current-economic-challenges-the-significance-of-financial-planning-becomes-undeniable-why-is-it-more",
    "statusCode": 301
   },
   {
-   "source": "/beat-the-blues-with-these-winter-lighting-tips",
+   "source": "/beat-the-blues-with-these-winter-lighting-tips{/}?",
    "destination": "/blog-beat-the-blues-with-these-winter-lighting-tips",
    "statusCode": 301
   },
   {
-   "source": "/best-winter-breaks",
+   "source": "/best-winter-breaks{/}?",
    "destination": "/blog-best-winter-breaks",
    "statusCode": 301
   },
   {
-   "source": "/busting-common-life-insurance-myths",
+   "source": "/busting-common-life-insurance-myths{/}?",
    "destination": "/blog-busting-common-life-insurance-myths",
    "statusCode": 301
   },
   {
-   "source": "/cake-bake-dress-down-and-auction",
+   "source": "/cake-bake-dress-down-and-auction{/}?",
    "destination": "/blog-cake-bake-dress-down-and-auction",
    "statusCode": 301
   },
   {
-   "source": "/can-you-get-critical-illness-cover-without-life-insurance",
+   "source": "/can-you-get-critical-illness-cover-without-life-insurance{/}?",
    "destination": "/blog-can-you-get-critical-illness-cover-without-life-insurance",
    "statusCode": 301
   },
   {
-   "source": "/can-you-have-more-than-one-life-insurance-policy",
+   "source": "/can-you-have-more-than-one-life-insurance-policy{/}?",
    "destination": "/blog-can-you-have-more-than-one-life-insurance-policy",
    "statusCode": 301
   },
   {
-   "source": "/charity-update",
+   "source": "/charity-update{/}?",
    "destination": "/blog-charity-update",
    "statusCode": 301
   },
   {
-   "source": "/charity-video",
+   "source": "/charity-video{/}?",
    "destination": "/blog-charity-video",
    "statusCode": 301
   },
   {
-   "source": "/choosing-the-right-length-of-time-for-your-life-insurance-cover",
+   "source": "/choosing-the-right-length-of-time-for-your-life-insurance-cover{/}?",
    "destination": "/blog-choosing-the-right-length-of-time-for-your-life-insurance-cover",
    "statusCode": 301
   },
   {
-   "source": "/christmas-2014",
+   "source": "/christmas-2014{/}?",
    "destination": "/blog-christmas-2014",
    "statusCode": 301
   },
   {
-   "source": "/claiming",
+   "source": "/claiming{/}?",
    "destination": "/blog-claiming",
    "statusCode": 301
   },
   {
-   "source": "/cold-weather-wellness-guide",
+   "source": "/cold-weather-wellness-guide{/}?",
    "destination": "/blog-cold-weather-wellness-guide",
    "statusCode": 301
   },
   {
-   "source": "/connecting-you-now",
+   "source": "/connecting-you-now{/}?",
    "destination": "/blog-connecting-you-now",
    "statusCode": 301
   },
   {
-   "source": "/coronavirus-what-you-need-to-know-about-whether-youre-covered",
+   "source": "/coronavirus-what-you-need-to-know-about-whether-youre-covered{/}?",
    "destination": "/blog-coronavirus-what-you-need-to-know-about-whether-youre-covered",
    "statusCode": 301
   },
   {
-   "source": "/de-icing-your-car-and-other-essential-winter-tips",
+   "source": "/de-icing-your-car-and-other-essential-winter-tips{/}?",
    "destination": "/blog-de-icing-your-car-and-other-essential-winter-tips",
    "statusCode": 301
   },
   {
-   "source": "/destinations-for-an-active-holiday",
+   "source": "/destinations-for-an-active-holiday{/}?",
    "destination": "/blog-destinations-for-an-active-holiday",
    "statusCode": 301
   },
   {
-   "source": "/digital-tools-for-effective-personal-finance-management",
+   "source": "/digital-tools-for-effective-personal-finance-management{/}?",
    "destination": "/blog-digital-tools-for-effective-personal-finance-management",
    "statusCode": 301
   },
   {
-   "source": "/do-i-need-life-insurance-if-im-single",
+   "source": "/do-i-need-life-insurance-if-im-single{/}?",
    "destination": "/blog-do-i-need-life-insurance-if-im-single",
    "statusCode": 301
   },
   {
-   "source": "/do-you-need-income-protection",
+   "source": "/do-you-need-income-protection{/}?",
    "destination": "/blog-do-you-need-income-protection",
    "statusCode": 301
   },
   {
-   "source": "/easter-2016",
+   "source": "/easter-2016{/}?",
    "destination": "/blog-easter-2016",
    "statusCode": 301
   },
   {
-   "source": "/enhancing-financial-protection-how-life-insurance-complements-emergency-funds-and-more",
+   "source": "/enhancing-financial-protection-how-life-insurance-complements-emergency-funds-and-more{/}?",
    "destination": "/blog-enhancing-financial-protection-how-life-insurance-complements-emergency-funds-and-more",
    "statusCode": 301
   },
   {
-   "source": "/ensuring-a-stable-future-how-life-insurance-safeguards-your-loved-ones-in-the-uk",
+   "source": "/ensuring-a-stable-future-how-life-insurance-safeguards-your-loved-ones-in-the-uk{/}?",
    "destination": "/blog-ensuring-a-stable-future-how-life-insurance-safeguards-your-loved-ones-in-the-uk",
    "statusCode": 301
   },
   {
-   "source": "/ensuring-business-succession-and-continuity-the-significance-of-life-insurance",
+   "source": "/ensuring-business-succession-and-continuity-the-significance-of-life-insurance{/}?",
    "destination": "/blog-ensuring-business-succession-and-continuity-the-significance-of-life-insurance",
    "statusCode": 301
   },
   {
-   "source": "/essential-questions-to-ask-your-life-insurance-broker",
+   "source": "/essential-questions-to-ask-your-life-insurance-broker{/}?",
    "destination": "/blog-essential-questions-to-ask-your-life-insurance-broker",
    "statusCode": 301
   },
   {
-   "source": "/festive-family-ideas",
+   "source": "/festive-family-ideas{/}?",
    "destination": "/blog-festive-family-ideas",
    "statusCode": 301
   },
   {
-   "source": "/finding-peace-of-mind-in-a-changing-world",
+   "source": "/finding-peace-of-mind-in-a-changing-world{/}?",
    "destination": "/blog-finding-peace-of-mind-in-a-changing-world",
    "statusCode": 301
   },
   {
-   "source": "/five-ways-to-get-cheaper-train-tickets",
+   "source": "/five-ways-to-get-cheaper-train-tickets{/}?",
    "destination": "/blog-five-ways-to-get-cheaper-train-tickets",
    "statusCode": 301
   },
   {
-   "source": "/for-sale-or-force-sale-black-friday-madness",
+   "source": "/for-sale-or-force-sale-black-friday-madness{/}?",
    "destination": "/blog-for-sale-or-force-sale-black-friday-madness",
    "statusCode": 301
   },
   {
-   "source": "/francis-house-childrens-hospice",
+   "source": "/francis-house-childrens-hospice{/}?",
    "destination": "/blog-francis-house-childrens-hospice",
    "statusCode": 301
   },
   {
-   "source": "/gp24",
+   "source": "/gp24{/}?",
    "destination": "/blog-gp24",
    "statusCode": 301
   },
   {
-   "source": "/healthy-pancake-recipes-for-shrove-tuesday",
+   "source": "/healthy-pancake-recipes-for-shrove-tuesday{/}?",
    "destination": "/blog-healthy-pancake-recipes-for-shrove-tuesday",
    "statusCode": 301
   },
   {
-   "source": "/healthy-plate-healthy-mind",
+   "source": "/healthy-plate-healthy-mind{/}?",
    "destination": "/blog-healthy-plate-healthy-mind",
    "statusCode": 301
   },
   {
-   "source": "/here-we-go-again-how-to-avoid-groundhog-day",
+   "source": "/here-we-go-again-how-to-avoid-groundhog-day{/}?",
    "destination": "/blog-here-we-go-again-how-to-avoid-groundhog-day",
    "statusCode": 301
   },
   {
-   "source": "/holiday-travel-tips-for-the-savvy-adventurer",
+   "source": "/holiday-travel-tips-for-the-savvy-adventurer{/}?",
    "destination": "/blog-holiday-travel-tips-for-the-savvy-adventurer",
    "statusCode": 301
   },
   {
-   "source": "/how-ai-is-changing-gp-appointments-topquote",
+   "source": "/how-ai-is-changing-gp-appointments-topquote{/}?",
    "destination": "/blog-how-ai-is-changing-gp-appointments-topquote",
    "statusCode": 301
   },
   {
-   "source": "/how-are-portable-x-rays-enhancing-healthcare-in-remote-areas",
+   "source": "/how-are-portable-x-rays-enhancing-healthcare-in-remote-areas{/}?",
    "destination": "/blog-how-are-portable-x-rays-enhancing-healthcare-in-remote-areas",
    "statusCode": 301
   },
   {
-   "source": "/how-close-are-you-to-the-breadline",
+   "source": "/how-close-are-you-to-the-breadline{/}?",
    "destination": "/blog-how-close-are-you-to-the-breadline",
    "statusCode": 301
   },
   {
-   "source": "/how-do-life-insurance-companies-obtain-your-medical-information",
+   "source": "/how-do-life-insurance-companies-obtain-your-medical-information{/}?",
    "destination": "/blog-how-do-life-insurance-companies-obtain-your-medical-information",
    "statusCode": 301
   },
   {
-   "source": "/how-many-parents-are-without-life-insurance",
+   "source": "/how-many-parents-are-without-life-insurance{/}?",
    "destination": "/blog-how-many-parents-are-without-life-insurance",
    "statusCode": 301
   },
   {
-   "source": "/how-much-life-insurance-do-parents-really-need",
+   "source": "/how-much-life-insurance-do-parents-really-need{/}?",
    "destination": "/blog-how-much-life-insurance-do-parents-really-need",
    "statusCode": 301
   },
   {
-   "source": "/how-much-life-insurance-do-you-need",
+   "source": "/how-much-life-insurance-do-you-need{/}?",
    "destination": "/blog-how-much-life-insurance-do-you-need",
    "statusCode": 301
   },
   {
-   "source": "/how-owning-a-pet-can-improve-mental-health",
+   "source": "/how-owning-a-pet-can-improve-mental-health{/}?",
    "destination": "/blog-how-owning-a-pet-can-improve-mental-health",
    "statusCode": 301
   },
   {
-   "source": "/how-to-cope-with-the-loss-of-a-spouse",
+   "source": "/how-to-cope-with-the-loss-of-a-spouse{/}?",
    "destination": "/blog-how-to-cope-with-the-loss-of-a-spouse",
    "statusCode": 301
   },
   {
-   "source": "/how-to-find-lost-life-insurance",
+   "source": "/how-to-find-lost-life-insurance{/}?",
    "destination": "/blog-how-to-find-lost-life-insurance",
    "statusCode": 301
   },
   {
-   "source": "/how-to-get-a-dopamine-boost-in-your-50",
+   "source": "/how-to-get-a-dopamine-boost-in-your-50{/}?",
    "destination": "/blog-how-to-get-a-dopamine-boost-in-your-50",
    "statusCode": 301
   },
   {
-   "source": "/how-to-make-life-insurance-claim",
+   "source": "/how-to-make-life-insurance-claim{/}?",
    "destination": "/blog-how-to-make-life-insurance-claim",
    "statusCode": 301
   },
   {
-   "source": "/how-to-make-those-resolutions-stick",
+   "source": "/how-to-make-those-resolutions-stick{/}?",
    "destination": "/blog-how-to-make-those-resolutions-stick",
    "statusCode": 301
   },
   {
-   "source": "/how-to-quit-caffeine-without-withdrawal",
+   "source": "/how-to-quit-caffeine-without-withdrawal{/}?",
    "destination": "/blog-how-to-quit-caffeine-without-withdrawal",
    "statusCode": 301
   },
   {
-   "source": "/how-to-quit-vaping",
+   "source": "/how-to-quit-vaping{/}?",
    "destination": "/blog-how-to-quit-vaping",
    "statusCode": 301
   },
   {
-   "source": "/how-to-stop-procrastination-in-two-minutes",
+   "source": "/how-to-stop-procrastination-in-two-minutes{/}?",
    "destination": "/blog-how-to-stop-procrastination-in-two-minutes",
    "statusCode": 301
   },
   {
-   "source": "/how-valuable-is-your-childs-school-bag",
+   "source": "/how-valuable-is-your-childs-school-bag{/}?",
    "destination": "/blog-how-valuable-is-your-childs-school-bag",
    "statusCode": 301
   },
   {
-   "source": "/income-protection-vs-critical-illness",
+   "source": "/income-protection-vs-critical-illness{/}?",
    "destination": "/blog-income-protection-vs-critical-illness",
    "statusCode": 301
   },
   {
-   "source": "/investing-in-your-health-the-importance-of-regular-check-ups",
+   "source": "/investing-in-your-health-the-importance-of-regular-check-ups{/}?",
    "destination": "/blog-investing-in-your-health-the-importance-of-regular-check-ups",
    "statusCode": 301
   },
   {
-   "source": "/is-cheap-life-insurance-worth-it",
+   "source": "/is-cheap-life-insurance-worth-it{/}?",
    "destination": "/blog-is-cheap-life-insurance-worth-it",
    "statusCode": 301
   },
   {
-   "source": "/is-life-insurance-part-of-your-estate",
+   "source": "/is-life-insurance-part-of-your-estate{/}?",
    "destination": "/blog-is-life-insurance-part-of-your-estate",
    "statusCode": 301
   },
   {
-   "source": "/is-red-wine-actually-good-for-you",
+   "source": "/is-red-wine-actually-good-for-you{/}?",
    "destination": "/blog-is-red-wine-actually-good-for-you",
    "statusCode": 301
   },
   {
-   "source": "/key-steps-to-take-to-have-a-more-positive-mental-attitude",
+   "source": "/key-steps-to-take-to-have-a-more-positive-mental-attitude{/}?",
    "destination": "/blog-key-steps-to-take-to-have-a-more-positive-mental-attitude",
    "statusCode": 301
   },
   {
-   "source": "/lets-talk-tips-for-discussing-life-insurance-with-your-spouse",
+   "source": "/lets-talk-tips-for-discussing-life-insurance-with-your-spouse{/}?",
    "destination": "/blog-lets-talk-tips-for-discussing-life-insurance-with-your-spouse",
    "statusCode": 301
   },
   {
-   "source": "/life-insurance-after-divorce-guide",
+   "source": "/life-insurance-after-divorce-guide{/}?",
    "destination": "/blog-life-insurance-after-divorce-guide",
    "statusCode": 301
   },
   {
-   "source": "/life-insurance-and-tax",
+   "source": "/life-insurance-and-tax{/}?",
    "destination": "/blog-life-insurance-and-tax",
    "statusCode": 301
   },
   {
-   "source": "/life-insurance-buying-for-someone-else",
+   "source": "/life-insurance-buying-for-someone-else{/}?",
    "destination": "/blog-life-insurance-buying-for-someone-else",
    "statusCode": 301
   },
   {
-   "source": "/life-insurance-for-married-couples-a-uk-guide",
+   "source": "/life-insurance-for-married-couples-a-uk-guide{/}?",
    "destination": "/blog-life-insurance-for-married-couples-a-uk-guide",
    "statusCode": 301
   },
   {
-   "source": "/life-insurance-for-smokers",
+   "source": "/life-insurance-for-smokers{/}?",
    "destination": "/blog-life-insurance-for-smokers",
    "statusCode": 301
   },
   {
-   "source": "/life-insurance-myths-debunked",
+   "source": "/life-insurance-myths-debunked{/}?",
    "destination": "/blog-life-insurance-myths-debunked",
    "statusCode": 301
   },
   {
-   "source": "/life-insurance-with-pre-existing-conditions",
+   "source": "/life-insurance-with-pre-existing-conditions{/}?",
    "destination": "/blog-life-insurance-with-pre-existing-conditions",
    "statusCode": 301
   },
   {
-   "source": "/make-the-most-of-your-weekends",
+   "source": "/make-the-most-of-your-weekends{/}?",
    "destination": "/blog-make-the-most-of-your-weekends",
    "statusCode": 301
   },
   {
-   "source": "/managing-stress-understanding-its-impact-and-effective-strategies",
+   "source": "/managing-stress-understanding-its-impact-and-effective-strategies{/}?",
    "destination": "/blog-managing-stress-understanding-its-impact-and-effective-strategies",
    "statusCode": 301
   },
   {
-   "source": "/marathon-des-sables-2012",
+   "source": "/marathon-des-sables-2012{/}?",
    "destination": "/blog-marathon-des-sables-2012",
    "statusCode": 301
   },
   {
-   "source": "/mental-health-against-the-backdrop-of-rising-prices",
+   "source": "/mental-health-against-the-backdrop-of-rising-prices{/}?",
    "destination": "/blog-mental-health-against-the-backdrop-of-rising-prices",
    "statusCode": 301
   },
   {
-   "source": "/money-saving-tips-to-get-you-through-university",
+   "source": "/money-saving-tips-to-get-you-through-university{/}?",
    "destination": "/blog-money-saving-tips-to-get-you-through-university",
    "statusCode": 301
   },
   {
-   "source": "/navigating-the-new-normal-life-after-retirement",
+   "source": "/navigating-the-new-normal-life-after-retirement{/}?",
    "destination": "/blog-navigating-the-new-normal-life-after-retirement",
    "statusCode": 301
   },
   {
-   "source": "/nurse-support-services",
+   "source": "/nurse-support-services{/}?",
    "destination": "/blog-nurse-support-services",
    "statusCode": 301
   },
   {
-   "source": "/organise-your-life-with-these-10-habits",
+   "source": "/organise-your-life-with-these-10-habits{/}?",
    "destination": "/blog-organise-your-life-with-these-10-habits",
    "statusCode": 301
   },
   {
-   "source": "/overcoming-procrastination-during-lockdown",
+   "source": "/overcoming-procrastination-during-lockdown{/}?",
    "destination": "/blog-overcoming-procrastination-during-lockdown",
    "statusCode": 301
   },
   {
-   "source": "/positive-covid19-news",
+   "source": "/positive-covid19-news{/}?",
    "destination": "/blog-positive-covid19-news",
    "statusCode": 301
   },
   {
-   "source": "/protecting-your-business-and-loved-ones-the-benefits-of-life-insurance-for-uk-business-owners",
+   "source": "/protecting-your-business-and-loved-ones-the-benefits-of-life-insurance-for-uk-business-owners{/}?",
    "destination": "/blog-protecting-your-business-and-loved-ones-the-benefits-of-life-insurance-for-uk-business-owners",
    "statusCode": 301
   },
   {
-   "source": "/protecting-your-legacy-which-financial-assets-are-safeguarded-by-life-insurance-in-the-uk",
+   "source": "/protecting-your-legacy-which-financial-assets-are-safeguarded-by-life-insurance-in-the-uk{/}?",
    "destination": "/blog-protecting-your-legacy-which-financial-assets-are-safeguarded-by-life-insurance-in-the-uk",
    "statusCode": 301
   },
   {
-   "source": "/reasons-why-people-believe-they-dont-need-life-insurance",
+   "source": "/reasons-why-people-believe-they-dont-need-life-insurance{/}?",
    "destination": "/blog-reasons-why-people-believe-they-dont-need-life-insurance",
    "statusCode": 301
   },
   {
-   "source": "/regular-housekeeping-for-your-life-insurance",
+   "source": "/regular-housekeeping-for-your-life-insurance{/}?",
    "destination": "/blog-regular-housekeeping-for-your-life-insurance",
    "statusCode": 301
   },
   {
-   "source": "/renewing-your-life-insurance-policy-understanding-the-importance",
+   "source": "/renewing-your-life-insurance-policy-understanding-the-importance{/}?",
    "destination": "/blog-renewing-your-life-insurance-policy-understanding-the-importance",
    "statusCode": 301
   },
   {
-   "source": "/revolutionary-spinal-implant-revitalises-walking-ability-in-parkinsons-patient",
+   "source": "/revolutionary-spinal-implant-revitalises-walking-ability-in-parkinsons-patient{/}?",
    "destination": "/blog-revolutionary-spinal-implant-revitalises-walking-ability-in-parkinsons-patient",
    "statusCode": 301
   },
   {
-   "source": "/royal-machester-children-hospital-2013",
+   "source": "/royal-machester-children-hospital-2013{/}?",
    "destination": "/blog-royal-machester-children-hospital-2013",
    "statusCode": 301
   },
   {
-   "source": "/royal-manchester-children-s-hospital-fund",
+   "source": "/royal-manchester-children-s-hospital-fund{/}?",
    "destination": "/blog-royal-manchester-children-s-hospital-fund",
    "statusCode": 301
   },
   {
-   "source": "/royal-manchester-ecg-machine",
+   "source": "/royal-manchester-ecg-machine{/}?",
    "destination": "/blog-royal-manchester-ecg-machine",
    "statusCode": 301
   },
   {
-   "source": "/self-employed-life-insurance",
+   "source": "/self-employed-life-insurance{/}?",
    "destination": "/blog-self-employed-life-insurance",
    "statusCode": 301
   },
   {
-   "source": "/simple-habits-for-a-healthier-lifestyle",
+   "source": "/simple-habits-for-a-healthier-lifestyle{/}?",
    "destination": "/blog-simple-habits-for-a-healthier-lifestyle",
    "statusCode": 301
   },
   {
-   "source": "/simple-steps-for-a-healthy-mind-in-a-healthy-body",
+   "source": "/simple-steps-for-a-healthy-mind-in-a-healthy-body{/}?",
    "destination": "/blog-simple-steps-for-a-healthy-mind-in-a-healthy-body",
    "statusCode": 301
   },
   {
-   "source": "/single-vs-joint-life-insurance",
+   "source": "/single-vs-joint-life-insurance{/}?",
    "destination": "/blog-single-vs-joint-life-insurance",
    "statusCode": 301
   },
   {
-   "source": "/skiing-in-britain-its-better-than-you-might-think",
+   "source": "/skiing-in-britain-its-better-than-you-might-think{/}?",
    "destination": "/blog-skiing-in-britain-its-better-than-you-might-think",
    "statusCode": 301
   },
   {
-   "source": "/spring-home-preparation-tips",
+   "source": "/spring-home-preparation-tips{/}?",
    "destination": "/blog-spring-home-preparation-tips",
    "statusCode": 301
   },
   {
-   "source": "/success-for-wood-street-mission",
+   "source": "/success-for-wood-street-mission{/}?",
    "destination": "/blog-success-for-wood-street-mission",
    "statusCode": 301
   },
   {
-   "source": "/sum-assured",
+   "source": "/sum-assured{/}?",
    "destination": "/blog-sum-assured",
    "statusCode": 301
   },
   {
-   "source": "/the-close-connection-between-your-mental-and-physical-wellbeing",
+   "source": "/the-close-connection-between-your-mental-and-physical-wellbeing{/}?",
    "destination": "/blog-the-close-connection-between-your-mental-and-physical-wellbeing",
    "statusCode": 301
   },
   {
-   "source": "/the-cost-of-living-crisis",
+   "source": "/the-cost-of-living-crisis{/}?",
    "destination": "/blog-the-cost-of-living-crisis",
    "statusCode": 301
   },
   {
-   "source": "/the-future-of-money",
+   "source": "/the-future-of-money{/}?",
    "destination": "/blog-the-future-of-money",
    "statusCode": 301
   },
   {
-   "source": "/the-gut-brain-connection-foods-that-boost-mental-well-being-for-over-50s",
+   "source": "/the-gut-brain-connection-foods-that-boost-mental-well-being-for-over-50s{/}?",
    "destination": "/blog-the-gut-brain-connection-foods-that-boost-mental-well-being-for-over-50s",
    "statusCode": 301
   },
   {
-   "source": "/the-importance-of-periodic-life-insurance-coverage-reviews-protecting-your-financial-future",
+   "source": "/the-importance-of-periodic-life-insurance-coverage-reviews-protecting-your-financial-future{/}?",
    "destination": "/blog-the-importance-of-periodic-life-insurance-coverage-reviews-protecting-your-financial-future",
    "statusCode": 301
   },
   {
-   "source": "/the-joy-of-lists",
+   "source": "/the-joy-of-lists{/}?",
    "destination": "/blog-the-joy-of-lists",
    "statusCode": 301
   },
   {
-   "source": "/the-mother-of-all-national-holidays",
+   "source": "/the-mother-of-all-national-holidays{/}?",
    "destination": "/blog-the-mother-of-all-national-holidays",
    "statusCode": 301
   },
   {
-   "source": "/the-pitfalls-of-predicting-the-future",
+   "source": "/the-pitfalls-of-predicting-the-future{/}?",
    "destination": "/blog-the-pitfalls-of-predicting-the-future",
    "statusCode": 301
   },
   {
-   "source": "/the-power-of-protection-scenarios-where-critical-illness-cover-is-invaluable-in-the-uk",
+   "source": "/the-power-of-protection-scenarios-where-critical-illness-cover-is-invaluable-in-the-uk{/}?",
    "destination": "/blog-the-power-of-protection-scenarios-where-critical-illness-cover-is-invaluable-in-the-uk",
    "statusCode": 301
   },
   {
-   "source": "/the-rise-of-wearable-health-tech",
+   "source": "/the-rise-of-wearable-health-tech{/}?",
    "destination": "/blog-the-rise-of-wearable-health-tech",
    "statusCode": 301
   },
   {
-   "source": "/the-value-of-a-life-insurance-broker-how-they-can-secure-the-best-policy-for-you",
+   "source": "/the-value-of-a-life-insurance-broker-how-they-can-secure-the-best-policy-for-you{/}?",
    "destination": "/blog-the-value-of-a-life-insurance-broker-how-they-can-secure-the-best-policy-for-you",
    "statusCode": 301
   },
   {
-   "source": "/thriving-in-your-50s-simple-and-joyful-tips-for-a-vibrant-life",
+   "source": "/thriving-in-your-50s-simple-and-joyful-tips-for-a-vibrant-life{/}?",
    "destination": "/blog-thriving-in-your-50s-simple-and-joyful-tips-for-a-vibrant-life",
    "statusCode": 301
   },
   {
-   "source": "/toilet-training-fundamentals-for-dogs",
+   "source": "/toilet-training-fundamentals-for-dogs{/}?",
    "destination": "/blog-toilet-training-fundamentals-for-dogs",
    "statusCode": 301
   },
   {
-   "source": "/top-5-financial-decisions-for-parents",
+   "source": "/top-5-financial-decisions-for-parents{/}?",
    "destination": "/blog-top-5-financial-decisions-for-parents",
    "statusCode": 301
   },
   {
-   "source": "/top-health-trends-to-get-you-moving-this-winter",
+   "source": "/top-health-trends-to-get-you-moving-this-winter{/}?",
    "destination": "/blog-top-health-trends-to-get-you-moving-this-winter",
    "statusCode": 301
   },
   {
-   "source": "/topquotes-charity-work-changes-lives",
+   "source": "/topquotes-charity-work-changes-lives{/}?",
    "destination": "/blog-topquotes-charity-work-changes-lives",
    "statusCode": 301
   },
   {
-   "source": "/topquotes-christmas-delivery-to-wood-street-mission",
+   "source": "/topquotes-christmas-delivery-to-wood-street-mission{/}?",
    "destination": "/blog-topquotes-christmas-delivery-to-wood-street-mission",
    "statusCode": 301
   },
   {
-   "source": "/topquotes-guide-is-your-life-insurance-keeping-up-with-rising-prices",
+   "source": "/topquotes-guide-is-your-life-insurance-keeping-up-with-rising-prices{/}?",
    "destination": "/blog-topquotes-guide-is-your-life-insurance-keeping-up-with-rising-prices",
    "statusCode": 301
   },
   {
-   "source": "/topquotes-top-three-uk-holiday-destinations",
+   "source": "/topquotes-top-three-uk-holiday-destinations{/}?",
    "destination": "/blog-topquotes-top-three-uk-holiday-destinations",
    "statusCode": 301
   },
   {
-   "source": "/toy-drop",
+   "source": "/toy-drop{/}?",
    "destination": "/blog-toy-drop",
    "statusCode": 301
   },
   {
-   "source": "/uks-top-12-christmas-markets-a-festive-journey-of-joy-and-wonder",
+   "source": "/uks-top-12-christmas-markets-a-festive-journey-of-joy-and-wonder{/}?",
    "destination": "/blog-uks-top-12-christmas-markets-a-festive-journey-of-joy-and-wonder",
    "statusCode": 301
   },
   {
-   "source": "/uncertainty-ahead-this-winter",
+   "source": "/uncertainty-ahead-this-winter{/}?",
    "destination": "/blog-uncertainty-ahead-this-winter",
    "statusCode": 301
   },
   {
-   "source": "/understanding-and-managing-debt-a-comprehensive-guide",
+   "source": "/understanding-and-managing-debt-a-comprehensive-guide{/}?",
    "destination": "/blog-understanding-and-managing-debt-a-comprehensive-guide",
    "statusCode": 301
   },
   {
-   "source": "/we-love-mcr-2017",
+   "source": "/we-love-mcr-2017{/}?",
    "destination": "/blog-we-love-mcr-2017",
    "statusCode": 301
   },
   {
-   "source": "/what-factors-affect-a-life-insurance-quote",
+   "source": "/what-factors-affect-a-life-insurance-quote{/}?",
    "destination": "/blog-what-factors-affect-a-life-insurance-quote",
    "statusCode": 301
   },
   {
-   "source": "/what-happens-if-you-outlive-your-life-insurance-term",
+   "source": "/what-happens-if-you-outlive-your-life-insurance-term{/}?",
    "destination": "/blog-what-happens-if-you-outlive-your-life-insurance-term",
    "statusCode": 301
   },
   {
-   "source": "/what-is-critical-illness-cover-and-why-you-might-need-it",
+   "source": "/what-is-critical-illness-cover-and-why-you-might-need-it{/}?",
    "destination": "/blog-what-is-critical-illness-cover-and-why-you-might-need-it",
    "statusCode": 301
   },
   {
-   "source": "/what-is-the-loyalty-penalty",
+   "source": "/what-is-the-loyalty-penalty{/}?",
    "destination": "/blog-what-is-the-loyalty-penalty",
    "statusCode": 301
   },
   {
-   "source": "/whats-the-best-time-to-eat-for-your-health-discover-why-when-you-eat-matters-as-much-as-what-you-eat",
+   "source": "/whats-the-best-time-to-eat-for-your-health-discover-why-when-you-eat-matters-as-much-as-what-you-eat{/}?",
    "destination": "/blog-whats-the-best-time-to-eat-for-your-health-discover-why-when-you-eat-matters-as-much-as-what-you-eat",
    "statusCode": 301
   },
   {
-   "source": "/whats-the-difference-between-critical-illness-and-terminal-illness",
+   "source": "/whats-the-difference-between-critical-illness-and-terminal-illness{/}?",
    "destination": "/blog-whats-the-difference-between-critical-illness-and-terminal-illness",
    "statusCode": 301
   },
   {
-   "source": "/whats-the-most-heartfelt-gift-for-your-grandchildren",
+   "source": "/whats-the-most-heartfelt-gift-for-your-grandchildren{/}?",
    "destination": "/blog-whats-the-most-heartfelt-gift-for-your-grandchildren",
    "statusCode": 301
   },
   {
-   "source": "/when-should-i-get-life-insurance",
+   "source": "/when-should-i-get-life-insurance{/}?",
    "destination": "/blog-when-should-i-get-life-insurance",
    "statusCode": 301
   },
   {
-   "source": "/why-is-it-important-to-review-life-cover",
+   "source": "/why-is-it-important-to-review-life-cover{/}?",
    "destination": "/blog-why-is-it-important-to-review-life-cover",
    "statusCode": 301
   },
   {
-   "source": "/why-new-years-resolutions-dont-work-and-how-to-create-lasting-change",
+   "source": "/why-new-years-resolutions-dont-work-and-how-to-create-lasting-change{/}?",
    "destination": "/blog-why-new-years-resolutions-dont-work-and-how-to-create-lasting-change",
    "statusCode": 301
   },
   {
-   "source": "/why-should-millennials-get-life-insurance",
+   "source": "/why-should-millennials-get-life-insurance{/}?",
    "destination": "/blog-why-should-millennials-get-life-insurance",
    "statusCode": 301
   },
   {
-   "source": "/why-should-stay-home-parents-consider-life-insurance",
+   "source": "/why-should-stay-home-parents-consider-life-insurance{/}?",
    "destination": "/blog-why-should-stay-home-parents-consider-life-insurance",
    "statusCode": 301
   },
   {
-   "source": "/wood-st-mission-a-gift-of-hope",
+   "source": "/wood-st-mission-a-gift-of-hope{/}?",
    "destination": "/blog-wood-st-mission-a-gift-of-hope",
    "statusCode": 301
   },
   {
-   "source": "/wood-street-mission",
+   "source": "/wood-street-mission{/}?",
    "destination": "/blog-wood-street-mission",
    "statusCode": 301
   },
   {
-   "source": "/worried",
+   "source": "/worried{/}?",
    "destination": "/blog-worried",
    "statusCode": 301
   },
   {
-   "source": "/wsm",
+   "source": "/wsm{/}?",
    "destination": "/blog-wsm",
    "statusCode": 301
   },
   {
-   "source": "/youre-wrong",
+   "source": "/youre-wrong{/}?",
    "destination": "/blog-youre-wrong",
    "statusCode": 301
   },
   {
-   "source": "/%7B%7B%20a.href%20%7D%7D",
+   "source": "/%7B%7B%20a.href%20%7D%7D{/}?",
    "destination": "/blog",
    "statusCode": 301
   },
   {
-   "source": "/%7B%7B%20area.href%20%7D%7D",
+   "source": "/%7B%7B%20area.href%20%7D%7D{/}?",
    "destination": "/find-us",
    "statusCode": 301
   },
   {
-   "source": "/%7B%7B%20s.poster%20%7D%7D",
+   "source": "/%7B%7B%20s.poster%20%7D%7D{/}?",
    "destination": "/",
    "statusCode": 301
   },
@@ -4530,6 +4529,46 @@
    "source": "/blog/:path+",
    "destination": "/blog",
    "statusCode": 301
+  },
+  {
+   "source": "/category/:path*",
+   "destination": "/blog",
+   "statusCode": 301
+  },
+  {
+   "source": "/tag/:path*",
+   "destination": "/blog",
+   "statusCode": 301
+  },
+  {
+   "source": "/author/:path*",
+   "destination": "/blog",
+   "statusCode": 301
+  },
+  {
+   "source": "/page/:path*",
+   "destination": "/blog",
+   "statusCode": 301
+  },
+  {
+   "source": "/feed/:path*",
+   "destination": "/blog",
+   "statusCode": 301
+  },
+  {
+   "source": "/comments/:path*",
+   "destination": "/blog",
+   "statusCode": 301
+  },
+  {
+   "source": "/:year(\\d{4})/:path*",
+   "destination": "/blog",
+   "statusCode": 301
+  },
+  {
+   "source": "/:path+/",
+   "destination": "/:path+",
+   "statusCode": 308
   }
  ],
  "rewrites": [
