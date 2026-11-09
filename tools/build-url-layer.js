@@ -287,12 +287,14 @@ for (const clean of Object.keys(PAGES)) {
 // sitemap
 let manifest = [];
 try { manifest = JSON.parse(fs.readFileSync(path.join(ROOT, 'blog-data', 'manifest.json'), 'utf8')); } catch (e) {}
-const dateBySlug = Object.fromEntries(manifest.map((p) => [p.slug, p.date]));
+const dateBySlug = Object.fromEntries(manifest.map((p) => [p.slug, p.updated || p.date]));
+let pageDates = {};
+try { pageDates = JSON.parse(fs.readFileSync(path.join(ROOT, 'tools', 'page-dates.json'), 'utf8')); } catch (e) {}
 const urls = [{ loc: '/', pri: '1.0' }]
   .concat(Object.keys(PAGES).filter((p) => !DRAFT_PAGES.includes(p)).map((p) => ({ loc: p, pri: '0.8' })))
   .concat(liveSlugs.map((s) => ({ loc: '/blog-' + s, pri: '0.5', lastmod: dateBySlug[s] })));
 const xml = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
-  urls.map((u) => `<url><loc>${ORIGIN}${u.loc}</loc>${u.lastmod ? `<lastmod>${u.lastmod}</lastmod>` : ''}<priority>${u.pri}</priority></url>`).join('\n') +
+  urls.map((u) => `<url><loc>${ORIGIN}${u.loc}</loc>${(u.lastmod || pageDates[u.loc]) ? `<lastmod>${u.lastmod || pageDates[u.loc]}</lastmod>` : ''}<priority>${u.pri}</priority></url>`).join('\n') +
   '\n</urlset>\n';
 fs.writeFileSync(path.join(ROOT, 'sitemap.xml'), xml);
 

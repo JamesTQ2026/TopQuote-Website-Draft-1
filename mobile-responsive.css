@@ -1705,3 +1705,9 @@ html[data-feefo="on"] [data-feefo-fallback] { display: none !important; }
   [data-feefo-live]:has(> feefo-service-carousel) { max-width: 1420px !important; }
 }
 [data-feefo-live] feefo-brand-reviews { display: block; min-height: 400px; }
+
+/* 94. Last updated dates (tools/freshness.py). In a post banner, when the post has
+   not changed since it was published, show only "Last updated" (same date). */
+span:has(> [data-lucide="calendar"], > svg.lucide-calendar):has(+ .tq-post-updated[data-same]) { display: none !important; }
+nav[aria-label="Breadcrumb"] .tq-updated { margin-left: auto; }
+@media (max-width: 700px) { nav[aria-label="Breadcrumb"] .tq-updated { margin-left: 0; flex-basis: 100%; } }

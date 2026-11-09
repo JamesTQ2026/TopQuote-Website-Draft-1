@@ -124,6 +124,8 @@ def crumb_node(cs, page_url):
 
 
 posts = {p['file']: p for p in json.load(io.open('exports/blog-index.json', encoding='utf-8'))}
+# 'updated' dates (tools/freshness.py shows the same date on the page)
+UPDATED = {p['slug']: p.get('updated', '') for p in json.load(io.open('blog-data/manifest.json', encoding='utf-8'))}
 pending = set()
 for line in io.open('tools/pending-approval.txt', encoding='utf-8'):
     line = line.strip()
@@ -155,8 +157,12 @@ for fn in sorted(glob.glob('*.html')):
         continue
     s = io.open(fn, encoding='utf-8', newline='').read()
     if MARK in s:
-        report['skipped'].append(fn + ' (already carries it)')
-        continue
+        if os.environ.get("REFRESH") != "1":
+            report['skipped'].append(fn + ' (already carries it)')
+            continue
+        # REFRESH=1: drop this script's own block and rebuild it (the FAQ block is separate)
+        s = re.sub(r'<!-- structured data[^\n]*-->\r?\n<script type="application/ld\+json">[\s\S]*?</script>\r?\n', '', s, count=1)
+        assert MARK not in s, fn
     url = one(s, r'<link rel="canonical" href="([^"]+)"')
     if not url:
         report['skipped'].append(fn + ' (no canonical)')
@@ -182,6 +188,7 @@ for fn in sorted(glob.glob('*.html')):
             "headline": unescape(title_of(s))[:110],
             "url": url,
             "datePublished": published(s, posts[fn]['t']),
+            "dateModified": max(published(s, posts[fn]['t']), UPDATED.get(fn[5:-5], '')),
             "inLanguage": "en-GB",
             "isPartOf": {"@id": WEB},
             "publisher": {"@id": ORG},
