@@ -228,6 +228,49 @@
     s.async = true;
     s.src = 'https://api.feefo.com/api/javascript/top-quote';
     (document.body || document.head).appendChild(s);
+    hideFeefoDates();
+  }
+
+  // The review date under each reviewer's name is hidden (James, 9 Nov 2026).
+  // Feefo draws its widgets inside shadow roots with generated class names, so
+  // CSS cannot reach them: find the date lines by their text instead, now and
+  // whenever the carousel or slide-out adds more reviews.
+  // "9 Jul 2024" on the cards; "2 years ago" in the full reviews panel
+  var DATE_RE = /^(\d{1,2} (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]* \d{4}|(\d+|a|an) (second|minute|hour|day|week|month|year)s? ago)$/i;
+  function hideDatesIn(root) {
+    var els = root.querySelectorAll('div, span, time, p');
+    for (var i = 0; i < els.length; i++) {
+      var el = els[i];
+      if (el.childElementCount === 0 && el.style.display !== 'none' && DATE_RE.test(el.textContent.trim())) el.style.display = 'none';
+    }
+  }
+  function hideFeefoDates() {
+    var seen = [], tries = 0;
+    // widgets live under the feefo-* tags; the "Read all reviews" panel is a
+    // plain element added straight to <body> when someone opens it
+    function scan() {
+      var hosts = document.querySelectorAll('feefo-service-carousel, feefo-slideout, feefo-score-badge, feefo-service-carousel *, feefo-slideout *, #feefo-popUp-container *, body > *');
+      for (var i = 0; i < hosts.length; i++) {
+        var sr = hosts[i].shadowRoot;
+        if (!sr || seen.indexOf(sr) >= 0) continue;
+        seen.push(sr);
+        hideDatesIn(sr);
+        new MutationObserver((function (r) { return function () { hideDatesIn(r); }; })(sr))
+          .observe(sr, { childList: true, subtree: true, characterData: true });
+      }
+    }
+    var timer = setInterval(function () {
+      scan();
+      if (++tries > 40) clearInterval(timer);   // 30 seconds is ample for the widgets to load
+    }, 750);
+    // the panel's container can be added before its contents, so watch below
+    // <body> too; scans are bunched to at most one every 300 ms
+    var pending = false;
+    new MutationObserver(function () {
+      if (pending) return;
+      pending = true;
+      setTimeout(function () { pending = false; scan(); }, 300);
+    }).observe(document.body, { childList: true, subtree: true });
   }
   function holdFeefo() {
     // a script already running in this page view cannot be unloaded; the next
