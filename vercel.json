@@ -1062,26 +1062,6 @@
    "statusCode": 302
   },
   {
-   "source": "/blog-is-life-insurance-part-of-your-estate",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog-is-life-insurance-part-of-your-estate.html",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog/:cat/is-life-insurance-part-of-your-estate",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog/is-life-insurance-part-of-your-estate",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
    "source": "/blog-joint-life-insurance-vs-single-a-uk-guide",
    "destination": "/blog",
    "statusCode": 302
@@ -1118,46 +1098,6 @@
   },
   {
    "source": "/blog/life-insurance-after-cancer",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog-life-insurance-after-divorce-guide",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog-life-insurance-after-divorce-guide.html",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog/:cat/life-insurance-after-divorce-guide",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog/life-insurance-after-divorce-guide",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog-life-insurance-with-pre-existing-conditions",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog-life-insurance-with-pre-existing-conditions.html",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog/:cat/life-insurance-with-pre-existing-conditions",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog/life-insurance-with-pre-existing-conditions",
    "destination": "/blog",
    "statusCode": 302
   },
@@ -2737,6 +2677,16 @@
    "statusCode": 301
   },
   {
+   "source": "/blog/:cat/is-life-insurance-part-of-your-estate",
+   "destination": "/blog-is-life-insurance-part-of-your-estate",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/is-life-insurance-part-of-your-estate",
+   "destination": "/blog-is-life-insurance-part-of-your-estate",
+   "statusCode": 301
+  },
+  {
    "source": "/blog/:cat/is-red-wine-actually-good-for-you",
    "destination": "/blog-is-red-wine-actually-good-for-you",
    "statusCode": 301
@@ -2784,6 +2734,16 @@
   {
    "source": "/blog/life-insurance-after-divorce",
    "destination": "/blog-life-insurance-after-divorce",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/:cat/life-insurance-after-divorce-guide",
+   "destination": "/blog-life-insurance-after-divorce-guide",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/life-insurance-after-divorce-guide",
+   "destination": "/blog-life-insurance-after-divorce-guide",
    "statusCode": 301
   },
   {
@@ -2854,6 +2814,16 @@
   {
    "source": "/blog/life-insurance-when-pregnant",
    "destination": "/blog-life-insurance-when-pregnant",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/:cat/life-insurance-with-pre-existing-conditions",
+   "destination": "/blog-life-insurance-with-pre-existing-conditions",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/life-insurance-with-pre-existing-conditions",
+   "destination": "/blog-life-insurance-with-pre-existing-conditions",
    "statusCode": 301
   },
   {
