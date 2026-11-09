@@ -256,6 +256,23 @@ for (const [slug, to] of Object.entries(RETIRED)) {
   r301(`/blog/:cat/${slug}`, to);
   r301(`/blog/${slug}`, to);
 }
+// 3c. some old WordPress posts lived at the top level (/life-insurance-for-smokers/).
+//     Each live post's bare slug -> its post, unless the slug is also a page or an
+//     existing rule (e.g. /life-insurance-for-parents is a service page).
+{
+  const taken = new Set(Object.keys(PAGES).concat(Object.keys(MOVED), Object.keys(LEGACY), ['/blog', '/']));
+  for (const slug of liveSlugs) {
+    const src = '/' + slug;
+    if (taken.has(src)) continue;
+    r301(src, `/blog-${slug}`);
+  }
+}
+// 3d. template placeholders sit in the raw HTML until the page script fills them in,
+//     and crawlers that read the raw HTML request them as URLs. Send those somewhere useful.
+for (const [ph, to] of [['a.href', '/blog'], ['area.href', '/find-us'], ['s.poster', '/']]) {
+  // (the literal '{{ }}' form is left out: Vercel reads braces as pattern syntax)
+  r301('/%7B%7B%20' + ph + '%20%7D%7D', to);
+}
 // anything else under /blog/ (categories, pagination, date archives, retired posts) -> blog index
 r301('/blog/:path+', '/blog');
 
