@@ -1664,17 +1664,21 @@ body:has(.hero-ring) header .nav-dd > a[href="/life-insurance"]:hover { backgrou
   #heroOcta .cta-satellite { display: none !important; }
 }
 
-/* 90. Letter card ("Our Address"): a fountain pen resting on the page, to the
-   right of the address lines. Shot on white and blended with multiply, so only
-   the pen and its shadow show. */
+/* 90. Letter card ("Our Address"): a fountain pen resting on the page, hanging off
+   the right edge. The pen is cut out of its studio photo (whose shadow sat far from
+   the pen and made it look like it hovered); a tight two-layer shadow puts it on the paper. */
 #letterCard::after {
-  content: ""; position: absolute; right: -290px; bottom: 50px; width: 600px; height: 368px;
-  background: url("assets/fountain-pen.webp") center / contain no-repeat;
-  mix-blend-mode: multiply; pointer-events: none; transform: rotate(-6deg); z-index: 5;
+  content: ""; position: absolute; right: -140px; bottom: 111px; width: 480px; height: 302px;
+  background: url("assets/fountain-pen-cutout.webp") center / contain no-repeat;
+  filter: drop-shadow(1px 2px 1.5px rgba(16,28,24,.45)) drop-shadow(6px 9px 8px rgba(16,28,24,.16));
+  pointer-events: none; transform: rotate(-6deg); z-index: 5;
+}
+@media (min-width: 701px) and (max-width: 1280px) {
+  #letterCard::after { right: -40px; bottom: 120px; width: 360px; height: 227px; }
 }
 @media (max-width: 700px) {
   .sc-host #letterCard { position: relative !important; }
-  #letterCard::after { right: -105px; bottom: 185px; width: 280px; height: 172px; }
+  #letterCard::after { right: -52px; bottom: 214px; width: 222px; height: 140px; }
 }
 
 /* 91. Trustpilot cards: the "★ Trustpilot" title row is caught by the inline
