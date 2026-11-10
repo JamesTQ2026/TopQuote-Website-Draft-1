@@ -56,5 +56,11 @@ for pre, inner in blocks(src):
         kept += sub.count('{'); dropped += max(0, total - sub.count('{'))
     else:
         out.append('%s {%s}' % (pre, inner))
+# Guide-only phone tweaks James asked for (10 Nov 2026): hero badges line up on the left, and the
+# author card stacks the big initial above the name (same rule as mobile-responsive.css 95).
+out.append('''@media (max-width: 700px) {
+  div[style*="margin-left:auto"]:has(> img[src*="platinum-trusted-service-award"]) { margin-left: 0 !important; }
+  .tq-ac > div[style*="display:flex"] { flex-direction: column !important; gap: 18px !important; }
+}''')
 io.open('guide-site.css', 'w', encoding='utf-8').write('\n'.join(out) + '\n')
 print('guide-site.css written; phone rules kept (chrome only): ~%d, dropped: ~%d' % (kept, dropped))

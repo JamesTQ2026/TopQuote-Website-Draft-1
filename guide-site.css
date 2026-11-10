@@ -167,3 +167,10 @@ html[data-feefo="on"] [data-feefo-fallback] { display: none !important; }
 [data-feefo-live] feefo-brand-reviews { display: block; min-height: 400px; }
 span:has(> [data-lucide="calendar"], > svg.lucide-calendar):has(+ .tq-post-updated[data-same]) { display: none !important; }
 nav[aria-label="Breadcrumb"] .tq-updated { margin-left: auto; }
+@media (max-width: 700px) {
+feefo-slideout { display: none !important; }
+}
+@media (max-width: 700px) {
+  div[style*="margin-left:auto"]:has(> img[src*="platinum-trusted-service-award"]) { margin-left: 0 !important; }
+  .tq-ac > div[style*="display:flex"] { flex-direction: column !important; gap: 18px !important; }
+}
