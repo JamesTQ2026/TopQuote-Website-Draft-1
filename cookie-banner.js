@@ -76,6 +76,8 @@
 
   var gaLoaded = false;
   function loadGA() {
+    // not inside the quote form's iframe (health questions); the page around it is measured
+    try { if (window.self !== window.top) return; } catch (e) { return; }
     gtag('consent', 'update', { analytics_storage: 'granted' });
     if (gaLoaded || !GA4_ID) return;
     gaLoaded = true;
