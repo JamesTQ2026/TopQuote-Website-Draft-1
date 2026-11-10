@@ -87,6 +87,23 @@
       cursor: pointer;
     }
   </style>
+<style>
+  /* Phones (James, 10 Nov 2026). This page's rem shrinks to about 10px on phones, so the
+     rem-sized answer cards were too short (icons over the top edge), three cards were wider
+     than the screen, and the form column was only ~270px (Month and name boxes cut off).
+     These sizes are in px so they do not shrink. Layout only: no change to the form logic. */
+  @media (max-width: 640px){
+    .pointer-events-auto.mt-\[3rem\] > .flex.gap-5{width:100%;max-width:420px;gap:10px !important;}
+    .pointer-events-auto.mt-\[3rem\] > .flex.gap-5 > button{flex:1 1 0;min-width:0;width:auto !important;height:auto !important;min-height:128px;padding:20px 8px 16px;gap:10px !important;justify-content:flex-start !important;}
+    .pointer-events-auto.mt-\[3rem\] > .flex.gap-5 > button > div{width:48px !important;height:48px !important;flex:none;}
+    .pointer-events-auto.mt-\[3rem\] > .flex.gap-5 > button > div > svg{width:28px !important;height:28px !important;}
+    .pointer-events-auto.mt-\[3rem\] > .flex.gap-5 > button > span{font-size:16px !important;line-height:1.25;}
+    .pointer-events-auto.mt-\[2\.5rem\]{max-width:420px !important;}
+    .grid.grid-cols-3:has(> select[aria-label="Month of birth"]){grid-template-columns:.8fr 1.5fr 1fr !important;}
+    .grid.grid-cols-3:has(> select[aria-label="Title"]){grid-template-columns:76px 1fr 1fr !important;}
+    .grid.grid-cols-3 > select, .grid.grid-cols-3 > input{min-width:0;}
+  }
+</style>
 <script src="mobile-nav.js" defer></script>
 <script src="cookie-banner.js" defer></script>
 <link rel="stylesheet" href="/mobile-responsive.css">
