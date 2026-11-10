@@ -961,26 +961,6 @@
    "statusCode": 302
   },
   {
-   "source": "/blog-family-life-insurance-2{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog-family-life-insurance-2.html{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog/:cat/family-life-insurance-2{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog/family-life-insurance-2{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
    "source": "/blog-how-much-life-insurance-do-i-need-a-uk-guide{/}?",
    "destination": "/blog",
    "statusCode": 302
@@ -1077,26 +1057,6 @@
   },
   {
    "source": "/blog/joint-life-insurance-vs-single-a-uk-guide{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog-life-insurance-after-cancer{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog-life-insurance-after-cancer.html{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog/:cat/life-insurance-after-cancer{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog/life-insurance-after-cancer{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
@@ -2406,6 +2366,16 @@
    "statusCode": 301
   },
   {
+   "source": "/blog/:cat/family-life-insurance-2{/}?",
+   "destination": "/blog-family-life-insurance-2",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/family-life-insurance-2{/}?",
+   "destination": "/blog-family-life-insurance-2",
+   "statusCode": 301
+  },
+  {
    "source": "/blog/:cat/festive-family-ideas{/}?",
    "destination": "/blog-festive-family-ideas",
    "statusCode": 301
@@ -2763,6 +2733,16 @@
   {
    "source": "/blog/lets-talk-tips-for-discussing-life-insurance-with-your-spouse{/}?",
    "destination": "/blog-lets-talk-tips-for-discussing-life-insurance-with-your-spouse",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/:cat/life-insurance-after-cancer{/}?",
+   "destination": "/blog-life-insurance-after-cancer",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/life-insurance-after-cancer{/}?",
+   "destination": "/blog-life-insurance-after-cancer",
    "statusCode": 301
   },
   {
@@ -4006,6 +3986,11 @@
    "statusCode": 301
   },
   {
+   "source": "/family-life-insurance-2{/}?",
+   "destination": "/blog-family-life-insurance-2",
+   "statusCode": 301
+  },
+  {
    "source": "/festive-family-ideas{/}?",
    "destination": "/blog-festive-family-ideas",
    "statusCode": 301
@@ -4173,6 +4158,11 @@
   {
    "source": "/lets-talk-tips-for-discussing-life-insurance-with-your-spouse{/}?",
    "destination": "/blog-lets-talk-tips-for-discussing-life-insurance-with-your-spouse",
+   "statusCode": 301
+  },
+  {
+   "source": "/life-insurance-after-cancer{/}?",
+   "destination": "/blog-life-insurance-after-cancer",
    "statusCode": 301
   },
   {
@@ -4743,6 +4733,10 @@
   {
    "source": "/(blog-[^/.]+)",
    "destination": "/$1.html"
+  },
+  {
+   "source": "/:section(life-insurance|critical-illness|income-protection|providers)/:slug",
+   "destination": "/:section/:slug.html"
   }
  ]
 }

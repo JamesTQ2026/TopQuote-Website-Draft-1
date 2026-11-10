@@ -28,7 +28,7 @@ EXISTING = {
     '/life-insurance/life-insurance-after-divorce': '/life-insurance-after-divorce',
 }
 GUIDE_OWN_ASSETS = ['topquote-logo-dark.png', 'platinum-trusted-service-award-2026.svg']
-SOURCE_PAGE = 'Life Insurance for Dads.dc.html'   # header + footer are taken from a live page
+SOURCE_PAGE = 'Life Insurance.dc.html'   # header + footer are taken from a live page
 
 
 def rd(p):
@@ -44,7 +44,8 @@ def absolute(html):
 HEADER, FOOTER = absolute(HEADER), absolute(FOOTER)
 SCRIPTS = ('<script src="/services-menu.js" defer></script>\n'
            '<script src="/mobile-nav.js" defer></script>\n'
-           '<script src="/cookie-banner.js" defer></script>\n')
+           '<script src="/cookie-banner.js" defer></script>\n'
+           '<script src="/mega-menu.js" defer></script>\n')
 
 
 def build(row):
@@ -55,7 +56,7 @@ def build(row):
     # two images exist on the site in a different version: the guides keep the export's own copy
     for name in GUIDE_OWN_ASSETS:
         s = s.replace('/assets/' + name, '/assets/guides/' + name)
-    head_add = ('<link rel="stylesheet" href="/mobile-responsive.css">\n'
+    head_add = ('<link rel="stylesheet" href="/guide-site.css">\n'
                 '<link rel="icon" href="/favicon.ico" sizes="any">\n'
                 '<link rel="canonical" href="%s%s">\n'
                 '<meta name="robots" content="noindex, nofollow">\n' % (SITE, path))

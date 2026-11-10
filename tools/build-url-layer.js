@@ -297,6 +297,8 @@ redirects.push({ source: '/:path+/', destination: '/:path+', statusCode: 308 });
 rewrites.push({ source: '/', destination: '/Home%20Page.dc.html' });
 for (const [clean, file] of Object.entries(PAGES)) rewrites.push({ source: clean, destination: enc(file) });
 rewrites.push({ source: '/(blog-[^/.]+)', destination: '/$1.html' });
+// guide pages (Openwork demo import): /life-insurance/<slug> -> life-insurance/<slug>.html, etc.
+rewrites.push({ source: '/:section(life-insurance|critical-illness|income-protection|providers)/:slug', destination: '/:section/:slug.html' });
 
 if (redirects.length > 1000) throw new Error('Too many redirects for Vercel (limit 1024): ' + redirects.length);
 
