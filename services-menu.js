@@ -80,10 +80,16 @@
   function wire() {
     injectCSS();
     var menu = injectMenu();
-    if (!menu || menu.__wired) { return; }
-    menu.__wired = true;
+    if (!menu) { return; }
+    // the menu itself is wired once; the Services buttons are wired on every call (below),
+    // because framework pages draw the header after the first call
+    if (!menu.__wired) { menu.__wired = true; wireMenu(menu); }
+    wireTriggers();
+  }
 
-    var open = function (e) { if (e) e.preventDefault(); document.documentElement.classList.add('svcmenu-open'); document.body.style.overflow = 'hidden'; icons(); };
+  function openMenu(e) { if (e) e.preventDefault(); document.documentElement.classList.add('svcmenu-open'); document.body.style.overflow = 'hidden'; icons(); }
+
+  function wireMenu(menu) {
     var close = function () { document.documentElement.classList.remove('svcmenu-open'); document.body.style.overflow = ''; };
 
     var cl = document.getElementById('svcMenuClose'); if (cl) cl.addEventListener('click', close);
@@ -98,7 +104,9 @@
         p.addEventListener('mouseleave', function () { vid.pause(); vid.currentTime = 0; });
       }
     });
+  }
 
+  function wireTriggers() {
     // Wire the Services trigger: any element with [data-services-trigger],
     // or a nav link whose visible text starts with "Services".
     var triggers = [];
@@ -107,15 +115,24 @@
       var txt = (a.textContent || '').trim().toLowerCase();
       if (txt.indexOf('services') === 0) triggers.push(a);
     });
-    triggers.forEach(function (t) { if (!t.__svcWired) { t.__svcWired = true; t.addEventListener('click', open); } });
+    triggers.forEach(function (t) { if (!t.__svcWired) { t.__svcWired = true; t.addEventListener('click', openMenu); } });
     icons();
   }
 
   function boot() {
     if (!document.body) { return setTimeout(boot, 60); }
     wire();
-    // retry a few times in case nav renders late (React mount)
-    var n = 0; var t = setInterval(function () { wire(); if (++n > 30) clearInterval(t); }, 200);
+    // the nav renders late (React mount) and can be redrawn: wire again whenever the page changes
+    if (window.MutationObserver) {
+      var queued = false;
+      new MutationObserver(function () {
+        if (queued) return;
+        queued = true;
+        requestAnimationFrame(function () { queued = false; wire(); });
+      }).observe(document.body, { childList: true, subtree: true });
+    } else {
+      var n = 0; var t = setInterval(function () { wire(); if (++n > 30) clearInterval(t); }, 200);
+    }
   }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot);

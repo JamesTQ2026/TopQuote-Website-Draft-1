@@ -20,6 +20,8 @@
    COMPLIANCE: the wording shown to visitors must be approved by The Openwork
    Partnership before launch, alongside the Cookie Policy page it links to. */
 (function () {
+  // run once per page, even if the file is included twice
+  if (window.__tqCookieBanner) return; window.__tqCookieBanner = 1;
   /* ------------------------------------------------------------------ *
    *  Put the GA4 Measurement ID here, the G-XXXXXXXXXX from             *
    *  Admin > Data streams in Google Analytics. While it is empty the    *
@@ -450,6 +452,16 @@
     apply(choice, false);        // nothing third-party loads until this has run
     if (!choice) setTimeout(function () { banner(false); }, 400);
     settingsLink();
+    // framework pages draw (and can redraw) the footer after this runs, which drops the
+    // link: add it again whenever the page changes and it is missing
+    if (window.MutationObserver && document.body) {
+      var queued = false;
+      new MutationObserver(function () {
+        if (queued) return;
+        queued = true;
+        requestAnimationFrame(function () { queued = false; settingsLink(); });
+      }).observe(document.body, { childList: true, subtree: true });
+    }
     watchFrames();
   }
 

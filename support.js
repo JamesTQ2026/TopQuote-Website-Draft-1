@@ -1,6 +1,11 @@
 // GENERATED from dc-runtime/src/*.ts — do not edit. Rebuild with `cd dc-runtime && bun run build`.
 "use strict";
 (() => {
+  // TopQuote: <script src> tags inside the page's <helmet> already run once as ordinary tags (the
+  // browser executes them while parsing). Remember them here, before the page is rendered, so the
+  // helmet does not add and run a second copy (that ran Analytics, Feefo, Swiper and Lucide twice).
+  var TQ_PARSED_SRCS = /* @__PURE__ */ new Set();
+  try { document.querySelectorAll("x-dc script[src]").forEach((s) => TQ_PARSED_SRCS.add(s.getAttribute("src"))); } catch {}
   var __defProp = Object.defineProperty;
   var __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
   var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "symbol" ? key + "" : key, value);
@@ -1314,6 +1319,7 @@
             const key = "SCRIPT|" + (child.getAttribute("src") || child.textContent || "");
             if (mounted.has(key)) continue;
             mounted.add(key);
+            if (child.getAttribute("src") && TQ_PARSED_SRCS.has(child.getAttribute("src"))) continue;
             const el = doc.createElement("script");
             for (const { name: an, value } of [...child.attributes])
               el.setAttribute(an, value);
