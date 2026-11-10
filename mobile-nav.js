@@ -1,5 +1,39 @@
 /* TopQuote mobile optimisation: hamburger nav + responsive grid collapse.
    Injected outside the framework tree (document.body) so it is safe on all pages. */
+
+/* Lazy background images: an element with data-lazy-bg="assets/x.webp" gets that background
+   only when it comes near the screen, so large pictures further down a page do not slow the
+   first view. Watches for elements the page framework draws later. */
+(function () {
+  if (window.__tqLazyBg) return; window.__tqLazyBg = 1;
+  function show(el) { el.style.backgroundImage = 'url("' + el.getAttribute('data-lazy-bg') + '")'; }
+  var io = window.IntersectionObserver ? new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { if (e.isIntersecting) { io.unobserve(e.target); show(e.target); } });
+  }, { rootMargin: '800px 0px' }) : null;
+  function scan() {
+    var els = document.querySelectorAll('[data-lazy-bg]');
+    for (var i = 0; i < els.length; i++) {
+      var el = els[i];
+      if (el.__lazyBg) continue;
+      el.__lazyBg = 1;
+      if (io) io.observe(el); else show(el);
+    }
+  }
+  function start() {
+    scan();
+    if (window.MutationObserver) {
+      var queued = false;
+      new MutationObserver(function () {
+        if (queued) return;
+        queued = true;
+        requestAnimationFrame(function () { queued = false; scan(); });
+      }).observe(document.body, { childList: true, subtree: true });
+    }
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start);
+  else start();
+})();
+
 (function () {
   if (window.__mnav) return; window.__mnav = 1;
 

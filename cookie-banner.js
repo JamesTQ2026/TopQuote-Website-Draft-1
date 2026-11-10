@@ -140,8 +140,10 @@
          still loads only on consent; "Open in Google Maps" is a plain link out. */
       var hold = document.createElement('div');
       hold.className = 'tq-embed-hold';
+      // the map picture loads when the box is near the screen (data-lazy-bg, see mobile-nav.js)
+      hold.setAttribute('data-lazy-bg', '/assets/map-alderley-park.webp');
       hold.style.cssText = 'position:absolute;inset:0;overflow:hidden;' +
-        'background:#E8EBE6 url(/assets/map-alderley-park.webp) center/cover no-repeat;' +
+        'background:#E8EBE6 center/cover no-repeat;' +
         'font-family:Mulish,system-ui,sans-serif;color:#173B33;';
 
       var pin = document.createElement('div');
