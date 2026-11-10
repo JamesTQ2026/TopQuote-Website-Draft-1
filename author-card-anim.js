@@ -7,7 +7,8 @@
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   var hasFont = [].some.call(document.querySelectorAll('link[rel="stylesheet"]'), function(l){
-    return (l.href || '').indexOf('Playfair+Display') > -1;
+    // the site's own fonts come with mobile-responsive.css (self-hosted)
+    return (l.href || '').indexOf('Playfair+Display') > -1 || (l.href || '').indexOf('mobile-responsive.css') > -1;
   });
   if (!hasFont){
     var fl = document.createElement('link');
