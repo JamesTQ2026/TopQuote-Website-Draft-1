@@ -32,7 +32,9 @@
       ['Life insurance when pregnant', '/life-insurance-when-pregnant'],
       ['Life insurance after divorce', '/life-insurance-after-divorce'],
       ['Life insurance for couples', '/life-insurance/life-insurance-for-couples'],
-      ['Life insurance for young adults', '/life-insurance/life-insurance-for-young-adults']
+      ['Life insurance for young adults', '/life-insurance/life-insurance-for-young-adults'],
+      ['Life insurance for over 60s', '/life-insurance/life-insurance-for-over-60s'],
+      ['Life insurance for over 70s', '/life-insurance/life-insurance-for-over-70s']
     ], 'More from TopQuote', [
       ['Kids Pass &amp; Popcorn Pass', '/kids-pass'],
       ['Blog', '/blog'],
