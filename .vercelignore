@@ -1,1 +1,10 @@
+# Not served by Vercel: working files that must never be public.
 _saved-widgets/
+tools/
+blog-data/
+exports/
+.github/
+# WordPress export (contains author/commenter emails and IPs), spreadsheets, code sandboxes
+uploads/*.xml
+uploads/*.xlsx
+uploads/insights-section/
