@@ -1715,3 +1715,11 @@ html[data-feefo="on"] [data-feefo-fallback] { display: none !important; }
 span:has(> [data-lucide="calendar"], > svg.lucide-calendar):has(+ .tq-post-updated[data-same]) { display: none !important; }
 nav[aria-label="Breadcrumb"] .tq-updated { margin-left: auto; }
 @media (max-width: 700px) { nav[aria-label="Breadcrumb"] .tq-updated { margin-left: 0; flex-basis: 100%; } }
+
+/* 95. Phones only (James, 10 Nov 2026): the Feefo slide-out reviews tab covered too much of the
+   page, so it is hidden below 700px; and the "About the author" card stacks the big initial
+   above the name so everything lines up on the left. */
+@media (max-width: 700px) {
+  feefo-slideout { display: none !important; }
+  .tq-ac > div[style*="display:flex"] { flex-direction: column !important; gap: 18px !important; }
+}
