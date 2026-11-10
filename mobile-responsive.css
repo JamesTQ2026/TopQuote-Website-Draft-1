@@ -1773,3 +1773,8 @@ html body .tq-sr, html body .sc-host .tq-sr { position: absolute !important; wid
   .sc-host :is(.bl-card, .cf-blcard, .blog-card) > :is([style*="justify-content:space-between"], [style*="justify-content: space-between"]) { flex-direction: column !important; align-items: flex-start !important; justify-content: flex-start !important; gap: 8px !important; }
   .sc-host :is(.bl-card, .cf-blcard, .blog-card) > :is([style*="justify-content:space-between"], [style*="justify-content: space-between"]) > :is([style*="display:flex"], [style*="display: flex"]) { flex-direction: row !important; align-items: center !important; justify-content: flex-start !important; }
 }
+
+/* 99. Anything marked data-hidden-pending-approval (posts Openwork has not approved yet) stays hidden on
+   every screen. The phone rule for 3D "perspective" sections was forcing the homepage blog
+   section back on (display:block !important), showing unapproved posts on phones. */
+html [data-hidden-pending-approval], html .sc-host [data-hidden-pending-approval] { display: none !important; }
