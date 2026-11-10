@@ -45,7 +45,8 @@ HEADER, FOOTER = absolute(HEADER), absolute(FOOTER)
 SCRIPTS = ('<script src="/services-menu.js" defer></script>\n'
            '<script src="/mobile-nav.js" defer></script>\n'
            '<script src="/cookie-banner.js" defer></script>\n'
-           '<script src="/mega-menu.js" defer></script>\n')
+           '<script src="/mega-menu.js" defer></script>\n'
+           '<script src="/guide-refs.js" defer></script>\n')
 
 
 def build(row):
