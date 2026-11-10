@@ -81,6 +81,12 @@ const MOVED = {
   '/home-insurance': '/',
   '/kids-pass-terms-and-conditions': '/kids-pass',
   '/referral-form': '/contact',
+  '/life-insurance/family-life-insurance': '/family-life-insurance',   // guide export path -> the page already on the site (Rule 1)
+  '/life-insurance/life-insurance-for-mums': '/life-insurance-for-mums',   // guide export path -> the page already on the site (Rule 1)
+  '/life-insurance/life-insurance-for-dads': '/life-insurance-for-dads',   // guide export path -> the page already on the site (Rule 1)
+  '/life-insurance/life-insurance-for-parents': '/life-insurance-for-parents',   // guide export path -> the page already on the site (Rule 1)
+  '/life-insurance/life-insurance-when-pregnant': '/life-insurance-when-pregnant',   // guide export path -> the page already on the site (Rule 1)
+  '/life-insurance/life-insurance-after-divorce': '/life-insurance-after-divorce',   // guide export path -> the page already on the site (Rule 1)
   '/contact-altrincham': '/life-insurance-altrincham',   // renamed 9 Nov 2026 (targets 'life insurance <town>')
   '/contact-cheshire-east': '/life-insurance-cheshire-east',   // renamed 9 Nov 2026 (targets 'life insurance <town>')
   '/contact-knutsford': '/life-insurance-knutsford',   // renamed 9 Nov 2026 (targets 'life insurance <town>')

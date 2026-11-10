@@ -1196,6 +1196,36 @@
    "statusCode": 301
   },
   {
+   "source": "/life-insurance/family-life-insurance{/}?",
+   "destination": "/family-life-insurance",
+   "statusCode": 301
+  },
+  {
+   "source": "/life-insurance/life-insurance-for-mums{/}?",
+   "destination": "/life-insurance-for-mums",
+   "statusCode": 301
+  },
+  {
+   "source": "/life-insurance/life-insurance-for-dads{/}?",
+   "destination": "/life-insurance-for-dads",
+   "statusCode": 301
+  },
+  {
+   "source": "/life-insurance/life-insurance-for-parents{/}?",
+   "destination": "/life-insurance-for-parents",
+   "statusCode": 301
+  },
+  {
+   "source": "/life-insurance/life-insurance-when-pregnant{/}?",
+   "destination": "/life-insurance-when-pregnant",
+   "statusCode": 301
+  },
+  {
+   "source": "/life-insurance/life-insurance-after-divorce{/}?",
+   "destination": "/life-insurance-after-divorce",
+   "statusCode": 301
+  },
+  {
    "source": "/contact-altrincham{/}?",
    "destination": "/life-insurance-altrincham",
    "statusCode": 301
