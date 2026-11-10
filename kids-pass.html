@@ -52,6 +52,12 @@
 <meta name="twitter:image" content="https://www.top-quote.co.uk/assets/og-default.jpg">
 <meta name="twitter:description" content="With TopQuote you can enjoy more magical moments with your family with 12 months free access to Kids Pass or Popcorn Pass.">
 <style>a.tq-tel:hover{text-decoration:underline !important;text-underline-offset:3px;}</style>
+<style>
+  /* contact form section on phones and tablets */
+  @media (max-width:980px){#contactSection{padding:64px 20px !important;}.kp-cf-top{flex-direction:column;gap:14px !important;}.kp-cf-top h2{font-size:34px !important;}.kp-cf-grid,.kp-cf-cards{grid-template-columns:1fr !important;}.kp-cf-map{min-height:320px !important;}}
+  @media (max-width:560px){.kp-cf-fields{grid-template-columns:1fr !important;}.kp-cf-form{padding:26px 20px !important;}}
+</style>
+
 <!-- structured data -- generated; no FCA firm reference number is asserted, since 408285 is Openwork's, not Top Quote Limited's -->
 <script type="application/ld+json">
 {
@@ -228,13 +234,63 @@
     </div>
   </section>
 
-  <!-- ============ SPEAK TO EXPERT ============ -->
-  <section class="cta-fixed" style="position:relative;background:#04130d url('assets/partner-2.webp') center/cover fixed;color:#fff;padding:110px clamp(24px,5vw,40px);text-align:center;overflow:hidden;">
-    <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(9,34,25,.82),rgba(15,140,141,.6));"></div>
-    <div style="position:relative;z-index:1;max-width:720px;margin:0 auto;">
-      <h2 class="arva-h" style="font-size:clamp(32px,4vw,50px);font-weight:600;margin-bottom:18px;">Speak to an expert</h2>
-      <p style="font-size:17px;line-height:1.7;color:rgba(255,255,255,.92);margin-bottom:32px;">Speak with our friendly, award-winning team to find the right solution for you and your family.</p>
-      <a href="/get-a-quote" class="abtn" style="display:inline-block;background:#1EBABB;color:#fff;padding:16px 36px;border-radius:10px;text-decoration:none;font-weight:700;font-size:16px;">Get a Quote</a>
+  <!-- ============ CONTACT FORM (same as the homepage; sends to /api/contact) ============ -->
+  <section id="contactSection" data-screen-label="Contact" style="background:#EAEDFB;padding:90px clamp(24px,5vw,40px);">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div class="kp-cf-top" style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:38px;gap:30px;">
+        <div>
+          <div style="display:flex;align-items:center;gap:9px;margin-bottom:16px;">
+            <img src="assets/topquote-mark-teal-64w.webp" alt="TopQuote" style="width:22px;height:22px;object-fit:contain;flex:none;" loading="lazy" decoding="async" width="501" height="501">
+            <span style="color:#1EBABB;font-weight:700;font-size:15px;">Contact Us</span>
+          </div>
+          <h2 class="arva-h" style="font-size:43px;line-height:1.12;font-weight:600;color:#173B33;">One Message Could<br>Change Everything</h2>
+        </div>
+        <div style="color:#6B7280;font-size:15px;line-height:1.7;max-width:320px;margin-top:6px;"><div>Whether you have a question about your policy, want to talk through your options, or simply want to know more about who we are, we’re only a call or message away. No automated menus, no long waits.</div></div>
+      </div>
+
+      <div class="kp-cf-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:26px;">
+        <!-- map -->
+        <div class="kp-cf-map" style="position:relative;background:#EAEDFB;border-radius:16px;min-height:520px;overflow:hidden;">
+          <iframe title="Our location, GLASSHOUSE, Alderley Park" data-consent="embeds" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2377.3!2d-2.2250527!3d53.2755674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487a4f3a65ab8a1b%3A0x11213affa5a3f894!2sGlasshouse!5e0!3m2!1sen!2suk!4v1720000000000!5m2!1sen!2suk" style="position:absolute;inset:0;width:100%;height:100%;border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen=""></iframe>
+        </div>
+        <!-- form -->
+        <div class="kp-cf-form" style="background:#fff;border-radius:16px;padding:38px;">
+          <h3 class="arva-h" style="font-size:28px;font-weight:600;color:#173B33;margin-bottom:12px;"><div>Protect What Matters Most</div></h3>
+          <div style="color:#6B7280;font-size:14.5px;line-height:1.65;margin-bottom:22px;"><div>Finding the right life insurance can feel overwhelming, but it doesn't have to be. Our specialists take the time to understand your situation and find the right cover at the right price. No hard sell, no jargon, just honest advice.</div></div>
+          <div class="kp-cf-fields" style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;">
+            <input placeholder="Full Name*" style="border:1px solid #E2E5F0;background:#F6F7FB;border-radius:8px;padding:14px 16px;font-size:14px;font-family:'Mulish',sans-serif;color:#173B33;">
+            <input placeholder="Phone Number*" style="border:1px solid #E2E5F0;background:#F6F7FB;border-radius:8px;padding:14px 16px;font-size:14px;font-family:'Mulish',sans-serif;color:#173B33;">
+            <input placeholder="Email Address*" style="border:1px solid #E2E5F0;background:#F6F7FB;border-radius:8px;padding:14px 16px;font-size:14px;font-family:'Mulish',sans-serif;color:#173B33;">
+            <select style="border:1px solid #E2E5F0;background:#F6F7FB;border-radius:8px;padding:14px 16px;font-size:14px;font-family:'Mulish',sans-serif;color:#6B7280;" aria-label="Service Type*">
+              <option>Service Type*</option>
+              <option>Life Insurance</option>
+              <option>Critical Illness</option>
+              <option>Income Protection</option>
+            </select>
+          </div>
+          <textarea placeholder="Your Message" rows="4" style="width:100%;border:1px solid #E2E5F0;background:#F6F7FB;border-radius:8px;padding:14px 16px;font-size:14px;font-family:'Mulish',sans-serif;color:#173B33;resize:vertical;margin-bottom:18px;"></textarea>
+          <label style="display:flex;align-items:flex-start;gap:11px;margin-bottom:18px;color:#6B7280;font-size:13.5px;line-height:1.6;cursor:pointer;">
+            <input type="checkbox" name="marketing_opt_in" value="yes" style="width:18px;height:18px;margin-top:1px;accent-color:#1EBABB;flex:none;">
+            <span>Tick this box if you want your details to be stored on our database, which may then be used for marketing purposes.</span>
+          </label>
+          <button style="width:100%;background:#1EBABB;color:#fff;border:none;border-radius:8px;padding:16px;font-weight:700;font-size:15px;cursor:pointer;">Send A Message</button>
+        </div>
+      </div>
+
+      <div class="kp-cf-cards" style="display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:26px;">
+        <div style="background:#fff;border-radius:14px;padding:24px 28px;display:flex;align-items:center;gap:16px;">
+          <span style="width:48px;height:48px;border-radius:50%;background:#1EBABB;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i data-lucide="map-pin" style="width:22px;height:22px;color:#fff;"></i></span>
+          <div><div style="color:#173B33;font-weight:700;font-size:16px;">Locations</div><div style="color:#6B7280;font-size:14px;margin-top:3px;">Alderley Park, Suite 3, GLASSHOUSE, Congleton Road, Macclesfield, SK10 4TG</div></div>
+        </div>
+        <div style="background:#1EBABB;border-radius:14px;padding:24px 28px;display:flex;align-items:center;gap:16px;">
+          <span style="width:48px;height:48px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i data-lucide="phone" style="width:22px;height:22px;color:#1EBABB;"></i></span>
+          <div><div style="color:#fff;font-weight:700;font-size:16px;">Phone</div><div style="color:rgba(255,255,255,.9);font-size:14px;margin-top:3px;"><a href="tel:+441619743710" class="tq-tel" style="color:inherit;text-decoration:none;">0161 974 3710</a></div></div>
+        </div>
+        <div style="background:#fff;border-radius:14px;padding:24px 28px;display:flex;align-items:center;gap:16px;">
+          <span style="width:48px;height:48px;border-radius:50%;background:#1EBABB;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i data-lucide="mail" style="width:22px;height:22px;color:#fff;"></i></span>
+          <div><div style="color:#173B33;font-weight:700;font-size:16px;">Our Email</div><div style="color:#6B7280;font-size:14px;margin-top:3px;">hello@topquote.uk.com</div></div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -347,6 +403,42 @@
   };
   window.addEventListener('scroll', toggle, { passive: true });
   toggle();
+})();
+</script>
+<script>
+/* Wire the "Protect What Matters Most" contact form to the /api/contact function.
+   Uses event delegation on document, so it works even though the page builds
+   this section with JS after page load. */
+(function(){
+  var emailRe=/^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+  document.addEventListener('click', function(e){
+    var btn = e.target && e.target.closest ? e.target.closest('button') : null;
+    if(!btn || !/send a message/i.test(btn.textContent||'')) return;
+    var sec = btn.closest('#contactSection') || document.getElementById('contactSection');
+    if(!sec) return;
+    e.preventDefault();
+    if(btn.dataset.sending==='1') return;
+    var byPh=function(p){ return sec.querySelector('input[placeholder="'+p+'"]'); };
+    var nameEl=byPh('Full Name*'), phoneEl=byPh('Phone Number*'), emailEl=byPh('Email Address*');
+    var msgEl=sec.querySelector('textarea'), selEl=sec.querySelector('select'), consentEl=sec.querySelector('input[type="checkbox"]');
+    var name=(nameEl&&nameEl.value.trim())||'', phone=(phoneEl&&phoneEl.value.trim())||'', email=(emailEl&&emailEl.value.trim())||'';
+    if(!name||!phone||!email||!emailRe.test(email)){ alert('Please enter your name, phone number and a valid email address.'); return; }
+    var svc = (selEl && selEl.selectedIndex>0) ? selEl.value : '';
+    var msg=(msgEl&&msgEl.value.trim())||'', parts=name.split(/\s+/);
+    var payload={ firstName:parts.shift()||name, lastName:parts.join(' '), email:email, phone:phone,
+      message:(svc?('Service interest: '+svc+'\n\n'):'')+msg, privacyConsent:true,
+      marketingConsent:!!(consentEl&&consentEl.checked), source:'Kids Pass page' };
+    btn.dataset.sending='1'; btn.style.opacity='0.75'; btn.textContent='Sending…';
+    fetch('/api/contact',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)})
+      .then(function(r){ if(!r.ok) throw new Error('HTTP '+r.status); })
+      .catch(function(err){ console.error('Kids Pass contact submit failed:', err); })
+      .finally(function(){
+        btn.dataset.sending=''; btn.style.opacity='1'; btn.style.background='#159a9b';
+        btn.textContent='✓ Thanks, we’ll be in touch';
+        if(nameEl)nameEl.value=''; if(phoneEl)phoneEl.value=''; if(emailEl)emailEl.value='';
+        if(msgEl)msgEl.value=''; if(consentEl)consentEl.checked=false; if(selEl)selEl.selectedIndex=0;
+      });
+  }, true);
 })();
 </script>
 </body>
