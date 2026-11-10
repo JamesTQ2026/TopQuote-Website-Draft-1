@@ -423,7 +423,9 @@ ${items}
   const ver = {};
   for (const f of OWN) {
     const served = f === 'mobile-responsive.css' ? 'mobile-responsive.min.css' : f;
-    ver[f] = { served, v: crypto.createHash('sha1').update(fs.readFileSync(path.join(ROOT, served))).digest('hex').slice(0, 10) };
+    // line endings ignored, so Windows checkouts and the GitHub job compute the same tag
+    const text = fs.readFileSync(path.join(ROOT, served), 'utf8').replace(/\r\n/g, '\n');
+    ver[f] = { served, v: crypto.createHash('sha1').update(text).digest('hex').slice(0, 10) };
   }
   const names = OWN.map((f) => f.replace(/\./g, '\\.').replace('mobile-responsive\\.css', 'mobile-responsive(?:\\.min)?\\.css')).join('|');
   const ref = new RegExp(`((?:src|href)=")((?:\\./|/)?)(${names})(?:\\?v=[0-9a-f]+)?"`, 'g');
