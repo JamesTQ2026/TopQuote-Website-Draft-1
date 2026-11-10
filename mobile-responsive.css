@@ -1778,3 +1778,8 @@ html body .tq-sr, html body .sc-host .tq-sr { position: absolute !important; wid
    every screen. The phone rule for 3D "perspective" sections was forcing the homepage blog
    section back on (display:block !important), showing unapproved posts on phones. */
 html [data-hidden-pending-approval], html .sc-host [data-hidden-pending-approval] { display: none !important; }
+
+/* 100. TopQuote icons drawn 15% larger inside their box (James 10 Nov 2026); the box, tiles and
+   layout are unchanged. Scaling the drawing group keeps its cut-out masks lined up. */
+svg.tq-icon { overflow: visible; }
+svg.tq-icon > g { transform: scale(1.15); transform-origin: 12px 12px; }
