@@ -4734,5 +4734,124 @@
    "source": "/(blog-[^/.]+)",
    "destination": "/$1.html"
   }
+ ],
+ "headers": [
+  {
+   "source": "/vendor/(.*)",
+   "headers": [
+    {
+     "key": "Cache-Control",
+     "value": "public, max-age=31536000, immutable"
+    }
+   ]
+  },
+  {
+   "source": "/fonts/(.*)",
+   "headers": [
+    {
+     "key": "Cache-Control",
+     "value": "public, max-age=31536000, immutable"
+    }
+   ]
+  },
+  {
+   "source": "/assets/(.*)",
+   "headers": [
+    {
+     "key": "Cache-Control",
+     "value": "public, max-age=2592000"
+    }
+   ]
+  },
+  {
+   "source": "/author-card-anim.js",
+   "has": [
+    {
+     "type": "query",
+     "key": "v"
+    }
+   ],
+   "headers": [
+    {
+     "key": "Cache-Control",
+     "value": "public, max-age=31536000, immutable"
+    }
+   ]
+  },
+  {
+   "source": "/cookie-banner.js",
+   "has": [
+    {
+     "type": "query",
+     "key": "v"
+    }
+   ],
+   "headers": [
+    {
+     "key": "Cache-Control",
+     "value": "public, max-age=31536000, immutable"
+    }
+   ]
+  },
+  {
+   "source": "/mobile-nav.js",
+   "has": [
+    {
+     "type": "query",
+     "key": "v"
+    }
+   ],
+   "headers": [
+    {
+     "key": "Cache-Control",
+     "value": "public, max-age=31536000, immutable"
+    }
+   ]
+  },
+  {
+   "source": "/mobile-responsive.min.css",
+   "has": [
+    {
+     "type": "query",
+     "key": "v"
+    }
+   ],
+   "headers": [
+    {
+     "key": "Cache-Control",
+     "value": "public, max-age=31536000, immutable"
+    }
+   ]
+  },
+  {
+   "source": "/services-menu.js",
+   "has": [
+    {
+     "type": "query",
+     "key": "v"
+    }
+   ],
+   "headers": [
+    {
+     "key": "Cache-Control",
+     "value": "public, max-age=31536000, immutable"
+    }
+   ]
+  },
+  {
+   "source": "/support.js",
+   "has": [
+    {
+     "type": "query",
+     "key": "v"
+    }
+   ],
+   "headers": [
+    {
+     "key": "Cache-Control",
+     "value": "public, max-age=31536000, immutable"
+    }
+   ]
+  }
  ]
 }

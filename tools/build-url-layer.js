@@ -300,7 +300,25 @@ rewrites.push({ source: '/(blog-[^/.]+)', destination: '/$1.html' });
 
 if (redirects.length > 1000) throw new Error('Too many redirects for Vercel (limit 1024): ' + redirects.length);
 
-const vercel = { redirects, rewrites };   // trailingSlash handled above, in one hop
+// Browser caching (Lighthouse "Use efficient cache lifetimes").
+//  - /vendor and /fonts: file names carry the version, contents never change -> one year
+//  - /assets (images, video): 30 days. If an image is REPLACED under the same name, returning
+//    visitors may see the old one for up to 30 days: give a replacement a new file name.
+//  - the site's own scripts/styles: pages ask for them as name?v=<content hash> (set below), so a
+//    changed file has a new address. Only those versioned requests get the one-year cache.
+const YEAR = [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }];
+const headers = [
+  { source: '/vendor/(.*)', headers: YEAR },
+  { source: '/fonts/(.*)', headers: YEAR },
+  { source: '/assets/(.*)', headers: [{ key: 'Cache-Control', value: 'public, max-age=2592000' }] },
+];
+const OWN = fs.readdirSync(ROOT).filter((f) => /\.(js|css)$/.test(f) && !/\.min\.css$/.test(f));
+for (const f of OWN) {
+  const served = f === 'mobile-responsive.css' ? 'mobile-responsive.min.css' : f;
+  headers.push({ source: '/' + served, has: [{ type: 'query', key: 'v' }], headers: YEAR });
+}
+
+const vercel = { redirects, rewrites, headers };   // trailingSlash handled above, in one hop
 fs.writeFileSync(path.join(ROOT, 'vercel.json'), JSON.stringify(vercel, null, 1) + '\n');
 
 // Legal pages still marked "Draft, pending legal & compliance review": kept noindex and out of
@@ -382,6 +400,44 @@ ${items}
   if (!re.test(bh)) throw new Error('Blog.dc.html is missing the ALL-POSTS markers (re-add them under the article grid after a re-export)');
   fs.writeFileSync(bf, bh.replace(re, () => block));
   console.log(`blog index: ${posts.length} approved posts listed as plain links`);
+}
+
+// The site stylesheet is served minified (Lighthouse "Minify CSS"); mobile-responsive.css stays
+// the readable file to edit. Every page then points at each own script/style with ?v=<hash of its
+// contents>, so browsers can keep it a year and still get a changed file at once.
+// Quote Experience.html is left alone (hand-edit only: bulk changes broke the quote form before).
+{
+  const crypto = require('crypto');
+  const src = fs.readFileSync(path.join(ROOT, 'mobile-responsive.css'), 'utf8');
+  // quoted text (e.g. [style*="gap: 28px"]) must keep its exact spacing: set it aside first
+  const strs = [];
+  const min = src
+    .replace(/\/\*[\s\S]*?\*\//g, '')          // comments
+    .replace(/"(?:[^"\\\n]|\\.)*"|'(?:[^'\\\n]|\\.)*'/g, (s) => `\u0000${strs.push(s) - 1}\u0000`)
+    .replace(/\s+/g, ' ')                       // runs of whitespace
+    .replace(/\s*([{};,>])\s*/g, '$1')          // around braces, semicolons, commas, child combinator
+    .replace(/;}/g, '}')
+    .replace(/\u0000(\d+)\u0000/g, (m, i) => strs[+i])
+    .trim() + '\n';
+  fs.writeFileSync(path.join(ROOT, 'mobile-responsive.min.css'), min);
+  const ver = {};
+  for (const f of OWN) {
+    const served = f === 'mobile-responsive.css' ? 'mobile-responsive.min.css' : f;
+    ver[f] = { served, v: crypto.createHash('sha1').update(fs.readFileSync(path.join(ROOT, served))).digest('hex').slice(0, 10) };
+  }
+  const names = OWN.map((f) => f.replace(/\./g, '\\.').replace('mobile-responsive\\.css', 'mobile-responsive(?:\\.min)?\\.css')).join('|');
+  const ref = new RegExp(`((?:src|href)=")((?:\\./|/)?)(${names})(?:\\?v=[0-9a-f]+)?"`, 'g');
+  let pages = 0;
+  for (const file of fs.readdirSync(ROOT).filter((f) => f.endsWith('.html') && f !== 'Quote Experience.html')) {
+    const fp = path.join(ROOT, file);
+    const html = fs.readFileSync(fp, 'utf8');
+    const out = html.replace(ref, (m, attr, pre, name) => {
+      const key = /^mobile-responsive/.test(name) ? 'mobile-responsive.css' : name;
+      return `${attr}${pre}${ver[key].served}?v=${ver[key].v}"`;
+    });
+    if (out !== html) { fs.writeFileSync(fp, out); pages++; }
+  }
+  console.log(`assets: mobile-responsive.min.css ${src.length} -> ${min.length} bytes; ${OWN.length} own files versioned, ${pages} pages updated`);
 }
 
 console.log(`canonical tags added: ${tagged}`);
