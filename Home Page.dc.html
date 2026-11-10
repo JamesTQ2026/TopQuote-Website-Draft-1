@@ -141,6 +141,12 @@
   #stepsRow > div:nth-child(4){transition-delay:.27s;}
   #stepsRow > div:nth-child(5){transition-delay:.36s;}
   @media (prefers-reduced-motion:reduce){#stepsRow > div{opacity:1 !important;transform:none !important;}}
+  /* Why TopQuote cards: same entrance as the step panels */
+  #whyRow > div{opacity:0;transform:translateY(34px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1);}
+  #whyRow.revealed > div{opacity:1;transform:none;}
+  #whyRow > div:nth-child(2){transition-delay:.09s;}
+  @media (prefers-reduced-motion:reduce){#whyRow > div{opacity:1 !important;transform:none !important;}}
+  @media (max-width:700px){#whyRow{grid-template-columns:1fr !important;gap:18px !important;}#whySection h2{font-size:34px !important;margin-bottom:30px !important;}#whyRow > div{padding:32px 26px !important;}#whySection .why-label{justify-content:center !important;align-items:center !important;flex-direction:row !important;}}
   @keyframes octaFloat{0%,100%{transform:translateY(0);}50%{transform:translateY(-9px);}}
   #heroOctaInner{animation:octaFloat 4.8s ease-in-out infinite;}
   #heroOctaInner > div{transition:transform .45s cubic-bezier(.34,1.56,.44,1);transform-origin:center;}
@@ -155,8 +161,8 @@
   @media (prefers-reduced-motion:reduce){#heroHeading,#heroParaFloat,#heroOctaInner{animation:none !important;}}
   @keyframes aboutFloat{0%,100%{transform:translateY(0) rotate(0deg);}50%{transform:translateY(-12px) rotate(-.4deg);}}
   @keyframes aboutFloat{0%,100%{transform:translateY(0) rotate(0deg);}50%{transform:translateY(-12px) rotate(-.4deg);}}
-  #aboutImg1{animation:aboutFloat 7s ease-in-out infinite;}
-  #aboutImg1 .about-vid{animation:aboutVidFix 7s ease-in-out infinite;} /* the photo floats with its frame and shows edge to edge (no counter-motion, so no oversize crop) */
+  #aboutImg1{animation:none;} /* James 10 Nov 2026: the About photo stays still (no float, no scroll parallax) */
+  #aboutImg1 .about-vid{animation:none;} /* the photo floats with its frame and shows edge to edge (no counter-motion, so no oversize crop) */
   @keyframes aboutVidFix{0%,100%{transform:translateY(0) rotate(0deg);}50%{transform:translateY(12px) rotate(.4deg);}}
   @media (prefers-reduced-motion:reduce){#aboutImg1,#aboutImg1 .about-vid,#aboutImg1 .about-still{animation:none !important;}}
   @keyframes heroCircleFloat{0%,100%{transform:translateY(0);}50%{transform:translateY(15px);}}
@@ -377,6 +383,29 @@
           <span id="heroCircle" style="width:26px;height:26px;border:5px solid #fff;border-radius:50%;flex:none;margin-top:2px;"></span>
           <div style="font-size:22px;line-height:1.55;color:rgba(255,255,255,.92);"><div>We’re protection advisers with over 20 years of experience in life insurance and protection. We take the time to understand your circumstances and find cover that genuinely works for you and the people who depend on you.</div></div>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHY TOPQUOTE (James 10 Nov 2026: section 2; cards and wording as on About Us) ============ -->
+  <section id="whySection" data-screen-label="Why TopQuote" style="position:relative;z-index:2;background:#F6F7FB;padding:90px 40px;box-shadow:0 -34px 70px rgba(8,30,22,.16);">
+    <div style="max-width:1000px;margin:0 auto;">
+      <div class="why-label" style="display:flex;align-items:center;justify-content:center;gap:9px;margin-bottom:16px;">
+        <img src="assets/topquote-mark-teal-64w.webp" alt="" style="width:22px;height:22px;object-fit:contain;flex:none;" loading="lazy" decoding="async" width="501" height="501">
+        <span style="color:#1EBABB;font-weight:700;font-size:15px;">Expert Adviser Support</span>
+      </div>
+      <h2 class="arva-h" style="text-align:center;font-size:43px;line-height:1.12;font-weight:600;color:#173B33;margin-bottom:48px;">Why TopQuote</h2>
+      <div id="whyRow" style="display:grid;grid-template-columns:1fr 1fr;gap:30px;">
+        <div style="background:#1EBABB;border-radius:18px;padding:44px 40px;box-shadow:0 14px 40px rgba(30,186,187,.28);">
+          <span style="width:56px;height:56px;border-radius:13px;background:#fff;display:inline-flex;align-items:center;justify-content:center;margin-bottom:26px;"><i data-lucide="shield" style="width:28px;height:28px;color:#1EBABB;"></i></span>
+          <h3 class="arva-h" style="font-size:23px;font-weight:700;color:#fff;margin-bottom:16px;">Advised service</h3>
+          <p style="color:rgba(255,255,255,.92);font-size:15px;line-height:1.75;">Our advisers can discuss your life insurance options based on your individual circumstances, explain suitable products, and answer any questions, helping you make an informed decision.</p>
+        </div>
+        <div style="background:#fff;border-radius:18px;padding:44px 40px;box-shadow:0 14px 40px rgba(20,40,35,.07);">
+          <span style="width:56px;height:56px;border-radius:13px;background:#1EBABB;display:inline-flex;align-items:center;justify-content:center;margin-bottom:26px;"><i data-lucide="user-check" style="width:28px;height:28px;color:#fff;"></i></span>
+          <h3 class="arva-h" style="font-size:23px;font-weight:700;color:#173B33;margin-bottom:16px;">Appointed representative</h3>
+          <p style="color:#5B6B66;font-size:15px;line-height:1.75;">TopQuote is an appointed representative of The Openwork Partnership, a trading style of Openwork Limited which is authorised and regulated by the <a href="https://www.fca.org.uk/" target="_blank" rel="noopener" style="color:#1EBABB;font-weight:600;text-decoration:none;">Financial Conduct Authority (FCA)</a>. We believe in treating our customers fairly and always provide the highest standard of service.</p>
         </div>
       </div>
     </div>
@@ -1762,7 +1791,7 @@ class Component extends DCLogic {
       const ae = ap * ap * (3 - 2 * ap);
       const ai1 = document.getElementById('aboutImg1');
       const ai2 = document.getElementById('aboutImg2');
-      if (ai1) ai1.style.transform = 'translateY(' + ((0.5 - ae) * 76).toFixed(1) + 'px)';
+      // the About photo (aboutImg1) no longer shifts with scroll (James 10 Nov 2026)
       if (ai2) ai2.style.transform = 'translateY(' + ((0.5 - ae) * -64).toFixed(1) + 'px)';
       // team section, breathing tilt/settle
       const teamInner = document.getElementById('teamInner');
@@ -1770,6 +1799,8 @@ class Component extends DCLogic {
         const tr = teamInner.getBoundingClientRect();
         const sr = document.getElementById('stepsRow');
         if (sr) { if (tr.top < vh * 0.82 && tr.bottom > 0) sr.classList.add('revealed'); else sr.classList.remove('revealed'); }
+        const wr = document.getElementById('whyRow');
+        if (wr) { const wb = wr.getBoundingClientRect(); if (wb.top < vh * 0.82 && wb.bottom > 0) wr.classList.add('revealed'); else wr.classList.remove('revealed'); }
         const td = Math.max(-1, Math.min(1, ((tr.top + tr.height / 2) - vh / 2) / vh));
         if (this.__tmCur === undefined) this.__tmCur = td;
         this.__tmCur += (td - this.__tmCur) * 0.10;
