@@ -1723,3 +1723,8 @@ nav[aria-label="Breadcrumb"] .tq-updated { margin-left: auto; }
   feefo-slideout { display: none !important; }
   .tq-ac > div[style*="display:flex"] { flex-direction: column !important; gap: 18px !important; }
 }
+
+/* 96. Hidden link descriptions (e.g. "Learn More about life insurance"): read by search engines and
+   screen readers, not shown on screen. */
+html body .tq-sr, html body .sc-host .tq-sr { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
