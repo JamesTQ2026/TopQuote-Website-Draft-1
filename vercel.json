@@ -921,26 +921,6 @@
    "statusCode": 302
   },
   {
-   "source": "/blog-do-you-need-life-insurance-for-a-mortgage{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog-do-you-need-life-insurance-for-a-mortgage.html{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog/:cat/do-you-need-life-insurance-for-a-mortgage{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog/do-you-need-life-insurance-for-a-mortgage{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
    "source": "/blog-family-life-insurance{/}?",
    "destination": "/blog",
    "statusCode": 302
@@ -1057,26 +1037,6 @@
   },
   {
    "source": "/blog/joint-life-insurance-vs-single-a-uk-guide{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog-using-life-insurance-for-inheritance-tax-planning-uk{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog-using-life-insurance-for-inheritance-tax-planning-uk.html{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog/:cat/using-life-insurance-for-inheritance-tax-planning-uk{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog/using-life-insurance-for-inheritance-tax-planning-uk{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
@@ -2286,6 +2246,16 @@
    "statusCode": 301
   },
   {
+   "source": "/blog/:cat/do-you-need-life-insurance-for-a-mortgage{/}?",
+   "destination": "/blog-do-you-need-life-insurance-for-a-mortgage",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/do-you-need-life-insurance-for-a-mortgage{/}?",
+   "destination": "/blog-do-you-need-life-insurance-for-a-mortgage",
+   "statusCode": 301
+  },
+  {
    "source": "/blog/:cat/do-you-think-you-overthink{/}?",
    "destination": "/blog-do-you-think-you-overthink",
    "statusCode": 301
@@ -3396,6 +3366,16 @@
    "statusCode": 301
   },
   {
+   "source": "/blog/:cat/using-life-insurance-for-inheritance-tax-planning-uk{/}?",
+   "destination": "/blog-using-life-insurance-for-inheritance-tax-planning-uk",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/using-life-insurance-for-inheritance-tax-planning-uk{/}?",
+   "destination": "/blog-using-life-insurance-for-inheritance-tax-planning-uk",
+   "statusCode": 301
+  },
+  {
    "source": "/blog/:cat/we-love-mcr-2017{/}?",
    "destination": "/blog-we-love-mcr-2017",
    "statusCode": 301
@@ -3961,6 +3941,11 @@
    "statusCode": 301
   },
   {
+   "source": "/do-you-need-life-insurance-for-a-mortgage{/}?",
+   "destination": "/blog-do-you-need-life-insurance-for-a-mortgage",
+   "statusCode": 301
+  },
+  {
    "source": "/easter-2016{/}?",
    "destination": "/blog-easter-2016",
    "statusCode": 301
@@ -4448,6 +4433,11 @@
   {
    "source": "/understanding-and-managing-debt-a-comprehensive-guide{/}?",
    "destination": "/blog-understanding-and-managing-debt-a-comprehensive-guide",
+   "statusCode": 301
+  },
+  {
+   "source": "/using-life-insurance-for-inheritance-tax-planning-uk{/}?",
+   "destination": "/blog-using-life-insurance-for-inheritance-tax-planning-uk",
    "statusCode": 301
   },
   {
