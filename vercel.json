@@ -901,46 +901,6 @@
    "statusCode": 302
   },
   {
-   "source": "/blog-cohabiting-couples-and-life-insurance-uk-what-you-need-to-know{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog-cohabiting-couples-and-life-insurance-uk-what-you-need-to-know.html{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog/:cat/cohabiting-couples-and-life-insurance-uk-what-you-need-to-know{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog/cohabiting-couples-and-life-insurance-uk-what-you-need-to-know{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog-family-life-insurance{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog-family-life-insurance.html{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog/:cat/family-life-insurance{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog/family-life-insurance{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
    "source": "/blog-how-much-life-insurance-do-i-need-a-uk-guide{/}?",
    "destination": "/blog",
    "statusCode": 302
@@ -2146,6 +2106,16 @@
    "statusCode": 301
   },
   {
+   "source": "/blog/:cat/cohabiting-couples-and-life-insurance-uk-what-you-need-to-know{/}?",
+   "destination": "/blog-cohabiting-couples-and-life-insurance-uk-what-you-need-to-know",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/cohabiting-couples-and-life-insurance-uk-what-you-need-to-know{/}?",
+   "destination": "/blog-cohabiting-couples-and-life-insurance-uk-what-you-need-to-know",
+   "statusCode": 301
+  },
+  {
    "source": "/blog/:cat/cold-weather-wellness-guide{/}?",
    "destination": "/blog-cold-weather-wellness-guide",
    "statusCode": 301
@@ -2333,6 +2303,16 @@
   {
    "source": "/blog/family-always-comes-first{/}?",
    "destination": "/blog-family-always-comes-first",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/:cat/family-life-insurance{/}?",
+   "destination": "/blog-family-life-insurance",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/family-life-insurance{/}?",
+   "destination": "/blog-family-life-insurance",
    "statusCode": 301
   },
   {
@@ -3898,6 +3878,11 @@
   {
    "source": "/claiming{/}?",
    "destination": "/blog-claiming",
+   "statusCode": 301
+  },
+  {
+   "source": "/cohabiting-couples-and-life-insurance-uk-what-you-need-to-know{/}?",
+   "destination": "/blog-cohabiting-couples-and-life-insurance-uk-what-you-need-to-know",
    "statusCode": 301
   },
   {
