@@ -881,26 +881,6 @@
    "statusCode": 302
   },
   {
-   "source": "/blog-buying-life-insurance{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog-buying-life-insurance.html{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog/:cat/buying-life-insurance{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog/buying-life-insurance{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
    "source": "/blog-how-much-life-insurance-do-i-need-a-uk-guide{/}?",
    "destination": "/blog",
    "statusCode": 302
@@ -977,26 +957,6 @@
   },
   {
    "source": "/blog/is-income-protection-insurance-worth-it{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog-joint-life-insurance-vs-single-a-uk-guide{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog-joint-life-insurance-vs-single-a-uk-guide.html{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog/:cat/joint-life-insurance-vs-single-a-uk-guide{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog/joint-life-insurance-vs-single-a-uk-guide{/}?",
    "destination": "/blog",
    "statusCode": 302
   },
@@ -2026,6 +1986,16 @@
    "statusCode": 301
   },
   {
+   "source": "/blog/:cat/buying-life-insurance{/}?",
+   "destination": "/blog-buying-life-insurance",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/buying-life-insurance{/}?",
+   "destination": "/blog-buying-life-insurance",
+   "statusCode": 301
+  },
+  {
    "source": "/blog/:cat/cake-bake-dress-down-and-auction{/}?",
    "destination": "/blog-cake-bake-dress-down-and-auction",
    "statusCode": 301
@@ -2663,6 +2633,16 @@
   {
    "source": "/blog/janes-experience-unexpected-death{/}?",
    "destination": "/blog-janes-experience-unexpected-death",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/:cat/joint-life-insurance-vs-single-a-uk-guide{/}?",
+   "destination": "/blog-joint-life-insurance-vs-single-a-uk-guide",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/joint-life-insurance-vs-single-a-uk-guide{/}?",
+   "destination": "/blog-joint-life-insurance-vs-single-a-uk-guide",
    "statusCode": 301
   },
   {
@@ -3841,6 +3821,11 @@
    "statusCode": 301
   },
   {
+   "source": "/buying-life-insurance{/}?",
+   "destination": "/blog-buying-life-insurance",
+   "statusCode": 301
+  },
+  {
    "source": "/cake-bake-dress-down-and-auction{/}?",
    "destination": "/blog-cake-bake-dress-down-and-auction",
    "statusCode": 301
@@ -4118,6 +4103,11 @@
   {
    "source": "/is-red-wine-actually-good-for-you{/}?",
    "destination": "/blog-is-red-wine-actually-good-for-you",
+   "statusCode": 301
+  },
+  {
+   "source": "/joint-life-insurance-vs-single-a-uk-guide{/}?",
+   "destination": "/blog-joint-life-insurance-vs-single-a-uk-guide",
    "statusCode": 301
   },
   {
