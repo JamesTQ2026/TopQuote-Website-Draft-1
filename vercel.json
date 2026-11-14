@@ -881,46 +881,6 @@
    "statusCode": 302
   },
   {
-   "source": "/blog-how-much-life-insurance-do-i-need-a-uk-guide{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog-how-much-life-insurance-do-i-need-a-uk-guide.html{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog/:cat/how-much-life-insurance-do-i-need-a-uk-guide{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog/how-much-life-insurance-do-i-need-a-uk-guide{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog-income-protection-for-the-self-employed{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog-income-protection-for-the-self-employed.html{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog/:cat/income-protection-for-the-self-employed{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog/income-protection-for-the-self-employed{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
    "source": "/blog-income-protection-insurance{/}?",
    "destination": "/blog",
    "statusCode": 302
@@ -2456,6 +2416,16 @@
    "statusCode": 301
   },
   {
+   "source": "/blog/:cat/how-much-life-insurance-do-i-need-a-uk-guide{/}?",
+   "destination": "/blog-how-much-life-insurance-do-i-need-a-uk-guide",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/how-much-life-insurance-do-i-need-a-uk-guide{/}?",
+   "destination": "/blog-how-much-life-insurance-do-i-need-a-uk-guide",
+   "statusCode": 301
+  },
+  {
    "source": "/blog/:cat/how-much-life-insurance-do-parents-really-need{/}?",
    "destination": "/blog-how-much-life-insurance-do-parents-really-need",
    "statusCode": 301
@@ -2573,6 +2543,16 @@
   {
    "source": "/blog/how-valuable-is-your-childs-school-bag{/}?",
    "destination": "/blog-how-valuable-is-your-childs-school-bag",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/:cat/income-protection-for-the-self-employed{/}?",
+   "destination": "/blog-income-protection-for-the-self-employed",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/income-protection-for-the-self-employed{/}?",
+   "destination": "/blog-income-protection-for-the-self-employed",
    "statusCode": 301
   },
   {
@@ -4021,6 +4001,11 @@
    "statusCode": 301
   },
   {
+   "source": "/how-much-life-insurance-do-i-need-a-uk-guide{/}?",
+   "destination": "/blog-how-much-life-insurance-do-i-need-a-uk-guide",
+   "statusCode": 301
+  },
+  {
    "source": "/how-much-life-insurance-do-parents-really-need{/}?",
    "destination": "/blog-how-much-life-insurance-do-parents-really-need",
    "statusCode": 301
@@ -4078,6 +4063,11 @@
   {
    "source": "/how-valuable-is-your-childs-school-bag{/}?",
    "destination": "/blog-how-valuable-is-your-childs-school-bag",
+   "statusCode": 301
+  },
+  {
+   "source": "/income-protection-for-the-self-employed{/}?",
+   "destination": "/blog-income-protection-for-the-self-employed",
    "statusCode": 301
   },
   {
