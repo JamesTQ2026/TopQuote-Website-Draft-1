@@ -449,7 +449,7 @@
       const isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(rawEmail);
       const showNext = !isSubmitted && (step === 1 ? (!isNaN(numericValue) && numericValue >= 1000) : rawEmail.length >= 4);
       const QUESTIONS = [
-        { key: "quotesFor", type: "choice", line1: "I'd like quotes", line2: "for:", options: [{ k: "single", label: "Just me" }, { k: "couple", label: "Me and my partner" }] },
+        { key: "quotesFor", type: "choice", line1: "I'd like quotes for:", line2: "", options: [{ k: "single", label: "Just me" }, { k: "couple", label: "Me and my partner" }] },
         { key: "cover", type: "choice", line1: "What would you", line2: "like to cover?", options: [{ k: "family", label: "My Family" }, { k: "mortgage", label: "My Mortgage" }, { k: "both", label: "Both" }] },
         { key: "smoker", type: "choice", line1: "Have you used nicotine", line2: "in the last 12 months?", options: [{ k: "no", label: "No" }, { k: "yes", label: "Yes" }] },
         { key: "heart", type: "choice", line1: "Any diagnosed", line2: "heart conditions?", options: [{ k: "no", label: "No" }, { k: "yes", label: "Yes" }] },
@@ -817,7 +817,7 @@
                   ) : (
                     <>
                       <KineticTextReveal key={"q" + qIndex + "a"} text={currentQ.line1} splitBy="words" direction="up" distance={15} stagger={0.08} delay={0.1} blur={true} segmentClassName="font-serif font-[500] text-[#0C1F19] pb-1" />
-                      <KineticTextReveal key={"q" + qIndex + "b"} text={currentQ.line2} splitBy="words" direction="up" distance={15} stagger={0.08} delay={0.4} blur={true} className="mt-[-0.06em]" segmentClassName="font-serif italic font-[280] text-[#1EBABB] pb-1" />
+                      {currentQ.line2 && <KineticTextReveal key={"q" + qIndex + "b"} text={currentQ.line2} splitBy="words" direction="up" distance={15} stagger={0.08} delay={0.4} blur={true} className="mt-[-0.06em]" segmentClassName="font-serif italic font-[280] text-[#0C1F19] pb-1" />}
                     </>
                   )}
                 </motion.h1>
