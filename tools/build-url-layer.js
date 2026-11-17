@@ -89,6 +89,13 @@ const MOVED = {
   '/contact-salford': '/life-insurance-salford',   // renamed 9 Nov 2026 (targets 'life insurance <town>')
   '/contact-stockport': '/life-insurance-stockport',   // renamed 9 Nov 2026 (targets 'life insurance <town>')
   '/contact-wilmslow': '/life-insurance-wilmslow',   // renamed 9 Nov 2026 (targets 'life insurance <town>')
+  // Search Console export 17 Nov 2026: old addresses still shown in Google that 404'd
+  '/trust-faq': '/blog-is-life-insurance-part-of-your-estate',
+  '/privacy-policies': '/privacy-notice',
+  '/graduate-sales-executive': '/careers',
+  '/graduate-sales-executive-2': '/careers',
+  '/life-insurance-macclesfield-local-fca-advisers': '/life-insurance-macclesfield',
+  '/life-insurance/life-insurance-when-pregnant': '/life-insurance-when-pregnant',
 };
 
 // Older-generation URLs Google may still know (found via the Internet Archive, 25 Sep 2026).
@@ -209,10 +216,21 @@ const rewrites = [];
 const slashOpt = (src) => (/[/?*+)]$/.test(src) || src.endsWith('}') ? src : src + '{/}?');
 const r301 = (source, destination) => redirects.push({ source: slashOpt(source), destination, statusCode: 301 });
 
-// 0. unapproved posts: temporary redirect to the blog index (302, so they can go live later)
+// 0. unapproved posts: temporary redirect (302, so they can go live later) to the blog index,
+//    or to the closest live page for held posts Google still sends people to (Search Console, 17 Nov 2026)
+const HELD_FALLBACK = {
+  'how-long-does-a-life-insurance-claim-take-to-pay-out-in-the-uk': '/blog-claiming',
+  'how-are-life-insurance-premiums-calculated-in-the-uk': '/blog-what-factors-affect-a-life-insurance-quote',
+  'life-insurance-for-high-risk-occupations-what-uk-workers-need-to-know': '/blog-what-factors-affect-a-life-insurance-quote',
+  'waiver-of-premium-what-it-is-and-whether-you-need-it': '/life-insurance',
+  'over-50s-life-insurance': '/life-insurance',
+};
 for (const slug of held) {
+  const to = HELD_FALLBACK[slug] || '/blog';
+  const post = to.match(/^\/blog-(.+)$/);
+  if (post && !liveSlugs.includes(post[1])) throw new Error(`HELD_FALLBACK ${slug} points at a missing or unapproved post: ${to}`);
   for (const src of [`/blog-${slug}`, `/blog-${slug}.html`, `/blog/:cat/${slug}`, `/blog/${slug}`]) {
-    redirects.push({ source: slashOpt(src), destination: '/blog', statusCode: 302 });
+    redirects.push({ source: slashOpt(src), destination: to, statusCode: 302 });
   }
 }
 
@@ -262,6 +280,31 @@ const RETIRED = {
   'is-death-in-service-enough': '/life-insurance',
   // Search Console 17 Nov 2026: still shown for "joint life insurance for unmarried couples" / "couples insurance"
   'life-insurance-for-unmarried-couples-what-you-need-to-know': '/blog-cohabiting-couples-and-life-insurance-uk-what-you-need-to-know',
+  // Search Console export 17 Nov 2026 (3 months): renamed WordPress posts still getting impressions
+  'life-insurance-for-smokers-a-uk-guide': '/blog-life-insurance-for-smokers',
+  'life-insurance-after-quitting-smoking-what-ex-smokers-should-know': '/blog-life-insurance-for-smokers',
+  'do-you-need-life-insurance-for-a-mortgage-2': '/blog-do-you-need-life-insurance-for-a-mortgage',
+  'do-i-need-life-insurance-for-a-mortgage-2': '/blog-do-you-need-life-insurance-for-a-mortgage',
+  'what-happens-if-you-stop-paying-life-insurance': '/blog-why-is-it-important-to-review-life-cover',
+  'life-insurance-and-divorce-what-happens-to-your-cover': '/blog-life-insurance-after-divorce',
+  'waiver-of-premium-explained-how-the-benefit-works': '/life-insurance',
+  'level-term-life-insurance-how-a-fixed-sum-works': '/life-insurance',
+  'relevant-life-insurance-a-plain-english-guide-for-directors-and-small-companies': '/blog-protecting-your-business-and-loved-ones-the-benefits-of-life-insurance-for-uk-business-owners',
+  'relevant-life-insurance-for-directors-and-small-companies': '/blog-protecting-your-business-and-loved-ones-the-benefits-of-life-insurance-for-uk-business-owners',
+  'childrens-critical-illness-cover-how-it-works': '/blog-what-is-critical-illness-cover-and-why-you-might-need-it',
+  'life-insurance-vs-critical-illness-whats-the-difference': '/blog-what-is-critical-illness-cover-and-why-you-might-need-it',
+  'terminal-illness-cover-explained': '/blog-whats-the-difference-between-critical-illness-and-terminal-illness',
+  'life-insurance-for-the-self-employed': '/blog-self-employed-life-insurance',
+  'life-insurance-underwriting-explained-how-uk-insurers-assess-your-application': '/blog-life-insurance-with-pre-existing-conditions',
+  'life-insurance-for-the-armed-forces': '/blog-what-factors-affect-a-life-insurance-quote',
+  'life-insurance-for-landlords-what-uk-buy-to-let-owners-should-know': '/life-insurance',
+  'life-insurance-for-landlords-what-buy-to-let-owners-should-know': '/life-insurance',
+  'key-person-insurance-what-it-is-and-how-it-protects-a-business': '/blog-protecting-your-business-and-loved-ones-the-benefits-of-life-insurance-for-uk-business-owners',
+  'business-loan-protection-what-it-covers-and-how-it-works': '/blog-protecting-your-business-and-loved-ones-the-benefits-of-life-insurance-for-uk-business-owners',
+  'shareholder-protection-explained-for-uk-business-owners': '/blog-protecting-your-business-and-loved-ones-the-benefits-of-life-insurance-for-uk-business-owners',
+  'decreasing-term-life-insurance-a-uk-guide': '/life-insurance',
+  'life-insurance-for-unmarried-couples': '/blog-cohabiting-couples-and-life-insurance-uk-what-you-need-to-know',
+  'life-insurance-for-unmarried-couples-what-to-know': '/blog-cohabiting-couples-and-life-insurance-uk-what-you-need-to-know',
 };
 for (const [slug, to] of Object.entries(RETIRED)) {
   const post = to.match(/^\/blog-(.+)$/);

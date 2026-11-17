@@ -2,22 +2,22 @@
  "redirects": [
   {
    "source": "/blog-over-50s-life-insurance{/}?",
-   "destination": "/blog",
+   "destination": "/life-insurance",
    "statusCode": 302
   },
   {
    "source": "/blog-over-50s-life-insurance.html{/}?",
-   "destination": "/blog",
+   "destination": "/life-insurance",
    "statusCode": 302
   },
   {
    "source": "/blog/:cat/over-50s-life-insurance{/}?",
-   "destination": "/blog",
+   "destination": "/life-insurance",
    "statusCode": 302
   },
   {
    "source": "/blog/over-50s-life-insurance{/}?",
-   "destination": "/blog",
+   "destination": "/life-insurance",
    "statusCode": 302
   },
   {
@@ -62,22 +62,22 @@
   },
   {
    "source": "/blog-waiver-of-premium-what-it-is-and-whether-you-need-it{/}?",
-   "destination": "/blog",
+   "destination": "/life-insurance",
    "statusCode": 302
   },
   {
    "source": "/blog-waiver-of-premium-what-it-is-and-whether-you-need-it.html{/}?",
-   "destination": "/blog",
+   "destination": "/life-insurance",
    "statusCode": 302
   },
   {
    "source": "/blog/:cat/waiver-of-premium-what-it-is-and-whether-you-need-it{/}?",
-   "destination": "/blog",
+   "destination": "/life-insurance",
    "statusCode": 302
   },
   {
    "source": "/blog/waiver-of-premium-what-it-is-and-whether-you-need-it{/}?",
-   "destination": "/blog",
+   "destination": "/life-insurance",
    "statusCode": 302
   },
   {
@@ -222,42 +222,42 @@
   },
   {
    "source": "/blog-how-are-life-insurance-premiums-calculated-in-the-uk{/}?",
-   "destination": "/blog",
+   "destination": "/blog-what-factors-affect-a-life-insurance-quote",
    "statusCode": 302
   },
   {
    "source": "/blog-how-are-life-insurance-premiums-calculated-in-the-uk.html{/}?",
-   "destination": "/blog",
+   "destination": "/blog-what-factors-affect-a-life-insurance-quote",
    "statusCode": 302
   },
   {
    "source": "/blog/:cat/how-are-life-insurance-premiums-calculated-in-the-uk{/}?",
-   "destination": "/blog",
+   "destination": "/blog-what-factors-affect-a-life-insurance-quote",
    "statusCode": 302
   },
   {
    "source": "/blog/how-are-life-insurance-premiums-calculated-in-the-uk{/}?",
-   "destination": "/blog",
+   "destination": "/blog-what-factors-affect-a-life-insurance-quote",
    "statusCode": 302
   },
   {
    "source": "/blog-life-insurance-for-high-risk-occupations-what-uk-workers-need-to-know{/}?",
-   "destination": "/blog",
+   "destination": "/blog-what-factors-affect-a-life-insurance-quote",
    "statusCode": 302
   },
   {
    "source": "/blog-life-insurance-for-high-risk-occupations-what-uk-workers-need-to-know.html{/}?",
-   "destination": "/blog",
+   "destination": "/blog-what-factors-affect-a-life-insurance-quote",
    "statusCode": 302
   },
   {
    "source": "/blog/:cat/life-insurance-for-high-risk-occupations-what-uk-workers-need-to-know{/}?",
-   "destination": "/blog",
+   "destination": "/blog-what-factors-affect-a-life-insurance-quote",
    "statusCode": 302
   },
   {
    "source": "/blog/life-insurance-for-high-risk-occupations-what-uk-workers-need-to-know{/}?",
-   "destination": "/blog",
+   "destination": "/blog-what-factors-affect-a-life-insurance-quote",
    "statusCode": 302
   },
   {
@@ -382,22 +382,22 @@
   },
   {
    "source": "/blog-how-long-does-a-life-insurance-claim-take-to-pay-out-in-the-uk{/}?",
-   "destination": "/blog",
+   "destination": "/blog-claiming",
    "statusCode": 302
   },
   {
    "source": "/blog-how-long-does-a-life-insurance-claim-take-to-pay-out-in-the-uk.html{/}?",
-   "destination": "/blog",
+   "destination": "/blog-claiming",
    "statusCode": 302
   },
   {
    "source": "/blog/:cat/how-long-does-a-life-insurance-claim-take-to-pay-out-in-the-uk{/}?",
-   "destination": "/blog",
+   "destination": "/blog-claiming",
    "statusCode": 302
   },
   {
    "source": "/blog/how-long-does-a-life-insurance-claim-take-to-pay-out-in-the-uk{/}?",
-   "destination": "/blog",
+   "destination": "/blog-claiming",
    "statusCode": 302
   },
   {
@@ -1033,6 +1033,36 @@
   {
    "source": "/contact-wilmslow{/}?",
    "destination": "/life-insurance-wilmslow",
+   "statusCode": 301
+  },
+  {
+   "source": "/trust-faq{/}?",
+   "destination": "/blog-is-life-insurance-part-of-your-estate",
+   "statusCode": 301
+  },
+  {
+   "source": "/privacy-policies{/}?",
+   "destination": "/privacy-notice",
+   "statusCode": 301
+  },
+  {
+   "source": "/graduate-sales-executive{/}?",
+   "destination": "/careers",
+   "statusCode": 301
+  },
+  {
+   "source": "/graduate-sales-executive-2{/}?",
+   "destination": "/careers",
+   "statusCode": 301
+  },
+  {
+   "source": "/life-insurance-macclesfield-local-fca-advisers{/}?",
+   "destination": "/life-insurance-macclesfield",
+   "statusCode": 301
+  },
+  {
+   "source": "/life-insurance/life-insurance-when-pregnant{/}?",
+   "destination": "/life-insurance-when-pregnant",
    "statusCode": 301
   },
   {
@@ -3672,6 +3702,246 @@
   },
   {
    "source": "/blog/life-insurance-for-unmarried-couples-what-you-need-to-know{/}?",
+   "destination": "/blog-cohabiting-couples-and-life-insurance-uk-what-you-need-to-know",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/:cat/life-insurance-for-smokers-a-uk-guide{/}?",
+   "destination": "/blog-life-insurance-for-smokers",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/life-insurance-for-smokers-a-uk-guide{/}?",
+   "destination": "/blog-life-insurance-for-smokers",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/:cat/life-insurance-after-quitting-smoking-what-ex-smokers-should-know{/}?",
+   "destination": "/blog-life-insurance-for-smokers",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/life-insurance-after-quitting-smoking-what-ex-smokers-should-know{/}?",
+   "destination": "/blog-life-insurance-for-smokers",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/:cat/do-you-need-life-insurance-for-a-mortgage-2{/}?",
+   "destination": "/blog-do-you-need-life-insurance-for-a-mortgage",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/do-you-need-life-insurance-for-a-mortgage-2{/}?",
+   "destination": "/blog-do-you-need-life-insurance-for-a-mortgage",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/:cat/do-i-need-life-insurance-for-a-mortgage-2{/}?",
+   "destination": "/blog-do-you-need-life-insurance-for-a-mortgage",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/do-i-need-life-insurance-for-a-mortgage-2{/}?",
+   "destination": "/blog-do-you-need-life-insurance-for-a-mortgage",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/:cat/what-happens-if-you-stop-paying-life-insurance{/}?",
+   "destination": "/blog-why-is-it-important-to-review-life-cover",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/what-happens-if-you-stop-paying-life-insurance{/}?",
+   "destination": "/blog-why-is-it-important-to-review-life-cover",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/:cat/life-insurance-and-divorce-what-happens-to-your-cover{/}?",
+   "destination": "/blog-life-insurance-after-divorce",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/life-insurance-and-divorce-what-happens-to-your-cover{/}?",
+   "destination": "/blog-life-insurance-after-divorce",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/:cat/waiver-of-premium-explained-how-the-benefit-works{/}?",
+   "destination": "/life-insurance",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/waiver-of-premium-explained-how-the-benefit-works{/}?",
+   "destination": "/life-insurance",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/:cat/level-term-life-insurance-how-a-fixed-sum-works{/}?",
+   "destination": "/life-insurance",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/level-term-life-insurance-how-a-fixed-sum-works{/}?",
+   "destination": "/life-insurance",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/:cat/relevant-life-insurance-a-plain-english-guide-for-directors-and-small-companies{/}?",
+   "destination": "/blog-protecting-your-business-and-loved-ones-the-benefits-of-life-insurance-for-uk-business-owners",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/relevant-life-insurance-a-plain-english-guide-for-directors-and-small-companies{/}?",
+   "destination": "/blog-protecting-your-business-and-loved-ones-the-benefits-of-life-insurance-for-uk-business-owners",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/:cat/relevant-life-insurance-for-directors-and-small-companies{/}?",
+   "destination": "/blog-protecting-your-business-and-loved-ones-the-benefits-of-life-insurance-for-uk-business-owners",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/relevant-life-insurance-for-directors-and-small-companies{/}?",
+   "destination": "/blog-protecting-your-business-and-loved-ones-the-benefits-of-life-insurance-for-uk-business-owners",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/:cat/childrens-critical-illness-cover-how-it-works{/}?",
+   "destination": "/blog-what-is-critical-illness-cover-and-why-you-might-need-it",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/childrens-critical-illness-cover-how-it-works{/}?",
+   "destination": "/blog-what-is-critical-illness-cover-and-why-you-might-need-it",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/:cat/life-insurance-vs-critical-illness-whats-the-difference{/}?",
+   "destination": "/blog-what-is-critical-illness-cover-and-why-you-might-need-it",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/life-insurance-vs-critical-illness-whats-the-difference{/}?",
+   "destination": "/blog-what-is-critical-illness-cover-and-why-you-might-need-it",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/:cat/terminal-illness-cover-explained{/}?",
+   "destination": "/blog-whats-the-difference-between-critical-illness-and-terminal-illness",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/terminal-illness-cover-explained{/}?",
+   "destination": "/blog-whats-the-difference-between-critical-illness-and-terminal-illness",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/:cat/life-insurance-for-the-self-employed{/}?",
+   "destination": "/blog-self-employed-life-insurance",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/life-insurance-for-the-self-employed{/}?",
+   "destination": "/blog-self-employed-life-insurance",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/:cat/life-insurance-underwriting-explained-how-uk-insurers-assess-your-application{/}?",
+   "destination": "/blog-life-insurance-with-pre-existing-conditions",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/life-insurance-underwriting-explained-how-uk-insurers-assess-your-application{/}?",
+   "destination": "/blog-life-insurance-with-pre-existing-conditions",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/:cat/life-insurance-for-the-armed-forces{/}?",
+   "destination": "/blog-what-factors-affect-a-life-insurance-quote",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/life-insurance-for-the-armed-forces{/}?",
+   "destination": "/blog-what-factors-affect-a-life-insurance-quote",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/:cat/life-insurance-for-landlords-what-uk-buy-to-let-owners-should-know{/}?",
+   "destination": "/life-insurance",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/life-insurance-for-landlords-what-uk-buy-to-let-owners-should-know{/}?",
+   "destination": "/life-insurance",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/:cat/life-insurance-for-landlords-what-buy-to-let-owners-should-know{/}?",
+   "destination": "/life-insurance",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/life-insurance-for-landlords-what-buy-to-let-owners-should-know{/}?",
+   "destination": "/life-insurance",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/:cat/key-person-insurance-what-it-is-and-how-it-protects-a-business{/}?",
+   "destination": "/blog-protecting-your-business-and-loved-ones-the-benefits-of-life-insurance-for-uk-business-owners",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/key-person-insurance-what-it-is-and-how-it-protects-a-business{/}?",
+   "destination": "/blog-protecting-your-business-and-loved-ones-the-benefits-of-life-insurance-for-uk-business-owners",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/:cat/business-loan-protection-what-it-covers-and-how-it-works{/}?",
+   "destination": "/blog-protecting-your-business-and-loved-ones-the-benefits-of-life-insurance-for-uk-business-owners",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/business-loan-protection-what-it-covers-and-how-it-works{/}?",
+   "destination": "/blog-protecting-your-business-and-loved-ones-the-benefits-of-life-insurance-for-uk-business-owners",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/:cat/shareholder-protection-explained-for-uk-business-owners{/}?",
+   "destination": "/blog-protecting-your-business-and-loved-ones-the-benefits-of-life-insurance-for-uk-business-owners",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/shareholder-protection-explained-for-uk-business-owners{/}?",
+   "destination": "/blog-protecting-your-business-and-loved-ones-the-benefits-of-life-insurance-for-uk-business-owners",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/:cat/decreasing-term-life-insurance-a-uk-guide{/}?",
+   "destination": "/life-insurance",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/decreasing-term-life-insurance-a-uk-guide{/}?",
+   "destination": "/life-insurance",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/:cat/life-insurance-for-unmarried-couples{/}?",
+   "destination": "/blog-cohabiting-couples-and-life-insurance-uk-what-you-need-to-know",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/life-insurance-for-unmarried-couples{/}?",
+   "destination": "/blog-cohabiting-couples-and-life-insurance-uk-what-you-need-to-know",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/:cat/life-insurance-for-unmarried-couples-what-to-know{/}?",
+   "destination": "/blog-cohabiting-couples-and-life-insurance-uk-what-you-need-to-know",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/life-insurance-for-unmarried-couples-what-to-know{/}?",
    "destination": "/blog-cohabiting-couples-and-life-insurance-uk-what-you-need-to-know",
    "statusCode": 301
   },
