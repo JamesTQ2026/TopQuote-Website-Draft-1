@@ -1783,3 +1783,35 @@ html [data-hidden-pending-approval], html .sc-host [data-hidden-pending-approval
    layout are unchanged. Scaling the drawing group keeps its cut-out masks lined up. */
 svg.tq-icon { overflow: visible; }
 svg.tq-icon > g { transform: scale(1.15); transform-origin: 12px 12px; }
+
+/* 101. Feefo-look review panel shown in each Feefo carousel slot until "Embedded content" is
+   accepted (James 17 Nov 2026). Our own HTML, genuine Feefo reviews, no Feefo script or cookie.
+   The page's older review cards stay in the page as data-feefo-old (hidden) so their scripts run. */
+[data-feefo-old] { display: none !important; }
+html .tq-ff { max-width: 1180px; margin: 0 auto; background: #fff; border: 1px solid #DCE1EC; border-radius: 14px; padding: 26px 28px 20px; font-family: 'Mulish', -apple-system, 'Segoe UI', Roboto, Arial, sans-serif; color: #191919; text-align: left; box-shadow: 0 10px 30px rgba(20, 40, 35, .06); box-sizing: border-box; }
+html .tq-ff * { box-sizing: border-box; }
+html .tq-ff-head { display: flex; align-items: center; flex-wrap: wrap; gap: 10px 18px; margin: 0 0 20px; }
+html .tq-ff-word { font-weight: 800; font-size: 21px; letter-spacing: .16em; color: #191919; width: 100%; }
+html .tq-ff-box { display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; margin-right: 3px; background: #FFC90E; color: #fff; font-size: 20px; line-height: 1; border-radius: 2px; }
+html .tq-ff-score { display: flex; flex-direction: column; font-size: 14px; color: #555; line-height: 1.35; }
+html .tq-ff-score b { color: #191919; font-weight: 700; font-size: 15px; }
+html .tq-ff-row { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; padding: 2px 2px 6px; scrollbar-width: none; }
+html .tq-ff-row::-webkit-scrollbar { display: none; }
+html .tq-ff-card { flex: 0 0 calc((100% - 48px) / 4); min-width: 240px; scroll-snap-align: start; margin: 0; padding: 16px 16px 14px; border: 1px solid #DCE1EC; border-radius: 10px; background: #fff; display: flex; flex-direction: column; gap: 12px; }
+html .tq-ff-cstars .tq-ff-box { width: 20px; height: 20px; font-size: 13px; margin-right: 2px; }
+html .tq-ff-card blockquote { margin: 0; padding: 0; border: 0; flex: 1; font-size: 14.5px; line-height: 1.5; color: #333; font-style: normal; }
+html .tq-ff-card figcaption { display: flex; align-items: center; justify-content: space-between; gap: 8px; font-size: 13px; font-weight: 700; color: #555; }
+html .tq-ff-ver { white-space: nowrap; padding: 4px 10px; border-radius: 999px; background: #E9F6EE; color: #1E7B4A; font-size: 12px; font-weight: 600; }
+html .tq-ff-foot { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 16px; }
+html .tq-ff-foot a { color: #555; font-size: 14px; text-decoration: underline; text-underline-offset: 3px; }
+html .tq-ff-nav { display: flex; gap: 8px; }
+html .tq-ff-arrow { width: 34px; height: 34px; border-radius: 50%; border: 1px solid #DCE1EC; background: #fff; color: #191919; font-size: 22px; line-height: 1; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; padding: 0 0 3px; }
+html .tq-ff-arrow:hover { border-color: #191919; }
+html .tq-ff-logo { font-weight: 800; font-size: 24px; letter-spacing: -.03em; color: #191919; display: inline-flex; align-items: flex-start; }
+html .tq-ff-logo i { width: 8px; height: 8px; border-radius: 50%; background: #FFC90E; margin: 3px 0 0 2px; }
+@media (max-width: 700px) {
+  html .tq-ff { padding: 20px 16px 16px; border-radius: 12px; }
+  html .tq-ff-card { flex-basis: 82%; min-width: 0; }
+  html .tq-ff-nav { display: none; }
+  html .tq-ff-word { font-size: 18px; }
+}

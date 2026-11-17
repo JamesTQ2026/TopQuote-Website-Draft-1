@@ -1,3 +1,13 @@
+/* Feefo-look review panel (rule 101): the arrows scroll the row of review cards. */
+(function () {
+  if (window.__tqFF) return; window.__tqFF = true;
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest && e.target.closest('.tq-ff-arrow'); if (!b) return;
+    var r = b.closest('.tq-ff').querySelector('.tq-ff-row'); if (!r) return;
+    r.scrollBy({ left: (b.getAttribute('data-dir') === 'prev' ? -1 : 1) * r.clientWidth * 0.75, behavior: 'smooth' });
+  });
+})();
+
 /* TopQuote mobile optimisation: hamburger nav + responsive grid collapse.
    Injected outside the framework tree (document.body) so it is safe on all pages. */
 
