@@ -418,7 +418,7 @@
     var reject = button('Reject all', 'border:1px solid rgba(255,255,255,.55);background:transparent;color:#fff;',
       function () { apply({ analytics: false, embeds: false }, true); });
 
-    var accept = button('Accept all', 'border:0;background:#1EBABB;color:#0C1F19;',
+    var accept = button('Accept all', 'border:0;background:#fff;color:#0C1F19;',
       function () { apply({ analytics: true, embeds: true }, true); });
 
     var manage = button(openPanel ? 'Save my choices' : 'Choose',
