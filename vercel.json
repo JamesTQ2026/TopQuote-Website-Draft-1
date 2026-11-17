@@ -3666,6 +3666,16 @@
    "statusCode": 301
   },
   {
+   "source": "/blog/:cat/life-insurance-for-unmarried-couples-what-you-need-to-know{/}?",
+   "destination": "/blog-cohabiting-couples-and-life-insurance-uk-what-you-need-to-know",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/life-insurance-for-unmarried-couples-what-you-need-to-know{/}?",
+   "destination": "/blog-cohabiting-couples-and-life-insurance-uk-what-you-need-to-know",
+   "statusCode": 301
+  },
+  {
    "source": "/10-achievable-new-years-resolutions-for-a-healthier-and-happier-2024{/}?",
    "destination": "/blog-10-achievable-new-years-resolutions-for-a-healthier-and-happier-2024",
    "statusCode": 301

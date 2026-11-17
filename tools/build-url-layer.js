@@ -260,6 +260,8 @@ const RETIRED = {
   'life-insurance-for-over-60s-what-to-know-in-your-sixties': '/life-insurance',
   'increasing-term-life-insurance-explained': '/life-insurance',
   'is-death-in-service-enough': '/life-insurance',
+  // Search Console 17 Nov 2026: still shown for "joint life insurance for unmarried couples" / "couples insurance"
+  'life-insurance-for-unmarried-couples-what-you-need-to-know': '/blog-cohabiting-couples-and-life-insurance-uk-what-you-need-to-know',
 };
 for (const [slug, to] of Object.entries(RETIRED)) {
   const post = to.match(/^\/blog-(.+)$/);
