@@ -881,166 +881,6 @@
    "statusCode": 302
   },
   {
-   "source": "/blog-buying-life-insurance{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog-buying-life-insurance.html{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog/:cat/buying-life-insurance{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog/buying-life-insurance{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog-cohabiting-couples-and-life-insurance-uk-what-you-need-to-know{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog-cohabiting-couples-and-life-insurance-uk-what-you-need-to-know.html{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog/:cat/cohabiting-couples-and-life-insurance-uk-what-you-need-to-know{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog/cohabiting-couples-and-life-insurance-uk-what-you-need-to-know{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog-family-life-insurance{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog-family-life-insurance.html{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog/:cat/family-life-insurance{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog/family-life-insurance{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog-how-much-life-insurance-do-i-need-a-uk-guide{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog-how-much-life-insurance-do-i-need-a-uk-guide.html{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog/:cat/how-much-life-insurance-do-i-need-a-uk-guide{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog/how-much-life-insurance-do-i-need-a-uk-guide{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog-income-protection-for-the-self-employed{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog-income-protection-for-the-self-employed.html{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog/:cat/income-protection-for-the-self-employed{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog/income-protection-for-the-self-employed{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog-income-protection-insurance{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog-income-protection-insurance.html{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog/:cat/income-protection-insurance{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog/income-protection-insurance{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog-is-income-protection-insurance-worth-it{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog-is-income-protection-insurance-worth-it.html{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog/:cat/is-income-protection-insurance-worth-it{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog/is-income-protection-insurance-worth-it{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog-joint-life-insurance-vs-single-a-uk-guide{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog-joint-life-insurance-vs-single-a-uk-guide.html{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog/:cat/joint-life-insurance-vs-single-a-uk-guide{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog/joint-life-insurance-vs-single-a-uk-guide{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
    "source": "/home{/}?",
    "destination": "/",
    "statusCode": 301
@@ -2066,6 +1906,16 @@
    "statusCode": 301
   },
   {
+   "source": "/blog/:cat/buying-life-insurance{/}?",
+   "destination": "/blog-buying-life-insurance",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/buying-life-insurance{/}?",
+   "destination": "/blog-buying-life-insurance",
+   "statusCode": 301
+  },
+  {
    "source": "/blog/:cat/cake-bake-dress-down-and-auction{/}?",
    "destination": "/blog-cake-bake-dress-down-and-auction",
    "statusCode": 301
@@ -2143,6 +1993,16 @@
   {
    "source": "/blog/claiming{/}?",
    "destination": "/blog-claiming",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/:cat/cohabiting-couples-and-life-insurance-uk-what-you-need-to-know{/}?",
+   "destination": "/blog-cohabiting-couples-and-life-insurance-uk-what-you-need-to-know",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/cohabiting-couples-and-life-insurance-uk-what-you-need-to-know{/}?",
+   "destination": "/blog-cohabiting-couples-and-life-insurance-uk-what-you-need-to-know",
    "statusCode": 301
   },
   {
@@ -2336,6 +2196,16 @@
    "statusCode": 301
   },
   {
+   "source": "/blog/:cat/family-life-insurance{/}?",
+   "destination": "/blog-family-life-insurance",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/family-life-insurance{/}?",
+   "destination": "/blog-family-life-insurance",
+   "statusCode": 301
+  },
+  {
    "source": "/blog/:cat/family-life-insurance-2{/}?",
    "destination": "/blog-family-life-insurance-2",
    "statusCode": 301
@@ -2506,6 +2376,16 @@
    "statusCode": 301
   },
   {
+   "source": "/blog/:cat/how-much-life-insurance-do-i-need-a-uk-guide{/}?",
+   "destination": "/blog-how-much-life-insurance-do-i-need-a-uk-guide",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/how-much-life-insurance-do-i-need-a-uk-guide{/}?",
+   "destination": "/blog-how-much-life-insurance-do-i-need-a-uk-guide",
+   "statusCode": 301
+  },
+  {
    "source": "/blog/:cat/how-much-life-insurance-do-parents-really-need{/}?",
    "destination": "/blog-how-much-life-insurance-do-parents-really-need",
    "statusCode": 301
@@ -2626,6 +2506,26 @@
    "statusCode": 301
   },
   {
+   "source": "/blog/:cat/income-protection-for-the-self-employed{/}?",
+   "destination": "/blog-income-protection-for-the-self-employed",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/income-protection-for-the-self-employed{/}?",
+   "destination": "/blog-income-protection-for-the-self-employed",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/:cat/income-protection-insurance{/}?",
+   "destination": "/blog-income-protection-insurance",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/income-protection-insurance{/}?",
+   "destination": "/blog-income-protection-insurance",
+   "statusCode": 301
+  },
+  {
    "source": "/blog/:cat/income-protection-vs-critical-illness{/}?",
    "destination": "/blog-income-protection-vs-critical-illness",
    "statusCode": 301
@@ -2656,6 +2556,16 @@
    "statusCode": 301
   },
   {
+   "source": "/blog/:cat/is-income-protection-insurance-worth-it{/}?",
+   "destination": "/blog-is-income-protection-insurance-worth-it",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/is-income-protection-insurance-worth-it{/}?",
+   "destination": "/blog-is-income-protection-insurance-worth-it",
+   "statusCode": 301
+  },
+  {
    "source": "/blog/:cat/is-life-insurance-part-of-your-estate{/}?",
    "destination": "/blog-is-life-insurance-part-of-your-estate",
    "statusCode": 301
@@ -2683,6 +2593,16 @@
   {
    "source": "/blog/janes-experience-unexpected-death{/}?",
    "destination": "/blog-janes-experience-unexpected-death",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/:cat/joint-life-insurance-vs-single-a-uk-guide{/}?",
+   "destination": "/blog-joint-life-insurance-vs-single-a-uk-guide",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/joint-life-insurance-vs-single-a-uk-guide{/}?",
+   "destination": "/blog-joint-life-insurance-vs-single-a-uk-guide",
    "statusCode": 301
   },
   {
@@ -3861,6 +3781,11 @@
    "statusCode": 301
   },
   {
+   "source": "/buying-life-insurance{/}?",
+   "destination": "/blog-buying-life-insurance",
+   "statusCode": 301
+  },
+  {
    "source": "/cake-bake-dress-down-and-auction{/}?",
    "destination": "/blog-cake-bake-dress-down-and-auction",
    "statusCode": 301
@@ -3898,6 +3823,11 @@
   {
    "source": "/claiming{/}?",
    "destination": "/blog-claiming",
+   "statusCode": 301
+  },
+  {
+   "source": "/cohabiting-couples-and-life-insurance-uk-what-you-need-to-know{/}?",
+   "destination": "/blog-cohabiting-couples-and-life-insurance-uk-what-you-need-to-know",
    "statusCode": 301
   },
   {
@@ -4051,6 +3981,11 @@
    "statusCode": 301
   },
   {
+   "source": "/how-much-life-insurance-do-i-need-a-uk-guide{/}?",
+   "destination": "/blog-how-much-life-insurance-do-i-need-a-uk-guide",
+   "statusCode": 301
+  },
+  {
    "source": "/how-much-life-insurance-do-parents-really-need{/}?",
    "destination": "/blog-how-much-life-insurance-do-parents-really-need",
    "statusCode": 301
@@ -4111,6 +4046,16 @@
    "statusCode": 301
   },
   {
+   "source": "/income-protection-for-the-self-employed{/}?",
+   "destination": "/blog-income-protection-for-the-self-employed",
+   "statusCode": 301
+  },
+  {
+   "source": "/income-protection-insurance{/}?",
+   "destination": "/blog-income-protection-insurance",
+   "statusCode": 301
+  },
+  {
    "source": "/income-protection-vs-critical-illness{/}?",
    "destination": "/blog-income-protection-vs-critical-illness",
    "statusCode": 301
@@ -4126,6 +4071,11 @@
    "statusCode": 301
   },
   {
+   "source": "/is-income-protection-insurance-worth-it{/}?",
+   "destination": "/blog-is-income-protection-insurance-worth-it",
+   "statusCode": 301
+  },
+  {
    "source": "/is-life-insurance-part-of-your-estate{/}?",
    "destination": "/blog-is-life-insurance-part-of-your-estate",
    "statusCode": 301
@@ -4133,6 +4083,11 @@
   {
    "source": "/is-red-wine-actually-good-for-you{/}?",
    "destination": "/blog-is-red-wine-actually-good-for-you",
+   "statusCode": 301
+  },
+  {
+   "source": "/joint-life-insurance-vs-single-a-uk-guide{/}?",
+   "destination": "/blog-joint-life-insurance-vs-single-a-uk-guide",
    "statusCode": 301
   },
   {
