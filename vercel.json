@@ -121,26 +121,6 @@
    "statusCode": 302
   },
   {
-   "source": "/blog-decreasing-term-vs-level-term-life-insurance-what-is-the-difference{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog-decreasing-term-vs-level-term-life-insurance-what-is-the-difference.html{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog/:cat/decreasing-term-vs-level-term-life-insurance-what-is-the-difference{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
-   "source": "/blog/decreasing-term-vs-level-term-life-insurance-what-is-the-difference{/}?",
-   "destination": "/blog",
-   "statusCode": 302
-  },
-  {
    "source": "/blog-joint-life-insurance-vs-two-single-policies-which-is-better{/}?",
    "destination": "/blog",
    "statusCode": 302
@@ -1347,17 +1327,17 @@
   },
   {
    "source": "/decreasing.html{/}?",
-   "destination": "/life-insurance",
+   "destination": "/blog-decreasing-term-vs-level-term-life-insurance-what-is-the-difference",
    "statusCode": 301
   },
   {
    "source": "/decreasingFaq.html{/}?",
-   "destination": "/life-insurance",
+   "destination": "/blog-decreasing-term-vs-level-term-life-insurance-what-is-the-difference",
    "statusCode": 301
   },
   {
    "source": "/decreasingMore.html{/}?",
-   "destination": "/life-insurance",
+   "destination": "/blog-decreasing-term-vs-level-term-life-insurance-what-is-the-difference",
    "statusCode": 301
   },
   {
@@ -2073,6 +2053,16 @@
   {
    "source": "/blog/de-icing-your-car-and-other-essential-winter-tips{/}?",
    "destination": "/blog-de-icing-your-car-and-other-essential-winter-tips",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/:cat/decreasing-term-vs-level-term-life-insurance-what-is-the-difference{/}?",
+   "destination": "/blog-decreasing-term-vs-level-term-life-insurance-what-is-the-difference",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/decreasing-term-vs-level-term-life-insurance-what-is-the-difference{/}?",
+   "destination": "/blog-decreasing-term-vs-level-term-life-insurance-what-is-the-difference",
    "statusCode": 301
   },
   {
@@ -3917,12 +3907,12 @@
   },
   {
    "source": "/blog/:cat/decreasing-term-life-insurance-a-uk-guide{/}?",
-   "destination": "/life-insurance",
+   "destination": "/blog-decreasing-term-vs-level-term-life-insurance-what-is-the-difference",
    "statusCode": 301
   },
   {
    "source": "/blog/decreasing-term-life-insurance-a-uk-guide{/}?",
-   "destination": "/life-insurance",
+   "destination": "/blog-decreasing-term-vs-level-term-life-insurance-what-is-the-difference",
    "statusCode": 301
   },
   {
@@ -4128,6 +4118,11 @@
   {
    "source": "/de-icing-your-car-and-other-essential-winter-tips{/}?",
    "destination": "/blog-de-icing-your-car-and-other-essential-winter-tips",
+   "statusCode": 301
+  },
+  {
+   "source": "/decreasing-term-vs-level-term-life-insurance-what-is-the-difference{/}?",
+   "destination": "/blog-decreasing-term-vs-level-term-life-insurance-what-is-the-difference",
    "statusCode": 301
   },
   {

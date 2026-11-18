@@ -163,9 +163,9 @@ const LEGACY = {
   '/life.html': '/life-insurance',
   '/lifeAssurance.html': '/life-insurance',
   '/level.html': '/life-insurance',
-  '/decreasing.html': '/life-insurance',
-  '/decreasingFaq.html': '/life-insurance',
-  '/decreasingMore.html': '/life-insurance',
+  '/decreasing.html': '/blog-decreasing-term-vs-level-term-life-insurance-what-is-the-difference',
+  '/decreasingFaq.html': '/blog-decreasing-term-vs-level-term-life-insurance-what-is-the-difference',
+  '/decreasingMore.html': '/blog-decreasing-term-vs-level-term-life-insurance-what-is-the-difference',
   '/mortgage.html': '/life-insurance',
   // catch-alls for the rest of those old sections (must stay last)
   '/award/:path*': '/about',
@@ -302,7 +302,7 @@ const RETIRED = {
   'key-person-insurance-what-it-is-and-how-it-protects-a-business': '/blog-protecting-your-business-and-loved-ones-the-benefits-of-life-insurance-for-uk-business-owners',
   'business-loan-protection-what-it-covers-and-how-it-works': '/blog-protecting-your-business-and-loved-ones-the-benefits-of-life-insurance-for-uk-business-owners',
   'shareholder-protection-explained-for-uk-business-owners': '/blog-protecting-your-business-and-loved-ones-the-benefits-of-life-insurance-for-uk-business-owners',
-  'decreasing-term-life-insurance-a-uk-guide': '/life-insurance',
+  'decreasing-term-life-insurance-a-uk-guide': '/blog-decreasing-term-vs-level-term-life-insurance-what-is-the-difference',
   'life-insurance-for-unmarried-couples': '/blog-cohabiting-couples-and-life-insurance-uk-what-you-need-to-know',
   'life-insurance-for-unmarried-couples-what-to-know': '/blog-cohabiting-couples-and-life-insurance-uk-what-you-need-to-know',
 };
