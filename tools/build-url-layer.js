@@ -206,7 +206,17 @@ for (const slug of blogSlugs) {
 
 // the two reasons a post is not served, treated identically from here on
 const held = new Set([...pending, ...scheduled]);
-const liveSlugs = blogSlugs.filter((s) => !held.has(s));
+// Posts taken down because a newer, longer Openwork-approved guide covers the same search
+// (27 Nov 2026, James: "take the worse versions down so there is no more competition").
+// The file stays in the repo; every address of the old post 301s to the guide that replaced it.
+const MERGED = {
+  'family-life-insurance-2': '/blog-family-life-insurance',
+  'life-insurance-after-divorce': '/blog-life-insurance-after-divorce-guide',
+  'single-vs-joint-life-insurance': '/blog-joint-life-insurance-vs-single-a-uk-guide',
+  'how-much-life-insurance-do-you-need': '/blog-how-much-life-insurance-do-i-need-a-uk-guide',
+  'do-you-need-income-protection': '/blog-is-income-protection-insurance-worth-it',
+};
+const liveSlugs = blogSlugs.filter((s) => !held.has(s) && !(s in MERGED));
 
 const redirects = [];
 const rewrites = [];
@@ -232,6 +242,13 @@ for (const slug of held) {
   for (const src of [`/blog-${slug}`, `/blog-${slug}.html`, `/blog/:cat/${slug}`, `/blog/${slug}`]) {
     redirects.push({ source: slashOpt(src), destination: to, statusCode: 302 });
   }
+}
+
+// 0b. posts taken down in favour of a better guide (MERGED): permanent redirect
+for (const [slug, to] of Object.entries(MERGED)) {
+  const post = to.match(/^\/blog-(.+)$/);
+  if (!post || !liveSlugs.includes(post[1])) throw new Error(`MERGED ${slug} points at a missing or unapproved post: ${to}`);
+  for (const src of [`/blog-${slug}`, `/blog-${slug}.html`, `/blog/:cat/${slug}`, `/blog/${slug}`]) r301(src, to);
 }
 
 // 1. old WP pages that moved, then older-generation URLs
@@ -273,7 +290,7 @@ const RETIRED = {
   'life-insurance-in-your-40s-what-to-think-about': '/blog-when-should-i-get-life-insurance',
   'what-happens-to-life-insurance-when-the-mortgage-is-paid-off': '/blog-what-happens-if-you-outlive-your-life-insurance-term',
   'can-you-cancel-life-insurance-what-happens-when-you-do': '/blog-why-is-it-important-to-review-life-cover',
-  'life-insurance-vs-income-protection-which-do-you-need': '/blog-do-you-need-income-protection',
+  'life-insurance-vs-income-protection-which-do-you-need': '/blog-is-income-protection-insurance-worth-it',
   'family-income-benefit-explained-how-it-works': '/family-life-insurance',
   'life-insurance-for-over-60s-what-to-know-in-your-sixties': '/life-insurance',
   'increasing-term-life-insurance-explained': '/life-insurance',
@@ -286,7 +303,7 @@ const RETIRED = {
   'do-you-need-life-insurance-for-a-mortgage-2': '/blog-do-you-need-life-insurance-for-a-mortgage',
   'do-i-need-life-insurance-for-a-mortgage-2': '/blog-do-you-need-life-insurance-for-a-mortgage',
   'what-happens-if-you-stop-paying-life-insurance': '/blog-why-is-it-important-to-review-life-cover',
-  'life-insurance-and-divorce-what-happens-to-your-cover': '/blog-life-insurance-after-divorce',
+  'life-insurance-and-divorce-what-happens-to-your-cover': '/blog-life-insurance-after-divorce-guide',
   'waiver-of-premium-explained-how-the-benefit-works': '/life-insurance',
   'level-term-life-insurance-how-a-fixed-sum-works': '/life-insurance',
   'relevant-life-insurance-a-plain-english-guide-for-directors-and-small-companies': '/blog-protecting-your-business-and-loved-ones-the-benefits-of-life-insurance-for-uk-business-owners',
@@ -445,6 +462,109 @@ ${items}
   if (!re.test(bh)) throw new Error('Blog.dc.html is missing the ALL-POSTS markers (re-add them under the article grid after a re-export)');
   fs.writeFileSync(bf, bh.replace(re, () => block));
   console.log(`blog index: ${posts.length} approved posts listed as plain links`);
+}
+
+
+// Related guides (27 Nov 2026): approved guides had almost no internal links (Search Console /
+// James), so each post gets up to 4 topic-matched LIVE insurance guides after the author card, and
+// the service pages get a "Helpful guides" list above the footer. Generated here so the links
+// follow approvals and schedules automatically; nothing inside the approved article copy changes.
+// Markers: <!-- RELATED:START --> ... <!-- RELATED:END -->. Quote Experience.html is never touched.
+{
+  const esc = (t) => String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  const bySlug = Object.fromEntries(manifest.map((p) => [p.slug, p]));
+  const TOPICS = {
+    ip: /income[- ]protection|sick pay|deferred period/,
+    ci: /critical[- ]illness|terminal[- ]illness|cancer|heart attack|stroke/,
+    family: /famil|parent|child|mum|dad|baby|pregnan|stay[- ]at[- ]home|new[- ]born/,
+    couples: /couple|married|marriage|cohabit|joint|divorce|separat|partner|wedding|newlywed/,
+    estate: /estate|trust|inheritance|beneficiar|probate|\bwills?\b|tax/,
+    mortgage: /mortgage|home[- ]?buyer|first[- ]time|decreasing/,
+    health: /pre[- ]existing|health|smok|bmi|diabet|medical|underwrit|condition/,
+    cover: /how much|level[- ]term|term life|decreasing|buying|cost|premium|policy|policies|claim|pay ?out/,
+    business: /business|director|key[- ]person|relevant[- ]life|shareholder|self[- ]employed|employer|death in service/,
+  };
+  const info = {};
+  for (const slug of blogSlugs) {
+    const file = path.join(ROOT, `blog-${slug}.html`);
+    const html = fs.readFileSync(file, 'utf8');
+    const title = (bySlug[slug] && bySlug[slug].title) || (/<title>([^<|]*)/.exec(html) || [, slug])[1].trim();
+    const text = `${slug.replace(/-/g, ' ')} ${title}`.toLowerCase();
+    const card = html.slice(html.indexOf('class="tq-ac"'), html.indexOf('</article>', html.indexOf('class="tq-ac"')));
+    info[slug] = {
+      file, html, title,
+      date: (bySlug[slug] && bySlug[slug].date) || '',
+      topics: new Set(Object.keys(TOPICS).filter((k) => TOPICS[k].test(text))),
+      guide: /line-height:1\.15;">Tanweer Hussain</.test(card),
+      fresh: /Approved by The Openwork Partnership on \d\d\/\d\d\/2026/.test(html),
+    };
+  }
+  const INSURANCE = /insurance|cover|protection|polic|claim|trust|estate|underwrit|premium|beneficiar|death in service|income benefit/;
+  const targets = liveSlugs.filter((s) => info[s] && info[s].guide && INSURANCE.test(`${s.replace(/-/g, ' ')} ${info[s].title}`.toLowerCase()));
+  const rank = (topics, exclude) => targets.filter((t) => t !== exclude).map((t) => {
+    let shared = 0; for (const k of info[t].topics) if (topics.has(k)) shared++;
+    return { t, shared, score: shared * 3 + (info[t].fresh ? 2 : 0) };
+  }).filter((r) => r.shared > 0)
+    .sort((a, b) => b.score - a.score || (info[b.t].date > info[a.t].date ? 1 : info[b.t].date < info[a.t].date ? -1 : 0) || (a.t < b.t ? -1 : 1));
+  const list = (picks, minW) =>
+    `<ul style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(${minW}px,1fr));gap:14px;">\n` +
+    picks.map((t) => `<li><a href="/blog-${t}" style="display:block;height:100%;box-sizing:border-box;background:#fff;border:1px solid #DCE1EC;border-radius:12px;padding:18px 20px;text-decoration:none;color:#173B33;font-weight:700;font-size:16px;line-height:1.4;">${esc(info[t].title)}<span style="display:block;margin-top:8px;color:#159a9b;font-size:13.5px;font-weight:700;">Read the guide &rsaquo;</span></a></li>`).join('\n') + `\n</ul>`;
+  const RE = /[ \t]*<!-- RELATED:START[\s\S]*?<!-- RELATED:END -->\n/;
+  const save = (file, before, after) => { if (after !== before) { fs.writeFileSync(file, after); return 1; } return 0; };
+  let postsWith = 0, changed = 0;
+  for (const slug of blogSlugs) {
+    const p = info[slug];
+    const picks = rank(p.topics, slug).slice(0, 4).map((r) => r.t);
+    let html = p.html.replace(RE, '');
+    if (picks.length >= 2) {
+      const block = `<!-- RELATED:START (generated by tools/build-url-layer.js, do not edit by hand) -->
+  <nav class="tq-related" aria-label="Related guides" style="max-width:900px;margin:34px auto 8px;font-family:'Mulish',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+  <h2 class="arva-h" style="font-size:22px;font-weight:700;color:#173B33;margin:0 0 16px;">Related guides</h2>
+  ${list(picks, 260)}
+  </nav>
+  <!-- RELATED:END -->`;
+      const i = html.indexOf('</article>', html.indexOf('class="tq-ac"'));
+      html = html.slice(0, i) + block + '\n  ' + html.slice(i);
+      postsWith++;
+    }
+    changed += save(p.file, p.html, html);
+  }
+  // service pages: topics they serve -> up to 6 guides
+  const SERVICE = {
+    'Life Insurance.dc.html': ['cover', 'mortgage', 'health'],
+    'Critical Illness.dc.html': ['ci'],
+    'Income Protection.dc.html': ['ip'],
+    'Family Life Insurance.dc.html': ['family'],
+    'Life Insurance for Parents.dc.html': ['family'],
+    'Life Insurance for Mums.dc.html': ['family'],
+    'Life Insurance for Dads.dc.html': ['family'],
+    'Life Insurance When Pregnant.dc.html': ['family'],
+    'Life Insurance After Divorce.dc.html': ['couples'],
+  };
+  let svc = 0;
+  for (const [file, topics] of Object.entries(SERVICE)) {
+    const f = path.join(ROOT, file);
+    const before = fs.readFileSync(f, 'utf8');
+    let html = before.replace(RE, '');
+    const picks = rank(new Set(topics), null).slice(0, 6).map((r) => r.t);
+    const at = html.indexOf('<footer');
+    if (at < 0) throw new Error(`${file}: no <footer> to place the guides list above`);
+    if (picks.length) {
+      const block = `<!-- RELATED:START (generated by tools/build-url-layer.js, do not edit by hand) -->
+  <section class="tq-related" aria-label="Helpful guides" style="background:#F6F7FB;padding:56px clamp(24px,5vw,40px);">
+  <div style="max-width:1100px;margin:0 auto;">
+  <h2 class="arva-h" style="font-size:clamp(24px,2.6vw,32px);font-weight:700;color:#173B33;margin:0 0 20px;">Helpful guides</h2>
+  ${list(picks, 280)}
+  </div>
+  </section>
+  <!-- RELATED:END -->`;
+      const lineStart = html.lastIndexOf('\n', at) + 1;
+      html = html.slice(0, lineStart) + '  ' + block + '\n' + html.slice(lineStart);
+      svc++;
+    }
+    changed += save(f, before, html);
+  }
+  console.log(`related guides: ${postsWith} posts and ${svc} service pages link to ${targets.length} live guides (${changed} files changed)`);
 }
 
 // The site stylesheet is served minified (Lighthouse "Minify CSS"); mobile-responsive.css stays

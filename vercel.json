@@ -861,6 +861,106 @@
    "statusCode": 302
   },
   {
+   "source": "/blog-family-life-insurance-2{/}?",
+   "destination": "/blog-family-life-insurance",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog-family-life-insurance-2.html{/}?",
+   "destination": "/blog-family-life-insurance",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/:cat/family-life-insurance-2{/}?",
+   "destination": "/blog-family-life-insurance",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/family-life-insurance-2{/}?",
+   "destination": "/blog-family-life-insurance",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog-life-insurance-after-divorce{/}?",
+   "destination": "/blog-life-insurance-after-divorce-guide",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog-life-insurance-after-divorce.html{/}?",
+   "destination": "/blog-life-insurance-after-divorce-guide",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/:cat/life-insurance-after-divorce{/}?",
+   "destination": "/blog-life-insurance-after-divorce-guide",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/life-insurance-after-divorce{/}?",
+   "destination": "/blog-life-insurance-after-divorce-guide",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog-single-vs-joint-life-insurance{/}?",
+   "destination": "/blog-joint-life-insurance-vs-single-a-uk-guide",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog-single-vs-joint-life-insurance.html{/}?",
+   "destination": "/blog-joint-life-insurance-vs-single-a-uk-guide",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/:cat/single-vs-joint-life-insurance{/}?",
+   "destination": "/blog-joint-life-insurance-vs-single-a-uk-guide",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/single-vs-joint-life-insurance{/}?",
+   "destination": "/blog-joint-life-insurance-vs-single-a-uk-guide",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog-how-much-life-insurance-do-you-need{/}?",
+   "destination": "/blog-how-much-life-insurance-do-i-need-a-uk-guide",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog-how-much-life-insurance-do-you-need.html{/}?",
+   "destination": "/blog-how-much-life-insurance-do-i-need-a-uk-guide",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/:cat/how-much-life-insurance-do-you-need{/}?",
+   "destination": "/blog-how-much-life-insurance-do-i-need-a-uk-guide",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/how-much-life-insurance-do-you-need{/}?",
+   "destination": "/blog-how-much-life-insurance-do-i-need-a-uk-guide",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog-do-you-need-income-protection{/}?",
+   "destination": "/blog-is-income-protection-insurance-worth-it",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog-do-you-need-income-protection.html{/}?",
+   "destination": "/blog-is-income-protection-insurance-worth-it",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/:cat/do-you-need-income-protection{/}?",
+   "destination": "/blog-is-income-protection-insurance-worth-it",
+   "statusCode": 301
+  },
+  {
+   "source": "/blog/do-you-need-income-protection{/}?",
+   "destination": "/blog-is-income-protection-insurance-worth-it",
+   "statusCode": 301
+  },
+  {
    "source": "/home{/}?",
    "destination": "/",
    "statusCode": 301
@@ -2116,16 +2216,6 @@
    "statusCode": 301
   },
   {
-   "source": "/blog/:cat/do-you-need-income-protection{/}?",
-   "destination": "/blog-do-you-need-income-protection",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/do-you-need-income-protection{/}?",
-   "destination": "/blog-do-you-need-income-protection",
-   "statusCode": 301
-  },
-  {
    "source": "/blog/:cat/do-you-need-life-insurance-for-a-mortgage{/}?",
    "destination": "/blog-do-you-need-life-insurance-for-a-mortgage",
    "statusCode": 301
@@ -2223,16 +2313,6 @@
   {
    "source": "/blog/family-life-insurance{/}?",
    "destination": "/blog-family-life-insurance",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/:cat/family-life-insurance-2{/}?",
-   "destination": "/blog-family-life-insurance-2",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/family-life-insurance-2{/}?",
-   "destination": "/blog-family-life-insurance-2",
    "statusCode": 301
   },
   {
@@ -2413,16 +2493,6 @@
   {
    "source": "/blog/how-much-life-insurance-do-parents-really-need{/}?",
    "destination": "/blog-how-much-life-insurance-do-parents-really-need",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/:cat/how-much-life-insurance-do-you-need{/}?",
-   "destination": "/blog-how-much-life-insurance-do-you-need",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/how-much-life-insurance-do-you-need{/}?",
-   "destination": "/blog-how-much-life-insurance-do-you-need",
    "statusCode": 301
   },
   {
@@ -2653,16 +2723,6 @@
   {
    "source": "/blog/life-insurance-after-cancer{/}?",
    "destination": "/blog-life-insurance-after-cancer",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/:cat/life-insurance-after-divorce{/}?",
-   "destination": "/blog-life-insurance-after-divorce",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/life-insurance-after-divorce{/}?",
-   "destination": "/blog-life-insurance-after-divorce",
    "statusCode": 301
   },
   {
@@ -2993,16 +3053,6 @@
   {
    "source": "/blog/simple-steps-for-a-healthy-mind-in-a-healthy-body{/}?",
    "destination": "/blog-simple-steps-for-a-healthy-mind-in-a-healthy-body",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/:cat/single-vs-joint-life-insurance{/}?",
-   "destination": "/blog-single-vs-joint-life-insurance",
-   "statusCode": 301
-  },
-  {
-   "source": "/blog/single-vs-joint-life-insurance{/}?",
-   "destination": "/blog-single-vs-joint-life-insurance",
    "statusCode": 301
   },
   {
@@ -3637,12 +3687,12 @@
   },
   {
    "source": "/blog/:cat/life-insurance-vs-income-protection-which-do-you-need{/}?",
-   "destination": "/blog-do-you-need-income-protection",
+   "destination": "/blog-is-income-protection-insurance-worth-it",
    "statusCode": 301
   },
   {
    "source": "/blog/life-insurance-vs-income-protection-which-do-you-need{/}?",
-   "destination": "/blog-do-you-need-income-protection",
+   "destination": "/blog-is-income-protection-insurance-worth-it",
    "statusCode": 301
   },
   {
@@ -3747,12 +3797,12 @@
   },
   {
    "source": "/blog/:cat/life-insurance-and-divorce-what-happens-to-your-cover{/}?",
-   "destination": "/blog-life-insurance-after-divorce",
+   "destination": "/blog-life-insurance-after-divorce-guide",
    "statusCode": 301
   },
   {
    "source": "/blog/life-insurance-and-divorce-what-happens-to-your-cover{/}?",
-   "destination": "/blog-life-insurance-after-divorce",
+   "destination": "/blog-life-insurance-after-divorce-guide",
    "statusCode": 301
   },
   {
@@ -4141,11 +4191,6 @@
    "statusCode": 301
   },
   {
-   "source": "/do-you-need-income-protection{/}?",
-   "destination": "/blog-do-you-need-income-protection",
-   "statusCode": 301
-  },
-  {
    "source": "/do-you-need-life-insurance-for-a-mortgage{/}?",
    "destination": "/blog-do-you-need-life-insurance-for-a-mortgage",
    "statusCode": 301
@@ -4173,11 +4218,6 @@
   {
    "source": "/essential-questions-to-ask-your-life-insurance-broker{/}?",
    "destination": "/blog-essential-questions-to-ask-your-life-insurance-broker",
-   "statusCode": 301
-  },
-  {
-   "source": "/family-life-insurance-2{/}?",
-   "destination": "/blog-family-life-insurance-2",
    "statusCode": 301
   },
   {
@@ -4263,11 +4303,6 @@
   {
    "source": "/how-much-life-insurance-do-parents-really-need{/}?",
    "destination": "/blog-how-much-life-insurance-do-parents-really-need",
-   "statusCode": 301
-  },
-  {
-   "source": "/how-much-life-insurance-do-you-need{/}?",
-   "destination": "/blog-how-much-life-insurance-do-you-need",
    "statusCode": 301
   },
   {
@@ -4523,11 +4558,6 @@
   {
    "source": "/simple-steps-for-a-healthy-mind-in-a-healthy-body{/}?",
    "destination": "/blog-simple-steps-for-a-healthy-mind-in-a-healthy-body",
-   "statusCode": 301
-  },
-  {
-   "source": "/single-vs-joint-life-insurance{/}?",
-   "destination": "/blog-single-vs-joint-life-insurance",
    "statusCode": 301
   },
   {
